@@ -17,6 +17,7 @@
         <module>../arrival_backend_jemeter</module>
         <module>../arrival_backend_soapUI</module>
         <module>../arrival_backend_result</module>
+        <module>../arrival_backend_aunit</module>
     </modules>
 
     <dependencies>
