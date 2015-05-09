@@ -14,6 +14,10 @@
 
     <modules>
         <module>../arrival_middelware_jenkins</module>
+        <module>../arrival_middelware_authrisation</module>
+        <module>../arrival_middelware_config</module>
+        <module>../arrival_middelware_git</module>
+        <module>../arrival_middelware_utilities</module>
     </modules>
 
 </project>

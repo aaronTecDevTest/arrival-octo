@@ -8,9 +8,12 @@
     <artifactId>arrival-octo</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
         <module>arrival_backend</module>
         <module>arrival_frontend</module>
         <module>arrival_middelware</module>
     </modules>
+
+
 </project>

@@ -11,7 +11,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="arrival_backend" exported="" />
-    <orderEntry type="module" module-name="arrival_middelware" exported="" />
   </component>
 </module>

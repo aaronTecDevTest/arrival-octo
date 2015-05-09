@@ -3,13 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>arrival_frontend</artifactId>
+        <artifactId>arrival_middelware</artifactId>
         <groupId>com.tecdevtest.arrival-octo</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../arrival_frontend/pom.xml</relativePath>
+        <relativePath>../arrival_middelware/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>arrival_frontend_windows</artifactId>
+    <artifactId>arrival_middelware_authrisation</artifactId>
+
 
 </project>
