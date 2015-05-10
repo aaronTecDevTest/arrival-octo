@@ -6,15 +6,16 @@ package com.arrival.main;
  * @version 0.0.1
  */
 
-import com.arrival.*;
+import com.arrival.windows.view.*;
 
 public class RunArrivalOcto {
-
-//    public MainApp app = null;
 
     public RunArrivalOcto() {
     }
 
     public static void main(String[] args) {
+        MainApp windowApp = new MainApp();
+        windowApp.run(args);
     }
 }
+

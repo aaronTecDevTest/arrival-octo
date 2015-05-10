@@ -31,4 +31,8 @@ public class MainApp extends Application {
         primaryStage.setTitle("Main - ArrivalOcto");
         primaryStage.show();
     }
+
+    public void run(String[] args) {
+        launch(args);
+    }
 }
