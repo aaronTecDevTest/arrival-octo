@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arrival.windows.controller.ControllerMainApp">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="_File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <BorderPane layoutX="228.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <TableView fx:id="tbvTable" focusTraversable="false" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="tbcID" prefWidth="121.0" text="ID" />
+                      <TableColumn fx:id="tbcName" prefWidth="373.0" text="Name" />
+                        <TableColumn fx:id="tbcDescription" prefWidth="408.0" text="Description" />
+                        <TableColumn fx:id="tbcResult" prefWidth="103.0" text="Result" />
+                    </columns>
+                     <BorderPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </BorderPane.margin>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TableView>
+               </center>
+               <bottom>
+                  <BorderPane prefHeight="50.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="btRun" alignment="CENTER" contentDisplay="CENTER" layoutX="227.0" layoutY="7.0" mnemonicParsing="false" onAction="#clickButtonRun" prefWidth="80.0" text="Run" />
+                              <Button fx:id="btStop" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="7.0" mnemonicParsing="false" onAction="#clickButtonStop" prefWidth="80.0" text="Stop">
+                                 <HBox.margin>
+                                    <Insets left="50.0" right="50.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btUpdate" alignment="CENTER" contentDisplay="CENTER" layoutX="496.0" layoutY="8.0" mnemonicParsing="false" onAction="#clickButtonUpdate" prefWidth="80.0" text="Update" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                     <bottom>
+                        <HBox prefHeight="15.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+                           <children>
+                              <ProgressBar prefHeight="23.0" prefWidth="300.0" progress="0.0" style="-fx-background-color: grey;" visible="false" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+                           </padding>
+                        </HBox>
+                     </bottom>
+                  </BorderPane>
+               </bottom>
+            </BorderPane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
