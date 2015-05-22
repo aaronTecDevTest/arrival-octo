@@ -7,17 +7,19 @@
         <groupId>com.tecdevtest.arrival-octo</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-        <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>arrival_backend</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
-    <!--dependencies>
-        <dependency>
-            <groupId>com.tecdevtest.arrival-octo</groupId>
-            <artifactId>arrival_middelware</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.tecdevtest.arrival-octo</groupId>
+                <artifactId>arrival_middelware</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>

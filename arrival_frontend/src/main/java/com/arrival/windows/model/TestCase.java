@@ -1,12 +1,15 @@
 package com.arrival.windows.model;
 
+/**
+ * Created by Aaron Kutekidila on 09.05.2015.
+ **/
+
+import com.arrival.utilities.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-/**
- * Created by Aaron on 09.05.2015.
- */
-public class TestCase {
+
+public class TestCase implements IFTestCase {
 
     private SimpleIntegerProperty tcID;
     private SimpleStringProperty tcName;
@@ -14,7 +17,7 @@ public class TestCase {
     private SimpleStringProperty tcResult;
 
     public TestCase() {
-        this(0,"","","");
+        this(0, "", "", "");
     }
 
     public TestCase(Integer id, String tcName, String tcDescription, String tcResult) {

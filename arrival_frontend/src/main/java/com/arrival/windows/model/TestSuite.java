@@ -4,10 +4,11 @@ package com.arrival.windows.model;
  * Created by Aaron on 09.05.2015.
  */
 
-import javafx.beans.property.*;
+import com.arrival.utilities.IFTestSuite;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 
-
-public class TestSuite {
+public class TestSuite implements IFTestSuite {
     private SimpleIntegerProperty tsId;
     private SimpleStringProperty tsName;
     private SimpleStringProperty tsResult;
