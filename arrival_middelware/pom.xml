@@ -12,4 +12,13 @@
     <artifactId>arrival_middelware</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+
+    <!--dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId></groupId>
+                <artifactId></artifactId>
+            </dependency>
+        </dependencies>
+    </dependencyManagement-->
 </project>

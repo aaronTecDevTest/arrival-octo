@@ -1,4 +1,4 @@
-package com.arrival.utilities;
+package com.arrival.utilities.interfaces;
 
 /**
  * Created by Aaron on 16.05.2015.
@@ -8,4 +8,5 @@ package com.arrival.utilities;
  * Interface for TestCases
  **/
 public interface IFTestCase {
+
 }

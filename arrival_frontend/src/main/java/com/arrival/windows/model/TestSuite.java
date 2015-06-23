@@ -4,7 +4,7 @@ package com.arrival.windows.model;
  * Created by Aaron on 09.05.2015.
  */
 
-import com.arrival.utilities.IFTestSuite;
+import com.arrival.utilities.interfaces.IFTestSuite;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 

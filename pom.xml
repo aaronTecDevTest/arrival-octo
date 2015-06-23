@@ -22,9 +22,7 @@
         <version.sikuli>1.1.0</version.sikuli>
         <version.junit>4.11</version.junit>
         <version.testng>6.8.21</version.testng>
-        <version.gson>2.2.4</version.gson>
-        <version.log4j>1.2.17</version.log4j>
-        <version.slf4j>1.7.5</version.slf4j>
+        <version.log4j>2.3</version.log4j>
         <version.io.appium>2.2.0</version.io.appium>
         <version.jemeter.plugin>1.10.1</version.jemeter.plugin>
         <version.jenkins.client>0.3.0</version.jenkins.client>
@@ -37,82 +35,21 @@
     </properties>
 
     <!--dependencyManagement-->
-    <dependencies>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>${version.selenium}</version>
-        </dependency>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${version.log4j}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.sikuli</groupId>
-            <artifactId>sikuli-api</artifactId>
-            <version>${version.sikuli}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${version.log4j}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${version.junit}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>${version.testng}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>${version.gson}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-ie-driver</artifactId>
-            <version>${version.selenium}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>${version.log4j}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${version.slf4j}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>${version.io.appium}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.offbytwo.jenkins</groupId>
-            <artifactId>jenkins-client</artifactId>
-            <version>${version.jenkins.client}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.lazerycode.jmeter</groupId>
-            <artifactId>jmeter-maven-plugin</artifactId>
-            <version>${version.jemeter.plugin}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.tecdevtest.arrival-octo</groupId>
-            <artifactId>arrival-octo</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+        </dependencies>
     <!--/dependencyManagement-->
-
 
     <build>
         <pluginManagement>

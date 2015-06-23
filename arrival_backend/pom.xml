@@ -13,13 +13,80 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.tecdevtest.arrival-octo</groupId>
-                <artifactId>arrival_middelware</artifactId>
-                <version>1.0-SNAPSHOT</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <version.selenium>2.45.0</version.selenium>
+        <version.sikuli>1.1.0</version.sikuli>
+        <version.junit>4.11</version.junit>
+        <version.testng>6.8.21</version.testng>
+        <version.io.appium>2.2.0</version.io.appium>
+        <version.jemeter.plugin>1.10.1</version.jemeter.plugin>
+        <version.jenkins.client>0.3.0</version.jenkins.client>
+    </properties>
+
+    <!--dependencyManagement-->
+    <dependencies>
+        <dependency>
+            <groupId>com.tecdevtest.arrival-octo</groupId>
+            <artifactId>arrival_middelware</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${version.selenium}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>${version.selenium}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.sikuli</groupId>
+            <artifactId>sikuli-api</artifactId>
+            <version>${version.sikuli}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${version.junit}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${version.testng}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${version.io.appium}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <!--
+                <dependency>
+                    <groupId>com.offbytwo.jenkins</groupId>
+                    <artifactId>jenkins-client</artifactId>
+                    <version>${version.jenkins.client}</version>
+                </dependency>
+-->
+        <dependency>
+            <groupId>com.lazerycode.jmeter</groupId>
+            <artifactId>jmeter-maven-plugin</artifactId>
+            <version>${version.jemeter.plugin}</version>
+        </dependency>
+
+    </dependencies>
+    <!--/dependencyManagement-->
 </project>
