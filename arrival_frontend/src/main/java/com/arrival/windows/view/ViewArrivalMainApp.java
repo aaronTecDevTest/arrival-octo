@@ -11,7 +11,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.util.PropertyResourceBundle;
+import java.util.ResourceBundle;
 
 
 /**
@@ -21,8 +24,16 @@ public class ViewArrivalMainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
+
+
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         URL url = getClass().getResource("/fxml/arrivalMain.fxml");
-        Parent root = FXMLLoader.load(url);
+
+        InputStream inputStream = classLoader.getResource("bundles/arrivalMain_de.properties").openStream();
+        ResourceBundle bundle = new PropertyResourceBundle(inputStream);
+
+        FXMLLoader loader = new FXMLLoader(url, bundle);
+        Parent root = loader.load();
 
         Scene scene = new Scene(root, 1300, 530);
         scene.getStylesheets().add("/css/arrivalMain.css");

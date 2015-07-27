@@ -8,6 +8,15 @@
     <file url="file://$PROJECT_DIR$/arrival_backend/src/main/java/com/arrival/appium/AppiumIOS.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_backend/src/main/java/com/arrival/utilities/interfaces/IFAppiumServer.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_frontend" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/bundles/arrivalHelp_de.properties" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/bundles/arrivalHelp_en.properties" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/bundles/arrivalHelp_fr.properties" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/bundles/arrivalMain_de.properties" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/bundles/arrivalMain_en.properties" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/bundles/arrivalMain_fr.properties" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/bundles/arrivalOptions_de.properties" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/bundles/arrivalOptions_en.properties" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/bundles/arrivalOptions_fr.properties" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/css/arrivalHelp.css" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/css/arrivalOptions.css" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/fxml/arrivalHelp.fxml" charset="windows-1252" />
@@ -26,15 +35,6 @@
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/icons/stepForward.png" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/icons/stop.png" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/icons/windowAppResults.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/internationalization/arrivalHelp_de.properties" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/internationalization/arrivalHelp_en.properties" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/internationalization/arrivalHelp_fr.properties" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/internationalization/arrivalMain_de.properties" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/internationalization/arrivalMain_en.properties" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/internationalization/arrivalMain_fr.properties" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/internationalization/arrivalOptions_de.properties" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/internationalization/arrivalOptions_en.properties" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/internationalization/arrivalOptions_fr.properties" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_middelware" charset="UTF-8" />
   </component>
 </project>

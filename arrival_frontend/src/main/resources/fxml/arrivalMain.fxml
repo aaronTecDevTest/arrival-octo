@@ -118,7 +118,7 @@
                             <tabs>
                                 <Tab text="Testsuite - Regressionstest">
                                     <content>
-                                        <TableView fx:id="tbvTestsuite">
+                                        <TableView fx:id="tbvTestsuite" tableMenuButtonVisible="true">
                                             <columns>
                                                 <TableColumn fx:id="tbcName" prefWidth="215.0" text="\%tableColumn.name" />
                                                 <TableColumn fx:id="tbcDescription" prefWidth="209.0" text="\%tableColumn.description" />

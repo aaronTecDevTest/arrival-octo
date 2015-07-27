@@ -10,12 +10,9 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TabPane;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-
+import  javafx.scene.control.Label;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -24,6 +21,15 @@ import java.util.ResourceBundle;
  * can evoke function from ViewMainApp.fxml file.
  */
 public class ControllerArrivalMainApp implements Initializable {
+
+    /**
+     * For Internationalization
+     */
+
+    @FXML private Label lblSearchfield;
+    @FXML private Label lblStatusLeft;
+    @FXML private Label  lblStatusRight;
+
 
     @FXML private Button btnAddTestcase;
     @FXML private Button btnCreateTestsuite;
@@ -57,6 +63,8 @@ public class ControllerArrivalMainApp implements Initializable {
     @FXML private TableColumn<TestCase, String> tbcLink;
     @FXML private TableColumn<TestCase, String> tbcResult;
 
+    private ResourceBundle bundle;
+
     public ObservableList date = FXCollections.observableArrayList(
             new TestCase("Testname1", "Beschrieung3", "1:22", "27.07.2015","google.com","Pass"),
             new TestCase("Testname4", "Beschrieung4", "1:22", "27.07.2015","google.com","Pass"),
@@ -73,6 +81,10 @@ public class ControllerArrivalMainApp implements Initializable {
      * @param resources The resources used to localize the root object, or <tt>null</tt> if
      */
     public void initialize(URL location, ResourceBundle resources) {
+        bundle = resources;
+
+        lblSearchfield.setText(bundle.getString("label.search"));
+
         tbcName.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcDescription.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDescription"));
         tbcDuration.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDuration"));
