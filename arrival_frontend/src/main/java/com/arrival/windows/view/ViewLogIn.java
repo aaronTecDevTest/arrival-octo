@@ -45,7 +45,7 @@ public class ViewLogIn extends Application {
         root = loader.load();
 
         Scene scene = new Scene(root, 400, 300);
-        scene.getStylesheets().add("/css/logIn.css");
+        scene.getStylesheets().add("/css/LogIn.css");
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("ViewLogIn - ArrivalOcto");

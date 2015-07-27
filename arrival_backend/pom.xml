@@ -23,6 +23,7 @@
         <version.io.appium>2.2.0</version.io.appium>
         <version.jemeter.plugin>1.10.1</version.jemeter.plugin>
         <version.jenkins.client>0.3.0</version.jenkins.client>
+        <version.gson>2.3.1</version.gson>
     </properties>
 
     <!--dependencyManagement-->
@@ -72,7 +73,7 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.3.1</version>
+            <version>${version.gson}</version>
         </dependency>
         <!--
                 <dependency>
