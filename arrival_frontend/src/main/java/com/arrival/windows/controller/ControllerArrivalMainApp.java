@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -24,23 +25,43 @@ import java.util.ResourceBundle;
  */
 public class ControllerArrivalMainApp implements Initializable {
 
+    @FXML private Button btnAddTestcase;
+    @FXML private Button btnCreateTestsuite;
+    @FXML private Button btnDeletedTestcase;
+    @FXML private Button btnDeletedTestsuite;
+    @FXML private Button btnHelp;
+    @FXML private Button btnOpenTestsuite;
+    @FXML private Button btnOptions;
+    @FXML private Button btnPause;
+    @FXML private Button btnResult;
     @FXML private Button btnRun;
-    @FXML private Button btnStop;
+    @FXML private Button btnSaveTestsuite;
     @FXML private Button btnSkip;
+    @FXML private Button btnStop;
 
-    @FXML private TableView<TestCase> tbvTable;
+    @FXML private TableView<TestCase> tbvIOS;
+    @FXML private TableView<TestCase> tbvAndroid;
+    @FXML private TableView<TestCase> tbvWebportal;
 
-    @FXML private TableColumn<TestCase, Integer> tbcID;
+    @FXML private TableColumn<String, String> tbcIOS;
+    @FXML private TableColumn<String, String> tbcAndroid;
+    @FXML private TableColumn<String, String> tbcWebportal;
+
+    @FXML private TabPane tbMainTabPane;
+
+    @FXML private TableView<TestCase> tbvTestsuite;
     @FXML private TableColumn<TestCase, String> tbcName;
     @FXML private TableColumn<TestCase, String> tbcDescription;
+    @FXML private TableColumn<TestCase, String> tbcDuration;
+    @FXML private TableColumn<TestCase, String> tbcLastRun;
+    @FXML private TableColumn<TestCase, String> tbcLink;
     @FXML private TableColumn<TestCase, String> tbcResult;
 
-    private int count = 0;
     public ObservableList date = FXCollections.observableArrayList(
-            new TestCase(count++, "Testname1", "Beschrieung3", "Pass"),
-            new TestCase(count++, "Testname4", "Beschrieung4", "Pass"),
-            new TestCase(count++, "Testname5", "Beschrieung2", "Pass"),
-            new TestCase(count++, "Testname8", "Beschrieung1", "Pass")
+            new TestCase("Testname1", "Beschrieung3", "1:22", "27.07.2015","google.com","Pass"),
+            new TestCase("Testname4", "Beschrieung4", "1:22", "27.07.2015","google.com","Pass"),
+            new TestCase("Testname5", "Beschrieung2", "1:22", "27.07.2015","google.com","Pass"),
+            new TestCase("Testname8", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass")
     );
 
     /**
@@ -52,12 +73,14 @@ public class ControllerArrivalMainApp implements Initializable {
      * @param resources The resources used to localize the root object, or <tt>null</tt> if
      */
     public void initialize(URL location, ResourceBundle resources) {
-        tbcID.setCellValueFactory(new PropertyValueFactory<TestCase, Integer>("tcID"));
         tbcName.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcDescription.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDescription"));
+        tbcDuration.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDuration"));
+        tbcLastRun.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcLastRun"));
+        tbcLink.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcLink"));
         tbcResult.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcResult"));
 
-        tbvTable.setItems(date);
+        tbvTestsuite.setItems(date);
     }
 
     public void clickButtonRun(ActionEvent actionEvent) {
@@ -73,7 +96,7 @@ public class ControllerArrivalMainApp implements Initializable {
 
     public void clickButtonSkip(ActionEvent actionEvent) {
         if ((actionEvent.getTarget().getClass()) == btnSkip.getClass()) {
-            tbvTable.getItems().add(new TestCase(3, "Pichou ", "test", "pass"));
+            tbvTestsuite.getItems().add(new TestCase("aaron ", "test", "pass","test","test","test"));
         }
     }
 }

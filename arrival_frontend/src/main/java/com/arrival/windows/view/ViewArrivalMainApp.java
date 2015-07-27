@@ -17,14 +17,14 @@ import java.net.URL;
 /**
  * Main Class to run the hole Application functions
  **/
-public class ViewMainApp extends Application {
+public class ViewArrivalMainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        URL url = getClass().getResource("/fxml/mainApp.fxml");
+        URL url = getClass().getResource("/fxml/arrivalMain.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Scene scene = new Scene(root, 1100, 500);
+        Scene scene = new Scene(root, 1300, 530);
         scene.getStylesheets().add("/css/arrivalMain.css");
 
         primaryStage.setScene(scene);

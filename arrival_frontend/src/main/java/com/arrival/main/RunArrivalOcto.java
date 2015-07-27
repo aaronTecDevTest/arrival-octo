@@ -1,8 +1,9 @@
 package com.arrival.main;
 
 import com.arrival.windows.controller.ControllerLogIn;
+import com.arrival.windows.view.ViewArrivalMainApp;
 import com.arrival.windows.view.ViewLogIn;
-import com.arrival.windows.view.ViewMainApp;
+import com.arrival.windows.view.ViewArrivalMainApp;
 
 /**
  * Created by Aaron on 28.03.2015.
@@ -13,11 +14,11 @@ import com.arrival.windows.view.ViewMainApp;
 
 public class RunArrivalOcto {
 
-    public ViewMainApp viewMainApp;
+    public ViewArrivalMainApp viewMainApp;
     public ViewLogIn viewLogIn;
 
     public RunArrivalOcto() {
-        viewMainApp = new ViewMainApp();
+        viewMainApp = new ViewArrivalMainApp();
     }
 
     public void runLogIn() {
