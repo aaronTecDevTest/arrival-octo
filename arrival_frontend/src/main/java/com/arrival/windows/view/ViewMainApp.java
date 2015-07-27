@@ -21,7 +21,7 @@ public class ViewMainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        URL url = getClass().getResource("/fxml/MainApp.fxml");
+        URL url = getClass().getResource("/fxml/mainApp.fxml");
         Parent root = FXMLLoader.load(url);
 
         Scene scene = new Scene(root, 1100, 500);
