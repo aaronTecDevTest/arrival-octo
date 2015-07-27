@@ -25,7 +25,7 @@ public class ViewMainApp extends Application {
         Parent root = FXMLLoader.load(url);
 
         Scene scene = new Scene(root, 1100, 500);
-        scene.getStylesheets().add("/com/arrival/windows/view/css/arrival/windows/view/css/MainApp.css");
+        scene.getStylesheets().add("/css/arrivalMain.css");
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("Main - ArrivalOcto");

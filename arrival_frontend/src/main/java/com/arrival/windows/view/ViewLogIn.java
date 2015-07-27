@@ -45,7 +45,7 @@ public class ViewLogIn extends Application {
         root = loader.load();
 
         Scene scene = new Scene(root, 400, 300);
-        scene.getStylesheets().add("/com/arrival/windows/view/css/arrival/windows/view/css/LogIn.css");
+        scene.getStylesheets().add("/css/logIn.css");
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("ViewLogIn - ArrivalOcto");
@@ -56,5 +56,4 @@ public class ViewLogIn extends Application {
     public void run(){
         launch();
     }
-
 }
