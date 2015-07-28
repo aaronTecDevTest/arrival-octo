@@ -14,9 +14,9 @@
     -fx-font-size: 20;
 }
 
-.column-header-backgrounds {
+.column-header-backgroundsww {
     visibility: hidden;
-    -fx-padding: -10em;
+    -fx-padding: -1em;
 }
 
 .menu-bar {

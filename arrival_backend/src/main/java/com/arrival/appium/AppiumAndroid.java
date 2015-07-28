@@ -26,14 +26,14 @@ public class AppiumAndroid implements IFAppiumServer {
     public void note3Sever() throws IOException {
         CommandLine command = new CommandLine("/Applications/Appium.app/Contents/Resources/node/bin/node");
 
-        command.addArgument("/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js");
+        command.addArgument("/Applications/Appium.app/Contents/Resources/node_modules/iosTestcase/bin/iosTestcase.js");
 
         command.addArgument("--address");
         command.addArgument("127.0.0.1");
         command.addArgument("--port");
         command.addArgument("5555");
         command.addArgument("--nodeconfig");
-        command.addArgument("/Users/tecdesdev/IdeaProjects/arrival-septem/appium/src/main/resources/AppiumNodeNote3.json");
+        command.addArgument("/Users/tecdesdev/IdeaProjects/arrival-septem/iosTestcase/src/main/resources/AppiumNodeNote3.json");
 
 //	command.addArgument("--no-reset");
 
@@ -45,14 +45,14 @@ public class AppiumAndroid implements IFAppiumServer {
 
     public void lgServer() throws IOException {
         CommandLine command = new CommandLine("/Applications/Appium.app/Contents/Resources/node/bin/node");
-        command.addArgument("/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js");
+        command.addArgument("/Applications/Appium.app/Contents/Resources/node_modules/iosTestcase/bin/iosTestcase.js");
 
         command.addArgument("--address");
         command.addArgument("127.0.0.1");
         command.addArgument("--port");
         command.addArgument("6666");
         command.addArgument("--nodeconfig");
-        command.addArgument("/Users/tecdesdev/IdeaProjects/arrival-septem/appium/src/main/resources/AppiumNodeGFlex.json");
+        command.addArgument("/Users/tecdesdev/IdeaProjects/arrival-septem/iosTestcase/src/main/resources/AppiumNodeGFlex.json");
 
 //	command.addArgument("--no-reset");
 

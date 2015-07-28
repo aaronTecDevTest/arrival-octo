@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arrival.windows.controller.ControllerArrivalLogIn">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <TextField fx:id="txfUsername" focusTraversable="false" layoutX="45.0" layoutY="14.0" prefHeight="32.0" prefWidth="290.0" promptText="Username/E-Mail-Adresse" />
+            <Button fx:id="btnLogIn" layoutX="45.0" layoutY="161.0" mnemonicParsing="false" onAction="#clickLogIn" prefHeight="32.0" prefWidth="290.0" text="LogIn" />
+            <Label fx:id="lblFailLogIn" focusTraversable="false" layoutX="49.0" layoutY="100.0" prefHeight="53.0" prefWidth="284.0" text="Username or Password is wrong. Please change your login and try again." textFill="#863f3fbd" visible="false" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="pwfPassword" focusTraversable="false" layoutX="45.0" layoutY="68.0" prefHeight="32.0" prefWidth="290.0" promptText="Password" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <CheckBox fx:id="chbNoLogIn" layoutX="10.0" layoutY="252.0" mnemonicParsing="false" onAction="#clickLogInWithoutSignIn" text="Log in without Sign" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="252.0" />
+      <Button fx:id="btnSignIn" layoutX="333.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickSignIn" text="Sign In" textAlignment="CENTER" textFill="#2047d7">
+         <effect>
+            <ColorAdjust contrast="0.91" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

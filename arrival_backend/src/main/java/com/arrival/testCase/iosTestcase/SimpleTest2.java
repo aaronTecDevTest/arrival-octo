@@ -1,4 +1,4 @@
-package com.arrival.testCase.appium;
+package com.arrival.testCase.iosTestcase;
 
 /**
  * Created by a.kutekidila on 04.05.2015.

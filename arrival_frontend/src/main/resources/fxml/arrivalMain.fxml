@@ -72,9 +72,9 @@
                                         <Insets bottom="2.0" top="2.0" />
                                     </padding>
                                 </HBox>
-                                <Accordion VBox.vgrow="ALWAYS">
+                                <Accordion fx:id="accTestCase" VBox.vgrow="ALWAYS">
                                     <panes>
-                                        <TitledPane animated="false" text="iOS - Testcase">
+                                        <TitledPane text="iOS - Testcase">
                                             <content>
                                                 <TableView fx:id="tbvIOS" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-backgrounds">
                                                     <columns>
@@ -86,9 +86,9 @@
                                                 </TableView>
                                             </content>
                                         </TitledPane>
-                                        <TitledPane animated="false" styleClass="testCase.tableView" text="Android - Testcase">
+                                        <TitledPane styleClass="testCase.tableView" text="Android - Testcase">
                                             <content>
-                                                <TableView fx:id="tbvAndroid" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-backgrounds">
+                                                <TableView fx:id="tbvAND" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-backgrounds">
                                                     <columns>
                                                         <TableColumn fx:id="tbcAndroid" prefWidth="75.0" />
                                                     </columns>
@@ -98,7 +98,7 @@
                                                 </TableView>
                                             </content>
                                         </TitledPane>
-                                        <TitledPane animated="false" styleClass="testCase.tableView" text="Webportal - Testcase">
+                                        <TitledPane styleClass="testCase.tableView" text="Webportal - Testcase">
                                             <content>
                                                 <TableView fx:id="tbvWebportal" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-backgrounds">
                                                     <columns>
@@ -144,7 +144,7 @@
             <top>
                 <ToolBar>
                     <items>
-                        <Button fx:id="btnOpenTestsuite" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnOpenTestsuite" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#openTestsuite" prefHeight="34.0" prefWidth="34.0">
                             <opaqueInsets>
                                 <Insets />
                             </opaqueInsets>
@@ -162,7 +162,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="btnSaveTestsuite" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnSaveTestsuite" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#saveTestsuite" prefHeight="34.0" prefWidth="34.0">
 
                             <padding>
                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
@@ -178,7 +178,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="btnCreateTestsuite" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnCreateTestsuite" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#createNewTestsuite" prefHeight="34.0" prefWidth="34.0">
                             <padding>
                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                             </padding>
@@ -193,7 +193,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="btnDeletedTestsuite" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnDeletedTestsuite" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#deletedTestsuite" prefHeight="34.0" prefWidth="34.0">
                             <padding>
                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                             </padding>
@@ -213,7 +213,7 @@
                                 <Insets left="5.0" right="5.0" />
                             </padding>
                         </Separator>
-                        <Button fx:id="btnAddTestcase" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnAddTestcase" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#addTestcaseInTestsuite" prefHeight="34.0" prefWidth="34.0">
                             <padding>
                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                             </padding>
@@ -228,7 +228,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="btnDeletedTestcase" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnDeletedTestcase" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#deleteTestcaseFromTestsuite" prefHeight="34.0" prefWidth="34.0">
                             <padding>
                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                             </padding>
@@ -248,7 +248,7 @@
                                 <Insets left="5.0" right="5.0" />
                             </padding>
                         </Separator>
-                        <Button fx:id="btnRun" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnRun" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#runTestsuite" prefHeight="34.0" prefWidth="34.0">
                             <padding>
                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                             </padding>
@@ -263,7 +263,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="btnSkip" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnSkip" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#skipTestcase" prefHeight="34.0" prefWidth="34.0">
                             <padding>
                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                             </padding>
@@ -278,7 +278,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="btnPause" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnPause" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#pauseTestcase" prefHeight="34.0" prefWidth="34.0">
                             <padding>
                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                             </padding>
@@ -293,7 +293,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="btnStop" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnStop" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#stopTestsuite" prefHeight="34.0" prefWidth="34.0">
                             <tooltip>
                                 <Tooltip text="\%toolbar.stop" />
                             </tooltip>
@@ -310,7 +310,7 @@
                                 <Insets left="5.0" right="5.0" />
                             </padding>
                         </Separator>
-                        <Button fx:id="btnResult" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnResult" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showTestsuitResult" prefHeight="34.0" prefWidth="34.0">
                             <tooltip>
                                 <Tooltip text="\%toolbar.viewResult" />
                             </tooltip>
@@ -327,7 +327,7 @@
                                 <Insets left="5.0" right="5.0" />
                             </padding>
                         </Separator>
-                        <Button fx:id="btnOptions" defaultButton="true" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnOptions" defaultButton="true" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showOptions" prefHeight="34.0" prefWidth="34.0">
                             <padding>
                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                             </padding>
@@ -348,7 +348,7 @@
                             </padding>
                         </Separator>
                         <Pane />
-                        <Button fx:id="btnHelp" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Button" textAlignment="CENTER">
+                        <Button fx:id="btnHelp" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showhelp" prefHeight="34.0" prefWidth="34.0" text="Button" textAlignment="CENTER">
                             <padding>
                                 <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                             </padding>

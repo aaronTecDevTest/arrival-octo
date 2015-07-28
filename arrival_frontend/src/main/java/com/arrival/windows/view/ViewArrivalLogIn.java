@@ -18,34 +18,23 @@ import java.net.URL;
  * Login Class to get more authorisation form arrival App and more
  * functions.
  **/
-public class ViewLogIn extends Application {
+public class ViewArrivalLogIn extends Application {
 
     public FXMLLoader loader;
     public Parent root;
     public URL url;
 
-    private static RunArrivalOcto mainApp;
-
-    public ViewLogIn() {
+    public ViewArrivalLogIn() {
     }
-
-    public static RunArrivalOcto getMainApp() {
-        return mainApp;
-    }
-
-    public static void setMainApp(RunArrivalOcto mainApp) {
-        ViewLogIn.mainApp = mainApp;
-    }
-
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        url = getClass().getResource("/fxml/LogIn.fxml");
+        url = getClass().getResource("/fxml/arrivalLogIn.fxml");
         loader = new FXMLLoader(url);
         root = loader.load();
 
         Scene scene = new Scene(root, 400, 300);
-        scene.getStylesheets().add("/css/logIn.css");
+        scene.getStylesheets().add("/css/arrivalLogIn.css");
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("ViewLogIn - ArrivalOcto");

@@ -8,10 +8,13 @@ import com.arrival.utilities.interfaces.IFTestSuite;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
+import java.util.ArrayList;
+
 public class TestSuite implements IFTestSuite {
     private SimpleIntegerProperty tsId;
     private SimpleStringProperty tsName;
     private SimpleStringProperty tsResult;
+    private ArrayList<TestCase> testCases;
 
     public TestSuite(Integer id, String tsName, String tsResult) {
         this.tsId = new SimpleIntegerProperty(id);

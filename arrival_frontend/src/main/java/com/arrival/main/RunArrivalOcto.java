@@ -1,9 +1,7 @@
 package com.arrival.main;
 
-import com.arrival.windows.controller.ControllerLogIn;
 import com.arrival.windows.view.ViewArrivalMainApp;
-import com.arrival.windows.view.ViewLogIn;
-import com.arrival.windows.view.ViewArrivalMainApp;
+import com.arrival.windows.view.ViewArrivalLogIn;
 
 /**
  * Created by Aaron on 28.03.2015.
@@ -13,22 +11,11 @@ import com.arrival.windows.view.ViewArrivalMainApp;
  */
 
 public class RunArrivalOcto {
-
-    public ViewArrivalMainApp viewMainApp;
-    public ViewLogIn viewLogIn;
-
-    public RunArrivalOcto() {
-        viewMainApp = new ViewArrivalMainApp();
-    }
+    public ViewArrivalLogIn viewLogIn;
 
     public void runLogIn() {
-        viewLogIn = new ViewLogIn();
-        ViewLogIn.setMainApp(this);
+        viewLogIn = new ViewArrivalLogIn();
         viewLogIn.run();
-    }
-
-    public void runMainApp(){
-        viewMainApp.run();
     }
 
     public static void main(String[] args) {
