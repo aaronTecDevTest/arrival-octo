@@ -4,6 +4,7 @@ package com.arrival.windows.controller;
  * Created by Aaron Kutekidila on 09.05.2015.
  **/
 
+import com.arrival.utilities.FileNameLoader;
 import com.arrival.windows.model.TestCase;
 import com.arrival.windows.model.TestSuite;
 import com.sun.beans.finder.ClassFinder;
@@ -91,7 +92,6 @@ public class ControllerArrivalMainApp implements Initializable {
         //ini BundleResources
         bundle = resources;
         lblSearchfield.setText(bundle.getString("label.search"));
-
 
         tbcName.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcDescription.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDescription"));
@@ -194,20 +194,18 @@ public class ControllerArrivalMainApp implements Initializable {
 
     private void setUpIOSTestcase(){
         ArrayList<TestCase> tempList = new ArrayList<>();
+        FileNameLoader fileNameLoader = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
+        ArrayList<String> fileNames = fileNameLoader.getFileName();
 
-  /*      List<Class> classes =
-
-        for (Class c : classes) {
-            System.out.println(c.toString());// + " " + c.getCanonicalName());
-        }*/
-
-
-
+        for(String fileName: fileNames) {
+            tempList.add(new TestCase(fileName,"",",","","",""));
+        }
+/*
         tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
         tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
         tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
         tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
-
+*/
         dateIOSTestcase = FXCollections.observableArrayList(tempList);
 
     }
