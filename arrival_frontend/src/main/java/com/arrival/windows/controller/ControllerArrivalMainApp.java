@@ -7,7 +7,6 @@ package com.arrival.windows.controller;
 import com.arrival.utilities.FileNameLoader;
 import com.arrival.windows.model.TestCase;
 import com.arrival.windows.model.TestSuite;
-import com.sun.beans.finder.ClassFinder;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -16,9 +15,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import  javafx.scene.control.Label;
+import org.apache.log4j.Logger;
+
+import javax.swing.text.html.ImageView;
+import javax.xml.soap.Node;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -28,12 +30,21 @@ import java.util.ResourceBundle;
 public class ControllerArrivalMainApp implements Initializable {
 
     /**
+     * Logger
+     */
+    //TODO: logger implment
+
+    /**
      * For Internationalization
      */
+    public ObservableList dateIOSTestcase;
+    public ObservableList dateANDTestcase;
+    public ObservableList dateWebPortalTestcase;
+    public ObservableList dateTestsuite;
 
     @FXML private Label lblSearchfield;
     @FXML private Label lblStatusLeft;
-    @FXML private Label  lblStatusRight;
+    @FXML private Label lblStatusRight;
 
 
     @FXML private Button btnAddTestcase;
@@ -50,7 +61,7 @@ public class ControllerArrivalMainApp implements Initializable {
     @FXML private Button btnSkip;
     @FXML private Button btnStop;
 
-    @FXML private TabPane tbMainTabPane;
+    @FXML private TabPane tabMainTabPane;
     @FXML private Accordion accTestCase;
 
 
@@ -74,10 +85,7 @@ public class ControllerArrivalMainApp implements Initializable {
     private ArrayList<TestSuite> testSuites;
     private ResourceBundle bundle;
 
-    public ObservableList dateIOSTestcase;
-    public ObservableList dateANDTestcase;
-    public ObservableList dateWebPortalTestcase;
-    public ObservableList dateTestsuite;
+
 
     /**
      * Called to initialize a controller after its root element has been
@@ -89,10 +97,11 @@ public class ControllerArrivalMainApp implements Initializable {
      */
     public void initialize(URL location, ResourceBundle resources) {
 
-        //ini BundleResources
+        //Ini BundleResources
         bundle = resources;
-        lblSearchfield.setText(bundle.getString("label.search"));
+        iniBundleResources();
 
+        //Set up Tablecolmn Propertys
         tbcName.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcDescription.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDescription"));
         tbcDuration.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDuration"));
@@ -104,6 +113,19 @@ public class ControllerArrivalMainApp implements Initializable {
         tbcAndroid.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcWebportal.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
 
+        //tbvIOS.getSelectionModel().setCellSelectionEnabled(true);
+        tbvIOS.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
+        //tbvAND.getSelectionModel().setCellSelectionEnabled(true);
+        tbvAND.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
+        //tbvWebportal.getSelectionModel().setCellSelectionEnabled(true);
+        tbvWebportal.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
+        //tbvTestsuite.getSelectionModel().setCellSelectionEnabled(true);
+        tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
+        //Set Up Testcase to Table
         setUpIOSTestcase();
         setUpANDTestcase();
         setUpWebPortalTestcase();
@@ -114,6 +136,7 @@ public class ControllerArrivalMainApp implements Initializable {
         tbvWebportal.setItems(dateWebPortalTestcase);
         tbvTestsuite.setItems(dateTestsuite);
 
+        //Set first TitlePane open
         TitledPane ios = accTestCase.getPanes().get(0);
         accTestCase.setExpandedPane(ios);
     }
@@ -140,22 +163,44 @@ public class ControllerArrivalMainApp implements Initializable {
     }
     @FXML
     public void addTestcaseInTestsuite(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource());
-        //tbvTestsuite.getItems().add(new TestCase("aaron ", "test", "pass","test","test","test"));
-        dateTestsuite.add(new TestCase("aaron ", "test", "pass","test","test","test"));
+        try {
+            if(accTestCase.getExpandedPane().getText().equals("iOS - Testcase")){
+                System.out.println(actionEvent.getSource()+ "ios");
+                dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
+            }
+
+            if(accTestCase.getExpandedPane().getText().equals("Android - Testcase")){
+                System.out.println(actionEvent.getSource()+ "and");
+                dateTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
+
+            }
+
+            if(accTestCase.getExpandedPane().getText().equals("Webportal - Testcase")){
+                System.out.println(actionEvent.getSource()+ "web");
+                dateTestsuite.addAll(tbvWebportal.getSelectionModel().getSelectedItems());
+            }
+        } catch (Exception e) {
+            //e.printStackTrace();
+        }
+
     }
 
     @FXML
     public void deleteTestcaseFromTestsuite(ActionEvent actionEvent) {
         System.out.println(actionEvent.getSource());
+        try {
+            ObservableList<Integer> indeces = tbvTestsuite.getSelectionModel().getSelectedIndices();
+            for(Integer index: indeces) {
+                dateTestsuite.remove((int) index);
+            }
+        }catch (Exception e){
+            //e.printStackTrace();
+        }
     }
 
     @FXML
     public void runTestsuite(ActionEvent actionEvent) {
         System.out.println(actionEvent.getSource());
-        if ((actionEvent.getTarget().getClass()) == btnSkip.getClass()) {
-
-        }
     }
 
     @FXML
@@ -187,6 +232,27 @@ public class ControllerArrivalMainApp implements Initializable {
         System.out.println(actionEvent.getSource());
     }
 
+    /**
+     *  Bundle Resources ini
+     */
+    private void iniBundleResources() {
+        lblSearchfield.setText(bundle.getString("label.search"));
+        lblStatusLeft.setText(bundle.getString("label.search"));
+        lblStatusRight.setText(bundle.getString("label.search"));
+
+        btnAddTestcase.getTooltip().setText(bundle.getString("label.search"));
+        btnCreateTestsuite.getTooltip().setText(bundle.getString("label.search"));
+        btnDeletedTestcase.getTooltip().setText(bundle.getString("label.search"));
+        btnDeletedTestsuite.getTooltip().setText(bundle.getString("label.search"));
+        btnHelp.getTooltip().setText(bundle.getString("label.search"));
+        btnOpenTestsuite.getTooltip().setText(bundle.getString("label.search"));
+        btnOptions.getTooltip().setText(bundle.getString("label.search"));
+        btnPause.getTooltip().setText(bundle.getString("label.search"));
+        btnResult.getTooltip().setText(bundle.getString("label.search"));
+        btnSaveTestsuite.getTooltip().setText(bundle.getString("label.search"));
+        btnSkip.getTooltip().setText(bundle.getString("label.search"));
+        btnStop.getTooltip().setText(bundle.getString("label.search"));
+    }
 
     /**
      * No FML Functions
@@ -198,7 +264,7 @@ public class ControllerArrivalMainApp implements Initializable {
         ArrayList<String> fileNames = fileNameLoader.getFileName();
 
         for(String fileName: fileNames) {
-            tempList.add(new TestCase(fileName,"",",","","",""));
+            tempList.add(new TestCase(fileName,"test2","datum","timer","","true"));
         }
 /*
         tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
@@ -213,21 +279,24 @@ public class ControllerArrivalMainApp implements Initializable {
     private void setUpANDTestcase(){
         ArrayList<TestCase> tempList = new ArrayList<>();
 
-        tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
-        tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
-        tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
-        tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
+        FileNameLoader fileNameLoader = new FileNameLoader("/com/arrival/testCase/andTestcase", ".class");
+        ArrayList<String> fileNames = fileNameLoader.getFileName();
 
+        for(String fileName: fileNames) {
+            tempList.add(new TestCase(fileName,"test2","datum","timer","","false"));
+        }
         dateANDTestcase = FXCollections.observableArrayList(tempList);
     }
 
     private void setUpWebPortalTestcase(){
         ArrayList<TestCase> tempList = new ArrayList<>();
 
-        tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
-        tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
-        tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
-        tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
+        FileNameLoader fileNameLoader = new FileNameLoader("/com/arrival/testCase/portalTestcase", ".class");
+        ArrayList<String> fileNames = fileNameLoader.getFileName();
+
+        for(String fileName: fileNames) {
+            tempList.add(new TestCase(fileName,"test2","datum","timer","google.com","true"));
+        }
 
         dateWebPortalTestcase = FXCollections.observableArrayList(tempList);
     }
@@ -235,10 +304,13 @@ public class ControllerArrivalMainApp implements Initializable {
     private void setUpTestsuite() {
         ArrayList<TestCase> tempList = new ArrayList<>();
 
-        tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
-        tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
-        tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
-        tempList.add( new TestCase("Testname8555", "Beschrieung1", "1:22", "27.07.2015","google.com","Pass"));
+        /*
+        FileNameLoader fileNameLoader = new FileNameLoader("/com/arrival/testCase/", ".class");
+        ArrayList<String> fileNames = fileNameLoader.getFileName();
+
+        for(String fileName: fileNames) {
+            tempList.add(new TestCase(fileName,"",",","","",""));
+        }*/
 
         dateTestsuite = FXCollections.observableArrayList(tempList);
     }
