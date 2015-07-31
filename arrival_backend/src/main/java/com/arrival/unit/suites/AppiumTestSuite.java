@@ -63,9 +63,9 @@ public class AppiumTestSuite {
     private void createVirtualSuite() {
         suite.setName("TmpSuite");
         testXML.setName("TmpTest");
-        classes.add(new XmlClass("com.arrival.unit.generic.AppiumConfigSingleton"));
-        classes.add(new XmlClass("com.arrival.testCase.iosTestcase.SimpleTest1"));
-        classes.add(new XmlClass("com.arrival.testCase.iosTestcase.SimpleTest2"));
+        classes.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
+        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));
+        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));
         testXML.setXmlClasses(classes);
     }
 
@@ -75,7 +75,7 @@ public class AppiumTestSuite {
     private String getNewPathDirectory() {
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmss");
         Calendar cal = Calendar.getInstance();
-        String tempPath = "../arrival-octo/arrival_backend/src/main/resources/report/testng/iosTestcase/";
+        String tempPath = "../arrival-Octo/arrival_backen/src/main/resources/report/testng/selenium/";
         String outPutDirectory = tempPath + dateFormat.format(cal.getTime());
 
         createNewDirectory(outPutDirectory);
