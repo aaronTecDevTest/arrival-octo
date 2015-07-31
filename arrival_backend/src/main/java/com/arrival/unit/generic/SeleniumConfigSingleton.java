@@ -4,20 +4,25 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 /**
- * Created by tecdesdev on 14/07/15.
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 09.05.2015
+ * @since: 1.0
+ * Package: com.arrival.unit.generic
  */
+
 public class SeleniumConfigSingleton {
-    private static SeleniumConfigSingleton ourInstance = new SeleniumConfigSingleton();
-    private final static String single = "single" ;
+    private final static String single = "single";
     private final static String multi = "multi";
     public static String testArt;
-
-    public static SeleniumConfigSingleton getInstance() {
-        return ourInstance;
-    }
+    private static SeleniumConfigSingleton ourInstance = new SeleniumConfigSingleton();
 
     private SeleniumConfigSingleton() {
         testArt = single;
+    }
+
+    public static SeleniumConfigSingleton getInstance() {
+        return ourInstance;
     }
 
     public static String getTestArt() {
@@ -34,7 +39,7 @@ public class SeleniumConfigSingleton {
     }
 
     @AfterSuite
-    public void cleanUpAppiumConfig(){
+    public void cleanUpAppiumConfig() {
         setTestArt("");
     }
 }

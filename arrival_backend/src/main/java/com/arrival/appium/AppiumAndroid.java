@@ -1,27 +1,33 @@
 package com.arrival.appium;
 
 import com.arrival.utilities.interfaces.IFAppiumServer;
-
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecuteResultHandler;
 import org.apache.commons.exec.DefaultExecutor;
+
 import java.io.IOException;
 
 /**
  * @author Aaron Kutekidila
  * @version 1.0
- * Created on 26/05/15.
+ *          Created on 26/05/15.
  * @since 1.0
  */
 
 public class AppiumAndroid implements IFAppiumServer {
+
+    /**
+     * Standard Constructor
+     */
+    public AppiumAndroid() {
+
+    }
 
     public static void main(String[] args) throws IOException {
         AppiumAndroid androidServer = new AppiumAndroid();
         androidServer.lgServer();
         androidServer.note3Sever();
     }
-
 
     public void note3Sever() throws IOException {
         CommandLine command = new CommandLine("/Applications/Appium.app/Contents/Resources/node/bin/node");
@@ -60,14 +66,6 @@ public class AppiumAndroid implements IFAppiumServer {
         DefaultExecutor executor = new DefaultExecutor();
         executor.setExitValue(1);
         executor.execute(command, resultHandler);
-    }
-
-
-    /**
-     * Standard Constructor
-     */
-    public AppiumAndroid() {
-
     }
 
     /**

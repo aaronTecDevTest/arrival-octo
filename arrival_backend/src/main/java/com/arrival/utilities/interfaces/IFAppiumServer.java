@@ -1,12 +1,12 @@
 package com.arrival.utilities.interfaces;
 
 /**
- * @author Aaron Kutekidila
- * @version 1.0
- * Created on 26/05/15.
- * @since 1.0
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 09.05.2015
+ * @since: 1.0
+ * Package: com.utilities.interfaces
  */
-
 /**
  *
  */

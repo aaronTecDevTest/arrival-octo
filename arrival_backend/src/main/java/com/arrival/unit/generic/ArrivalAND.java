@@ -15,11 +15,10 @@ import java.util.ArrayList;
  * @since: 1.0
  * Package: com.arrival.unit.generic
  */
+public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
 
-public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
-
-    public static SeleniumConfigSingleton appiumConfi = SeleniumConfigSingleton.getInstance();
-    public ArrayList<Object> seleniumServerList = new ArrayList<>();
+    public static AppiumConfigSingleton appiumConfi = AppiumConfigSingleton.getInstance();
+    public ArrayList<Object> appiumServerList = new ArrayList<>();
 
     /*
      *Test NG method
@@ -28,7 +27,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     public Object[][] createServer() {
 
         Object[][] server;
-        int y = seleniumServerList.size();
+        int y = appiumServerList.size();
         int x = 2;
 
         server = new Object[y][x];
@@ -36,7 +35,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         for (int i = 0; i < y; i++) {
             for (int j = 0; j < x; j++) {
                 if (j == 0) {
-                    server[i][j] = seleniumServerList.get(i);
+                    server[i][j] = appiumServerList.get(i);
                 }
                 if (j == 1) {
                     server[i][j] = i;
@@ -64,12 +63,12 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     @BeforeClass
     public void setUpTestClass() {
         if (AppiumConfigSingleton.getTestArt().equals("multi")) {
-            seleniumServerList.add("android Test1");
-            seleniumServerList.add("android Test2");
-            seleniumServerList.add("ios Test1");
-            seleniumServerList.add("ios Test2");
+            appiumServerList.add("android Test1");
+            appiumServerList.add("android Test2");
+            appiumServerList.add("ios Test1");
+            appiumServerList.add("ios Test2");
         } else {
-            seleniumServerList.add("android Default");
+            appiumServerList.add("android Default");
         }
     }
 
@@ -81,7 +80,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     /*
-     *Web general method (Selenium)
+     *Mobile general method
      */
 
     @Override
@@ -140,8 +139,8 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     /*
-     *Testcase Properties
-     */
+   *Testcase Properties
+   */
     public int getTcID() {
         return tcID.get();
     }

@@ -1,8 +1,12 @@
 package com.arrival.windows.view;
 
 /**
- * Created by Aaron on 09.05.2015.
- **/
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 09.05.2015
+ * @since: 1.0
+ * Package: com.arrival.windows.view
+ */
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -43,7 +47,7 @@ public class ViewArrivalMainApp extends Application {
         primaryStage.show();
     }
 
-    public void run(){
+    public void run() {
         launch();
     }
 }
