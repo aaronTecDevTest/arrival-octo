@@ -17,16 +17,27 @@ import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
 
 /**
- * Created by Aaron on 16.05.2015.
- **/
-public class ControllerArrivalLogIn implements Initializable{
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 09.05.2015
+ * @since: 1.0
+ * Package: com.arrival.windows.controller
+ */
 
-    @FXML private Button btnLogIn;
-    @FXML private Button btnSignIn;
-    @FXML private Label lblFailLogIn;
-    @FXML private TextField txfUsername;
-    @FXML private PasswordField pwfPassword;
-    @FXML private CheckBox chbNoLogIn;
+public class ControllerArrivalLogIn implements Initializable {
+
+    @FXML
+    private Button btnLogIn;
+    @FXML
+    private Button btnSignIn;
+    @FXML
+    private Label lblFailLogIn;
+    @FXML
+    private TextField txfUsername;
+    @FXML
+    private PasswordField pwfPassword;
+    @FXML
+    private CheckBox chbNoLogIn;
 
     /**
      * Called to initialize a controller after its root element has been
@@ -69,7 +80,7 @@ public class ControllerArrivalLogIn implements Initializable{
     }
 
     @FXML
-    public void clickSignIn(ActionEvent actionEvent){
+    public void clickSignIn(ActionEvent actionEvent) {
         System.out.println("Sign In");
     }
 

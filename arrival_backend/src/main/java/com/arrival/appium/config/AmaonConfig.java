@@ -6,5 +6,5 @@ package com.arrival.appium.config;
  *          Created on 01.06.2015.
  * @since 1.0
  */
-public class AmaonConfig                                                                                     {
+public class AmaonConfig {
 }

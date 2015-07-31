@@ -3,8 +3,13 @@ package com.arrival.unit.listener;
 import org.testng.IExecutionListener;
 
 /**
- * Created by tecdesdev on 07/07/15.
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 09.05.2015
+ * @since: 1.0
+ * Package: com.arrival.unit.listener
  */
+
 public class EmailListener implements IExecutionListener {
 
     @Override

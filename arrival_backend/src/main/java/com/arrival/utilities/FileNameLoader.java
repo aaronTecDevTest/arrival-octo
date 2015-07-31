@@ -1,8 +1,13 @@
 package com.arrival.utilities;
 
 /**
- * Created by Aaron Kutekidila on 29.07.2015.
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 09.05.2015
+ * @since: 1.0
+ * Package: com.arrival.utilities
  */
+
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -28,7 +33,6 @@ public class FileNameLoader {
     }
 
     /**
-     *
      * @param filePath DirectoryPath where the Files are.
      */
     public FileNameLoader(String filePath, String fileExtension) {
@@ -60,12 +64,12 @@ public class FileNameLoader {
     }
 
     private void setUpFileName() {
-        ArrayList<String > temp = new ArrayList<>();
+        ArrayList<String> temp = new ArrayList<>();
         String tempFilePathString;
 
-        for(Path tempFilePath : filePathList) {
+        for (Path tempFilePath : filePathList) {
             tempFilePathString = tempFilePath.getFileName().toString();
-            String []tempArray = tempFilePathString.split(fileExtension);
+            String[] tempArray = tempFilePathString.split(fileExtension);
 
             temp.add(tempArray[0]);
         }
@@ -73,9 +77,9 @@ public class FileNameLoader {
     }
 
     private void setUpFileNameWithExtension() {
-        ArrayList<String > temp = new ArrayList<>();
-        for(Path tempFilePath : filePathList) {
-            temp.add( tempFilePath.getFileName().toString());
+        ArrayList<String> temp = new ArrayList<>();
+        for (Path tempFilePath : filePathList) {
+            temp.add(tempFilePath.getFileName().toString());
         }
         fileNameWithExtension = temp;
     }

@@ -1,8 +1,12 @@
 package com.arrival.windows.model;
 
 /**
- * Created by Aaron Kutekidila on 09.05.2015.
- **/
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 09.05.2015
+ * @since: 1.0
+ * Package: com.arrival.windows.model
+ */
 
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -20,7 +24,7 @@ public class TestCase implements IFTestCase {
     private SimpleStringProperty tcResult;
 
     public TestCase() {
-        this(0, "", "", "","","","");
+        this(0, "", "", "", "", "", "");
     }
 
     public TestCase(Integer id, String tcName, String tcDescription, String tcResult, String tcDuration, String tcLastRun, String tcLink) {
@@ -46,84 +50,84 @@ public class TestCase implements IFTestCase {
         return tcID.get();
     }
 
-    public SimpleIntegerProperty tcIDProperty() {
-        return tcID;
-    }
-
     public void setTcID(int tcID) {
         this.tcID.set(tcID);
+    }
+
+    public SimpleIntegerProperty tcIDProperty() {
+        return tcID;
     }
 
     public String getTcName() {
         return tcName.get();
     }
 
-    public SimpleStringProperty tcNameProperty() {
-        return tcName;
-    }
-
     public void setTcName(String tcName) {
         this.tcName.set(tcName);
+    }
+
+    public SimpleStringProperty tcNameProperty() {
+        return tcName;
     }
 
     public String getTcDescription() {
         return tcDescription.get();
     }
 
-    public SimpleStringProperty tcDescriptionProperty() {
-        return tcDescription;
-    }
-
     public void setTcDescription(String tcDescription) {
         this.tcDescription.set(tcDescription);
+    }
+
+    public SimpleStringProperty tcDescriptionProperty() {
+        return tcDescription;
     }
 
     public String getTcResult() {
         return tcResult.get();
     }
 
-    public SimpleStringProperty tcResultProperty() {
-        return tcResult;
-    }
-
     public void setTcResult(String tcResult) {
         this.tcResult.set(tcResult);
+    }
+
+    public SimpleStringProperty tcResultProperty() {
+        return tcResult;
     }
 
     public String getTcLastRun() {
         return tcLastRun.get();
     }
 
-    public SimpleStringProperty tcLastRunProperty() {
-        return tcLastRun;
-    }
-
     public void setTcLastRun(String tcLastRun) {
         this.tcLastRun.set(tcLastRun);
+    }
+
+    public SimpleStringProperty tcLastRunProperty() {
+        return tcLastRun;
     }
 
     public String getTcLink() {
         return tcLink.get();
     }
 
-    public SimpleStringProperty tcLinkProperty() {
-        return tcLink;
-    }
-
     public void setTcLink(String tcLink) {
         this.tcLink.set(tcLink);
+    }
+
+    public SimpleStringProperty tcLinkProperty() {
+        return tcLink;
     }
 
     public String getTcDuration() {
         return tcDuration.get();
     }
 
-    public SimpleStringProperty tcDurationProperty() {
-        return tcDuration;
-    }
-
     public void setTcDuration(String tcDuration) {
         this.tcDuration.set(tcDuration);
+    }
+
+    public SimpleStringProperty tcDurationProperty() {
+        return tcDuration;
     }
 }
 

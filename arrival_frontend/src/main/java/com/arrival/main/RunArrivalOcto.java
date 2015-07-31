@@ -1,6 +1,5 @@
 package com.arrival.main;
 
-import com.arrival.windows.view.ViewArrivalMainApp;
 import com.arrival.windows.view.ViewArrivalLogIn;
 
 /**
@@ -13,14 +12,14 @@ import com.arrival.windows.view.ViewArrivalLogIn;
 public class RunArrivalOcto {
     public ViewArrivalLogIn viewLogIn;
 
-    public void runLogIn() {
-        viewLogIn = new ViewArrivalLogIn();
-        viewLogIn.run();
-    }
-
     public static void main(String[] args) {
         RunArrivalOcto app = new RunArrivalOcto();
         app.runLogIn();
+    }
+
+    public void runLogIn() {
+        viewLogIn = new ViewArrivalLogIn();
+        viewLogIn.run();
     }
 }
 

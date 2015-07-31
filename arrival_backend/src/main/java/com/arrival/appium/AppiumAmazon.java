@@ -1,10 +1,11 @@
 package com.arrival.appium;
 
 import com.arrival.utilities.interfaces.IFAppiumServer;
+
 /**
  * @author Aaron Kutekidila
  * @version 1.0
- * Created on 26/05/15.
+ *          Created on 26/05/15.
  * @since 1.0
  */
 

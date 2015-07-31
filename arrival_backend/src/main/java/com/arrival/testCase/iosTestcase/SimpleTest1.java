@@ -1,14 +1,16 @@
 package com.arrival.testCase.iosTestcase;
-
 /**
- * Created by a.kutekidila on 04.05.2015.
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 09.05.2015
+ * @since: 1.0
+ * Package: com.arrival
  */
 
-
-import com.arrival.unit.generic.ArrivalMobil;
+import com.arrival.unit.generic.ArrivalIOS;
 import org.testng.annotations.Test;
 
-public class SimpleTest1 extends ArrivalMobil {
+public class SimpleTest1 extends ArrivalIOS {
 
     @Test(dataProvider = "driver", groups = {"fast"})
     public void aFastTest(String serverName, Integer id) {

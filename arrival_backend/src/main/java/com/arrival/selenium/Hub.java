@@ -7,26 +7,26 @@ import org.openqa.grid.internal.utils.GridHubConfiguration;
 /**
  * @author Aaron Kutekidila
  * @version 1.0
- * Created on 31.05.2015.
+ *          Created on 31.05.2015.
  * @since 1.0
- *
+ * <p>
  * <P>Hub</P>
  * This Class return a instance of SeleniumHub.
  * Also can start, stop and restart the Hub.
  */
 public class Hub {
     //private static final Logger log = LogManager.getLogger(Hub.class.getName());
-    private  Logger log;
+    private Logger log;
     /**
      * @param osName Operation-System Name like "Mac OS", "Windows xxx" or "Linux xx"
      */
     private String osName;
     /**
-     *@param gridHubConfig @see GridHubConfiguration
+     * @param gridHubConfig @see GridHubConfiguration
      */
     private GridHubConfiguration gridHubConfig;
     /**
-     *@param hub @see org.openqa.grid.web.Hub
+     * @param hub @see org.openqa.grid.web.Hub
      */
     private org.openqa.grid.web.Hub hub;
     /**
@@ -38,13 +38,6 @@ public class Hub {
      */
     private Integer hubPort;
 
-
-    public static void main(String[] args) {
-        Hub hubNode = new Hub();
-
-        hubNode.startHub();
-        // hubNode.shutDownNodeAndHub();
-    }
 
     /**
      * Standard construct to ini gridHubConfig, hubHost, hubPort and
@@ -60,17 +53,26 @@ public class Hub {
         setUpHub();
         log.info("SeleniumHb created");
     }
+
     /**
      * Construct with ini parameter
+     *
      * @param host @see hubHost
      * @param port @see hubPort
-    */
+     */
     public Hub(String host, Integer port) {
         gridHubConfig = new GridHubConfiguration();
         hubHost = host;
         hubPort = port;
         osName = System.getProperty("os.name");
         setUpHub();
+    }
+
+    public static void main(String[] args) {
+        Hub hubNode = new Hub();
+
+        hubNode.startHub();
+        // hubNode.shutDownNodeAndHub();
     }
 
     /**
@@ -116,6 +118,7 @@ public class Hub {
             e.printStackTrace();
         }
     }
+
     /**
      * Restart the hub with configured/reset Host and Post
      */

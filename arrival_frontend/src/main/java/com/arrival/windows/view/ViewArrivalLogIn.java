@@ -1,15 +1,19 @@
 package com.arrival.windows.view;
 
 /**
- * Created by Aaron on 09.05.2015.
- **/
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 09.05.2015
+ * @since: 1.0
+ * Package: com.arrival.windows.view
+ */
 
-import com.arrival.main.RunArrivalOcto;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.net.URL;
 
@@ -42,7 +46,7 @@ public class ViewArrivalLogIn extends Application {
         primaryStage.show();
     }
 
-    public void run(){
+    public void run() {
         launch();
     }
 }

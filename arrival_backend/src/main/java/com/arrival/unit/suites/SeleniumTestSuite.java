@@ -15,8 +15,12 @@ import java.util.Calendar;
 import java.util.List;
 
 /**
- * Created by a.kutekidila on 13.05.2015.
- **/
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 09.05.2015
+ * @since: 1.0
+ * Package: com.arrival.unit.suites
+ */
 
 public class SeleniumTestSuite {
 
