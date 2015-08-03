@@ -8,6 +8,7 @@ import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -24,16 +25,18 @@ import java.util.List;
 
 public class SeleniumTestSuite {
 
-    TestNG tng = new TestNG();
-    List<XmlClass> classes = new ArrayList<>();
+    private TestNG tng = new TestNG();
+    private List<XmlClass> classes = new ArrayList<>();
 
-    XmlSuite suite = new XmlSuite();
-    List<XmlSuite> suites = new ArrayList<>();
+    private XmlSuite suite = new XmlSuite();
+    private List<XmlSuite> suites = new ArrayList<>();
 
-    XmlTest testXML = new XmlTest(suite);
+    private XmlTest testXML = new XmlTest(suite);
 
-    EmailListener eml;
-    PreConfigListener pcl;
+    private EmailListener eml;
+    private PreConfigListener pcl;
+
+    private Path testResultPath;
 
     public SeleniumTestSuite() {
 
@@ -63,9 +66,9 @@ public class SeleniumTestSuite {
     private void createVirtualSuite() {
         suite.setName("TmpSuite");
         testXML.setName("TmpTest");
-        classes.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
+        /*classes.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
         classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));
-        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));
+        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));*/
         testXML.setXmlClasses(classes);
     }
 
@@ -91,6 +94,14 @@ public class SeleniumTestSuite {
             System.out.println("Directory creation failed1");
         else
             System.out.println("Directory creation success");
+    }
+
+    public List<XmlClass> getClasses() {
+        return classes;
+    }
+
+    public void setClasses(List<XmlClass> classes) {
+        this.classes = classes;
     }
 
     private String getPath() {

@@ -224,4 +224,12 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     public SimpleStringProperty tcDurationProperty() {
         return tcDuration;
     }
+
+    public SimpleStringProperty tcClassPackageProperty() {
+        return tcClassPackage;
+    }
+
+    public void setTcClassPackage(String tcClassPackage) {
+        IFTestCase.tcClassPackage.set(tcClassPackage);
+    }
 }
