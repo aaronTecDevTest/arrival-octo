@@ -2,12 +2,14 @@ package com.arrival.unit.suites;
 
 import com.arrival.unit.listener.EmailListener;
 import com.arrival.unit.listener.PreConfigListener;
+import com.arrival.utilities.interfaces.IFTestCase;
 import org.testng.TestNG;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -22,20 +24,23 @@ import java.util.List;
  * Package: com.arrival.unit.suites
  */
 
-public class AppiumTestSuite {
+public class ArrivalTestSuite {
 
-    TestNG tng = new TestNG();
-    List<XmlClass> classes = new ArrayList<>();
+    private TestNG tng = new TestNG();
+    private List<XmlClass> classes = new ArrayList<>();
 
-    XmlSuite suite = new XmlSuite();
-    List<XmlSuite> suites = new ArrayList<>();
+    private XmlSuite suite = new XmlSuite();
+    private List<XmlSuite> suites = new ArrayList<>();
 
-    XmlTest testXML = new XmlTest(suite);
+    private XmlTest testXML = new XmlTest(suite);
 
-    EmailListener eml;
-    PreConfigListener pcl;
+    private EmailListener eml;
+    private PreConfigListener pcl;
 
-    public AppiumTestSuite() {
+    private Path testResultPath;
+    private ArrayList<IFTestCase> testCases;
+
+    public ArrivalTestSuite() {
 
         eml = new EmailListener();
         pcl = new PreConfigListener();
@@ -49,7 +54,7 @@ public class AppiumTestSuite {
     }
 
     public static void main(String[] args) {
-        AppiumTestSuite runTest = new AppiumTestSuite();
+        ArrivalTestSuite runTest = new ArrivalTestSuite();
         runTest.runVirtualSuit();
     }
 
@@ -63,9 +68,9 @@ public class AppiumTestSuite {
     private void createVirtualSuite() {
         suite.setName("TmpSuite");
         testXML.setName("TmpTest");
-        classes.add(new XmlClass("com.arrival.unit.generic.AppiumConfigSingleton"));
+        /*classes.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
         classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));
-        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));
+        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));*/
         testXML.setXmlClasses(classes);
     }
 
@@ -75,6 +80,7 @@ public class AppiumTestSuite {
     private String getNewPathDirectory() {
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmss");
         Calendar cal = Calendar.getInstance();
+        //ToDo: Mit Path class implement
         String tempPath = "../arrival-Octo/arrival_backen/src/main/resources/report/testng/selenium/";
         String outPutDirectory = tempPath + dateFormat.format(cal.getTime());
 
@@ -90,6 +96,22 @@ public class AppiumTestSuite {
             System.out.println("Directory creation failed1");
         else
             System.out.println("Directory creation success");
+    }
+
+    public List<XmlClass> getClasses() {
+        return classes;
+    }
+
+    public void setClasses(List<XmlClass> classes) {
+        this.classes = classes;
+    }
+
+    public ArrayList<IFTestCase> getTestCases() {
+        return testCases;
+    }
+
+    public void setTestCases(ArrayList<IFTestCase> testCases) {
+        this.testCases = testCases;
     }
 
     private String getPath() {

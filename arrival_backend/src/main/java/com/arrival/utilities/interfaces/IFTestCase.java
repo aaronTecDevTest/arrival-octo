@@ -23,6 +23,7 @@ public interface IFTestCase {
     SimpleStringProperty tcLastRun = null;
     SimpleStringProperty tcLink = null;
     SimpleStringProperty tcResult = null;
+    SimpleStringProperty tcClassPackage = null;
 
     int getTcID();
 
@@ -65,4 +66,8 @@ public interface IFTestCase {
     void setTcDuration(String tcDuration);
 
     SimpleStringProperty tcDurationProperty();
+
+    SimpleStringProperty tcClassPackageProperty();
+
+    void setTcClassPackage(String tcClassPackage);
 }

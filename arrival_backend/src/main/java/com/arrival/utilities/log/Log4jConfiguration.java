@@ -49,7 +49,7 @@ public class Log4jConfiguration {
                     "    <Property name='coloredFullPattern'>%d %highlight{%-5p}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=cyan, DEBUG=green, TRACE=bright blue} %style{[%t] %C{2} (%F:%L) -}{bright,black} %m%n</Property>\n" +
                     "    <Property name='coloredMediumPattern'>%d %highlight{%-5p}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=cyan, DEBUG=green, TRACE=bright blue} %style{[%t] (%F:%L) -}{bright,black} %m%n</Property>\n" +
                     "    <Property name='coloredShortPattern'>%d %highlight{%-5p}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=cyan, DEBUG=green, TRACE=bright blue} %style{[%t] -}{bright,black} %m%n</Property>\n" +
-                    "    <Property name='fileName'>Log/${projectPrefix}.log</Property>\n" +
+                    "    <Property name='className'>Log/${projectPrefix}.log</Property>\n" +
                     "    <Property name='filePattern'>Log/${projectPrefix}-%i.log</Property>\n" +
                     "  </Properties>\n" +
                     "  <Appenders>\n" +
@@ -59,7 +59,7 @@ public class Log4jConfiguration {
                     "      <PatternLayout pattern='${coloredShortPattern}'/>" +        // no Class & Filename
                     //"      <PatternLayout pattern='${rawPattern}'/>" +                 // incl. Class & Filename but no colors
                     "    </Console>\n" +
-                    "    <RollingFile name='Logfile' fileName='${fileName}' filePattern='${filePattern}'>\n" +
+                    "    <RollingFile name='Logfile' className='${className}' filePattern='${filePattern}'>\n" +
                     "      <PatternLayout pattern='${rawPattern}'/>\n" +
                     "      <Policies>\n" +
                     "        <SizeBasedTriggeringPolicy size='16 MB'/>\n" +

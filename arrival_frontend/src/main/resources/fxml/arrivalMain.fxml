@@ -372,7 +372,7 @@
                         </Separator>
                         <Pane/>
                         <Button fx:id="btnHelp" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0"
-                                mnemonicParsing="false" onAction="#showhelp" prefHeight="34.0" prefWidth="34.0"
+                                mnemonicParsing="false" onAction="#showHelp" prefHeight="34.0" prefWidth="34.0"
                                 text="Button" textAlignment="CENTER">
                             <padding>
                                 <Insets bottom="1.0" left="1.0" right="1.0" top="1.0"/>

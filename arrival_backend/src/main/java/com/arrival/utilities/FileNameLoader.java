@@ -19,7 +19,9 @@ public class FileNameLoader {
 
     public ArrayList<Path> filePathList;
     public ArrayList<String> fileNameWithExtension;
-    public ArrayList<String> fileName;
+    public ArrayList<String> className;
+    public ArrayList<String> classPackage;
+    public int size;
     public String fileDirectory;
     public URL url;
     public String fileExtension;
@@ -27,7 +29,7 @@ public class FileNameLoader {
     public FileNameLoader() {
         fileNameWithExtension = new ArrayList<>();
         filePathList = new ArrayList<>();
-        fileName = new ArrayList<>();
+        className = new ArrayList<>();
         fileDirectory = null;
         url = null;
     }
@@ -39,13 +41,16 @@ public class FileNameLoader {
         this.fileExtension = fileExtension;
         fileNameWithExtension = new ArrayList<>();
         filePathList = new ArrayList<>();
-        fileName = new ArrayList<>();
+        className = new ArrayList<>();
         url = getClass().getResource(filePath);
         fileDirectory = url.getPath().split(":")[1];
 
         setUpFilePathList();
         setUpFileName();
         setUpFileNameWithExtension();
+        setUpClassPackage();
+
+        size = className.size();
     }
 
     private void setUpFilePathList() {
@@ -73,7 +78,7 @@ public class FileNameLoader {
 
             temp.add(tempArray[0]);
         }
-        fileName = temp;
+        className = temp;
     }
 
     private void setUpFileNameWithExtension() {
@@ -82,6 +87,19 @@ public class FileNameLoader {
             temp.add(tempFilePath.getFileName().toString());
         }
         fileNameWithExtension = temp;
+    }
+
+    private void setUpClassPackage(){
+        ArrayList<String> temp = new ArrayList<>();
+        String dir = fileDirectory.split("/classes/")[1].replace("/",".");
+        for (String tempClassName : className) {
+            try {
+              temp.add(dir+"."+tempClassName);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        classPackage = temp;
     }
 
     public ArrayList<Path> getFilePathList() {
@@ -93,13 +111,21 @@ public class FileNameLoader {
     }
 
 
-    public ArrayList<String> getFileName() {
-        return fileName;
+    public ArrayList<String> getClassName() {
+        return className;
+    }
+
+    public ArrayList<String> getClassPackage() {
+        return classPackage;
     }
 
     public String getFileDirectory() {
 
         return fileDirectory;
+    }
+
+    public int getSize(){
+        return size;
     }
 
     public URL getUrl() {
@@ -110,13 +136,14 @@ public class FileNameLoader {
         this.url = url;
     }
 
-    /*public static void main(String[] args) {
-        FileNameLoader fileNameLoader = new FileNameLoader("/com/arrival/testCase/iosTestcase", "class");
-        System.out.println(fileNameLoader.getUrl());
-        System.out.println(fileNameLoader.getFileDirectory());
-        System.out.println(fileNameLoader.getFilePathList());
-        System.out.println(fileNameLoader.getFileName());
-        System.out.println(fileNameLoader.getFileNameWithExtension());
-    }*/
+    public static void main(String[] args) {
+        FileNameLoader fileNameLoader = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
+        System.out.println("Url:" + fileNameLoader.getUrl());
+        System.out.println("Dir:" + fileNameLoader.getFileDirectory());
+        System.out.println("Path:" + fileNameLoader.getFilePathList());
+        System.out.println("ClassName:" + fileNameLoader.getClassName());
+        System.out.println("Extension:" + fileNameLoader.getFileNameWithExtension());
+        System.out.println("ClassPackage:" + fileNameLoader.getClassPackage());
+    }
 }
 

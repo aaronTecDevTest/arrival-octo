@@ -1,4 +1,4 @@
-package com.arrival.testCase.portalTestcase;
+package com.arrival.testCase.iosTestcase;
 
 /**
  * @author: Aaron Kutekidila
@@ -9,18 +9,18 @@ package com.arrival.testCase.portalTestcase;
  */
 
 
-import com.arrival.unit.generic.ArrivalWeb;
+import com.arrival.unit.generic.ArrivalIOS;
 import org.testng.annotations.Test;
 
-public class SimpleTest1 extends ArrivalWeb {
+public class SimpleTest210 extends ArrivalIOS {
 
     @Test(dataProvider = "driver", groups = {"fast"})
     public void aFastTest(String serverName, Integer id) {
-        System.out.println("Fast test 202 " + serverName + " " + id);
+        System.out.println("Fast test 20 " + serverName + " " + id);
     }
 
     @Test(dataProvider = "driver", groups = {"slow"})
     public void aSlowTest(String serverName, Integer id) {
-        System.out.println("Slow test 303 " + serverName + " " + id);
+        System.out.println("Slow test 30 " + serverName + " " + id);
     }
 }

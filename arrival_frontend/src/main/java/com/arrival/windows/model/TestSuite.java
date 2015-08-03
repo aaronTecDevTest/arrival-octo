@@ -8,17 +8,20 @@ package com.arrival.windows.model;
  * Package: com.arrival.windows.model
  */
 
+import com.arrival.unit.suites.ArrivalTestSuite;
 import com.arrival.utilities.interfaces.IFTestSuite;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class TestSuite implements IFTestSuite {
     private SimpleIntegerProperty tsId;
     private SimpleStringProperty tsName;
     private SimpleStringProperty tsResult;
-    private ArrayList<TestCase> testCases;
+    private ArrayList<ArrivalTestSuite> testCases;
+    private SimpleStringProperty suiteIdentifyIdentify;
 
 
 
@@ -28,10 +31,12 @@ public class TestSuite implements IFTestSuite {
         this.tsResult = new SimpleStringProperty(tsResult);
     }
 
+    @Override
     public int getTsId() {
         return tsId.get();
     }
 
+    @Override
     public SimpleIntegerProperty tsIdProperty() {
         return tsId;
     }
@@ -40,10 +45,12 @@ public class TestSuite implements IFTestSuite {
         this.tsId.set(tsId);
     }
 
+    @Override
     public String getTsName() {
         return tsName.get();
     }
 
+    @Override
     public SimpleStringProperty tsNameProperty() {
         return tsName;
     }
@@ -52,10 +59,12 @@ public class TestSuite implements IFTestSuite {
         this.tsName.set(tsName);
     }
 
+    @Override
     public String getTsResult() {
         return tsResult.get();
     }
 
+    @Override
     public SimpleStringProperty tsResultProperty() {
         return tsResult;
     }
@@ -64,11 +73,23 @@ public class TestSuite implements IFTestSuite {
         this.tsResult.set(tsResult);
     }
 
-    public ArrayList<TestCase> getTestCases() {
+    public ArrayList<ArrivalTestSuite> getTestCases() {
         return testCases;
     }
 
-    public void setTestCases(ArrayList<TestCase> testCases) {
+    public void setTestCases(ArrayList<ArrivalTestSuite> testCases) {
         this.testCases = testCases;
+    }
+
+    public String getSuiteIdentifyIdentify() {
+        return suiteIdentifyIdentify.get();
+    }
+
+    public SimpleStringProperty suiteIdentifyIdentifyProperty() {
+        return suiteIdentifyIdentify;
+    }
+
+    public void setSuiteIdentifyIdentify(String suiteIdentifyIdentify) {
+        this.suiteIdentifyIdentify.set(suiteIdentifyIdentify);
     }
 }
