@@ -10,16 +10,16 @@ package com.arrival.windows.controller;
 
 import com.arrival.utilities.FileNameLoader;
 import com.arrival.windows.model.TestCase;
-import com.arrival.windows.model.TestSuite;
-import com.arrival.windows.view.ArrivalTab;
+import com.arrival.windows.view.ViewArrivalTab;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -115,7 +115,7 @@ public class ControllerArrivalMainApp implements Initializable {
     @FXML
     private TableColumn<TestCase, String> tbcResult;
 
-    private HashMap<String, ArrivalTab> testSuitesTab;
+    private HashMap<String, ViewArrivalTab> testSuitesTab;
     private ResourceBundle bundle;
     private FileNameLoader fileNameLoaderIOS;
     private FileNameLoader fileNameLoaderAND;
@@ -134,7 +134,7 @@ public class ControllerArrivalMainApp implements Initializable {
 
         //Ini BundleResources
         bundle = resources;
-        iniBundleResources();
+      //  iniBundleResources();
 
         //Set up Tablecolmn Propertys
         tbcName.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
@@ -177,12 +177,28 @@ public class ControllerArrivalMainApp implements Initializable {
 
         //Set Up Testsuite
         testSuitesTab = new HashMap<>();
+
+
+
+        /*
+
+
+        Test
+         */
+
     }
 
 
     @FXML
-    public void openTestsuite(ActionEvent actionEvent) {
+    public void openTestsuite(ActionEvent actionEvent) throws IOException{
         System.out.println(actionEvent.getSource());
+        //URL url = getClass().getResource("/fxml/arrivalTab.fxml");
+        //final Tab tab = new Tab("Tab" + (tabMainTabPane.getTabs().size()+1));
+
+        System.out.println(tabMainTabPane.getChildrenUnmodifiable().get(0).toString());
+
+//        tabMainTabPane.getTabs().add(tab);
+  //      tabMainTabPane.getSelectionModel().select(tab);
     }
 
     @FXML
@@ -220,6 +236,7 @@ public class ControllerArrivalMainApp implements Initializable {
                 System.out.println(actionEvent.getSource() + "web");
                 dateTestsuite.addAll(tbvWebportal.getSelectionModel().getSelectedItems());
             }
+
         } catch (Exception e) {
             //e.printStackTrace();
         }

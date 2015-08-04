@@ -4,6 +4,7 @@ import com.arrival.windows.model.TestCase;
 import javafx.scene.control.Tab;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * @author: Aaron Kutekidila
@@ -12,7 +13,14 @@ import java.util.ArrayList;
  * @since: 1.0
  * Package: com.arrival.windows.view
  */
-public class ArrivalTab extends Tab{
+public class ViewArrivalTab extends Tab{
     ArrayList<TestCase> testCases;
+    String suiteResultPaht;
+    Objects suiteConfiguration;
 
+
+    public  ViewArrivalTab(){
+
+
+    }
 }
