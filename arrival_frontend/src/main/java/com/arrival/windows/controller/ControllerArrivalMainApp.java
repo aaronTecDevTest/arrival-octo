@@ -7,7 +7,6 @@ package com.arrival.windows.controller;
  * @since: 1.0
  * Package: com.arrival.windows.controller
  */
-
 import com.arrival.utilities.FileNameLoader;
 import com.arrival.windows.model.TestCase;
 import com.arrival.windows.view.ViewArrivalTab;
@@ -18,11 +17,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
@@ -45,7 +47,7 @@ public class ControllerArrivalMainApp implements Initializable {
     public ObservableList dateTestsuite;
 
     @FXML
-    private Label lblSearchfield;
+    private Label lblSearchField;
     @FXML
     private Label lblStatusLeft;
     @FXML
@@ -90,7 +92,7 @@ public class ControllerArrivalMainApp implements Initializable {
     @FXML
     private TableView<TestCase> tbvAND;
     @FXML
-    private TableView<TestCase> tbvWebportal;
+    private TableView<TestCase> tbvWebPortal;
     @FXML
     private TableView<TestCase> tbvTestsuite;
 
@@ -100,7 +102,7 @@ public class ControllerArrivalMainApp implements Initializable {
     @FXML
     private TableColumn<TestCase, String> tbcAndroid;
     @FXML
-    private TableColumn<TestCase, String> tbcWebportal;
+    private TableColumn<TestCase, String> tbcWebPortal;
 
     @FXML
     private TableColumn<TestCase, String> tbcName;
@@ -114,6 +116,9 @@ public class ControllerArrivalMainApp implements Initializable {
     private TableColumn<TestCase, String> tbcLink;
     @FXML
     private TableColumn<TestCase, String> tbcResult;
+
+    @FXML
+    private Tab tabMain;
 
     private HashMap<String, ViewArrivalTab> testSuitesTab;
     private ResourceBundle bundle;
@@ -134,7 +139,7 @@ public class ControllerArrivalMainApp implements Initializable {
 
         //Ini BundleResources
         bundle = resources;
-      //  iniBundleResources();
+       // iniBundleResources();
 
         //Set up Tablecolmn Propertys
         tbcName.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
@@ -146,16 +151,16 @@ public class ControllerArrivalMainApp implements Initializable {
 
         tbcIOS.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcAndroid.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-        tbcWebportal.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-
+        tbcWebPortal.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
+/*
         //tbvIOS.getSelectionModel().setCellSelectionEnabled(true);
         tbvIOS.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
         //tbvAND.getSelectionModel().setCellSelectionEnabled(true);
         tbvAND.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
-        //tbvWebportal.getSelectionModel().setCellSelectionEnabled(true);
-        tbvWebportal.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        //tbvWebPortal.getSelectionModel().setCellSelectionEnabled(true);
+        tbvWebPortal.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
         //tbvTestsuite.getSelectionModel().setCellSelectionEnabled(true);
         tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -165,10 +170,10 @@ public class ControllerArrivalMainApp implements Initializable {
         setUpANDTestcase();
         setUpWebPortalTestcase();
         setUpTestsuite();
-
+/*
         tbvIOS.setItems(dateIOSTestcase);
         tbvAND.setItems(dateANDTestcase);
-        tbvWebportal.setItems(dateWebPortalTestcase);
+        tbvWebPortal.setItems(dateWebPortalTestcase);
         tbvTestsuite.setItems(dateTestsuite);
 
         //Set first TitlePane open
@@ -177,28 +182,33 @@ public class ControllerArrivalMainApp implements Initializable {
 
         //Set Up Testsuite
         testSuitesTab = new HashMap<>();
-
-
-
-        /*
-
-
-        Test
-         */
-
+        //Todo: bessere lösung
+      //  ViewArrivalTab firstTab = (ViewArrivalTab)tabMain;
+      //  testSuitesTab.put("", firstTab);*/
     }
 
 
     @FXML
     public void openTestsuite(ActionEvent actionEvent) throws IOException{
         System.out.println(actionEvent.getSource());
-        //URL url = getClass().getResource("/fxml/arrivalTab.fxml");
-        //final Tab tab = new Tab("Tab" + (tabMainTabPane.getTabs().size()+1));
 
-        System.out.println(tabMainTabPane.getChildrenUnmodifiable().get(0).toString());
+        URL url = this.getClass().getResource("/fxml/arrivalTableView.fxml");
+        TableView testSuiteTable =  FXMLLoader.load(url);
+        ViewArrivalTab tab = new ViewArrivalTab("", testSuiteTable);
+        tab.setTableView(testSuiteTable);
 
-//        tabMainTabPane.getTabs().add(tab);
-  //      tabMainTabPane.getSelectionModel().select(tab);
+        //Dialog für Testsuitename
+        String tabName = setTestsuiteNameDialog();
+
+        if (tabName.isEmpty()) {
+            tab.setText("Testsuite -" + " " + tabMainTabPane.getTabs().size());
+        }
+        else {
+            tab.setText(tabName);
+        }
+
+        tabMainTabPane.getTabs().addAll(tab);
+        tabMainTabPane.getSelectionModel().select(tab);
     }
 
     @FXML
@@ -223,6 +233,7 @@ public class ControllerArrivalMainApp implements Initializable {
             if (accTestCase.getExpandedPane().getText().equals("iOS - Testcase")) {
                 System.out.println(actionEvent.getSource() + "ios");
                 dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
+
             }
 
 
@@ -232,9 +243,10 @@ public class ControllerArrivalMainApp implements Initializable {
 
             }
 
-            if (accTestCase.getExpandedPane().getText().equals("Webportal - Testcase")) {
+            if (accTestCase.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
                 System.out.println(actionEvent.getSource() + "web");
-                dateTestsuite.addAll(tbvWebportal.getSelectionModel().getSelectedItems());
+                dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
+
             }
 
         } catch (Exception e) {
@@ -259,6 +271,9 @@ public class ControllerArrivalMainApp implements Initializable {
     public void runTestsuite(ActionEvent actionEvent) {
         System.out.println(actionEvent.getSource());
 
+
+
+        tabMainTabPane.getSelectionModel().getSelectedItem();
     }
 
     @FXML
@@ -291,11 +306,15 @@ public class ControllerArrivalMainApp implements Initializable {
         System.out.println(actionEvent.getSource());
     }
 
+    @FXML
+    public void tabSelected(ActionEvent actionEvent) {
+
+    }
     /**
      * Bundle Resources ini
      */
     private void iniBundleResources() {
-        lblSearchfield.setText(bundle.getString("label.search"));
+        lblSearchField.setText(bundle.getString("label.search"));
         lblStatusLeft.setText(bundle.getString("label.search"));
         lblStatusRight.setText(bundle.getString("label.search"));
 
@@ -335,9 +354,9 @@ public class ControllerArrivalMainApp implements Initializable {
 
         fileNameLoaderAND = new FileNameLoader("/com/arrival/testCase/andTestcase", ".class");
         ArrayList<String> fileNames = fileNameLoaderAND.getClassName();
-        ArrayList<String> classPackage = fileNameLoaderIOS.getClassPackage();
+        ArrayList<String> classPackage = fileNameLoaderAND.getClassPackage();
 
-        for (int i = 0; i < fileNameLoaderIOS.getSize(); i++) {
+        for (int i = 0; i < fileNameLoaderAND.getSize(); i++) {
             tempList.add(new TestCase(fileNames.get(i), "test2", "datum", "timer", "", "true", classPackage.get(i)));
         }
         dateANDTestcase = FXCollections.observableArrayList(tempList);
@@ -348,9 +367,9 @@ public class ControllerArrivalMainApp implements Initializable {
 
         fileNameLoaderWeb = new FileNameLoader("/com/arrival/testCase/portalTestcase", ".class");
         ArrayList<String> fileNames = fileNameLoaderWeb.getClassName();
-        ArrayList<String> classPackage = fileNameLoaderIOS.getClassPackage();
+        ArrayList<String> classPackage = fileNameLoaderWeb.getClassPackage();
 
-        for (int i = 0; i < fileNameLoaderIOS.getSize(); i++) {
+        for (int i = 0; i < fileNameLoaderWeb.getSize(); i++) {
             tempList.add(new TestCase(fileNames.get(i), "test2", "datum", "timer", "", "true", classPackage.get(i)));
         }
 
@@ -360,5 +379,22 @@ public class ControllerArrivalMainApp implements Initializable {
     private void setUpTestsuite() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         dateTestsuite = FXCollections.observableArrayList(tempList);
+    }
+
+    private String setTestsuiteNameDialog(){
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Testsuite name");
+        dialog.setHeaderText("Bitte den Name des Testsuite eintragen:");
+
+        Optional<String> result = dialog.showAndWait();
+        String entered;
+
+        if (result.isPresent()) {
+            entered = result.get();
+        }
+        else{
+            entered = "";
+        }
+        return entered;
     }
 }

@@ -33,11 +33,18 @@ public class AppiumConfigSingleton {
         AppiumConfigSingleton.testArt = testArt;
     }
 
+
+    /**
+     * Code will be run only if the ArrivalTestSuite was instance
+     */
     @BeforeSuite
     public void setUpAppiumConfig() {
         setTestArt(AppiumConfigSingleton.multi);
     }
 
+    /**
+     * Code will be run only if the ArrivalTestSuite was instance
+     */
     @AfterSuite
     public void cleanUpAppiumConfig() {
         setTestArt("");

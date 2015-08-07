@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
 
-    public static SeleniumConfigSingleton appiumConfi = SeleniumConfigSingleton.getInstance();
+    public static SeleniumConfigSingleton sleniumConfi = SeleniumConfigSingleton.getInstance();
     public ArrayList<Object> seleniumServerList = new ArrayList<>();
 
     /*
@@ -43,27 +43,13 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
                 }
             }
         }
-
-        /*
-        if(appiumConfi.getTestArt().equals("multi")){
-            server = new Object[][]{
-                                           {"Server1", 11},
-                                           {"Server2", 32},
-                                           {"Server3", 23},
-            };
-        }
-        else {
-            server = new Object[][]{
-                                           {"Default1", 1},
-            };
-        }*/
         return server;
     }
 
 
     @BeforeClass
     public void setUpTestClass() {
-        if (AppiumConfigSingleton.getTestArt().equals("multi")) {
+        if (SeleniumConfigSingleton.getTestArt().equals("multi")) {
             seleniumServerList.add("android Test1");
             seleniumServerList.add("android Test2");
             seleniumServerList.add("ios Test1");
