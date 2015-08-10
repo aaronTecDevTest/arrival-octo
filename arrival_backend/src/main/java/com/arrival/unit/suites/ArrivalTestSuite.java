@@ -37,9 +37,6 @@ public class ArrivalTestSuite {
     private EmailListener eml;
     private PreConfigListener pcl;
 
-    private Path testResultPath;
-    private ArrayList<IFTestCase> testCases;
-
     public ArrivalTestSuite() {
 
         eml = new EmailListener();
@@ -71,7 +68,6 @@ public class ArrivalTestSuite {
         /*classes.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
         classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));
         classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));*/
-        testXML.setXmlClasses(classes);
     }
 
     /**
@@ -103,15 +99,8 @@ public class ArrivalTestSuite {
     }
 
     public void setClasses(List<XmlClass> classes) {
+        testXML.setXmlClasses(classes);
         this.classes = classes;
-    }
-
-    public ArrayList<IFTestCase> getTestCases() {
-        return testCases;
-    }
-
-    public void setTestCases(ArrayList<IFTestCase> testCases) {
-        this.testCases = testCases;
     }
 
     private String getPath() {
