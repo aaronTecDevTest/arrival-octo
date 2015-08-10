@@ -3,6 +3,8 @@ package com.arrival.windows.view;
 import com.arrival.unit.suites.ArrivalTestSuite;
 import com.arrival.windows.model.TestCase;
 import javafx.collections.ObservableList;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableView;
@@ -49,6 +51,10 @@ public class ViewArrivalTab extends Tab{
     }
 
     private void setTab(Tab tab) {
-        super.setContent( tab.getContent());
+        super.setContent(tab.getContent());
+    }
+
+    public void setOnSelectionChanged(Event actionEvent) {
+        super.setOnSelectionChanged((EventHandler<Event>) actionEvent);
     }
 }

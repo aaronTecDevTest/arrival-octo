@@ -110,7 +110,7 @@
                         </VBox>
                         <TabPane fx:id="tabMainTabPane" tabClosingPolicy="UNAVAILABLE">
                             <tabs>
-                                <Tab fx:id="tabMain" onSelectionChanged="#tabSelected" text="Testsuite - Regressionstest">
+                                <Tab fx:id="tabMain" text="Testsuite - Regressionstest">
                                     <content>
                                         <TableView fx:id="tbvTestsuite" tableMenuButtonVisible="true">
                                             <columns>
