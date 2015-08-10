@@ -26,8 +26,8 @@ public class ViewArrivalTab extends Tab{
     private ObservableList date;
     private ArrivalTestSuite runableSuite;
     private TableView tableView;
-    public ViewArrivalTab(){
 
+    public ViewArrivalTab(){
     }
 
     public  ViewArrivalTab(String title, Node content) {
@@ -44,17 +44,11 @@ public class ViewArrivalTab extends Tab{
 
     public static final ViewArrivalTab arrivalTabFromTab(final Tab tab){
         ViewArrivalTab tempTab= new ViewArrivalTab();
-
         tempTab.setTab(tab);
-
         return tempTab;
     }
 
     private void setTab(Tab tab) {
         super.setContent(tab.getContent());
-    }
-
-    public void setOnSelectionChanged(Event actionEvent) {
-        super.setOnSelectionChanged((EventHandler<Event>) actionEvent);
     }
 }

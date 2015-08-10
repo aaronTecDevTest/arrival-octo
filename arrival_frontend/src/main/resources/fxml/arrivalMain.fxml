@@ -304,7 +304,7 @@
                                 <Insets left="5.0" right="5.0" />
                             </padding>
                         </Separator>
-                        <Button fx:id="btnResult" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showTestsuitResult" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnResult" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showTestsuiteResult" prefHeight="34.0" prefWidth="34.0">
                             <tooltip>
                                 <Tooltip text="\%toolbar.viewResult" />
                             </tooltip>

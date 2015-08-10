@@ -254,11 +254,18 @@ public class ControllerArrivalMainApp implements Initializable {
 
     @FXML
     public void deleteTestcaseFromTestsuite(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource());
+        System.out.println(actionEvent.getSource()+"test");
         try {
             ObservableList<Integer> indeces = tbvTestsuite.getSelectionModel().getSelectedIndices();
-            for (Integer index : indeces) {
-                dateTestsuite.removeAll((int) index);
+            ObservableList<TestCase> testCases = tbvTestsuite.getSelectionModel().getSelectedItems();
+
+            if (indeces.size() == dateTestsuite.size()){
+                dateTestsuite.removeAll(testCases);
+            }
+            else {
+                for (TestCase testCase : testCases) {
+                    dateTestsuite.remove(testCase);
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -286,7 +293,7 @@ public class ControllerArrivalMainApp implements Initializable {
     }
 
     @FXML
-    public void showTestsuitResult(ActionEvent actionEvent) {
+    public void showTestsuiteResult(ActionEvent actionEvent) {
         System.out.println(actionEvent.getSource());
     }
 
@@ -327,7 +334,6 @@ public class ControllerArrivalMainApp implements Initializable {
     /**
      * No FML Functions
      */
-
     private void setUpIOSTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderIOS = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
