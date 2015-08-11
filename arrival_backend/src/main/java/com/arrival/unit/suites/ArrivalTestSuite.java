@@ -3,6 +3,7 @@ package com.arrival.unit.suites;
 import com.arrival.unit.listener.EmailListener;
 import com.arrival.unit.listener.PreConfigListener;
 import com.arrival.utilities.interfaces.IFTestCase;
+import javafx.collections.ObservableList;
 import org.testng.TestNG;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
@@ -37,13 +38,15 @@ public class ArrivalTestSuite {
     private EmailListener eml;
     private PreConfigListener pcl;
 
+    public static int suiteID = -1;
+
     public ArrivalTestSuite() {
 
         eml = new EmailListener();
         pcl = new PreConfigListener();
 
         tng.setOutputDirectory(getNewPathDirectory());
-        tng.setDefaultSuiteName("RegressionsTest");
+        tng.setDefaultSuiteName("RegressionsTest" + suiteID++);
         tng.addListener(eml);
         tng.addListener(pcl);
 
@@ -63,7 +66,7 @@ public class ArrivalTestSuite {
     }
 
     private void createVirtualSuite() {
-        suite.setName("TmpSuite");
+        //suite.setName("TmpSuite");
         testXML.setName("TmpTest");
         /*classes.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
         classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));
@@ -99,8 +102,14 @@ public class ArrivalTestSuite {
     }
 
     public void setClasses(List<XmlClass> classes) {
+
         testXML.setXmlClasses(classes);
+
         this.classes = classes;
+    }
+
+    public void setSuiteName(String name) {
+        suite.setName(name);
     }
 
     private String getPath() {

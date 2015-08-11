@@ -31,5 +31,4 @@ public class ControllerArrivalOptionsApp implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-
 }

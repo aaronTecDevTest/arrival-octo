@@ -183,8 +183,12 @@ public class ControllerArrivalMainApp implements Initializable {
         testSuitesTab = new HashMap<>();
 
         //Setup first Testsuite-Tab and Table
+
         setupFirstTestsuite();
         tabSelected();
+        tabMainTabPane.getTabs().removeAll(tabMainTabPane.getTabs().remove(0));
+       // tabMainTabPane.getTabs().clear();
+        System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
     }
 
 
@@ -211,6 +215,8 @@ public class ControllerArrivalMainApp implements Initializable {
 
         tabMainTabPane.getTabs().addAll(tab);
         tabMainTabPane.getSelectionModel().select(tab);
+
+        System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
     }
 
     @FXML
@@ -254,7 +260,7 @@ public class ControllerArrivalMainApp implements Initializable {
 
     @FXML
     public void deleteTestcaseFromTestsuite(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource()+"test");
+        System.out.println(actionEvent.getSource());
         try {
             ObservableList<Integer> indeces = tbvTestsuite.getSelectionModel().getSelectedIndices();
             ObservableList<TestCase> testCases = tbvTestsuite.getSelectionModel().getSelectedItems();
@@ -275,6 +281,13 @@ public class ControllerArrivalMainApp implements Initializable {
     @FXML
     public void runTestsuite(ActionEvent actionEvent) {
         System.out.println(actionEvent.getSource());
+        System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
+
+        if(tabMainTabPane.getChildrenUnmodifiable().size()!= testSuitesTab.size()){
+           //tabMainTabPane.getTabs().remove(0);
+        }
+        /*ViewArrivalTab currentTab = (ViewArrivalTab)tabMainTabPane.getSelectionModel().getSelectedItem();
+        currentTab.runTestSuite();*/
     }
 
     @FXML
@@ -397,42 +410,39 @@ public class ControllerArrivalMainApp implements Initializable {
 
     private void setupFirstTestsuite()  {
         try{
-           tabMainTabPane.getTabs().remove(0);
 
             URL url = this.getClass().getResource("/fxml/arrivalTableView.fxml");
-            //FXMLLoader loader = FXMLLoader.load(url);
-            //loader.setController(this);
-            //TableView testSuiteTable = loader.load();//new FXMLLoader.load(url);
-
-
             TableView testSuiteTable = FXMLLoader.load(url);
+
             ViewArrivalTab tab = new ViewArrivalTab("Testsuite - Regressionstest", testSuiteTable);
             tab.setTableView(testSuiteTable);
 
+            System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
 
             tabMainTabPane.getTabs().add(tab);
+            System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
             tabMainTabPane.getSelectionModel().select(tab);
+            System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
 
             testSuitesTab.put("Testsuite - Regressionstest", tab);
 
             tabMainTabPane.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Tab>() {
                 @Override
                 public void changed(ObservableValue<? extends Tab> observable, Tab oldValue, Tab newValue) {
-                    TableView <TestCase> selectedTableview = (TableView <TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+                    TableView<TestCase> selectedTableview = (TableView<TestCase>) tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
                     tbvTestsuite = selectedTableview;
                     dateTestsuite = selectedTableview.getItems();
                 }
             });
-
+            System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     private void tabSelected() {
-      //  TableView selectedTableview = (TableView)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
-        TableView <TestCase> selectedTableview = (TableView <TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
-        tbvTestsuite = selectedTableview;
-        dateTestsuite = selectedTableview.getItems();
+        TableView <TestCase> selectedTableView = (TableView <TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+        tbvTestsuite = selectedTableView;
+        dateTestsuite = selectedTableView.getItems();
     }
 }

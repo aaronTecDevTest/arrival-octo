@@ -79,7 +79,6 @@ public class ControllerArrivalTableViewApp implements Initializable {
         tbvTestsuite.setItems(dateTestsuite);
     }
 
-
     /**
      * No FML Functions
      */

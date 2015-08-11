@@ -3,13 +3,13 @@ package com.arrival.windows.view;
 import com.arrival.unit.suites.ArrivalTestSuite;
 import com.arrival.windows.model.TestCase;
 import javafx.collections.ObservableList;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableView;
+import org.testng.xml.XmlClass;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -20,35 +20,37 @@ import java.util.Objects;
  * Package: com.arrival.windows.view
  */
 public class ViewArrivalTab extends Tab{
-    private ArrayList<TestCase> testCases;
     private String suiteResultPaht;
     private Objects suiteConfiguration;
-    private ObservableList date;
     private ArrivalTestSuite runableSuite;
     private TableView tableView;
+    private ObservableList date;
 
     public ViewArrivalTab(){
     }
 
     public  ViewArrivalTab(String title, Node content) {
         super(title,content);
+        runableSuite = new ArrivalTestSuite();
+        runableSuite.setSuiteName(title);
     }
 
     public ViewArrivalTab(Node content){
-        super("",content);
+        super("", content);
     }
 
     public void setTableView(TableView tableView) {
         this.tableView = tableView;
+        this.date = tableView.getItems();
     }
 
-    public static final ViewArrivalTab arrivalTabFromTab(final Tab tab){
-        ViewArrivalTab tempTab= new ViewArrivalTab();
-        tempTab.setTab(tab);
-        return tempTab;
-    }
+    public void runTestSuite(){
+        List<XmlClass> tempClasses = new ArrayList<>();
 
-    private void setTab(Tab tab) {
-        super.setContent(tab.getContent());
+        for(int i=0; i<date.size();i++){
+            tempClasses.add(new XmlClass(((TestCase)date.get(i)).getTcClassPackage()));
+        }
+        runableSuite.setClasses(tempClasses);
+        runableSuite.runVirtualSuit();
     }
 }

@@ -14,8 +14,10 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
+/**
+ * Class not in Use jet!!
+ */
 public class TestSuite implements IFTestSuite {
     private SimpleIntegerProperty tsId;
     private SimpleStringProperty tsName;

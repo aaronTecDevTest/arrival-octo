@@ -16,10 +16,12 @@ public class SimpleTest2 extends ArrivalAND {
     @Test(dataProvider = "driver", groups = {"fast"})
     public void aFastTest(String serverName, Integer id) {
         System.out.println("Fast test 20 " + serverName + " " + id);
+        pauseTest(10000);
     }
 
     @Test(dataProvider = "driver", groups = {"slow"})
     public void aSlowTest(String serverName, Integer id) {
         System.out.println("Slow test 30 " + serverName + " " + id);
+        pauseTest(10000);
     }
 }
