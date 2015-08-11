@@ -10,12 +10,9 @@ package com.arrival.windows.controller;
 import com.arrival.utilities.FileNameLoader;
 import com.arrival.windows.model.TestCase;
 import com.arrival.windows.view.ViewArrivalTab;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -41,13 +38,14 @@ public class ControllerArrivalMainApp implements Initializable {
      */
     //TODO: logger implment
 
-    /**
-     * For Internationalization
-     */
     public ObservableList dateIOSTestcase;
     public ObservableList dateANDTestcase;
     public ObservableList dateWebPortalTestcase;
-    public ObservableList dateTestsuite;
+
+    /**
+     * For Internationalization
+     */
+    private ResourceBundle bundle;
 
     @FXML
     private Label lblSearchField;
@@ -89,16 +87,12 @@ public class ControllerArrivalMainApp implements Initializable {
     @FXML
     private Accordion accTestCase;
 
-
     @FXML
     private TableView<TestCase> tbvIOS;
     @FXML
     private TableView<TestCase> tbvAND;
     @FXML
     private TableView<TestCase> tbvWebPortal;
-    @FXML
-    private TableView<TestCase> tbvTestsuite;
-
 
     @FXML
     private TableColumn<TestCase, String> tbcIOS;
@@ -108,20 +102,11 @@ public class ControllerArrivalMainApp implements Initializable {
     private TableColumn<TestCase, String> tbcWebPortal;
 
     @FXML
-    private TableColumn<TestCase, String> tbcName;
-    @FXML
-    private TableColumn<TestCase, String> tbcDescription;
-    @FXML
-    private TableColumn<TestCase, String> tbcDuration;
-    @FXML
-    private TableColumn<TestCase, String> tbcLastRun;
-    @FXML
-    private TableColumn<TestCase, String> tbcLink;
-    @FXML
-    private TableColumn<TestCase, String> tbcResult;
+    //private ControllerArrivalTableViewApp tbvTestsuite;
+    private TableView<TestCase> tbvTestsuite;
 
     private HashMap<String, ViewArrivalTab> testSuitesTab;
-    private ResourceBundle bundle;
+
     private FileNameLoader fileNameLoaderIOS;
     private FileNameLoader fileNameLoaderAND;
     private FileNameLoader fileNameLoaderWeb;
@@ -141,13 +126,6 @@ public class ControllerArrivalMainApp implements Initializable {
         iniBundleResources();
 
         //Setup Tablecolmn Propertys
-        tbcName.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-        tbcDescription.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDescription"));
-        tbcDuration.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDuration"));
-        tbcLastRun.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcLastRun"));
-        tbcLink.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcLink"));
-        tbcResult.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcResult"));
-
         tbcIOS.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcAndroid.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcWebPortal.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
@@ -161,19 +139,16 @@ public class ControllerArrivalMainApp implements Initializable {
         //tbvWebPortal.getSelectionModel().setCellSelectionEnabled(true);
         tbvWebPortal.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
-        //tbvTestsuite.getSelectionModel().setCellSelectionEnabled(true);
-        tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-
         //SetUp Testcase to Table
         setUpIOSTestcase();
         setUpANDTestcase();
         setUpWebPortalTestcase();
-        setUpTestsuite();
+        //setUpTestsuite();
 
         tbvIOS.setItems(dateIOSTestcase);
         tbvAND.setItems(dateANDTestcase);
         tbvWebPortal.setItems(dateWebPortalTestcase);
-        tbvTestsuite.setItems(dateTestsuite);
+       // tbvTestsuite.setItems(dateTestsuite);
 
         //Set first TitlePane open
         TitledPane ios = accTestCase.getPanes().get(0);
@@ -181,42 +156,12 @@ public class ControllerArrivalMainApp implements Initializable {
 
         //SetUp Testsuite
         testSuitesTab = new HashMap<>();
-
-        //Setup first Testsuite-Tab and Table
-
-        setupFirstTestsuite();
-        tabSelected();
-        tabMainTabPane.getTabs().removeAll(tabMainTabPane.getTabs().remove(0));
-       // tabMainTabPane.getTabs().clear();
-        System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
     }
 
 
     @FXML
     public void openTestsuite(ActionEvent actionEvent) throws IOException{
         System.out.println(actionEvent.getSource());
-
-        URL url = this.getClass().getResource("/fxml/arrivalTableView.fxml");
-        TableView testSuiteTable =  FXMLLoader.load(url);
-        ViewArrivalTab tab = new ViewArrivalTab("", testSuiteTable);
-        tab.setTableView(testSuiteTable);
-
-        //Dialog für Testsuitename
-        String tabName = setTestsuiteNameDialog();
-
-        if (tabName.isEmpty()) {
-            tab.setText("Testsuite -" + " " + tabMainTabPane.getTabs().size());
-            testSuitesTab.put(tab.getText(), tab);
-        }
-        else {
-            tab.setText(tabName);
-            testSuitesTab.put(tabName,tab);
-        }
-
-        tabMainTabPane.getTabs().addAll(tab);
-        tabMainTabPane.getSelectionModel().select(tab);
-
-        System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
     }
 
     @FXML
@@ -225,8 +170,29 @@ public class ControllerArrivalMainApp implements Initializable {
     }
 
     @FXML
-    public void createNewTestsuite(ActionEvent actionEvent) {
+    public void createNewTestsuite(ActionEvent actionEvent) throws IOException{
         System.out.println(actionEvent.getSource());
+
+        URL url = this.getClass().getResource("/fxml/arrivalTableView.fxml");
+        TableView testSuiteTable =  FXMLLoader.load(url);
+        //ViewArrivalTab tab = new ViewArrivalTab("", testSuiteTable);
+        Tab tab = new Tab("", testSuiteTable);
+        //tab.setTableView(testSuiteTable);
+        tab.setContent(testSuiteTable);
+        //Dialog für Testsuitename
+        String tabName = setTestsuiteNameDialog();
+
+        if (tabName.isEmpty()) {
+            tab.setText("Testsuite -" + " " + tabMainTabPane.getTabs().size());
+        //    testSuitesTab.put(tab.getText(), tab);
+        }
+        else {
+            tab.setText(tabName);
+          //  testSuitesTab.put(tabName,tab);
+        }
+
+        tabMainTabPane.getTabs().addAll(tab);
+        tabMainTabPane.getSelectionModel().select(tab);
     }
 
     @FXML
@@ -240,17 +206,22 @@ public class ControllerArrivalMainApp implements Initializable {
         try {
             if (accTestCase.getExpandedPane().getText().equals("iOS - Testcase")) {
                 System.out.println(actionEvent.getSource() + "ios");
+                tbvTestsuite = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+                ObservableList dateTestsuite = tbvTestsuite.getItems();
                 dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
             }
 
-
             if (accTestCase.getExpandedPane().getText().equals("Android - Testcase")) {
                 System.out.println(actionEvent.getSource() + "and");
+                tbvTestsuite = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+                ObservableList dateTestsuite = tbvTestsuite.getItems();
                 dateTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
             }
 
             if (accTestCase.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
                 System.out.println(actionEvent.getSource() + "web");
+                tbvTestsuite = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+                ObservableList dateTestsuite = tbvTestsuite.getItems();
                 dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
             }
         } catch (Exception e) {
@@ -264,6 +235,10 @@ public class ControllerArrivalMainApp implements Initializable {
         try {
             ObservableList<Integer> indeces = tbvTestsuite.getSelectionModel().getSelectedIndices();
             ObservableList<TestCase> testCases = tbvTestsuite.getSelectionModel().getSelectedItems();
+
+            tbvTestsuite = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+            ObservableList dateTestsuite = tbvTestsuite.getItems();
+            dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
 
             if (indeces.size() == dateTestsuite.size()){
                 dateTestsuite.removeAll(testCases);
@@ -281,8 +256,6 @@ public class ControllerArrivalMainApp implements Initializable {
     @FXML
     public void runTestsuite(ActionEvent actionEvent) {
         System.out.println(actionEvent.getSource());
-        System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
-
         if(tabMainTabPane.getChildrenUnmodifiable().size()!= testSuitesTab.size()){
            //tabMainTabPane.getTabs().remove(0);
         }
@@ -386,11 +359,6 @@ public class ControllerArrivalMainApp implements Initializable {
         dateWebPortalTestcase = FXCollections.observableArrayList(tempList);
     }
 
-    private void setUpTestsuite() {
-        ArrayList<TestCase> tempList = new ArrayList<>();
-        dateTestsuite = FXCollections.observableArrayList(tempList);
-    }
-
     private String setTestsuiteNameDialog(){
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Testsuite name");
@@ -407,7 +375,7 @@ public class ControllerArrivalMainApp implements Initializable {
         }
         return entered;
     }
-
+/*
     private void setupFirstTestsuite()  {
         try{
 
@@ -416,13 +384,8 @@ public class ControllerArrivalMainApp implements Initializable {
 
             ViewArrivalTab tab = new ViewArrivalTab("Testsuite - Regressionstest", testSuiteTable);
             tab.setTableView(testSuiteTable);
-
-            System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
-
             tabMainTabPane.getTabs().add(tab);
-            System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
             tabMainTabPane.getSelectionModel().select(tab);
-            System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
 
             testSuitesTab.put("Testsuite - Regressionstest", tab);
 
@@ -434,7 +397,6 @@ public class ControllerArrivalMainApp implements Initializable {
                     dateTestsuite = selectedTableview.getItems();
                 }
             });
-            System.out.println(tabMainTabPane.getChildrenUnmodifiable().size() + "-------------" + testSuitesTab.size());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -444,5 +406,5 @@ public class ControllerArrivalMainApp implements Initializable {
         TableView <TestCase> selectedTableView = (TableView <TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
         tbvTestsuite = selectedTableView;
         dateTestsuite = selectedTableView.getItems();
-    }
+    }*/
 }

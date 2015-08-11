@@ -8,6 +8,7 @@ package com.arrival.windows.controller;
  * Package: com.arrival.windows.controller
  */
 
+import com.arrival.unit.suites.ArrivalTestSuite;
 import com.arrival.windows.model.TestCase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,8 +16,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.testng.xml.XmlClass;
+
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -33,10 +37,9 @@ public class ControllerArrivalTableViewApp implements Initializable {
     /**
      * For Internationalization
      */
-    public ObservableList dateTestsuite;
+    private ResourceBundle bundle;
 
-    @FXML
-    private TabPane tabMainTabPane;
+    public ObservableList dateTestsuite;
 
     @FXML
     private TableView<TestCase> tbvTestsuite;
@@ -54,6 +57,10 @@ public class ControllerArrivalTableViewApp implements Initializable {
     @FXML
     private TableColumn<TestCase, String> tbcResult;
 
+    private ArrivalTestSuite runableSuite;
+    private ObservableList date;
+
+
     /**
      * Called to initialize a controller after its root element has been
      * completely processed.
@@ -63,6 +70,9 @@ public class ControllerArrivalTableViewApp implements Initializable {
      * @param resources The resources used to localize the root object, or <tt>null</tt> if
      */
     public void initialize(URL location, ResourceBundle resources) {
+        bundle = resources;
+        iniBundleResources();
+
         //Setup Tablecolmn Propertys
         tbcName.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcDescription.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDescription"));
@@ -77,6 +87,28 @@ public class ControllerArrivalTableViewApp implements Initializable {
         //SetUp Testcase to Table
         setUpTestsuite();
         tbvTestsuite.setItems(dateTestsuite);
+
+        runableSuite = new ArrivalTestSuite();
+        runableSuite.setSuiteName("test");
+    }
+
+    public void runTestSuite(){
+        List<XmlClass> tempClasses = new ArrayList<>();
+
+        for(int i=0; i<dateTestsuite.size();i++){
+            tempClasses.add(new XmlClass(((TestCase)date.get(i)).getTcClassPackage()));
+        }
+        runableSuite.setClasses(tempClasses);
+        runableSuite.runVirtualSuit();
+    }
+
+    private void iniBundleResources() {
+        tbcDescription.setText(bundle.getString("tableColumn.description"));
+        tbcName.setText(bundle.getString("tableColumn.name"));
+        tbcDuration.setText(bundle.getString("tableColumn.duration"));
+        tbcLastRun.setText(bundle.getString("tableColumn.lastRun"));
+        tbcLink.setText(bundle.getString("tableColumn.link"));
+        tbcResult.setText(bundle.getString("tableColumn.result"));
     }
 
     /**

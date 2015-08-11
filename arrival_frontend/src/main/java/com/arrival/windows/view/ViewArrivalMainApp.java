@@ -28,8 +28,6 @@ public class ViewArrivalMainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-
-
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         URL url = getClass().getResource("/fxml/arrivalMain.fxml");
 

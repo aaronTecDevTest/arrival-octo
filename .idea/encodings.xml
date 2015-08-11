@@ -21,6 +21,7 @@
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/css/arrivalOptions.css" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/fxml/arrivalHelp.fxml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/fxml/arrivalMain.fxml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/fxml/arrivalMain_old.fxml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/fxml/arrivalOptions.fxml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/fxml/arrivalTableView.fxml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/icons/add.png" charset="windows-1252" />
