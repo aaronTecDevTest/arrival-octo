@@ -8,10 +8,12 @@ package com.arrival.windows.view;
  * Package: com.arrival.windows.view
  */
 
+import com.arrival.windows.controller.FXMLArrivalTableViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -34,8 +36,12 @@ public class ViewArrivalMainApp extends Application {
         InputStream inputStream = classLoader.getResource("bundles/arrivalMain_de.properties").openStream();
         ResourceBundle bundle = new PropertyResourceBundle(inputStream);
 
-        FXMLLoader loader = new FXMLLoader(url, bundle);
-        Parent root = loader.load();
+       // FXMLLoader loader = new FXMLLoader(url.openStream(), bundle);
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(url,bundle);
+        FXMLArrivalTableViewController controller = loader.getController();
+        root.setUserData(controller);
+        System.out.println(root.getChildrenUnmodifiable().size());
 
         Scene scene = new Scene(root, 1300, 530);
         scene.getStylesheets().add("/css/arrivalMain.css");

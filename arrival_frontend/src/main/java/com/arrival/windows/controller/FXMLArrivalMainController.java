@@ -17,10 +17,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import javax.sound.midi.Soundbank;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -180,10 +182,16 @@ public class FXMLArrivalMainController implements Initializable {
         System.out.println(actionEvent.getSource());
 
         URL url = this.getClass().getResource("/fxml/FXMLArrivalTableView.fxml");
-        TableView testSuiteTable =  FXMLLoader.load(url);
+        FXMLLoader loader = new FXMLLoader();
+        TableView testSuiteTable =  loader.load(url.openStream());
+       // TableView testSuiteTable =  FXMLLoader.load(url);
         //ViewArrivalTab tab = new ViewArrivalTab("", testSuiteTable);
         Tab tab = new Tab("", testSuiteTable);
+        System.out.println(loader.getController().getClass());
+        FXMLArrivalTableViewController controller = loader.getController();
         //tab.setTableView(testSuiteTable);
+       // System.out.println(controller.getClass());
+        testSuiteTable.setUserData(controller);
         tab.setContent(testSuiteTable);
         //Dialog für Testsuitename
         String tabName = setTestsuiteNameDialog();
@@ -384,44 +392,27 @@ public class FXMLArrivalMainController implements Initializable {
     }
 
     private void addTableViewListener(){
+        System.out.println("changed wird ausgeführt................22");
         tabMainTabPane.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Tab>() {
             @Override
             public void changed(ObservableValue<? extends Tab> observable, Tab oldValue, Tab newValue) {
-             currentTableView =  (TableView<TestCase>) tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+
+                TableView tempTableView  = (TableView) tabMainTabPane.getSelectionModel().getSelectedItem()
+                                                                  .getContent();
+                if(tempTableView.getUserData() == null){
+                    currentTableView =  tempTableView;
+                    tbvTestsuiteController = (FXMLArrivalTableViewController)tabMainTabPane.getParent().getUserData();
+                    //tbvTestsuiteController.runTestSuite();
+                    System.out.println("changed wird ausgeführt................" + tbvTestsuiteController.getClass());
+                }
+                else {
+                    //Todo hier den code
+                    currentTableView =  tempTableView;
+                    tbvTestsuiteController = (FXMLArrivalTableViewController)tempTableView.getUserData();
+                    //tbvTestsuiteController.runTestSuite();
+                    System.out.println("changed wird ausgeführt................" + tbvTestsuiteController.getClass());
+                }
             }
         });
     }
-
-
-    private void setupFirstTestsuite()  {
-      /*  try{
-
-            URL url = this.getClass().getResource("/fxml/FXMLArrivalTableView.fxml");
-          //  TableView testSuiteTable = FXMLLoader.load(url);
-
-            ViewArrivalTab tab = new ViewArrivalTab("Testsuite - Regressionstest", testSuiteTable);
-            tab.setTableView(testSuiteTable);
-            tabMainTabPane.getTabs().add(tab);
-            tabMainTabPane.getSelectionModel().select(tab);
-
-            testSuitesTab.put("Testsuite - Regressionstest", tab);
-
-           tabMainTabPane.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Tab>() {
-                @Override
-              public void changed(ObservableValue<? extends Tab> observable, Tab oldValue, Tab newValue) {
-                    TableView<TestCase> selectedTableview = (TableView<TestCase>) tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
-                    currentTableView = selectedTableview;
-                    dateTestsuite = selectedTableview.getItems();
-                }
-            });
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-    }
-/*
-    private void tabSelected() {
-        TableView <TestCase> selectedTableView = (TableView <TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
-        currentTableView = selectedTableView;
-        dateTestsuite = selectedTableView.getItems();
-    }*/
 }
