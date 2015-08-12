@@ -2,15 +2,12 @@ package com.arrival.unit.suites;
 
 import com.arrival.unit.listener.EmailListener;
 import com.arrival.unit.listener.PreConfigListener;
-import com.arrival.utilities.interfaces.IFTestCase;
-import javafx.collections.ObservableList;
 import org.testng.TestNG;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
 
 import java.io.File;
-import java.nio.file.Path;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -33,12 +30,14 @@ public class ArrivalTestSuite {
     private XmlSuite suite = new XmlSuite();
     private List<XmlSuite> suites = new ArrayList<>();
 
-    private XmlTest testXML = new XmlTest(suite);
+    private XmlTest xmlTest = new XmlTest(suite);
 
     private EmailListener eml;
     private PreConfigListener pcl;
 
-    public static int suiteID = -1;
+    private String path;
+
+    public static int suiteID = 0;
 
     public ArrivalTestSuite() {
 
@@ -46,11 +45,14 @@ public class ArrivalTestSuite {
         pcl = new PreConfigListener();
 
         tng.setOutputDirectory(getNewPathDirectory());
-        tng.setDefaultSuiteName("RegressionsTest" + suiteID++);
+        suiteID++;
+        tng.setDefaultSuiteName("RegressionsTest - " + suiteID);
         tng.addListener(eml);
         tng.addListener(pcl);
 
-        testXML.setName("RegressionsTest");
+        xmlTest.setName("RegressionsTest - " + suiteID);
+        suite.setName("RegressonsTest - " + suiteID);
+        suites.add(suite);
     }
 
     public static void main(String[] args) {
@@ -60,14 +62,14 @@ public class ArrivalTestSuite {
 
     public void runVirtualSuit() {
         createVirtualSuite();
-        suites.add(suite);
+        //suites.add(suite);
         tng.setXmlSuites(suites);
         tng.run();
     }
 
     private void createVirtualSuite() {
         //suite.setName("TmpSuite");
-        testXML.setName("TmpTest");
+        xmlTest.setName("TmpTest");
         /*classes.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
         classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));
         classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));*/
@@ -103,7 +105,7 @@ public class ArrivalTestSuite {
 
     public void setClasses(List<XmlClass> classes) {
 
-        testXML.setXmlClasses(classes);
+        xmlTest.setXmlClasses(classes);
 
         this.classes = classes;
     }
@@ -112,11 +114,21 @@ public class ArrivalTestSuite {
         suite.setName(name);
     }
 
-    private String getPath() {
+    public void setXmlTest(String name) {
+        xmlTest.setName(name);
+    }
+
+    public void setTngName(String name){
+        tng.setDefaultSuiteName(name);
+    }
+
+    public void setPath(String path){
+        this.path = path;
+    }
+
+    public  String getPath() {
         String path;
-
         path = this.getClass().getPackage().getName();
-
         System.out.println(path);
         return path;
     }

@@ -9,7 +9,8 @@ package com.arrival.windows.controller;
  */
 import com.arrival.utilities.FileNameLoader;
 import com.arrival.windows.model.TestCase;
-import com.arrival.windows.view.ViewArrivalTab;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -102,11 +103,11 @@ public class FXMLArrivalMainController implements Initializable {
     private TableColumn<TestCase, String> tbcWebPortal;
 
     @FXML
-   // private FXMLArrivalTableViewController tbvTestsuite;
+    private FXMLArrivalTableViewController tbvTestsuiteController;
 
-    private TableView<TestCase> view;
+    private TableView<TestCase> currentTableView;
 
-    private HashMap<String, ViewArrivalTab> testSuitesTab;
+    private HashMap<String, TableView> testSuitesTab;
 
     private FileNameLoader fileNameLoaderIOS;
     private FileNameLoader fileNameLoaderAND;
@@ -149,7 +150,7 @@ public class FXMLArrivalMainController implements Initializable {
         tbvIOS.setItems(dateIOSTestcase);
         tbvAND.setItems(dateANDTestcase);
         tbvWebPortal.setItems(dateWebPortalTestcase);
-       // tbvTestsuite.setItems(dateTestsuite);
+       // currentTableView.setItems(dateTestsuite);
 
         //Set first TitlePane open
         TitledPane ios = accTestCase.getPanes().get(0);
@@ -158,7 +159,9 @@ public class FXMLArrivalMainController implements Initializable {
         //SetUp Testsuite
         testSuitesTab = new HashMap<>();
 
-//        view = tbvTestsuite.getTbvTestsuite();
+        currentTableView = tbvTestsuiteController.getTbvTestsuite();
+
+        addTableViewListener();
     }
 
 
@@ -207,28 +210,28 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void addTestcaseInTestsuite(ActionEvent actionEvent) {
         try {
-            /*
+
             if (accTestCase.getExpandedPane().getText().equals("iOS - Testcase")) {
                 System.out.println(actionEvent.getSource() + "ios");
-                tbvTestsuite = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
-                ObservableList dateTestsuite = tbvTestsuite.getItems();
+                currentTableView = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+                ObservableList dateTestsuite = currentTableView.getItems();
                 dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
             }
 
             if (accTestCase.getExpandedPane().getText().equals("Android - Testcase")) {
                 System.out.println(actionEvent.getSource() + "and");
-                tbvTestsuite = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
-                ObservableList dateTestsuite = tbvTestsuite.getItems();
+                currentTableView = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+                ObservableList dateTestsuite = currentTableView.getItems();
                 dateTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
             }
 
             if (accTestCase.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
                 System.out.println(actionEvent.getSource() + "web");
-                tbvTestsuite = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
-                ObservableList dateTestsuite = tbvTestsuite.getItems();
+                currentTableView = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+                ObservableList dateTestsuite = currentTableView.getItems();
                 dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
 
-            }*/
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -238,12 +241,12 @@ public class FXMLArrivalMainController implements Initializable {
     public void deleteTestcaseFromTestsuite(ActionEvent actionEvent) {
         System.out.println(actionEvent.getSource());
         try {
-            /*
-            ObservableList<Integer> indeces = tbvTestsuite.getSelectionModel().getSelectedIndices();
-            ObservableList<TestCase> testCases = tbvTestsuite.getSelectionModel().getSelectedItems();
+            
+            ObservableList<Integer> indeces = currentTableView.getSelectionModel().getSelectedIndices();
+            ObservableList<TestCase> testCases = currentTableView.getSelectionModel().getSelectedItems();
 
-            tbvTestsuite = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
-            ObservableList dateTestsuite = tbvTestsuite.getItems();
+            currentTableView = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+            ObservableList dateTestsuite = currentTableView.getItems();
             dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
 
             if (indeces.size() == dateTestsuite.size()){
@@ -253,7 +256,7 @@ public class FXMLArrivalMainController implements Initializable {
                 for (TestCase testCase : testCases) {
                     dateTestsuite.remove(testCase);
                 }
-            }*/
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -262,6 +265,7 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void runTestsuite(ActionEvent actionEvent) {
         System.out.println(actionEvent.getSource());
+        tbvTestsuiteController.runTestSuite();
         /*ViewArrivalTab currentTab = (ViewArrivalTab)tabMainTabPane.getSelectionModel().getSelectedItem();
         currentTab.runTestSuite();*/
     }
@@ -378,12 +382,22 @@ public class FXMLArrivalMainController implements Initializable {
         }
         return entered;
     }
-/*
+
+    private void addTableViewListener(){
+        tabMainTabPane.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Tab>() {
+            @Override
+            public void changed(ObservableValue<? extends Tab> observable, Tab oldValue, Tab newValue) {
+             currentTableView =  (TableView<TestCase>) tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+            }
+        });
+    }
+
+
     private void setupFirstTestsuite()  {
-        try{
+      /*  try{
 
             URL url = this.getClass().getResource("/fxml/FXMLArrivalTableView.fxml");
-            TableView testSuiteTable = FXMLLoader.load(url);
+          //  TableView testSuiteTable = FXMLLoader.load(url);
 
             ViewArrivalTab tab = new ViewArrivalTab("Testsuite - Regressionstest", testSuiteTable);
             tab.setTableView(testSuiteTable);
@@ -392,22 +406,22 @@ public class FXMLArrivalMainController implements Initializable {
 
             testSuitesTab.put("Testsuite - Regressionstest", tab);
 
-            tabMainTabPane.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Tab>() {
+           tabMainTabPane.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Tab>() {
                 @Override
-                public void changed(ObservableValue<? extends Tab> observable, Tab oldValue, Tab newValue) {
+              public void changed(ObservableValue<? extends Tab> observable, Tab oldValue, Tab newValue) {
                     TableView<TestCase> selectedTableview = (TableView<TestCase>) tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
-                    tbvTestsuite = selectedTableview;
+                    currentTableView = selectedTableview;
                     dateTestsuite = selectedTableview.getItems();
                 }
             });
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
-
+/*
     private void tabSelected() {
         TableView <TestCase> selectedTableView = (TableView <TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
-        tbvTestsuite = selectedTableView;
+        currentTableView = selectedTableView;
         dateTestsuite = selectedTableView.getItems();
     }*/
 }

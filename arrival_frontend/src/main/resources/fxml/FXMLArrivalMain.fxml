@@ -9,10 +9,6 @@
 <VBox prefHeight="530.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arrival.windows.controller.FXMLArrivalMainController">
 
     <children>
-
-        <!--fx:define>
-            <fx:include source="FXMLArrivalTableView.fxml" fx:id="tbvTestsuiteMain" />
-        </fx:define-->
         <MenuBar VBox.vgrow="ALWAYS">
             <menus>
                 <Menu mnemonicParsing="false" text="\%menu.title.file">
@@ -117,7 +113,7 @@
                      <tabs>
                         <Tab text="Testsuite - Regression">
                            <content>
-                               <fx:include source="FXMLArrivalTableView.fxml" fx:id="tbvTestsuite"/>
+                               <fx:include fx:id="tbvTestsuite" source="FXMLArrivalTableView.fxml"/>
                            </content>
                         </Tab>
                      </tabs></TabPane>

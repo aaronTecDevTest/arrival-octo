@@ -70,7 +70,7 @@ public class FXMLArrivalTableViewController implements Initializable {
      */
     public void initialize(URL location, ResourceBundle resources) {
         bundle = resources;
-        iniBundleResources();
+    //    iniBundleResources();
 
         //Setup Tablecolmn Propertys
         tbcName.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
@@ -88,12 +88,12 @@ public class FXMLArrivalTableViewController implements Initializable {
         tbvTestsuite.setItems(dateTestsuite);
 
         runableSuite = new ArrivalTestSuite();
-        runableSuite.setSuiteName("test");
+       // runableSuite.setSuiteName();
     }
 
     public void runTestSuite(){
         List<XmlClass> tempClasses = new ArrayList<>();
-
+        date = tbvTestsuite.getItems();
         for(int i=0; i<dateTestsuite.size();i++){
             tempClasses.add(new XmlClass(((TestCase)date.get(i)).getTcClassPackage()));
         }
