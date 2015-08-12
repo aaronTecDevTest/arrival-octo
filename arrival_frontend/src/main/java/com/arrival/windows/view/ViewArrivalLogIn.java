@@ -33,7 +33,7 @@ public class ViewArrivalLogIn extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        url = getClass().getResource("/fxml/arrivalLogIn.fxml");
+        url = getClass().getResource("/fxml/FXMLArrivalLogIn.fxml");
         loader = new FXMLLoader(url);
         root = loader.load();
 

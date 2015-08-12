@@ -27,7 +27,7 @@ import java.util.ResourceBundle;
  * Controller Class for ViewMainApp. This Class have linked with ViewMainApp.fxml and
  * can evoke function from ViewMainApp.fxml file.
  */
-public class ControllerArrivalTableViewApp implements Initializable {
+public class FXMLArrivalTableViewController implements Initializable {
 
     /**
      * Logger
@@ -43,7 +43,6 @@ public class ControllerArrivalTableViewApp implements Initializable {
 
     @FXML
     private TableView<TestCase> tbvTestsuite;
-
     @FXML
     private TableColumn<TestCase, String> tbcName;
     @FXML

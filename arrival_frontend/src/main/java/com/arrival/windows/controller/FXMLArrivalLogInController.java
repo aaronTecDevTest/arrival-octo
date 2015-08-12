@@ -24,7 +24,7 @@ import java.util.ResourceBundle;
  * Package: com.arrival.windows.controller
  */
 
-public class ControllerArrivalLogIn implements Initializable {
+public class FXMLArrivalLogInController implements Initializable {
 
     @FXML
     private Button btnLogIn;
@@ -59,7 +59,7 @@ public class ControllerArrivalLogIn implements Initializable {
             InputStream inputStream = classLoader.getResource("bundles/arrivalMain_de.properties").openStream();
             ResourceBundle bundle = new PropertyResourceBundle(inputStream);
 
-            URL url = getClass().getResource("/fxml/arrivalMain.fxml");
+            URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
             FXMLLoader loader = new FXMLLoader(url, bundle);
 
             Parent root = loader.load();

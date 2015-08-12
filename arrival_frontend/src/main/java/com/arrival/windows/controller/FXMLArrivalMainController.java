@@ -31,7 +31,7 @@ import java.util.ResourceBundle;
  * Controller Class for ViewMainApp. This Class have linked with ViewMainApp.fxml and
  * can evoke function from ViewMainApp.fxml file.
  */
-public class ControllerArrivalMainApp implements Initializable {
+public class FXMLArrivalMainController implements Initializable {
 
     /**
      * Logger
@@ -102,8 +102,9 @@ public class ControllerArrivalMainApp implements Initializable {
     private TableColumn<TestCase, String> tbcWebPortal;
 
     @FXML
-    //private ControllerArrivalTableViewApp tbvTestsuite;
-    private TableView<TestCase> tbvTestsuite;
+   // private FXMLArrivalTableViewController tbvTestsuite;
+
+    private TableView<TestCase> view;
 
     private HashMap<String, ViewArrivalTab> testSuitesTab;
 
@@ -156,6 +157,8 @@ public class ControllerArrivalMainApp implements Initializable {
 
         //SetUp Testsuite
         testSuitesTab = new HashMap<>();
+
+//        view = tbvTestsuite.getTbvTestsuite();
     }
 
 
@@ -173,7 +176,7 @@ public class ControllerArrivalMainApp implements Initializable {
     public void createNewTestsuite(ActionEvent actionEvent) throws IOException{
         System.out.println(actionEvent.getSource());
 
-        URL url = this.getClass().getResource("/fxml/arrivalTableView.fxml");
+        URL url = this.getClass().getResource("/fxml/FXMLArrivalTableView.fxml");
         TableView testSuiteTable =  FXMLLoader.load(url);
         //ViewArrivalTab tab = new ViewArrivalTab("", testSuiteTable);
         Tab tab = new Tab("", testSuiteTable);
@@ -204,6 +207,7 @@ public class ControllerArrivalMainApp implements Initializable {
     @FXML
     public void addTestcaseInTestsuite(ActionEvent actionEvent) {
         try {
+            /*
             if (accTestCase.getExpandedPane().getText().equals("iOS - Testcase")) {
                 System.out.println(actionEvent.getSource() + "ios");
                 tbvTestsuite = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
@@ -223,7 +227,8 @@ public class ControllerArrivalMainApp implements Initializable {
                 tbvTestsuite = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
                 ObservableList dateTestsuite = tbvTestsuite.getItems();
                 dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
-            }
+
+            }*/
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -233,6 +238,7 @@ public class ControllerArrivalMainApp implements Initializable {
     public void deleteTestcaseFromTestsuite(ActionEvent actionEvent) {
         System.out.println(actionEvent.getSource());
         try {
+            /*
             ObservableList<Integer> indeces = tbvTestsuite.getSelectionModel().getSelectedIndices();
             ObservableList<TestCase> testCases = tbvTestsuite.getSelectionModel().getSelectedItems();
 
@@ -247,7 +253,7 @@ public class ControllerArrivalMainApp implements Initializable {
                 for (TestCase testCase : testCases) {
                     dateTestsuite.remove(testCase);
                 }
-            }
+            }*/
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -256,9 +262,6 @@ public class ControllerArrivalMainApp implements Initializable {
     @FXML
     public void runTestsuite(ActionEvent actionEvent) {
         System.out.println(actionEvent.getSource());
-        if(tabMainTabPane.getChildrenUnmodifiable().size()!= testSuitesTab.size()){
-           //tabMainTabPane.getTabs().remove(0);
-        }
         /*ViewArrivalTab currentTab = (ViewArrivalTab)tabMainTabPane.getSelectionModel().getSelectedItem();
         currentTab.runTestSuite();*/
     }
@@ -379,7 +382,7 @@ public class ControllerArrivalMainApp implements Initializable {
     private void setupFirstTestsuite()  {
         try{
 
-            URL url = this.getClass().getResource("/fxml/arrivalTableView.fxml");
+            URL url = this.getClass().getResource("/fxml/FXMLArrivalTableView.fxml");
             TableView testSuiteTable = FXMLLoader.load(url);
 
             ViewArrivalTab tab = new ViewArrivalTab("Testsuite - Regressionstest", testSuiteTable);

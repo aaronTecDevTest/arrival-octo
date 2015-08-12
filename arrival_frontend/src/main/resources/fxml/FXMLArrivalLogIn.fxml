@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8"
-            fx:controller="com.arrival.windows.controller.ControllerArrivalLogIn">
+            fx:controller="com.arrival.windows.controller.FXMLArrivalLogInController">
     <children>
         <Pane prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="60.0"
               AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">

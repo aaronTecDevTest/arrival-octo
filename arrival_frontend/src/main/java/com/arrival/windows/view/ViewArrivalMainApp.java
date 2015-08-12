@@ -29,7 +29,7 @@ public class ViewArrivalMainApp extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        URL url = getClass().getResource("/fxml/arrivalMain.fxml");
+        URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
 
         InputStream inputStream = classLoader.getResource("bundles/arrivalMain_de.properties").openStream();
         ResourceBundle bundle = new PropertyResourceBundle(inputStream);

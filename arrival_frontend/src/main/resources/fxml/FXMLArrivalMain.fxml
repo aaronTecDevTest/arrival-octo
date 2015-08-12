@@ -6,12 +6,12 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox prefHeight="530.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arrival.windows.controller.ControllerArrivalMainApp">
+<VBox prefHeight="530.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arrival.windows.controller.FXMLArrivalMainController">
 
     <children>
 
         <!--fx:define>
-            <fx:include source="arrivalTableView.fxml" fx:id="tbvTestsuiteMain" />
+            <fx:include source="FXMLArrivalTableView.fxml" fx:id="tbvTestsuiteMain" />
         </fx:define-->
         <MenuBar VBox.vgrow="ALWAYS">
             <menus>
@@ -117,8 +117,7 @@
                      <tabs>
                         <Tab text="Testsuite - Regression">
                            <content>
-                               <fx:include source="arrivalTableView.fxml"/>
-
+                               <fx:include source="FXMLArrivalTableView.fxml" fx:id="tbvTestsuite"/>
                            </content>
                         </Tab>
                      </tabs></TabPane>
