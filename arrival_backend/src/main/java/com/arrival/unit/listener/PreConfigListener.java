@@ -27,11 +27,11 @@ public class PreConfigListener implements IExecutionListener {
     @Override
     public void onExecutionStart() {
         startTime = System.currentTimeMillis();
-        System.out.println("TestNG is going to start");
+        log.info("TestNG is going to start");
     }
 
     @Override
     public void onExecutionFinish() {
-        System.out.println("TestNG has finished, took around " + (System.currentTimeMillis() - startTime) + "ms");
+        log.info("TestNG has finished, took around " + (System.currentTimeMillis() - startTime) + "ms");
     }
 }

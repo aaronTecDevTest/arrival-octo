@@ -114,9 +114,9 @@ public class ArrivalTestSuite {
         boolean success = dir.mkdir();
 
         if (!success)
-            System.out.println("Directory creation failed1");
+            log.info("Directory creation failed1");
         else
-            System.out.println("Directory creation success");
+            log.info("Directory creation success");
     }
 
     public List<XmlClass> getClasses() {

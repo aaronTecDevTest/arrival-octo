@@ -168,17 +168,17 @@ public class FXMLArrivalMainController implements Initializable {
 
     @FXML
     public void openTestsuite(ActionEvent actionEvent) throws IOException{
-        System.out.println(actionEvent.getSource());
+        log.info(actionEvent.getSource());
     }
 
     @FXML
     public void saveTestsuite(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource());
+        log.info(actionEvent.getSource());
     }
 
     @FXML
     public void createNewTestsuite(ActionEvent actionEvent) throws IOException{
-        System.out.println(actionEvent.getSource());
+        log.info(actionEvent.getSource());
 
         URL url = this.getClass().getResource("/fxml/FXMLArrivalTableView.fxml");
         FXMLLoader loader = new FXMLLoader();
@@ -204,7 +204,7 @@ public class FXMLArrivalMainController implements Initializable {
 
     @FXML
     public void deletedTestsuite(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource());
+        log.info(actionEvent.getSource());
 
     }
 
@@ -213,19 +213,19 @@ public class FXMLArrivalMainController implements Initializable {
         try {
 
             if (accTestCase.getExpandedPane().getText().equals("iOS - Testcase")) {
-                System.out.println(actionEvent.getSource() + "ios");
+                log.info(actionEvent.getSource() + "ios");
                 dateTestsuite = currentTableView.getItems();
                 dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
             }
 
             if (accTestCase.getExpandedPane().getText().equals("Android - Testcase")) {
-                System.out.println(actionEvent.getSource() + "and");
+                log.info(actionEvent.getSource() + "and");
                 dateTestsuite = currentTableView.getItems();
                 dateTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
             }
 
             if (accTestCase.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
-                System.out.println(actionEvent.getSource() + "web");
+                log.info(actionEvent.getSource() + "web");
                 dateTestsuite = currentTableView.getItems();
                 dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
 
@@ -237,7 +237,7 @@ public class FXMLArrivalMainController implements Initializable {
 
     @FXML
     public void deleteTestcaseFromTestsuite(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource());
+        log.info(actionEvent.getSource());
         try {
             
             ObservableList<Integer> indeces = currentTableView.getSelectionModel().getSelectedIndices();
@@ -262,38 +262,38 @@ public class FXMLArrivalMainController implements Initializable {
 
     @FXML
     public void runTestsuite(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource());
+        log.info(actionEvent.getSource());
         tbvTestsuiteController.runTestSuite();
     }
 
     @FXML
     public void skipTestcase(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource());
+        log.info(actionEvent.getSource());
     }
 
     @FXML
     public void pauseTestcase(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource());
+        log.info(actionEvent.getSource());
     }
 
     @FXML
     public void stopTestsuite(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource());
+        log.info(actionEvent.getSource());
     }
 
     @FXML
     public void showTestsuiteResult(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource());
+        log.info(actionEvent.getSource());
     }
 
     @FXML
     public void showOptions(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource());
+        log.info(actionEvent.getSource());
     }
 
     @FXML
     public void showHelp(ActionEvent actionEvent) {
-        System.out.println(actionEvent.getSource());
+        log.info(actionEvent.getSource());
     }
 
 

@@ -84,11 +84,11 @@ public class FXMLArrivalLogInController implements Initializable {
 
     @FXML
     public void clickSignIn(ActionEvent actionEvent) {
-        System.out.println("Sign In");
+        log.info("Sign In");
     }
 
     @FXML
     public void clickLogInWithoutSignIn(ActionEvent actionEvent) {
-        System.out.println("Log in without Sign");
+        log.info("Log in without Sign");
     }
 }

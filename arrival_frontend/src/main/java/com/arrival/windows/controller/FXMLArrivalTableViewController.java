@@ -58,6 +58,8 @@ public class FXMLArrivalTableViewController implements Initializable {
     @FXML
     private TableColumn<TestCase, String> tbcResult;
 
+    private FXMLArrivalOptionsController optionsController;
+
     private ArrivalTestSuite runableSuite;
     private ObservableList date;
 
@@ -92,7 +94,7 @@ public class FXMLArrivalTableViewController implements Initializable {
         runableSuite = new ArrivalTestSuite();
 
         //SetUp new OptionsView
-        setUPPotionsView();
+        setUpOptionsView();
     }
 
 
@@ -129,8 +131,9 @@ public class FXMLArrivalTableViewController implements Initializable {
     }
 
     public void showOptionView(boolean show){
-
+      // optionsController.
     }
-    public void setUPPotionsView() {
+    public void setUpOptionsView() {
+
     }
 }

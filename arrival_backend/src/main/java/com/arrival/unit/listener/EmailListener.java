@@ -16,11 +16,11 @@ public class EmailListener implements IExecutionListener {
     private static final Logger log =  LogManager.getLogger(EmailListener.class);
     @Override
     public void onExecutionStart() {
-        System.out.println("Notify by mail that TestNG is going to start");
+        log.info("Notify by mail that TestNG is going to start");
     }
 
     @Override
     public void onExecutionFinish() {
-        System.out.println("Notify by mail, TestNG is finished");
+        log.info("Notify by mail, TestNG is finished");
     }
 }

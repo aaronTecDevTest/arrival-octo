@@ -9,11 +9,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="600.0" maxWidth="500.0" minHeight="600.0" minWidth="462.0" prefHeight="600.0" prefWidth="462.0" stylesheets="@/css/arrivalOptions.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="600.0" maxWidth="500.0" minHeight="277.0" minWidth="462.0" prefHeight="277.0" prefWidth="462.0" stylesheets="@/css/arrivalOptions.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arrival.windows.controller.FXMLArrivalOptionsController">
     <children>
-        <ToolBar prefHeight="42.0" prefWidth="384.0">
+        <ToolBar>
             <items>
-                <Pane prefHeight="32.0" prefWidth="440.0" />
+                <Pane prefHeight="21.0" prefWidth="406.0" />
                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../icons/options.png" />
@@ -21,29 +21,102 @@
                 </ImageView>
             </items>
         </ToolBar>
-        <Pane prefHeight="15.0" />
-      <Pane prefHeight="508.0" prefWidth="479.0">
-         <children>
-            <ComboBox layoutX="280.0" layoutY="10.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
-                <Label layoutX="31.0" layoutY="14.0" prefHeight="17.0" prefWidth="215.0" text="Testart:" />
-            <Label layoutX="31.0" layoutY="49.0" prefHeight="17.0" prefWidth="215.0" text="Testart:" />
-            <ComboBox layoutX="280.0" layoutY="45.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
-            <ComboBox layoutX="281.0" layoutY="89.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
-            <Label layoutX="32.0" layoutY="93.0" prefHeight="17.0" prefWidth="215.0" text="Testart:" />
-            <ComboBox layoutX="281.0" layoutY="125.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
-            <Label layoutX="31.0" layoutY="129.0" prefHeight="17.0" prefWidth="215.0" text="Testart:" />
-            <Separator layoutX="13.0" layoutY="175.0" prefHeight="4.0" prefWidth="436.0" />
-         </children>
-      </Pane>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabGeneral" text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="170.0" prefWidth="462.0">
+                           <children>
+                              <ComboBox layoutX="280.0" layoutY="10.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="31.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Testing Plattform:" textAlignment="LEFT" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="31.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Parallel-Testing:" textAlignment="LEFT" />
+                              <ComboBox layoutX="280.0" layoutY="50.0" prefHeight="25.0" prefWidth="166.0" promptText="Max 10" />
+                              <ComboBox layoutX="280.0" layoutY="90.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="32.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" />
+                              <ComboBox layoutX="280.0" layoutY="130.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="31.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabWebConfig" text="Web-Portal-Config">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="170.0" prefWidth="462.0">
+                           <children>
+                              <ComboBox layoutX="280.0" layoutY="10.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="31.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Browser:" textAlignment="LEFT" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="31.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Server:" textAlignment="LEFT" />
+                              <ComboBox layoutX="280.0" layoutY="50.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                              <ComboBox layoutX="280.0" layoutY="90.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="32.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" textAlignment="LEFT" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="31.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Json-Config-Files:" textAlignment="LEFT" />
+                              <TextField layoutX="280.0" layoutY="130.0" prefHeight="25.0" prefWidth="143.0" promptText="Path" />
+                              <Button layoutX="423.0" layoutY="130.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" text="Button" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabIOSConfig" text="IOS-Config">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="170.0" prefWidth="462.0">
+                           <children>
+                              <ComboBox layoutX="280.0" layoutY="10.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="31.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Testing-:" textAlignment="LEFT" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="31.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" />
+                              <ComboBox layoutX="280.0" layoutY="50.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                              <ComboBox layoutX="280.0" layoutY="90.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="32.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" />
+                              <Button layoutX="423.0" layoutY="130.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" text="Button" />
+                              <TextField layoutX="280.0" layoutY="130.0" prefHeight="25.0" prefWidth="143.0" promptText="Path" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="31.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Json-Config-Files:" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabANDConfig" text="Android-Config">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="170.0" prefWidth="462.0">
+                           <children>
+                              <ComboBox layoutX="280.0" layoutY="10.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="31.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="31.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" />
+                              <ComboBox layoutX="280.0" layoutY="50.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                              <ComboBox layoutX="280.0" layoutY="90.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="32.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" />
+                              <Button layoutX="423.0" layoutY="130.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" text="Button" />
+                              <TextField layoutX="280.0" layoutY="130.0" prefHeight="25.0" prefWidth="143.0" promptText="Path" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="31.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Json-Config-Files:" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
         <HBox layoutX="10.0" layoutY="320.0" prefHeight="37.0" prefWidth="500.0">
             <children>
                 <Pane prefWidth="70.0" HBox.hgrow="ALWAYS" />
-                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="OK">
+                <Button fx:id="bntOK" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="OK">
                     <HBox.margin>
                         <Insets right="10.0" top="5.0" />
                     </HBox.margin>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Cancel">
+                <Button fx:id="bntCancel" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Cancel">
                     <HBox.margin>
                         <Insets left="10.0" top="5.0" />
                     </HBox.margin>

@@ -21,8 +21,8 @@
     </Properties>
     <Appenders>
         <Console name='Stdout' target='SYSTEM_OUT'>
-            <PatternLayout pattern='${coloredFullPattern}'/>
-            <!--PatternLayout pattern='${coloredMediumPattern}'/-->
+            <!--PatternLayout pattern='${coloredFullPattern}'/-->
+            <PatternLayout pattern='${coloredMediumPattern}'/>
             <!--PatternLayout pattern='${coloredShortPattern}'/-->
             <!--PatternLayout pattern='${rawPattern}'/-->
         </Console>
