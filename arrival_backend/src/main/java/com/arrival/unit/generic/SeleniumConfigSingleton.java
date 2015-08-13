@@ -33,11 +33,17 @@ public class SeleniumConfigSingleton {
         SeleniumConfigSingleton.testArt = testArt;
     }
 
+    /**
+     * Code will be run only if the SeleniumTestSuite was instanced
+     */
     @BeforeSuite
     public void setUpAppiumConfig() {
         setTestArt(SeleniumConfigSingleton.multi);
     }
 
+    /**
+     * Code will be run only if the SeleniumTestSuite was instanced
+     */
     @AfterSuite
     public void cleanUpAppiumConfig() {
         setTestArt("");

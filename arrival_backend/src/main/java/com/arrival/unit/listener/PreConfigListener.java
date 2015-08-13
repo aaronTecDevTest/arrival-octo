@@ -1,5 +1,7 @@
 package com.arrival.unit.listener;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.IExecutionListener;
 
 /**
@@ -11,6 +13,7 @@ import org.testng.IExecutionListener;
  */
 
 public class PreConfigListener implements IExecutionListener {
+    private static final Logger log =  LogManager.getLogger(PreConfigListener.class);
     private long startTime;
 
     public long getStartTime() {

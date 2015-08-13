@@ -1,4 +1,4 @@
-package com.arrival.selenium;
+package com.arrival.selenium.config;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,26 +15,25 @@ import org.openqa.grid.internal.utils.GridHubConfiguration;
  * Also can start, stop and restart the Hub.
  */
 public class Hub {
-    //private static final Logger log = LogManager.getLogger(Hub.class.getName());
-    private Logger log;
+    private static final Logger log = LogManager.getLogger(Hub.class.getName());
     /**
-     * @param osName Operation-System Name like "Mac OS", "Windows xxx" or "Linux xx"
+     * @param osName: Operation-System Name like "Mac OS", "Windows xxx" or "Linux xx"
      */
     private String osName;
     /**
-     * @param gridHubConfig @see GridHubConfiguration
+     * @param gridHubConfig: @see GridHubConfiguration
      */
     private GridHubConfiguration gridHubConfig;
     /**
-     * @param hub @see org.openqa.grid.web.Hub
+     * @param hub: @see org.openqa.grid.web.Hub
      */
     private org.openqa.grid.web.Hub hub;
     /**
-     * @param hubHost Hostname oder IP-Address where to run the SeleniumHub
+     * @param hubHost: Hostname oder IP-Address where to run the SeleniumHub
      */
     private String hubHost;
     /**
-     * @param hubHost Port where to run the SeleniumHub
+     * @param hubHost: Port where to run the SeleniumHub
      */
     private Integer hubPort;
 
@@ -44,7 +43,7 @@ public class Hub {
      * osName.
      */
     public Hub() {
-        log = LogManager.getLogger(Hub.class.getName());
+        //log = LogManager.getLogger(Hub.class.getName());
         log.info("Creating SeleniumHb");
         gridHubConfig = new GridHubConfiguration();
         hubHost = "localhost";

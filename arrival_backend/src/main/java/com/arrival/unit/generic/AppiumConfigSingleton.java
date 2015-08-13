@@ -33,9 +33,8 @@ public class AppiumConfigSingleton {
         AppiumConfigSingleton.testArt = testArt;
     }
 
-
     /**
-     * Code will be run only if the ArrivalTestSuite was instance
+     * Code will be run only if the ArrivalTestSuite was instanced
      */
     @BeforeSuite
     public void setUpAppiumConfig() {
@@ -43,7 +42,7 @@ public class AppiumConfigSingleton {
     }
 
     /**
-     * Code will be run only if the ArrivalTestSuite was instance
+     * Code will be run only if the ArrivalTestSuite was instanced
      */
     @AfterSuite
     public void cleanUpAppiumConfig() {

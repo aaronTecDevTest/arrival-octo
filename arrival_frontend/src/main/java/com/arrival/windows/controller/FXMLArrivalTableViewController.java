@@ -16,6 +16,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.xml.XmlClass;
 
 import java.net.URL;
@@ -32,7 +34,7 @@ public class FXMLArrivalTableViewController implements Initializable {
     /**
      * Logger
      */
-    //TODO: logger implment
+    private static final Logger log =  LogManager.getLogger(FXMLArrivalTableViewController.class);
 
     /**
      * For Internationalization
@@ -88,8 +90,12 @@ public class FXMLArrivalTableViewController implements Initializable {
         tbvTestsuite.setItems(dateTestsuite);
 
         runableSuite = new ArrivalTestSuite();
-       // runableSuite.setSuiteName();
+
+        //SetUp new OptionsView
+        setUPPotionsView();
     }
+
+
 
     public void runTestSuite(){
         List<XmlClass> tempClasses = new ArrayList<>();
@@ -120,5 +126,11 @@ public class FXMLArrivalTableViewController implements Initializable {
 
     public TableView<TestCase> getTbvTestsuite(){
         return tbvTestsuite;
+    }
+
+    public void showOptionView(boolean show){
+
+    }
+    public void setUPPotionsView() {
     }
 }

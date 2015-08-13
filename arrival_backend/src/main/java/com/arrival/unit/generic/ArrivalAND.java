@@ -3,6 +3,8 @@ package com.arrival.unit.generic;
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
@@ -16,6 +18,7 @@ import java.util.ArrayList;
  * Package: com.arrival.unit.generic
  */
 public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
+    private static final Logger log =  LogManager.getLogger(ArrivalAND.class);
 
     public static AppiumConfigSingleton appiumConfi = AppiumConfigSingleton.getInstance();
     public ArrayList<Object> appiumServerList = new ArrayList<>();

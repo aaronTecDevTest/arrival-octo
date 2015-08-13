@@ -3,6 +3,8 @@ package com.arrival.unit.generic;
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
@@ -17,6 +19,7 @@ import java.util.ArrayList;
  */
 
 public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
+    private static final Logger log =  LogManager.getLogger(ArrivalWeb.class);
 
     public static SeleniumConfigSingleton sleniumConfi = SeleniumConfigSingleton.getInstance();
     public ArrayList<Object> seleniumServerList = new ArrayList<>();

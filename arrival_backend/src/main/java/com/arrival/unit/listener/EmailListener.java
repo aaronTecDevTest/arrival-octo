@@ -1,5 +1,7 @@
 package com.arrival.unit.listener;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.IExecutionListener;
 
 /**
@@ -11,7 +13,7 @@ import org.testng.IExecutionListener;
  */
 
 public class EmailListener implements IExecutionListener {
-
+    private static final Logger log =  LogManager.getLogger(EmailListener.class);
     @Override
     public void onExecutionStart() {
         System.out.println("Notify by mail that TestNG is going to start");

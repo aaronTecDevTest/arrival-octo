@@ -1,6 +1,8 @@
 package com.arrival.appium;
 
 import com.arrival.utilities.interfaces.IFAppiumServer;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * @author Aaron Kutekidila
@@ -11,7 +13,7 @@ import com.arrival.utilities.interfaces.IFAppiumServer;
 
 
 public class AppiumIOS implements IFAppiumServer {
-
+    private static final Logger log =  LogManager.getLogger(AppiumIOS.class);
 
     /**
      * This functions start a current Server over commando line.

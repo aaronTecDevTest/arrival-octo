@@ -13,6 +13,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URL;
@@ -23,16 +25,14 @@ import java.net.URL;
  * functions.
  **/
 public class ViewArrivalLogIn extends Application {
-
+    private static final Logger log =  LogManager.getLogger(ViewArrivalLogIn.class);
     public FXMLLoader loader;
     public Parent root;
     public URL url;
 
-    public ViewArrivalLogIn() {
-    }
-
     @Override
     public void start(Stage primaryStage) throws IOException {
+        log.info("Start App with LogIn");
         url = getClass().getResource("/fxml/FXMLArrivalLogIn.fxml");
         loader = new FXMLLoader(url);
         root = loader.load();
@@ -44,6 +44,7 @@ public class ViewArrivalLogIn extends Application {
         primaryStage.setTitle("ViewLogIn - ArrivalOcto");
         primaryStage.setResizable(false);
         primaryStage.show();
+        log.info("LogIn show up");
     }
 
     public void run() {

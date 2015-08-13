@@ -4,6 +4,8 @@ import com.arrival.utilities.interfaces.IFAppiumServer;
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecuteResultHandler;
 import org.apache.commons.exec.DefaultExecutor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
@@ -15,7 +17,7 @@ import java.io.IOException;
  */
 
 public class AppiumAndroid implements IFAppiumServer {
-
+    private static final Logger log =  LogManager.getLogger(AppiumAndroid.class);
     /**
      * Standard Constructor
      */

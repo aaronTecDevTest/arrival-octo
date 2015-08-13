@@ -9,6 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,6 +27,7 @@ import java.util.ResourceBundle;
  */
 
 public class FXMLArrivalLogInController implements Initializable {
+    private static final Logger log =  LogManager.getLogger(FXMLArrivalLogInController.class);
 
     @FXML
     private Button btnLogIn;

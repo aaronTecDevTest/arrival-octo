@@ -1,45 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" maxHeight="600.0" maxWidth="500.0" minHeight="600.0" minWidth="500.0" prefHeight="600.0"
-      prefWidth="500.0" stylesheets="@/css/arrivalOptions.css" xmlns="http://javafx.com/javafx/8">
+
+<VBox maxHeight="600.0" maxWidth="500.0" minHeight="600.0" minWidth="462.0" prefHeight="600.0" prefWidth="462.0" stylesheets="@/css/arrivalOptions.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <ToolBar prefHeight="42.0" prefWidth="384.0">
             <items>
-                <Pane prefHeight="32.0" prefWidth="440.0"/>
+                <Pane prefHeight="32.0" prefWidth="440.0" />
                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../icons/options.png"/>
+                        <Image url="@../icons/options.png" />
                     </image>
                 </ImageView>
             </items>
         </ToolBar>
-        <Pane prefHeight="15.0"/>
-        <HBox prefHeight="257.0" prefWidth="500.0">
-            <children>
-                <Label prefHeight="17.0" prefWidth="253.0" text="3" textAlignment="RIGHT" HBox.hgrow="ALWAYS"/>
-                <Label text="Label" HBox.hgrow="ALWAYS"/>
-            </children>
-        </HBox>
-        <HBox prefHeight="243.0" prefWidth="500.0"/>
+        <Pane prefHeight="15.0" />
+      <Pane prefHeight="508.0" prefWidth="479.0">
+         <children>
+            <ComboBox layoutX="280.0" layoutY="10.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+                <Label layoutX="31.0" layoutY="14.0" prefHeight="17.0" prefWidth="215.0" text="Testart:" />
+            <Label layoutX="31.0" layoutY="49.0" prefHeight="17.0" prefWidth="215.0" text="Testart:" />
+            <ComboBox layoutX="280.0" layoutY="45.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+            <ComboBox layoutX="281.0" layoutY="89.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+            <Label layoutX="32.0" layoutY="93.0" prefHeight="17.0" prefWidth="215.0" text="Testart:" />
+            <ComboBox layoutX="281.0" layoutY="125.0" prefHeight="25.0" prefWidth="166.0" promptText="test;test" />
+            <Label layoutX="31.0" layoutY="129.0" prefHeight="17.0" prefWidth="215.0" text="Testart:" />
+            <Separator layoutX="13.0" layoutY="175.0" prefHeight="4.0" prefWidth="436.0" />
+         </children>
+      </Pane>
         <HBox layoutX="10.0" layoutY="320.0" prefHeight="37.0" prefWidth="500.0">
             <children>
-                <Pane prefWidth="70.0" HBox.hgrow="ALWAYS"/>
+                <Pane prefWidth="70.0" HBox.hgrow="ALWAYS" />
                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="OK">
                     <HBox.margin>
-                        <Insets right="10.0" top="5.0"/>
+                        <Insets right="10.0" top="5.0" />
                     </HBox.margin>
                 </Button>
                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Cancel">
                     <HBox.margin>
-                        <Insets left="10.0" top="5.0"/>
+                        <Insets left="10.0" top="5.0" />
                     </HBox.margin>
                 </Button>
-                <Pane prefWidth="70.0" HBox.hgrow="ALWAYS"/>
+                <Pane prefWidth="70.0" HBox.hgrow="ALWAYS" />
             </children>
         </HBox>
     </children>

@@ -9,6 +9,8 @@ package com.arrival.windows.controller;
  */
 
 import javafx.fxml.Initializable;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,7 +20,7 @@ import java.util.ResourceBundle;
  * can evoke function from ViewMainApp.fxml file.
  */
 public class FXMLArrivalHelpController implements Initializable {
-
+    private static final Logger log =  LogManager.getLogger(FXMLArrivalTableViewController.class);
 
     /**
      * Called to initialize a controller after its root element has been

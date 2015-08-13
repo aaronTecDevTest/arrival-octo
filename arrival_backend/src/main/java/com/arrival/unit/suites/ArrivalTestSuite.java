@@ -2,6 +2,8 @@ package com.arrival.unit.suites;
 
 import com.arrival.unit.listener.EmailListener;
 import com.arrival.unit.listener.PreConfigListener;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.TestNG;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
@@ -23,7 +25,22 @@ import java.util.List;
  */
 
 public class ArrivalTestSuite {
+    private static final Logger log =  LogManager.getLogger(ArrivalTestSuite.class);
+    /**
+        @param appiumManager: Mange the configuration and server properties to run testcase other
+                            IOS and Android devices or simulation.
+     */
+    private Object appiumManager;
 
+    /**
+       @param seleniumManager: Manage the configuration and server properties to run testcase other
+                             Firefox, Chrome and IE driver.
+     */
+    private Object seleniumManger;
+
+    /**
+        TestNG properties
+     */
     private TestNG tng = new TestNG();
     private List<XmlClass> classes = new ArrayList<>();
 
@@ -37,7 +54,10 @@ public class ArrivalTestSuite {
 
     private String path;
 
-    public static int suiteID = 0;
+    /**
+        @param suiteID:  Counter to create different TestNG-Suite-Name
+     */
+    private static int suiteID = 0;
 
     public ArrivalTestSuite() {
 

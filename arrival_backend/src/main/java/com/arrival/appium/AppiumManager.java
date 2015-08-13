@@ -1,5 +1,8 @@
 package com.arrival.appium;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * @author Aaron Kutekidila
  * @version 1.0
@@ -7,4 +10,5 @@ package com.arrival.appium;
  * @since 1.0
  */
 public class AppiumManager {
+    private static final Logger log =  LogManager.getLogger(AppiumManager.class);
 }

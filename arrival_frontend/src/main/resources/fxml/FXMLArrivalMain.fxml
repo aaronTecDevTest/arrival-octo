@@ -111,9 +111,9 @@
                         </VBox>
                         <TabPane fx:id="tabMainTabPane" tabClosingPolicy="UNAVAILABLE">
                      <tabs>
-                        <Tab text="Testsuite - Regression">
+                         <Tab text="Testsuite - Regression">
                            <content>
-                               <fx:include fx:id="tbvTestsuite" source="FXMLArrivalTableView.fxml"/>
+                               <fx:include fx:id="tbvTestsuite" source="FXMLArrivalTableView.fxml" />
                            </content>
                         </Tab>
                      </tabs></TabPane>
