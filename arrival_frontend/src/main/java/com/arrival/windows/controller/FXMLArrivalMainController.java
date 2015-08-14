@@ -17,18 +17,23 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.swing.*;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
 
 /**
  * Controller Class for ViewMainApp. This Class have linked with ViewMainApp.fxml and
@@ -111,11 +116,17 @@ public class FXMLArrivalMainController implements Initializable {
 
     private TableView<TestCase> currentTableView;
 
+    private FXMLArrivalOptionsController optionsController;
+    private Stage optionsViewStage;
+
+
   //  private HashMap<String, TableView> testSuitesTab;
 
     private FileNameLoader fileNameLoaderIOS;
     private FileNameLoader fileNameLoaderAND;
     private FileNameLoader fileNameLoaderWeb;
+
+
 
 
     /**
@@ -163,6 +174,9 @@ public class FXMLArrivalMainController implements Initializable {
         currentTableView = tbvTestsuiteController.getTbvTestsuite();
         firstTestsuiteController = tbvTestsuiteController;
         addTableViewListener();
+
+        //SetUp OptionsView
+       // setUpOptionsView();
     }
 
 
@@ -205,7 +219,6 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void deletedTestsuite(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
-
     }
 
     @FXML
@@ -289,6 +302,22 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void showOptions(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
+        optionsViewStage = setUpOptionsView();
+        optionsViewStage.hide();
+        Window win = ((Node)actionEvent.getSource()).getScene().getWindow();
+                if(optionsViewStage.isShowing())
+                    System.out.println("test ja");
+                else
+                    System.out.println("test nein");
+
+        if(win.isShowing())
+                    System.out.println("test ja");
+                else
+                    System.out.println("test nein");
+
+        optionsViewStage.initOwner(((Node) actionEvent.getSource()).getScene().getWindow());
+        log.warn(((Node)actionEvent.getSource()).getScene().getWindow() );
+        optionsViewStage.show();
     }
 
     @FXML
@@ -400,5 +429,34 @@ public class FXMLArrivalMainController implements Initializable {
               }
             }
         });
+    }
+
+
+    private Stage setUpOptionsView() {
+        try {
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            InputStream inputStream = classLoader.getResource("bundles/arrivalMain_de.properties").openStream();
+            ResourceBundle bundle = new PropertyResourceBundle(inputStream);
+
+            URL url = getClass().getResource("/fxml/FXMLArrivalOptions.fxml");
+            FXMLLoader loader = new FXMLLoader(url, bundle);
+
+            Parent root = loader.load();
+            Scene optionsScene = new Scene(root, 460, 265);
+            Stage optionsStage = new Stage();
+
+            optionsScene.getStylesheets().add("/css/arrivalMain.css");
+            optionsStage.setScene(optionsScene);
+            optionsStage.setTitle("Options...");
+            optionsStage.setResizable(false);
+            optionsStage.initModality(Modality.APPLICATION_MODAL);
+            optionsController = loader.getController();
+            log.warn(optionsStage);
+            return  optionsStage;
+
+        }catch (IOException e){
+            log.error(e.getStackTrace());
+            return null;
+        }
     }
 }

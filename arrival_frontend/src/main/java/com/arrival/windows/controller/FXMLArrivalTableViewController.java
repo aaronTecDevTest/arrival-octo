@@ -9,6 +9,7 @@ package com.arrival.windows.controller;
  */
 
 import com.arrival.unit.suites.ArrivalTestSuite;
+import com.arrival.windows.model.Options;
 import com.arrival.windows.model.TestCase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -58,10 +59,13 @@ public class FXMLArrivalTableViewController implements Initializable {
     @FXML
     private TableColumn<TestCase, String> tbcResult;
 
-    private FXMLArrivalOptionsController optionsController;
-
-    private ArrivalTestSuite runableSuite;
-    private ObservableList date;
+    private ArrivalTestSuite runableTestSuite;
+    private ObservableList dateTestSuite;
+    private Options optionsTestSuite;
+    /**
+     *Is a path where are the index of testng result.
+     */
+    private String resultTestSuite;
 
 
     /**
@@ -91,22 +95,21 @@ public class FXMLArrivalTableViewController implements Initializable {
         setUpTestsuite();
         tbvTestsuite.setItems(dateTestsuite);
 
-        runableSuite = new ArrivalTestSuite();
+        runableTestSuite = new ArrivalTestSuite();
 
         //SetUp new OptionsView
-        setUpOptionsView();
     }
 
 
 
     public void runTestSuite(){
         List<XmlClass> tempClasses = new ArrayList<>();
-        date = tbvTestsuite.getItems();
+        dateTestSuite = tbvTestsuite.getItems();
         for(int i=0; i<dateTestsuite.size();i++){
-            tempClasses.add(new XmlClass(((TestCase)date.get(i)).getTcClassPackage()));
+            tempClasses.add(new XmlClass(((TestCase) dateTestSuite.get(i)).getTcClassPackage()));
         }
-        runableSuite.setClasses(tempClasses);
-        runableSuite.runVirtualSuit();
+        runableTestSuite.setClasses(tempClasses);
+        runableTestSuite.runVirtualSuit();
     }
 
     private void iniBundleResources() {
@@ -128,12 +131,5 @@ public class FXMLArrivalTableViewController implements Initializable {
 
     public TableView<TestCase> getTbvTestsuite(){
         return tbvTestsuite;
-    }
-
-    public void showOptionView(boolean show){
-      // optionsController.
-    }
-    public void setUpOptionsView() {
-
     }
 }
