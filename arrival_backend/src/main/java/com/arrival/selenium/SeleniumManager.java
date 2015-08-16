@@ -14,16 +14,16 @@ import java.util.HashMap;
  * @since 1.0
  */
 public class SeleniumManager {
-    private static final Logger log =  LogManager.getLogger(SeleniumManager.class);
+private static final Logger log =  LogManager.getLogger(SeleniumManager.class);
 
-    private HashMap<String, SeleniumConfig> seleniumConfigs;
+private HashMap<String, SeleniumConfig> seleniumConfigs;
 
-    public SeleniumManager(){
-        seleniumConfigs = new HashMap<>();
-    }
+public SeleniumManager(){
+               seleniumConfigs = new HashMap<>();
+                                                      }
 
-    public void setUpConfgi(String testSuiteName) {
+public void setUpConfgi(String testSuiteName) {
 
-      seleniumConfigs.get(testSuiteName).runConfig();
-    }
-}
+               seleniumConfigs.get(testSuiteName).runConfig();
+               }
+               }

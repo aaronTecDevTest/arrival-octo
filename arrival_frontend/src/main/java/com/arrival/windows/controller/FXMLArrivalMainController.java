@@ -127,8 +127,6 @@ public class FXMLArrivalMainController implements Initializable {
     private FileNameLoader fileNameLoaderWeb;
 
 
-
-
     /**
      * Called to initialize a controller after its root element has been
      * completely processed.
@@ -178,7 +176,6 @@ public class FXMLArrivalMainController implements Initializable {
         //SetUp OptionsView
        // setUpOptionsView();
     }
-
 
     @FXML
     public void openTestsuite(ActionEvent actionEvent) throws IOException{
@@ -304,17 +301,6 @@ public class FXMLArrivalMainController implements Initializable {
         log.info(actionEvent.getSource());
         optionsViewStage = setUpOptionsView();
         optionsViewStage.hide();
-        Window win = ((Node)actionEvent.getSource()).getScene().getWindow();
-                if(optionsViewStage.isShowing())
-                    System.out.println("test ja");
-                else
-                    System.out.println("test nein");
-
-        if(win.isShowing())
-                    System.out.println("test ja");
-                else
-                    System.out.println("test nein");
-
         optionsViewStage.initOwner(((Node) actionEvent.getSource()).getScene().getWindow());
         log.warn(((Node)actionEvent.getSource()).getScene().getWindow() );
         optionsViewStage.show();
@@ -430,7 +416,6 @@ public class FXMLArrivalMainController implements Initializable {
             }
         });
     }
-
 
     private Stage setUpOptionsView() {
         try {
