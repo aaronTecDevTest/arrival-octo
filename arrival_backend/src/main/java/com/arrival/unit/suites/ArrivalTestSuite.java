@@ -101,8 +101,9 @@ public class ArrivalTestSuite {
     private String getNewPathDirectory() {
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmss");
         Calendar cal = Calendar.getInstance();
+
         //ToDo: Mit Path class implement
-        String tempPath = "../arrival-Octo/arrival_backen/src/main/resources/report/testng/selenium/";
+        String tempPath = "../arrival-Octo/arrival_backend/src/main/resources/report/testng/selenium/";
         String outPutDirectory = tempPath + dateFormat.format(cal.getTime());
 
         createNewDirectory(outPutDirectory);
