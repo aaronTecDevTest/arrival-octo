@@ -43,14 +43,14 @@ public class WebDriverManager {
 		toolkit.getScreenSize().getWidth(), (int)
 		toolkit.getScreenSize().getHeight());*/
        // switch (runningConfiguration.getBrowser()) {
-        switch ("") {
+        switch ("FF") {
             case "IE":
                 try {
                     log.debug(new File(".").getCanonicalPath());
                 } catch (IOException e) {
                     log.error("Error while initializing IEDriver");
                 }
-                System.setProperty("webdriver.ie.driver", "wetter2.0_backend" +File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "IEDriverServer.exe");
+                System.setProperty("webdriver.ie.driver", "com" +File.separator + "resources" + File.separator + "webdriver" + File.separator + "IEDriverServer.exe");
                 driver = new InternetExplorerDriver(this.setUpIEDriver());
                 System.out.println("test");
                 break;
@@ -61,7 +61,7 @@ public class WebDriverManager {
                 } catch (IOException e) {
                     log.error("Error while initializing ChromeDriver");
                 }
-                System.setProperty("webdriver.chrome.driver", "wetter2.0_backend" +File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "com" +File.separator + "resources" + File.separator + "webdriver" + File.separator + "chromedriver.exe");
                 driver = new ChromeDriver(this.setUpChromeDriver());
                 break;
 
@@ -71,7 +71,7 @@ public class WebDriverManager {
                 } catch (IOException e) {
                     log.error("Error while initializing SafariDriver");
                 }
-                System.setProperty("webdriver.chrome.driver", "wetter2.0_backend" +File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "safariDriver.exe");
+                System.setProperty("webdriver.chrome.driver", "com" +File.separator + "resources" + File.separator + "webdriver" + File.separator + "safariDriver.exe");
                 driver = new ChromeDriver();
                 break;
 
@@ -81,7 +81,7 @@ public class WebDriverManager {
                 } catch (IOException e) {
                     log.error("Error while initializing ChromeDriver");
                 }
-                System.setProperty("webdriver.chrome.driver", "wetter2.0_backend" +File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "com" +File.separator + "resources" + File.separator + "webdriver" + File.separator + "chromedriver.exe");
                 driver = new ChromeDriver();
                 break;
 

@@ -17,12 +17,12 @@ public class SeleniumManager {
     private static final Logger log = LogManager.getLogger(SeleniumManager.class);
     private HashMap<String, SeleniumConfig> seleniumConfigs;
 
-    public  SeleniumManager(SeleniumConfig seleniumConfig){
-        seleniumConfigs.put(seleniumConfig.getClass().toString(),seleniumConfig);
+    public SeleniumManager(){
+        seleniumConfigs = new HashMap<>();
     }
 
-    public SeleniumManager() {
-        seleniumConfigs = new HashMap<>();
+    public  SeleniumManager(SeleniumConfig seleniumConfig){
+        seleniumConfigs.put(seleniumConfig.getClass().toString(),seleniumConfig);
     }
 
     public void setUpConfgi(String testSuiteName) {
@@ -32,9 +32,11 @@ public class SeleniumManager {
 
     public WebDriver getBrowser(SeleniumConfig seleniumConfig) {
         WebDriverManager webDriverManager = new WebDriverManager();
-        //SeleniumConfig tempConfig = seleniumConfigs.get(seleniumConfig.getClass().toString());
-        //WebDriver tempWebDriver = webDriverManager.setUpDriver(tempConfig);
-        WebDriver tempWebDriver = webDriverManager.setUpDriver(null);
+        WebDriver tempWebDriver = webDriverManager.setUpDriver(seleniumConfig);
         return tempWebDriver;
+    }
+
+    public void setSeleniumConfig(SeleniumConfig seleniumConfig) {
+        this. seleniumConfigs.put("seleniumConfig.getClass().toString()",seleniumConfig);
     }
 }

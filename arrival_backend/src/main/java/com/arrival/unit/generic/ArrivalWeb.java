@@ -1,7 +1,6 @@
 package com.arrival.unit.generic;
 
 import com.arrival.selenium.SeleniumManager;
-import com.arrival.selenium.WebDriverManager;
 import com.arrival.selenium.config.SeleniumConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -33,12 +32,14 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     private WebDriver browser;
 
     public ArrivalWeb(){
-        seleniumManager = new SeleniumManager(seleniumConfig);
-        browser = seleniumManager.getBrowser(seleniumConfig);
+        //seleniumConfig ist noch nicht gesetzt
+        seleniumManager = new SeleniumManager();
+        //browser = seleniumManager.getBrowser(seleniumConfig);
     }
 
 
     public WebDriver openBrowser(){
+        seleniumManager.setSeleniumConfig(seleniumConfig);
         browser = seleniumManager.getBrowser(seleniumConfig);
         return browser;
     }

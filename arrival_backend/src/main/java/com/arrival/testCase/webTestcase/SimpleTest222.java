@@ -24,7 +24,7 @@ public class SimpleTest222 extends ArrivalWeb {
 
         closeBrowser();
     }
-
+/*
     @Test(dataProvider = "driver", groups = {"slow"})
     public void aSlowTest(String serverName, Integer id) {
         System.out.println("Slow test 303 " + serverName + " " + id);
@@ -35,4 +35,5 @@ public class SimpleTest222 extends ArrivalWeb {
 
         closeBrowser();
     }
+    */
 }
