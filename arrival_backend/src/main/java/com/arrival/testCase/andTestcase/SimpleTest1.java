@@ -26,5 +26,4 @@ public class SimpleTest1 extends ArrivalAND {
         pauseTest(10000);
     }
 
-
 }

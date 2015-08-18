@@ -7,5 +7,5 @@ package com.arrival.utilities.interfaces;
  * @since: 1.0
  * Package: com.arrival.utilities.interfaces
  */
-public interface IFOptons {
+public interface IFConfig {
 }

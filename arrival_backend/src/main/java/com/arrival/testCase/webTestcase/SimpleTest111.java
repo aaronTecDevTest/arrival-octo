@@ -1,4 +1,4 @@
-package com.arrival.testCase.portalTestcase;
+package com.arrival.testCase.webTestcase;
 
 /**
  * @author: Aaron Kutekidila
@@ -17,10 +17,22 @@ public class SimpleTest111 extends ArrivalWeb {
     @Test(dataProvider = "driver", groups = {"fast"})
     public void aFastTest(String serverName, Integer id) {
         System.out.println("Fast test 202 " + serverName + " " + id);
+
+        openBrowser().get("http//www.google.com");
+
+        pauseTest(3000);
+
+        closeBrowser();
     }
 
     @Test(dataProvider = "driver", groups = {"slow"})
     public void aSlowTest(String serverName, Integer id) {
         System.out.println("Slow test 303 " + serverName + " " + id);
+
+        openBrowser().get("http//www.t-online.de");
+
+        pauseTest(3000);
+
+        closeBrowser();
     }
 }

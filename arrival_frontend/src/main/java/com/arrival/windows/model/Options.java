@@ -1,6 +1,6 @@
 package com.arrival.windows.model;
 
-import com.arrival.utilities.interfaces.IFOptons;
+import com.arrival.utilities.interfaces.IFConfig;
 
 /**
  * @author: Aaron Kutekidila
@@ -9,5 +9,5 @@ import com.arrival.utilities.interfaces.IFOptons;
  * @since: 1.0
  * Package: com.arrival.windows.model
  */
-public class Options implements IFOptons {
+public class Options implements IFConfig {
 }

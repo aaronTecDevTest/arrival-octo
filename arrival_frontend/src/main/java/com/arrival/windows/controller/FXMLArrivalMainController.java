@@ -366,7 +366,7 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpWebPortalTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
 
-        fileNameLoaderWeb = new FileNameLoader("/com/arrival/testCase/portalTestcase", ".class");
+        fileNameLoaderWeb = new FileNameLoader("/com/arrival/testCase/webTestcase", ".class");
         ArrayList<String> fileNames = fileNameLoaderWeb.getClassName();
         ArrayList<String> classPackage = fileNameLoaderWeb.getClassPackage();
 

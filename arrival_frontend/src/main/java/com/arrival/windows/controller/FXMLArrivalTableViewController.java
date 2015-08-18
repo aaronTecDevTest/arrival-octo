@@ -8,7 +8,10 @@ package com.arrival.windows.controller;
  * Package: com.arrival.windows.controller
  */
 
+import com.arrival.selenium.config.SeleniumConfig;
+import com.arrival.unit.generic.SeleniumConfigSingleton;
 import com.arrival.unit.suites.ArrivalTestSuite;
+import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.windows.model.Options;
 import com.arrival.windows.model.TestCase;
 import javafx.collections.FXCollections;
@@ -104,7 +107,11 @@ public class FXMLArrivalTableViewController implements Initializable {
 
     public void runTestSuite(){
         List<XmlClass> tempClasses = new ArrayList<>();
+        SeleniumConfigSingleton.getInstance().setTestSuiteConfiguration(optionsTestSuite);
         dateTestSuite = tbvTestsuite.getItems();
+
+        tempClasses.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
+
         for(int i=0; i<dateTestsuite.size();i++){
             tempClasses.add(new XmlClass(((TestCase) dateTestSuite.get(i)).getTcClassPackage()));
         }

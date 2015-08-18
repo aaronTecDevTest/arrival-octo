@@ -43,7 +43,6 @@ public class Hub {
      * osName.
      */
     public Hub() {
-        //log = LogManager.getLogger(Hub.class.getName());
         log.info("Creating SeleniumHb");
         gridHubConfig = new GridHubConfiguration();
         hubHost = "localhost";

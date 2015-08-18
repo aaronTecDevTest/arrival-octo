@@ -1,10 +1,14 @@
 package com.arrival.unit.generic;
 
+import com.arrival.selenium.SeleniumManager;
+import com.arrival.selenium.WebDriverManager;
+import com.arrival.selenium.config.SeleniumConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
@@ -21,10 +25,29 @@ import java.util.ArrayList;
 public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     private static final Logger log =  LogManager.getLogger(ArrivalWeb.class);
 
-    public static SeleniumConfigSingleton sleniumConfi = SeleniumConfigSingleton.getInstance();
+    public static SeleniumConfigSingleton seleniumConfigSingleton = SeleniumConfigSingleton.getInstance();
     public ArrayList<Object> seleniumServerList = new ArrayList<>();
 
-    /*
+    public SeleniumConfig seleniumConfig = seleniumConfigSingleton.getTestSuiteConfiguration();
+    public SeleniumManager seleniumManager;
+    private WebDriver browser;
+
+    public ArrivalWeb(){
+        seleniumManager = new SeleniumManager(seleniumConfig);
+        browser = seleniumManager.getBrowser(seleniumConfig);
+    }
+
+
+    public WebDriver openBrowser(){
+        browser = seleniumManager.getBrowser(seleniumConfig);
+        return browser;
+    }
+
+    public void closeBrowser(){
+        browser.close();
+    }
+
+    /**
      *Test NG method
      */
     @DataProvider(name = "driver" /*,parallel = true*/)
@@ -62,7 +85,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         }
     }
 
-    /*
+    /**
     *Other method
     */
     public void pauseTest(long milSec) {
@@ -128,7 +151,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
 
     }
 
-    /*
+    /**
      *Testcase Properties
      */
     public int getTcID() {
