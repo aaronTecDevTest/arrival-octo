@@ -81,7 +81,7 @@ public class FXMLArrivalTableViewController implements Initializable {
      */
     public void initialize(URL location, ResourceBundle resources) {
         bundle = resources;
-    //    iniBundleResources();
+        iniBundleResources();
 
         //Setup Tablecolmn Propertys
         tbcName.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));

@@ -55,7 +55,7 @@ public class FXMLArrivalOptionsController implements Initializable {
     @FXML
     private ToggleButton togOnOffParallel;
     @FXML
-    private ComboBox<String> cmbParallelRun;
+    private ComboBox<String> cmbMaxParallel;
 
 
     @FXML
@@ -75,13 +75,12 @@ public class FXMLArrivalOptionsController implements Initializable {
 
     private Options options;
 
-    ObservableList<String> platforms =
-            FXCollections.observableArrayList(
-                    "Option 1",
-                    "Option 2",
-                    "Option 3"
-            );
-
+    ObservableList<String> platform;
+    ObservableList<String> andTestingArt;
+    ObservableList<String> iosTestingArt;
+    ObservableList<String> maxParallel;
+    ObservableList<String> webBrowser;
+    ObservableList<String> webServer;
 
     /**
      * Called to initialize a controller after its root element has been
@@ -93,7 +92,20 @@ public class FXMLArrivalOptionsController implements Initializable {
      */
     public void initialize(URL location, ResourceBundle resources) {
         options = new Options();
-        cmbPlatform.getItems().addAll(platforms);
+
+        platform = FXCollections.observableArrayList( resources.getString("tab.general.platform"));
+        andTestingArt = FXCollections.observableArrayList(resources.getString("tab.and.testingArt"));
+        iosTestingArt = FXCollections.observableArrayList(resources.getString("tab.ios.testingArt"));
+        maxParallel = FXCollections.observableArrayList(resources.getString("tab.general.maxParallel"));
+        webBrowser = FXCollections.observableArrayList(resources.getString("tab.web.browser"));
+        webServer = FXCollections.observableArrayList(resources.getString("tab.web.server"));
+
+        cmbPlatform.getItems().addAll(platform);
+        cmbANDTestingArt.getItems().addAll(andTestingArt);
+        cmbIOSTestingArt.getItems().addAll(iosTestingArt);
+        cmbMaxParallel.getItems().addAll(maxParallel);
+        cmbWebServer.getItems().addAll(webServer);
+        cmbWebBrowser.getItems().addAll(webBrowser);
     }
     @FXML
     public void openDirectoryChooser(ActionEvent actionEvent){

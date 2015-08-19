@@ -32,7 +32,7 @@
                               <ComboBox fx:id="cmbPlatform" layoutX="240.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" />
                                   <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Testing Plattform:" textAlignment="LEFT" />
                               <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Parallel-Testing:" textAlignment="LEFT" />
-                              <ComboBox fx:id="cmbParallelRun" layoutX="347.0" layoutY="50.0" prefHeight="25.0" prefWidth="93.0" promptText="Max 10" />
+                              <ComboBox fx:id="cmbMaxParallel" layoutX="347.0" layoutY="50.0" prefHeight="25.0" prefWidth="93.0" promptText="Max 10" />
                               <ComboBox disable="true" layoutX="240.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
                               <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="25.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" visible="false" />
                               <ComboBox disable="true" layoutX="240.0" layoutY="130.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />

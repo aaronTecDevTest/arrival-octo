@@ -192,7 +192,7 @@ public class FXMLArrivalMainController implements Initializable {
         log.info(actionEvent.getSource());
 
         URL url = this.getClass().getResource("/fxml/FXMLArrivalTableView.fxml");
-        FXMLLoader loader = new FXMLLoader();
+        FXMLLoader loader = new FXMLLoader(null,bundle);
         TableView testSuiteTable =  loader.load(url.openStream());
         Tab tab = new Tab("", testSuiteTable);
         FXMLArrivalTableViewController controller = loader.getController();

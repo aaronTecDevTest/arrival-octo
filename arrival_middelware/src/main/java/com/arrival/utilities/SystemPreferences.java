@@ -3,6 +3,8 @@ package com.arrival.utilities;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Locale;
+
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0
@@ -15,11 +17,16 @@ public class SystemPreferences {
     private static SystemPreferences ourInstance = new SystemPreferences();
 
     private static String osName;
+    private static String osContry;
+    private static String osLanguege;
 
 
     public static SystemPreferences getInstance() {
         log.info(SystemPreferences.class + " is loaded!!");
-        osName = System.getProperty("os.Name");
+        osName = System.getenv("os.Name");
+        osContry = Locale.getDefault().getCountry();
+        osLanguege = Locale.getDefault().getLanguage();
+
         return ourInstance;
     }
 
@@ -40,5 +47,14 @@ public class SystemPreferences {
 
     public boolean isUnix(){
         return osName.contains("Unix");
+    }
+
+    @Override
+    public String toString(){
+        return osName + " " +osContry+ " "+ osLanguege;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(SystemPreferences.getInstance().toString());
     }
 }
