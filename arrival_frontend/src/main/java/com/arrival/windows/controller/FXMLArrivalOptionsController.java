@@ -9,6 +9,8 @@ package com.arrival.windows.controller;
  */
 
 import com.arrival.windows.model.Options;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -49,7 +51,7 @@ public class FXMLArrivalOptionsController implements Initializable {
     private TextField txtJsonConfigAND;
 
     @FXML
-    private ComboBox<String> cmbPlattform;
+    private ComboBox<String> cmbPlatform;
     @FXML
     private ToggleButton togOnOffParallel;
     @FXML
@@ -73,6 +75,12 @@ public class FXMLArrivalOptionsController implements Initializable {
 
     private Options options;
 
+    ObservableList<String> platforms =
+            FXCollections.observableArrayList(
+                    "Option 1",
+                    "Option 2",
+                    "Option 3"
+            );
 
 
     /**
@@ -85,7 +93,7 @@ public class FXMLArrivalOptionsController implements Initializable {
      */
     public void initialize(URL location, ResourceBundle resources) {
         options = new Options();
-
+        cmbPlatform.getItems().addAll(platforms);
     }
     @FXML
     public void openDirectoryChooser(ActionEvent actionEvent){
