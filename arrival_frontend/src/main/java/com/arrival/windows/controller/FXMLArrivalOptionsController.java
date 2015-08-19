@@ -8,9 +8,11 @@ package com.arrival.windows.controller;
  * Package: com.arrival.windows.controller
  */
 
+import com.arrival.windows.model.Options;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -64,6 +66,12 @@ public class FXMLArrivalOptionsController implements Initializable {
     @FXML
     private ComboBox<String> cmbANDTestingArt;
 
+    @FXML
+    private Button btnOK;
+    @FXML
+    private Button btnCancel;
+
+    private Options options;
 
 
 
@@ -76,10 +84,11 @@ public class FXMLArrivalOptionsController implements Initializable {
      * @param resources The resources used to localize the root object, or <tt>null</tt> if
      */
     public void initialize(URL location, ResourceBundle resources) {
+        options = new Options();
 
     }
     @FXML
-   public void openDirectoryChooser(ActionEvent actionEvent){
+    public void openDirectoryChooser(ActionEvent actionEvent){
     log.info(actionEvent.getSource());
         final DirectoryChooser directoryChooser = new DirectoryChooser();
         final File selectedDirectory = directoryChooser.showDialog(((Node) actionEvent.getSource()).getScene().getWindow());
@@ -93,5 +102,28 @@ public class FXMLArrivalOptionsController implements Initializable {
         }else {
 
         }
+    }
+
+    @FXML
+    public void saveConfigToTestsuite(ActionEvent actionEvent){
+        log.info(actionEvent.getSource());
+    }
+
+    @FXML
+    public void cancelOptionSetting(ActionEvent actionEvent){
+        log.info(actionEvent.getSource());
+        Scene tempScene = ((Node)actionEvent.getSource()).getScene();
+        ((Stage)tempScene.getWindow()).close();
+
+       // Stage tempStage = (Stage)btnCancel.getScene().getWindow();
+       // tempStage.close();
+    }
+
+    public Options getOptions() {
+        return options;
+    }
+
+    public void setOptions(Options options) {
+        this.options = options;
     }
 }

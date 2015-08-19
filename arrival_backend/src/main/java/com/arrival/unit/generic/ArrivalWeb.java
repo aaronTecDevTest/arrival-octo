@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
  */
 
 public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
-    private static final Logger log =  LogManager.getLogger(ArrivalWeb.class);
+    protected static final Logger log =  LogManager.getLogger(ArrivalWeb.class);
 
     public static SeleniumConfigSingleton seleniumConfigSingleton = SeleniumConfigSingleton.getInstance();
     public ArrayList<Object> seleniumServerList = new ArrayList<>();
@@ -31,12 +32,6 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     public SeleniumManager seleniumManager;
     private WebDriver browser;
 
-    public ArrivalWeb(){
-        //seleniumConfig ist noch nicht gesetzt
-        seleniumManager = new SeleniumManager();
-        //browser = seleniumManager.getBrowser(seleniumConfig);
-    }
-
 
     public WebDriver openBrowser(){
         seleniumManager.setSeleniumConfig(seleniumConfig);
@@ -44,14 +39,15 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         return browser;
     }
 
-    public void closeBrowser(){
-        browser.close();
+    public void closeBrowser(WebDriver driver){
+        driver.close();
+        driver.quit();
     }
 
     /**
      *Test NG method
      */
-    @DataProvider(name = "driver" /*,parallel = true*/)
+    @DataProvider(name = "driver" ,parallel = true)
     public Object[][] createServer() {
 
         Object[][] server;
@@ -76,12 +72,21 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
 
     @BeforeClass
     public void setUpTestClass() {
-        if (SeleniumConfigSingleton.getTestArt().equals("multi")) {
+        seleniumManager = new SeleniumManager();
+        if (SeleniumConfigSingleton.getTestArt().equals(SeleniumConfigSingleton.MULTI)) {
+            //Should be here for Appium and Selenium Grid config (Only Json config)
+            /*
+            seleniumManager.setSeleniumConfig(seleniumConfig);
+            browser = seleniumManager.getBrowser(seleniumConfig);
+            */
+
             seleniumServerList.add("android Test1");
             seleniumServerList.add("android Test2");
             seleniumServerList.add("ios Test1");
             seleniumServerList.add("ios Test2");
         } else {
+            seleniumManager.setSeleniumConfig(seleniumConfig);
+            browser = seleniumManager.getBrowser(seleniumConfig);
             seleniumServerList.add("android Default");
         }
     }
@@ -89,8 +94,13 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     /**
     *Other method
     */
-    public void pauseTest(long milSec) {
-
+    public void pauseTest(long milSeconds) {
+        try{
+            Thread.sleep(milSeconds);
+        }catch (Exception e) {
+            log.error(e.getStackTrace());
+            log.error("Test was not paused!!");
+        }
     }
 
     /*
@@ -99,7 +109,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
 
     @Override
     public void click() {
-
+        System.out.println("clicked");
     }
 
     @Override

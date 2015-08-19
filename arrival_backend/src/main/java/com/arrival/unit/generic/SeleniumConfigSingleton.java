@@ -7,8 +7,6 @@ import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import java.util.HashMap;
-
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0
@@ -20,14 +18,15 @@ import java.util.HashMap;
 public class SeleniumConfigSingleton {
     private static final Logger log =  LogManager.getLogger(SeleniumConfigSingleton.class);
 
-    private final static String single = "single";
-    private final static String multi = "multi";
+    public final static String SINGLE = "SINGLE";
+    public final static String MULTI = "MULTI";
+
     public static String testArt;
     private static SeleniumConfigSingleton ourInstance = new SeleniumConfigSingleton();
     private SeleniumConfig testSuiteConfiguration;
 
     private SeleniumConfigSingleton() {
-        testArt = single;
+        testArt = SINGLE;
         testSuiteConfiguration = null;
     }
 
@@ -49,7 +48,6 @@ public class SeleniumConfigSingleton {
     }
     public void setTestSuiteConfiguration(IFConfig testSuiteConfiguration) {
         this.testSuiteConfiguration = (SeleniumConfig)testSuiteConfiguration;
-        System.out.println("test");
     }
 
 
@@ -58,7 +56,7 @@ public class SeleniumConfigSingleton {
      */
     @BeforeSuite
     public void setUpAppiumConfig() {
-        setTestArt(SeleniumConfigSingleton.multi);
+        setTestArt(SeleniumConfigSingleton.MULTI);
     }
 
     /**

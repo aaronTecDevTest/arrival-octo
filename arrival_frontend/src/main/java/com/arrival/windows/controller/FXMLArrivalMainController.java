@@ -420,7 +420,7 @@ public class FXMLArrivalMainController implements Initializable {
     private Stage setUpOptionsView() {
         try {
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-            InputStream inputStream = classLoader.getResource("bundles/arrivalMain_de.properties").openStream();
+            InputStream inputStream = classLoader.getResource("bundles/arrivalOptions_de.properties").openStream();
             ResourceBundle bundle = new PropertyResourceBundle(inputStream);
 
             URL url = getClass().getResource("/fxml/FXMLArrivalOptions.fxml");

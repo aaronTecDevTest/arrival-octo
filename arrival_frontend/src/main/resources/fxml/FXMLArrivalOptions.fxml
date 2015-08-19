@@ -11,9 +11,9 @@
 
 <VBox stylesheets="@/css/arrivalOptions.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arrival.windows.controller.FXMLArrivalOptionsController">
     <children>
-        <ToolBar>
+        <ToolBar VBox.vgrow="NEVER">
             <items>
-                <Pane prefHeight="32.0" prefWidth="439.0" />
+                <Pane prefHeight="32.0" prefWidth="418.0" />
                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../icons/options.png" />
@@ -61,7 +61,7 @@
                               <ComboBox disable="true" layoutX="240.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
                               <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="25.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Test:" textAlignment="LEFT" visible="false" />
                               <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Json-Config-Files:" textAlignment="LEFT" />
-                              <TextField fx:id="txtJsonConfigWeb" layoutX="240.0" layoutY="130.0" prefHeight="25.0" prefWidth="175.0" promptText="Path" />
+                              <TextField fx:id="txtJsonConfigWeb" disable="true" editable="false" layoutX="240.0" layoutY="130.0" prefHeight="25.0" prefWidth="175.0" promptText="Path" />
                               <Button fx:id="btnJsonConfigWeb" layoutX="415.0" layoutY="130.0" mnemonicParsing="false" onAction="#openDirectoryChooser" prefHeight="25.0" prefWidth="22.0" text="Button" />
                            </children>
                         </Pane>
@@ -116,12 +116,12 @@
         <HBox layoutX="10.0" layoutY="320.0" prefHeight="37.0" prefWidth="500.0">
             <children>
                 <Pane prefWidth="70.0" HBox.hgrow="ALWAYS" />
-                <Button fx:id="bntOK" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="OK">
+                <Button fx:id="btnOK" mnemonicParsing="false" onAction="#saveConfigToTestsuite" prefHeight="25.0" prefWidth="143.0" text="OK">
                     <HBox.margin>
                         <Insets right="10.0" top="5.0" />
                     </HBox.margin>
                 </Button>
-                <Button fx:id="bntCancel" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Cancel">
+                <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#cancelOptionSetting" prefHeight="25.0" prefWidth="143.0" text="Cancel">
                     <HBox.margin>
                         <Insets left="10.0" top="5.0" />
                     </HBox.margin>

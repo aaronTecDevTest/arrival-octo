@@ -10,19 +10,27 @@ package com.arrival.testCase.webTestcase;
 
 
 import com.arrival.unit.generic.ArrivalWeb;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class SimpleTest111 extends ArrivalWeb {
 
     @Test(dataProvider = "driver", groups = {"fast"})
     public void aFastTest(String serverName, Integer id) {
-        System.out.println("Fast test 202 " + serverName + " " + id);
+        try{
+          System.out.println("Fast test 111 " + serverName + " " + id);
 
-        openBrowser().get("http://www.google.com");
+            WebDriver driver = openBrowser();
 
-        pauseTest(3000);
+            driver.get("http://www.google.com");
 
-        closeBrowser();
+            pauseTest(3000);
+
+            click();
+            closeBrowser(driver);
+        } catch (Exception e){
+            log.error(e.getStackTrace());
+        }
     }
 /*
     @Test(dataProvider = "driver", groups = {"slow"})

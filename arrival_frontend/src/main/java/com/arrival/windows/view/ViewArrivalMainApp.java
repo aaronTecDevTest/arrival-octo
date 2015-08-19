@@ -13,6 +13,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
@@ -36,7 +37,7 @@ public class ViewArrivalMainApp extends Application {
     public void start(Stage primaryStage) throws IOException {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
-
+        URL applicationIcon = getClass().getResource("/icons/appIcon.png");
         InputStream inputStream = classLoader.getResource("bundles/arrivalMain_de.properties").openStream();
         ResourceBundle bundle = new PropertyResourceBundle(inputStream);
 
@@ -48,6 +49,7 @@ public class ViewArrivalMainApp extends Application {
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("Main - ArrivalOcto");
+        primaryStage.getIcons().add(new Image(applicationIcon.toString()));
         primaryStage.show();
     }
 }
