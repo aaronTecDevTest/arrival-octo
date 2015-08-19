@@ -17,15 +17,17 @@ public class SystemPreferences {
     private static SystemPreferences ourInstance = new SystemPreferences();
 
     private static String osName;
-    private static String osContry;
-    private static String osLanguege;
+    private static String osCountry;
+    private static String osLanguage;
 
 
     public static SystemPreferences getInstance() {
         log.info(SystemPreferences.class + " is loaded!!");
-        osName = System.getenv("os.Name");
-        osContry = Locale.getDefault().getCountry();
-        osLanguege = Locale.getDefault().getLanguage();
+        //osName = System.getProperties().toString();
+        osName = System.getProperty("os.name");
+
+        osCountry = Locale.getDefault().getCountry();
+        osLanguage = Locale.getDefault().getLanguage();
 
         return ourInstance;
     }
@@ -51,7 +53,7 @@ public class SystemPreferences {
 
     @Override
     public String toString(){
-        return osName + " " +osContry+ " "+ osLanguege;
+        return osName + " " + osCountry + " "+ osLanguage;
     }
 
     public static void main(String[] args) {
