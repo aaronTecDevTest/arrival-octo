@@ -1,5 +1,6 @@
 package com.arrival.windows.controller;
 
+import com.arrival.utilities.SystemPreferences;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,9 +14,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
-import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
 
 /**
@@ -58,12 +57,12 @@ public class FXMLArrivalLogInController implements Initializable {
   public void clickLogIn(ActionEvent actionEvent) {
     lblFailLogIn.setVisible(!lblFailLogIn.isVisible());
     try {
-      ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+    /*  ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
       InputStream inputStream = classLoader.getResource("bundles/arrivalMain_de.properties").openStream();
-      ResourceBundle bundle = new PropertyResourceBundle(inputStream);
+      ResourceBundle bundle = new PropertyResourceBundle(inputStream);*/
 
       URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
-      FXMLLoader loader = new FXMLLoader(url, bundle);
+      FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalMain"));
 
       Parent root = loader.load();
       Scene mainAppScene = new Scene(root, 1300, 530);

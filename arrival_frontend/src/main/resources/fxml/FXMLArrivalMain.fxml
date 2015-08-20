@@ -11,39 +11,39 @@
     <children>
         <MenuBar VBox.vgrow="ALWAYS">
             <menus>
-                <Menu mnemonicParsing="false" text="\%menu.title.file">
+                <Menu fx:id="mnuFile" mnemonicParsing="false" text="\%menu.title.file">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.new" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.open" />
-                        <Menu mnemonicParsing="false" text="\%menu.title.open.recent" />
+                        <MenuItem fx:id="mnuNew" mnemonicParsing="false" text="\%menu.title.new" />
+                        <MenuItem fx:id="mnuOpen" mnemonicParsing="false" text="\%menu.title.open" />
+                        <Menu fx:id="mnuOpenRecent" mnemonicParsing="false" text="\%menu.title.open.recent" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.close" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.save" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.save.as" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.revert" />
+                        <MenuItem fx:id="mnuClose" mnemonicParsing="false" text="\%menu.title.close" />
+                        <MenuItem fx:id="mnuSave" mnemonicParsing="false" text="\%menu.title.save" />
+                        <MenuItem fx:id="mnuSaveAs" mnemonicParsing="false" text="\%menu.title.save.as" />
+                        <MenuItem fx:id="mnuRevert" mnemonicParsing="false" text="\%menu.title.revert" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.preferences" />
+                        <MenuItem fx:id="mnuPreferences" mnemonicParsing="false" text="\%menu.title.preferences" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.quit" />
+                        <MenuItem fx:id="mnuQuit" mnemonicParsing="false" text="\%menu.title.quit" />
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="\%menu.title.edit">
+                <Menu fx:id="mnuEdit" mnemonicParsing="false" text="\%menu.title.edit">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.undo" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.redo" />
+                        <MenuItem fx:id="mnuUndo" mnemonicParsing="false" text="\%menu.title.undo" />
+                        <MenuItem fx:id="mnuRedo" mnemonicParsing="false" text="\%menu.title.redo" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.cut" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.copy" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.paste" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.delete" />
+                        <MenuItem fx:id="mnuCut" mnemonicParsing="false" text="\%menu.title.cut" />
+                        <MenuItem fx:id="mnuCopy" mnemonicParsing="false" text="\%menu.title.copy" />
+                        <MenuItem fx:id="mnuPaste" mnemonicParsing="false" text="\%menu.title.paste" />
+                        <MenuItem fx:id="mnuDelete" mnemonicParsing="false" text="\%menu.title.delete" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.select.all" />
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.unselect.all" />
+                        <MenuItem fx:id="mnuSelectAll" mnemonicParsing="false" text="\%menu.title.select.all" />
+                        <MenuItem fx:id="mnuUnselectAll" mnemonicParsing="false" text="\%menu.title.unselect.all" />
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="\%menu.title.help">
+                <Menu fx:id="mnuHelp" mnemonicParsing="false" text="\%menu.title.help">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="\%menu.title.about" />
+                        <MenuItem fx:id="mnuAbout" mnemonicParsing="false" text="\%menu.title.about" />
                     </items>
                 </Menu>
             </menus>
@@ -160,7 +160,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="btnCreateTestsuite" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#createNewTestsuite" prefHeight="34.0" prefWidth="34.0">
+                        <Button fx:id="btnNewTestsuite" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#createNewTestsuite" prefHeight="34.0" prefWidth="34.0">
                             <padding>
                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                             </padding>

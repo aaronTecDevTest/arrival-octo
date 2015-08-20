@@ -8,6 +8,7 @@ package com.arrival.windows.controller;
  * Package: com.arrival.windows.controller
  */
 import com.arrival.utilities.FileNameLoader;
+import com.arrival.utilities.SystemPreferences;
 import com.arrival.windows.model.TestCase;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -30,7 +31,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
-import java.io.InputStream;
 
 import java.net.URL;
 import java.util.*;
@@ -56,6 +56,51 @@ public class FXMLArrivalMainController implements Initializable {
      */
     private ResourceBundle bundle;
 
+
+    @FXML
+    private Menu mnuFile;
+    @FXML
+    private Menu mnuEdit;
+    @FXML
+    private Menu mnuHelp;
+    @FXML
+    private Menu mnuOpenRecent;
+    @FXML
+    private MenuItem mnuAbout;
+    @FXML
+    private MenuItem mnuClose;
+    @FXML
+    private MenuItem mnuCopy;
+    @FXML
+    private MenuItem mnuCut;
+    @FXML
+    private MenuItem mnuDelete;
+    @FXML
+    private MenuItem mnuOpen;
+    @FXML
+    private MenuItem mnuPaste;
+    @FXML
+    private MenuItem mnuPreferences;
+    @FXML
+    private MenuItem mnuQuit;
+    @FXML
+    private MenuItem mnuRedo;
+    @FXML
+    private MenuItem mnuRevert;
+    @FXML
+    private MenuItem mnuSave;
+    @FXML
+    private MenuItem mnuSaveAs;
+    @FXML
+    private MenuItem mnuSelectAll;
+    @FXML
+    private MenuItem mnuNew;
+    @FXML
+    private MenuItem mnuUndo;
+    @FXML
+    private MenuItem mnuUnselectAll;
+
+
     @FXML
     private Label lblSearchField;
     @FXML
@@ -67,7 +112,7 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private Button btnAddTestcase;
     @FXML
-    private Button btnCreateTestsuite;
+    private Button btnNewTestsuite;
     @FXML
     private Button btnDeletedTestcase;
     @FXML
@@ -91,10 +136,12 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private Button btnStop;
 
+
     @FXML
     private TabPane tabMainTabPane;
     @FXML
     private Accordion accTestCase;
+
 
     @FXML
     private TableView<TestCase> tbvIOS;
@@ -103,12 +150,14 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private TableView<TestCase> tbvWebPortal;
 
+
     @FXML
     private TableColumn<TestCase, String> tbcIOS;
     @FXML
     private TableColumn<TestCase, String> tbcAndroid;
     @FXML
     private TableColumn<TestCase, String> tbcWebPortal;
+
 
     @FXML
     private FXMLArrivalTableViewController tbvTestsuiteController;
@@ -317,22 +366,47 @@ public class FXMLArrivalMainController implements Initializable {
      */
     private void iniBundleResources() {
         lblSearchField.setText(bundle.getString("label.search"));
-        lblStatusLeft.setText(bundle.getString("label.search"));
-        lblStatusRight.setText(bundle.getString("label.search"));
+        lblStatusLeft.setText(bundle.getString("label.text.left.status"));
+        lblStatusRight.setText(bundle.getString("label.text.right.status"));
 
-        btnAddTestcase.getTooltip().setText(bundle.getString("label.search"));
-        btnCreateTestsuite.getTooltip().setText(bundle.getString("label.search"));
-        btnDeletedTestcase.getTooltip().setText(bundle.getString("label.search"));
-        btnDeletedTestsuite.getTooltip().setText(bundle.getString("label.search"));
-        btnHelp.getTooltip().setText(bundle.getString("label.search"));
-        btnOpenTestsuite.getTooltip().setText(bundle.getString("label.search"));
-        btnOptions.getTooltip().setText(bundle.getString("label.search"));
-        btnPause.getTooltip().setText(bundle.getString("label.search"));
-        btnResult.getTooltip().setText(bundle.getString("label.search"));
-        btnSaveTestsuite.getTooltip().setText(bundle.getString("label.search"));
-        btnSkip.getTooltip().setText(bundle.getString("label.search"));
-        btnStop.getTooltip().setText(bundle.getString("label.search"));
-        btnRun.getTooltip().setText(bundle.getString("label.search"));
+        btnAddTestcase.getTooltip().setText(bundle.getString("tooltip.add.testcase"));
+        btnDeletedTestcase.getTooltip().setText(bundle.getString("tooltip.deleted.testcase"));
+
+        btnNewTestsuite.getTooltip().setText(bundle.getString("tooltip.new.testsuite"));
+        btnDeletedTestsuite.getTooltip().setText(bundle.getString("tooltip.deleted.testsuite"));
+
+        btnHelp.getTooltip().setText(bundle.getString("tooltip.help"));
+        btnOpenTestsuite.getTooltip().setText(bundle.getString("tooltip.open"));
+        btnOptions.getTooltip().setText(bundle.getString("tooltip.options"));
+        btnPause.getTooltip().setText(bundle.getString("tooltip.pause"));
+        btnResult.getTooltip().setText(bundle.getString("tooltip.result"));
+        btnSaveTestsuite.getTooltip().setText(bundle.getString("tooltip.save"));
+        btnSkip.getTooltip().setText(bundle.getString("tooltip.skip"));
+        btnStop.getTooltip().setText(bundle.getString("tooltip.stop"));
+        btnRun.getTooltip().setText(bundle.getString("tooltip.run"));
+
+
+        mnuFile.setText(bundle.getString("menu.title.file"));
+        mnuEdit.setText(bundle.getString("menu.title.edit"));
+        mnuHelp.setText(bundle.getString("menu.title.help"));
+        mnuOpenRecent.setText(bundle.getString("menu.title.open.recent"));
+        mnuNew.setText(bundle.getString("menu.title.new"));
+        mnuAbout.setText(bundle.getString("menu.title.about"));
+        mnuClose.setText(bundle.getString("menu.title.close"));
+        mnuCopy.setText(bundle.getString("menu.title.copy"));
+        mnuPaste.setText(bundle.getString("menu.title.paste"));
+        mnuDelete.setText(bundle.getString("menu.title.delete"));
+        mnuCut.setText(bundle.getString("menu.title.cut"));
+        mnuOpen.setText(bundle.getString("menu.title.open"));
+        mnuPreferences.setText(bundle.getString("menu.title.preferences"));
+        mnuQuit.setText(bundle.getString("menu.title.quit"));
+        mnuRedo.setText(bundle.getString("menu.title.redo"));
+        mnuSave.setText(bundle.getString("menu.title.save"));
+        mnuSaveAs.setText(bundle.getString("menu.title.save.as"));
+        mnuSelectAll.setText(bundle.getString("menu.title.select.all"));
+        mnuUndo.setText(bundle.getString("menu.title.undo"));
+        mnuUnselectAll.setText(bundle.getString("menu.title.unselect.all"));
+        mnuRevert.setText(bundle.getString("menu.title.revert"));
     }
 
     /**
@@ -419,12 +493,8 @@ public class FXMLArrivalMainController implements Initializable {
 
     private Stage setUpOptionsView() {
         try {
-            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-            InputStream inputStream = classLoader.getResource("bundles/arrivalOptions_de.properties").openStream();
-            ResourceBundle bundle = new PropertyResourceBundle(inputStream);
-
             URL url = getClass().getResource("/fxml/FXMLArrivalOptions.fxml");
-            FXMLLoader loader = new FXMLLoader(url, bundle);
+            FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalOptions"));
 
             Parent root = loader.load();
             Scene optionsScene = new Scene(root, 460, 265);

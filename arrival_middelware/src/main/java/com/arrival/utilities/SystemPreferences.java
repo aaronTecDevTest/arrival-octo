@@ -3,7 +3,10 @@ package com.arrival.utilities;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.InputStream;
 import java.util.Locale;
+import java.util.PropertyResourceBundle;
+import java.util.ResourceBundle;
 
 /**
  * @author: Aaron Kutekidila
@@ -21,18 +24,25 @@ public class SystemPreferences {
     private static String osLanguage;
 
 
+    private static ResourceBundle bundleHelp;
+    private static ResourceBundle bundleLogIn;
+    private static ResourceBundle bundleMain;
+    private static ResourceBundle bundleOptions;
+
     public static SystemPreferences getInstance() {
+        return ourInstance;
+    }
+
+
+
+    private SystemPreferences() {
         log.info(SystemPreferences.class + " is loaded!!");
-        //osName = System.getProperties().toString();
         osName = System.getProperty("os.name");
 
         osCountry = Locale.getDefault().getCountry();
         osLanguage = Locale.getDefault().getLanguage();
 
-        return ourInstance;
-    }
-
-    private SystemPreferences() {
+        setUpResourceBundle();
     }
 
     public boolean isMacOS(){
@@ -51,12 +61,88 @@ public class SystemPreferences {
         return osName.contains("Unix");
     }
 
+
+    public static Logger getLog() {
+        return log;
+    }
+
+    public static SystemPreferences getOurInstance() {
+        return ourInstance;
+    }
+
+    public static void setOurInstance(SystemPreferences ourInstance) {
+        SystemPreferences.ourInstance = ourInstance;
+    }
+
+    public static String getOsName() {
+        return osName;
+    }
+
+    public static void setOsName(String osName) {
+        SystemPreferences.osName = osName;
+    }
+
+    public static String getOsCountry() {
+        return osCountry;
+    }
+
+    public static void setOsCountry(String osCountry) {
+        SystemPreferences.osCountry = osCountry;
+    }
+
+    public static String getOsLanguage() {
+        return osLanguage;
+    }
+
+    private static void setUpResourceBundle(){
+        try {
+            bundleHelp  = loadBundle("bundles/arrivalHelp_de.properties");
+            bundleLogIn = loadBundle("bundles/arrivalLogIn_de.properties");
+            bundleMain = loadBundle("bundles/arrivalMain_de.properties");
+            bundleOptions = loadBundle("bundles/arrivalOptions_de.properties");
+
+        } catch (Exception e){
+            log.error(e.getStackTrace());
+        }
+    }
+
+    private static ResourceBundle loadBundle (String url) throws Exception{
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        InputStream inputStream = classLoader.getResource(url).openStream();
+        ResourceBundle tempBundle = new PropertyResourceBundle(inputStream);
+        return tempBundle;
+        //return ResourceBundle.getBundle(url);
+    }
+
+    public static ResourceBundle getResourceBundle(String bundleName){
+
+        switch (bundleName) {
+            case "arrivalHelp":
+                return bundleHelp;
+            case "arrivalLogIn":
+                return bundleLogIn;
+            case "arrivalMain":
+                return bundleMain;
+            case "arrivalOptions":
+                return bundleOptions;
+            default:
+                return null;
+        }
+    }
+
+    public static void setOsLanguage(String osLanguage) {
+        SystemPreferences.osLanguage = osLanguage;
+        setUpResourceBundle();
+    }
+
+
     @Override
     public String toString(){
         return osName + " " + osCountry + " "+ osLanguage;
     }
 
     public static void main(String[] args) {
+        SystemPreferences.getInstance();
         System.out.println(SystemPreferences.getInstance().toString());
     }
 }

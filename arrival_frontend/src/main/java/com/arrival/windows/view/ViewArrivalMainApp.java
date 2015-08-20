@@ -8,23 +8,19 @@ package com.arrival.windows.view;
  * Package: com.arrival.windows.view
  */
 
-import com.arrival.windows.controller.FXMLArrivalTableViewController;
+import com.arrival.utilities.SystemPreferences;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.transform.Rotate;
+
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.swing.text.TableView;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
-import java.util.PropertyResourceBundle;
-import java.util.ResourceBundle;
 
 
 /**
@@ -35,14 +31,12 @@ public class ViewArrivalMainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        log.info("Start MainApp!!");
+        SystemPreferences.getInstance();
+
         URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
         URL applicationIcon = getClass().getResource("/icons/appIcon.png");
-        InputStream inputStream = classLoader.getResource("bundles/arrivalMain_de.properties").openStream();
-        ResourceBundle bundle = new PropertyResourceBundle(inputStream);
-
-        FXMLLoader loader = new FXMLLoader();
-        Parent root = FXMLLoader.load(url, bundle);
+        Parent root = FXMLLoader.load(url, SystemPreferences.getResourceBundle("arrivalMain"));
 
         Scene scene = new Scene(root, 1300, 530);
         scene.getStylesheets().add("/css/arrivalMain.css");

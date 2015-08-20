@@ -8,6 +8,7 @@ package com.arrival.windows.view;
  * Package: com.arrival.windows.view
  */
 
+import com.arrival.utilities.SystemPreferences;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -26,18 +27,20 @@ import java.net.URL;
  * functions.
  **/
 public class ViewArrivalLogIn extends Application {
-    private static final Logger log =  LogManager.getLogger(ViewArrivalLogIn.class);
-    public FXMLLoader loader;
-    public Parent root;
-    public URL url;
-    public URL applicationIcon;
+    private static final Logger log = LogManager.getLogger(ViewArrivalLogIn.class);
+    private FXMLLoader loader;
+    private Parent root;
+    private URL url;
+    private URL applicationIcon;
+
 
     @Override
     public void start(Stage primaryStage) throws IOException {
         log.info("Start App with LogIn");
+        SystemPreferences.getInstance();
         url = getClass().getResource("/fxml/FXMLArrivalLogIn.fxml");
         applicationIcon = getClass().getResource("/icons/appIcon.png");
-        loader = new FXMLLoader(url);
+        loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalLogIn"));
         root = loader.load();
 
         Scene scene = new Scene(root, 400, 300);

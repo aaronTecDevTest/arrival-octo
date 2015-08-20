@@ -1,5 +1,6 @@
 package com.arrival.main;
 
+import com.arrival.utilities.SystemPreferences;
 import com.arrival.windows.view.ViewArrivalLogIn;
 
 /**
@@ -13,6 +14,7 @@ public class RunArrivalOcto {
     public ViewArrivalLogIn viewLogIn;
 
     public static void main(String[] args) {
+        SystemPreferences.getInstance();
         RunArrivalOcto app = new RunArrivalOcto();
         app.runLogIn();
     }
