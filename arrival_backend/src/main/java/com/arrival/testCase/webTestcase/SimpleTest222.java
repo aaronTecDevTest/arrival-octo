@@ -17,7 +17,7 @@ public class SimpleTest222 extends ArrivalWeb {
 
     @Test(dataProvider = "driver", groups = {"fast"})
     public void aFastTest(String serverName, Integer id) {
-        try{
+        try {
             System.out.println("Fast test 222 " + serverName + " " + id);
 
             WebDriver driver = openBrowser();
@@ -28,7 +28,7 @@ public class SimpleTest222 extends ArrivalWeb {
 
             click();
             closeBrowser(driver);
-        } catch (Exception e){
+        } catch (Exception e) {
             log.error(e.getStackTrace());
         }
     }

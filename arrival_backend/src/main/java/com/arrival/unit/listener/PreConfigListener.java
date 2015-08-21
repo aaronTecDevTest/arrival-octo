@@ -13,7 +13,7 @@ import org.testng.IExecutionListener;
  */
 
 public class PreConfigListener implements IExecutionListener {
-    private static final Logger log =  LogManager.getLogger(PreConfigListener.class);
+    private static final Logger log = LogManager.getLogger(PreConfigListener.class);
     private long startTime;
 
     public long getStartTime() {

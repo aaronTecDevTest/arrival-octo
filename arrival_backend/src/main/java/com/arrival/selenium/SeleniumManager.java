@@ -17,12 +17,12 @@ public class SeleniumManager {
     private static final Logger log = LogManager.getLogger(SeleniumManager.class);
     private HashMap<String, SeleniumConfig> seleniumConfigs;
 
-    public SeleniumManager(){
+    public SeleniumManager() {
         seleniumConfigs = new HashMap<>();
     }
 
-    public  SeleniumManager(SeleniumConfig seleniumConfig){
-        seleniumConfigs.put(seleniumConfig.getClass().toString(),seleniumConfig);
+    public SeleniumManager(SeleniumConfig seleniumConfig) {
+        seleniumConfigs.put(seleniumConfig.getClass().toString(), seleniumConfig);
     }
 
     public void setUpConfgi(String testSuiteName) {
@@ -37,6 +37,6 @@ public class SeleniumManager {
     }
 
     public void setSeleniumConfig(SeleniumConfig seleniumConfig) {
-        this. seleniumConfigs.put("seleniumConfig.getClass().toString()",seleniumConfig);
+        this.seleniumConfigs.put("seleniumConfig.getClass().toString()", seleniumConfig);
     }
 }

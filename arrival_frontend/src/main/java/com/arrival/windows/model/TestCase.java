@@ -25,9 +25,8 @@ public class TestCase implements IFTestCase {
     private SimpleStringProperty tcClassPackage;
 
 
-
     public TestCase() {
-        this(0, "", "", "", "", "", "","");
+        this(0, "", "", "", "", "", "", "");
     }
 
     public TestCase(Integer id, String tcName, String tcDescription, String tcResult, String tcDuration, String tcLastRun, String tcLink, String tcClassPackage) {
@@ -56,13 +55,13 @@ public class TestCase implements IFTestCase {
         return tcName.get();
     }
 
+    public void setTcName(String tcName) {
+        this.tcName.set(tcName);
+    }
+
     @Override
     public SimpleStringProperty tcNameProperty() {
         return tcName;
-    }
-
-    public void setTcName(String tcName) {
-        this.tcName.set(tcName);
     }
 
     @Override
@@ -70,13 +69,13 @@ public class TestCase implements IFTestCase {
         return tcID.get();
     }
 
+    public void setTcID(int tcID) {
+        this.tcID.set(tcID);
+    }
+
     @Override
     public SimpleIntegerProperty tcIDProperty() {
         return tcID;
-    }
-
-    public void setTcID(int tcID) {
-        this.tcID.set(tcID);
     }
 
     @Override
@@ -84,13 +83,13 @@ public class TestCase implements IFTestCase {
         return tcDescription.get();
     }
 
+    public void setTcDescription(String tcDescription) {
+        this.tcDescription.set(tcDescription);
+    }
+
     @Override
     public SimpleStringProperty tcDescriptionProperty() {
         return tcDescription;
-    }
-
-    public void setTcDescription(String tcDescription) {
-        this.tcDescription.set(tcDescription);
     }
 
     @Override
@@ -98,13 +97,13 @@ public class TestCase implements IFTestCase {
         return tcDuration.get();
     }
 
+    public void setTcDuration(String tcDuration) {
+        this.tcDuration.set(tcDuration);
+    }
+
     @Override
     public SimpleStringProperty tcDurationProperty() {
         return tcDuration;
-    }
-
-    public void setTcDuration(String tcDuration) {
-        this.tcDuration.set(tcDuration);
     }
 
     @Override
@@ -112,13 +111,13 @@ public class TestCase implements IFTestCase {
         return tcLastRun.get();
     }
 
+    public void setTcLastRun(String tcLastRun) {
+        this.tcLastRun.set(tcLastRun);
+    }
+
     @Override
     public SimpleStringProperty tcLastRunProperty() {
         return tcLastRun;
-    }
-
-    public void setTcLastRun(String tcLastRun) {
-        this.tcLastRun.set(tcLastRun);
     }
 
     @Override
@@ -126,13 +125,13 @@ public class TestCase implements IFTestCase {
         return tcResult.get();
     }
 
+    public void setTcResult(String tcResult) {
+        this.tcResult.set(tcResult);
+    }
+
     @Override
     public SimpleStringProperty tcResultProperty() {
         return tcResult;
-    }
-
-    public void setTcResult(String tcResult) {
-        this.tcResult.set(tcResult);
     }
 
     @Override
@@ -140,25 +139,25 @@ public class TestCase implements IFTestCase {
         return tcLink.get();
     }
 
+    public void setTcLink(String tcLink) {
+        this.tcLink.set(tcLink);
+    }
+
     @Override
     public SimpleStringProperty tcLinkProperty() {
         return tcLink;
-    }
-
-    public void setTcLink(String tcLink) {
-        this.tcLink.set(tcLink);
     }
 
     public String getTcClassPackage() {
         return tcClassPackage.get();
     }
 
-    public SimpleStringProperty tcClassPackageProperty() {
-        return tcClassPackage;
-    }
-
     public void setTcClassPackage(String tcClassPackage) {
         this.tcClassPackage.set(tcClassPackage);
+    }
+
+    public SimpleStringProperty tcClassPackageProperty() {
+        return tcClassPackage;
     }
 }
 

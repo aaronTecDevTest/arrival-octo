@@ -25,39 +25,32 @@ import java.util.List;
  */
 
 public class ArrivalTestSuite {
-    private static final Logger log =  LogManager.getLogger(ArrivalTestSuite.class);
+    private static final Logger log = LogManager.getLogger(ArrivalTestSuite.class);
     /**
-        @param appiumManager: Mange the configuration and server properties to run testcase other
-                            IOS and Android devices or simulation.
+     * @param suiteID:  Counter to create different TestNG-Suite-Name
+     */
+    private static int suiteID = 0;
+    /**
+     * @param appiumManager: Mange the configuration and server properties to run testcase other
+     * IOS and Android devices or simulation.
      */
     private Object appiumManager;
-
     /**
-       @param seleniumManager: Manage the configuration and server properties to run testcase other
-                             Firefox, Chrome and IE driver.
+     * @param seleniumManager: Manage the configuration and server properties to run testcase other
+     * Firefox, Chrome and IE driver.
      */
     private Object seleniumManger;
-
     /**
-        TestNG properties
+     * TestNG properties
      */
     private TestNG tng = new TestNG();
     private List<XmlClass> classes = new ArrayList<>();
-
     private XmlSuite suite = new XmlSuite();
     private List<XmlSuite> suites = new ArrayList<>();
-
     private XmlTest xmlTest = new XmlTest(suite);
-
     private EmailListener eml;
     private PreConfigListener pcl;
-
     private String path;
-
-    /**
-        @param suiteID:  Counter to create different TestNG-Suite-Name
-     */
-    private static int suiteID = 0;
 
     public ArrivalTestSuite() {
 
@@ -139,18 +132,18 @@ public class ArrivalTestSuite {
         xmlTest.setName(name);
     }
 
-    public void setTngName(String name){
+    public void setTngName(String name) {
         tng.setDefaultSuiteName(name);
     }
 
-    public void setPath(String path){
-        this.path = path;
-    }
-
-    public  String getPath() {
+    public String getPath() {
         String path;
         path = this.getClass().getPackage().getName();
         System.out.println(path);
         return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 }

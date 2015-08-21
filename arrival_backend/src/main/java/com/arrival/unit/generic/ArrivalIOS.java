@@ -19,7 +19,7 @@ import java.util.ArrayList;
  */
 
 public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
-    private static final Logger log =  LogManager.getLogger(ArrivalIOS.class);
+    private static final Logger log = LogManager.getLogger(ArrivalIOS.class);
     public static AppiumConfigSingleton appiumConfi = AppiumConfigSingleton.getInstance();
     public ArrayList<Object> appiumServerList = new ArrayList<>();
 

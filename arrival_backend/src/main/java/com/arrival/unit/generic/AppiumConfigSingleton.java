@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeSuite;
  */
 
 public class AppiumConfigSingleton {
-    private static final Logger log =  LogManager.getLogger(AppiumConfigSingleton.class);
+    private static final Logger log = LogManager.getLogger(AppiumConfigSingleton.class);
     private final static String single = "single";
     private final static String multi = "multi";
     public static String testArt;

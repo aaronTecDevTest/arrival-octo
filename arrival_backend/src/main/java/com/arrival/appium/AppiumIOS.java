@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 
 
 public class AppiumIOS implements IFAppiumServer {
-    private static final Logger log =  LogManager.getLogger(AppiumIOS.class);
+    private static final Logger log = LogManager.getLogger(AppiumIOS.class);
 
     /**
      * This functions start a current Server over commando line.

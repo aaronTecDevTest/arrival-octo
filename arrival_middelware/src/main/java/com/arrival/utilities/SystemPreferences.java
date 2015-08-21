@@ -29,12 +29,6 @@ public class SystemPreferences {
     private static ResourceBundle bundleMain;
     private static ResourceBundle bundleOptions;
 
-    public static SystemPreferences getInstance() {
-        return ourInstance;
-    }
-
-
-
     private SystemPreferences() {
         log.info(SystemPreferences.class + " is loaded!!");
         osName = System.getProperty("os.name");
@@ -45,22 +39,9 @@ public class SystemPreferences {
         setUpResourceBundle();
     }
 
-    public boolean isMacOS(){
-        return osName.contains("Mac OS X");
+    public static SystemPreferences getInstance() {
+        return ourInstance;
     }
-
-    public boolean isWindows(){
-        return osName.contains("Windows");
-    }
-
-    public boolean isLinux(){
-        return osName.contains("Linux");
-    }
-
-    public boolean isUnix(){
-        return osName.contains("Unix");
-    }
-
 
     public static Logger getLog() {
         return log;
@@ -94,19 +75,24 @@ public class SystemPreferences {
         return osLanguage;
     }
 
-    private static void setUpResourceBundle(){
+    public static void setOsLanguage(String osLanguage) {
+        SystemPreferences.osLanguage = osLanguage;
+        setUpResourceBundle();
+    }
+
+    private static void setUpResourceBundle() {
         try {
-            bundleHelp  = loadBundle("bundles/arrivalHelp_de.properties");
+            bundleHelp = loadBundle("bundles/arrivalHelp_de.properties");
             bundleLogIn = loadBundle("bundles/arrivalLogIn_de.properties");
             bundleMain = loadBundle("bundles/arrivalMain_de.properties");
             bundleOptions = loadBundle("bundles/arrivalOptions_de.properties");
 
-        } catch (Exception e){
+        } catch (Exception e) {
             log.error(e.getStackTrace());
         }
     }
 
-    private static ResourceBundle loadBundle (String url) throws Exception{
+    private static ResourceBundle loadBundle(String url) throws Exception {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         InputStream inputStream = classLoader.getResource(url).openStream();
         ResourceBundle tempBundle = new PropertyResourceBundle(inputStream);
@@ -114,7 +100,7 @@ public class SystemPreferences {
         //return ResourceBundle.getBundle(url);
     }
 
-    public static ResourceBundle getResourceBundle(String bundleName){
+    public static ResourceBundle getResourceBundle(String bundleName) {
 
         switch (bundleName) {
             case "arrivalHelp":
@@ -130,19 +116,28 @@ public class SystemPreferences {
         }
     }
 
-    public static void setOsLanguage(String osLanguage) {
-        SystemPreferences.osLanguage = osLanguage;
-        setUpResourceBundle();
+    public boolean isMacOS() {
+        return osName.contains("Mac OS X");
     }
 
+    public boolean isWindows() {
+        return osName.contains("Windows");
+    }
+
+    public boolean isLinux() {
+        return osName.contains("Linux");
+    }
+
+    public boolean isUnix() {
+        return osName.contains("Unix");
+    }
 
     @Override
-    public String toString(){
-        return osName + " " + osCountry + " "+ osLanguage;
-    }
-
+    public String toString() {
+        return osName + " " + osCountry + " " + osLanguage;
+    }/*
     public static void main(String[] args) {
         SystemPreferences.getInstance();
         System.out.println(SystemPreferences.getInstance().toString());
-    }
+    }*/
 }

@@ -13,7 +13,8 @@ import org.testng.IExecutionListener;
  */
 
 public class EmailListener implements IExecutionListener {
-    private static final Logger log =  LogManager.getLogger(EmailListener.class);
+    private static final Logger log = LogManager.getLogger(EmailListener.class);
+
     @Override
     public void onExecutionStart() {
         log.info("Notify by mail that TestNG is going to start");

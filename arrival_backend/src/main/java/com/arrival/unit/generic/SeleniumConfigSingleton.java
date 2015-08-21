@@ -16,11 +16,9 @@ import org.testng.annotations.BeforeSuite;
  */
 
 public class SeleniumConfigSingleton {
-    private static final Logger log =  LogManager.getLogger(SeleniumConfigSingleton.class);
-
     public final static String SINGLE = "SINGLE";
     public final static String MULTI = "MULTI";
-
+    private static final Logger log = LogManager.getLogger(SeleniumConfigSingleton.class);
     public static String testArt;
     private static SeleniumConfigSingleton ourInstance = new SeleniumConfigSingleton();
     private SeleniumConfig testSuiteConfiguration;
@@ -46,8 +44,9 @@ public class SeleniumConfigSingleton {
     public SeleniumConfig getTestSuiteConfiguration() {
         return testSuiteConfiguration;
     }
+
     public void setTestSuiteConfiguration(IFConfig testSuiteConfiguration) {
-        this.testSuiteConfiguration = (SeleniumConfig)testSuiteConfiguration;
+      //  this.testSuiteConfiguration = (SeleniumConfig) testSuiteConfiguration;
     }
 
 

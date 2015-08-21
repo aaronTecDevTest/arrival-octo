@@ -13,7 +13,7 @@
     <children>
         <ToolBar VBox.vgrow="NEVER">
             <items>
-                <Pane prefHeight="32.0" prefWidth="418.0" />
+                <Pane prefHeight="32.0" prefWidth="433.0" />
                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../icons/options.png" />
@@ -21,98 +21,102 @@
                 </ImageView>
             </items>
         </ToolBar>
-      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab fx:id="tabGeneral" text="General">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Pane prefHeight="170.0" prefWidth="462.0">
-                           <children>
-                              <ComboBox fx:id="cmbPlatform" layoutX="240.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" />
-                                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Testing Plattform:" textAlignment="LEFT" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Parallel-Testing:" textAlignment="LEFT" />
-                              <ComboBox fx:id="cmbMaxParallel" layoutX="347.0" layoutY="50.0" prefHeight="25.0" prefWidth="93.0" promptText="Max 10" />
-                              <ComboBox disable="true" layoutX="240.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="25.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" visible="false" />
-                              <ComboBox disable="true" layoutX="240.0" layoutY="130.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="25.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" visible="false" />
-                              <ToggleButton fx:id="togOnOffParallel" layoutX="240.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Off">
-                                 <toggleGroup>
-                                    <ToggleGroup fx:id="On" />
-                                 </toggleGroup>
-                              </ToggleButton>
-                           </children>
-                        </Pane>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-          <Tab fx:id="tabWebConfig" text="Web-Portal-Config">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Pane prefHeight="170.0" prefWidth="462.0">
-                           <children>
-                              <ComboBox fx:id="cmbWebBrowser" layoutX="240.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Browser:" textAlignment="LEFT" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Server:" textAlignment="LEFT" />
-                              <ComboBox fx:id="cmbWebServer" layoutX="240.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" />
-                              <ComboBox disable="true" layoutX="240.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="25.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Test:" textAlignment="LEFT" visible="false" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Json-Config-Files:" textAlignment="LEFT" />
-                              <TextField fx:id="txtJsonConfigWeb" disable="true" editable="false" layoutX="240.0" layoutY="130.0" prefHeight="25.0" prefWidth="175.0" promptText="Path" />
-                              <Button fx:id="btnJsonConfigWeb" layoutX="415.0" layoutY="130.0" mnemonicParsing="false" onAction="#openDirectoryChooser" prefHeight="25.0" prefWidth="22.0" text="Button" />
-                           </children>
-                        </Pane>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-            <Tab fx:id="tabIOSConfig" text="IOS-Config">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Pane prefHeight="170.0" prefWidth="462.0">
-                           <children>
-                              <ComboBox fx:id="cmbIOSTestingArt" layoutX="240.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Testing-Art:" textAlignment="LEFT" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="25.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" visible="false" />
-                              <ComboBox disable="true" layoutX="240.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
-                              <ComboBox disable="true" layoutX="240.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="25.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" visible="false" />
-                              <Button fx:id="btnJsonConfigIOS" layoutX="415.0" layoutY="130.0" mnemonicParsing="false" onAction="#openDirectoryChooser" prefHeight="25.0" prefWidth="24.0" text="Button" />
-                              <TextField fx:id="txtJsonConfigIOS" disable="true" editable="false" layoutX="240.0" layoutY="130.0" prefHeight="25.0" prefWidth="175.0" promptText="Path" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Json-Config-Files:" />
-                           </children>
-                        </Pane>
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab fx:id="tabANDConfig" text="Android-Config">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Pane prefHeight="170.0" prefWidth="462.0">
-                           <children>
-                              <ComboBox fx:id="cmbANDTestingArt" layoutX="240.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Testing-Art:" textAlignment="LEFT" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="25.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" visible="false" />
-                              <ComboBox disable="true" layoutX="240.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
-                              <ComboBox disable="true" layoutX="240.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="25.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" visible="false" />
-                              <Button fx:id="btnJsonConfigAND" layoutX="415.0" layoutY="130.0" mnemonicParsing="false" onAction="#openDirectoryChooser" prefHeight="25.0" prefWidth="24.0" text="Button" />
-                              <TextField fx:id="txtJsonConfigAND" disable="true" editable="false" layoutX="240.0" layoutY="130.0" prefHeight="25.0" prefWidth="175.0" promptText="Path" />
-                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Json-Config-Files:" />
-                           </children>
-                        </Pane>
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-        </tabs>
-      </TabPane>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="tabGeneral" text="General">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Pane prefHeight="170.0" prefWidth="462.0">
+                                    <children>
+                                        <ComboBox fx:id="cmbPlatform" layoutX="240.0" layoutY="10.0" onAction="#generalController" prefHeight="25.0" prefWidth="200.0" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Testing Plattform:" textAlignment="LEFT" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Parallel-Testing:" textAlignment="LEFT" />
+                                        <ComboBox fx:id="cmbMaxParallel" disable="true" layoutX="347.0" layoutY="50.0" prefHeight="25.0" prefWidth="93.0" />
+                                        <ComboBox disable="true" layoutX="240.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="25.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" visible="false" />
+                                        <ComboBox disable="true" layoutX="240.0" layoutY="130.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Reset Configuraiton" textAlignment="LEFT" />
+                                        <ToggleButton fx:id="togOnOffParallel" layoutX="240.0" layoutY="50.0" mnemonicParsing="false" onAction="#generalController" prefHeight="25.0" prefWidth="84.0" text="Off">
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="On" />
+                                            </toggleGroup>
+                                        </ToggleButton>
+                              <Button fx:id="btnRestConfig" layoutX="240.0" layoutY="127.0" mnemonicParsing="false" onAction="#resetConfig" prefHeight="25.0" prefWidth="200.0" text="Reset all  Configurations" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabWebConfig" text="Web-Portal-Config">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Pane prefHeight="170.0" prefWidth="462.0">
+                                    <children>
+                                        <ComboBox fx:id="cmbWebBrowser" layoutX="240.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Browser:" textAlignment="LEFT" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Server:" textAlignment="LEFT" />
+                                        <ComboBox fx:id="cmbWebServer" layoutX="240.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" />
+                                        <ComboBox disable="true" layoutX="240.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Use Json-Config-Files:" textAlignment="LEFT" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Json-Config-Files:" textAlignment="LEFT" />
+                                        <TextField fx:id="txtJsonConfigWeb" disable="true" editable="false" layoutX="240.0" layoutY="130.0" prefHeight="25.0" prefWidth="175.0" promptText="Path" />
+                                        <Button fx:id="btnJsonConfigWeb" disable="true" layoutX="415.0" layoutY="130.0" mnemonicParsing="false" onAction="#openDirectoryChooser" prefHeight="25.0" prefWidth="22.0" text="Button" />
+                              <ToggleButton fx:id="togJsonWeb" layoutX="240.0" layoutY="90.0" mnemonicParsing="false" onAction="#webConfigController" prefHeight="25.0" prefWidth="84.0" text="Off" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabIOSConfig" text="IOS-Config">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Pane prefHeight="170.0" prefWidth="462.0">
+                                    <children>
+                                        <ComboBox fx:id="cmbIOSTestingArt" layoutX="240.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Testing-Art:" textAlignment="LEFT" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="25.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" visible="false" />
+                                        <ComboBox disable="true" layoutX="240.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
+                                        <ComboBox disable="true" layoutX="240.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Use Json-Config-Files:" textAlignment="LEFT" />
+                                        <Button fx:id="btnJsonConfigIOS" disable="true" layoutX="415.0" layoutY="130.0" mnemonicParsing="false" onAction="#openDirectoryChooser" prefHeight="25.0" prefWidth="24.0" text="Button" />
+                                        <TextField fx:id="txtJsonConfigIOS" disable="true" editable="false" layoutX="240.0" layoutY="130.0" prefHeight="25.0" prefWidth="175.0" promptText="Path" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Json-Config-Files:" />
+                              <ToggleButton fx:id="togJsonIOS" layoutX="240.0" layoutY="90.0" mnemonicParsing="false" onAction="#iosConfigController" prefHeight="25.0" prefWidth="84.0" text="Off" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabANDConfig" text="Android-Config">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Pane prefHeight="170.0" prefWidth="462.0">
+                                    <children>
+                                        <ComboBox fx:id="cmbANDTestingArt" layoutX="240.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="10.0" prefHeight="18.0" prefWidth="200.0" text="Testing-Art:" textAlignment="LEFT" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" layoutX="25.0" layoutY="50.0" prefHeight="18.0" prefWidth="200.0" text="Testart:" textAlignment="LEFT" visible="false" />
+                                        <ComboBox disable="true" layoutX="240.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
+                                        <ComboBox disable="true" layoutX="240.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" promptText="test;test" visible="false" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Use Json-Config-Files:" textAlignment="LEFT" />
+                                        <Button fx:id="btnJsonConfigAND" disable="true" layoutX="415.0" layoutY="130.0" mnemonicParsing="false" onAction="#openDirectoryChooser" prefHeight="25.0" prefWidth="24.0" text="Button" />
+                                        <TextField fx:id="txtJsonConfigAND" disable="true" editable="false" layoutX="240.0" layoutY="130.0" prefHeight="25.0" prefWidth="175.0" promptText="Path" />
+                                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="130.0" prefHeight="18.0" prefWidth="200.0" text="Json-Config-Files:" />
+                              <ToggleButton fx:id="togJsonAND" layoutX="240.0" layoutY="90.0" mnemonicParsing="false" onAction="#andConfigController" prefHeight="25.0" prefWidth="84.0" text="Off" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
         <HBox layoutX="10.0" layoutY="320.0" prefHeight="37.0" prefWidth="500.0">
             <children>
                 <Pane prefWidth="70.0" HBox.hgrow="ALWAYS" />

@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
  * can evoke function from ViewMainApp.fxml file.
  */
 public class FXMLArrivalHelpController implements Initializable {
-    private static final Logger log =  LogManager.getLogger(FXMLArrivalTableViewController.class);
+    private static final Logger log = LogManager.getLogger(FXMLArrivalTableViewController.class);
 
     /**
      * Called to initialize a controller after its root element has been

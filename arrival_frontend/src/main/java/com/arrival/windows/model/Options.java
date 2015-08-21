@@ -10,19 +10,20 @@ import com.arrival.utilities.interfaces.IFConfig;
  * Package: com.arrival.windows.model
  */
 public class Options implements IFConfig {
-    private String platform;
-    private Boolean parallelTesting;
-    private Integer parallelTestingCount;
+    private String platform = null;
+    private Boolean parallelTesting = false;
+    private Integer parallelTestingCount = 0;
 
-    private String browserName;
-    private String serverName;
-    private String mobileTestingArt;
-
-    private String jsonConfigPath;
+    private String browserName = null;
+    private String serverName = null;
+    private String mobileTestingArt = null;
+    private Boolean jsonConfigInUse = false;
+    private String jsonConfigPath = null;
 
     @Override
     public String toString() {
-        return super.toString();
+        return platform + "->" + parallelTesting.toString() + "->" + parallelTestingCount + "->" + browserName + "->" + serverName
+                + "->" + mobileTestingArt + "->" +jsonConfigInUse.toString() + "->" +jsonConfigPath;
     }
 
     public String getPlatform() {
@@ -79,5 +80,13 @@ public class Options implements IFConfig {
 
     public void setParallelTestingCount(Integer parallelTestingCount) {
         this.parallelTestingCount = parallelTestingCount;
+    }
+
+    public Boolean getJsonConfigInUse() {
+        return jsonConfigInUse;
+    }
+
+    public void setJsonConfigInUse(Boolean jsonConfigInUse) {
+        this.jsonConfigInUse = jsonConfigInUse;
     }
 }

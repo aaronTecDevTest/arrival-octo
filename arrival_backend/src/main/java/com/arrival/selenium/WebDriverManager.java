@@ -3,6 +3,8 @@ package com.arrival.selenium;
 
 import com.arrival.selenium.config.SeleniumConfig;
 import com.arrival.utilities.SystemPreferences;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,9 +12,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,14 +34,14 @@ public class WebDriverManager {
      * @param runningConfiguration - RunningConfiguration des Tests
      * @return - driver - Der erzeugte Webdriver für den jeweiligen Browser
      */
-    public WebDriver setUpDriver( SeleniumConfig runningConfiguration) {
+    public WebDriver setUpDriver(SeleniumConfig runningConfiguration) {
         log.debug("Setting up Webdriver");
         WebDriver driver;
         //Toolkit toolkit = Toolkit.getDefaultToolkit();
         /*Dimension screenResolution = new Dimension((int)
-		toolkit.getScreenSize().getWidth(), (int)
+        toolkit.getScreenSize().getWidth(), (int)
 		toolkit.getScreenSize().getHeight());*/
-       // switch (runningConfiguration.getBrowser()) {
+        // switch (runningConfiguration.getBrowser()) {
         switch ("CH") {
             case "IE":
                 try {
@@ -50,7 +49,7 @@ public class WebDriverManager {
                 } catch (IOException e) {
                     log.error("Error while initializing IEDriver");
                 }
-                System.setProperty("webdriver.ie.driver", "arrival_backend"+ File.separator +"src"+ File.separator+"main"+File.separator +File.separator + "resources" + File.separator + "webdriver" + File.separator + "IEDriverServer.exe");
+                System.setProperty("webdriver.ie.driver", "arrival_backend" + File.separator + "src" + File.separator + "main" + File.separator + File.separator + "resources" + File.separator + "webdriver" + File.separator + "IEDriverServer.exe");
                 driver = new InternetExplorerDriver(this.setUpIEDriver());
                 break;
 
@@ -60,14 +59,14 @@ public class WebDriverManager {
                 } catch (IOException e) {
                     log.error("Error while initializing ChromeDriver");
                 }
-                if(SystemPreferences.getInstance().isWindows())
-                    System.setProperty("webdriver.chrome.driver", "arrival_backend"+ File.separator +"src"
-                            + File.separator+"main"+File.separator +File.separator + "resources"
+                if (SystemPreferences.getInstance().isWindows())
+                    System.setProperty("webdriver.chrome.driver", "arrival_backend" + File.separator + "src"
+                            + File.separator + "main" + File.separator + File.separator + "resources"
                             + File.separator + "webdriver" + File.separator + "chromedriver.exe");
 
-                if(SystemPreferences.getInstance().isMacOS())
-                    System.setProperty("webdriver.chrome.driver", "arrival_backend"+ File.separator +"src"
-                            + File.separator+"main"+File.separator +File.separator + "resources"
+                if (SystemPreferences.getInstance().isMacOS())
+                    System.setProperty("webdriver.chrome.driver", "arrival_backend" + File.separator + "src"
+                            + File.separator + "main" + File.separator + File.separator + "resources"
                             + File.separator + "webdriver" + File.separator + "chromedriver");
                 driver = new ChromeDriver(this.setUpChromeDriver());
                 break;
@@ -78,7 +77,7 @@ public class WebDriverManager {
                 } catch (IOException e) {
                     log.error("Error while initializing SafariDriver");
                 }
-                System.setProperty("webdriver.chrome.driver", "arrival_backend"+ File.separator +"src"+ File.separator+"main"+File.separator +File.separator + "resources" + File.separator + "webdriver" + File.separator + "safariDriver.exe");
+                System.setProperty("webdriver.chrome.driver", "arrival_backend" + File.separator + "src" + File.separator + "main" + File.separator + File.separator + "resources" + File.separator + "webdriver" + File.separator + "safariDriver.exe");
                 driver = new ChromeDriver();
                 break;
 
@@ -88,7 +87,7 @@ public class WebDriverManager {
                 } catch (IOException e) {
                     log.error("Error while initializing ChromeDriver");
                 }
-                System.setProperty("webdriver.chrome.driver", "arrival_backend"+ File.separator +"src"+ File.separator+"main"+File.separator +File.separator + "resources" + File.separator + "webdriver" + File.separator + "chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "arrival_backend" + File.separator + "src" + File.separator + "main" + File.separator + File.separator + "resources" + File.separator + "webdriver" + File.separator + "chromedriver.exe");
                 driver = new ChromeDriver();
                 break;
 

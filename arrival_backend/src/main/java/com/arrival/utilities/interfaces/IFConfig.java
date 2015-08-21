@@ -15,7 +15,7 @@ public interface IFConfig {
     String browserName = null;
     String serverName = null;
     String mobileTestingArt = null;
-
+    Boolean jsonConfigInUse = false;
     String jsonConfigPath = null;
 
     String getPlatform();
@@ -45,4 +45,8 @@ public interface IFConfig {
     Integer getParallelTestingCount();
 
     void setParallelTestingCount(Integer parallelTestingCount);
+
+     Boolean getJsonConfigInUse();
+
+     void setJsonConfigInUse(Boolean jsonConfigInUse);
 }

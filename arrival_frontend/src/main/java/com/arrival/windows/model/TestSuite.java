@@ -26,7 +26,6 @@ public class TestSuite implements IFTestSuite {
     private SimpleStringProperty suiteIdentifyIdentify;
 
 
-
     public TestSuite(Integer id, String tsName, String tsResult) {
         this.tsId = new SimpleIntegerProperty(id);
         this.tsName = new SimpleStringProperty(tsName);
@@ -38,13 +37,13 @@ public class TestSuite implements IFTestSuite {
         return tsId.get();
     }
 
+    public void setTsId(int tsId) {
+        this.tsId.set(tsId);
+    }
+
     @Override
     public SimpleIntegerProperty tsIdProperty() {
         return tsId;
-    }
-
-    public void setTsId(int tsId) {
-        this.tsId.set(tsId);
     }
 
     @Override
@@ -52,13 +51,13 @@ public class TestSuite implements IFTestSuite {
         return tsName.get();
     }
 
+    public void setTsName(String tsName) {
+        this.tsName.set(tsName);
+    }
+
     @Override
     public SimpleStringProperty tsNameProperty() {
         return tsName;
-    }
-
-    public void setTsName(String tsName) {
-        this.tsName.set(tsName);
     }
 
     @Override
@@ -66,13 +65,13 @@ public class TestSuite implements IFTestSuite {
         return tsResult.get();
     }
 
+    public void setTsResult(String tsResult) {
+        this.tsResult.set(tsResult);
+    }
+
     @Override
     public SimpleStringProperty tsResultProperty() {
         return tsResult;
-    }
-
-    public void setTsResult(String tsResult) {
-        this.tsResult.set(tsResult);
     }
 
     public ArrayList<ArrivalTestSuite> getTestCases() {
@@ -87,11 +86,11 @@ public class TestSuite implements IFTestSuite {
         return suiteIdentifyIdentify.get();
     }
 
-    public SimpleStringProperty suiteIdentifyIdentifyProperty() {
-        return suiteIdentifyIdentify;
-    }
-
     public void setSuiteIdentifyIdentify(String suiteIdentifyIdentify) {
         this.suiteIdentifyIdentify.set(suiteIdentifyIdentify);
+    }
+
+    public SimpleStringProperty suiteIdentifyIdentifyProperty() {
+        return suiteIdentifyIdentify;
     }
 }

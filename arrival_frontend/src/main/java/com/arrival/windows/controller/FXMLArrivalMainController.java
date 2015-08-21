@@ -7,6 +7,7 @@ package com.arrival.windows.controller;
  * @since: 1.0
  * Package: com.arrival.windows.controller
  */
+
 import com.arrival.utilities.FileNameLoader;
 import com.arrival.utilities.SystemPreferences;
 import com.arrival.windows.model.TestCase;
@@ -22,18 +23,18 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
-
 import java.net.URL;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Optional;
+import java.util.ResourceBundle;
 
 /**
  * Controller Class for ViewMainApp. This Class have linked with ViewMainApp.fxml and
@@ -44,7 +45,7 @@ public class FXMLArrivalMainController implements Initializable {
     /**
      * Logger
      */
-    private static final Logger log =  LogManager.getLogger(FXMLArrivalMainController.class);
+    private static final Logger log = LogManager.getLogger(FXMLArrivalMainController.class);
 
     public ObservableList dateIOSTestcase;
     public ObservableList dateANDTestcase;
@@ -114,7 +115,7 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private Button btnNewTestsuite;
     @FXML
-    private Button btnDeletedTestcase;
+    private Button btnRemoveTestcase;
     @FXML
     private Button btnDeletedTestsuite;
     @FXML
@@ -169,7 +170,7 @@ public class FXMLArrivalMainController implements Initializable {
     private Stage optionsViewStage;
 
 
-  //  private HashMap<String, TableView> testSuitesTab;
+    //  private HashMap<String, TableView> testSuitesTab;
 
     private FileNameLoader fileNameLoaderIOS;
     private FileNameLoader fileNameLoaderAND;
@@ -223,11 +224,11 @@ public class FXMLArrivalMainController implements Initializable {
         addTableViewListener();
 
         //SetUp OptionsView
-       // setUpOptionsView();
+        // setUpOptionsView();
     }
 
     @FXML
-    public void openTestsuite(ActionEvent actionEvent) throws IOException{
+    public void openTestsuite(ActionEvent actionEvent) throws IOException {
         log.info(actionEvent.getSource());
     }
 
@@ -237,13 +238,13 @@ public class FXMLArrivalMainController implements Initializable {
     }
 
     @FXML
-    public void createNewTestsuite(ActionEvent actionEvent) throws IOException{
+    public void createNewTestsuite(ActionEvent actionEvent) throws IOException {
         log.info(actionEvent.getSource());
 
         URL url = this.getClass().getResource("/fxml/FXMLArrivalTableView.fxml");
-        FXMLLoader loader = new FXMLLoader(null,bundle);
-        TableView testSuiteTable =  loader.load(url.openStream());
-        Tab tab = new Tab("", testSuiteTable);
+        FXMLLoader loader = new FXMLLoader(null, bundle);
+        TableView testSuiteTable = loader.load(url.openStream());
+        Tab tab = new Tab(null, testSuiteTable);
         FXMLArrivalTableViewController controller = loader.getController();
         testSuiteTable.setUserData(controller);
         tab.setContent(testSuiteTable);
@@ -253,8 +254,7 @@ public class FXMLArrivalMainController implements Initializable {
 
         if (tabName.isEmpty()) {
             tab.setText("Testsuite -" + " " + tabMainTabPane.getTabs().size());
-        }
-        else {
+        } else {
             tab.setText(tabName);
         }
 
@@ -270,7 +270,6 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void addTestcaseInTestsuite(ActionEvent actionEvent) {
         try {
-
             if (accTestCase.getExpandedPane().getText().equals("iOS - Testcase")) {
                 log.info(actionEvent.getSource() + "ios");
                 dateTestsuite = currentTableView.getItems();
@@ -290,7 +289,7 @@ public class FXMLArrivalMainController implements Initializable {
 
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getStackTrace());
         }
     }
 
@@ -298,24 +297,23 @@ public class FXMLArrivalMainController implements Initializable {
     public void deleteTestcaseFromTestsuite(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
         try {
-            
+
             ObservableList<Integer> indeces = currentTableView.getSelectionModel().getSelectedIndices();
             ObservableList<TestCase> testCases = currentTableView.getSelectionModel().getSelectedItems();
 
-            currentTableView = (TableView<TestCase>)tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
+            currentTableView = (TableView<TestCase>) tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
             ObservableList dateTestsuite = currentTableView.getItems();
             dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
 
-            if (indeces.size() == dateTestsuite.size()){
+            if (indeces.size() == dateTestsuite.size()) {
                 dateTestsuite.removeAll(testCases);
-            }
-            else {
+            } else {
                 for (TestCase testCase : testCases) {
                     dateTestsuite.remove(testCase);
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getStackTrace());
         }
     }
 
@@ -351,7 +349,6 @@ public class FXMLArrivalMainController implements Initializable {
         optionsViewStage = setUpOptionsView();
         optionsViewStage.hide();
         optionsViewStage.initOwner(((Node) actionEvent.getSource()).getScene().getWindow());
-        log.warn(((Node)actionEvent.getSource()).getScene().getWindow() );
         optionsViewStage.show();
     }
 
@@ -370,7 +367,7 @@ public class FXMLArrivalMainController implements Initializable {
         lblStatusRight.setText(bundle.getString("label.text.right.status"));
 
         btnAddTestcase.getTooltip().setText(bundle.getString("tooltip.add.testcase"));
-        btnDeletedTestcase.getTooltip().setText(bundle.getString("tooltip.deleted.testcase"));
+        btnRemoveTestcase.getTooltip().setText(bundle.getString("tooltip.deleted.testcase"));
 
         btnNewTestsuite.getTooltip().setText(bundle.getString("tooltip.new.testsuite"));
         btnDeletedTestsuite.getTooltip().setText(bundle.getString("tooltip.deleted.testsuite"));
@@ -451,7 +448,7 @@ public class FXMLArrivalMainController implements Initializable {
         dateWebPortalTestcase = FXCollections.observableArrayList(tempList);
     }
 
-    private String setTestsuiteNameDialog(){
+    private String setTestsuiteNameDialog() {
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Testsuite name");
         dialog.setHeaderText("Bitte den Name des Testsuite eintragen:");
@@ -461,32 +458,30 @@ public class FXMLArrivalMainController implements Initializable {
 
         if (result.isPresent()) {
             entered = result.get();
-        }
-        else{
+        } else {
             entered = "";
         }
         return entered;
     }
 
-    private void addTableViewListener(){
+    private void addTableViewListener() {
         tabMainTabPane.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Tab>() {
             @Override
             public void changed(ObservableValue<? extends Tab> observable, Tab oldValue, Tab newValue) {
-                TableView tempTableView  = (TableView) tabMainTabPane
+                TableView tempTableView = (TableView) tabMainTabPane
                         .getSelectionModel()
                         .getSelectedItem()
                         .getContent();
 
                 currentTableView = tempTableView;
 
-                if(tempTableView.getUserData() == null){
-                    currentTableView =  tempTableView;
+                if (tempTableView.getUserData() == null) {
+                    currentTableView = tempTableView;
                     tbvTestsuiteController = firstTestsuiteController;
+                } else {
+                    currentTableView = tempTableView;
+                    tbvTestsuiteController = (FXMLArrivalTableViewController) tempTableView.getUserData();
                 }
-                else {
-                    currentTableView =  tempTableView;
-                    tbvTestsuiteController = (FXMLArrivalTableViewController)tempTableView.getUserData();
-              }
             }
         });
     }
@@ -494,22 +489,23 @@ public class FXMLArrivalMainController implements Initializable {
     private Stage setUpOptionsView() {
         try {
             URL url = getClass().getResource("/fxml/FXMLArrivalOptions.fxml");
+            URL applicationIcon = getClass().getResource("/icons/appIcons.png");
             FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalOptions"));
-
             Parent root = loader.load();
-            Scene optionsScene = new Scene(root, 460, 265);
+            Scene optionsScene = new Scene(root, 480, 280);
             Stage optionsStage = new Stage();
-
             optionsScene.getStylesheets().add("/css/arrivalMain.css");
             optionsStage.setScene(optionsScene);
-            optionsStage.setTitle("Options...");
+            optionsStage.getIcons().add(new Image(applicationIcon.toString()));
+            optionsStage.setTitle("Options - ArrivalOcto");
             optionsStage.setResizable(false);
             optionsStage.initModality(Modality.APPLICATION_MODAL);
-            optionsController = loader.getController();
-            log.warn(optionsStage);
-            return  optionsStage;
+           // optionsController = loader.getController();
+            optionsScene.setUserData(tbvTestsuiteController);
+            //log.warn(optionsStage);
+            return optionsStage;
 
-        }catch (IOException e){
+        } catch (IOException e) {
             log.error(e.getStackTrace());
             return null;
         }

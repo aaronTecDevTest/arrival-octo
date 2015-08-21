@@ -8,17 +8,17 @@ package com.arrival.windows.controller;
  * Package: com.arrival.windows.controller
  */
 
-import com.arrival.selenium.config.SeleniumConfig;
 import com.arrival.unit.generic.SeleniumConfigSingleton;
 import com.arrival.unit.suites.ArrivalTestSuite;
-import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.windows.model.Options;
 import com.arrival.windows.model.TestCase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -38,15 +38,12 @@ public class FXMLArrivalTableViewController implements Initializable {
     /**
      * Logger
      */
-    private static final Logger log =  LogManager.getLogger(FXMLArrivalTableViewController.class);
-
+    private static final Logger log = LogManager.getLogger(FXMLArrivalTableViewController.class);
+    public ObservableList dateTestsuite;
     /**
      * For Internationalization
      */
     private ResourceBundle bundle;
-
-    public ObservableList dateTestsuite;
-
     @FXML
     private TableView<TestCase> tbvTestsuite;
     @FXML
@@ -64,9 +61,10 @@ public class FXMLArrivalTableViewController implements Initializable {
 
     private ArrivalTestSuite runableTestSuite;
     private ObservableList dateTestSuite;
-    private Options optionsTestSuite;
+    private Options options;
+
     /**
-     *Is a path where are the index of testng result.
+     * Is a path where are the index of testng result.
      */
     private String resultTestSuite;
 
@@ -104,19 +102,20 @@ public class FXMLArrivalTableViewController implements Initializable {
     }
 
 
-
-    public void runTestSuite(){
+    public void runTestSuite() {
+        log.info(options.toString());
         List<XmlClass> tempClasses = new ArrayList<>();
-        SeleniumConfigSingleton.getInstance().setTestSuiteConfiguration(optionsTestSuite);
+        SeleniumConfigSingleton.getInstance().setTestSuiteConfiguration(options);
         dateTestSuite = tbvTestsuite.getItems();
 
         tempClasses.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
 
-        for(int i=0; i<dateTestsuite.size();i++){
+        for (int i = 0; i < dateTestsuite.size(); i++) {
             tempClasses.add(new XmlClass(((TestCase) dateTestSuite.get(i)).getTcClassPackage()));
         }
         runableTestSuite.setClasses(tempClasses);
         runableTestSuite.runVirtualSuit();
+
     }
 
     private void iniBundleResources() {
@@ -136,7 +135,15 @@ public class FXMLArrivalTableViewController implements Initializable {
         dateTestsuite = FXCollections.observableArrayList(tempList);
     }
 
-    public TableView<TestCase> getTbvTestsuite(){
+    public TableView<TestCase> getTbvTestsuite() {
         return tbvTestsuite;
+    }
+
+    public Options getOptions() {
+        return options;
+    }
+
+    public void setOptions(Options options) {
+        this.options = options;
     }
 }

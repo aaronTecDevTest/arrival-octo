@@ -1,10 +1,6 @@
 package com.arrival.selenium.config;
 
 import com.arrival.utilities.interfaces.IFConfig;
-import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import org.apache.avalon.excalibur.logger.LoggerManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -25,21 +21,18 @@ public class SeleniumConfig implements IFConfig {
     private String browserName = null;
     private String serverName = null;
     private String mobileTestingArt = null;
-
+    private Boolean jsonConfigInUse;
     private String jsonConfigPath = null;
-
-
-    public void SeleniumConfig(){
-
-    }
 
     public void runConfig() {
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        return platform + "->" + parallelTesting.toString() + "->" + parallelTestingCount + "->" + browserName + "->" + serverName
+                + "->" + mobileTestingArt + "->" +jsonConfigInUse.toString() + "->" +jsonConfigPath;
     }
+
 
     public String getPlatform() {
         return platform;
@@ -95,5 +88,13 @@ public class SeleniumConfig implements IFConfig {
 
     public void setParallelTestingCount(Integer parallelTestingCount) {
         this.parallelTestingCount = parallelTestingCount;
+    }
+
+    public Boolean getJsonConfigInUse() {
+        return jsonConfigInUse;
+    }
+
+    public void setJsonConfigInUse(Boolean jsonConfigInUse) {
+        this.jsonConfigInUse = jsonConfigInUse;
     }
 }

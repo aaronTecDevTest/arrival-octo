@@ -26,8 +26,8 @@ import java.net.URL;
  * Login Class to get more authorisation form arrival App and more
  * functions.
  **/
-public class ViewArrivalLogIn extends Application {
-    private static final Logger log = LogManager.getLogger(ViewArrivalLogIn.class);
+public class ViewArrivalOptions extends Application {
+    private static final Logger log = LogManager.getLogger(ViewArrivalOptions.class);
     private FXMLLoader loader;
     private Parent root;
     private URL url;
@@ -36,26 +36,22 @@ public class ViewArrivalLogIn extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        log.info("Start App with LogIn");
+        log.info("Start App Options");
         SystemPreferences.getInstance();
-        url = getClass().getResource("/fxml/FXMLArrivalLogIn.fxml");
+        url = getClass().getResource("/fxml/FXMLArrivalOptions.fxml");
         applicationIcon = getClass().getResource("/icons/appIcons.png");
-        loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalLogIn"));
+        loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalOptions"));
         root = loader.load();
 
-        Scene scene = new Scene(root, 400, 300);
+        Scene scene = new Scene(root, 480, 280);
         scene.getStylesheets().add("/css/arrivalLogIn.css");
 
         primaryStage.setScene(scene);
-        primaryStage.setTitle("LogIn - ArrivalOcto");
+        primaryStage.setTitle("Options - ArrivalOcto");
         primaryStage.getIcons().add(new Image(applicationIcon.toString()));
 
         primaryStage.setResizable(false);
         primaryStage.show();
-        log.info("LogIn show up");
-    }
-
-    public void run() {
-        launch();
+        log.info("Options show up");
     }
 }

@@ -53,6 +53,16 @@ public class FileNameLoader {
         size = className.size();
     }
 
+    public static void main(String[] args) {
+        FileNameLoader fileNameLoader = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
+        System.out.println("Url:" + fileNameLoader.getUrl());
+        System.out.println("Dir:" + fileNameLoader.getFileDirectory());
+        System.out.println("Path:" + fileNameLoader.getFilePathList());
+        System.out.println("ClassName:" + fileNameLoader.getClassName());
+        System.out.println("Extension:" + fileNameLoader.getFileNameWithExtension());
+        System.out.println("ClassPackage:" + fileNameLoader.getClassPackage());
+    }
+
     private void setUpFilePathList() {
 
         final ArrayList<Path> temp = new ArrayList<>();
@@ -89,13 +99,13 @@ public class FileNameLoader {
         fileNameWithExtension = temp;
     }
 
-    private void setUpClassPackage(){
+    private void setUpClassPackage() {
         ArrayList<String> temp = new ArrayList<>();
-        String dir = fileDirectory.split("/classes/")[1].replace("/",".");
+        String dir = fileDirectory.split("/classes/")[1].replace("/", ".");
         for (String tempClassName : className) {
             try {
-              temp.add(dir+"."+tempClassName);
-            } catch (Exception e){
+                temp.add(dir + "." + tempClassName);
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -110,7 +120,6 @@ public class FileNameLoader {
         return fileNameWithExtension;
     }
 
-
     public ArrayList<String> getClassName() {
         return className;
     }
@@ -124,7 +133,7 @@ public class FileNameLoader {
         return fileDirectory;
     }
 
-    public int getSize(){
+    public int getSize() {
         return size;
     }
 
@@ -134,16 +143,6 @@ public class FileNameLoader {
 
     public void setUrl(URL url) {
         this.url = url;
-    }
-
-    public static void main(String[] args) {
-        FileNameLoader fileNameLoader = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
-        System.out.println("Url:" + fileNameLoader.getUrl());
-        System.out.println("Dir:" + fileNameLoader.getFileDirectory());
-        System.out.println("Path:" + fileNameLoader.getFilePathList());
-        System.out.println("ClassName:" + fileNameLoader.getClassName());
-        System.out.println("Extension:" + fileNameLoader.getFileNameWithExtension());
-        System.out.println("ClassPackage:" + fileNameLoader.getClassPackage());
     }
 }
 

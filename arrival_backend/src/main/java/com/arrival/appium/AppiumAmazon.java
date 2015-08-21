@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 
 
 public class AppiumAmazon implements IFAppiumServer {
-    private static final Logger log =  LogManager.getLogger(AppiumAmazon.class);
+    private static final Logger log = LogManager.getLogger(AppiumAmazon.class);
 
     /**
      * This functions start a current Server over commando line.

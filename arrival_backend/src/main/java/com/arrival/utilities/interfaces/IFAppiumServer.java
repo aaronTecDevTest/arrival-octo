@@ -7,6 +7,7 @@ package com.arrival.utilities.interfaces;
  * @since: 1.0
  * Package: com.utilities.interfaces
  */
+
 /**
  *
  */

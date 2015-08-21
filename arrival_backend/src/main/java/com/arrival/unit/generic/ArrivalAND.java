@@ -18,7 +18,7 @@ import java.util.ArrayList;
  * Package: com.arrival.unit.generic
  */
 public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
-    private static final Logger log =  LogManager.getLogger(ArrivalAND.class);
+    private static final Logger log = LogManager.getLogger(ArrivalAND.class);
 
     public static AppiumConfigSingleton appiumConfi = AppiumConfigSingleton.getInstance();
     public ArrayList<Object> appiumServerList = new ArrayList<>();

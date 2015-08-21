@@ -17,7 +17,8 @@ import java.io.IOException;
  */
 
 public class AppiumAndroid implements IFAppiumServer {
-    private static final Logger log =  LogManager.getLogger(AppiumAndroid.class);
+    private static final Logger log = LogManager.getLogger(AppiumAndroid.class);
+
     /**
      * Standard Constructor
      */

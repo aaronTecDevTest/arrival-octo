@@ -9,7 +9,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ import java.util.ArrayList;
  */
 
 public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
-    protected static final Logger log =  LogManager.getLogger(ArrivalWeb.class);
+    protected static final Logger log = LogManager.getLogger(ArrivalWeb.class);
 
     public static SeleniumConfigSingleton seleniumConfigSingleton = SeleniumConfigSingleton.getInstance();
     public ArrayList<Object> seleniumServerList = new ArrayList<>();
@@ -33,21 +32,21 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     private WebDriver browser;
 
 
-    public WebDriver openBrowser(){
+    public WebDriver openBrowser() {
         seleniumManager.setSeleniumConfig(seleniumConfig);
         browser = seleniumManager.getBrowser(seleniumConfig);
         return browser;
     }
 
-    public void closeBrowser(WebDriver driver){
+    public void closeBrowser(WebDriver driver) {
         driver.close();
         driver.quit();
     }
 
     /**
-     *Test NG method
+     * Test NG method
      */
-    @DataProvider(name = "driver" ,parallel = true)
+    @DataProvider(name = "driver", parallel = true)
     public Object[][] createServer() {
 
         Object[][] server;
@@ -92,12 +91,12 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     /**
-    *Other method
-    */
+     * Other method
+     */
     public void pauseTest(long milSeconds) {
-        try{
+        try {
             Thread.sleep(milSeconds);
-        }catch (Exception e) {
+        } catch (Exception e) {
             log.error(e.getStackTrace());
             log.error("Test was not paused!!");
         }
@@ -163,7 +162,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     /**
-     *Testcase Properties
+     * Testcase Properties
      */
     public int getTcID() {
         return tcID.get();

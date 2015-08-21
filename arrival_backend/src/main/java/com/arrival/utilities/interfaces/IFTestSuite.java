@@ -17,26 +17,26 @@ import javafx.beans.property.SimpleStringProperty;
  **/
 public interface IFTestSuite {
 
-     SimpleIntegerProperty tsId =null;
-     SimpleStringProperty tsName =null;
-     SimpleStringProperty tsResult =null;
+    SimpleIntegerProperty tsId = null;
+    SimpleStringProperty tsName = null;
+    SimpleStringProperty tsResult = null;
 
     int getTsId();
 
+    void setTsId(int tsId);
+
     SimpleIntegerProperty tsIdProperty();
 
-    void setTsId(int tsId) ;
+    String getTsName();
 
-    String getTsName() ;
+    void setTsName(String tsName);
 
-    SimpleStringProperty tsNameProperty() ;
-
-    void setTsName(String tsName) ;
+    SimpleStringProperty tsNameProperty();
 
     String getTsResult();
 
-    SimpleStringProperty tsResultProperty();
-
     void setTsResult(String tsResult);
+
+    SimpleStringProperty tsResultProperty();
 
 }
