@@ -3,6 +3,7 @@ package com.arrival.selenium;
 
 import com.arrival.selenium.config.SeleniumConfig;
 import com.arrival.utilities.SystemPreferences;
+import com.arrival.utilities.interfaces.IFConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -34,15 +35,16 @@ public class WebDriverManager {
      * @param runningConfiguration - RunningConfiguration des Tests
      * @return - driver - Der erzeugte Webdriver für den jeweiligen Browser
      */
-    public WebDriver setUpDriver(SeleniumConfig runningConfiguration) {
+    public WebDriver setUpDriver(IFConfig runningConfiguration) {
         log.debug("Setting up Webdriver");
         WebDriver driver;
+        String browser = runningConfiguration.getBrowserName().split(" ")[0];
         //Toolkit toolkit = Toolkit.getDefaultToolkit();
         /*Dimension screenResolution = new Dimension((int)
         toolkit.getScreenSize().getWidth(), (int)
 		toolkit.getScreenSize().getHeight());*/
         // switch (runningConfiguration.getBrowser()) {
-        switch ("CH") {
+        switch (browser) {
             case "IE":
                 try {
                     log.debug(new File(".").getCanonicalPath());

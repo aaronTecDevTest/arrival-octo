@@ -2,6 +2,7 @@ package com.arrival.unit.generic;
 
 import com.arrival.selenium.SeleniumManager;
 import com.arrival.selenium.config.SeleniumConfig;
+import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -27,14 +28,15 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     public static SeleniumConfigSingleton seleniumConfigSingleton = SeleniumConfigSingleton.getInstance();
     public ArrayList<Object> seleniumServerList = new ArrayList<>();
 
-    public SeleniumConfig seleniumConfig = seleniumConfigSingleton.getTestSuiteConfiguration();
+  //  public SeleniumConfig seleniumConfig = seleniumConfigSingleton.getTestSuiteConfiguration();
+    public IFConfig seleniumConfig = seleniumConfigSingleton.getTestSuiteConfiguration();
     public SeleniumManager seleniumManager;
-    private WebDriver browser;
+    public WebDriver browser;
 
 
     public WebDriver openBrowser() {
-        seleniumManager.setSeleniumConfig(seleniumConfig);
-        browser = seleniumManager.getBrowser(seleniumConfig);
+        //seleniumManager.setSeleniumConfig(seleniumConfig);
+        //browser = seleniumManager.getBrowser(seleniumConfig);
         return browser;
     }
 
@@ -74,10 +76,10 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         seleniumManager = new SeleniumManager();
         if (SeleniumConfigSingleton.getTestArt().equals(SeleniumConfigSingleton.MULTI)) {
             //Should be here for Appium and Selenium Grid config (Only Json config)
-            /*
+
             seleniumManager.setSeleniumConfig(seleniumConfig);
             browser = seleniumManager.getBrowser(seleniumConfig);
-            */
+
 
             seleniumServerList.add("android Test1");
             seleniumServerList.add("android Test2");

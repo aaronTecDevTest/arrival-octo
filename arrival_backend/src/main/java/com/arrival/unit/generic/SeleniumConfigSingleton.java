@@ -21,7 +21,8 @@ public class SeleniumConfigSingleton {
     private static final Logger log = LogManager.getLogger(SeleniumConfigSingleton.class);
     public static String testArt;
     private static SeleniumConfigSingleton ourInstance = new SeleniumConfigSingleton();
-    private SeleniumConfig testSuiteConfiguration;
+  //  private SeleniumConfig testSuiteConfiguration;
+    private IFConfig testSuiteConfiguration;
 
     private SeleniumConfigSingleton() {
         testArt = SINGLE;
@@ -41,12 +42,16 @@ public class SeleniumConfigSingleton {
         SeleniumConfigSingleton.testArt = testArt;
     }
 
-    public SeleniumConfig getTestSuiteConfiguration() {
+ /*  public SeleniumConfig getTestSuiteConfiguration() {
+        return testSuiteConfiguration;
+    }*/
+
+    public IFConfig getTestSuiteConfiguration() {
         return testSuiteConfiguration;
     }
 
     public void setTestSuiteConfiguration(IFConfig testSuiteConfiguration) {
-      //  this.testSuiteConfiguration = (SeleniumConfig) testSuiteConfiguration;
+        this.testSuiteConfiguration =  testSuiteConfiguration;
     }
 
 

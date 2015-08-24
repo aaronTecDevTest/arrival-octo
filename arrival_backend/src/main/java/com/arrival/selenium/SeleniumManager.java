@@ -1,6 +1,7 @@
 package com.arrival.selenium;
 
 import com.arrival.selenium.config.SeleniumConfig;
+import com.arrival.utilities.interfaces.IFConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,8 @@ import java.util.HashMap;
  */
 public class SeleniumManager {
     private static final Logger log = LogManager.getLogger(SeleniumManager.class);
-    private HashMap<String, SeleniumConfig> seleniumConfigs;
+  //  private HashMap<String, SeleniumConfig> seleniumConfigs;
+    private HashMap<String, IFConfig> seleniumConfigs;
 
     public SeleniumManager() {
         seleniumConfigs = new HashMap<>();
@@ -27,16 +29,16 @@ public class SeleniumManager {
 
     public void setUpConfgi(String testSuiteName) {
 
-        seleniumConfigs.get(testSuiteName).runConfig();
+        //seleniumConfigs.get(testSuiteName).runConfig();
     }
 
-    public WebDriver getBrowser(SeleniumConfig seleniumConfig) {
+    public WebDriver getBrowser(IFConfig seleniumConfig) {
         WebDriverManager webDriverManager = new WebDriverManager();
         WebDriver tempWebDriver = webDriverManager.setUpDriver(seleniumConfig);
         return tempWebDriver;
     }
 
-    public void setSeleniumConfig(SeleniumConfig seleniumConfig) {
+    public void setSeleniumConfig(IFConfig seleniumConfig) {
         this.seleniumConfigs.put("seleniumConfig.getClass().toString()", seleniumConfig);
     }
 }
