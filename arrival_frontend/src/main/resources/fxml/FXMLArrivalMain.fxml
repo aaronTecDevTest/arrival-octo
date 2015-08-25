@@ -113,13 +113,13 @@
                             </children>
                         </VBox>
                         <TabPane fx:id="tabMainTabPane" tabClosingPolicy="UNAVAILABLE">
-                            <tabs>
+                            <!--tabs>
                                 <Tab text="Testsuite - Regression">
                                     <content>
                                         <fx:include fx:id="tbvTestsuite" source="FXMLArrivalTableView.fxml"/>
                                     </content>
                                 </Tab>
-                            </tabs>
+                            </tabs-->
                         </TabPane>
                     </items>
                     <BorderPane.margin>

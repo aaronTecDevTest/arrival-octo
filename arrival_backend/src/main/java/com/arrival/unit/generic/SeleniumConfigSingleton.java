@@ -1,7 +1,6 @@
 package com.arrival.unit.generic;
 
-import com.arrival.selenium.config.SeleniumConfig;
-import com.arrival.utilities.interfaces.IFConfig;
+import com.arrival.selenium.SeleniumManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterSuite;
@@ -18,15 +17,13 @@ import org.testng.annotations.BeforeSuite;
 public class SeleniumConfigSingleton {
     public final static String SINGLE = "SINGLE";
     public final static String MULTI = "MULTI";
-    private static final Logger log = LogManager.getLogger(SeleniumConfigSingleton.class);
+    private final static  Logger log = LogManager.getLogger(SeleniumConfigSingleton.class);
     public static String testArt;
     private static SeleniumConfigSingleton ourInstance = new SeleniumConfigSingleton();
-  //  private SeleniumConfig testSuiteConfiguration;
-    private IFConfig testSuiteConfiguration;
+    private static SeleniumManager seleniumManager;
 
     private SeleniumConfigSingleton() {
         testArt = SINGLE;
-        testSuiteConfiguration = null;
     }
 
     public static SeleniumConfigSingleton getInstance() {
@@ -42,32 +39,30 @@ public class SeleniumConfigSingleton {
         SeleniumConfigSingleton.testArt = testArt;
     }
 
- /*  public SeleniumConfig getTestSuiteConfiguration() {
-        return testSuiteConfiguration;
-    }*/
-
-    public IFConfig getTestSuiteConfiguration() {
-        return testSuiteConfiguration;
+    public SeleniumManager getSeleniumManager() {
+        return seleniumManager;
     }
 
-    public void setTestSuiteConfiguration(IFConfig testSuiteConfiguration) {
-        this.testSuiteConfiguration =  testSuiteConfiguration;
-    }
+    public void setSeleniumManager(SeleniumManager seleniumManager) {
+        SeleniumConfigSingleton.seleniumManager = seleniumManager;
 
+    }
 
     /**
      * Code will be run only if the SeleniumTestSuite was instanced
      */
     @BeforeSuite
-    public void setUpAppiumConfig() {
+    public void setUpSeleniumConfig() {
         setTestArt(SeleniumConfigSingleton.MULTI);
+        seleniumManager.setUpSeleniumServerList();
     }
 
     /**
      * Code will be run only if the SeleniumTestSuite was instanced
      */
     @AfterSuite
-    public void cleanUpAppiumConfig() {
-        setTestArt("");
+    public void cleanSeleniumConfig() {
+        setTestArt(SeleniumConfigSingleton.SINGLE);
+        seleniumManager.setDownSeleniumServerList();
     }
 }

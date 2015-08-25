@@ -159,10 +159,8 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private TableColumn<TestCase, String> tbcWebPortal;
 
-
-    @FXML
     private FXMLArrivalTableViewController tbvTestsuiteController;
-    private FXMLArrivalTableViewController firstTestsuiteController;
+   // private FXMLArrivalTableViewController firstTestsuiteController;
 
     private TableView<TestCase> currentTableView;
 
@@ -171,7 +169,6 @@ public class FXMLArrivalMainController implements Initializable {
 
 
     //  private HashMap<String, TableView> testSuitesTab;
-
     private FileNameLoader fileNameLoaderIOS;
     private FileNameLoader fileNameLoaderAND;
     private FileNameLoader fileNameLoaderWeb;
@@ -219,12 +216,13 @@ public class FXMLArrivalMainController implements Initializable {
         accTestCase.setExpandedPane(ios);
 
         //SetUp Testsuite
-        currentTableView = tbvTestsuiteController.getTbvTestsuite();
-        firstTestsuiteController = tbvTestsuiteController;
+      //  currentTableView = tbvTestsuiteController.getTbvTestsuite();
+        setUpFirstTableView();
+      //  firstTestsuiteController = tbvTestsuiteController;
         addTableViewListener();
 
         //SetUp OptionsView
-        // setUpOptionsView();
+        //setUpOptionsView();
     }
 
     @FXML
@@ -250,7 +248,11 @@ public class FXMLArrivalMainController implements Initializable {
         tab.setContent(testSuiteTable);
 
         //Dialog für Testsuitename
-        String tabName = setTestsuiteNameDialog();
+        String tabName;
+        if(actionEvent.getSource()== btnNewTestsuite)
+            tabName = setTestsuiteNameDialog();
+        else
+            tabName = "";
 
         if (tabName.isEmpty()) {
             tab.setText("Testsuite -" + " " + tabMainTabPane.getTabs().size());
@@ -347,9 +349,16 @@ public class FXMLArrivalMainController implements Initializable {
     public void showOptions(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
         optionsViewStage = setUpOptionsView();
+
+        if(!tbvTestsuiteController.isOptionsEmty()){
+            optionsController.setOptions(tbvTestsuiteController.getOptions());
+            optionsController.updateOptionsView();
+        }
+
         optionsViewStage.hide();
         optionsViewStage.initOwner(((Node) actionEvent.getSource()).getScene().getWindow());
         optionsViewStage.show();
+
     }
 
     @FXML
@@ -381,7 +390,6 @@ public class FXMLArrivalMainController implements Initializable {
         btnSkip.getTooltip().setText(bundle.getString("tooltip.skip"));
         btnStop.getTooltip().setText(bundle.getString("tooltip.stop"));
         btnRun.getTooltip().setText(bundle.getString("tooltip.run"));
-
 
         mnuFile.setText(bundle.getString("menu.title.file"));
         mnuEdit.setText(bundle.getString("menu.title.edit"));
@@ -473,17 +481,31 @@ public class FXMLArrivalMainController implements Initializable {
                         .getSelectedItem()
                         .getContent();
 
-                currentTableView = tempTableView;
+            //    currentTableView = tempTableView;
 
-                if (tempTableView.getUserData() == null) {
+             /*  if (tempTableView.getUserData() == null) {
                     currentTableView = tempTableView;
                     tbvTestsuiteController = firstTestsuiteController;
-                } else {
+                } else {*/
                     currentTableView = tempTableView;
                     tbvTestsuiteController = (FXMLArrivalTableViewController) tempTableView.getUserData();
-                }
+             //   }
             }
         });
+    }
+
+    private void setUpFirstTableView() {
+        try {
+            createNewTestsuite(new ActionEvent());
+            TableView tempTableView = (TableView) tabMainTabPane
+                    .getSelectionModel()
+                    .getSelectedItem()
+                    .getContent();
+            currentTableView = tempTableView;
+            tbvTestsuiteController = (FXMLArrivalTableViewController) tempTableView.getUserData();
+        } catch (IOException e) {
+            log.error(e.getStackTrace());
+        }
     }
 
     private Stage setUpOptionsView() {
@@ -500,11 +522,10 @@ public class FXMLArrivalMainController implements Initializable {
             optionsStage.setTitle("Options - ArrivalOcto");
             optionsStage.setResizable(false);
             optionsStage.initModality(Modality.APPLICATION_MODAL);
-           // optionsController = loader.getController();
+            optionsController = loader.getController();
             optionsScene.setUserData(tbvTestsuiteController);
             //log.warn(optionsStage);
             return optionsStage;
-
         } catch (IOException e) {
             log.error(e.getStackTrace());
             return null;

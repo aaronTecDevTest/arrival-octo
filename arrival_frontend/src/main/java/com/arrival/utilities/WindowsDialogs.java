@@ -8,4 +8,8 @@ package com.arrival.utilities;
  * Package: com.arrival.utilities
  */
 public class WindowsDialogs {
+
+    public WindowsDialogs(){
+
+    }
 }

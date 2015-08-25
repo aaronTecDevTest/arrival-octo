@@ -9,6 +9,7 @@ import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
@@ -28,21 +29,12 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     public static SeleniumConfigSingleton seleniumConfigSingleton = SeleniumConfigSingleton.getInstance();
     public ArrayList<Object> seleniumServerList = new ArrayList<>();
 
-  //  public SeleniumConfig seleniumConfig = seleniumConfigSingleton.getTestSuiteConfiguration();
-    public IFConfig seleniumConfig = seleniumConfigSingleton.getTestSuiteConfiguration();
-    public SeleniumManager seleniumManager;
+    public SeleniumManager seleniumManager = seleniumConfigSingleton.getSeleniumManager();
     public WebDriver browser;
 
 
-    public WebDriver openBrowser() {
-        //seleniumManager.setSeleniumConfig(seleniumConfig);
-        //browser = seleniumManager.getBrowser(seleniumConfig);
-        return browser;
-    }
-
-    public void closeBrowser(WebDriver driver) {
-        driver.close();
-        driver.quit();
+    public void setBrowser (WebDriver driver) {
+        browser = driver;
     }
 
     /**
@@ -70,25 +62,16 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         return server;
     }
 
-
     @BeforeClass
     public void setUpTestClass() {
-        seleniumManager = new SeleniumManager();
-        if (SeleniumConfigSingleton.getTestArt().equals(SeleniumConfigSingleton.MULTI)) {
-            //Should be here for Appium and Selenium Grid config (Only Json config)
+        seleniumServerList = seleniumManager.getSeleniumServerList();
+    }
 
-            seleniumManager.setSeleniumConfig(seleniumConfig);
-            browser = seleniumManager.getBrowser(seleniumConfig);
-
-
-            seleniumServerList.add("android Test1");
-            seleniumServerList.add("android Test2");
-            seleniumServerList.add("ios Test1");
-            seleniumServerList.add("ios Test2");
-        } else {
-            seleniumManager.setSeleniumConfig(seleniumConfig);
-            browser = seleniumManager.getBrowser(seleniumConfig);
-            seleniumServerList.add("android Default");
+    @AfterClass
+    public void closeBrowser() {
+       for (Object temp : seleniumServerList){
+           ((WebDriver) temp).close();
+           ((WebDriver) temp).quit();
         }
     }
 
@@ -104,7 +87,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         }
     }
 
-    /*
+    /**
      *Web general method (Selenium)
      */
 

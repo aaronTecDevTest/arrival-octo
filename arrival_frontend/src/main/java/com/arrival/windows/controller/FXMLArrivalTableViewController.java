@@ -8,8 +8,10 @@ package com.arrival.windows.controller;
  * Package: com.arrival.windows.controller
  */
 
+import com.arrival.selenium.SeleniumManager;
 import com.arrival.unit.generic.SeleniumConfigSingleton;
 import com.arrival.unit.suites.ArrivalTestSuite;
+import com.arrival.utilities.WindowsDialogs;
 import com.arrival.windows.model.Options;
 import com.arrival.windows.model.TestCase;
 import javafx.collections.FXCollections;
@@ -104,18 +106,28 @@ public class FXMLArrivalTableViewController implements Initializable {
 
     public void runTestSuite() {
         log.info(options.toString());
+
+        SeleniumManager tempSeleniumManager = new SeleniumManager();
+        tempSeleniumManager.setTestSuiteConfigs(options);
+        SeleniumConfigSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
+
         List<XmlClass> tempClasses = new ArrayList<>();
-        SeleniumConfigSingleton.getInstance().setTestSuiteConfiguration(options);
+        if(options.getPlatform().contains("Web"))
+            tempClasses.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
+        else if (options.getPlatform().contains("IOS") ||options.getPlatform().contains("Android"))
+            tempClasses.add(new XmlClass("com.arrival.unit.generic.AppiumConfigSingleton"));
+        else {
+            //Todo not impl...
+            WindowsDialogs noTestConfigSet = new WindowsDialogs();
+        }
+
+
         dateTestSuite = tbvTestsuite.getItems();
-
-        tempClasses.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
-
         for (int i = 0; i < dateTestsuite.size(); i++) {
             tempClasses.add(new XmlClass(((TestCase) dateTestSuite.get(i)).getTcClassPackage()));
         }
         runableTestSuite.setClasses(tempClasses);
         runableTestSuite.runVirtualSuit();
-
     }
 
     private void iniBundleResources() {
@@ -145,5 +157,9 @@ public class FXMLArrivalTableViewController implements Initializable {
 
     public void setOptions(Options options) {
         this.options = options;
+    }
+
+    public boolean isOptionsEmty(){
+        return options == null;
     }
 }

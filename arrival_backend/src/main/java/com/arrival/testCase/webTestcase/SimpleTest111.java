@@ -16,31 +16,20 @@ import org.testng.annotations.Test;
 public class SimpleTest111 extends ArrivalWeb {
 
     @Test(dataProvider = "driver", groups = {"fast"})
-    public void aFastTest(String serverName, Integer id) {
-        try {
+    public void aFastTest(WebDriver serverName, Integer id) {
             System.out.println("Fast test 111 " + serverName + " " + id);
-
-            WebDriver driver = openBrowser();
-
-            driver.get("http://www.google.com");
-
+            setBrowser(serverName);
+            serverName.get("http://www.google.com");
             pauseTest(3000);
-
             click();
-            closeBrowser(driver);
-        } catch (Exception e) {
-            log.error(e.getStackTrace());
-        }
     }
-/*
+
     @Test(dataProvider = "driver", groups = {"slow"})
-    public void aSlowTest(String serverName, Integer id) {
+    public void aSlowTest(WebDriver serverName, Integer id) {
         System.out.println("Slow test 303 " + serverName + " " + id);
-
-        openBrowser().get("http://www.t-online.de");
-
-        pauseTest(3000);
-
-        closeBrowser();
-    }*/
+        setBrowser(serverName);
+        serverName.get("http://www.t-online.de");
+        pauseTest(1000);
+        click();
+    }
 }
