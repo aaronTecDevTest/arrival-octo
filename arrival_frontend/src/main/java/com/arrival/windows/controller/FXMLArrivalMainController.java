@@ -300,20 +300,16 @@ public class FXMLArrivalMainController implements Initializable {
         log.info(actionEvent.getSource());
         try {
 
-            ObservableList<Integer> indeces = currentTableView.getSelectionModel().getSelectedIndices();
+           // ObservableList<Integer> indeces = currentTableView.getSelectionModel().getSelectedIndices();
             ObservableList<TestCase> testCases = currentTableView.getSelectionModel().getSelectedItems();
-
-            currentTableView = (TableView<TestCase>) tabMainTabPane.getSelectionModel().getSelectedItem().getContent();
-            ObservableList dateTestsuite = currentTableView.getItems();
-            dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
-
-            if (indeces.size() == dateTestsuite.size()) {
+            dateTestsuite.removeAll(testCases);
+            /*if (indeces.size() == dateTestsuite.size()) {
                 dateTestsuite.removeAll(testCases);
             } else {
                 for (TestCase testCase : testCases) {
                     dateTestsuite.remove(testCase);
                 }
-            }
+            }*/
         } catch (Exception e) {
             log.error(e.getStackTrace());
         }

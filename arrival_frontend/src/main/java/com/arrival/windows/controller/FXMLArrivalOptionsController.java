@@ -314,23 +314,35 @@ public class FXMLArrivalOptionsController implements Initializable {
         cmbPlatform.getSelectionModel().select(options.getPlatform());
         cmbANDTestingArt.getSelectionModel().select(options.getMobileTestingArt());
         cmbIOSTestingArt.getSelectionModel().select(options.getMobileTestingArt());
-        cmbMaxParallel.getSelectionModel().select(options.getParallelTestingCount());
+        cmbMaxParallel.getSelectionModel().select(Integer.toString(options.getParallelTestingCount()));
         cmbWebServer.getSelectionModel().select(options.getServerName());
         cmbWebBrowser.getSelectionModel().select(options.getBrowserName());
+
+        if(options.getParallelTesting())
+            cmbMaxParallel.setDisable(false);
 
         togOnOffParallel.setSelected(options.getParallelTesting());
 
         if(options.getPlatform().contains("Web")){
             togJsonWeb.setSelected(options.getJsonConfigInUse());
             txtJsonConfigWeb.setText(options.getJsonConfigPath());
+            tabWebConfig.setDisable(false);
+            if(options.getJsonConfigInUse())
+                txtJsonConfigWeb.setDisable(false);
         }
         if(options.getPlatform().contains("IOS")){
             togJsonIOS.setSelected(options.getJsonConfigInUse());
             txtJsonConfigIOS.setText(options.getJsonConfigPath());
+            tabIOSConfig.setDisable(false);
+            if(options.getJsonConfigInUse())
+                txtJsonConfigIOS.setDisable(false);
         }
         if(options.getPlatform().contains("Android")){
             togJsonAND.setSelected(options.getJsonConfigInUse());
             txtJsonConfigAND.setText(options.getJsonConfigPath());
+            tabANDConfig.setDisable(false);
+            if(options.getJsonConfigInUse())
+                txtJsonConfigAND.setDisable(false);
         }
     }
 

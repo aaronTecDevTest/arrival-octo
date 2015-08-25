@@ -59,7 +59,7 @@ public class FXMLArrivalLogInController implements Initializable {
         try {
 
             URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
-            FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalLogIn"));
+            FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalMain"));
 
             Parent root = loader.load();
             Scene mainAppScene = new Scene(root, 1300, 530);
