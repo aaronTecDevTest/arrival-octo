@@ -30,6 +30,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     public ArrayList<Object> seleniumServerList = new ArrayList<>();
 
     public SeleniumManager seleniumManager = seleniumConfigSingleton.getSeleniumManager();
+    public String server = seleniumManager.getTestSuiteConfigs().getServerName();
     public WebDriver browser;
 
 

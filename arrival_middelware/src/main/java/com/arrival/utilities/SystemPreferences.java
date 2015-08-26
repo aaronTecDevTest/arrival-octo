@@ -28,6 +28,7 @@ public class SystemPreferences {
     private static ResourceBundle bundleLogIn;
     private static ResourceBundle bundleMain;
     private static ResourceBundle bundleOptions;
+    private static ResourceBundle bundleDialogs;
 
     private SystemPreferences() {
         log.info(SystemPreferences.class + " is loaded!!");
@@ -86,7 +87,7 @@ public class SystemPreferences {
             bundleLogIn = loadBundle("bundles/arrivalLogIn_de.properties");
             bundleMain = loadBundle("bundles/arrivalMain_de.properties");
             bundleOptions = loadBundle("bundles/arrivalOptions_de.properties");
-
+            bundleDialogs = loadBundle("bundles/arrivalDialogs_de.properties");
         } catch (Exception e) {
             log.error(e.getStackTrace());
         }
@@ -111,6 +112,8 @@ public class SystemPreferences {
                 return bundleMain;
             case "arrivalOptions":
                 return bundleOptions;
+            case "arrivalDialogs":
+                return bundleDialogs;
             default:
                 return null;
         }

@@ -64,6 +64,7 @@ public class FXMLArrivalTableViewController implements Initializable {
     private ArrivalTestSuite runableTestSuite;
     private ObservableList dateTestSuite;
     private Options options;
+    private String platform;
 
     /**
      * Is a path where are the index of testng result.
@@ -99,35 +100,36 @@ public class FXMLArrivalTableViewController implements Initializable {
         tbvTestsuite.setItems(dateTestsuite);
 
         runableTestSuite = new ArrivalTestSuite();
-
-        //SetUp new OptionsView
     }
 
 
     public void runTestSuite() {
-        log.info(options.toString());
+        try{
+            log.info(options.toString());
+            SeleniumManager tempSeleniumManager = new SeleniumManager();
+            tempSeleniumManager.setTestSuiteConfigs(options);
+            SeleniumConfigSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
 
-        SeleniumManager tempSeleniumManager = new SeleniumManager();
-        tempSeleniumManager.setTestSuiteConfigs(options);
-        SeleniumConfigSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
+            List<XmlClass> tempClasses = new ArrayList<>();
+            if(options.getPlatform().contains("Web"))
+                tempClasses.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
+            else if (options.getPlatform().contains("IOS") ||options.getPlatform().contains("Android"))
+                tempClasses.add(new XmlClass("com.arrival.unit.generic.AppiumConfigSingleton"));
+            else {
+                log.warn("No Platform is set up!");
+                WindowsDialogs.noTestConfigSet();
+            }
 
-        List<XmlClass> tempClasses = new ArrayList<>();
-        if(options.getPlatform().contains("Web"))
-            tempClasses.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
-        else if (options.getPlatform().contains("IOS") ||options.getPlatform().contains("Android"))
-            tempClasses.add(new XmlClass("com.arrival.unit.generic.AppiumConfigSingleton"));
-        else {
-            //Todo not impl...
-            WindowsDialogs noTestConfigSet = new WindowsDialogs();
+            dateTestSuite = tbvTestsuite.getItems();
+            for (int i = 0; i < dateTestsuite.size(); i++) {
+                tempClasses.add(new XmlClass(((TestCase) dateTestSuite.get(i)).getTcClassPackage()));
+            }
+            runableTestSuite.setClasses(tempClasses);
+            runableTestSuite.runVirtualSuit();
+        } catch (Exception e){
+            log.warn("Options object is null" + e.getStackTrace());
+            WindowsDialogs.optionsIsNull();
         }
-
-
-        dateTestSuite = tbvTestsuite.getItems();
-        for (int i = 0; i < dateTestsuite.size(); i++) {
-            tempClasses.add(new XmlClass(((TestCase) dateTestSuite.get(i)).getTcClassPackage()));
-        }
-        runableTestSuite.setClasses(tempClasses);
-        runableTestSuite.runVirtualSuit();
     }
 
     private void iniBundleResources() {
@@ -161,5 +163,25 @@ public class FXMLArrivalTableViewController implements Initializable {
 
     public boolean isOptionsEmty(){
         return options == null;
+    }
+
+    public String getPlatform() {
+        return platform;
+    }
+
+    public void setPlatform(String platform) {
+        this.platform = platform;
+    }
+
+    public boolean isWebPlatform(){
+        return platform.contains("Web");
+    }
+
+    public boolean isIOSPlatform(){
+        return platform.contains("IOS");
+    }
+
+    public boolean isANDPlatform(){
+        return platform.contains("Android");
     }
 }

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Configuration>
     <Properties>
-        <Property name='projectPrefix'>Mpj</Property>
+        <Property name='projectPrefix'>ArrivalLogger</Property>
         <Property name='rawPattern'>%d %-5p [%t] %C{2} (%F:%L) - %m%n</Property>
 
         <Property name='coloredFullPattern'>%d %highlight{%-5p}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=cyan,

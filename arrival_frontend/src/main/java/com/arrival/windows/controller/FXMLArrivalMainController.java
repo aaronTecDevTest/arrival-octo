@@ -10,12 +10,14 @@ package com.arrival.windows.controller;
 
 import com.arrival.utilities.FileNameLoader;
 import com.arrival.utilities.SystemPreferences;
+import com.arrival.utilities.WindowsDialogs;
 import com.arrival.windows.model.TestCase;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -25,6 +27,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
@@ -160,7 +164,6 @@ public class FXMLArrivalMainController implements Initializable {
     private TableColumn<TestCase, String> tbcWebPortal;
 
     private FXMLArrivalTableViewController tbvTestsuiteController;
-   // private FXMLArrivalTableViewController firstTestsuiteController;
 
     private TableView<TestCase> currentTableView;
 
@@ -187,7 +190,13 @@ public class FXMLArrivalMainController implements Initializable {
         bundle = resources;
         iniBundleResources();
 
-        //Setup Tablecolmn Propertys
+        //Setup Table-Data Objects
+        dateANDTestcase = FXCollections.observableArrayList();
+        dateTestsuite = FXCollections.observableArrayList();
+        dateIOSTestcase = FXCollections.observableArrayList();
+        dateWebPortalTestcase = FXCollections.observableArrayList();
+
+        //Setup Table-Colmn Properties
         tbcIOS.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcAndroid.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcWebPortal.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
@@ -205,7 +214,6 @@ public class FXMLArrivalMainController implements Initializable {
         setUpIOSTestcase();
         setUpANDTestcase();
         setUpWebPortalTestcase();
-        //setUpTestsuite();
 
         tbvIOS.setItems(dateIOSTestcase);
         tbvAND.setItems(dateANDTestcase);
@@ -216,13 +224,9 @@ public class FXMLArrivalMainController implements Initializable {
         accTestCase.setExpandedPane(ios);
 
         //SetUp Testsuite
-      //  currentTableView = tbvTestsuiteController.getTbvTestsuite();
         setUpFirstTableView();
-      //  firstTestsuiteController = tbvTestsuiteController;
         addTableViewListener();
 
-        //SetUp OptionsView
-        //setUpOptionsView();
     }
 
     @FXML
@@ -243,6 +247,28 @@ public class FXMLArrivalMainController implements Initializable {
         FXMLLoader loader = new FXMLLoader(null, bundle);
         TableView testSuiteTable = loader.load(url.openStream());
         Tab tab = new Tab(null, testSuiteTable);
+        Label tabLabel = new Label();
+        tab.setGraphic(tabLabel);
+
+
+        tabLabel.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
+                    if (mouseEvent.getClickCount() == 2) {
+                        String tabName = "Regression Test";
+                        if(mouseEvent.getSource()== tabLabel)
+                            tabName = WindowsDialogs.setTestsuiteNameDialog();
+
+                        if (!tabName.isEmpty()) {
+                            tabLabel.setText(tabName);
+                        }
+                    }
+                }
+            }
+        });
+
+
         FXMLArrivalTableViewController controller = loader.getController();
         testSuiteTable.setUserData(controller);
         tab.setContent(testSuiteTable);
@@ -250,14 +276,14 @@ public class FXMLArrivalMainController implements Initializable {
         //Dialog für Testsuitename
         String tabName;
         if(actionEvent.getSource()== btnNewTestsuite)
-            tabName = setTestsuiteNameDialog();
+            tabName = WindowsDialogs.setTestsuiteNameDialog();
         else
-            tabName = "";
+            tabName = "Regression Test";
 
         if (tabName.isEmpty()) {
-            tab.setText("Testsuite -" + " " + tabMainTabPane.getTabs().size());
+            tabLabel.setText("Testsuite -" + " " + tabMainTabPane.getTabs().size());
         } else {
-            tab.setText(tabName);
+            tabLabel.setText(tabName);
         }
 
         tabMainTabPane.getTabs().addAll(tab);
@@ -273,22 +299,47 @@ public class FXMLArrivalMainController implements Initializable {
     public void addTestcaseInTestsuite(ActionEvent actionEvent) {
         try {
             if (accTestCase.getExpandedPane().getText().equals("iOS - Testcase")) {
-                log.info(actionEvent.getSource() + "ios");
-                dateTestsuite = currentTableView.getItems();
-                dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
+                log.info(actionEvent.getSource() + "IOS");
+                if(dateTestsuite.isEmpty()){
+                    tbvTestsuiteController.setPlatform("IOS");
+                }
+
+                if(tbvTestsuiteController.isIOSPlatform()){
+                    dateTestsuite = currentTableView.getItems();
+                    dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
+                }else{
+                    log.warn("Is not a IOS Testcase");
+                    WindowsDialogs.rongPlatform(tbvTestsuiteController.getPlatform());
+                }
             }
 
             if (accTestCase.getExpandedPane().getText().equals("Android - Testcase")) {
-                log.info(actionEvent.getSource() + "and");
-                dateTestsuite = currentTableView.getItems();
-                dateTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
+                log.info(actionEvent.getSource() + "AND");
+                if(dateTestsuite.isEmpty()){
+                    tbvTestsuiteController.setPlatform("Android");
+                }
+
+                if(tbvTestsuiteController.isANDPlatform()){
+                    dateTestsuite = currentTableView.getItems();
+                    dateTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
+                }else{
+                    log.warn("Is not a IOS Testcase");
+                    WindowsDialogs.rongPlatform(tbvTestsuiteController.getPlatform());
+                }
             }
 
             if (accTestCase.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
-                log.info(actionEvent.getSource() + "web");
-                dateTestsuite = currentTableView.getItems();
-                dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
-
+                log.info(actionEvent.getSource() + "Web");
+                if(dateTestsuite.isEmpty()){
+                    tbvTestsuiteController.setPlatform("Web");
+                }
+                if(tbvTestsuiteController.isWebPlatform()){
+                    dateTestsuite = currentTableView.getItems();
+                    dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
+                }else{
+                    log.warn("Is not a IOS Testcase");
+                    WindowsDialogs.rongPlatform(tbvTestsuiteController.getPlatform());
+                }
             }
         } catch (Exception e) {
             log.error(e.getStackTrace());
@@ -299,17 +350,13 @@ public class FXMLArrivalMainController implements Initializable {
     public void deleteTestcaseFromTestsuite(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
         try {
-
-           // ObservableList<Integer> indeces = currentTableView.getSelectionModel().getSelectedIndices();
             ObservableList<TestCase> testCases = currentTableView.getSelectionModel().getSelectedItems();
             dateTestsuite.removeAll(testCases);
-            /*if (indeces.size() == dateTestsuite.size()) {
-                dateTestsuite.removeAll(testCases);
-            } else {
-                for (TestCase testCase : testCases) {
-                    dateTestsuite.remove(testCase);
-                }
-            }*/
+
+            if(currentTableView.getItems().isEmpty()) {
+                tbvTestsuiteController.setPlatform(null);
+                dateTestsuite = FXCollections.emptyObservableList();
+            }
         } catch (Exception e) {
             log.error(e.getStackTrace());
         }
@@ -452,22 +499,6 @@ public class FXMLArrivalMainController implements Initializable {
         dateWebPortalTestcase = FXCollections.observableArrayList(tempList);
     }
 
-    private String setTestsuiteNameDialog() {
-        TextInputDialog dialog = new TextInputDialog();
-        dialog.setTitle("Testsuite name");
-        dialog.setHeaderText("Bitte den Name des Testsuite eintragen:");
-
-        Optional<String> result = dialog.showAndWait();
-        String entered;
-
-        if (result.isPresent()) {
-            entered = result.get();
-        } else {
-            entered = "";
-        }
-        return entered;
-    }
-
     private void addTableViewListener() {
         tabMainTabPane.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Tab>() {
             @Override
@@ -476,16 +507,8 @@ public class FXMLArrivalMainController implements Initializable {
                         .getSelectionModel()
                         .getSelectedItem()
                         .getContent();
-
-            //    currentTableView = tempTableView;
-
-             /*  if (tempTableView.getUserData() == null) {
-                    currentTableView = tempTableView;
-                    tbvTestsuiteController = firstTestsuiteController;
-                } else {*/
                     currentTableView = tempTableView;
                     tbvTestsuiteController = (FXMLArrivalTableViewController) tempTableView.getUserData();
-             //   }
             }
         });
     }

@@ -1,6 +1,5 @@
 package com.arrival.selenium;
 
-import com.arrival.selenium.config.SeleniumConfig;
 import com.arrival.unit.generic.SeleniumConfigSingleton;
 import com.arrival.utilities.interfaces.IFConfig;
 import org.apache.logging.log4j.LogManager;
@@ -8,7 +7,6 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * @author Aaron Kutekidila
@@ -21,10 +19,9 @@ public class SeleniumManager {
     //Later for Singel-Test Config
     //private HashMap<String, IFConfig> singelConfigs;
     //Later for Singel-Test Config
-
+    WebDriver webDriver;
     private IFConfig testSuiteConfigs;
     private ArrayList<Object> seleniumServerList = new ArrayList<>();
-    WebDriver webDriver;
 
     public SeleniumManager() {
     }
@@ -46,22 +43,33 @@ public class SeleniumManager {
         this.testSuiteConfigs = testSuiteConfigs;
     }
 
-    public void setUpSeleniumServerList(){
+    public void setUpSeleniumServerList() {
         WebDriverManager webDriverManager = new WebDriverManager();
+        //ToDo not good impl.
         if (SeleniumConfigSingleton.getTestArt().equals(SeleniumConfigSingleton.MULTI)) {
             //Should be here for Appium and Selenium Grid config (Only Json config)
-            seleniumServerList.add(       webDriver = webDriverManager.setUpDriver(this.testSuiteConfigs)  );
-            seleniumServerList.add(       webDriver = webDriverManager.setUpDriver(this.testSuiteConfigs)  );
-            seleniumServerList.add(       webDriver = webDriverManager.setUpDriver(this.testSuiteConfigs)  );
-            seleniumServerList.add(       webDriver = webDriverManager.setUpDriver(this.testSuiteConfigs)  );
+            if(testSuiteConfigs.getParallelTesting()){
+                for(int i = 0; i <testSuiteConfigs.getParallelTestingCount(); i++) {
+                    seleniumServerList.add(webDriver = webDriverManager.setUpDriver(testSuiteConfigs));
+                }
+                if(!testSuiteConfigs.getServerName().contains("Non")){
+                    for(Object tempWebDriver:seleniumServerList){
+                        ((WebDriver) tempWebDriver).get(testSuiteConfigs.getServerName());
+                    }
+                }
+            }
+            else{
+                seleniumServerList.add(webDriver = webDriverManager.setUpDriver(testSuiteConfigs));
+                ((WebDriver) seleniumServerList.get(0)).get(testSuiteConfigs.getServerName());
+            }
 
         } else {
-            seleniumServerList.add(       webDriver = webDriverManager.setUpDriver(this.testSuiteConfigs)  );
+            seleniumServerList.add(webDriver = webDriverManager.setUpDriver(testSuiteConfigs));
         }
     }
 
-    public void setDownSeleniumServerList(){
-        for (Object temp : seleniumServerList){
+    public void setDownSeleniumServerList() {
+        for (Object temp : seleniumServerList) {
             ((WebDriver) temp).close();
             ((WebDriver) temp).quit();
         }
