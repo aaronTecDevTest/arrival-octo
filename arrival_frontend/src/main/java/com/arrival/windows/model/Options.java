@@ -19,11 +19,12 @@ public class Options implements IFConfig {
     private String mobileTestingArt = null;
     private Boolean jsonConfigInUse = false;
     private String jsonConfigPath = null;
+    private String saveResultPath = null;
 
     @Override
     public String toString() {
         return platform + "->" + parallelTesting.toString() + "->" + parallelTestingCount + "->" + browserName + "->" + serverName
-                + "->" + mobileTestingArt + "->" +jsonConfigInUse.toString() + "->" +jsonConfigPath;
+                + "->" + mobileTestingArt + "->" +jsonConfigInUse.toString() + "->" +jsonConfigPath + "->" + saveResultPath;
     }
 
     public String getPlatform() {
@@ -88,5 +89,13 @@ public class Options implements IFConfig {
 
     public void setJsonConfigInUse(Boolean jsonConfigInUse) {
         this.jsonConfigInUse = jsonConfigInUse;
+    }
+
+    public String getSaveResultPath() {
+        return saveResultPath;
+    }
+
+    public void setSaveResultPath(String saveResultPath) {
+        this.saveResultPath = saveResultPath;
     }
 }

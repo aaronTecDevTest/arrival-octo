@@ -1,7 +1,5 @@
 package com.arrival.selenium;
 
-
-import com.arrival.selenium.config.SeleniumConfig;
 import com.arrival.utilities.SystemPreferences;
 import com.arrival.utilities.interfaces.IFConfig;
 import org.apache.logging.log4j.LogManager;
@@ -16,6 +14,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -39,11 +39,6 @@ public class WebDriverManager {
         log.debug("Setting up Webdriver");
         WebDriver driver;
         String browser = runningConfiguration.getBrowserName().split(" ")[0];
-        //Toolkit toolkit = Toolkit.getDefaultToolkit();
-        /*Dimension screenResolution = new Dimension((int)
-        toolkit.getScreenSize().getWidth(), (int)
-		toolkit.getScreenSize().getHeight());*/
-        // switch (runningConfiguration.getBrowser()) {
         switch (browser) {
             case "IE":
                 try {
@@ -193,28 +188,14 @@ public class WebDriverManager {
     public ChromeOptions setUpChromeDriver() {
         log.debug("Configuring ChromeDriver");
         ChromeOptions chOptions = new ChromeOptions();
-        //List <String> arguments = new ArrayList<String>();
+        List<String> arguments = new ArrayList<String>();
 
         //TODO bitte hier noch sinnvolle optionnen eintrgagen
-
         //arguments.add("--silenc");
         //arguments.add("--use-mobile-user-agent = Mozilla/5.0 (Linux; U; Android 4.3; en-us; SM-N900T Build/JSS15J) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30");
 
-        //chOptions.addArguments(arguments);
+        chOptions.addArguments(arguments);
         log.debug("ChromeDriver configured successfully");
         return chOptions;
     }
-/*
-    public static void main(String[] args) {
-        WebDriverManager driverManager = new WebDriverManager();
-        WebDriver dr = driverManager.setUpDriver(new SeleniumConfig());
-        dr.get("http://www.google.de");
-        try{
-            Thread.sleep(3000);
-        }
-        catch (Exception e) {
-            System.out.println(e.getStackTrace());
-        }
-        dr.close();
-    }*/
 }

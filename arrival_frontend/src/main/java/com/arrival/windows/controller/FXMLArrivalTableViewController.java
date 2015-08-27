@@ -67,12 +67,6 @@ public class FXMLArrivalTableViewController implements Initializable {
     private String platform;
 
     /**
-     * Is a path where are the index of testng result.
-     */
-    private String resultTestSuite;
-
-
-    /**
      * Called to initialize a controller after its root element has been
      * completely processed.
      *
@@ -99,6 +93,7 @@ public class FXMLArrivalTableViewController implements Initializable {
         setUpTestsuite();
         tbvTestsuite.setItems(dateTestsuite);
 
+        //ToDo ini bei runtestcase
         runableTestSuite = new ArrivalTestSuite();
     }
 

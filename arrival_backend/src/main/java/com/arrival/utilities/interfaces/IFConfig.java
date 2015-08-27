@@ -17,6 +17,7 @@ public interface IFConfig {
     String mobileTestingArt = null;
     Boolean jsonConfigInUse = false;
     String jsonConfigPath = null;
+    String saveResultPath = null;
 
     String getPlatform();
 
@@ -49,4 +50,8 @@ public interface IFConfig {
      Boolean getJsonConfigInUse();
 
      void setJsonConfigInUse(Boolean jsonConfigInUse);
+
+    String getSaveResultPath();
+
+    void setSaveResultPath(String saveResultPath);
 }

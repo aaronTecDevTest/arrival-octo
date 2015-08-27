@@ -84,6 +84,11 @@ public class FXMLArrivalOptionsController implements Initializable {
     @FXML
     private ComboBox<String> cmbANDTestingArt;
 
+    @FXML
+    private TextField txtSaveResultPath;
+    @FXML
+    private Button btnSaveResultPath;
+
     /*
     @FXML
     private Button btnOK;
@@ -112,7 +117,6 @@ public class FXMLArrivalOptionsController implements Initializable {
         webBrowser = FXCollections.observableArrayList(resources.getString("tab.web.browser").split(","));
         webServer = FXCollections.observableArrayList(resources.getString("tab.web.server").split(","));
 
-
         cmbPlatform.getItems().addAll(platform);
         cmbANDTestingArt.getItems().addAll(andTestingArt);
         cmbIOSTestingArt.getItems().addAll(iosTestingArt);
@@ -122,7 +126,6 @@ public class FXMLArrivalOptionsController implements Initializable {
 
         setDefaultConfig();
     }
-
 
 
     @FXML
@@ -137,6 +140,8 @@ public class FXMLArrivalOptionsController implements Initializable {
                 txtJsonConfigIOS.setText(selectedDirectory.getAbsolutePath());
             else if (actionEvent.getSource().equals(btnJsonConfigAND))
                 txtJsonConfigAND.setText(selectedDirectory.getAbsolutePath());
+            else if (actionEvent.getSource().equals(btnSaveResultPath))
+                txtSaveResultPath.setText((selectedDirectory.getAbsolutePath()));
         } else {
             log.error("Count open or load directory!");
         }
@@ -161,9 +166,6 @@ public class FXMLArrivalOptionsController implements Initializable {
         log.info(actionEvent.getSource());
         Scene tempScene = ((Node) actionEvent.getSource()).getScene();
         ((Stage) tempScene.getWindow()).close();
-
-        // Stage tempStage = (Stage)btnCancel.getScene().getWindow();
-        // tempStage.close();
     }
 
     @FXML
@@ -226,12 +228,16 @@ public class FXMLArrivalOptionsController implements Initializable {
                 btnJsonConfigWeb.setDisable(false);
                 togJsonWeb.setSelected(true);
                 togJsonWeb.setText("On");
+                cmbWebBrowser.setDisable(false);
+                cmbWebServer.setDisable(false);
             }
             else{
                 txtJsonConfigWeb.setDisable(true);
                 btnJsonConfigWeb.setDisable(true);
                 togJsonWeb.setSelected(false);
                 togJsonWeb.setText("Off");
+                cmbWebBrowser.setDisable(true);
+                cmbWebServer.setDisable(true);
             }
         }
     }
@@ -265,6 +271,7 @@ public class FXMLArrivalOptionsController implements Initializable {
                 btnJsonConfigAND.setDisable(false);
                 togJsonAND.setSelected(true);
                 togJsonAND.setText("On");
+
             }
             else{
                 cmbMaxParallel.setDisable(true);
@@ -272,6 +279,7 @@ public class FXMLArrivalOptionsController implements Initializable {
                 btnJsonConfigAND.setDisable(true);
                 togJsonAND.setSelected(false);
                 togJsonAND.setText("Off");
+
             }
         }
     }
@@ -291,7 +299,7 @@ public class FXMLArrivalOptionsController implements Initializable {
         options.setParallelTestingCount(Integer.valueOf(cmbMaxParallel.getSelectionModel().getSelectedItem()));
         options.setServerName(cmbWebServer.getSelectionModel().getSelectedItem());
         options.setBrowserName(cmbWebBrowser.getSelectionModel().getSelectedItem());
-
+        options.setServerName(txtSaveResultPath.getText());
         options.setParallelTesting(togOnOffParallel.isSelected());
 
         if(!tabWebConfig.isDisable()) {
@@ -317,6 +325,7 @@ public class FXMLArrivalOptionsController implements Initializable {
         cmbMaxParallel.getSelectionModel().select(Integer.toString(options.getParallelTestingCount()));
         cmbWebServer.getSelectionModel().select(options.getServerName());
         cmbWebBrowser.getSelectionModel().select(options.getBrowserName());
+        txtSaveResultPath.setText(options.getSaveResultPath());
 
         if(options.getParallelTesting())
             cmbMaxParallel.setDisable(false);
@@ -354,6 +363,10 @@ public class FXMLArrivalOptionsController implements Initializable {
         cmbMaxParallel.getSelectionModel().select("2");
         cmbWebServer.getSelectionModel().select("Non");
         cmbWebBrowser.getSelectionModel().select("FF - FireFox");
+        txtJsonConfigWeb.setText("");
+        txtJsonConfigAND.setText("");
+        txtJsonConfigIOS.setText("");
+        txtSaveResultPath.setText("");
 
         togOnOffParallel.setSelected(false);
         togJsonWeb.setSelected(false);
@@ -364,6 +377,8 @@ public class FXMLArrivalOptionsController implements Initializable {
         togJsonIOS.setText("Off");
         togJsonAND.setText("Off");
 
+        cmbWebBrowser.setDisable(true);
+        cmbWebServer.setDisable(true);
         cmbMaxParallel.setDisable(true);
         txtJsonConfigWeb.setDisable(true);
         txtJsonConfigAND.setDisable(true);

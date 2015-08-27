@@ -1,5 +1,6 @@
 package com.arrival.unit.suites;
 
+import com.arrival.unit.generic.SeleniumConfigSingleton;
 import com.arrival.unit.listener.EmailListener;
 import com.arrival.unit.listener.PreConfigListener;
 import org.apache.logging.log4j.LogManager;
@@ -97,6 +98,10 @@ public class ArrivalTestSuite {
 
         //ToDo: Mit Path class implement
         String tempPath = "../arrival-Octo/arrival_backend/src/main/resources/report/testng/selenium/";
+       /* String userSavePath = SeleniumConfigSingleton.getInstance().getSeleniumManager().getTestSuiteConfigs().getSaveResultPath();
+        if(!userSavePath.isEmpty())
+            tempPath = userSavePath;
+*/
         String outPutDirectory = tempPath + dateFormat.format(cal.getTime());
 
         createNewDirectory(outPutDirectory);

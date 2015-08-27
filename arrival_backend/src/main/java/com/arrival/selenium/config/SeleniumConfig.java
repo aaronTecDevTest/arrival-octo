@@ -23,6 +23,7 @@ public class SeleniumConfig implements IFConfig {
     private String mobileTestingArt = null;
     private Boolean jsonConfigInUse;
     private String jsonConfigPath = null;
+    private String saveResultPath = null;
 
     public void runConfig() {
     }
@@ -96,5 +97,13 @@ public class SeleniumConfig implements IFConfig {
 
     public void setJsonConfigInUse(Boolean jsonConfigInUse) {
         this.jsonConfigInUse = jsonConfigInUse;
+    }
+
+    public String getSaveResultPath() {
+        return saveResultPath;
+    }
+
+    public void setSaveResultPath(String saveResultPath) {
+        this.saveResultPath = saveResultPath;
     }
 }
