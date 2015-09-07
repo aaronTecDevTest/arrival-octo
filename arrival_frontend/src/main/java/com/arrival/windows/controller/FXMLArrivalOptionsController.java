@@ -297,9 +297,9 @@ public class FXMLArrivalOptionsController implements Initializable {
         options.setMobileTestingArt(cmbANDTestingArt.getSelectionModel().getSelectedItem());
         options.setMobileTestingArt(cmbIOSTestingArt.getSelectionModel().getSelectedItem());
         options.setParallelTestingCount(Integer.valueOf(cmbMaxParallel.getSelectionModel().getSelectedItem()));
-        options.setServerName(cmbWebServer.getSelectionModel().getSelectedItem());
         options.setBrowserName(cmbWebBrowser.getSelectionModel().getSelectedItem());
-        options.setServerName(txtSaveResultPath.getText());
+        options.setServerName(cmbWebServer.getSelectionModel().getSelectedItem());
+        options.setSaveResultPath(txtSaveResultPath.getText());
         options.setParallelTesting(togOnOffParallel.isSelected());
 
         if(!tabWebConfig.isDisable()) {
@@ -377,8 +377,8 @@ public class FXMLArrivalOptionsController implements Initializable {
         togJsonIOS.setText("Off");
         togJsonAND.setText("Off");
 
-        cmbWebBrowser.setDisable(true);
-        cmbWebServer.setDisable(true);
+        cmbWebBrowser.setDisable(false);
+        cmbWebServer.setDisable(false);
         cmbMaxParallel.setDisable(true);
         txtJsonConfigWeb.setDisable(true);
         txtJsonConfigAND.setDisable(true);

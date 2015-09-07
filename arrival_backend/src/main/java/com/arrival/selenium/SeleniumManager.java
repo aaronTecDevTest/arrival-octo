@@ -50,7 +50,8 @@ public class SeleniumManager {
             //Should be here for Appium and Selenium Grid config (Only Json config)
             if(testSuiteConfigs.getParallelTesting()){
                 for(int i = 0; i <testSuiteConfigs.getParallelTestingCount(); i++) {
-                    seleniumServerList.add(webDriver = webDriverManager.setUpDriver(testSuiteConfigs));
+                    webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
+                    seleniumServerList.add(webDriver);
                 }
                 if(!testSuiteConfigs.getServerName().contains("Non")){
                     for(Object tempWebDriver:seleniumServerList){
@@ -59,12 +60,14 @@ public class SeleniumManager {
                 }
             }
             else{
-                seleniumServerList.add(webDriver = webDriverManager.setUpDriver(testSuiteConfigs));
+                webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
+                seleniumServerList.add(webDriver);
                 ((WebDriver) seleniumServerList.get(0)).get(testSuiteConfigs.getServerName());
             }
 
         } else {
-            seleniumServerList.add(webDriver = webDriverManager.setUpDriver(testSuiteConfigs));
+            webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
+            seleniumServerList.add(webDriver);
         }
     }
 

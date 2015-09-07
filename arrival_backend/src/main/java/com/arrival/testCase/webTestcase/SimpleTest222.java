@@ -17,11 +17,10 @@ public class SimpleTest222 extends ArrivalWeb {
 
     @Test(dataProvider = "driver", groups = {"fast"})
     public void aFastTest(WebDriver browser, Integer id) {
-            System.out.println("Fast test 222 " + browser + " " + id);
+        System.out.println("Fast test 222 " + browser + " " + id);
         setBrowser(browser);
         browser.get("http://www.google.com");
-
-            pauseTest(3000);
+        pauseTest(3000);
         click();
     }
 
@@ -30,7 +29,6 @@ public class SimpleTest222 extends ArrivalWeb {
         System.out.println("Slow test 303 " + browser + " " + id);
         setBrowser(browser);
         browser.get("http://www.telekom.de/");
-
         pauseTest(1000);
         click();
     }

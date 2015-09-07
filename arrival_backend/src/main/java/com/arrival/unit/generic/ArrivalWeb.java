@@ -9,9 +9,7 @@ import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.*;
 
 import java.util.ArrayList;
 
@@ -26,11 +24,10 @@ import java.util.ArrayList;
 public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     protected static final Logger log = LogManager.getLogger(ArrivalWeb.class);
 
-    public static SeleniumConfigSingleton seleniumConfigSingleton = SeleniumConfigSingleton.getInstance();
-    public ArrayList<Object> seleniumServerList = new ArrayList<>();
-
+    public SeleniumConfigSingleton seleniumConfigSingleton = SeleniumConfigSingleton.getInstance();
     public SeleniumManager seleniumManager = seleniumConfigSingleton.getSeleniumManager();
-    public String server = seleniumManager.getTestSuiteConfigs().getServerName();
+//    public String server = seleniumManager.getTestSuiteConfigs().getServerName();
+    public ArrayList<Object> seleniumServerList = new ArrayList<>();
     public WebDriver browser;
 
 
@@ -65,6 +62,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
 
     @BeforeClass
     public void setUpTestClass() {
+        System.out.println("hallo asdfasdfasdfas");
         seleniumServerList = seleniumManager.getSeleniumServerList();
     }
 

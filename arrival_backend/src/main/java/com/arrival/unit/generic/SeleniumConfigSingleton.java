@@ -15,15 +15,16 @@ import org.testng.annotations.BeforeSuite;
  */
 
 public class SeleniumConfigSingleton {
+    private final static  Logger log = LogManager.getLogger(SeleniumConfigSingleton.class);
     public final static String SINGLE = "SINGLE";
     public final static String MULTI = "MULTI";
-    private final static  Logger log = LogManager.getLogger(SeleniumConfigSingleton.class);
     public static String testArt;
     private static SeleniumConfigSingleton ourInstance = new SeleniumConfigSingleton();
     private static SeleniumManager seleniumManager;
 
     private SeleniumConfigSingleton() {
         testArt = SINGLE;
+        seleniumManager = new SeleniumManager();
     }
 
     public static SeleniumConfigSingleton getInstance() {
