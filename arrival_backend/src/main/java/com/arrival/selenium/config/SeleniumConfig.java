@@ -25,7 +25,9 @@ public class SeleniumConfig implements IFConfig {
     private String jsonConfigPath = null;
     private String saveResultPath = null;
 
-    public void runConfig() {
+    public SeleniumConfig(){
+        browserName = "CH";
+        serverName = "";
     }
 
     @Override

@@ -8,10 +8,13 @@ package com.arrival.windows.controller;
  * Package: com.arrival.windows.controller
  */
 
+import com.arrival.unit.generic.ArrivalIOS;
+import com.arrival.unit.generic.ArrivalWeb;
 import com.arrival.utilities.FileNameLoader;
 import com.arrival.utilities.SystemPreferences;
 import com.arrival.utilities.WindowsDialogs;
 import com.arrival.windows.model.TestCase;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -35,9 +38,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
@@ -250,7 +254,6 @@ public class FXMLArrivalMainController implements Initializable {
         Label tabLabel = new Label();
         tab.setGraphic(tabLabel);
 
-
         tabLabel.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -267,7 +270,6 @@ public class FXMLArrivalMainController implements Initializable {
                 }
             }
         });
-
 
         FXMLArrivalTableViewController controller = loader.getController();
         testSuiteTable.setUserData(controller);
@@ -393,7 +395,7 @@ public class FXMLArrivalMainController implements Initializable {
         log.info(actionEvent.getSource());
         optionsViewStage = setUpOptionsView();
 
-        if(!tbvTestsuiteController.isOptionsEmty()){
+        if(!tbvTestsuiteController.isOptionsEmpty()){
             optionsController.setOptions(tbvTestsuiteController.getOptions());
             optionsController.updateOptionsView();
         }
@@ -460,21 +462,26 @@ public class FXMLArrivalMainController implements Initializable {
     /**
      * No FML Functions
      */
+    //ToDo classe
     private void setUpIOSTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderIOS = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
         ArrayList<String> fileNames = fileNameLoaderIOS.getClassName();
         ArrayList<String> classPackage = fileNameLoaderIOS.getClassPackage();
-
-        for (int i = 0; i < fileNameLoaderIOS.getSize(); i++) {
-            tempList.add(new TestCase(fileNames.get(i), "test2", "datum", "timer", "", "true", classPackage.get(i)));
+        try {
+            for (int i = 0; i < fileNameLoaderIOS.getSize(); i++) {
+                Class tempTestCaseClass = Class.forName(classPackage.get(i));
+                tempList.add(new TestCase(fileNames.get(i), "test2", "datum", "timer", "", "true", classPackage.get(i)));
+            }
+        }catch (Exception e){
+            log.error(e.getStackTrace());
         }
+
         dateIOSTestcase = FXCollections.observableArrayList(tempList);
     }
 
     private void setUpANDTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
-
         fileNameLoaderAND = new FileNameLoader("/com/arrival/testCase/andTestcase", ".class");
         ArrayList<String> fileNames = fileNameLoaderAND.getClassName();
         ArrayList<String> classPackage = fileNameLoaderAND.getClassPackage();
@@ -487,13 +494,22 @@ public class FXMLArrivalMainController implements Initializable {
 
     private void setUpWebPortalTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
-
         fileNameLoaderWeb = new FileNameLoader("/com/arrival/testCase/webTestcase", ".class");
         ArrayList<String> fileNames = fileNameLoaderWeb.getClassName();
         ArrayList<String> classPackage = fileNameLoaderWeb.getClassPackage();
 
-        for (int i = 0; i < fileNameLoaderWeb.getSize(); i++) {
-            tempList.add(new TestCase(fileNames.get(i), "test2", "datum", "timer", "", "true", classPackage.get(i)));
+        try {
+            for (int i = 0; i < fileNameLoaderWeb.getSize(); i++) {
+                Class<?> tempTestCaseClass = Class.forName(classPackage.get(i));
+                ArrivalWeb test = (ArrivalWeb) tempTestCaseClass.newInstance();
+
+                String tempString = test.getTcDescription();
+
+                tempList.add(new TestCase(fileNames.get(i), "test2", "datum", "timer", "", "true", classPackage.get(i)));
+            }
+        }
+        catch (Exception e){
+            log.error(e.getStackTrace() + ":  " + e.toString());
         }
 
         dateWebPortalTestcase = FXCollections.observableArrayList(tempList);

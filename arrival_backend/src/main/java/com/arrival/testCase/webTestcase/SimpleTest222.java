@@ -14,12 +14,20 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class SimpleTest222 extends ArrivalWeb {
+    public SimpleTest222(){
+        setTcID(222);
+        setTcDescription("Test2");
+        setTcDuration("20");
+        setTcLink("wwww.wetter.info");
+        setTcLastRun("100");
+        setTcResult("Link2");
+    }
 
     @Test(dataProvider = "driver", groups = {"fast"})
     public void aFastTest(WebDriver browser, Integer id) {
         System.out.println("Fast test 222 " + browser + " " + id);
         setBrowser(browser);
-        browser.get("http://www.google.com");
+        browser.get("http://www.apple.com/");
         pauseTest(3000);
         click();
     }
@@ -28,7 +36,7 @@ public class SimpleTest222 extends ArrivalWeb {
     public void aSlowTest(WebDriver browser, Integer id) {
         System.out.println("Slow test 303 " + browser + " " + id);
         setBrowser(browser);
-        browser.get("http://www.telekom.de/");
+        browser.get("http://www.telekom.com/");
         pauseTest(1000);
         click();
     }

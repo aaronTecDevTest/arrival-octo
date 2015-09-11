@@ -47,7 +47,7 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
         }
 
         /*
-        if(appiumConfi.getTestArt().equals("multi")){
+        if(appiumConfi.getFramework().equals("multi")){
             server = new Object[][]{
                                            {"Server1", 11},
                                            {"Server2", 32},
@@ -92,7 +92,7 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     }
 
     @Override
-    public void doppleClick() {
+    public void doubleClick() {
 
     }
 

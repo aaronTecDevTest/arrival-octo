@@ -1,5 +1,6 @@
 package com.arrival.selenium;
 
+import com.arrival.selenium.config.SeleniumConfig;
 import com.arrival.unit.generic.SeleniumConfigSingleton;
 import com.arrival.utilities.interfaces.IFConfig;
 import org.apache.logging.log4j.LogManager;
@@ -21,9 +22,12 @@ public class SeleniumManager {
     //Later for Singel-Test Config
     WebDriver webDriver;
     private IFConfig testSuiteConfigs;
-    private ArrayList<Object> seleniumServerList = new ArrayList<>();
+    private ArrayList<Object> seleniumServerList;
 
     public SeleniumManager() {
+        webDriver = null;
+        testSuiteConfigs = new SeleniumConfig();
+        seleniumServerList = new ArrayList<>();
     }
 
 
@@ -41,41 +45,6 @@ public class SeleniumManager {
 
     public void setTestSuiteConfigs(IFConfig testSuiteConfigs) {
         this.testSuiteConfigs = testSuiteConfigs;
-    }
-
-    public void setUpSeleniumServerList() {
-        WebDriverManager webDriverManager = new WebDriverManager();
-        //ToDo not good impl.
-        if (SeleniumConfigSingleton.getTestArt().equals(SeleniumConfigSingleton.MULTI)) {
-            //Should be here for Appium and Selenium Grid config (Only Json config)
-            if(testSuiteConfigs.getParallelTesting()){
-                for(int i = 0; i <testSuiteConfigs.getParallelTestingCount(); i++) {
-                    webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
-                    seleniumServerList.add(webDriver);
-                }
-                if(!testSuiteConfigs.getServerName().contains("Non")){
-                    for(Object tempWebDriver:seleniumServerList){
-                        ((WebDriver) tempWebDriver).get(testSuiteConfigs.getServerName());
-                    }
-                }
-            }
-            else{
-                webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
-                seleniumServerList.add(webDriver);
-                ((WebDriver) seleniumServerList.get(0)).get(testSuiteConfigs.getServerName());
-            }
-
-        } else {
-            webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
-            seleniumServerList.add(webDriver);
-        }
-    }
-
-    public void setDownSeleniumServerList() {
-        for (Object temp : seleniumServerList) {
-            ((WebDriver) temp).close();
-            ((WebDriver) temp).quit();
-        }
     }
 
 }

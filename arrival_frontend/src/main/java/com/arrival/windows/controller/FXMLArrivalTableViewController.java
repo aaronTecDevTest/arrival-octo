@@ -97,7 +97,6 @@ public class FXMLArrivalTableViewController implements Initializable {
         runableTestSuite = new ArrivalTestSuite();
     }
 
-
     public void runTestSuite() {
         try{
             log.info(options.toString());
@@ -119,6 +118,7 @@ public class FXMLArrivalTableViewController implements Initializable {
             for (int i = 0; i < dateTestsuite.size(); i++) {
                 tempClasses.add(new XmlClass(((TestCase) dateTestSuite.get(i)).getTcClassPackage()));
             }
+
             runableTestSuite.setClasses(tempClasses);
             runableTestSuite.runVirtualSuit();
         } catch (Exception e){
@@ -156,7 +156,7 @@ public class FXMLArrivalTableViewController implements Initializable {
         this.options = options;
     }
 
-    public boolean isOptionsEmty(){
+    public boolean isOptionsEmpty(){
         return options == null;
     }
 

@@ -16,14 +16,14 @@ import org.testng.annotations.BeforeSuite;
 
 public class SeleniumConfigSingleton {
     private final static  Logger log = LogManager.getLogger(SeleniumConfigSingleton.class);
-    public final static String SINGLE = "SINGLE";
-    public final static String MULTI = "MULTI";
-    public static String testArt;
+    public final static String TESTNG = "TESTNG";
+    public final static String ARRIVAL = "ARRIVAL";
+    public static String framework;
     private static SeleniumConfigSingleton ourInstance = new SeleniumConfigSingleton();
     private static SeleniumManager seleniumManager;
 
     private SeleniumConfigSingleton() {
-        testArt = SINGLE;
+        framework = TESTNG;
         seleniumManager = new SeleniumManager();
     }
 
@@ -32,12 +32,12 @@ public class SeleniumConfigSingleton {
         return ourInstance;
     }
 
-    public static String getTestArt() {
-        return testArt;
+    public static String getFramework() {
+        return framework;
     }
 
-    public static void setTestArt(String testArt) {
-        SeleniumConfigSingleton.testArt = testArt;
+    public static void setFramework(String framework) {
+        SeleniumConfigSingleton.framework = framework;
     }
 
     public SeleniumManager getSeleniumManager() {
@@ -54,8 +54,8 @@ public class SeleniumConfigSingleton {
      */
     @BeforeSuite
     public void setUpSeleniumConfig() {
-        setTestArt(SeleniumConfigSingleton.MULTI);
-        seleniumManager.setUpSeleniumServerList();
+        setFramework(SeleniumConfigSingleton.ARRIVAL);
+       // seleniumManager.setUpSeleniumServerList();
     }
 
     /**
@@ -63,7 +63,7 @@ public class SeleniumConfigSingleton {
      */
     @AfterSuite
     public void cleanSeleniumConfig() {
-        setTestArt(SeleniumConfigSingleton.SINGLE);
-        seleniumManager.setDownSeleniumServerList();
+        //setFramework(SeleniumConfigSingleton.TESTNG);
+     //   seleniumManager.setDownSeleniumServerList();
     }
 }

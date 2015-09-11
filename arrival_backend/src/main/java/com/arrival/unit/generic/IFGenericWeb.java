@@ -11,7 +11,7 @@ package com.arrival.unit.generic;
 public interface IFGenericWeb {
     void click();
 
-    void doppleClick();
+    void doubleClick();
 
     void press();
 

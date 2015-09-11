@@ -1,7 +1,7 @@
 package com.arrival.unit.generic;
 
 import com.arrival.selenium.SeleniumManager;
-import com.arrival.selenium.config.SeleniumConfig;
+import com.arrival.selenium.WebDriverManager;
 import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -9,7 +9,9 @@ import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 
 import java.util.ArrayList;
 
@@ -21,17 +23,18 @@ import java.util.ArrayList;
  * Package: com.arrival.unit.generic
  */
 
-public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
+//public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
+public  class ArrivalWeb implements IFTestCase, IFGenericWeb {
     protected static final Logger log = LogManager.getLogger(ArrivalWeb.class);
 
     public SeleniumConfigSingleton seleniumConfigSingleton = SeleniumConfigSingleton.getInstance();
     public SeleniumManager seleniumManager = seleniumConfigSingleton.getSeleniumManager();
-//    public String server = seleniumManager.getTestSuiteConfigs().getServerName();
+    //public String server = seleniumManager.getTestSuiteConfigs().getServerName();
     public ArrayList<Object> seleniumServerList = new ArrayList<>();
     public WebDriver browser;
 
 
-    public void setBrowser (WebDriver driver) {
+    public void setBrowser(WebDriver driver) {
         browser = driver;
     }
 
@@ -59,18 +62,59 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         }
         return server;
     }
-
+/*
     @BeforeClass
     public void setUpTestClass() {
         System.out.println("hallo asdfasdfasdfas");
+        seleniumManager.setUpSeleniumServerList();
         seleniumServerList = seleniumManager.getSeleniumServerList();
     }
 
     @AfterClass
     public void closeBrowser() {
-       for (Object temp : seleniumServerList){
+        seleniumManager.setDownSeleniumServerList();
+       /*for (Object temp : seleniumServerList){
            ((WebDriver) temp).close();
            ((WebDriver) temp).quit();
+        }
+    }*/
+
+    @BeforeClass
+    public void setUpSeleniumServerList() {
+        //Should be here for Appium and Selenium Grid config (Only Json config)
+        WebDriverManager webDriverManager = new WebDriverManager();
+        IFConfig testSuiteConfigs = seleniumManager.getTestSuiteConfigs();
+        WebDriver webDriver;
+
+        if (SeleniumConfigSingleton.getFramework().equals(SeleniumConfigSingleton.ARRIVAL)) {
+            //If Test should be start parallel
+            if (testSuiteConfigs.getParallelTesting()) {
+                for (int i = 0; i < testSuiteConfigs.getParallelTestingCount(); i++) {
+                    webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
+                    seleniumServerList.add(webDriver);
+                }
+
+                if (!testSuiteConfigs.getServerName().contains("Non")) {
+                    for (Object tempWebDriver : seleniumServerList) {
+                        ((WebDriver) tempWebDriver).get(testSuiteConfigs.getServerName());
+                    }
+                }
+            } else {
+                webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
+                seleniumServerList.add(webDriver);
+          //      ((WebDriver) seleniumServerList.get(0)).get(testSuiteConfigs.getServerName());
+            }
+        } else {
+            webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
+            seleniumServerList.add(webDriver);
+        }
+    }
+
+    @AfterClass
+    public void setDownSeleniumServerList() {
+        for (Object temp : seleniumServerList) {
+            ((WebDriver) temp).close();
+            ((WebDriver) temp).quit();
         }
     }
 
@@ -87,7 +131,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     /**
-     *Web general method (Selenium)
+     * Web general method (Selenium)
      */
 
     @Override
@@ -96,7 +140,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     @Override
-    public void doppleClick() {
+    public void doubleClick() {
 
     }
 

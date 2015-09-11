@@ -15,20 +15,29 @@ import org.testng.annotations.Test;
 
 public class SimpleTest111 extends ArrivalWeb {
 
+    public SimpleTest111(){
+        setTcID(111);
+        setTcDescription("Test1");
+        setTcDuration("2");
+        setTcLink("wwww.wetter.info");
+        setTcLastRun("10");
+        setTcResult("Link1");
+    }
+
     @Test(dataProvider = "driver", groups = {"fast"})
-    public void aFastTest(WebDriver browser, Integer id) {
-            System.out.println("Fast test 111 " + browser + " " + id);
-            setBrowser(browser);
-            browser.get("http://www.google.com");
-            pauseTest(3000);
-            click();
+    public void aFastTest(WebDriver driver, Integer id) {
+        System.out.println("Fast test 111 " + driver + " " + id);
+        setBrowser(driver);
+        driver.get("http://www.google.com");
+        pauseTest(3000);
+        click();
     }
 
     @Test(dataProvider = "driver", groups = {"slow"})
-    public void aSlowTest(WebDriver browser, Integer id) {
-        System.out.println("Slow test 303 " + browser + " " + id);
-        setBrowser(browser);
-        browser.get("http://www.t-online.de");
+    public void aSlowTest(WebDriver driver, Integer id) {
+        System.out.println("Slow test 303 " + driver + " " + id);
+        setBrowser(driver);
+        driver.get("http://www.t-online.de");
         pauseTest(1000);
         click();
     }
