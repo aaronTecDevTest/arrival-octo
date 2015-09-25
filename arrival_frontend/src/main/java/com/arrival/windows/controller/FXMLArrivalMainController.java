@@ -8,13 +8,10 @@ package com.arrival.windows.controller;
  * Package: com.arrival.windows.controller
  */
 
-import com.arrival.unit.generic.ArrivalIOS;
-import com.arrival.unit.generic.ArrivalWeb;
 import com.arrival.utilities.FileNameLoader;
 import com.arrival.utilities.SystemPreferences;
 import com.arrival.utilities.WindowsDialogs;
 import com.arrival.windows.model.TestCase;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -38,11 +35,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
+
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+
 
 /**
  * Controller Class for ViewMainApp. This Class have linked with ViewMainApp.fxml and
@@ -500,15 +499,19 @@ public class FXMLArrivalMainController implements Initializable {
 
         try {
             for (int i = 0; i < fileNameLoaderWeb.getSize(); i++) {
-                Class<?> tempTestCaseClass = Class.forName(classPackage.get(i));
-                ArrivalWeb test = (ArrivalWeb) tempTestCaseClass.newInstance();
 
-                String tempString = test.getTcDescription();
+                String fullName = classPackage.get(i);
 
+                Class tempTestCaseClass = Class.forName(fullName);
+              //  Object object = tempTestCaseClass.newInstance();
+                Method m = tempTestCaseClass.getDeclaredMethod("getTcLink",null);
+                System.out.println(m.invoke(null, null));
+               // System.out.println(object.toString());
                 tempList.add(new TestCase(fileNames.get(i), "test2", "datum", "timer", "", "true", classPackage.get(i)));
             }
-        }
-        catch (Exception e){
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             log.error(e.getStackTrace() + ":  " + e.toString());
         }
 

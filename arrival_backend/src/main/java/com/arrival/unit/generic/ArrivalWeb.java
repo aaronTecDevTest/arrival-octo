@@ -23,8 +23,8 @@ import java.util.ArrayList;
  * Package: com.arrival.unit.generic
  */
 
-//public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
-public  class ArrivalWeb implements IFTestCase, IFGenericWeb {
+public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
+//public  class ArrivalWeb implements IFTestCase, IFGenericWeb {
     protected static final Logger log = LogManager.getLogger(ArrivalWeb.class);
 
     public SeleniumConfigSingleton seleniumConfigSingleton = SeleniumConfigSingleton.getInstance();
@@ -102,7 +102,7 @@ public  class ArrivalWeb implements IFTestCase, IFGenericWeb {
             } else {
                 webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
                 seleniumServerList.add(webDriver);
-          //      ((WebDriver) seleniumServerList.get(0)).get(testSuiteConfigs.getServerName());
+                //((WebDriver) seleniumServerList.get(0)).get(testSuiteConfigs.getServerName());
             }
         } else {
             webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
