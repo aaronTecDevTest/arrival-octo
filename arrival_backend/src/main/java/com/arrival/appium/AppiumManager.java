@@ -11,4 +11,6 @@ import org.apache.logging.log4j.Logger;
  */
 public class AppiumManager {
     private static final Logger log = LogManager.getLogger(AppiumManager.class);
+
+
 }

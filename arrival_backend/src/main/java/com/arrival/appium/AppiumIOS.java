@@ -47,4 +47,12 @@ public class AppiumIOS implements IFAppiumServer {
     public void runServerWithJSON(String JSONFilePath) {
 
     }
+
+    /**
+     * @return a Instance of AppiumServer e.g. ApppiumServer for IOS or Android
+     */
+    @Override
+    public Object geInstance() {
+        return null;
+    }
 }

@@ -24,7 +24,6 @@ import java.util.ArrayList;
  */
 
 public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
-//public  class ArrivalWeb implements IFTestCase, IFGenericWeb {
     protected static final Logger log = LogManager.getLogger(ArrivalWeb.class);
 
     public SeleniumConfigSingleton seleniumConfigSingleton = SeleniumConfigSingleton.getInstance();
@@ -33,6 +32,31 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     public ArrayList<Object> seleniumServerList = new ArrayList<>();
     public WebDriver browser;
 
+    /**
+     * Testcase properties WebView
+     **/
+    private SimpleIntegerProperty tcID = null;
+    private SimpleStringProperty tcName = null;
+    private SimpleStringProperty tcDescription = null;
+    private SimpleStringProperty tcDuration = null;
+    private SimpleStringProperty tcLastRun = null;
+    private SimpleStringProperty tcLink = null;
+    private SimpleStringProperty tcResult = null;
+    private SimpleStringProperty tcClassPackage = null;
+
+    /**
+     * Default Constructor
+     */
+    public ArrivalWeb(){
+        tcID = new SimpleIntegerProperty();
+        tcName = new SimpleStringProperty();
+        tcDescription = new SimpleStringProperty();
+        tcDuration = new SimpleStringProperty();
+        tcLastRun = new SimpleStringProperty();
+        tcLink = new SimpleStringProperty();
+        tcResult = new SimpleStringProperty();
+        tcClassPackage = new SimpleStringProperty();
+    }
 
     public void setBrowser(WebDriver driver) {
         browser = driver;
@@ -102,7 +126,6 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
             } else {
                 webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
                 seleniumServerList.add(webDriver);
-                //((WebDriver) seleniumServerList.get(0)).get(testSuiteConfigs.getServerName());
             }
         } else {
             webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
@@ -197,7 +220,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     public void setTcID(int tcID) {
-        IFTestCase.tcID.set(tcID);
+        this.tcID.set(tcID);
     }
 
     public SimpleIntegerProperty tcIDProperty() {
@@ -209,7 +232,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     public void setTcName(String tcName) {
-        IFTestCase.tcName.set(tcName);
+        this.tcName.set(tcName);
     }
 
     public SimpleStringProperty tcNameProperty() {
@@ -221,7 +244,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     public void setTcDescription(String tcDescription) {
-        IFTestCase.tcDescription.set(tcDescription);
+        this.tcDescription.set(tcDescription);
     }
 
     public SimpleStringProperty tcDescriptionProperty() {
@@ -233,7 +256,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     public void setTcResult(String tcResult) {
-        IFTestCase.tcResult.set(tcResult);
+        this.tcResult.set(tcResult);
     }
 
     public SimpleStringProperty tcResultProperty() {
@@ -245,7 +268,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     public void setTcLastRun(String tcLastRun) {
-        IFTestCase.tcLastRun.set(tcLastRun);
+        this.tcLastRun.set(tcLastRun);
     }
 
     public SimpleStringProperty tcLastRunProperty() {
@@ -257,7 +280,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     public void setTcLink(String tcLink) {
-        IFTestCase.tcLink.set(tcLink);
+        this.tcLink.set(tcLink);
     }
 
     public SimpleStringProperty tcLinkProperty() {
@@ -269,7 +292,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     public void setTcDuration(String tcDuration) {
-        IFTestCase.tcDuration.set(tcDuration);
+        this.tcDuration.set(tcDuration);
     }
 
     public SimpleStringProperty tcDurationProperty() {
@@ -281,6 +304,6 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     public void setTcClassPackage(String tcClassPackage) {
-        IFTestCase.tcClassPackage.set(tcClassPackage);
+        this.tcClassPackage.set(tcClassPackage);
     }
 }

@@ -36,4 +36,9 @@ public interface IFAppiumServer {
      * * @param JSONFilePath -> The Path where the file exist.
      */
     void runServerWithJSON(String JSONFilePath);
+
+    /**
+     * @return  a Instance of AppiumServer e.g. ApppiumServer for IOS or Android
+     */
+    Object geInstance();
 }

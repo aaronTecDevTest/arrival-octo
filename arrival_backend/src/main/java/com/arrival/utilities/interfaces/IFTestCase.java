@@ -15,16 +15,6 @@ import javafx.beans.property.SimpleStringProperty;
  * Interface for TestCases
  **/
 public interface IFTestCase {
-
-    SimpleIntegerProperty tcID = null;
-    SimpleStringProperty tcName = null;
-    SimpleStringProperty tcDescription = null;
-    SimpleStringProperty tcDuration = null;
-    SimpleStringProperty tcLastRun = null;
-    SimpleStringProperty tcLink = null;
-    SimpleStringProperty tcResult = null;
-    SimpleStringProperty tcClassPackage = null;
-
     int getTcID();
 
     void setTcID(int tcID);

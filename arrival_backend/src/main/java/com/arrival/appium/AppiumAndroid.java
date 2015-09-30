@@ -42,7 +42,7 @@ public class AppiumAndroid implements IFAppiumServer {
         command.addArgument("--port");
         command.addArgument("5555");
         command.addArgument("--nodeconfig");
-        command.addArgument("/Users/tecdesdev/IdeaProjects/arrival-septem/iosTestcase/src/main/resources/AppiumNodeNote3.json");
+        command.addArgument("/Users/tecdesdev/IdeaProjects/arrival-septem/iosTestcase/src/main/resources/AppiumNodeNote3.json.json");
 
 //	command.addArgument("--no-reset");
 
@@ -103,4 +103,13 @@ public class AppiumAndroid implements IFAppiumServer {
     public void runServerWithJSON(String JSONFilePath) {
 
     }
+
+    /**
+     * @return a Instance of AppiumServer e.g. ApppiumServer for IOS or Android
+     */
+    @Override
+    public Object geInstance() {
+        return null;
+    }
+
 }

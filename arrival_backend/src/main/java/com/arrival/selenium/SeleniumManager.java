@@ -17,9 +17,6 @@ import java.util.ArrayList;
  */
 public class SeleniumManager {
     private static final Logger log = LogManager.getLogger(SeleniumManager.class);
-    //Later for Singel-Test Config
-    //private HashMap<String, IFConfig> singelConfigs;
-    //Later for Singel-Test Config
     WebDriver webDriver;
     private IFConfig testSuiteConfigs;
     private ArrayList<Object> seleniumServerList;
@@ -29,7 +26,6 @@ public class SeleniumManager {
         testSuiteConfigs = new SeleniumConfig();
         seleniumServerList = new ArrayList<>();
     }
-
 
     public ArrayList<Object> getSeleniumServerList() {
         return seleniumServerList;
@@ -46,5 +42,4 @@ public class SeleniumManager {
     public void setTestSuiteConfigs(IFConfig testSuiteConfigs) {
         this.testSuiteConfigs = testSuiteConfigs;
     }
-
 }

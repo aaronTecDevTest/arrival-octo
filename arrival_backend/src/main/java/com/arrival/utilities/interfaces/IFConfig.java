@@ -8,17 +8,6 @@ package com.arrival.utilities.interfaces;
  * Package: com.arrival.utilities.interfaces
  */
 public interface IFConfig {
-    String platform = null;
-    Boolean parallelTesting = false;
-    Integer parallelTestingCount = 0;
-
-    String browserName = null;
-    String serverName = null;
-    String mobileTestingArt = null;
-    Boolean jsonConfigInUse = false;
-    String jsonConfigPath = null;
-    String saveResultPath = null;
-
     String getPlatform();
 
     void setPlatform(String plattform);

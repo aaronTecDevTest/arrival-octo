@@ -1,4 +1,4 @@
-package com.arrival.selenium.config;
+package com.arrival.selenium.server;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,6 +16,10 @@ import org.openqa.grid.internal.utils.GridHubConfiguration;
  */
 public class Hub {
     private static final Logger log = LogManager.getLogger(Hub.class.getName());
+
+    private static final String HUBHOST = "localhost";
+    private static final Integer HUBPORT = 4444;
+
     /**
      * @param osName: Operation-System Name like "Mac OS", "Windows xxx" or "Linux xx"
      */
@@ -45,8 +49,8 @@ public class Hub {
     public Hub() {
         log.info("Creating SeleniumHb");
         gridHubConfig = new GridHubConfiguration();
-        hubHost = "localhost";
-        hubPort = 4444;
+        hubHost = HUBHOST;
+        hubPort = HUBPORT;
         osName = System.getProperty("os.name");
         setUpHub();
         log.info("SeleniumHb created");
@@ -66,12 +70,12 @@ public class Hub {
         setUpHub();
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         Hub hubNode = new Hub();
 
         hubNode.startHub();
         // hubNode.shutDownNodeAndHub();
-    }
+    }*/
 
     /**
      * Setup the Hub with GridHubConfig
@@ -82,7 +86,8 @@ public class Hub {
             gridHubConfig.setPort(hubPort);
             hub = new org.openqa.grid.web.Hub(gridHubConfig);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getStackTrace());
+            //e.printStackTrace();
         }
     }
 
@@ -91,7 +96,7 @@ public class Hub {
      */
     public void startHub() {
         try {
-            //todo: Find out how to stop the sever if its running.
+            //Todo: Find out how to stop the sever if its running.
             /*if (hub != null)
                 this.stopHub();*/
 
@@ -113,7 +118,7 @@ public class Hub {
             log.info("Stop the hub on: " + hubHost + " on port: " + hubPort);
         } catch (Exception e) {
             log.error("Fail to stop the hub on: " + hubHost + " on port: " + hubPort);
-            e.printStackTrace();
+            //e.printStackTrace();
         }
     }
 
@@ -127,7 +132,7 @@ public class Hub {
             log.info("Restart the hub on: " + hubHost + " on port: " + hubPort);
         } catch (Exception e) {
             log.error("Fail to restart the hub on: " + hubHost + " on port: " + hubPort);
-            e.printStackTrace();
+            //e.printStackTrace();
         }
     }
 

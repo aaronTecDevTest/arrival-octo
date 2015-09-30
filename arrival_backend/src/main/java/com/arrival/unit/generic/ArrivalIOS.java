@@ -23,6 +23,32 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     public static AppiumConfigSingleton appiumConfi = AppiumConfigSingleton.getInstance();
     public ArrayList<Object> appiumServerList = new ArrayList<>();
 
+    /**
+     * Testcase properties IOS
+     **/
+    private SimpleIntegerProperty tcID = null;
+    private SimpleStringProperty tcName = null;
+    private SimpleStringProperty tcDescription = null;
+    private SimpleStringProperty tcDuration = null;
+    private SimpleStringProperty tcLastRun = null;
+    private SimpleStringProperty tcLink = null;
+    private SimpleStringProperty tcResult = null;
+    private SimpleStringProperty tcClassPackage = null;
+
+    /**
+     * Default Constructor
+     */
+    public ArrivalIOS(){
+        tcID = new SimpleIntegerProperty();
+        tcName = new SimpleStringProperty();
+        tcDescription = new SimpleStringProperty();
+        tcDuration = new SimpleStringProperty();
+        tcLastRun = new SimpleStringProperty();
+        tcLink = new SimpleStringProperty();
+        tcResult = new SimpleStringProperty();
+        tcClassPackage = new SimpleStringProperty();
+    }
+
     /*
      *Test NG method
      */
@@ -150,7 +176,7 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     }
 
     public void setTcID(int tcID) {
-        IFTestCase.tcID.set(tcID);
+        this.tcID.set(tcID);
     }
 
     public SimpleIntegerProperty tcIDProperty() {
@@ -162,7 +188,7 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     }
 
     public void setTcName(String tcName) {
-        IFTestCase.tcName.set(tcName);
+        this.tcName.set(tcName);
     }
 
     public SimpleStringProperty tcNameProperty() {
@@ -174,7 +200,7 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     }
 
     public void setTcDescription(String tcDescription) {
-        IFTestCase.tcDescription.set(tcDescription);
+        this.tcDescription.set(tcDescription);
     }
 
     public SimpleStringProperty tcDescriptionProperty() {
@@ -186,7 +212,7 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     }
 
     public void setTcResult(String tcResult) {
-        IFTestCase.tcResult.set(tcResult);
+        this.tcResult.set(tcResult);
     }
 
     public SimpleStringProperty tcResultProperty() {
@@ -198,7 +224,7 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     }
 
     public void setTcLastRun(String tcLastRun) {
-        IFTestCase.tcLastRun.set(tcLastRun);
+        this.tcLastRun.set(tcLastRun);
     }
 
     public SimpleStringProperty tcLastRunProperty() {
@@ -210,7 +236,7 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     }
 
     public void setTcLink(String tcLink) {
-        IFTestCase.tcLink.set(tcLink);
+        this.tcLink.set(tcLink);
     }
 
     public SimpleStringProperty tcLinkProperty() {
@@ -222,7 +248,7 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     }
 
     public void setTcDuration(String tcDuration) {
-        IFTestCase.tcDuration.set(tcDuration);
+        this.tcDuration.set(tcDuration);
     }
 
     public SimpleStringProperty tcDurationProperty() {
@@ -234,6 +260,6 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     }
 
     public void setTcClassPackage(String tcClassPackage) {
-        IFTestCase.tcClassPackage.set(tcClassPackage);
+        this.tcClassPackage.set(tcClassPackage);
     }
 }

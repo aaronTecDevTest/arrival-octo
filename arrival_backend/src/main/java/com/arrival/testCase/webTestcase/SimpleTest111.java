@@ -16,7 +16,9 @@ import org.testng.annotations.Test;
 public class SimpleTest111 extends ArrivalWeb {
 
     public SimpleTest111(){
+        super();
         setTcID(111);
+        setTcName("SimpleTest1111");
         setTcDescription("Test1");
         setTcDuration("2");
         setTcLink("wwww.wetter.info");
