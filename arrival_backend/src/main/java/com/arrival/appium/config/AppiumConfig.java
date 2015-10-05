@@ -1,19 +1,18 @@
-package com.arrival.selenium.config;
-
+package com.arrival.appium.config;
 /**
- * @author: Aaron Kutekidila
- * @version: 1.0
- * Created: 13.08.2015.
- * @since: 1.0
- * Package: com.arrival.selenium.config
+ * @author Aaron Kutekidila
+ * @version 1.0
+ *          Created on 01.06.2015.
+ * @since 1.0
  */
 
 import com.arrival.utilities.interfaces.IFConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class SeleniumConfig implements IFConfig {
-    private static final Logger log = LogManager.getLogger(SeleniumConfig.class.getName());
+
+public class AppiumConfig implements IFConfig {
+    private static final Logger log = LogManager.getLogger(AppiumConfig.class.getName());
 
     private String platform = null;
     private Boolean parallelTesting = false;
@@ -26,7 +25,7 @@ public class SeleniumConfig implements IFConfig {
     private String jsonConfigPath = null;
     private String saveResultPath = null;
 
-    public SeleniumConfig(){
+    public AppiumConfig(){
         browserName = "CH";
         serverName = "";
     }
@@ -110,3 +109,4 @@ public class SeleniumConfig implements IFConfig {
         this.saveResultPath = saveResultPath;
     }
 }
+

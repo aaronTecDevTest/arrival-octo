@@ -1,5 +1,14 @@
 package com.arrival.selenium;
 
+
+
+/**
+ * @author Aaron Kutekidila
+ * @version 1.0
+ *          Created on 01.06.2015.
+ * @since 1.0
+ */
+
 import com.arrival.selenium.config.SeleniumConfig;
 import com.arrival.unit.generic.SeleniumConfigSingleton;
 import com.arrival.utilities.interfaces.IFConfig;
@@ -9,12 +18,6 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.ArrayList;
 
-/**
- * @author Aaron Kutekidila
- * @version 1.0
- *          Created on 01.06.2015.
- * @since 1.0
- */
 public class SeleniumManager {
     private static final Logger log = LogManager.getLogger(SeleniumManager.class);
     WebDriver webDriver;

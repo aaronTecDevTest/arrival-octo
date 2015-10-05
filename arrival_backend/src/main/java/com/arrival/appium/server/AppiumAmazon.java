@@ -1,8 +1,4 @@
-package com.arrival.appium;
-
-import com.arrival.utilities.interfaces.IFAppiumServer;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+package com.arrival.appium.server;
 
 /**
  * @author Aaron Kutekidila
@@ -11,15 +7,21 @@ import org.apache.logging.log4j.Logger;
  * @since 1.0
  */
 
+import com.arrival.utilities.interfaces.IFAppiumServer;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public class AppiumIOS implements IFAppiumServer {
-    private static final Logger log = LogManager.getLogger(AppiumIOS.class);
+import java.nio.file.Path;
+
+public class AppiumAmazon implements IFAppiumServer {
+    private static final Logger log = LogManager.getLogger(AppiumAmazon.class);
 
     /**
      * This functions start a current Server over commando line.
      **/
     @Override
     public void startServer() {
+
     }
 
     /**
@@ -40,11 +42,10 @@ public class AppiumIOS implements IFAppiumServer {
 
     /**
      * This functions start a current Sever over commando line with JSON-NodeConfiguration file.
-     *
-     * @param JSONFilePath -> The Path where the file exist.
+     * * @param JSONFilePath -> The Path where the file existe.
      */
     @Override
-    public void runServerWithJSON(String JSONFilePath) {
+    public void runServerWithJSON(Path JSONFilePath) {
 
     }
 
@@ -52,7 +53,7 @@ public class AppiumIOS implements IFAppiumServer {
      * @return a Instance of AppiumServer e.g. ApppiumServer for IOS or Android
      */
     @Override
-    public Object geInstance() {
+    public Object getInstance() {
         return null;
     }
 }

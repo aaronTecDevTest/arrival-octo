@@ -8,7 +8,6 @@ package com.arrival.utilities.interfaces;
  * Package: com.utilities.interfaces
  */
 
-
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
@@ -34,5 +33,4 @@ public interface IFTestSuite {
     void setTsResult(String tsResult);
 
     SimpleStringProperty tsResultProperty();
-
 }

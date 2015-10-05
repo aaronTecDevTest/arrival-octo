@@ -1,8 +1,4 @@
 package com.arrival.appium.model;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0
@@ -10,6 +6,9 @@ import org.apache.logging.log4j.Logger;
  * @since: 1.0
  * Package: com.arrival.appium.model
  */
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Capabilities {
     private static final Logger log = LogManager.getLogger(Capabilities.class);

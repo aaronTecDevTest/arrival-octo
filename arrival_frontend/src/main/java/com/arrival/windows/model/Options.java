@@ -1,7 +1,5 @@
 package com.arrival.windows.model;
 
-import com.arrival.utilities.interfaces.IFConfig;
-
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0
@@ -9,6 +7,9 @@ import com.arrival.utilities.interfaces.IFConfig;
  * @since: 1.0
  * Package: com.arrival.windows.model
  */
+
+import com.arrival.utilities.interfaces.IFConfig;
+
 public class Options implements IFConfig {
     private String platform = null;
     private Boolean parallelTesting = false;

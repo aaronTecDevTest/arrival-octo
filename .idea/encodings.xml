@@ -3,9 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/arrival_backend" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/arrival_backend/src/main/java/com/arrival/appium/AppiumAmazon.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arrival_backend/src/main/java/com/arrival/appium/AppiumAndroid.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arrival_backend/src/main/java/com/arrival/appium/AppiumIOS.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/arrival_backend/src/main/java/com/arrival/appium/server/AppiumAmazon.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/arrival_backend/src/main/java/com/arrival/appium/server/AppiumAndroid.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/arrival_backend/src/main/java/com/arrival/appium/server/AppiumIOS.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_backend/src/main/java/com/arrival/utilities/interfaces/IFAppiumServer.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arrival_frontend" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/arrival_frontend/src/main/resources/bundles/arrivalHelp_de.properties" charset="windows-1252" />

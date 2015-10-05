@@ -1,11 +1,5 @@
 package com.arrival.utilities;
 
-import javafx.scene.control.Alert;
-import javafx.scene.control.TextInputDialog;
-
-import java.util.Optional;
-import java.util.ResourceBundle;
-
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0
@@ -13,6 +7,13 @@ import java.util.ResourceBundle;
  * @since: 1.0
  * Package: com.arrival.utilities
  */
+
+import javafx.scene.control.Alert;
+import javafx.scene.control.TextInputDialog;
+
+import java.util.Optional;
+import java.util.ResourceBundle;
+
 public class WindowsDialogs {
     private ResourceBundle bundle = SystemPreferences.getResourceBundle("bundleDialogs");
 

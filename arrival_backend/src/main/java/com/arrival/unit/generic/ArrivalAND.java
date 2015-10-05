@@ -1,5 +1,15 @@
 package com.arrival.unit.generic;
 
+
+
+/**
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 09.05.2015
+ * @since: 1.0
+ * Package: com.arrival.unit.generic
+ */
+
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -10,13 +20,6 @@ import org.testng.annotations.DataProvider;
 
 import java.util.ArrayList;
 
-/**
- * @author: Aaron Kutekidila
- * @version: 1.0
- * Created: 09.05.2015
- * @since: 1.0
- * Package: com.arrival.unit.generic
- */
 public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     private static final Logger log = LogManager.getLogger(ArrivalAND.class);
 

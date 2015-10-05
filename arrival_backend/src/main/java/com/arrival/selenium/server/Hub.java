@@ -1,8 +1,6 @@
 package com.arrival.selenium.server;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.grid.internal.utils.GridHubConfiguration;
+
 
 /**
  * @author Aaron Kutekidila
@@ -14,6 +12,11 @@ import org.openqa.grid.internal.utils.GridHubConfiguration;
  * This Class return a instance of SeleniumHub.
  * Also can start, stop and restart the Hub.
  */
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.grid.internal.utils.GridHubConfiguration;
+
 public class Hub {
     private static final Logger log = LogManager.getLogger(Hub.class.getName());
 

@@ -1,10 +1,5 @@
 package com.arrival.unit.generic;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0
@@ -12,6 +7,11 @@ import org.testng.annotations.BeforeSuite;
  * @since: 1.0
  * Package: com.arrival.unit.generic
  */
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 public class AppiumConfigSingleton {
     private static final Logger log = LogManager.getLogger(AppiumConfigSingleton.class);
@@ -41,6 +41,7 @@ public class AppiumConfigSingleton {
      */
     @BeforeSuite
     public void setUpAppiumConfig() {
+        //Todo: Start the Appium server + SeleniumGrid (SeleniumHub) here
         setTestArt(AppiumConfigSingleton.multi);
     }
 
@@ -49,6 +50,7 @@ public class AppiumConfigSingleton {
      */
     @AfterSuite
     public void cleanUpAppiumConfig() {
+        //Todo: Stop the Appium server + SeleniumGrid (SeleniumHub) here
         setTestArt("");
     }
 }

@@ -1,11 +1,5 @@
 package com.arrival.unit.generic;
 
-import com.arrival.selenium.SeleniumManager;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0
@@ -13,6 +7,12 @@ import org.testng.annotations.BeforeSuite;
  * @since: 1.0
  * Package: com.arrival.unit.generic
  */
+
+import com.arrival.selenium.SeleniumManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 public class SeleniumConfigSingleton {
     private final static  Logger log = LogManager.getLogger(SeleniumConfigSingleton.class);

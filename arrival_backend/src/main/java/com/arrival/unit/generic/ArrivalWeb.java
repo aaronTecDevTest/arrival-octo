@@ -91,7 +91,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     public void setUpTestClass() {
         System.out.println("hallo asdfasdfasdfas");
         seleniumManager.setUpSeleniumServerList();
-        seleniumServerList = seleniumManager.getSeleniumServerList();
+        seleniumServerList = seleniumManager.getAppiumServerList();
     }
 
     @AfterClass

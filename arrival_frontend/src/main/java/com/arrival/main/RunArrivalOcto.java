@@ -1,14 +1,14 @@
 package com.arrival.main;
 
-import com.arrival.utilities.SystemPreferences;
-import com.arrival.windows.view.ViewArrivalLogIn;
-
 /**
  * Created by Aaron on 28.03.2015.
  *
  * @author Aaron K.
  * @version 0.0.1
  */
+
+import com.arrival.utilities.SystemPreferences;
+import com.arrival.windows.view.ViewArrivalLogIn;
 
 public class RunArrivalOcto {
     public ViewArrivalLogIn viewLogIn;

@@ -12,7 +12,6 @@ import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-
 public class TestCase implements IFTestCase {
 
     private SimpleIntegerProperty tcID;

@@ -1,6 +1,13 @@
 package com.arrival.unit.suites;
 
-import com.arrival.unit.generic.SeleniumConfigSingleton;
+/**
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 09.05.2015
+ * @since: 1.0
+ * Package: com.arrival.unit.suites
+ */
+
 import com.arrival.unit.listener.EmailListener;
 import com.arrival.unit.listener.PreConfigListener;
 import org.apache.logging.log4j.LogManager;
@@ -16,14 +23,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-
-/**
- * @author: Aaron Kutekidila
- * @version: 1.0
- * Created: 09.05.2015
- * @since: 1.0
- * Package: com.arrival.unit.suites
- */
 
 public class ArrivalTestSuite {
     private static final Logger log = LogManager.getLogger(ArrivalTestSuite.class);

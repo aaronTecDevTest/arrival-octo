@@ -1,5 +1,13 @@
 package com.arrival.selenium;
 
+/**
+ * @author: Aaron Kutekidila
+ * @version: 1.0
+ * Created: 18.08.2015.
+ * @since: 1.0
+ * Package: com.arrival.selenium
+ */
+
 import com.arrival.utilities.SystemPreferences;
 import com.arrival.utilities.interfaces.IFConfig;
 import org.apache.logging.log4j.LogManager;
@@ -18,13 +26,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author: Aaron Kutekidila
- * @version: 1.0
- * Created: 18.08.2015.
- * @since: 1.0
- * Package: com.arrival.selenium
- */
 public class WebDriverManager {
     private static final Logger log = LogManager.getLogger(WebDriverManager.class);
 
