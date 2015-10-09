@@ -1,5 +1,6 @@
 package com.arrival.unit.generic;
 
+import com.arrival.selenium.SeleniumConfigSingleton;
 import com.arrival.selenium.SeleniumManager;
 import com.arrival.selenium.WebDriverManager;
 import com.arrival.utilities.interfaces.IFConfig;

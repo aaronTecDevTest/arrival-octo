@@ -14,21 +14,32 @@ import org.apache.logging.log4j.Logger;
 
 import java.nio.file.Path;
 
-
-/**
- * Created by tecdesdev on 26/05/15.
- */
 public class AppiumAndroidDefault implements IFAppiumServer {
     private static final Logger log = LogManager.getLogger(AppiumAndroidDefault.class);
-    private static String appiumPath = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
-    private static String nodePath = "/Applications/Appium.app/Contents/Resources/node/bin/node";
-    private static String appiumArg = "'/Applications/Appium.app/Contents/Resources/node/bin/node' " +
+    private static final String APPIUM_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
+    private static final String NODE_PATH_MAC   = "/Applications/Appium.app/Contents/Resources/node/bin/node";
+
+    private static final String APPIUM_PATH_WIN = "C:/Program Files (x86)/Appium/node_modules/appium/bin/appium.js";
+    private static final String NODE_PATH_WIN   = "C:/Program Files (x86)/Appium/node.exe";
+
+    private static final String APPIUM_ARG_MAC = "'/Applications/Appium.app/Contents/Resources/node/bin/node' " +
             "lib/server/main.js " +
             "--log-no-colors " +
             "--debug-log-spacing " +
             "--automation-name \"Appium\" " +
             "--platform-name \"Android\" " +
             "--platform-version \"4.4\"";
+
+
+    static final String APPIUM_ARG_WIN = "'/Applications/Appium.app/Contents/Resources/node/bin/node' " +
+             "lib/server/main.js " +
+             "--log-no-colors " +
+             "--debug-log-spacing " +
+             "--automation-name \"Appium\" " +
+             "--platform-name \"Android\" " +
+             "--platform-version \"4.4\"";
+
+
     private Process process = null;
     private NodeConfig nodeConfig = null;
 
@@ -39,8 +50,21 @@ public class AppiumAndroidDefault implements IFAppiumServer {
     public AppiumAndroidDefault() {
     }
 
-    public AppiumAndroidDefault(String appiumArg) {
-        AppiumAndroidDefault.appiumArg = appiumArg;
+
+    public Process getProcess() {
+        return process;
+    }
+
+    public void setProcess(Process process) {
+        this.process = process;
+    }
+
+    public NodeConfig getNodeConfig() {
+        return nodeConfig;
+    }
+
+    public void setNodeConfig(NodeConfig nodeConfig) {
+        this.nodeConfig = nodeConfig;
     }
 
     /**
@@ -49,7 +73,7 @@ public class AppiumAndroidDefault implements IFAppiumServer {
     @Override
     public void startServer() {
         try {
-            ProcessBuilder pb = new ProcessBuilder(appiumArg);
+            ProcessBuilder pb = new ProcessBuilder(APPIUM_ARG_MAC);
             process = pb.start();
         } catch (Exception e) {
             e.printStackTrace();
@@ -98,35 +122,6 @@ public class AppiumAndroidDefault implements IFAppiumServer {
     /**
      * Getter and Setter functions for appiumPath, nodePath and nodeConfig
      */
-    public static String getAppiumPath() {
-        return appiumPath;
-    }
 
-    public static void setAppiumPath(String appiumPath) {
-        AppiumAndroidDefault.appiumPath = appiumPath;
-    }
 
-    public static String getNodePath() {
-        return nodePath;
-    }
-
-    public static void setNodePath(String nodePath) {
-        AppiumAndroidDefault.nodePath = nodePath;
-    }
-
-    public Process getProcess() {
-        return process;
-    }
-
-    public void setProcess(Process process) {
-        this.process = process;
-    }
-
-    public static String getAppiumArg() {
-        return appiumArg;
-    }
-
-    public static void setAppiumArg(String appiumArg) {
-        AppiumAndroidDefault.appiumArg = appiumArg;
-    }
 }

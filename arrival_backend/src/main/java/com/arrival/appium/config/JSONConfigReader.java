@@ -25,7 +25,7 @@ public class JSONConfigReader {
     public ArrayList<Path> pathList = null;
 
     /**
-     * Default Constratory
+     * Default constructor
      */
     public JSONConfigReader() {
         pathList = new ArrayList<>();
@@ -38,8 +38,9 @@ public class JSONConfigReader {
      * @param pathDirectory DirectoryPath where the json File are.
      */
     public JSONConfigReader(String pathDirectory) {
-        jsonConfigDirectory = pathDirectory;
         pathList = new ArrayList<>();
+        jsonConfigDirectory = pathDirectory;
+        pathList = readDirectory();
     }
 
     public String getJsonConfigDirectory() {
@@ -103,7 +104,7 @@ public class JSONConfigReader {
         return pathList;
     }
 
-   /* public void setJsonConfigFiles(ArrayList<Path> pathList) {
+    public void setJsonConfigFiles(ArrayList<Path> pathList) {
         this.pathList = pathList;
-    }*/
+    }
 }

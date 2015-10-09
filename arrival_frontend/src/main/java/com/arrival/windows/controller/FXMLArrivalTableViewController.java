@@ -8,8 +8,10 @@ package com.arrival.windows.controller;
  * Package: com.arrival.windows.controller
  */
 
+import com.arrival.appium.AppiumManager;
 import com.arrival.selenium.SeleniumManager;
-import com.arrival.unit.generic.SeleniumConfigSingleton;
+import com.arrival.appium.AppiumConfigSingleton;
+import com.arrival.selenium.SeleniumConfigSingleton;
 import com.arrival.unit.suites.ArrivalTestSuite;
 import com.arrival.utilities.WindowsDialogs;
 import com.arrival.windows.model.Options;
@@ -101,14 +103,22 @@ public class FXMLArrivalTableViewController implements Initializable {
         try{
             log.info(options.toString());
             SeleniumManager tempSeleniumManager = new SeleniumManager();
-            tempSeleniumManager.setTestSuiteConfigs(options);
-            SeleniumConfigSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
+            AppiumManager tempAppiumManager = new AppiumManager();
+
+
+
 
             List<XmlClass> tempClasses = new ArrayList<>();
-            if(options.getPlatform().contains("Web"))
+            if(options.getPlatform().contains("Web")){
+                tempSeleniumManager.setTestSuiteConfigs(options);
+                SeleniumConfigSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
                 tempClasses.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
-            else if (options.getPlatform().contains("IOS") ||options.getPlatform().contains("Android"))
+            }
+            else if (options.getPlatform().contains("IOS") ||options.getPlatform().contains("Android")) {
+                tempAppiumManager.setTestSuiteConfigs(options);
+                AppiumConfigSingleton.getInstance().setAppiumManager(tempAppiumManager);
                 tempClasses.add(new XmlClass("com.arrival.unit.generic.AppiumConfigSingleton"));
+            }
             else {
                 log.warn("No Platform is set up!");
                 WindowsDialogs.noTestConfigSet();

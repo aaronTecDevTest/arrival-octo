@@ -200,7 +200,6 @@ public class WebDriverManager {
         }
     }
 
-
     private void iniDefaultAndoridServer(){
         //AppiumAndroidDefault defaultAndroid = new AppiumAndroidDefault();
         //appiumServersList.add(defaultAndroid);

@@ -1,4 +1,4 @@
-package com.arrival.unit.generic;
+package com.arrival.selenium;
 
 /**
  * @author: Aaron Kutekidila
@@ -8,7 +8,6 @@ package com.arrival.unit.generic;
  * Package: com.arrival.unit.generic
  */
 
-import com.arrival.selenium.SeleniumManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterSuite;

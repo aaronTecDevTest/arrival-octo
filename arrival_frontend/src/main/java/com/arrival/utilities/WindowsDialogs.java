@@ -56,7 +56,7 @@ public class WindowsDialogs {
         alert.showAndWait();
     }
 
-    public static void rongPlatform(String ios) {
+    public static void wrongPlatform(String ios) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);

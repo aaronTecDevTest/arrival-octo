@@ -15,8 +15,12 @@ import org.apache.logging.log4j.Logger;
 public class AppiumAndroid implements IFAppiumServer {
     private static final Logger log = LogManager.getLogger(AppiumAndroid.class);
 
-    private static final String APPIUM_PATH = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
-    private static final String NODE_PATH =   "/Applications/Appium.app/Contents/Resources/node/bin/node";
+    private static final String APPIUM_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
+    private static final String NODE_PATH_MAC =   "/Applications/Appium.app/Contents/Resources/node/bin/node";
+
+    private static final String APPIUM_PATH_WIN = "C:/Program Files (x86)/Appium/node_modules/appium/bin/appium.js";
+    private static final String NODE_PATH_WIN =   "C:/Program Files (x86)/Appium/node.exe";
+
     private NodeConfig nodeConfig = null;
     private Process process = null;
 
@@ -54,7 +58,7 @@ public class AppiumAndroid implements IFAppiumServer {
     public void startServer() {
         try{
             ProcessBuilder pb = new ProcessBuilder(
-                    NODE_PATH, APPIUM_PATH,
+                    NODE_PATH_MAC, APPIUM_PATH_MAC,
                     "--address",  nodeConfig.getConfiguration().getHost(),
                     "--port",     nodeConfig.getConfiguration().getPort().toString(),
                     "--nodeconfig", nodeConfig.getConfigPath().toString()

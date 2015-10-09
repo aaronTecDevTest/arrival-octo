@@ -18,13 +18,10 @@ import org.apache.logging.log4j.Logger;
 
 import java.nio.file.Path;
 
-/**
- * Created by tecdesdev on 26/05/15.
- */
 public class AppiumIOSDefault implements IFAppiumServer {
     private static final Logger log = LogManager.getLogger(AppiumIOSDefault.class);
-    private static String appiumPath = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
-    private static String nodePath = "/Applications/Appium.app/Contents/Resources/node/bin/node";
+    private static final String APPIUM_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
+    private static final String NODE_PATH_MAC =   "/Applications/Appium.app/Contents/Resources/node/bin/node";
     private static Integer webKitProxyPort= 27751; //27752-27852
     private NodeConfig nodeConfig = null;
 
@@ -39,14 +36,32 @@ public class AppiumIOSDefault implements IFAppiumServer {
         this.nodeConfig = nodeConfig;
     }
 
+
+    public NodeConfig getNodeConfig() {
+        return nodeConfig;
+    }
+
+    public void setNodeConfig(NodeConfig nodeConfig) {
+        this.nodeConfig = nodeConfig;
+    }
+
+    public void startIOSWebKitDebugProxy(){
+        AppiumIOSDefault.webKitProxyPort++;
+    }
+
+    public void stopIOSWebKitDebugProxy(){
+        AppiumIOSDefault.webKitProxyPort--;
+    }
+
+
     /**
      * This functions start a current Server over commando line.
      **/
     @Override
     public void startServer() {
         try{
-            CommandLine command = new CommandLine(nodePath);
-            command.addArgument(appiumPath);
+            CommandLine command = new CommandLine(NODE_PATH_MAC);
+            command.addArgument(APPIUM_PATH_MAC);
             command.addArgument("--address");
             command.addArgument(nodeConfig.getConfiguration().getHost());
             command.addArgument("--port");
@@ -98,39 +113,4 @@ public class AppiumIOSDefault implements IFAppiumServer {
     /**
      * Getter and Setter functions for appiumPath, nodePath and nodeConfig
      */
-    public static String getAppiumPath() {
-        return appiumPath;
-    }
-
-    public static void setAppiumPath(String appiumPath) {
-        AppiumIOSDefault.appiumPath = appiumPath;
-    }
-
-    public static String getNodePath() {
-        return nodePath;
-    }
-
-    public static void setNodePath(String nodePath) {
-        AppiumIOSDefault.nodePath = nodePath;
-    }
-
-    public NodeConfig getNodeConfig() {
-        return nodeConfig;
-    }
-
-    public void setNodeConfig(NodeConfig nodeConfig) {
-        this.nodeConfig = nodeConfig;
-    }
-
-    /**
-     *
-     */
-    public void startIOSWebKitDebugProxy(){
-        AppiumIOSDefault.webKitProxyPort++;
-    }
-
-    public void stopIOSWebKitDebugProxy(){
-        AppiumIOSDefault.webKitProxyPort--;
-    }
-
 }

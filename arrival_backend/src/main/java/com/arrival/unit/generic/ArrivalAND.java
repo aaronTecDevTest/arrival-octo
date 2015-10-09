@@ -10,6 +10,7 @@ package com.arrival.unit.generic;
  * Package: com.arrival.unit.generic
  */
 
+import com.arrival.appium.AppiumConfigSingleton;
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -96,14 +97,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
 
     @BeforeClass
     public void setUpTestClass() {
-        if (AppiumConfigSingleton.getTestArt().equals("multi")) {
-            appiumServerList.add("android Test1");
-            appiumServerList.add("android Test2");
-            appiumServerList.add("ios Test1");
-            appiumServerList.add("ios Test2");
-        } else {
-            appiumServerList.add("android Default");
-        }
+
     }
 
     /*

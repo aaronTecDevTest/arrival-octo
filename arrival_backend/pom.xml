@@ -16,14 +16,14 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <version.selenium>2.45.0</version.selenium>
+        <version.selenium>2.47.2</version.selenium>
         <version.sikuli>1.1.0</version.sikuli>
         <version.junit>4.11</version.junit>
         <version.testng>6.8.21</version.testng>
-        <version.io.appium>2.2.0</version.io.appium>
+        <version.io.appium>3.2.0</version.io.appium>
         <version.jemeter.plugin>1.10.1</version.jemeter.plugin>
         <version.jenkins.client>0.3.0</version.jenkins.client>
-        <version.gson>2.3.1</version.gson>
+        <version.gson>2.4</version.gson>
     </properties>
 
     <!--dependencyManagement-->

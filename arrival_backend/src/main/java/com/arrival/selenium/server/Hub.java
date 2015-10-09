@@ -13,6 +13,7 @@ package com.arrival.selenium.server;
  * Also can start, stop and restart the Hub.
  */
 
+import com.arrival.utilities.SystemPreferences;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.grid.internal.utils.GridHubConfiguration;
@@ -45,6 +46,7 @@ public class Hub {
     private Integer hubPort;
 
 
+
     /**
      * Standard construct to ini gridHubConfig, hubHost, hubPort and
      * osName.
@@ -54,8 +56,8 @@ public class Hub {
         gridHubConfig = new GridHubConfiguration();
         hubHost = HUBHOST;
         hubPort = HUBPORT;
-        osName = System.getProperty("os.name");
-        setUpHub();
+        osName = SystemPreferences.getOsName();
+        hub = null;
         log.info("SeleniumHb created");
     }
 
@@ -73,13 +75,6 @@ public class Hub {
         setUpHub();
     }
 
-   /* public static void main(String[] args) {
-        Hub hubNode = new Hub();
-
-        hubNode.startHub();
-        // hubNode.shutDownNodeAndHub();
-    }*/
-
     /**
      * Setup the Hub with GridHubConfig
      */
@@ -90,7 +85,6 @@ public class Hub {
             hub = new org.openqa.grid.web.Hub(gridHubConfig);
         } catch (Exception e) {
             log.error(e.getStackTrace());
-            //e.printStackTrace();
         }
     }
 
@@ -99,15 +93,16 @@ public class Hub {
      */
     public void startHub() {
         try {
-            //Todo: Find out how to stop the sever if its running.
-            /*if (hub != null)
-                this.stopHub();*/
+            if (hub != null) {
+                this.stopHub();
+            }
 
+            setUpHub();
             hub.start();
-            log.info("Start the hub on: " + hubHost + " on port: " + hubPort);
+            log.info("Start the hub on: " + hubHost + " on port: " + hubPort + "succesfull");
         } catch (Exception e) {
             log.error("Fail to start the hub on: " + hubHost + " on port: " + hubPort);
-            log.warn("Host: " + hubHost + " on port: " + hubPort + " all ready in use!");
+            //log.warn("Host: " + hubHost + " on port: " + hubPort + " all ready in use!");
             //e.printStackTrace();
         }
     }
@@ -178,4 +173,11 @@ public class Hub {
     public void setHubPort(Integer hubPort) {
         this.hubPort = hubPort;
     }
+
+   /* public static void main(String[] args) {
+        Hub hubNode = new Hub();
+
+        hubNode.startHub();
+        // hubNode.shutDownNodeAndHub();
+    }*/
 }

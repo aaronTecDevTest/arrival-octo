@@ -10,7 +10,6 @@ package com.arrival.selenium;
  */
 
 import com.arrival.selenium.config.SeleniumConfig;
-import com.arrival.unit.generic.SeleniumConfigSingleton;
 import com.arrival.utilities.interfaces.IFConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

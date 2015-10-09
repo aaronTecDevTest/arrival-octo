@@ -37,7 +37,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
-import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -309,7 +308,7 @@ public class FXMLArrivalMainController implements Initializable {
                     dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
                 }else{
                     log.warn("Is not a IOS Testcase");
-                    WindowsDialogs.rongPlatform(tbvTestsuiteController.getPlatform());
+                    WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
             }
 
@@ -324,7 +323,7 @@ public class FXMLArrivalMainController implements Initializable {
                     dateTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
                 }else{
                     log.warn("Is not a IOS Testcase");
-                    WindowsDialogs.rongPlatform(tbvTestsuiteController.getPlatform());
+                    WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
             }
 
@@ -338,7 +337,7 @@ public class FXMLArrivalMainController implements Initializable {
                     dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
                 }else{
                     log.warn("Is not a IOS Testcase");
-                    WindowsDialogs.rongPlatform(tbvTestsuiteController.getPlatform());
+                    WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
             }
         } catch (Exception e) {

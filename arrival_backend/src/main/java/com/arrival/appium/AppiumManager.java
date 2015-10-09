@@ -6,7 +6,7 @@ package com.arrival.appium;
  * @since 1.0
  */
 
-import com.arrival.selenium.config.SeleniumConfig;
+import com.arrival.appium.config.AppiumConfig;
 import com.arrival.utilities.interfaces.IFConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,7 +23,7 @@ public class AppiumManager {
 
     public AppiumManager() {
         webDriver = null;
-        testSuiteConfigs = new SeleniumConfig();
+        testSuiteConfigs = new AppiumConfig();
         appiumServerList = new ArrayList<>();
     }
 

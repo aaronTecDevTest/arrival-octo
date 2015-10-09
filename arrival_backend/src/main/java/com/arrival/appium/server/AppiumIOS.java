@@ -17,8 +17,9 @@ import java.nio.file.Path;
 public class AppiumIOS implements IFAppiumServer {
     private static final Logger log = LogManager.getLogger(AppiumIOS.class);
 
-    private static final String APPIUM_PATH = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
-    private static final String NODE_PATH =   "/Applications/Appium.app/Contents/Resources/node/bin/node";
+    private static final String APPIUM_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
+    private static final String NODE_PATH_MAC =   "/Applications/Appium.app/Contents/Resources/node/bin/node";
+
     private NodeConfig nodeConfig = null;
     private Process process = null;
 
@@ -56,7 +57,7 @@ public class AppiumIOS implements IFAppiumServer {
     public void startServer() {
         try{
             ProcessBuilder pb = new ProcessBuilder(
-                    NODE_PATH, APPIUM_PATH,
+                    NODE_PATH_MAC, APPIUM_PATH_MAC,
                     "--address",  nodeConfig.getConfiguration().getHost(),
                     "--port",     nodeConfig.getConfiguration().getPort().toString(),
                     "--nodeconfig", nodeConfig.getConfigPath().toString()
@@ -92,7 +93,7 @@ public class AppiumIOS implements IFAppiumServer {
 
     /**
      * This functions start a current Sever over commando line with JSON-NodeConfiguration file.
-     * * @param JSONFilePath -> The Path where the file existe.
+     * * @param JSONFilePath -> The Path where the file exist.
      */
     @Override
     public void runServerWithJSON(Path JSONFilePath) {
