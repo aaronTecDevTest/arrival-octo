@@ -17,7 +17,7 @@ public class SimpleTestIOS2 extends ArrivalIOS {
     public SimpleTestIOS2(){
         super();
         setTcID(11123);
-        setTcName("SimpleTestIOS1");
+        setTcName("SimpleTestIOS2");
         setTcDescription("Test1122");
         setTcDuration("2");
         setTcLink("wwww.wetter.info");

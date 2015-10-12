@@ -1,4 +1,5 @@
 package com.arrival.testCase.andTestcase;
+
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0
@@ -17,15 +18,15 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class SimpleTestAnd3 extends ArrivalAND {
+public class SimpleAnd1 extends ArrivalAND {
 
-    public SimpleTestAnd3(){
+    public SimpleAnd1(){
         super();
-        setTcID(2);
-        setTcName("SimpleTestAnd3");
-        setTcDescription("Test2");
+        setTcID(1);
+        setTcName("SimpleAnd1");
+        setTcDescription("Test1");
         setTcDuration("2");
-        setTcLink("wwww.wetter.info");
+        setTcLink("wwww.wetter.info.demkkmkmk");
         setTcLastRun("10");
         setTcResult("Link1");
     }
@@ -33,6 +34,7 @@ public class SimpleTestAnd3 extends ArrivalAND {
     @Test(dataProvider = "driver", groups = {"fast"})
     public void getGoogle(AndroidDriver driver, Integer id) {
         setWebDriver(driver);
+
 
         // And now use this to visit Google
         androidDriver.get("http://www.google.com");
@@ -53,14 +55,15 @@ public class SimpleTestAnd3 extends ArrivalAND {
 
         // Google's search is rendered dynamically with JavaScript.
         // Wait for the page to load, timeout after 10 seconds
-        (new WebDriverWait(androidDriver, 10)).until(new ExpectedCondition<Boolean>() {
+       /* (new WebDriverWait(androidDriver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
                 return d.getTitle().toLowerCase().contains("cheese!");
             }
-        });
+        });*/
 
         // Should see: "cheese! - Google Search"
         System.out.println("Page title is: " + androidDriver.getTitle());
+
     }
 
     @Test(dataProvider = "driver", groups = {"fast"})
@@ -83,11 +86,11 @@ public class SimpleTestAnd3 extends ArrivalAND {
         element.click();
         // Google's search is rendered dynamically with JavaScript.
         // Wait for the page to load, timeout after 10 seconds
-        (new WebDriverWait(androidDriver, 10)).until(new ExpectedCondition<Boolean>() {
+        /*(new WebDriverWait(androidDriver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
                 return d.getTitle().toLowerCase().contains("video");
             }
-        });
+        });*/
         pauseTest(2000);
         // Should see: "cheese! - Google Search"
         System.out.println("Page title is: " + androidDriver.getTitle());

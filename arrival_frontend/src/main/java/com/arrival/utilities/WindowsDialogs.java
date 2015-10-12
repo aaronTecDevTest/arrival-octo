@@ -60,7 +60,7 @@ public class WindowsDialogs {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
-        alert.setContentText("Testcase is not a " + ios +"Platform. " + "Roung Platform!");
+        alert.setContentText("Testcase is not a " + ios +" Platform. " + "Wrong Platform!");
 
         alert.showAndWait();
     }

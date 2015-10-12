@@ -99,6 +99,7 @@ public class FXMLArrivalTableViewController implements Initializable {
 
         //ToDo ini bei runtestcase
         runableTestSuite = new ArrivalTestSuite();
+        platform = "platform";
     }
 
     public void runTestSuite() {

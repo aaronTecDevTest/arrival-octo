@@ -84,8 +84,8 @@ public class ArrivalTestSuite {
         //suite.setName("TmpSuite");
         xmlTest.setName("TmpTest");
         /*classes.add(new XmlClass("com.arrival.unit.generic.SeleniumSingleton"));
-        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTestAnd1"));
-        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTestAnd1"));*/
+        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleAnd1"));
+        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleAnd1"));*/
     }
 
     /**

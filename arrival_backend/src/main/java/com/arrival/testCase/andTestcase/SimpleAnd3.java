@@ -17,15 +17,15 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class SimpleTestAnd2 extends ArrivalAND {
+public class SimpleAnd3 extends ArrivalAND {
 
-    public SimpleTestAnd2(){
+    public SimpleAnd3(){
         super();
         setTcID(2);
-        setTcName("SimpleTestAnd2");
+        setTcName("SimpleAnd3");
         setTcDescription("Test2");
         setTcDuration("2");
-        setTcLink("wwww.wetter.info");
+        setTcLink("wwww.wetter.info.de");
         setTcLastRun("10");
         setTcResult("Link1");
     }
@@ -53,11 +53,11 @@ public class SimpleTestAnd2 extends ArrivalAND {
 
         // Google's search is rendered dynamically with JavaScript.
         // Wait for the page to load, timeout after 10 seconds
-        (new WebDriverWait(androidDriver, 10)).until(new ExpectedCondition<Boolean>() {
+        /*(new WebDriverWait(androidDriver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
                 return d.getTitle().toLowerCase().contains("cheese!");
             }
-        });
+        });*/
 
         // Should see: "cheese! - Google Search"
         System.out.println("Page title is: " + androidDriver.getTitle());
@@ -83,11 +83,12 @@ public class SimpleTestAnd2 extends ArrivalAND {
         element.click();
         // Google's search is rendered dynamically with JavaScript.
         // Wait for the page to load, timeout after 10 seconds
-        (new WebDriverWait(androidDriver, 10)).until(new ExpectedCondition<Boolean>() {
+        /*(new WebDriverWait(androidDriver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
                 return d.getTitle().toLowerCase().contains("video");
             }
-        });
+        });*/
+
         pauseTest(2000);
         // Should see: "cheese! - Google Search"
         System.out.println("Page title is: " + androidDriver.getTitle());

@@ -77,7 +77,7 @@ public class AppiumSingleton {
     public void setUpAppiumConfig() {
         //Todo: Start the Appium server + SeleniumGrid (SeleniumHub) here
         setFramework(AppiumSingleton.ARRIVAL);
-        hub = new Hub();
+      /*  hub = new Hub();
         hub.startHub();
 
         JSONConfigReader jsonConfigReader = new JSONConfigReader(appiumManager.getTestSuiteConfigs().getJsonConfigPath());
@@ -86,7 +86,7 @@ public class AppiumSingleton {
         for(Path path : jsonPathList){
 
             appiumSeverList.add(null);
-        }
+        }*/
     }
 
     /**
@@ -95,7 +95,7 @@ public class AppiumSingleton {
     @AfterSuite
     public void cleanUpAppiumConfig() {
         //Todo: Stop the Appium server + SeleniumGrid (SeleniumHub) here
-        setFramework(null);
-        hub.stopHub();
+      /*  setFramework(null);
+        hub.stopHub();*/
     }
 }
