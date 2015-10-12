@@ -42,6 +42,7 @@ public class NodeConfig {
     public Capabilities getSingelCapability(){
         return capabilities[0];
     }
+
     public Path getConfigPath() {
         return configPath;
     }

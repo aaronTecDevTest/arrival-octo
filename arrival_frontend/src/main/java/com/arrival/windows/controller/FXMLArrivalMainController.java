@@ -459,7 +459,6 @@ public class FXMLArrivalMainController implements Initializable {
     /**
      * No FML Functions
      */
-    //ToDo classe
     private void setUpIOSTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderIOS = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
@@ -467,11 +466,29 @@ public class FXMLArrivalMainController implements Initializable {
         ArrayList<String> classPackage = fileNameLoaderIOS.getClassPackage();
         try {
             for (int i = 0; i < fileNameLoaderIOS.getSize(); i++) {
-                Class tempTestCaseClass = Class.forName(classPackage.get(i));
-                tempList.add(new TestCase(fileNames.get(i), "test2", "datum", "timer", "", "true", classPackage.get(i)));
+                String fullName = classPackage.get(i);
+
+                Class tempTestCaseClass = Class.forName(fullName);
+                Object tempTestCaseObject = tempTestCaseClass.newInstance();
+                IFTestCase tempTestCaseIF = (IFTestCase)tempTestCaseObject;
+                tempList.add(new TestCase(
+                        tempTestCaseIF.getTcName(),
+                        tempTestCaseIF.getTcDescription(),
+                        tempTestCaseIF.getTcResult(),
+                        tempTestCaseIF.getTcDuration(),
+                        tempTestCaseIF.getTcLastRun(),
+                        tempTestCaseIF.getTcLink(),
+                        classPackage.get(i)));
             }
-        }catch (Exception e){
-            log.error(e.getStackTrace());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            log.error(e.getStackTrace() + ":  " + e.toString());
+        }catch (InstantiationException e) {
+            e.printStackTrace();
+            log.error(e.getStackTrace() + ":  " + e.toString());
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+            log.error(e.getStackTrace() + ":  " + e.toString());
         }
 
         dateIOSTestcase = FXCollections.observableArrayList(tempList);
@@ -482,9 +499,31 @@ public class FXMLArrivalMainController implements Initializable {
         fileNameLoaderAND = new FileNameLoader("/com/arrival/testCase/andTestcase", ".class");
         ArrayList<String> fileNames = fileNameLoaderAND.getClassName();
         ArrayList<String> classPackage = fileNameLoaderAND.getClassPackage();
+        try{
+            for (int i = 0; i < fileNameLoaderAND.getSize(); i++) {
+                String fullName = classPackage.get(i);
 
-        for (int i = 0; i < fileNameLoaderAND.getSize(); i++) {
-            tempList.add(new TestCase(fileNames.get(i), "test2", "datum", "timer", "", "true", classPackage.get(i)));
+                Class tempTestCaseClass = Class.forName(fullName);
+                Object tempTestCaseObject = tempTestCaseClass.newInstance();
+                IFTestCase tempTestCaseIF = (IFTestCase)tempTestCaseObject;
+                tempList.add(new TestCase(
+                        tempTestCaseIF.getTcName(),
+                        tempTestCaseIF.getTcDescription(),
+                        tempTestCaseIF.getTcResult(),
+                        tempTestCaseIF.getTcDuration(),
+                        tempTestCaseIF.getTcLastRun(),
+                        tempTestCaseIF.getTcLink(),
+                        classPackage.get(i)));
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            log.error(e.getStackTrace() + ":  " + e.toString());
+        }catch (InstantiationException e) {
+            e.printStackTrace();
+            log.error(e.getStackTrace() + ":  " + e.toString());
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+            log.error(e.getStackTrace() + ":  " + e.toString());
         }
         dateANDTestcase = FXCollections.observableArrayList(tempList);
     }
@@ -520,9 +559,7 @@ public class FXMLArrivalMainController implements Initializable {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
-        } /*catch (IOException e) {
-            log.error(e.getStackTrace() + ":  " + e.toString());
-        }*/
+        }
 
         dateWebPortalTestcase = FXCollections.observableArrayList(tempList);
     }

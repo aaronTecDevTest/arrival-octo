@@ -83,9 +83,9 @@ public class ArrivalTestSuite {
     private void createVirtualSuite() {
         //suite.setName("TmpSuite");
         xmlTest.setName("TmpTest");
-        /*classes.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
-        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));
-        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTest1"));*/
+        /*classes.add(new XmlClass("com.arrival.unit.generic.SeleniumSingleton"));
+        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTestAnd1"));
+        classes.add(new XmlClass("com.arrival.testCase.andTestcase.SimpleTestAnd1"));*/
     }
 
     /**
@@ -97,7 +97,7 @@ public class ArrivalTestSuite {
 
         //ToDo: Mit Path class implement
         String tempPath = "../arrival-Octo/arrival_backend/src/main/resources/report/testng/selenium/";
-       /* String userSavePath = SeleniumConfigSingleton.getInstance().getSeleniumManager().getTestSuiteConfigs().getSaveResultPath();
+       /* String userSavePath = SeleniumSingleton.getInstance().getSeleniumManager().getTestSuiteConfigs().getSaveResultPath();
         if(!userSavePath.isEmpty())
             tempPath = userSavePath;
 */

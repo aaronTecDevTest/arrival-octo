@@ -13,21 +13,21 @@ import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-public class SeleniumConfigSingleton {
-    private final static  Logger log = LogManager.getLogger(SeleniumConfigSingleton.class);
+public class SeleniumSingleton {
+    private final static  Logger log = LogManager.getLogger(SeleniumSingleton.class);
     public final static String TESTNG = "TESTNG";
     public final static String ARRIVAL = "ARRIVAL";
     public static String framework;
-    private static SeleniumConfigSingleton ourInstance = new SeleniumConfigSingleton();
+    private static SeleniumSingleton ourInstance = new SeleniumSingleton();
     private static SeleniumManager seleniumManager;
 
-    private SeleniumConfigSingleton() {
+    private SeleniumSingleton() {
         framework = TESTNG;
         seleniumManager = new SeleniumManager();
     }
 
-    public static SeleniumConfigSingleton getInstance() {
-        log.info(SeleniumConfigSingleton.class + "set up!!");
+    public static SeleniumSingleton getInstance() {
+        log.info(SeleniumSingleton.class + "set up!!");
         return ourInstance;
     }
 
@@ -36,7 +36,7 @@ public class SeleniumConfigSingleton {
     }
 
     public static void setFramework(String framework) {
-        SeleniumConfigSingleton.framework = framework;
+        SeleniumSingleton.framework = framework;
     }
 
     public SeleniumManager getSeleniumManager() {
@@ -44,7 +44,7 @@ public class SeleniumConfigSingleton {
     }
 
     public void setSeleniumManager(SeleniumManager seleniumManager) {
-        SeleniumConfigSingleton.seleniumManager = seleniumManager;
+        SeleniumSingleton.seleniumManager = seleniumManager;
 
     }
 
@@ -53,7 +53,7 @@ public class SeleniumConfigSingleton {
      */
     @BeforeSuite
     public void setUpSeleniumConfig() {
-        setFramework(SeleniumConfigSingleton.ARRIVAL);
+        setFramework(SeleniumSingleton.ARRIVAL);
        // seleniumManager.setUpSeleniumServerList();
     }
 
@@ -62,7 +62,7 @@ public class SeleniumConfigSingleton {
      */
     @AfterSuite
     public void cleanSeleniumConfig() {
-        //setFramework(SeleniumConfigSingleton.TESTNG);
+        //setFramework(SeleniumSingleton.TESTNG);
      //   seleniumManager.setDownSeleniumServerList();
     }
 }

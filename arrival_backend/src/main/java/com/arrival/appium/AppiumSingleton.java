@@ -9,6 +9,8 @@ package com.arrival.appium;
  */
 
 import com.arrival.appium.config.JSONConfigReader;
+import com.arrival.appium.server.AppiumAndroid;
+import com.arrival.appium.server.AppiumServer;
 import com.arrival.selenium.server.Hub;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,13 +21,14 @@ import org.testng.annotations.BeforeSuite;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
-public class AppiumConfigSingleton {
-    private static final Logger log = LogManager.getLogger(AppiumConfigSingleton.class);
+public class AppiumSingleton {
+    private static final Logger log = LogManager.getLogger(AppiumSingleton.class);
+    private static AppiumSingleton ourInstance = new AppiumSingleton();
     public static final  String TESTNG = "TESTNG";
     public static final  String ARRIVAL = "ARRIVAL";
     public static String framework;
-    private static AppiumConfigSingleton ourInstance = new AppiumConfigSingleton();
-    private static AppiumManager appiumManager;
+    public AppiumManager appiumManager;
+    public AppiumServer appiumServer;
 
     //public
     public ArrayList<Object> appiumSeverList = new ArrayList<>();
@@ -33,17 +36,17 @@ public class AppiumConfigSingleton {
 
     private Hub hub;
 
-    private AppiumConfigSingleton(){
+    private AppiumSingleton(){
         framework = TESTNG;
         appiumManager = new AppiumManager();
     }
 
-    public static AppiumConfigSingleton getInstance(){
-        log.info(AppiumConfigSingleton.class + "set up!!");
+    public static AppiumSingleton getInstance(){
+        log.info(AppiumSingleton.class + "set up!!");
         return  ourInstance;
     }
 
-    public static AppiumManager getAppiumManager() {
+    public AppiumManager getAppiumManager() {
         return appiumManager;
     }
 
@@ -60,11 +63,11 @@ public class AppiumConfigSingleton {
     }
 
     public static void setFramework(String framework) {
-        AppiumConfigSingleton.framework = framework;
+        AppiumSingleton.framework = framework;
     }
 
-    public static void setAppiumManager(AppiumManager appiumManager) {
-        AppiumConfigSingleton.appiumManager = appiumManager;
+    public void setAppiumManager(AppiumManager appiumManager) {
+        this.appiumManager = appiumManager;
     }
 
     /**
@@ -73,7 +76,7 @@ public class AppiumConfigSingleton {
     @BeforeSuite
     public void setUpAppiumConfig() {
         //Todo: Start the Appium server + SeleniumGrid (SeleniumHub) here
-        setFramework(AppiumConfigSingleton.ARRIVAL);
+        setFramework(AppiumSingleton.ARRIVAL);
         hub = new Hub();
         hub.startHub();
 

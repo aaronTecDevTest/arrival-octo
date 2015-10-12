@@ -1,6 +1,6 @@
 package com.arrival.unit.generic;
 
-import com.arrival.selenium.SeleniumConfigSingleton;
+import com.arrival.selenium.SeleniumSingleton;
 import com.arrival.selenium.SeleniumManager;
 import com.arrival.selenium.WebDriverManager;
 import com.arrival.utilities.interfaces.IFConfig;
@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     protected static final Logger log = LogManager.getLogger(ArrivalWeb.class);
 
-    public SeleniumConfigSingleton seleniumConfigSingleton = SeleniumConfigSingleton.getInstance();
+    public SeleniumSingleton seleniumConfigSingleton = SeleniumSingleton.getInstance();
     public SeleniumManager seleniumManager = seleniumConfigSingleton.getSeleniumManager();
     //public String server = seleniumManager.getTestSuiteConfigs().getServerName();
     public ArrayList<Object> seleniumServerList = new ArrayList<>();
@@ -59,7 +59,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         tcClassPackage = new SimpleStringProperty();
     }
 
-    public void setBrowser(WebDriver driver) {
+    public void setWebDriver(WebDriver driver) {
         browser = driver;
     }
 
@@ -111,7 +111,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         IFConfig testSuiteConfigs = seleniumManager.getTestSuiteConfigs();
         WebDriver webDriver;
 
-        if (SeleniumConfigSingleton.getFramework().equals(SeleniumConfigSingleton.ARRIVAL)) {
+        if (SeleniumSingleton.getFramework().equals(SeleniumSingleton.ARRIVAL)) {
             //If Test should be start parallel
             if (testSuiteConfigs.getParallelTesting()) {
                 for (int i = 0; i < testSuiteConfigs.getParallelTestingCount(); i++) {

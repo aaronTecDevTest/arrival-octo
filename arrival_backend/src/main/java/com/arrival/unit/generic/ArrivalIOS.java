@@ -8,7 +8,7 @@ package com.arrival.unit.generic;
  * Package: com.arrival.unit.generic
  */
 
-import com.arrival.appium.AppiumConfigSingleton;
+import com.arrival.appium.AppiumSingleton;
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     private static final Logger log = LogManager.getLogger(ArrivalIOS.class);
-    public static AppiumConfigSingleton appiumConfi = AppiumConfigSingleton.getInstance();
+    public static AppiumSingleton appiumConfi = AppiumSingleton.getInstance();
     public ArrayList<Object> appiumServerList = new ArrayList<>();
 
     /**

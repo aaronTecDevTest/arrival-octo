@@ -10,8 +10,8 @@ package com.arrival.windows.controller;
 
 import com.arrival.appium.AppiumManager;
 import com.arrival.selenium.SeleniumManager;
-import com.arrival.appium.AppiumConfigSingleton;
-import com.arrival.selenium.SeleniumConfigSingleton;
+import com.arrival.appium.AppiumSingleton;
+import com.arrival.selenium.SeleniumSingleton;
 import com.arrival.unit.suites.ArrivalTestSuite;
 import com.arrival.utilities.WindowsDialogs;
 import com.arrival.windows.model.Options;
@@ -65,6 +65,8 @@ public class FXMLArrivalTableViewController implements Initializable {
 
     private ArrivalTestSuite runableTestSuite;
     private ObservableList dateTestSuite;
+    private SeleniumManager tempSeleniumManager;
+    private AppiumManager tempAppiumManager;
     private Options options;
     private String platform;
 
@@ -102,22 +104,19 @@ public class FXMLArrivalTableViewController implements Initializable {
     public void runTestSuite() {
         try{
             log.info(options.toString());
-            SeleniumManager tempSeleniumManager = new SeleniumManager();
-            AppiumManager tempAppiumManager = new AppiumManager();
-
-
-
+             tempSeleniumManager = new SeleniumManager();
+             tempAppiumManager = new AppiumManager();
 
             List<XmlClass> tempClasses = new ArrayList<>();
             if(options.getPlatform().contains("Web")){
                 tempSeleniumManager.setTestSuiteConfigs(options);
-                SeleniumConfigSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
-                tempClasses.add(new XmlClass("com.arrival.unit.generic.SeleniumConfigSingleton"));
+                SeleniumSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
+                tempClasses.add(new XmlClass("com.arrival.unit.generic.SeleniumSingleton"));
             }
             else if (options.getPlatform().contains("IOS") ||options.getPlatform().contains("Android")) {
                 tempAppiumManager.setTestSuiteConfigs(options);
-                AppiumConfigSingleton.getInstance().setAppiumManager(tempAppiumManager);
-                tempClasses.add(new XmlClass("com.arrival.unit.generic.AppiumConfigSingleton"));
+                AppiumSingleton.getInstance().setAppiumManager(tempAppiumManager);
+                tempClasses.add(new XmlClass("com.arrival.unit.generic.AppiumSingleton"));
             }
             else {
                 log.warn("No Platform is set up!");

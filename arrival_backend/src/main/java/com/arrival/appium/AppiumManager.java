@@ -8,21 +8,21 @@ package com.arrival.appium;
 
 import com.arrival.appium.config.AppiumConfig;
 import com.arrival.utilities.interfaces.IFConfig;
+import io.appium.java_client.android.AndroidDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 
 import java.util.ArrayList;
 
 public class AppiumManager {
     private static final Logger log = LogManager.getLogger(AppiumManager.class);
 
-    WebDriver webDriver;
+    AndroidDriver androidDriver;
     private IFConfig testSuiteConfigs;
     private ArrayList<Object> appiumServerList;
 
     public AppiumManager() {
-        webDriver = null;
+        androidDriver = null;
         testSuiteConfigs = new AppiumConfig();
         appiumServerList = new ArrayList<>();
     }

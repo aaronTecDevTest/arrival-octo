@@ -1,5 +1,4 @@
-package com.arrival.testCase.andTestcase;
-
+package com.arrival.testCase.iosTestcase;
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0
@@ -8,22 +7,29 @@ package com.arrival.testCase.andTestcase;
  * Package: com.arrival
  */
 
-
-import com.arrival.unit.generic.ArrivalAND;
+import com.arrival.unit.generic.ArrivalIOS;
 import org.testng.annotations.Test;
 
-public class SimpleTest1 extends ArrivalAND {
+public class SimpleTestIOS1 extends ArrivalIOS {
+
+    public SimpleTestIOS1(){
+        super();
+        setTcID(111);
+        setTcName("SimpleTestIOS1");
+        setTcDescription("Test1122");
+        setTcDuration("2");
+        setTcLink("wwww.wetter.info");
+        setTcLastRun("10");
+        setTcResult("Link1");
+    }
 
     @Test(dataProvider = "driver", groups = {"fast"})
     public void aFastTest(String serverName, Integer id) {
         System.out.println("Fast test 202 " + serverName + " " + id);
-        pauseTest(10000);
     }
 
     @Test(dataProvider = "driver", groups = {"slow"})
     public void aSlowTest(String serverName, Integer id) {
         System.out.println("Slow test 303 " + serverName + " " + id);
-        pauseTest(10000);
     }
-
 }

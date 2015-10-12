@@ -8,17 +8,16 @@ package com.arrival.testCase.webTestcase;
  * Package: com.arrival
  */
 
-
 import com.arrival.unit.generic.ArrivalWeb;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-public class SimpleTest111 extends ArrivalWeb {
+public class SimpleTestWeb1 extends ArrivalWeb {
 
-    public SimpleTest111(){
+    public SimpleTestWeb1(){
         super();
         setTcID(111);
-        setTcName("SimpleTest1111");
+        setTcName("SimpleTestWeb1");
         setTcDescription("Test1");
         setTcDuration("2");
         setTcLink("wwww.wetter.info");
@@ -29,7 +28,7 @@ public class SimpleTest111 extends ArrivalWeb {
     @Test(dataProvider = "driver", groups = {"fast"})
     public void aFastTest(WebDriver driver, Integer id) {
         System.out.println("Fast test 111 " + driver + " " + id);
-        setBrowser(driver);
+        setWebDriver(driver);
         driver.get("http://www.google.com");
         pauseTest(3000);
         click();
@@ -38,7 +37,7 @@ public class SimpleTest111 extends ArrivalWeb {
     @Test(dataProvider = "driver", groups = {"slow"})
     public void aSlowTest(WebDriver driver, Integer id) {
         System.out.println("Slow test 303 " + driver + " " + id);
-        setBrowser(driver);
+        setWebDriver(driver);
         driver.get("http://www.t-online.de");
         pauseTest(1000);
         click();
