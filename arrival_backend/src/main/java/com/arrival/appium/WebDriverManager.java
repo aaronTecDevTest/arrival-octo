@@ -12,6 +12,7 @@ package com.arrival.appium;
 import com.arrival.utilities.interfaces.IFTestCase;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,7 +21,11 @@ public class WebDriverManager {
     private static final Logger log = LogManager.getLogger(WebDriverManager.class);
 
     public WebDriverManager(){
+        AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+        service.start();
 
+
+        service.stop();
     }
 
     public Object setUpDriver(IFTestCase runningConfiguration /*noch was hier*/){
@@ -45,4 +50,6 @@ public class WebDriverManager {
         }
         return driver;
     }
+
+
 }

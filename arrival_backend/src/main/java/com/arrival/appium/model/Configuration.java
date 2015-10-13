@@ -28,6 +28,7 @@ public class Configuration {
         return cleanUpCycle;
     }
 
+
     public void setCleanUpCycle(Integer cleanUpCycle) {
         this.cleanUpCycle = cleanUpCycle;
     }

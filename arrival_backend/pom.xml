@@ -21,6 +21,7 @@
         <version.junit>4.11</version.junit>
         <version.testng>6.8.21</version.testng>
         <version.io.appium>3.2.0</version.io.appium>
+        <veriosn.commons.validator>1.4.1</veriosn.commons.validator>
         <version.jemeter.plugin>1.10.1</version.jemeter.plugin>
         <version.jenkins.client>0.3.0</version.jenkins.client>
         <version.gson>2.4</version.gson>
@@ -69,6 +70,12 @@
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
             <version>${version.io.appium}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>${veriosn.commons.validator}</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>

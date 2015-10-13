@@ -192,8 +192,8 @@ public class FXMLArrivalMainController implements Initializable {
         iniBundleResources();
 
         //Setup Table-Data Objects
-        dateANDTestcase = FXCollections.observableArrayList();
         dateTestsuite = FXCollections.observableArrayList();
+        dateANDTestcase = FXCollections.observableArrayList();
         dateIOSTestcase = FXCollections.observableArrayList();
         dateWebPortalTestcase = FXCollections.observableArrayList();
 
@@ -297,13 +297,14 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void addTestcaseInTestsuite(ActionEvent actionEvent) {
         try {
+
             if (accTestCase.getExpandedPane().getText().equals("iOS - Testcase")) {
                 log.info(actionEvent.getSource() + "IOS");
-                if(dateTestsuite.isEmpty()){
+                if(/*dateTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")){
                     tbvTestsuiteController.setPlatform("IOS");
                 }
 
-                if(tbvTestsuiteController.isIOSPlatform() && tbvTestsuiteController.getPlatform().contains("platform")){
+                if(tbvTestsuiteController.isIOSPlatform()){
                     dateTestsuite = currentTableView.getItems();
                     dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
                 }else{
@@ -312,9 +313,10 @@ public class FXMLArrivalMainController implements Initializable {
                 }
             }
 
+
             if (accTestCase.getExpandedPane().getText().equals("Android - Testcase")) {
                 log.info(actionEvent.getSource() + "AND");
-                if(dateTestsuite.isEmpty() && tbvTestsuiteController.getPlatform().contains("platform")){
+                if(/*dateTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")){
                     tbvTestsuiteController.setPlatform("Android");
                 }
 
@@ -322,21 +324,22 @@ public class FXMLArrivalMainController implements Initializable {
                     dateTestsuite = currentTableView.getItems();
                     dateTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
                 }else{
-                    log.warn("Is not a IOS Testcase");
+                    log.warn("Is not a Android Testcase");
                     WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
             }
 
+
             if (accTestCase.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
                 log.info(actionEvent.getSource() + "Web");
-                if(dateTestsuite.isEmpty() && tbvTestsuiteController.getPlatform().contains("platform")){
+                if(/*dateTestsuite.isEmpty() && */tbvTestsuiteController.getPlatform().equals("platform")){
                     tbvTestsuiteController.setPlatform("Web");
                 }
                 if(tbvTestsuiteController.isWebPlatform()){
                     dateTestsuite = currentTableView.getItems();
                     dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
                 }else{
-                    log.warn("Is not a IOS Testcase");
+                    log.warn("Is not a Web Testcase");
                     WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
             }
@@ -350,10 +353,11 @@ public class FXMLArrivalMainController implements Initializable {
         log.info(actionEvent.getSource());
         try {
             ObservableList<TestCase> testCases = currentTableView.getSelectionModel().getSelectedItems();
+            System.out.println(currentTableView.toString());
             dateTestsuite.removeAll(testCases);
 
             if(currentTableView.getItems().isEmpty()) {
-                tbvTestsuiteController.setPlatform(null);
+                tbvTestsuiteController.setPlatform("platform");
                 dateTestsuite = FXCollections.emptyObservableList();
             }
         } catch (Exception e) {
@@ -462,7 +466,7 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpIOSTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderIOS = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
-        ArrayList<String> fileNames = fileNameLoaderIOS.getClassName();
+      //  ArrayList<String> fileNames = fileNameLoaderIOS.getClassName();
         ArrayList<String> classPackage = fileNameLoaderIOS.getClassPackage();
         try {
             for (int i = 0; i < fileNameLoaderIOS.getSize(); i++) {
@@ -497,7 +501,7 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpANDTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderAND = new FileNameLoader("/com/arrival/testCase/andTestcase", ".class");
-        ArrayList<String> fileNames = fileNameLoaderAND.getClassName();
+    //    ArrayList<String> fileNames = fileNameLoaderAND.getClassName();
         ArrayList<String> classPackage = fileNameLoaderAND.getClassPackage();
         try{
             for (int i = 0; i < fileNameLoaderAND.getSize(); i++) {
@@ -531,7 +535,7 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpWebPortalTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderWeb = new FileNameLoader("/com/arrival/testCase/webTestcase", ".class");
-        ArrayList<String> fileNames = fileNameLoaderWeb.getClassName();
+      //  ArrayList<String> fileNames = fileNameLoaderWeb.getClassName();
         ArrayList<String> classPackage = fileNameLoaderWeb.getClassPackage();
 
         try {
@@ -573,9 +577,8 @@ public class FXMLArrivalMainController implements Initializable {
                         .getSelectedItem()
                         .getContent();
                     currentTableView = tempTableView;
-
+                    dateTestsuite = currentTableView.getItems();
                     tbvTestsuiteController = (FXMLArrivalTableViewController) tempTableView.getUserData();
-                System.out.println(tbvTestsuiteController.getPlatform());
             }
         });
     }
@@ -588,6 +591,7 @@ public class FXMLArrivalMainController implements Initializable {
                     .getSelectedItem()
                     .getContent();
             currentTableView = tempTableView;
+            dateTestsuite = currentTableView.getItems();
             tbvTestsuiteController = (FXMLArrivalTableViewController) tempTableView.getUserData();
         } catch (IOException e) {
             log.error(e.getStackTrace());

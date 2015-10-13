@@ -1,0 +1,10 @@
+2015-10-13 14:25:47:682 - info: Welcome to Appium v1.4.13 (REV c75d8adcb66a75818a542fe1891a34260c21f76a)
+2015-10-13 14:25:47:685 - info: Appium REST http interface listener started on 0.0.0.0:4723
+2015-10-13 14:25:47:687 - info: [debug] Non-default server args: {"log":"C:\\Users\\a.kutekidila\\Dev\\GitHub\\arrival-octo\\arrival_backend\\src\\main\\resources\\report\\log\\appiumLogs.txt","nodeconfig":"C:\\Users\\a.kutekidila\\Dev\\GitHub\\arrival-octo\\arrival_backend\\src\\main\\resources\\appiumNodeConfig\\AppiumNodeGFlex.json"}
+2015-10-13 14:25:47:688 - info: Console LogLevel: debug
+2015-10-13 14:25:47:688 - info: File LogLevel: debug
+2015-10-13 14:25:47:692 - info: [debug] starting auto register thread for grid. Will try to register every 5000 ms.
+2015-10-13 14:25:47:967 - info: --> GET /wd/hub/status {}
+2015-10-13 14:25:47:969 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.13","revision":"c75d8adcb66a75818a542fe1891a34260c21f76a"}}}
+2015-10-13 14:25:47:974 - info: <-- GET /wd/hub/status 200 6.386 ms - 105 {"status":0,"value":{"build":{"version":"1.4.13","revision":"c75d8adcb66a75818a542fe1891a34260c21f76a"}}}
+2015-10-13 14:25:52:706 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444
