@@ -17,10 +17,10 @@ import java.nio.file.Path;
 public class AppiumAndroidDefault implements IFAppiumServer {
     private static final Logger log = LogManager.getLogger(AppiumAndroidDefault.class);
     private static final String APPIUM_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
-    private static final String NODE_PATH_MAC   = "/Applications/Appium.app/Contents/Resources/node/bin/node";
+    private static final String NODE_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node/bin/node";
 
     private static final String APPIUM_PATH_WIN = "C:/Program Files (x86)/Appium/node_modules/appium/bin/appium.js";
-    private static final String NODE_PATH_WIN   = "C:/Program Files (x86)/Appium/node.exe";
+    private static final String NODE_PATH_WIN = "C:/Program Files (x86)/Appium/node.exe";
 
     private static final String APPIUM_ARG_MAC = "'/Applications/Appium.app/Contents/Resources/node/bin/node' " +
             "lib/server/main.js " +
@@ -32,12 +32,12 @@ public class AppiumAndroidDefault implements IFAppiumServer {
 
 
     static final String APPIUM_ARG_WIN = "'/Applications/Appium.app/Contents/Resources/node/bin/node' " +
-             "lib/server/main.js " +
-             "--log-no-colors " +
-             "--debug-log-spacing " +
-             "--automation-name \"Appium\" " +
-             "--platform-name \"Android\" " +
-             "--platform-version \"4.4\"";
+            "lib/server/main.js " +
+            "--log-no-colors " +
+            "--debug-log-spacing " +
+            "--automation-name \"Appium\" " +
+            "--platform-name \"Android\" " +
+            "--platform-version \"4.4\"";
 
 
     private Process process = null;
@@ -107,21 +107,19 @@ public class AppiumAndroidDefault implements IFAppiumServer {
      * * @param JSONFilePath -> The Path where the file exist.
      */
     @Override
-    public void runServerWithJSON(Path JSONFilePath) {
-        nodeConfig.setConfigPath(JSONFilePath);
+    public void runServerWithJSON(String JSONFilePath) {
+
     }
 
     /**
      * @return a Instance of AppiumServer e.g. AppiumSever for IOS oder Android
      */
     @Override
-    public AppiumAndroidDefault getInstance() {
+    public AppiumAndroidDefault getSeverIntance() {
         return this;
     }
 
     /**
      * Getter and Setter functions for appiumPath, nodePath and nodeConfig
      */
-
-
 }

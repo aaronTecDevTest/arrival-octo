@@ -8,18 +8,12 @@ package com.arrival.appium;
  * Package: com.arrival.unit.generic
  */
 
-import com.arrival.appium.config.JSONConfigReader;
-import com.arrival.appium.server.AppiumAndroid;
-import com.arrival.appium.server.AppiumServer;
-import com.arrival.selenium.server.Hub;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
+
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
-import java.nio.file.Path;
-import java.util.ArrayList;
 
 public class AppiumSingleton {
     private static final Logger log = LogManager.getLogger(AppiumSingleton.class);
@@ -28,13 +22,7 @@ public class AppiumSingleton {
     public static final  String ARRIVAL = "ARRIVAL";
     public static String framework;
     public AppiumManager appiumManager;
-    public AppiumServer appiumServer;
 
-    //public
-    public ArrayList<Object> appiumSeverList = new ArrayList<>();
-    public WebDriver browser;
-
-    private Hub hub;
 
     private AppiumSingleton(){
         framework = TESTNG;
@@ -71,37 +59,19 @@ public class AppiumSingleton {
     }
 
     /**
-     * Code will be run only if the ArrivalTestSuite was instanced
+     * Function will be run only if the ArrivalTestSuite was instanced
      */
     @BeforeSuite
     public void setUpAppiumConfig() {
-        //Todo: Start the Appium server + SeleniumGrid (SeleniumHub) here
         setFramework(AppiumSingleton.ARRIVAL);
-        hub = new Hub();
-        hub.startHub();
-
-        JSONConfigReader jsonConfigReader = new JSONConfigReader(appiumManager.getTestSuiteConfigs().getJsonConfigPath());
-        ArrayList<Path> jsonPathList = jsonConfigReader.getPathList();
-
-        //Ini server
-        for(Path path : jsonPathList){
-            appiumSeverList.add(null);
-        }
-
-        //Start Server
-
+        appiumManager.startServer();
     }
 
     /**
-     * Code will be run only if the ArrivalTestSuite was instanced
+     * Function will be run only if the ArrivalTestSuite was instanced
      */
     @AfterSuite
     public void cleanUpAppiumConfig() {
-        //Todo: Stop the Appium server + SeleniumGrid (SeleniumHub) here
-
-
-
-        hub.stopHub();
-        setFramework(AppiumSingleton.TESTNG);
+        appiumManager.stopServer();
     }
 }

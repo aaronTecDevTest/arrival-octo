@@ -18,7 +18,7 @@ public class AppiumIOS implements IFAppiumServer {
     private static final Logger log = LogManager.getLogger(AppiumIOS.class);
 
     private static final String APPIUM_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
-    private static final String NODE_PATH_MAC =   "/Applications/Appium.app/Contents/Resources/node/bin/node";
+    private static final String NODE_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node/bin/node";
 
     private NodeConfig nodeConfig = null;
     private Process process = null;
@@ -55,15 +55,15 @@ public class AppiumIOS implements IFAppiumServer {
      **/
     @Override
     public void startServer() {
-        try{
+        try {
             ProcessBuilder pb = new ProcessBuilder(
                     NODE_PATH_MAC, APPIUM_PATH_MAC,
-                    "--address",  nodeConfig.getConfiguration().getHost(),
-                    "--port",     nodeConfig.getConfiguration().getPort().toString(),
+                    "--address", nodeConfig.getConfiguration().getHost(),
+                    "--port", nodeConfig.getConfiguration().getPort().toString(),
                     "--nodeconfig", nodeConfig.getConfigPath().toString()
             );
             process = pb.start();
-        }catch (Exception e){
+        } catch (Exception e) {
             log.error(e.getStackTrace());
             log.error("Count'n start server on: " + nodeConfig.toString());
         }
@@ -76,8 +76,7 @@ public class AppiumIOS implements IFAppiumServer {
     public void stopServer() {
         try {
             process.destroy();
-        }
-        catch(Throwable e) {
+        } catch (Throwable e) {
             log.error(e.getStackTrace());
             log.error("Count'n stop the server: " + process.toString());
         }
@@ -96,7 +95,7 @@ public class AppiumIOS implements IFAppiumServer {
      * * @param JSONFilePath -> The Path where the file exist.
      */
     @Override
-    public void runServerWithJSON(Path JSONFilePath) {
+    public void runServerWithJSON(String JSONFilePath) {
 
     }
 
@@ -104,7 +103,9 @@ public class AppiumIOS implements IFAppiumServer {
      * @return a Instance of AppiumServer e.g. ApppiumServer for IOS or Android
      */
     @Override
-    public Object getInstance() {
+    public Object getSeverIntance() {
         return null;
     }
 }
+
+

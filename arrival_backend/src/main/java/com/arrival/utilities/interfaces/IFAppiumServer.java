@@ -8,6 +8,8 @@ package com.arrival.utilities.interfaces;
  * Package: com.utilities.interfaces
  */
 
+import com.arrival.appium.model.NodeConfig;
+
 import java.nio.file.Path;
 
 /**
@@ -34,13 +36,19 @@ public interface IFAppiumServer {
 
 
     /**
+     * Set the configurations for the Sever.
+     */
+    void setNodeConfig(NodeConfig nodeConfig);
+
+    /**
      * This functions start a current Sever over commando line with JSON-NodeConfiguration file.
      * * @param JSONFilePath -> The Path where the file exist.
      */
-    void runServerWithJSON(Path JSONFilePath);
+    void runServerWithJSON(String JSONFilePath);
 
     /**
      * @return  a Instance of AppiumServer e.g. ApppiumServer for IOS or Android
      */
-    Object getInstance();
+    Object getSeverIntance();
+
 }
