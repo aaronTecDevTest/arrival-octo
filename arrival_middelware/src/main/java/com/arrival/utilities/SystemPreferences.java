@@ -29,6 +29,7 @@ public class SystemPreferences {
     private static ResourceBundle bundleMain;
     private static ResourceBundle bundleOptions;
     private static ResourceBundle bundleDialogs;
+    private static ResourceBundle bundleGlobal;
 
     private SystemPreferences() {
         log.info(SystemPreferences.class + " is loaded!!");
@@ -88,6 +89,7 @@ public class SystemPreferences {
             bundleMain = loadBundle("bundles/arrivalMain_de.properties");
             bundleOptions = loadBundle("bundles/arrivalOptions_de.properties");
             bundleDialogs = loadBundle("bundles/arrivalDialogs_de.properties");
+            bundleGlobal = loadBundle("bundles/arrivalGlobal_de.properties");
         } catch (Exception e) {
             log.error(e.getStackTrace());
         }
@@ -138,9 +140,5 @@ public class SystemPreferences {
     @Override
     public String toString() {
         return osName + " " + osCountry + " " + osLanguage;
-    }/*
-    public static void main(String[] args) {
-        SystemPreferences.getInstance();
-        System.out.println(SystemPreferences.getInstance().toString());
-    }*/
+    }
 }

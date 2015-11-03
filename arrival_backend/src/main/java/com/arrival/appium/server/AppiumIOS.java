@@ -17,22 +17,18 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.File;
+import java.util.ResourceBundle;
 
 public class AppiumIOS implements IFAppiumServer {
     private static final Logger log = LogManager.getLogger(AppiumIOS.class);
+    private ResourceBundle bundle = SystemPreferences.getResourceBundle("bundleGlobal");
 
-    //TODO: Set as Preporties
-    private static final String APPIUM_PATH_MAC     = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
-    private static final String NODE_PATH_MAC       = "/Applications/Appium.app/Contents/Resources/node/bin/node";
-    private static final String WEB_KIT_PATH_MAC    = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/ios-webkit-debug-proxy-launcher.js";
+    private  String APPIUM_PATH_MAC     = bundle.getString("APPIUM_PATH_MAC");
+    private  String NODE_PATH_MAC       = bundle.getString("NODE_PATH_MAC");
+    private  String WEB_KIT_PATH_MAC    = bundle.getString("WEB_KIT_PATH_MAC ");
 
-   /*
-    private static final String APPIUM_PATH_WIN     = "C:/Program Files (x86)/Appium/node_modules/appium/bin/appium.js";
-    private static final String NODE_PATH_WIN       = "C:/Program Files (x86)/Appium/node.exe";
-    private static final String WEB_KIT_PATH_WIN    = "";*/
-
-    private static final String LOG_FILE            = "/arrival_backend/src/main/resources/report/log/appiumLogs.txt";
-    private static Integer WEB_KIT_PROXY_PORT       = 27751; //27752-27852
+    private  String LOG_FILE            = bundle.getString("LOG_FILE");
+    private  Integer WEB_KIT_PROXY_PORT = Integer.getInteger(bundle.getString("WEB_KIT_PROXY_PORT ")); //27751; //27752-27852
 
     private NodeConfig nodeConfig ;
     private AppiumDriverLocalService service;
@@ -147,11 +143,11 @@ public class AppiumIOS implements IFAppiumServer {
     }
 
     public void startIOSWebKitDebugProxy(){
-        AppiumIOS.WEB_KIT_PROXY_PORT++;
+        WEB_KIT_PROXY_PORT++;
     }
 
     public void stopIOSWebKitDebugProxy(){
-        AppiumIOS.WEB_KIT_PROXY_PORT--;
+        WEB_KIT_PROXY_PORT--;
     }
 }
 

@@ -84,8 +84,8 @@ public class MobilDriverManager {
             capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());
             capabilities.setCapability("deviceName", tempCap.getDeviceName());
             capabilities.setCapability("app", app.getAbsolutePath());
-            capabilities.setCapability("appPackage", "com.example.android.contactmanager");
-            capabilities.setCapability("appActivity", ".ContactManage");
+            //capabilities.setCapability("appPackage", "com.example.android.contactmanager");
+           //capabilities.setCapability("appActivity", ".ContactManage");
             return new AndroidDriver(url, capabilities);
         } catch (MalformedURLException e) {
             log.error(e.toString());

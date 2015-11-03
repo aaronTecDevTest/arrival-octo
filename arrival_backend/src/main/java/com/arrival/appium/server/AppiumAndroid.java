@@ -11,6 +11,8 @@ import com.arrival.utilities.interfaces.IFAppiumServer;
 import com.arrival.appium.model.NodeConfig;
 
 import java.io.File;
+import java.util.ResourceBundle;
+
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
@@ -19,15 +21,15 @@ import org.apache.logging.log4j.Logger;
 
 public class AppiumAndroid implements IFAppiumServer {
     private static final Logger log = LogManager.getLogger(AppiumAndroid.class);
+    private ResourceBundle bundle = SystemPreferences.getResourceBundle("bundleGlobal");
 
-    //TODO: Set as Preporties
-    private static final String APPIUM_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
-    private static final String NODE_PATH_MAC   = "/Applications/Appium.app/Contents/Resources/node/bin/node";
+    private String APPIUM_PATH_MAC = bundle.getString("APPIUM_PATH_MAC");
+    private String NODE_PATH_MAC   = bundle.getString("NODE_PATH_MAC");
 
-    private static final String APPIUM_PATH_WIN = "C:/Program Files (x86)/Appium/node_modules/appium/bin/appium.js";
-    private static final String NODE_PATH_WIN   = "C:/Program Files (x86)/Appium/node.exe";
+    private String APPIUM_PATH_WIN = bundle.getString("APPIUM_PATH_WIN");
+    private String NODE_PATH_WIN   = bundle.getString("NODE_PATH_WIN");
 
-    private static final String LOG_FILE        = "/arrival_backend/src/main/resources/report/log/appiumLogs.txt";
+    private String LOG_FILE        = bundle.getString("LOG_FILE");
 
 
     private NodeConfig nodeConfig ;
