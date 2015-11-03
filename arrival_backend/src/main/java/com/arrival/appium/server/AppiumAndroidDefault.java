@@ -9,6 +9,7 @@ package com.arrival.appium.server;
  */
 import com.arrival.appium.model.NodeConfig;
 import com.arrival.utilities.interfaces.IFAppiumServer;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -115,8 +116,8 @@ public class AppiumAndroidDefault implements IFAppiumServer {
      * @return a Instance of AppiumServer e.g. AppiumSever for IOS oder Android
      */
     @Override
-    public AppiumAndroidDefault getSeverIntance() {
-        return this;
+    public AppiumDriverLocalService getSeverInstance() {
+        return null;
     }
 
     /**

@@ -6,13 +6,11 @@ package com.arrival.appium.server;
  * @since 1.0
  */
 
+import com.arrival.utilities.SystemPreferences;
 import com.arrival.utilities.interfaces.IFAppiumServer;
 import com.arrival.appium.model.NodeConfig;
 
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.Path;
-
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
@@ -22,34 +20,33 @@ import org.apache.logging.log4j.Logger;
 public class AppiumAndroid implements IFAppiumServer {
     private static final Logger log = LogManager.getLogger(AppiumAndroid.class);
 
+    //TODO: Set as Preporties
     private static final String APPIUM_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
-    private static final String NODE_PATH_MAC =   "/Applications/Appium.app/Contents/Resources/node/bin/node";
+    private static final String NODE_PATH_MAC   = "/Applications/Appium.app/Contents/Resources/node/bin/node";
 
     private static final String APPIUM_PATH_WIN = "C:/Program Files (x86)/Appium/node_modules/appium/bin/appium.js";
-    private static final String NODE_PATH_WIN =   "C:/Program Files (x86)/Appium/node.exe";
+    private static final String NODE_PATH_WIN   = "C:/Program Files (x86)/Appium/node.exe";
+
+    private static final String LOG_FILE        = "/arrival_backend/src/main/resources/report/log/appiumLogs.txt";
+
 
     private NodeConfig nodeConfig ;
-
     private AppiumDriverLocalService service;
-    private AppiumServiceBuilder builder;
-    private GeneralServerFlag generalServerFlag;
     /**
      * Standard Constructor
-     *
+     */
     public AppiumAndroid() {
         this.nodeConfig = null;
         this.service = null;
-        this.builder = null;
-        this.generalServerFlag = null;
-    }*/
+    }
 
     public AppiumAndroid(NodeConfig nodeConfig) {
         this.nodeConfig = nodeConfig;
-        this.nodeConfig = null;
         this.service = null;
-        this.builder = null;
-        this.generalServerFlag = null;
+
+        setUpSerer();
     }
+
 
     public NodeConfig getNodeConfig() {
         return nodeConfig;
@@ -59,20 +56,12 @@ public class AppiumAndroid implements IFAppiumServer {
         this.nodeConfig = nodeConfig;
     }
 
-
     /**
      * This functions start a current Server over commando line.
      **/
     @Override
     public void startServer() {
         try{
-          /*  ProcessBuilder pb = new ProcessBuilder(
-                    NODE_PATH_MAC, APPIUM_PATH_MAC,
-                    "--address",  nodeConfig.getConfiguration().getHost(),
-                    "--port",     nodeConfig.getConfiguration().getPort().toString(),
-                    "--nodeconfig", nodeConfig.getConfigPath().toString()
-            );
-            process = pb.start();*/
             service.start();
         }catch (Exception e){
             log.error(e.getStackTrace());
@@ -98,15 +87,13 @@ public class AppiumAndroid implements IFAppiumServer {
      **/
     @Override
     public void restartSever() {
-
         try {
             service.stop();
             service.start();
         }
-     catch (Exception e)
-        {
+        catch (Exception e) {
             log.error(e.getStackTrace());
-     }
+        }
     }
 
     /**
@@ -122,35 +109,25 @@ public class AppiumAndroid implements IFAppiumServer {
      * @return a Instance of AppiumServer e.g. ApppiumServer for IOS or Android
      */
     @Override
-    public Object getSeverIntance() {
+    public AppiumDriverLocalService getSeverInstance() {
         return service;
     }
 
-    /*public static void main(String[] args) throws IOException {
-
-
-        AppiumManager manager = new AppiumManager();
-        manager.startHubWithNode();
-        try{
-            Thread.sleep(10000);
-        }catch (Exception e) {
-            e.printStackTrace();
+    private void setUpSerer (){
+        if (SystemPreferences.getInstance().isMacOS()) {
+           service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
+                   .usingDriverExecutable(new File(NODE_PATH_MAC))
+                   .withAppiumJS(new File(APPIUM_PATH_MAC))
+                   .withLogFile(new File(LOG_FILE))
+                   .withArgument(GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
         }
-        manager.stopHubWithNode();
-        System.out.printf(manager.toString());
-    AppiumDriverLocalService service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
-            .usingDriverExecutable(new File("C:/Program Files (x86)/nodejs/node.exe"))
-            .withAppiumJS(new File("C:/Program Files (x86)/Appium/node_modules/appium/bin/appium.js"))
-            .withLogFile(new File("C:/Users/a.kutekidila/Dev/GitHub/arrival-octo/arrival_backend/src/main/resources/report/log/appiumLogs.txt"))
-            .withArgument(GeneralServerFlag.CONFIGURATION_FILE, "C:\\Users\\a.kutekidila\\Dev\\GitHub\\arrival-octo\\arrival_backend\\src\\main\\resources\\appiumNodeConfig\\AppiumNodeGFlex.json"));
-    service.start();
 
-    try {
-        Thread.sleep(60000);
-    } catch (InterruptedException e) {
-        e.printStackTrace();
+        if (SystemPreferences.getInstance().isWindows()){
+            service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
+                    .usingDriverExecutable(new File(NODE_PATH_WIN))
+                    .withAppiumJS(new File(APPIUM_PATH_WIN))
+                    .withLogFile(new File(LOG_FILE))
+                    .withArgument(GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
+        }
     }
-
-    service.stop();
-}*/
 }

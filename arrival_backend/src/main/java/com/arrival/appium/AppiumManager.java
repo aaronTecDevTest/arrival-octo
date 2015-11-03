@@ -37,7 +37,7 @@ public class AppiumManager {
 
     private JSONConfigReader configReader;
     private ArrayList<Path> pathList = null;
-    private  ArrayList<IFAppiumServer> appiumServersList = new ArrayList<>();
+    private ArrayList<IFAppiumServer> appiumServersList = new ArrayList<>();
     private static ArrayList<IFAppiumServer> appiumDefaultServersList = new ArrayList<>();
     private ArrayList<NodeConfig> nodeConfigList = new ArrayList<>();
 
@@ -46,22 +46,20 @@ public class AppiumManager {
     private final static Integer  HUBPORT = 4444;
 
 
-
     AppiumManager() {
         iniHub(HUBHOST, HUBPORT);
-        iniPathLis();
+        iniPathList();
         iniNodeConfig();
         iniAppiumServer();
     }
 
-
     /**
-     * @param hubHost
-     * @param hubPort
+     * @param hubHost can be a IP or Servername.
+     * @param hubPort Port number.
      */
     AppiumManager(String hubHost, Integer hubPort) {
         iniHub(hubHost, hubPort);
-        iniPathLis();
+        iniPathList();
         iniNodeConfig();
         iniAppiumServer();
     }
@@ -70,7 +68,7 @@ public class AppiumManager {
         hub = new Hub(hubHost, hubPort);
     }
 
-    private void iniPathLis(){
+    private void iniPathList(){
         AppiumConfig appiumConfig = (AppiumConfig)testSuiteConfigs;
 
         if(appiumConfig.getJsonConfigInUse()) {
@@ -84,7 +82,7 @@ public class AppiumManager {
 
     private void iniNodeConfig(){
         try {
-            ArrayList<String> jsonConfigDataList = new ArrayList<>();
+            ArrayList<String> jsonConfigDataList = new ArrayList<String>();
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             // Get Gson object and init NodeConfig Object
             for (Path path: pathList) {
@@ -97,7 +95,6 @@ public class AppiumManager {
             }
         } catch (IOException e) {
             log.error(e.getStackTrace());
-            e.printStackTrace();
         }
     }
 
@@ -127,7 +124,7 @@ public class AppiumManager {
                         }
                         break;
                     default:
-                        System.out.println("No Server Class found for NodeConfig!");
+                        log.error("No Server Class found for NodeConfig!");
                         break;
                 }
             }
@@ -171,44 +168,54 @@ public class AppiumManager {
         }
     }
 
-    public void stopAppiumServerOnPort(Integer serverPort){
-        for (IFAppiumServer server: appiumServersList) {
-            Integer port = 0;
-            if (server.getSeverIntance() instanceof AppiumAndroid) {
-                AppiumAndroid inc = (AppiumAndroid) server.getSeverIntance();
-                port =  inc.getNodeConfig().getConfiguration().getPort();
-            }
-          /* else (server.getSeverIntance() instanceof AppiumIOS){
-                AppiumIOS inc = (AppiumIOS) server.getSeverIntance();
-                inc.toString();
-             //   port = inc.getNodeConfig().getConfiguration().getPort();
-            }*/
-
-            if(port == serverPort){
-                server.stopServer();
-            }else{
-                log.error("Instance of port: " + serverPort + " not found.");
-            }
-        }
-    }
-
+    /**
+     *
+     * @return the Configuration-Reader instance
+     */
 
     public JSONConfigReader getConfigReader() {
         return configReader;
     }
 
+    /**
+     *
+     * @param configReader set the Configuration Reader instance new
+     */
     public void setConfigReader(JSONConfigReader configReader) {
         this.configReader = configReader;
     }
 
+    /**
+     *
+     * @return a List of NodeConfig
+     */
     public ArrayList<NodeConfig> getNodeConfigList() {
         return nodeConfigList;
     }
 
+    /**
+     *
+     * @param nodeConfigList set the list of a Node-Configuration
+     */
     public void setNodeConfigList(ArrayList<NodeConfig> nodeConfigList) {
         this.nodeConfigList = nodeConfigList;
     }
 
+    /**
+     *
+     * @return the Configuration set for the Testsuite
+     */
+    public IFConfig getTestSuiteConfigs() {
+        return testSuiteConfigs;
+    }
+
+    /**
+     *
+     * @param testSuiteConfigs Configuration for Testsuite
+     */
+    public void setTestSuiteConfigs(IFConfig testSuiteConfigs) {
+        this.testSuiteConfigs = testSuiteConfigs;
+    }
 
     /**
      * ***************************************************************************
@@ -226,10 +233,32 @@ public class AppiumManager {
             pauseSeverIni();
             for(IFAppiumServer tempServer: appiumServersList){
                 tempServer.startServer();
-                log.info("XXXXXXX");
+                log.info("Start a new Server: " + tempServer.toString());
             }
         } catch (Exception e) {
             log.error(e.getMessage());
+        }
+    }
+//Todo not done yet + implemnt
+    public void startServerOnPort(Integer serverPort){
+        Integer port =0;
+
+        for (IFAppiumServer server: appiumServersList) {
+            if (server instanceof AppiumAndroid) {
+              //  AppiumAndroid inc = (AppiumAndroid) server.getSeverInstance();
+                //port =  inc.getNodeConfig().getConfiguration().getPort();
+            } else if (server instanceof AppiumIOS){
+              //  AppiumIOS inc = (AppiumIOS) server.getSeverInstance();
+                //port = inc.getNodeConfig().getConfiguration().getPort();
+            } else{
+                log.error("Instance of port: " + serverPort + " not found.");
+            }
+            /*
+            if(port == serverPort){
+                server.stopServer();
+            }else{
+                log.error("Instance of port: " + serverPort + " not found.");
+            }*/
         }
     }
 
@@ -237,7 +266,7 @@ public class AppiumManager {
         try{
             for(IFAppiumServer tempServer: appiumServersList){
                 tempServer.stopServer();
-                log.info("XXXXXXX");
+                log.info("Stop a Server: " + tempServer.toString());
             }
             pauseSeverIni();
             hub.stopHub();
@@ -246,17 +275,39 @@ public class AppiumManager {
         }
     }
 
+    public void stopServerOnPort(Integer serverPort){
+        Integer port =0;
+
+        for (IFAppiumServer server: appiumServersList) {
+            if (server instanceof AppiumAndroid) {
+                AppiumAndroid inc = (AppiumAndroid) server;
+                port =  inc.getNodeConfig().getConfiguration().getPort();
+            } else if (server instanceof AppiumIOS){
+                AppiumIOS inc = (AppiumIOS) server;
+                port = inc.getNodeConfig().getConfiguration().getPort();
+            } else{
+                log.error("Instance of port: " + serverPort + " not found.");
+            }
+
+            if(port == serverPort){
+                server.stopServer();
+            }else{
+                log.error("Instance of port: " + serverPort + " not found.");
+            }
+        }
+    }
+
     public static void startDefaultANDSever(){
         AppiumAndroidDefault defaultAND = new AppiumAndroidDefault();
         appiumDefaultServersList.add(defaultAND);
         defaultAND.startServer();
-        log.info("XXXXXXX");
+        log.info(("Start a new Android default sever: "  + defaultAND.toString()));
     }
 
     public static void stopDefaultANDServer(){
         for(IFAppiumServer tempServer:  appiumDefaultServersList){
             tempServer.stopServer();
-            log.info("XXXXXXX");
+            log.info("Stop a Android default sever: "  + tempServer.toString());
         }
     }
 
@@ -264,13 +315,13 @@ public class AppiumManager {
         AppiumIOSDefault defaultIOS = new AppiumIOSDefault();
         appiumDefaultServersList.add(defaultIOS);
         defaultIOS.startServer();
-        log.info("XXXXXXX");
+        log.info(("Start a new IOS default sever: "  + defaultIOS.toString()));
     }
 
     public static void stopDefaultIOSServer() {
         for(IFAppiumServer tempServer:  appiumDefaultServersList){
             tempServer.stopServer();
-            log.info("XXXXXXX");
+            log.info("Stop a IOS default sever: "  + tempServer.toString());
         }
     }
 }

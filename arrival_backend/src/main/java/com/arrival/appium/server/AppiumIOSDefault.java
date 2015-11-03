@@ -112,8 +112,8 @@ public class AppiumIOSDefault implements IFAppiumServer {
      * @return a Instance of AppiumServer e.g. AppiumSever for IOS oder Android
      */
     @Override
-    public AppiumIOSDefault getSeverIntance() {
-        return this;
+    public AppiumDriverLocalService getSeverInstance() {
+        return null;
     }
 
     /**

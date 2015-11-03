@@ -97,7 +97,7 @@ public class ArrivalTestSuite {
 
         //ToDo: Mit Path class implement
         String tempPath = "../arrival-Octo/arrival_backend/src/main/resources/report/testng/selenium/";
-       /* String userSavePath = SeleniumSingleton.getSeverIntance().getSeleniumManager().getTestSuiteConfigs().getSaveResultPath();
+       /* String userSavePath = SeleniumSingleton.getSeverInstance().getSeleniumManager().getTestSuiteConfigs().getSaveResultPath();
         if(!userSavePath.isEmpty())
             tempPath = userSavePath;
 */

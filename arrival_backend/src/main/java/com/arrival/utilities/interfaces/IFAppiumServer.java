@@ -9,8 +9,8 @@ package com.arrival.utilities.interfaces;
  */
 
 import com.arrival.appium.model.NodeConfig;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 
-import java.nio.file.Path;
 
 /**
  *
@@ -49,6 +49,6 @@ public interface IFAppiumServer {
     /**
      * @return  a Instance of AppiumServer e.g. ApppiumServer for IOS or Android
      */
-    Object getSeverIntance();
+    AppiumDriverLocalService getSeverInstance();
 
 }

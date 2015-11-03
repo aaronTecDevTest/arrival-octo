@@ -12,8 +12,11 @@ package com.arrival.unit.generic;
 
 import com.arrival.appium.AppiumSingleton;
 import com.arrival.appium.AppiumManager;
+import com.arrival.appium.MobilDriverManager;
 import com.arrival.appium.server.AppiumAndroidDefault;
+import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -22,6 +25,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
@@ -33,11 +37,10 @@ import java.util.concurrent.TimeUnit;
 public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     private static final Logger log = LogManager.getLogger(ArrivalAND.class);
 
-    public static AppiumSingleton appiumConfigSingleton = AppiumSingleton.getInstance();
-    public ArrayList<Object> appiumServerList = new ArrayList<>();
-    public AppiumManager appiumManager;
-    private static final String url = "http://127.0.0.1:4723/wd/hub";
-    protected static AndroidDriver androidDriver;
+    public  AppiumSingleton appiumConfigSingleton = AppiumSingleton.getInstance();
+    public  AppiumManager appiumManager = appiumConfigSingleton.getAppiumManager();
+    public  ArrayList<Object> appiumServerList = new ArrayList<>();
+    public  AndroidDriver androidDriver;
 
     /**
      * Testcase properties Android
@@ -147,40 +150,25 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
 
     @BeforeClass
     public void setUpAppiumServerList() {
+        MobilDriverManager mobilDriverManager = new MobilDriverManager();
+        IFConfig testSuiteConfigs = appiumManager.getTestSuiteConfigs();
+        AppiumDriver androidDriver;
 
             if(AppiumSingleton.getFramework().equals(AppiumSingleton.ARRIVAL)) {
-                appiumManager = appiumConfigSingleton.getAppiumManager();
-                appiumServerList = appiumManager.getAppiumServerList();
+                if (testSuiteConfigs.getParallelTesting()) {
+                    for (int i = 0; i < testSuiteConfigs.getParallelTestingCount(); i++) {
+                       // androidDriver = mobilDriverManager.setUpDriver(testSuiteConfigs);
+                      //  appiumServerList.add(androidDriver);
+                    }
             }else {
-
-              /*
-                  try {
-                    DesiredCapabilities capabilities = new DesiredCapabilities();
-                    capabilities.setCapability(CapabilityType.PLATFORM, Platform.ANDROID);
-                    capabilities.setCapability(CapabilityType.VERSION, "4.4.2");
-                    capabilities.setCapability(CapabilityType.BROWSER_NAME,"CHROME");
-                    capabilities.setCapability("udid", "20715382");
-                    capabilities.setCapability("deviceName", "Note3");
-
-                    androidDriver = new AndroidDriver(new URL("http://127.0.0.1:5555/wd/hub"), capabilities);
-                    androidDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-                } catch (MalformedURLException e) {
-                    log.error(""+ e.getStackTrace());
-                }
-                */
-
-                AppiumAndroidDefault newDefaultServer = new AppiumAndroidDefault();
-                newDefaultServer.startServer();
-            }
-
+                    AppiumAndroidDefault newDefaultServer = new AppiumAndroidDefault();
+                    newDefaultServer.startServer();
+                }}
     }
 
-    @BeforeClass
+    @AfterClass
     public void setDownAppiumServerList() {
         if(AppiumSingleton.getFramework().equals(AppiumSingleton.TESTNG)) {
-            for (Object temp : appiumServerList) {
-                ((AppiumAndroidDefault) temp).stopServer();
-            }
         }
     }
 

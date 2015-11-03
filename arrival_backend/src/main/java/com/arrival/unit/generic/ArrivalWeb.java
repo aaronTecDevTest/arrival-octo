@@ -106,7 +106,6 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
 
     @BeforeClass
     public void setUpSeleniumServerList() {
-        //Should be here for Appium and Selenium Grid config (Only Json config)
         WebDriverManager webDriverManager = new WebDriverManager();
         IFConfig testSuiteConfigs = seleniumManager.getTestSuiteConfigs();
         WebDriver webDriver;
