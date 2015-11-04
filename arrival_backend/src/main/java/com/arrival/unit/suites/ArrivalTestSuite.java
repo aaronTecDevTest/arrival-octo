@@ -111,7 +111,7 @@ public class ArrivalTestSuite {
         File dir = new File(directoryPath);
         boolean success = dir.mkdir();
 
-        if (!success)
+        if (! success)
             log.info("Directory creation failed1");
         else
             log.info("Directory creation success");

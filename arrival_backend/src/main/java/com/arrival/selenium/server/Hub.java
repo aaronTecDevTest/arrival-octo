@@ -1,13 +1,12 @@
 package com.arrival.selenium.server;
 
 
-
 /**
  * @author Aaron Kutekidila
  * @version 1.0
- *          Created on 31.05.2015.
+ * Created on 31.05.2015.
  * @since 1.0
- * <p>
+ * <p/>
  * <P>Hub</P>
  * This Class return a instance of SeleniumHub.
  * Also can start, stop and restart the Hub.
@@ -46,7 +45,6 @@ public class Hub {
     private Integer hubPort;
 
 
-
     /**
      * Standard construct to ini gridHubConfig, hubHost, hubPort and
      * osName.
@@ -73,6 +71,14 @@ public class Hub {
         hubPort = port;
         osName = System.getProperty("os.name");
         setUpHub();
+    }
+
+    public static void main(String[] args) {
+        Hub hubNode = new Hub();
+
+        hubNode.startHub();
+        // hubNode.shutDownNodeAndHub();
+        hubNode.stopHub();
     }
 
     /**
@@ -172,13 +178,5 @@ public class Hub {
 
     public void setHubPort(Integer hubPort) {
         this.hubPort = hubPort;
-    }
-
-    public static void main(String[] args) {
-        Hub hubNode = new Hub();
-
-        hubNode.startHub();
-        // hubNode.shutDownNodeAndHub();
-        hubNode.stopHub();
     }
 }

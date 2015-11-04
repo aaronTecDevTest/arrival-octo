@@ -10,31 +10,25 @@ package com.arrival.appium;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 public class AppiumSingleton {
+    public static final String TESTNG = "TESTNG";
+    public static final String ARRIVAL = "ARRIVAL";
     private static final Logger log = LogManager.getLogger(AppiumSingleton.class);
+    public static String framework;
     private static AppiumSingleton ourInstance = new AppiumSingleton();
     private static AppiumManager appiumManager;
 
-    public static final String TESTNG = "TESTNG";
-    public static final String ARRIVAL = "ARRIVAL";
-    public static String framework;
-
-    private AppiumSingleton(){
+    private AppiumSingleton() {
         framework = TESTNG;
         appiumManager = new AppiumManager();
     }
 
-    public static AppiumSingleton getInstance(){
+    public static AppiumSingleton getInstance() {
         log.info(AppiumSingleton.class + "set up!!");
-        return  ourInstance;
-    }
-
-    public AppiumManager getAppiumManager() {
-        return appiumManager;
+        return ourInstance;
     }
 
     public static String getTesting() {
@@ -51,6 +45,10 @@ public class AppiumSingleton {
 
     public static void setFramework(String framework) {
         AppiumSingleton.framework = framework;
+    }
+
+    public AppiumManager getAppiumManager() {
+        return appiumManager;
     }
 
     public void setAppiumManager(AppiumManager appiumManager) {

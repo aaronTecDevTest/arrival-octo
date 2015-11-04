@@ -3,7 +3,7 @@ package com.arrival.appium.server;
 /**
  * @author Aaron Kutekidila
  * @version 1.0
- *          Created on 26/05/15.
+ * Created on 26/05/15.
  * @since 1.0
  */
 
@@ -23,14 +23,14 @@ public class AppiumIOS implements IFAppiumServer {
     private static final Logger log = LogManager.getLogger(AppiumIOS.class);
     private ResourceBundle bundle = SystemPreferences.getResourceBundle("bundleGlobal");
 
-    private  String APPIUM_PATH_MAC     = bundle.getString("APPIUM_PATH_MAC");
-    private  String NODE_PATH_MAC       = bundle.getString("NODE_PATH_MAC");
-    private  String WEB_KIT_PATH_MAC    = bundle.getString("WEB_KIT_PATH_MAC ");
+    private String APPIUM_PATH_MAC = bundle.getString("APPIUM_PATH_MAC");
+    private String NODE_PATH_MAC = bundle.getString("NODE_PATH_MAC");
+    private String WEB_KIT_PATH_MAC = bundle.getString("WEB_KIT_PATH_MAC ");
 
-    private  String LOG_FILE            = bundle.getString("LOG_FILE");
-    private  Integer WEB_KIT_PROXY_PORT = Integer.getInteger(bundle.getString("WEB_KIT_PROXY_PORT ")); //27751; //27752-27852
+    private String LOG_FILE = bundle.getString("LOG_FILE");
+    private Integer WEB_KIT_PROXY_PORT = Integer.getInteger(bundle.getString("WEB_KIT_PROXY_PORT ")); //27751; //27752-27852
 
-    private NodeConfig nodeConfig ;
+    private NodeConfig nodeConfig;
     private AppiumDriverLocalService service;
     private Integer webKitProxyPort;
 
@@ -62,13 +62,13 @@ public class AppiumIOS implements IFAppiumServer {
      **/
     @Override
     public void startServer() {
-        try{
+        try {
 
-            if(nodeConfig.getSingelCapability().getBrowserName().equalsIgnoreCase("safari")) {
+            if (nodeConfig.getSingelCapability().getBrowserName().equalsIgnoreCase("safari")) {
                 startIOSWebKitDebugProxy();
             }
             service.start();
-        }catch (Exception e){
+        } catch (Exception e) {
             log.error(e.getStackTrace());
             log.error("Count'n start server on: " + nodeConfig.toString());
         }
@@ -81,11 +81,10 @@ public class AppiumIOS implements IFAppiumServer {
     public void stopServer() {
         try {
             service.stop();
-            if(nodeConfig.getSingelCapability().getBrowserName().equalsIgnoreCase("safari")) {
+            if (nodeConfig.getSingelCapability().getBrowserName().equalsIgnoreCase("safari")) {
                 stopIOSWebKitDebugProxy();
             }
-        }
-        catch(Throwable e) {
+        } catch (Throwable e) {
             log.error(e.getStackTrace());
         }
     }
@@ -98,8 +97,7 @@ public class AppiumIOS implements IFAppiumServer {
         try {
             service.stop();
             service.start();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             log.error(e.getStackTrace());
         }
     }
@@ -121,15 +119,15 @@ public class AppiumIOS implements IFAppiumServer {
         return service;
     }
 
-    private void setUpSerer (){
+    private void setUpSerer() {
 
 
         if (SystemPreferences.getInstance().isMacOS()) {
             service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
-                    .usingDriverExecutable(new File(NODE_PATH_MAC))
-                    .withAppiumJS(new File(APPIUM_PATH_MAC))
-                    .withLogFile(new File(LOG_FILE))
-                    .withArgument(GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
+                                                                    .usingDriverExecutable(new File(NODE_PATH_MAC))
+                                                                    .withAppiumJS(new File(APPIUM_PATH_MAC))
+                                                                    .withLogFile(new File(LOG_FILE))
+                                                                    .withArgument(GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
 
         }
 
@@ -142,11 +140,11 @@ public class AppiumIOS implements IFAppiumServer {
         }*/
     }
 
-    public void startIOSWebKitDebugProxy(){
+    public void startIOSWebKitDebugProxy() {
         WEB_KIT_PROXY_PORT++;
     }
 
-    public void stopIOSWebKitDebugProxy(){
+    public void stopIOSWebKitDebugProxy() {
         WEB_KIT_PROXY_PORT--;
     }
 }

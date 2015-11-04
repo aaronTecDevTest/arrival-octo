@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 public class SimpleTestIOS1 extends ArrivalIOS {
 
-    public SimpleTestIOS1(){
+    public SimpleTestIOS1() {
         super();
         setTcID(111);
         setTcName("SimpleTestIOS1");
@@ -27,10 +27,14 @@ public class SimpleTestIOS1 extends ArrivalIOS {
     @Test(dataProvider = "driver", groups = {"fast"})
     public void aFastTest(String serverName, Integer id) {
         System.out.println("Fast test 202 " + serverName + " " + id);
+        System.out.println("Fast test 202 " + serverName + " " + id);
+        System.out.println("Fast test 202 " + serverName + " " + id);
     }
 
     @Test(dataProvider = "driver", groups = {"slow"})
     public void aSlowTest(String serverName, Integer id) {
+        System.out.println("Slow test 303 " + serverName + " " + id);
+        System.out.println("Slow test 303 " + serverName + " " + id);
         System.out.println("Slow test 303 " + serverName + " " + id);
     }
 }

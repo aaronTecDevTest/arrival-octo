@@ -29,19 +29,19 @@ public class MobilDriverManager {
     private static final Logger log = LogManager.getLogger(MobilDriverManager.class);
 
 
-    public MobilDriverManager(){
+    public MobilDriverManager() {
     }
 
-    public AppiumDriver setUpDriver(AppiumConfig runningConfiguration, NodeConfig nodeConfig){
+    public AppiumDriver setUpDriver(AppiumConfig runningConfiguration, NodeConfig nodeConfig) {
         log.debug("Setting up AppiumDriver");
         AppiumDriver driver = null;
 
         String platform = runningConfiguration.getPlatform();
 
-        switch (platform){
+        switch (platform) {
             case "IOS":
-               // AndroidDriver androidDriver = new AndroidDriver();
-              //  IOSDriver iosDriver;
+                // AndroidDriver androidDriver = new AndroidDriver();
+                //  IOSDriver iosDriver;
 
                 break;
 
@@ -62,11 +62,10 @@ public class MobilDriverManager {
 
 
     /**
-     *
      * @param nodeConfig
      * @return
      */
-    private AndroidDriver setUpAndroid(NodeConfig nodeConfig){
+    private AndroidDriver setUpAndroid(NodeConfig nodeConfig) {
 
         Capabilities tempCap = nodeConfig.getSingelCapability();
 
@@ -76,8 +75,8 @@ public class MobilDriverManager {
             File app = new File(appDir, "ContactManager.apk");
 
             URL url = new URL("http://"
-                    + nodeConfig.getConfiguration().getHubHost()+ ":"
-                    + nodeConfig.getConfiguration().getHubPort()+ "/wd/hub"
+                                      + nodeConfig.getConfiguration().getHubHost() + ":"
+                                      + nodeConfig.getConfiguration().getHubPort() + "/wd/hub"
             );
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -87,7 +86,7 @@ public class MobilDriverManager {
             capabilities.setCapability("deviceName", tempCap.getDeviceName());
             capabilities.setCapability("app", app.getAbsolutePath());
             //capabilities.setCapability("appPackage", "com.example.android.contactmanager");
-           //capabilities.setCapability("appActivity", ".ContactManage");
+            //capabilities.setCapability("appActivity", ".ContactManage");
             return new AndroidDriver(url, capabilities);
         } catch (MalformedURLException e) {
             log.error(e.toString());
@@ -96,11 +95,10 @@ public class MobilDriverManager {
     }
 
     /**
-     *
      * @param nodeConfig
      * @return
      */
-    private IOSDriver setUpIOS(NodeConfig nodeConfig){
+    private IOSDriver setUpIOS(NodeConfig nodeConfig) {
         Capabilities tempCap = nodeConfig.getSingelCapability();
 
         try {
@@ -109,8 +107,8 @@ public class MobilDriverManager {
             File app = new File(appDir, "ContactManager.apk");
 
             URL url = new URL("http://"
-                    + nodeConfig.getConfiguration().getHubHost()+ ":"
-                    + nodeConfig.getConfiguration().getHubPort()+ "/wd/hub"
+                                      + nodeConfig.getConfiguration().getHubHost() + ":"
+                                      + nodeConfig.getConfiguration().getHubPort() + "/wd/hub"
             );
 
             DesiredCapabilities capabilities = new DesiredCapabilities();

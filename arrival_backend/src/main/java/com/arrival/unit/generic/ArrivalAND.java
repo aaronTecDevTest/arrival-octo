@@ -8,8 +8,8 @@ package com.arrival.unit.generic;
  * Package: com.arrival.unit.generic
  */
 
-import com.arrival.appium.AppiumSingleton;
 import com.arrival.appium.AppiumManager;
+import com.arrival.appium.AppiumSingleton;
 import com.arrival.appium.MobilDriverManager;
 import com.arrival.appium.server.AppiumAndroidDefault;
 import com.arrival.utilities.interfaces.IFConfig;
@@ -20,25 +20,19 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
 public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     private static final Logger log = LogManager.getLogger(ArrivalAND.class);
 
-    public  AppiumSingleton appiumConfigSingleton = AppiumSingleton.getInstance();
-    public  AppiumManager appiumManager = appiumConfigSingleton.getAppiumManager();
-    public  ArrayList<Object> appiumServerList = new ArrayList<>();
-    public  AndroidDriver androidDriver;
+    public AppiumSingleton appiumConfigSingleton = AppiumSingleton.getInstance();
+    public AppiumManager appiumManager = appiumConfigSingleton.getAppiumManager();
+    public ArrayList<Object> appiumServerList = new ArrayList<>();
+    public AndroidDriver androidDriver;
 
     /**
      * Testcase properties Android
@@ -55,7 +49,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     /**
      * Default Constructor
      */
-    public ArrivalAND(){
+    public ArrivalAND() {
         tcID = new SimpleIntegerProperty();
         tcName = new SimpleStringProperty();
         tcDescription = new SimpleStringProperty();
@@ -73,7 +67,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     /*
      *Test NG method
      */
-    @DataProvider(name = "driver" ,parallel = true)
+    @DataProvider(name = "driver", parallel = true)
     public Object[][] createServer() {
 
         Object[][] server;
@@ -152,21 +146,22 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
         IFConfig testSuiteConfigs = appiumManager.getTestSuiteConfigs();
         AppiumDriver androidDriver;
 
-            if(AppiumSingleton.getFramework().equals(AppiumSingleton.ARRIVAL)) {
-                if (testSuiteConfigs.getParallelTesting()) {
-                    for (int i = 0; i < testSuiteConfigs.getParallelTestingCount(); i++) {
-                       // androidDriver = mobilDriverManager.setUpDriver(testSuiteConfigs);
-                      //  appiumServerList.add(androidDriver);
-                    }
-            }else {
-                    AppiumAndroidDefault newDefaultServer = new AppiumAndroidDefault();
-                    newDefaultServer.startServer();
-                }}
+        if (AppiumSingleton.getFramework().equals(AppiumSingleton.ARRIVAL)) {
+            if (testSuiteConfigs.getParallelTesting()) {
+                for (int i = 0; i < testSuiteConfigs.getParallelTestingCount(); i++) {
+                    // androidDriver = mobilDriverManager.setUpDriver(testSuiteConfigs);
+                    //  appiumServerList.add(androidDriver);
+                }
+            } else {
+                AppiumAndroidDefault newDefaultServer = new AppiumAndroidDefault();
+                newDefaultServer.startServer();
+            }
+        }
     }
 
     @AfterClass
     public void setDownAppiumServerList() {
-        if(AppiumSingleton.getFramework().equals(AppiumSingleton.TESTNG)) {
+        if (AppiumSingleton.getFramework().equals(AppiumSingleton.TESTNG)) {
         }
     }
 

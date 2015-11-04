@@ -17,7 +17,7 @@ import java.util.ResourceBundle;
 public class WindowsDialogs {
     private ResourceBundle bundle = SystemPreferences.getResourceBundle("bundleDialogs");
 
-    public WindowsDialogs(){
+    public WindowsDialogs() {
 
     }
 
@@ -38,7 +38,7 @@ public class WindowsDialogs {
         return entered;
     }
 
-    public static void noTestConfigSet(){
+    public static void noTestConfigSet() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
@@ -47,7 +47,7 @@ public class WindowsDialogs {
         alert.showAndWait();
     }
 
-    public static void optionsIsNull(){
+    public static void optionsIsNull() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
@@ -60,7 +60,7 @@ public class WindowsDialogs {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
-        alert.setContentText("Testcase is not a " + ios +" Platform. " + "Wrong Platform!");
+        alert.setContentText("Testcase is not a " + ios + " Platform. " + "Wrong Platform!");
 
         alert.showAndWait();
     }

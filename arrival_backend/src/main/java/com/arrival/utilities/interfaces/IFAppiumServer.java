@@ -47,7 +47,7 @@ public interface IFAppiumServer {
     void runServerWithJSON(String JSONFilePath);
 
     /**
-     * @return  a Instance of AppiumServer e.g. ApppiumServer for IOS or Android
+     * @return a Instance of AppiumServer e.g. ApppiumServer for IOS or Android
      */
     AppiumDriverLocalService getSeverInstance();
 

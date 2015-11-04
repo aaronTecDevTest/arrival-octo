@@ -59,13 +59,13 @@ public class WebDriverManager {
                 }
                 if (SystemPreferences.getInstance().isWindows())
                     System.setProperty("webdriver.chrome.driver", "arrival_backend" + File.separator + "src"
-                            + File.separator + "main" + File.separator + File.separator + "resources"
-                            + File.separator + "webdriver" + File.separator + "chromedriver.exe");
+                                                                          + File.separator + "main" + File.separator + File.separator + "resources"
+                                                                          + File.separator + "webdriver" + File.separator + "chromedriver.exe");
 
                 if (SystemPreferences.getInstance().isMacOS())
                     System.setProperty("webdriver.chrome.driver", "arrival_backend" + File.separator + "src"
-                            + File.separator + "main" + File.separator + File.separator + "resources"
-                            + File.separator + "webdriver" + File.separator + "chromedriver");
+                                                                          + File.separator + "main" + File.separator + File.separator + "resources"
+                                                                          + File.separator + "webdriver" + File.separator + "chromedriver");
                 driver = new ChromeDriver(this.setUpChromeDriver());
                 break;
 
@@ -121,7 +121,7 @@ public class WebDriverManager {
         profile.setPreference("browser.migration.version", 1);
         profile.setPreference("browser.places.importBookmarksHTML", true);
         profile.setPreference("browser.places.importDefaults", false);
-        profile.setPreference("browser.places.leftPaneFolderId", -1);
+        profile.setPreference("browser.places.leftPaneFolderId", - 1);
         profile.setPreference("browser.places.migratePostDataAnnotations", false);
         profile.setPreference("browser.places.smartBookmarksVersion", 1);
         profile.setPreference("browser.places.updateRecentTagsUri", false);

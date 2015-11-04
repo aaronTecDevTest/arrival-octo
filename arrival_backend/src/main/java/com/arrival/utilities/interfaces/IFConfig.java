@@ -11,7 +11,7 @@ package com.arrival.utilities.interfaces;
 public interface IFConfig {
     String getPlatform();
 
-    void setPlatform(String plattform);
+    void setPlatform(String platform);
 
     String getJsonConfigPath();
 
@@ -37,11 +37,23 @@ public interface IFConfig {
 
     void setParallelTestingCount(Integer parallelTestingCount);
 
-     Boolean getJsonConfigInUse();
+    Boolean getJsonConfigInUse();
 
-     void setJsonConfigInUse(Boolean jsonConfigInUse);
+    void setJsonConfigInUse(Boolean jsonConfigInUse);
 
     String getSaveResultPath();
 
     void setSaveResultPath(String saveResultPath);
+
+    String getMobilePlatform();
+
+    void setMobilePlatform(String mobilePlatform);
+
+    String getAppFilePath();
+
+    void setAppFilePath(String appFilePath);
+
+    String getPackageBundleID();
+
+    void setPackageBundleID(String packageBundleID);
 }

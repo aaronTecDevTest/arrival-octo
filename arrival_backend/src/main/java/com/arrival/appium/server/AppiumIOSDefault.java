@@ -11,24 +11,18 @@ package com.arrival.appium.server;
 import com.arrival.appium.model.NodeConfig;
 import com.arrival.utilities.interfaces.IFAppiumServer;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
-import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecuteResultHandler;
 import org.apache.commons.exec.DefaultExecutor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Path;
-
 public class AppiumIOSDefault implements IFAppiumServer {
     private static final Logger log = LogManager.getLogger(AppiumIOSDefault.class);
 
     private static final String APPIUM_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
-    private static final String NODE_PATH_MAC =   "/Applications/Appium.app/Contents/Resources/node/bin/node";
-    private static Integer webKitProxyPort= 27751; //27752-27852
+    private static final String NODE_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node/bin/node";
+    private static Integer webKitProxyPort = 27751; //27752-27852
     private NodeConfig nodeConfig = null;
 
     /**
@@ -51,11 +45,11 @@ public class AppiumIOSDefault implements IFAppiumServer {
         this.nodeConfig = nodeConfig;
     }
 
-    public void startIOSWebKitDebugProxy(){
+    public void startIOSWebKitDebugProxy() {
         AppiumIOSDefault.webKitProxyPort++;
     }
 
-    public void stopIOSWebKitDebugProxy(){
+    public void stopIOSWebKitDebugProxy() {
         AppiumIOSDefault.webKitProxyPort--;
     }
 
@@ -65,7 +59,7 @@ public class AppiumIOSDefault implements IFAppiumServer {
      **/
     @Override
     public void startServer() {
-        try{
+        try {
             CommandLine command = new CommandLine(NODE_PATH_MAC);
             command.addArgument(APPIUM_PATH_MAC);
             command.addArgument("--address");
@@ -78,7 +72,7 @@ public class AppiumIOSDefault implements IFAppiumServer {
             DefaultExecutor executor = new DefaultExecutor();
             executor.setExitValue(1);
             executor.execute(command, resultHandler);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

@@ -2,7 +2,7 @@ package com.arrival.appium.config;
 /**
  * @author Aaron Kutekidila
  * @version 1.0
- *          Created on 01.06.2015.
+ * Created on 01.06.2015.
  * @since 1.0
  */
 
@@ -17,15 +17,22 @@ public class AppiumConfig implements IFConfig {
     private String platform = null;
     private Boolean parallelTesting = false;
     private Integer parallelTestingCount = 0;
+    private String saveResultPath = null;
+
 
     private String browserName = null;
     private String serverName = null;
-    private String mobileTestingArt = null;
-    private Boolean jsonConfigInUse;
-    private String jsonConfigPath = null;
-    private String saveResultPath = null;
 
-    public AppiumConfig(){
+    private String mobilePlatform = null;
+    private String mobileTestingArt = null;
+    private String appFilePath = null;
+    private String packageBundleID = null;
+
+
+    private Boolean jsonConfigInUse = false;
+    private String jsonConfigPath = null;
+
+    public AppiumConfig() {
         browserName = "CH";
         serverName = "";
     }
@@ -33,9 +40,8 @@ public class AppiumConfig implements IFConfig {
     @Override
     public String toString() {
         return platform + "->" + parallelTesting.toString() + "->" + parallelTestingCount + "->" + browserName + "->" + serverName
-                + "->" + mobileTestingArt + "->" +jsonConfigInUse.toString() + "->" +jsonConfigPath;
+                       + "->" + mobileTestingArt + "->" + jsonConfigInUse.toString() + "->" + jsonConfigPath;
     }
-
 
     public String getPlatform() {
         return platform;
@@ -107,6 +113,30 @@ public class AppiumConfig implements IFConfig {
 
     public void setSaveResultPath(String saveResultPath) {
         this.saveResultPath = saveResultPath;
+    }
+
+    public String getMobilePlatform() {
+        return mobilePlatform;
+    }
+
+    public void setMobilePlatform(String mobilePlatform) {
+        this.mobilePlatform = mobilePlatform;
+    }
+
+    public String getAppFilePath() {
+        return appFilePath;
+    }
+
+    public void setAppFilePath(String appFilePath) {
+        this.appFilePath = appFilePath;
+    }
+
+    public String getPackageBundleID() {
+        return packageBundleID;
+    }
+
+    public void setPackageBundleID(String packageBundleID) {
+        this.packageBundleID = packageBundleID;
     }
 }
 

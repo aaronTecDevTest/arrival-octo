@@ -44,7 +44,7 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     /**
      * Default Constructor
      */
-    public ArrivalIOS(){
+    public ArrivalIOS() {
         tcID = new SimpleIntegerProperty();
         tcName = new SimpleStringProperty();
         tcDescription = new SimpleStringProperty();

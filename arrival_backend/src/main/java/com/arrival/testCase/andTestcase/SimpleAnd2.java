@@ -11,15 +11,12 @@ package com.arrival.testCase.andTestcase;
 import com.arrival.unit.generic.ArrivalAND;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class SimpleAnd2 extends ArrivalAND {
 
-    public SimpleAnd2(){
+    public SimpleAnd2() {
         super();
         setTcID(2);
         setTcName("SimpleAnd2");

@@ -1,7 +1,7 @@
 package com.arrival.unit.generic;
 
-import com.arrival.selenium.SeleniumSingleton;
 import com.arrival.selenium.SeleniumManager;
+import com.arrival.selenium.SeleniumSingleton;
 import com.arrival.selenium.WebDriverManager;
 import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
@@ -48,7 +48,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     /**
      * Default Constructor
      */
-    public ArrivalWeb(){
+    public ArrivalWeb() {
         tcID = new SimpleIntegerProperty();
         tcName = new SimpleStringProperty();
         tcDescription = new SimpleStringProperty();
@@ -118,7 +118,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
                     seleniumServerList.add(webDriver);
                 }
 
-                if (!testSuiteConfigs.getServerName().contains("Non")) {
+                if (! testSuiteConfigs.getServerName().contains("Non")) {
                     for (Object tempWebDriver : seleniumServerList) {
                         ((WebDriver) tempWebDriver).get(testSuiteConfigs.getServerName());
                     }

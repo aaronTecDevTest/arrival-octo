@@ -36,7 +36,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
-
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -257,10 +256,10 @@ public class FXMLArrivalMainController implements Initializable {
                 if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
                     if (mouseEvent.getClickCount() == 2) {
                         String tabName = "Regression Test";
-                        if(mouseEvent.getSource()== tabLabel)
+                        if (mouseEvent.getSource() == tabLabel)
                             tabName = WindowsDialogs.setTestsuiteNameDialog();
 
-                        if (!tabName.isEmpty()) {
+                        if (! tabName.isEmpty()) {
                             tabLabel.setText(tabName);
                         }
                     }
@@ -274,7 +273,7 @@ public class FXMLArrivalMainController implements Initializable {
 
         //Dialog für Testsuitename
         String tabName;
-        if(actionEvent.getSource()== btnNewTestsuite)
+        if (actionEvent.getSource() == btnNewTestsuite)
             tabName = WindowsDialogs.setTestsuiteNameDialog();
         else
             tabName = "Regression Test";
@@ -300,14 +299,14 @@ public class FXMLArrivalMainController implements Initializable {
 
             if (accTestCase.getExpandedPane().getText().equals("iOS - Testcase")) {
                 log.info(actionEvent.getSource() + "IOS");
-                if(/*dateTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")){
+                if (/*dateTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("IOS");
                 }
 
-                if(tbvTestsuiteController.isIOSPlatform()){
+                if (tbvTestsuiteController.isIOSPlatform()) {
                     dateTestsuite = currentTableView.getItems();
                     dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
-                }else{
+                } else {
                     log.warn("Is not a IOS Testcase");
                     WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
@@ -316,14 +315,14 @@ public class FXMLArrivalMainController implements Initializable {
 
             if (accTestCase.getExpandedPane().getText().equals("Android - Testcase")) {
                 log.info(actionEvent.getSource() + "AND");
-                if(/*dateTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")){
+                if (/*dateTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("Android");
                 }
 
-                if(tbvTestsuiteController.isANDPlatform()){
+                if (tbvTestsuiteController.isANDPlatform()) {
                     dateTestsuite = currentTableView.getItems();
                     dateTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
-                }else{
+                } else {
                     log.warn("Is not a Android Testcase");
                     WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
@@ -332,13 +331,13 @@ public class FXMLArrivalMainController implements Initializable {
 
             if (accTestCase.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
                 log.info(actionEvent.getSource() + "Web");
-                if(/*dateTestsuite.isEmpty() && */tbvTestsuiteController.getPlatform().equals("platform")){
+                if (/*dateTestsuite.isEmpty() && */tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("Web");
                 }
-                if(tbvTestsuiteController.isWebPlatform()){
+                if (tbvTestsuiteController.isWebPlatform()) {
                     dateTestsuite = currentTableView.getItems();
                     dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
-                }else{
+                } else {
                     log.warn("Is not a Web Testcase");
                     WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
@@ -356,7 +355,7 @@ public class FXMLArrivalMainController implements Initializable {
             System.out.println(currentTableView.toString());
             dateTestsuite.removeAll(testCases);
 
-            if(currentTableView.getItems().isEmpty()) {
+            if (currentTableView.getItems().isEmpty()) {
                 tbvTestsuiteController.setPlatform("platform");
                 dateTestsuite = FXCollections.emptyObservableList();
             }
@@ -396,7 +395,7 @@ public class FXMLArrivalMainController implements Initializable {
         log.info(actionEvent.getSource());
         optionsViewStage = setUpOptionsView();
 
-        if(!tbvTestsuiteController.isOptionsEmpty()){
+        if (! tbvTestsuiteController.isOptionsEmpty()) {
             optionsController.setOptions(tbvTestsuiteController.getOptions());
             optionsController.updateOptionsView();
         }
@@ -466,7 +465,7 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpIOSTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderIOS = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
-      //  ArrayList<String> fileNames = fileNameLoaderIOS.getClassName();
+        //  ArrayList<String> fileNames = fileNameLoaderIOS.getClassName();
         ArrayList<String> classPackage = fileNameLoaderIOS.getClassPackage();
         try {
             for (int i = 0; i < fileNameLoaderIOS.getSize(); i++) {
@@ -474,20 +473,20 @@ public class FXMLArrivalMainController implements Initializable {
 
                 Class tempTestCaseClass = Class.forName(fullName);
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
-                IFTestCase tempTestCaseIF = (IFTestCase)tempTestCaseObject;
+                IFTestCase tempTestCaseIF = (IFTestCase) tempTestCaseObject;
                 tempList.add(new TestCase(
-                        tempTestCaseIF.getTcName(),
-                        tempTestCaseIF.getTcDescription(),
-                        tempTestCaseIF.getTcResult(),
-                        tempTestCaseIF.getTcDuration(),
-                        tempTestCaseIF.getTcLastRun(),
-                        tempTestCaseIF.getTcLink(),
-                        classPackage.get(i)));
+                                                 tempTestCaseIF.getTcName(),
+                                                 tempTestCaseIF.getTcDescription(),
+                                                 tempTestCaseIF.getTcResult(),
+                                                 tempTestCaseIF.getTcDuration(),
+                                                 tempTestCaseIF.getTcLastRun(),
+                                                 tempTestCaseIF.getTcLink(),
+                                                 classPackage.get(i)));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
-        }catch (InstantiationException e) {
+        } catch (InstantiationException e) {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
         } catch (IllegalAccessException e) {
@@ -501,28 +500,28 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpANDTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderAND = new FileNameLoader("/com/arrival/testCase/andTestcase", ".class");
-    //    ArrayList<String> fileNames = fileNameLoaderAND.getClassName();
+        //    ArrayList<String> fileNames = fileNameLoaderAND.getClassName();
         ArrayList<String> classPackage = fileNameLoaderAND.getClassPackage();
-        try{
+        try {
             for (int i = 0; i < fileNameLoaderAND.getSize(); i++) {
                 String fullName = classPackage.get(i);
 
                 Class tempTestCaseClass = Class.forName(fullName);
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
-                IFTestCase tempTestCaseIF = (IFTestCase)tempTestCaseObject;
+                IFTestCase tempTestCaseIF = (IFTestCase) tempTestCaseObject;
                 tempList.add(new TestCase(
-                        tempTestCaseIF.getTcName(),
-                        tempTestCaseIF.getTcDescription(),
-                        tempTestCaseIF.getTcResult(),
-                        tempTestCaseIF.getTcDuration(),
-                        tempTestCaseIF.getTcLastRun(),
-                        tempTestCaseIF.getTcLink(),
-                        classPackage.get(i)));
+                                                 tempTestCaseIF.getTcName(),
+                                                 tempTestCaseIF.getTcDescription(),
+                                                 tempTestCaseIF.getTcResult(),
+                                                 tempTestCaseIF.getTcDuration(),
+                                                 tempTestCaseIF.getTcLastRun(),
+                                                 tempTestCaseIF.getTcLink(),
+                                                 classPackage.get(i)));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
-        }catch (InstantiationException e) {
+        } catch (InstantiationException e) {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
         } catch (IllegalAccessException e) {
@@ -536,7 +535,7 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpWebPortalTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderWeb = new FileNameLoader("/com/arrival/testCase/webTestcase", ".class");
-      //  ArrayList<String> fileNames = fileNameLoaderWeb.getClassName();
+        //  ArrayList<String> fileNames = fileNameLoaderWeb.getClassName();
         ArrayList<String> classPackage = fileNameLoaderWeb.getClassPackage();
 
         try {
@@ -545,20 +544,20 @@ public class FXMLArrivalMainController implements Initializable {
 
                 Class tempTestCaseClass = Class.forName(fullName);
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
-                IFTestCase tempTestCaseIF = (IFTestCase)tempTestCaseObject;
+                IFTestCase tempTestCaseIF = (IFTestCase) tempTestCaseObject;
                 tempList.add(new TestCase(
-                        tempTestCaseIF.getTcName(),
-                        tempTestCaseIF.getTcDescription(),
-                        tempTestCaseIF.getTcResult(),
-                        tempTestCaseIF.getTcDuration(),
-                        tempTestCaseIF.getTcLastRun(),
-                        tempTestCaseIF.getTcLink(),
-                        classPackage.get(i)));
+                                                 tempTestCaseIF.getTcName(),
+                                                 tempTestCaseIF.getTcDescription(),
+                                                 tempTestCaseIF.getTcResult(),
+                                                 tempTestCaseIF.getTcDuration(),
+                                                 tempTestCaseIF.getTcLastRun(),
+                                                 tempTestCaseIF.getTcLink(),
+                                                 classPackage.get(i)));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
-        }catch (InstantiationException e) {
+        } catch (InstantiationException e) {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
         } catch (IllegalAccessException e) {
@@ -574,12 +573,12 @@ public class FXMLArrivalMainController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends Tab> observable, Tab oldValue, Tab newValue) {
                 TableView tempTableView = (TableView) tabMainTabPane
-                        .getSelectionModel()
-                        .getSelectedItem()
-                        .getContent();
-                    currentTableView = tempTableView;
-                    dateTestsuite = currentTableView.getItems();
-                    tbvTestsuiteController = (FXMLArrivalTableViewController) tempTableView.getUserData();
+                                                              .getSelectionModel()
+                                                              .getSelectedItem()
+                                                              .getContent();
+                currentTableView = tempTableView;
+                dateTestsuite = currentTableView.getItems();
+                tbvTestsuiteController = (FXMLArrivalTableViewController) tempTableView.getUserData();
             }
         });
     }
@@ -588,9 +587,9 @@ public class FXMLArrivalMainController implements Initializable {
         try {
             createNewTestsuite(new ActionEvent());
             TableView tempTableView = (TableView) tabMainTabPane
-                    .getSelectionModel()
-                    .getSelectedItem()
-                    .getContent();
+                                                          .getSelectionModel()
+                                                          .getSelectedItem()
+                                                          .getContent();
             currentTableView = tempTableView;
             dateTestsuite = currentTableView.getItems();
             tbvTestsuiteController = (FXMLArrivalTableViewController) tempTableView.getUserData();
@@ -605,7 +604,7 @@ public class FXMLArrivalMainController implements Initializable {
             URL applicationIcon = getClass().getResource("/icons/appIcons.png");
             FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalOptions"));
             Parent root = loader.load();
-            Scene optionsScene = new Scene(root, 500, 280);
+            Scene optionsScene = new Scene(root, 500, 400);
             Stage optionsStage = new Stage();
             optionsScene.getStylesheets().add("/css/arrivalMain.css");
             optionsStage.setScene(optionsScene);

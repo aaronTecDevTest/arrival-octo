@@ -3,7 +3,7 @@ package com.arrival.appium.config;
 /**
  * @author Aaron Kutekidila
  * @version 1.0
- *          Created on 01.06.2015.
+ * Created on 01.06.2015.
  * @since 1.0
  */
 
@@ -18,10 +18,10 @@ import java.util.ArrayList;
 
 public class JSONConfigReader {
 
+    public static final String PATH_DIRECTORY = "../arrival-septem/appium/src/main/resources";
     //public static final String jsonConfigDirectory = "/Users/tecdesdev/IdeaProjects/arrival-septem/appium/src/main/resources";
     private static final Logger log = LogManager.getLogger(JSONConfigReader.class);
-    public static final String PATH_DIRECTORY = "../arrival-septem/appium/src/main/resources";
-    public  String jsonConfigDirectory = null;
+    public String jsonConfigDirectory = null;
     public ArrayList<Path> pathList = null;
 
     /**

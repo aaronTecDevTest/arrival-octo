@@ -39,7 +39,7 @@ public class NodeConfig {
         this.configuration = configuration;
     }
 
-    public Capabilities getSingelCapability(){
+    public Capabilities getSingelCapability() {
         return capabilities[0];
     }
 
@@ -54,8 +54,8 @@ public class NodeConfig {
     @Override
     public String toString() {
         return "NodeConfig{" +
-                "capabilities=" + Arrays.toString(capabilities) +
-                ", configuration=" + configuration +
-                '}';
+                       "capabilities=" + Arrays.toString(capabilities) +
+                       ", configuration=" + configuration +
+                       '}';
     }
 }

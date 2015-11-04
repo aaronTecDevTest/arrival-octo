@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 public class SimpleTestWeb2 extends ArrivalWeb {
 
-    public SimpleTestWeb2(){
+    public SimpleTestWeb2() {
         super();
         setTcID(222);
         setTcName("SimpleTestWeb2");

@@ -116,17 +116,17 @@ public class Configuration {
     @Override
     public String toString() {
         return "Configuration: {" +
-                ", cleanUpCycle=" + cleanUpCycle +
-                ", timeout=" + timeout +
-                ", proxy='" + proxy + '\'' +
-                ", url='" + url + '\'' +
-                ", host='" + host + '\'' +
-                ", port=" + port +
-                ", maxSession=" + maxSession +
-                ", register=" + register +
-                ", registerCycle=" + registerCycle +
-                ", hubPort=" + hubPort +
-                ", hubHost='" + hubHost + '\'' +
-                '}';
+                       ", cleanUpCycle=" + cleanUpCycle +
+                       ", timeout=" + timeout +
+                       ", proxy='" + proxy + '\'' +
+                       ", url='" + url + '\'' +
+                       ", host='" + host + '\'' +
+                       ", port=" + port +
+                       ", maxSession=" + maxSession +
+                       ", register=" + register +
+                       ", registerCycle=" + registerCycle +
+                       ", hubPort=" + hubPort +
+                       ", hubHost='" + hubHost + '\'' +
+                       '}';
     }
 }

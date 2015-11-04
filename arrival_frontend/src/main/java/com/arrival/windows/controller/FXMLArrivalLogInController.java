@@ -55,7 +55,7 @@ public class FXMLArrivalLogInController implements Initializable {
 
     @FXML
     public void clickLogIn(ActionEvent actionEvent) {
-        lblFailLogIn.setVisible(!lblFailLogIn.isVisible());
+        lblFailLogIn.setVisible(! lblFailLogIn.isVisible());
         try {
 
             URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");

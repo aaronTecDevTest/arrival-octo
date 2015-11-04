@@ -7,40 +7,33 @@ package com.arrival.appium.server;
  * @since: 1.0
  * Package: com.arrival.appium.server
  */
+
 import com.arrival.appium.model.NodeConfig;
 import com.arrival.utilities.interfaces.IFAppiumServer;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.nio.file.Path;
-
 public class AppiumAndroidDefault implements IFAppiumServer {
+    static final String APPIUM_ARG_WIN = "'/Applications/Appium.app/Contents/Resources/node/bin/node' " +
+                                                 "lib/server/main.js " +
+                                                 "--log-no-colors " +
+                                                 "--debug-log-spacing " +
+                                                 "--automation-name \"Appium\" " +
+                                                 "--platform-name \"Android\" " +
+                                                 "--platform-version \"4.4\"";
     private static final Logger log = LogManager.getLogger(AppiumAndroidDefault.class);
     private static final String APPIUM_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
     private static final String NODE_PATH_MAC = "/Applications/Appium.app/Contents/Resources/node/bin/node";
-
     private static final String APPIUM_PATH_WIN = "C:/Program Files (x86)/Appium/node_modules/appium/bin/appium.js";
     private static final String NODE_PATH_WIN = "C:/Program Files (x86)/Appium/node.exe";
-
     private static final String APPIUM_ARG_MAC = "'/Applications/Appium.app/Contents/Resources/node/bin/node' " +
-            "lib/server/main.js " +
-            "--log-no-colors " +
-            "--debug-log-spacing " +
-            "--automation-name \"Appium\" " +
-            "--platform-name \"Android\" " +
-            "--platform-version \"4.4\"";
-
-
-    static final String APPIUM_ARG_WIN = "'/Applications/Appium.app/Contents/Resources/node/bin/node' " +
-            "lib/server/main.js " +
-            "--log-no-colors " +
-            "--debug-log-spacing " +
-            "--automation-name \"Appium\" " +
-            "--platform-name \"Android\" " +
-            "--platform-version \"4.4\"";
-
-
+                                                         "lib/server/main.js " +
+                                                         "--log-no-colors " +
+                                                         "--debug-log-spacing " +
+                                                         "--automation-name \"Appium\" " +
+                                                         "--platform-name \"Android\" " +
+                                                         "--platform-version \"4.4\"";
     private Process process = null;
     private NodeConfig nodeConfig = null;
 

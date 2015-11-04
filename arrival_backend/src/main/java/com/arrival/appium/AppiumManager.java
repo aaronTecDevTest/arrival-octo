@@ -2,7 +2,7 @@ package com.arrival.appium;
 /**
  * @author Aaron Kutekidila
  * @version 1.0
- *          Created on 01.06.2015.
+ * Created on 01.06.2015.
  * @since 1.0
  */
 
@@ -10,7 +10,6 @@ import com.arrival.appium.config.AppiumConfig;
 import com.arrival.appium.config.JSONConfigReader;
 import com.arrival.appium.model.NodeConfig;
 import com.arrival.appium.server.AppiumAndroid;
-
 import com.arrival.appium.server.AppiumAndroidDefault;
 import com.arrival.appium.server.AppiumIOS;
 import com.arrival.appium.server.AppiumIOSDefault;
@@ -19,7 +18,6 @@ import com.arrival.utilities.interfaces.IFAppiumServer;
 import com.arrival.utilities.interfaces.IFConfig;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,18 +30,15 @@ import java.util.ArrayList;
 
 public class AppiumManager {
     private static final Logger log = LogManager.getLogger(AppiumManager.class);
-
+    private final static String HUBHOST = "localhost";
+    private final static Integer HUBPORT = 4444;
+    private static ArrayList<IFAppiumServer> appiumDefaultServersList = new ArrayList<>();
     private IFConfig testSuiteConfigs = null;
-
     private JSONConfigReader configReader;
     private ArrayList<Path> pathList = null;
     private ArrayList<IFAppiumServer> appiumServersList = new ArrayList<>();
-    private static ArrayList<IFAppiumServer> appiumDefaultServersList = new ArrayList<>();
     private ArrayList<NodeConfig> nodeConfigList = new ArrayList<>();
-
     private Hub hub;
-    private final static String  HUBHOST = "localhost";
-    private final static Integer  HUBPORT = 4444;
 
 
     public AppiumManager() {
@@ -54,8 +49,36 @@ public class AppiumManager {
      * @param hubHost can be a IP or Servername.
      * @param hubPort Port number.
      */
-   public AppiumManager(String hubHost, Integer hubPort) {
+    public AppiumManager(String hubHost, Integer hubPort) {
         iniHub(hubHost, hubPort);
+    }
+
+    public static void startDefaultANDSever() {
+        AppiumAndroidDefault defaultAND = new AppiumAndroidDefault();
+        appiumDefaultServersList.add(defaultAND);
+        defaultAND.startServer();
+        log.info(("Start a new Android default sever: " + defaultAND.toString()));
+    }
+
+    public static void stopDefaultANDServer() {
+        for (IFAppiumServer tempServer : appiumDefaultServersList) {
+            tempServer.stopServer();
+            log.info("Stop a Android default sever: " + tempServer.toString());
+        }
+    }
+
+    public static void startDefauotIOSServer() {
+        AppiumIOSDefault defaultIOS = new AppiumIOSDefault();
+        appiumDefaultServersList.add(defaultIOS);
+        defaultIOS.startServer();
+        log.info(("Start a new IOS default sever: " + defaultIOS.toString()));
+    }
+
+    public static void stopDefaultIOSServer() {
+        for (IFAppiumServer tempServer : appiumDefaultServersList) {
+            tempServer.stopServer();
+            log.info("Stop a IOS default sever: " + tempServer.toString());
+        }
     }
 
     public void ini() {
@@ -64,28 +87,27 @@ public class AppiumManager {
         iniAppiumServer();
     }
 
-    private void iniHub(String hubHost, Integer hubPort){
+    private void iniHub(String hubHost, Integer hubPort) {
         hub = new Hub(hubHost, hubPort);
     }
 
-    private void iniPathList(){
-        AppiumConfig appiumConfig = (AppiumConfig)testSuiteConfigs;
+    private void iniPathList() {
+        AppiumConfig appiumConfig = (AppiumConfig) testSuiteConfigs;
 
-        if(appiumConfig.getJsonConfigInUse()) {
+        if (appiumConfig.getJsonConfigInUse()) {
             configReader = new JSONConfigReader(appiumConfig.getJsonConfigPath());
-        }
-        else {
+        } else {
             configReader = new JSONConfigReader();
         }
         pathList = configReader.getPathList();
     }
 
-    private void iniNodeConfig(){
+    private void iniNodeConfig() {
         try {
             ArrayList<String> jsonConfigDataList = new ArrayList<String>();
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             // Get Gson object and init NodeConfig Object
-            for (Path path: pathList) {
+            for (Path path : pathList) {
                 String jsonConfigDate = new String(Files.readAllBytes(path));
                 NodeConfig node = gson.fromJson(jsonConfigDate, NodeConfig.class);
 
@@ -98,25 +120,25 @@ public class AppiumManager {
         }
     }
 
-    private void iniAppiumServer(){
+    private void iniAppiumServer() {
         appiumServersList = new ArrayList<>();
         String platform;
         String browserName;
 
         try {
-            for(NodeConfig nodeConfig : nodeConfigList) {
+            for (NodeConfig nodeConfig : nodeConfigList) {
                 platform = nodeConfig.getSingelCapability().getPlatform();
                 browserName = nodeConfig.getSingelCapability().getBrowserName();
-                switch(platform) {
+                switch (platform) {
                     case "ANDROID":
                         AppiumAndroid android = new AppiumAndroid(nodeConfig);
                         appiumServersList.add(android);
                         break;
                     case "IOS":
-                        if (!browserName.equalsIgnoreCase("safari")) {
+                        if (! browserName.equalsIgnoreCase("safari")) {
                             AppiumIOS ios = new AppiumIOS(nodeConfig);
                             appiumServersList.add(ios);
-                        }else {
+                        } else {
                             AppiumIOS ios = new AppiumIOS(nodeConfig);
                             //TODO ist noch nicht fertig, bitte umsetzen
                             //ios.startIOSWebKitDebugProxy();
@@ -128,7 +150,7 @@ public class AppiumManager {
                         break;
                 }
             }
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -140,7 +162,7 @@ public class AppiumManager {
             new ServerSocket(port).close();
             // local port can be opened, it's available
             return false;
-        } catch(IOException e) {
+        } catch (IOException e) {
             // local port cannot be opened, it's in use
             return true;
         }
@@ -154,16 +176,16 @@ public class AppiumManager {
             // remote port can be opened, this is a listening port on remote machine
             // this port is in use on the remote machine !
             return true;
-        } catch(Exception e) {
+        } catch (Exception e) {
             // remote port is closed, nothing is running on
             return false;
         }
     }
 
-    private void pauseSeverIni(){
+    private void pauseSeverIni() {
         try {
             Thread.sleep(10000);
-        }catch (Exception e) {
+        } catch (Exception e) {
 
         }
     }
@@ -228,10 +250,10 @@ public class AppiumManager {
      *****************************************************************************
      */
     public void startServer() {
-        try{
+        try {
             hub.startHub();
             pauseSeverIni();
-            for(IFAppiumServer tempServer: appiumServersList){
+            for (IFAppiumServer tempServer : appiumServersList) {
                 tempServer.startServer();
                 log.info("Start a new Server: " + tempServer.toString());
             }
@@ -239,18 +261,19 @@ public class AppiumManager {
             log.error(e.getMessage());
         }
     }
-//Todo not done yet + implemnt
-    public void startServerOnPort(Integer serverPort){
-        Integer port =0;
 
-        for (IFAppiumServer server: appiumServersList) {
+    //Todo not done yet + implemnt
+    public void startServerOnPort(Integer serverPort) {
+        Integer port = 0;
+
+        for (IFAppiumServer server : appiumServersList) {
             if (server instanceof AppiumAndroid) {
-              //  AppiumAndroid inc = (AppiumAndroid) server.getSeverInstance();
+                //  AppiumAndroid inc = (AppiumAndroid) server.getSeverInstance();
                 //port =  inc.getNodeConfig().getConfiguration().getPort();
-            } else if (server instanceof AppiumIOS){
-              //  AppiumIOS inc = (AppiumIOS) server.getSeverInstance();
+            } else if (server instanceof AppiumIOS) {
+                //  AppiumIOS inc = (AppiumIOS) server.getSeverInstance();
                 //port = inc.getNodeConfig().getConfiguration().getPort();
-            } else{
+            } else {
                 log.error("Instance of port: " + serverPort + " not found.");
             }
             /*
@@ -262,9 +285,9 @@ public class AppiumManager {
         }
     }
 
-    public void stopServer(){
-        try{
-            for(IFAppiumServer tempServer: appiumServersList){
+    public void stopServer() {
+        try {
+            for (IFAppiumServer tempServer : appiumServersList) {
                 tempServer.stopServer();
                 log.info("Stop a Server: " + tempServer.toString());
             }
@@ -275,53 +298,25 @@ public class AppiumManager {
         }
     }
 
-    public void stopServerOnPort(Integer serverPort){
-        Integer port =0;
+    public void stopServerOnPort(Integer serverPort) {
+        Integer port = 0;
 
-        for (IFAppiumServer server: appiumServersList) {
+        for (IFAppiumServer server : appiumServersList) {
             if (server instanceof AppiumAndroid) {
                 AppiumAndroid inc = (AppiumAndroid) server;
-                port =  inc.getNodeConfig().getConfiguration().getPort();
-            } else if (server instanceof AppiumIOS){
+                port = inc.getNodeConfig().getConfiguration().getPort();
+            } else if (server instanceof AppiumIOS) {
                 AppiumIOS inc = (AppiumIOS) server;
                 port = inc.getNodeConfig().getConfiguration().getPort();
-            } else{
+            } else {
                 log.error("Instance of port: " + serverPort + " not found.");
             }
 
-            if(port == serverPort){
+            if (port == serverPort) {
                 server.stopServer();
-            }else{
+            } else {
                 log.error("Instance of port: " + serverPort + " not found.");
             }
-        }
-    }
-
-    public static void startDefaultANDSever(){
-        AppiumAndroidDefault defaultAND = new AppiumAndroidDefault();
-        appiumDefaultServersList.add(defaultAND);
-        defaultAND.startServer();
-        log.info(("Start a new Android default sever: "  + defaultAND.toString()));
-    }
-
-    public static void stopDefaultANDServer(){
-        for(IFAppiumServer tempServer:  appiumDefaultServersList){
-            tempServer.stopServer();
-            log.info("Stop a Android default sever: "  + tempServer.toString());
-        }
-    }
-
-    public static void startDefauotIOSServer(){
-        AppiumIOSDefault defaultIOS = new AppiumIOSDefault();
-        appiumDefaultServersList.add(defaultIOS);
-        defaultIOS.startServer();
-        log.info(("Start a new IOS default sever: "  + defaultIOS.toString()));
-    }
-
-    public static void stopDefaultIOSServer() {
-        for(IFAppiumServer tempServer:  appiumDefaultServersList){
-            tempServer.stopServer();
-            log.info("Stop a IOS default sever: "  + tempServer.toString());
         }
     }
 }

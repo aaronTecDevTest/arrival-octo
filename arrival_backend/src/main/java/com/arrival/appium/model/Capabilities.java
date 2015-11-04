@@ -70,12 +70,12 @@ public class Capabilities {
     @Override
     public String toString() {
         return "Capabilities: {" +
-                ", browserName='" + browserName + '\'' +
-                ", version='" + version + '\'' +
-                ", maxInstances=" + maxInstances +
-                ", platform='" + platform + '\'' +
-                ", deviceName='" + deviceName + '\'' +
-                ", udid='" + udid + '\'' +
-                '}';
+                       ", browserName='" + browserName + '\'' +
+                       ", version='" + version + '\'' +
+                       ", maxInstances=" + maxInstances +
+                       ", platform='" + platform + '\'' +
+                       ", deviceName='" + deviceName + '\'' +
+                       ", udid='" + udid + '\'' +
+                       '}';
     }
 }

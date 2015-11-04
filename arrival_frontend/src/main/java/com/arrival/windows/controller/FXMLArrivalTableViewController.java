@@ -9,8 +9,8 @@ package com.arrival.windows.controller;
  */
 
 import com.arrival.appium.AppiumManager;
-import com.arrival.selenium.SeleniumManager;
 import com.arrival.appium.AppiumSingleton;
+import com.arrival.selenium.SeleniumManager;
 import com.arrival.selenium.SeleniumSingleton;
 import com.arrival.unit.suites.ArrivalTestSuite;
 import com.arrival.utilities.WindowsDialogs;
@@ -103,23 +103,21 @@ public class FXMLArrivalTableViewController implements Initializable {
     }
 
     public void runTestSuite() {
-        try{
+        try {
             log.info(options.toString());
-             tempSeleniumManager = new SeleniumManager();
-             tempAppiumManager = new AppiumManager();
+            tempSeleniumManager = new SeleniumManager();
+            tempAppiumManager = new AppiumManager();
 
             List<XmlClass> tempClasses = new ArrayList<>();
-            if(options.getPlatform().contains("Web")){
+            if (options.getPlatform().contains("Web")) {
                 tempSeleniumManager.setTestSuiteConfigs(options);
                 SeleniumSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
                 tempClasses.add(new XmlClass("com.arrival.selenium.SeleniumSingleton"));
-            }
-            else if (options.getPlatform().contains("IOS") ||options.getPlatform().contains("Android")) {
+            } else if (options.getPlatform().contains("IOS") || options.getPlatform().contains("Android")) {
                 tempAppiumManager.setTestSuiteConfigs(options);
                 AppiumSingleton.getInstance().setAppiumManager(tempAppiumManager);
                 tempClasses.add(new XmlClass("com.arrival.appium.AppiumSingleton"));
-            }
-            else {
+            } else {
                 log.warn("No Platform is set up!");
                 WindowsDialogs.noTestConfigSet();
             }
@@ -131,7 +129,7 @@ public class FXMLArrivalTableViewController implements Initializable {
 
             runableTestSuite.setClasses(tempClasses);
             runableTestSuite.runVirtualSuit();
-        } catch (Exception e){
+        } catch (Exception e) {
             log.warn("Options object is null" + e.getStackTrace());
             WindowsDialogs.optionsIsNull();
         }
@@ -166,7 +164,7 @@ public class FXMLArrivalTableViewController implements Initializable {
         this.options = options;
     }
 
-    public boolean isOptionsEmpty(){
+    public boolean isOptionsEmpty() {
         return options == null;
     }
 
@@ -178,15 +176,15 @@ public class FXMLArrivalTableViewController implements Initializable {
         this.platform = platform;
     }
 
-    public boolean isWebPlatform(){
+    public boolean isWebPlatform() {
         return platform.contains("Web");
     }
 
-    public boolean isIOSPlatform(){
+    public boolean isIOSPlatform() {
         return platform.contains("IOS");
     }
 
-    public boolean isANDPlatform(){
+    public boolean isANDPlatform() {
         return platform.contains("Android");
     }
 }
