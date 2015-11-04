@@ -1,7 +1,5 @@
 package com.arrival.unit.generic;
 
-
-
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0

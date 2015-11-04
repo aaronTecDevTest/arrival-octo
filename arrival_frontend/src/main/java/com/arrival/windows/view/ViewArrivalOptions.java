@@ -43,7 +43,7 @@ public class ViewArrivalOptions extends Application {
         loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalOptions"));
         root = loader.load();
 
-        Scene scene = new Scene(root, 480, 280);
+        Scene scene = new Scene(root, 500, 400);
         scene.getStylesheets().add("/css/arrivalLogIn.css");
 
         primaryStage.setScene(scene);

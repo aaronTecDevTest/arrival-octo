@@ -46,19 +46,19 @@ public class AppiumManager {
     private final static Integer  HUBPORT = 4444;
 
 
-    AppiumManager() {
+    public AppiumManager() {
         iniHub(HUBHOST, HUBPORT);
-        iniPathList();
-        iniNodeConfig();
-        iniAppiumServer();
     }
 
     /**
      * @param hubHost can be a IP or Servername.
      * @param hubPort Port number.
      */
-    AppiumManager(String hubHost, Integer hubPort) {
+   public AppiumManager(String hubHost, Integer hubPort) {
         iniHub(hubHost, hubPort);
+    }
+
+    public void ini() {
         iniPathList();
         iniNodeConfig();
         iniAppiumServer();

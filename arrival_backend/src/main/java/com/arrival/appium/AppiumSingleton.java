@@ -8,7 +8,6 @@ package com.arrival.appium;
  * Package: com.arrival.unit.generic
  */
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,11 +17,11 @@ import org.testng.annotations.BeforeSuite;
 public class AppiumSingleton {
     private static final Logger log = LogManager.getLogger(AppiumSingleton.class);
     private static AppiumSingleton ourInstance = new AppiumSingleton();
-    public static final  String TESTNG = "TESTNG";
-    public static final  String ARRIVAL = "ARRIVAL";
-    public static String framework;
-    public AppiumManager appiumManager;
+    private static AppiumManager appiumManager;
 
+    public static final String TESTNG = "TESTNG";
+    public static final String ARRIVAL = "ARRIVAL";
+    public static String framework;
 
     private AppiumSingleton(){
         framework = TESTNG;
@@ -55,7 +54,7 @@ public class AppiumSingleton {
     }
 
     public void setAppiumManager(AppiumManager appiumManager) {
-        this.appiumManager = appiumManager;
+        AppiumSingleton.appiumManager = appiumManager;
     }
 
     /**
@@ -64,6 +63,7 @@ public class AppiumSingleton {
     @BeforeSuite
     public void setUpAppiumConfig() {
         setFramework(AppiumSingleton.ARRIVAL);
+        appiumManager.ini();
         appiumManager.startServer();
     }
 

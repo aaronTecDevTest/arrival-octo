@@ -529,6 +529,7 @@ public class FXMLArrivalMainController implements Initializable {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
         }
+
         dateANDTestcase = FXCollections.observableArrayList(tempList);
     }
 
@@ -604,7 +605,7 @@ public class FXMLArrivalMainController implements Initializable {
             URL applicationIcon = getClass().getResource("/icons/appIcons.png");
             FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalOptions"));
             Parent root = loader.load();
-            Scene optionsScene = new Scene(root, 480, 280);
+            Scene optionsScene = new Scene(root, 500, 280);
             Stage optionsStage = new Stage();
             optionsScene.getStylesheets().add("/css/arrivalMain.css");
             optionsStage.setScene(optionsScene);

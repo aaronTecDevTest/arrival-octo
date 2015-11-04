@@ -67,11 +67,11 @@ public class ArrivalTestSuite {
         suite.setName("RegressonsTest - " + suiteID);
         suites.add(suite);
     }
-
+/*
     public static void main(String[] args) {
         ArrivalTestSuite runTest = new ArrivalTestSuite();
         runTest.runVirtualSuit();
-    }
+    }*/
 
     public void runVirtualSuit() {
         createVirtualSuite();
@@ -89,7 +89,7 @@ public class ArrivalTestSuite {
     }
 
     /**
-     * @return Path as a String
+     * @return Path as a String to save Result from TestNG
      */
     private String getNewPathDirectory() {
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmss");
@@ -97,10 +97,10 @@ public class ArrivalTestSuite {
 
         //ToDo: Mit Path class implement
         String tempPath = "../arrival-Octo/arrival_backend/src/main/resources/report/testng/selenium/";
-       /* String userSavePath = SeleniumSingleton.getSeverInstance().getSeleniumManager().getTestSuiteConfigs().getSaveResultPath();
+       /*
+       String userSavePath = SeleniumSingleton.getSeverInstance().getSeleniumManager().getTestSuiteConfigs().getSaveResultPath();
         if(!userSavePath.isEmpty())
-            tempPath = userSavePath;
-*/
+            tempPath = userSavePath;*/
         String outPutDirectory = tempPath + dateFormat.format(cal.getTime());
 
         createNewDirectory(outPutDirectory);

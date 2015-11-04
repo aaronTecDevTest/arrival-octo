@@ -33,42 +33,43 @@ import java.util.ResourceBundle;
 public class FXMLArrivalOptionsController implements Initializable {
     private static final Logger log = LogManager.getLogger(FXMLArrivalOptionsController.class);
     ObservableList<String> platform;
-    ObservableList<String> andTestingArt;
-    ObservableList<String> iosTestingArt;
+    ObservableList<String> mobilePlatform;
+    ObservableList<String> mobileTestingArt;
     ObservableList<String> maxParallel;
     ObservableList<String> webBrowser;
     ObservableList<String> webServer;
 
 
     @FXML
+    private Tab tabGeneral;
+    @FXML
     private Tab tabWebConfig;
     @FXML
-    private Tab tabIOSConfig;
-    @FXML
-    private Tab tabANDConfig;
+    private Tab tabMobileConfig;
 
-    @FXML
-    private ToggleButton togJsonIOS;
+
     @FXML
     private ToggleButton togJsonWeb;
     @FXML
-    private ToggleButton togJsonAND;
-
+    private ToggleButton togJsonMobile;
 
     @FXML
     private Button btnJsonConfigWeb;
     @FXML
-    private Button btnJsonConfigIOS;
-    @FXML
-    private Button btnJsonConfigAND;
-    @FXML
+    private Button btnJsonConfigMobile;
 
 
+    @FXML
     private TextField txtJsonConfigWeb;
     @FXML
-    private TextField txtJsonConfigIOS;
+    private TextField txtJsonConfigMobile;
     @FXML
-    private TextField txtJsonConfigAND;
+    private TextField txtAppPath;
+    @FXML
+    private TextField txtpackage_bundleID;
+
+
+
     @FXML
     private ComboBox<String> cmbPlatform;
     @FXML
@@ -79,10 +80,13 @@ public class FXMLArrivalOptionsController implements Initializable {
     private ComboBox<String> cmbWebBrowser;
     @FXML
     private ComboBox<String> cmbWebServer;
+
+
     @FXML
-    private ComboBox<String> cmbIOSTestingArt;
+    private ComboBox<String> cmbMobilePlatform;
     @FXML
-    private ComboBox<String> cmbANDTestingArt;
+    private ComboBox<String> cmbMobileTestingArt;
+
 
     @FXML
     private TextField txtSaveResultPath;
@@ -111,15 +115,17 @@ public class FXMLArrivalOptionsController implements Initializable {
         options = new Options();
 
         platform = FXCollections.observableArrayList(resources.getString("tab.general.platform").split(","));
-        andTestingArt = FXCollections.observableArrayList(resources.getString("tab.and.testingArt").split(","));
-        iosTestingArt = FXCollections.observableArrayList(resources.getString("tab.ios.testingArt").split(","));
+        mobilePlatform = FXCollections.observableArrayList(resources.getString("tab.mobile.platform").split(","));
+        mobileTestingArt = FXCollections.observableArrayList(resources.getString("tab.mobile.testingArt").split(","));
+
+
         maxParallel = FXCollections.observableArrayList(resources.getString("tab.general.maxParallel").split(","));
         webBrowser = FXCollections.observableArrayList(resources.getString("tab.web.browser").split(","));
         webServer = FXCollections.observableArrayList(resources.getString("tab.web.server").split(","));
 
         cmbPlatform.getItems().addAll(platform);
-        cmbANDTestingArt.getItems().addAll(andTestingArt);
-        cmbIOSTestingArt.getItems().addAll(iosTestingArt);
+        cmbMobilePlatform.getItems().addAll(mobilePlatform);
+        cmbMobileTestingArt.getItems().addAll(mobileTestingArt);
         cmbMaxParallel.getItems().addAll(maxParallel);
         cmbWebServer.getItems().addAll(webServer);
         cmbWebBrowser.getItems().addAll(webBrowser);
@@ -136,10 +142,8 @@ public class FXMLArrivalOptionsController implements Initializable {
         if (selectedDirectory != null) {
             if (actionEvent.getSource().equals(btnJsonConfigWeb))
                 txtJsonConfigWeb.setText(selectedDirectory.getAbsolutePath());
-            else if (actionEvent.getSource().equals(btnJsonConfigIOS))
-                txtJsonConfigIOS.setText(selectedDirectory.getAbsolutePath());
-            else if (actionEvent.getSource().equals(btnJsonConfigAND))
-                txtJsonConfigAND.setText(selectedDirectory.getAbsolutePath());
+            else if (actionEvent.getSource().equals(btnJsonConfigMobile))
+                txtJsonConfigMobile.setText(selectedDirectory.getAbsolutePath());
             else if (actionEvent.getSource().equals(btnSaveResultPath))
                 txtSaveResultPath.setText((selectedDirectory.getAbsolutePath()));
         } else {
@@ -183,23 +187,17 @@ public class FXMLArrivalOptionsController implements Initializable {
             switch (tempPlatform) {
                 case"Web":
                     tabWebConfig.setDisable(false);
-                    tabIOSConfig.setDisable(true);
-                    tabANDConfig.setDisable(true);
+                    tabMobileConfig.setDisable(true);
+
                     break;
-                case"IOS":
+                case"Mobile":
                     tabWebConfig.setDisable(true);
-                    tabIOSConfig.setDisable(false);
-                    tabANDConfig.setDisable(true);
-                    break;
-                case"Android":
-                    tabWebConfig.setDisable(true);
-                    tabIOSConfig.setDisable(true);
-                    tabANDConfig.setDisable(false);
+                    tabMobileConfig.setDisable(false);
+
                     break;
                 default:
                     tabWebConfig.setDisable(true);
-                    tabIOSConfig.setDisable(true);
-                    tabANDConfig.setDisable(true);
+                    tabMobileConfig.setDisable(true);
                     break;
             }
         }
@@ -223,66 +221,78 @@ public class FXMLArrivalOptionsController implements Initializable {
     public void webConfigController(ActionEvent actionEvent){
         if(actionEvent.getSource() == togJsonWeb) {
             log.info(actionEvent.getSource());
-            if(togJsonWeb.isSelected()) {
+            if(!togJsonWeb.isSelected()) {
                 txtJsonConfigWeb.setDisable(false);
                 btnJsonConfigWeb.setDisable(false);
-                togJsonWeb.setSelected(true);
-                togJsonWeb.setText("On");
-                cmbWebBrowser.setDisable(false);
-                cmbWebServer.setDisable(false);
-            }
-            else{
-                txtJsonConfigWeb.setDisable(true);
-                btnJsonConfigWeb.setDisable(true);
                 togJsonWeb.setSelected(false);
-                togJsonWeb.setText("Off");
+                togJsonWeb.setText("On");
                 cmbWebBrowser.setDisable(true);
                 cmbWebServer.setDisable(true);
             }
-        }
-    }
-
-    @FXML
-    public void iosConfigController(ActionEvent actionEvent){
-        if(actionEvent.getSource() == togJsonIOS) {
-            log.info(actionEvent.getSource());
-            if(togJsonIOS.isSelected()) {
-                txtJsonConfigIOS.setDisable(false);
-                btnJsonConfigIOS.setDisable(false);
-                togJsonIOS.setSelected(true);
-                togJsonIOS.setText("On");
-            }
             else{
-                cmbMaxParallel.setDisable(true);
-                txtJsonConfigIOS.setDisable(true);
-                btnJsonConfigIOS.setDisable(true);
-                togJsonIOS.setSelected(false);
-                togJsonIOS.setText("Off");
+                txtJsonConfigWeb.setDisable(true);
+                txtJsonConfigWeb.setText("");
+                btnJsonConfigWeb.setDisable(true);
+                togJsonWeb.setSelected(true);
+                togJsonWeb.setText("Off");
+                cmbWebBrowser.setDisable(false);
+                cmbWebServer.setDisable(false);
             }
         }
     }
 
     @FXML
-    public void andConfigController(ActionEvent actionEvent){
-        if(actionEvent.getSource() == togJsonAND) {
+    public void mobileConfigController(ActionEvent actionEvent){
+        if(actionEvent.getSource() == togJsonMobile) {
             log.info(actionEvent.getSource());
-            if(togJsonAND.isSelected()) {
-                txtJsonConfigAND.setDisable(false);
-                btnJsonConfigAND.setDisable(false);
-                togJsonAND.setSelected(true);
-                togJsonAND.setText("On");
-
+            if(togJsonMobile.isSelected()) {
+                txtJsonConfigMobile.setDisable(false);
+                btnJsonConfigMobile.setDisable(false);
+                togJsonMobile.setSelected(true);
+                togJsonMobile.setText("On");
             }
             else{
                 cmbMaxParallel.setDisable(true);
-                txtJsonConfigAND.setDisable(true);
-                btnJsonConfigAND.setDisable(true);
-                togJsonAND.setSelected(false);
-                togJsonAND.setText("Off");
-
+                txtJsonConfigMobile.setDisable(true);
+                btnJsonConfigMobile.setDisable(true);
+                togJsonMobile.setSelected(false);
+                togJsonMobile.setText("Off");
             }
         }
+
+        if(actionEvent.getSource() == cmbMobileTestingArt){
+            String platform = cmbMobileTestingArt.getSelectionModel().getSelectedItem();
+             switch (platform) {
+                 case "Native":
+                     btnJsonConfigMobile.setDisable(false);
+                     txtJsonConfigMobile.setDisable(false);
+                     txtpackage_bundleID.setDisable(false);
+                     txtJsonConfigMobile.setText("");
+                     txtpackage_bundleID.setText("");
+                     break;
+
+                 case "Mobile Web":
+                     btnJsonConfigMobile.setDisable(true);
+                     txtJsonConfigMobile.setDisable(true);
+                     txtpackage_bundleID.setDisable(true);
+                     txtJsonConfigMobile.setText("");
+                     txtpackage_bundleID.setText("");
+                     break;
+
+                 case "Hybrid":
+                     btnJsonConfigMobile.setDisable(false);
+                     txtJsonConfigMobile.setDisable(false);
+                     txtpackage_bundleID.setDisable(false);
+                     txtJsonConfigMobile.setText("");
+                     txtpackage_bundleID.setText("");
+                     break;
+                 default:
+                    log.error("No Mobile Testing-Art is set!!");
+                     break;
+             }
+        }
     }
+
 
     public Options getOptions() {
         return options;
@@ -294,8 +304,8 @@ public class FXMLArrivalOptionsController implements Initializable {
 
     public void updateOptionsObject(){
         options.setPlatform(cmbPlatform.getSelectionModel().getSelectedItem());
-        options.setMobileTestingArt(cmbANDTestingArt.getSelectionModel().getSelectedItem());
-        options.setMobileTestingArt(cmbIOSTestingArt.getSelectionModel().getSelectedItem());
+        options.setMobileTestingArt(cmbMobilePlatform.getSelectionModel().getSelectedItem());
+        options.setMobileTestingArt(cmbMobileTestingArt.getSelectionModel().getSelectedItem());
         options.setParallelTestingCount(Integer.valueOf(cmbMaxParallel.getSelectionModel().getSelectedItem()));
         options.setBrowserName(cmbWebBrowser.getSelectionModel().getSelectedItem());
         options.setServerName(cmbWebServer.getSelectionModel().getSelectedItem());
@@ -307,21 +317,17 @@ public class FXMLArrivalOptionsController implements Initializable {
             options.setJsonConfigPath(txtJsonConfigWeb.getText());
         }
 
-        if(!tabANDConfig.isDisable()) {
-            options.setJsonConfigInUse(togJsonAND.isSelected());
-            options.setJsonConfigPath(txtJsonConfigAND.getText());
-        }
 
-        if(!tabIOSConfig.isDisable()) {
-            options.setJsonConfigInUse(togJsonIOS.isSelected());
-            options.setJsonConfigPath(txtJsonConfigIOS.getText());
+        if(!tabMobileConfig.isDisable()) {
+            options.setJsonConfigInUse(togJsonMobile.isSelected());
+            options.setJsonConfigPath(txtJsonConfigMobile.getText());
         }
     }
 
     public void updateOptionsView(){
         cmbPlatform.getSelectionModel().select(options.getPlatform());
-        cmbANDTestingArt.getSelectionModel().select(options.getMobileTestingArt());
-        cmbIOSTestingArt.getSelectionModel().select(options.getMobileTestingArt());
+        cmbMobilePlatform.getSelectionModel().select(options.getMobileTestingArt());
+        cmbMobileTestingArt.getSelectionModel().select(options.getMobileTestingArt());
         cmbMaxParallel.getSelectionModel().select(Integer.toString(options.getParallelTestingCount()));
         cmbWebServer.getSelectionModel().select(options.getServerName());
         cmbWebBrowser.getSelectionModel().select(options.getBrowserName());
@@ -340,55 +346,47 @@ public class FXMLArrivalOptionsController implements Initializable {
                 txtJsonConfigWeb.setDisable(false);
         }
         if(options.getPlatform().contains("IOS")){
-            togJsonIOS.setSelected(options.getJsonConfigInUse());
-            txtJsonConfigIOS.setText(options.getJsonConfigPath());
-            tabIOSConfig.setDisable(false);
+            togJsonMobile.setSelected(options.getJsonConfigInUse());
+            txtJsonConfigMobile.setText(options.getJsonConfigPath());
+            tabMobileConfig.setDisable(false);
             if(options.getJsonConfigInUse())
-                txtJsonConfigIOS.setDisable(false);
-        }
-        if(options.getPlatform().contains("Android")){
-            togJsonAND.setSelected(options.getJsonConfigInUse());
-            txtJsonConfigAND.setText(options.getJsonConfigPath());
-            tabANDConfig.setDisable(false);
-            if(options.getJsonConfigInUse())
-                txtJsonConfigAND.setDisable(false);
+                txtJsonConfigMobile.setDisable(false);
         }
     }
 
 
     public void setDefaultConfig() {
         cmbPlatform.getSelectionModel().select("Non");
-        cmbANDTestingArt.getSelectionModel().select("Native");
-        cmbIOSTestingArt.getSelectionModel().select("Native");
+        cmbMobilePlatform.getSelectionModel().select("Android");
+        cmbMobileTestingArt.getSelectionModel().select("Native");
         cmbMaxParallel.getSelectionModel().select("2");
         cmbWebServer.getSelectionModel().select("Non");
         cmbWebBrowser.getSelectionModel().select("FF - FireFox");
         txtJsonConfigWeb.setText("");
-        txtJsonConfigAND.setText("");
-        txtJsonConfigIOS.setText("");
+        txtJsonConfigMobile.setText("");
         txtSaveResultPath.setText("");
+        txtAppPath.setText("");
+        txtpackage_bundleID.setText("");
+
 
         togOnOffParallel.setSelected(false);
         togJsonWeb.setSelected(false);
-        togJsonIOS.setSelected(false);
-        togJsonAND.setSelected(false);
+        togJsonMobile.setSelected(false);
         togOnOffParallel.setText("Off");
         togJsonWeb.setText("Off");
-        togJsonIOS.setText("Off");
-        togJsonAND.setText("Off");
+        togJsonMobile.setText("Off");
 
         cmbWebBrowser.setDisable(false);
         cmbWebServer.setDisable(false);
         cmbMaxParallel.setDisable(true);
         txtJsonConfigWeb.setDisable(true);
-        txtJsonConfigAND.setDisable(true);
-        txtJsonConfigIOS.setDisable(true);
+        txtJsonConfigMobile.setDisable(true);
+        txtAppPath.setDisable(true);
+        txtpackage_bundleID.setDisable(true);
         btnJsonConfigWeb.setDisable(true);
-        btnJsonConfigAND.setDisable(true);
-        btnJsonConfigIOS.setDisable(true);
+        btnJsonConfigMobile.setDisable(true);
 
         tabWebConfig.setDisable(true);
-        tabIOSConfig.setDisable(true);
-        tabANDConfig.setDisable(true);
+        tabMobileConfig.setDisable(true);
     }
 }
