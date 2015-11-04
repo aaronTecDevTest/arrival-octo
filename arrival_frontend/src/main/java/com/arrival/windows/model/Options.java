@@ -22,6 +22,8 @@ public class Options implements IFConfig {
 
     private String mobilePlatform = null;
     private String mobileTestingArt = null;
+    private String hubServer = null;
+    private String hubPort = null;
     private String appFilePath = null;
     private String packageBundleID = null;
 
@@ -130,5 +132,21 @@ public class Options implements IFConfig {
 
     public void setPackageBundleID(String packageBundleID) {
         this.packageBundleID = packageBundleID;
+    }
+
+    public String getHubServer() {
+        return hubServer;
+    }
+
+    public void setHubServer(String hubServer) {
+        this.hubServer = hubServer;
+    }
+
+    public String getHubPort() {
+        return hubPort;
+    }
+
+    public void setHubPort(String hubPort) {
+        this.hubPort = hubPort;
     }
 }

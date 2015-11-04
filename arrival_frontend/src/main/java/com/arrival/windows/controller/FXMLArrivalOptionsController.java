@@ -68,7 +68,11 @@ public class FXMLArrivalOptionsController implements Initializable {
     @FXML
     private TextField txtAppPath;
     @FXML
-    private TextField txtPackage_bundleID;
+    private TextField txtPackageBundleID;
+    @FXML
+    private TextField txtHubServer;
+    @FXML
+    private TextField txtHubPort;
 
 
     @FXML
@@ -118,7 +122,6 @@ public class FXMLArrivalOptionsController implements Initializable {
         platform = FXCollections.observableArrayList(resources.getString("tab.general.platform").split(","));
         mobilePlatform = FXCollections.observableArrayList(resources.getString("tab.mobile.platform").split(","));
         mobileTestingArt = FXCollections.observableArrayList(resources.getString("tab.mobile.testingArt").split(","));
-
 
         maxParallel = FXCollections.observableArrayList(resources.getString("tab.general.maxParallel").split(","));
         webBrowser = FXCollections.observableArrayList(resources.getString("tab.web.browser").split(","));
@@ -266,25 +269,25 @@ public class FXMLArrivalOptionsController implements Initializable {
                 case "Native":
                     btnAppPath.setDisable(false);
                     txtAppPath.setDisable(false);
-                    txtPackage_bundleID.setDisable(false);
+                    txtPackageBundleID.setDisable(false);
                     txtAppPath.setText("");
-                    txtPackage_bundleID.setText("");
+                    txtPackageBundleID.setText("");
                     break;
 
                 case "Mobile Web":
                     btnAppPath.setDisable(true);
                     txtAppPath.setDisable(true);
-                    txtPackage_bundleID.setDisable(true);
+                    txtPackageBundleID.setDisable(true);
                     txtAppPath.setText("");
-                    txtPackage_bundleID.setText("");
+                    txtPackageBundleID.setText("");
                     break;
 
                 case "Hybrid":
                     btnAppPath.setDisable(false);
                     txtAppPath.setDisable(false);
-                    txtPackage_bundleID.setDisable(false);
+                    txtPackageBundleID.setDisable(false);
                     txtAppPath.setText("");
-                    txtPackage_bundleID.setText("");
+                    txtPackageBundleID.setText("");
                     break;
                 default:
                     log.error("No Mobile Testing-Art is set!!");
@@ -304,19 +307,21 @@ public class FXMLArrivalOptionsController implements Initializable {
 
     public void updateOptionsObject() {
         options.setPlatform(cmbPlatform.getSelectionModel().getSelectedItem());
-        options.setMobileTestingArt(cmbMobilePlatform.getSelectionModel().getSelectedItem());
+        options.setMobilePlatform(cmbMobilePlatform.getSelectionModel().getSelectedItem());
         options.setMobileTestingArt(cmbMobileTestingArt.getSelectionModel().getSelectedItem());
         options.setParallelTestingCount(Integer.valueOf(cmbMaxParallel.getSelectionModel().getSelectedItem()));
         options.setBrowserName(cmbWebBrowser.getSelectionModel().getSelectedItem());
         options.setServerName(cmbWebServer.getSelectionModel().getSelectedItem());
-        options.setSaveResultPath(txtSaveResultPath.getText());
         options.setParallelTesting(togOnOffParallel.isSelected());
+        options.setAppFilePath(txtAppPath.getText());
+        options.setPackageBundleID(txtPackageBundleID.getText());
+        options.setSaveResultPath(txtSaveResultPath.getText());
+
 
         if (! tabWebConfig.isDisable()) {
             options.setJsonConfigInUse(togJsonWeb.isSelected());
             options.setJsonConfigPath(txtJsonConfigWeb.getText());
         }
-
 
         if (! tabMobileConfig.isDisable()) {
             options.setJsonConfigInUse(togJsonMobile.isSelected());
@@ -331,6 +336,9 @@ public class FXMLArrivalOptionsController implements Initializable {
         cmbMaxParallel.getSelectionModel().select(Integer.toString(options.getParallelTestingCount()));
         cmbWebServer.getSelectionModel().select(options.getServerName());
         cmbWebBrowser.getSelectionModel().select(options.getBrowserName());
+
+        txtAppPath.setText(options.getAppFilePath());
+        txtPackageBundleID.setText(options.getAppFilePath());
         txtSaveResultPath.setText(options.getSaveResultPath());
 
         if (options.getParallelTesting())
@@ -345,7 +353,7 @@ public class FXMLArrivalOptionsController implements Initializable {
             if (options.getJsonConfigInUse())
                 txtJsonConfigWeb.setDisable(false);
         }
-        if (options.getPlatform().contains("IOS")) {
+        if (options.getPlatform().contains("Mobile")) {
             togJsonMobile.setSelected(options.getJsonConfigInUse());
             txtJsonConfigMobile.setText(options.getJsonConfigPath());
             tabMobileConfig.setDisable(false);
@@ -365,8 +373,7 @@ public class FXMLArrivalOptionsController implements Initializable {
         txtJsonConfigMobile.setText("");
         txtSaveResultPath.setText("");
         txtAppPath.setText("");
-        txtPackage_bundleID.setText("");
-
+        txtPackageBundleID.setText("");
 
         togOnOffParallel.setSelected(false);
         togJsonWeb.setSelected(false);
@@ -381,7 +388,7 @@ public class FXMLArrivalOptionsController implements Initializable {
         txtJsonConfigWeb.setDisable(true);
         txtJsonConfigMobile.setDisable(true);
         txtAppPath.setDisable(true);
-        txtPackage_bundleID.setDisable(true);
+        txtPackageBundleID.setDisable(true);
         btnJsonConfigWeb.setDisable(true);
         btnJsonConfigMobile.setDisable(true);
 

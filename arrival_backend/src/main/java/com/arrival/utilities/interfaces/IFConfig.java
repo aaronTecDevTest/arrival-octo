@@ -56,4 +56,12 @@ public interface IFConfig {
     String getPackageBundleID();
 
     void setPackageBundleID(String packageBundleID);
+
+    String getHubServer();
+
+    void setHubServer(String hubServer);
+
+    String getHubPort();
+
+    void setHubPort(String hubPort);
 }
