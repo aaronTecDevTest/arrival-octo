@@ -18,6 +18,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -134,6 +135,7 @@ public class FXMLArrivalOptionsController implements Initializable {
         cmbWebServer.getItems().addAll(webServer);
         cmbWebBrowser.getItems().addAll(webBrowser);
 
+        cmbPlatform.getSelectionModel().select("Non");
         setDefaultConfig();
     }
 
@@ -142,6 +144,7 @@ public class FXMLArrivalOptionsController implements Initializable {
         log.info(actionEvent.getSource());
         final DirectoryChooser directoryChooser = new DirectoryChooser();
         final File selectedDirectory = directoryChooser.showDialog(((Node) actionEvent.getSource()).getScene().getWindow());
+
         if (selectedDirectory != null) {
             if (actionEvent.getSource().equals(btnJsonConfigWeb))
                 txtJsonConfigWeb.setText(selectedDirectory.getAbsolutePath());
@@ -149,10 +152,22 @@ public class FXMLArrivalOptionsController implements Initializable {
                 txtJsonConfigMobile.setText(selectedDirectory.getAbsolutePath());
             else if (actionEvent.getSource().equals(btnSaveResultPath))
                 txtSaveResultPath.setText((selectedDirectory.getAbsolutePath()));
-            else if (actionEvent.getSource().equals(btnAppPath))
-                txtAppPath.setText(selectedDirectory.getAbsolutePath());
         } else {
             log.warn("Count open or load directory!");
+        }
+    }
+
+    @FXML
+    public void openFileChooser(ActionEvent actionEvent){
+        log.info(actionEvent);
+        final FileChooser FileChooser = new FileChooser();
+        final File selectedFile= FileChooser.showOpenDialog(((Node) actionEvent.getSource()).getScene().getWindow());
+
+        if (selectedFile != null) {
+            if (actionEvent.getSource().equals(btnAppPath))
+                txtAppPath.setText(selectedFile.getAbsolutePath());
+        } else {
+            log.warn("Count open or load file path!");
         }
     }
 
@@ -177,18 +192,20 @@ public class FXMLArrivalOptionsController implements Initializable {
         ((Stage) tempScene.getWindow()).close();
     }
 
+
     @FXML
     public void resetConfig(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
         setDefaultConfig();
     }
 
+
     @FXML
     public void generalController(ActionEvent actionEvent) {
         if (actionEvent.getSource() == cmbPlatform) {
             log.info(actionEvent.getSource());
             String tempPlatform = cmbPlatform.getSelectionModel().getSelectedItem();
-
+            setDefaultConfig();
             switch (tempPlatform) {
                 case "Web":
                     tabWebConfig.setDisable(false);
@@ -219,6 +236,7 @@ public class FXMLArrivalOptionsController implements Initializable {
                 togOnOffParallel.setText("Off");
             }
         }
+
     }
 
     @FXML
@@ -226,20 +244,21 @@ public class FXMLArrivalOptionsController implements Initializable {
         if (actionEvent.getSource() == togJsonWeb) {
             log.info(actionEvent.getSource());
             if (! togJsonWeb.isSelected()) {
-                txtJsonConfigWeb.setDisable(false);
-                btnJsonConfigWeb.setDisable(false);
-                togJsonWeb.setSelected(false);
-                togJsonWeb.setText("On");
-                cmbWebBrowser.setDisable(true);
-                cmbWebServer.setDisable(true);
-            } else {
                 txtJsonConfigWeb.setDisable(true);
                 txtJsonConfigWeb.setText("");
                 btnJsonConfigWeb.setDisable(true);
-                togJsonWeb.setSelected(true);
+                togJsonWeb.setSelected(false);
                 togJsonWeb.setText("Off");
                 cmbWebBrowser.setDisable(false);
                 cmbWebServer.setDisable(false);
+
+            } else {
+                txtJsonConfigWeb.setDisable(false);
+                btnJsonConfigWeb.setDisable(false);
+                togJsonWeb.setSelected(true);
+                togJsonWeb.setText("On");
+                cmbWebBrowser.setDisable(true);
+                cmbWebServer.setDisable(true);
             }
         }
     }
@@ -249,12 +268,17 @@ public class FXMLArrivalOptionsController implements Initializable {
         if (actionEvent.getSource() == togJsonMobile) {
             log.info(actionEvent.getSource());
             if (togJsonMobile.isSelected()) {
+                txtHubPort.setDisable(true);
+                txtHubServer.setDisable(true);
+
                 txtJsonConfigMobile.setDisable(false);
                 btnJsonConfigMobile.setDisable(false);
                 togJsonMobile.setSelected(true);
                 togJsonMobile.setText("On");
             } else {
-                cmbMaxParallel.setDisable(true);
+                txtHubPort.setDisable(false);
+                txtHubServer.setDisable(false);
+
                 txtJsonConfigMobile.setDisable(true);
                 txtJsonConfigMobile.setText("");
                 btnJsonConfigMobile.setDisable(true);
@@ -313,6 +337,8 @@ public class FXMLArrivalOptionsController implements Initializable {
         options.setBrowserName(cmbWebBrowser.getSelectionModel().getSelectedItem());
         options.setServerName(cmbWebServer.getSelectionModel().getSelectedItem());
         options.setParallelTesting(togOnOffParallel.isSelected());
+        options.setHubServer(txtHubServer.getText());
+        options.setHubPort(txtHubPort.getText());
         options.setAppFilePath(txtAppPath.getText());
         options.setPackageBundleID(txtPackageBundleID.getText());
         options.setSaveResultPath(txtSaveResultPath.getText());
@@ -337,6 +363,8 @@ public class FXMLArrivalOptionsController implements Initializable {
         cmbWebServer.getSelectionModel().select(options.getServerName());
         cmbWebBrowser.getSelectionModel().select(options.getBrowserName());
 
+        txtHubServer.setText(options.getHubServer());
+        txtHubPort.setText(options.getHubPort());
         txtAppPath.setText(options.getAppFilePath());
         txtPackageBundleID.setText(options.getAppFilePath());
         txtSaveResultPath.setText(options.getSaveResultPath());
@@ -363,7 +391,7 @@ public class FXMLArrivalOptionsController implements Initializable {
     }
 
     public void setDefaultConfig() {
-        cmbPlatform.getSelectionModel().select("Non");
+        //cmbPlatform.getSelectionModel().select("Non");
         cmbMobilePlatform.getSelectionModel().select("Android");
         cmbMobileTestingArt.getSelectionModel().select("Mobile Web");
         cmbMaxParallel.getSelectionModel().select("2");
@@ -374,6 +402,8 @@ public class FXMLArrivalOptionsController implements Initializable {
         txtSaveResultPath.setText("");
         txtAppPath.setText("");
         txtPackageBundleID.setText("");
+        txtHubServer.setText("");
+        txtHubPort.setText("");
 
         togOnOffParallel.setSelected(false);
         togJsonWeb.setSelected(false);

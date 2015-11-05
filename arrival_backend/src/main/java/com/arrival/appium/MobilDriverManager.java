@@ -28,51 +28,50 @@ import java.net.URL;
 public class MobilDriverManager {
     private static final Logger log = LogManager.getLogger(MobilDriverManager.class);
 
+    AppiumConfig appiumConfig;
+    NodeConfig nodeConfig ;
 
     public MobilDriverManager() {
+        appiumConfig = null;
+        nodeConfig = null;
     }
 
     public AppiumDriver setUpDriver(AppiumConfig runningConfiguration, NodeConfig nodeConfig) {
         log.debug("Setting up AppiumDriver");
-        AppiumDriver driver = null;
 
-        String platform = runningConfiguration.getPlatform();
+        AppiumDriver driver = null;
+        this.appiumConfig = runningConfiguration;
+        this.nodeConfig = nodeConfig;
+
+        String platform = appiumConfig.getPlatform();
 
         switch (platform) {
             case "IOS":
-                // AndroidDriver androidDriver = new AndroidDriver();
-                //  IOSDriver iosDriver;
-
+                if(appiumConfig.getJsonConfigInUse())
+                    driver = setUpIOS();
+                else
+                    driver = setIOSDefault();
                 break;
 
             case "Android":
-
-                break;
-
-            case "Non":
-
-                break;
-
-            default:
-
+                if(appiumConfig.getJsonConfigInUse())
+                    driver = setUpAndroid();
+                else
+                    driver = setAndroidDefault();
                 break;
         }
         return driver;
     }
 
 
-    /**
-     * @param nodeConfig
-     * @return
-     */
-    private AndroidDriver setUpAndroid(NodeConfig nodeConfig) {
-
+    private AndroidDriver setUpAndroid( ) {
         Capabilities tempCap = nodeConfig.getSingelCapability();
 
         try {
-            File classpathRoot = new File(System.getProperty("user.dir"));
-            File appDir = new File(classpathRoot, "/ContactManager");
-            File app = new File(appDir, "ContactManager.apk");
+            //File classpathRoot = new File(System.getProperty("user.dir"));
+            //File appDir = new File(classpathRoot, "/ContactManager");
+            //File app = new File(appDir, ".apk");
+            File app = new File(appiumConfig.getAppFilePath());
 
             URL url = new URL("http://"
                                       + nodeConfig.getConfiguration().getHubHost() + ":"
@@ -83,10 +82,15 @@ public class MobilDriverManager {
             capabilities.setCapability(CapabilityType.BROWSER_NAME, tempCap.getBrowserName());
             capabilities.setCapability(CapabilityType.PLATFORM, tempCap.getPlatform());
             capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());
+            capabilities.setCapability("udid", tempCap.getUdid());
             capabilities.setCapability("deviceName", tempCap.getDeviceName());
             capabilities.setCapability("app", app.getAbsolutePath());
-            //capabilities.setCapability("appPackage", "com.example.android.contactmanager");
-            //capabilities.setCapability("appActivity", ".ContactManage");
+            if(appiumConfig.getMobileTestingArt().contains("Mobile Web")){
+                capabilities.setCapability("autoWebview", true);
+            } else{
+                capabilities.setCapability("appPackage", appiumConfig.getPackageBundleID());
+                //capabilities.setCapability("appActivity", ".ContactManage");
+            }
             return new AndroidDriver(url, capabilities);
         } catch (MalformedURLException e) {
             log.error(e.toString());
@@ -94,17 +98,15 @@ public class MobilDriverManager {
         return null;
     }
 
-    /**
-     * @param nodeConfig
-     * @return
-     */
-    private IOSDriver setUpIOS(NodeConfig nodeConfig) {
+
+    private IOSDriver setUpIOS( ) {
         Capabilities tempCap = nodeConfig.getSingelCapability();
 
         try {
-            File classpathRoot = new File(System.getProperty("user.dir"));
-            File appDir = new File(classpathRoot, "/ContactManager");
-            File app = new File(appDir, "ContactManager.apk");
+            //File classpathRoot = new File(System.getProperty("user.dir"));
+            //File appDir = new File(classpathRoot, "/ContactManager");
+            //File app = new File(appDir, "ContactManager.apk");
+            File app = new File(appiumConfig.getAppFilePath());
 
             URL url = new URL("http://"
                                       + nodeConfig.getConfiguration().getHubHost() + ":"
@@ -115,14 +117,29 @@ public class MobilDriverManager {
             capabilities.setCapability(CapabilityType.BROWSER_NAME, tempCap.getBrowserName());
             capabilities.setCapability(CapabilityType.PLATFORM, tempCap.getPlatform());
             capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());
+            capabilities.setCapability("udid", tempCap.getUdid());
             capabilities.setCapability("deviceName", tempCap.getDeviceName());
             capabilities.setCapability("app", app.getAbsolutePath());
-            capabilities.setCapability("appPackage", "com.example.android.contactmanager");
-            capabilities.setCapability("appActivity", ".ContactManage");
+            if(appiumConfig.getMobileTestingArt().contains("Mobile Web")){
+                capabilities.setCapability("autoWebview", true);
+            } else{
+                capabilities.setCapability("bundleId", appiumConfig.getPackageBundleID());
+                //capabilities.setCapability("appActivity", ".ContactManage");
+            }
             return new IOSDriver(url, capabilities);
         } catch (MalformedURLException e) {
             log.error(e.toString());
         }
+        return null;
+    }
+
+
+    private AndroidDriver setAndroidDefault(){
+        return null;
+    }
+
+
+    private IOSDriver setIOSDefault(){
         return null;
     }
 }

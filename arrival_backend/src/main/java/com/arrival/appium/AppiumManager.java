@@ -30,8 +30,6 @@ import java.util.ArrayList;
 
 public class AppiumManager {
     private static final Logger log = LogManager.getLogger(AppiumManager.class);
-    private final static String HUBHOST = "localhost";
-    private final static Integer HUBPORT = 4444;
     private static ArrayList<IFAppiumServer> appiumDefaultServersList = new ArrayList<>();
     private IFConfig testSuiteConfigs = null;
     private JSONConfigReader configReader;
@@ -42,53 +40,21 @@ public class AppiumManager {
 
 
     public AppiumManager() {
-        iniHub(HUBHOST, HUBPORT);
     }
 
-    /**
-     * @param hubHost can be a IP or Servername.
-     * @param hubPort Port number.
-     */
-    public AppiumManager(String hubHost, Integer hubPort) {
-        iniHub(hubHost, hubPort);
-    }
-
-    public static void startDefaultANDSever() {
-        AppiumAndroidDefault defaultAND = new AppiumAndroidDefault();
-        appiumDefaultServersList.add(defaultAND);
-        defaultAND.startServer();
-        log.info(("Start a new Android default sever: " + defaultAND.toString()));
-    }
-
-    public static void stopDefaultANDServer() {
-        for (IFAppiumServer tempServer : appiumDefaultServersList) {
-            tempServer.stopServer();
-            log.info("Stop a Android default sever: " + tempServer.toString());
-        }
-    }
-
-    public static void startDefauotIOSServer() {
-        AppiumIOSDefault defaultIOS = new AppiumIOSDefault();
-        appiumDefaultServersList.add(defaultIOS);
-        defaultIOS.startServer();
-        log.info(("Start a new IOS default sever: " + defaultIOS.toString()));
-    }
-
-    public static void stopDefaultIOSServer() {
-        for (IFAppiumServer tempServer : appiumDefaultServersList) {
-            tempServer.stopServer();
-            log.info("Stop a IOS default sever: " + tempServer.toString());
-        }
-    }
 
     public void ini() {
+        iniHub();
         iniPathList();
         iniNodeConfig();
         iniAppiumServer();
     }
 
-    private void iniHub(String hubHost, Integer hubPort) {
-        hub = new Hub(hubHost, hubPort);
+    private void iniHub() {
+        if(testSuiteConfigs.getHubPort().isEmpty() && testSuiteConfigs.getHubServer().isEmpty())
+            hub = new Hub();
+        else
+            hub = new Hub(testSuiteConfigs.getHubServer(), testSuiteConfigs.getHubPort());
     }
 
     private void iniPathList() {
@@ -155,6 +121,34 @@ public class AppiumManager {
         }
     }
 
+    public static void startDefaultANDSever() {
+        AppiumAndroidDefault defaultAND = new AppiumAndroidDefault();
+        appiumDefaultServersList.add(defaultAND);
+        defaultAND.startServer();
+        log.info(("Start a new Android default sever: " + defaultAND.toString()));
+    }
+
+    public static void stopDefaultANDServer() {
+        for (IFAppiumServer tempServer : appiumDefaultServersList) {
+            tempServer.stopServer();
+            log.info("Stop a Android default sever: " + tempServer.toString());
+        }
+    }
+
+    public static void startDefauotIOSServer() {
+        AppiumIOSDefault defaultIOS = new AppiumIOSDefault();
+        appiumDefaultServersList.add(defaultIOS);
+        defaultIOS.startServer();
+        log.info(("Start a new IOS default sever: " + defaultIOS.toString()));
+    }
+
+    public static void stopDefaultIOSServer() {
+        for (IFAppiumServer tempServer : appiumDefaultServersList) {
+            tempServer.stopServer();
+            log.info("Stop a IOS default sever: " + tempServer.toString());
+        }
+    }
+
     //ToDO: for hub und AppiumServer do implement
     private boolean isLocalPortInUse(int port) {
         try {
@@ -186,7 +180,6 @@ public class AppiumManager {
         try {
             Thread.sleep(10000);
         } catch (Exception e) {
-
         }
     }
 
@@ -251,8 +244,10 @@ public class AppiumManager {
      */
     public void startServer() {
         try {
+            ini();
             hub.startHub();
             pauseSeverIni();
+
             for (IFAppiumServer tempServer : appiumServersList) {
                 tempServer.startServer();
                 log.info("Start a new Server: " + tempServer.toString());

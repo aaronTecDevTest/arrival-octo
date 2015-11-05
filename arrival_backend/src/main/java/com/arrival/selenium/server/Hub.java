@@ -20,13 +20,13 @@ import org.openqa.grid.internal.utils.GridHubConfiguration;
 public class Hub {
     private static final Logger log = LogManager.getLogger(Hub.class.getName());
 
-    private static final String HUBHOST = "localhost";
+    private static final String HUBHOST = "127.0.0.1";
     private static final Integer HUBPORT = 4444;
 
     /**
      * @param osName: Operation-System Name like "Mac OS", "Windows xxx" or "Linux xx"
      */
-    private String osName;
+    private java.lang.String osName;
     /**
      * @param gridHubConfig: @see GridHubConfiguration
      */
@@ -55,8 +55,8 @@ public class Hub {
         hubHost = HUBHOST;
         hubPort = HUBPORT;
         osName = SystemPreferences.getOsName();
-        hub = null;
-        log.info("SeleniumHb created");
+        setUpHub();
+        log.info("SeleniumHub created");
     }
 
     /**
@@ -65,28 +65,29 @@ public class Hub {
      * @param host @see hubHost
      * @param port @see hubPort
      */
-    public Hub(String host, Integer port) {
+    public Hub(String host, String port) {
         gridHubConfig = new GridHubConfiguration();
         hubHost = host;
-        hubPort = port;
-        osName = System.getProperty("os.name");
+        hubPort = Integer.valueOf(port);
+        osName = SystemPreferences.getOsName();
         setUpHub();
+        log.info("SeleniumHub created");
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         Hub hubNode = new Hub();
 
         hubNode.startHub();
         // hubNode.shutDownNodeAndHub();
         hubNode.stopHub();
-    }
+    }*/
 
     /**
      * Setup the Hub with GridHubConfig
      */
     private void setUpHub() {
         try {
-            gridHubConfig.setHost(hubHost);
+            gridHubConfig.setHost(java.lang.String.valueOf(hubHost));
             gridHubConfig.setPort(hubPort);
             hub = new org.openqa.grid.web.Hub(gridHubConfig);
         } catch (Exception e) {
@@ -105,7 +106,7 @@ public class Hub {
 
             setUpHub();
             hub.start();
-            log.info("Start the hub on: " + hubHost + " on port: " + hubPort + "succesfull");
+            log.info("Start the hub on: " + hubHost + " on port: " + hubPort + "successful");
         } catch (Exception e) {
             log.error("Fail to start the hub on: " + hubHost + " on port: " + hubPort);
             //log.warn("Host: " + hubHost + " on port: " + hubPort + " all ready in use!");

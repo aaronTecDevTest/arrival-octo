@@ -113,7 +113,7 @@ public class FXMLArrivalTableViewController implements Initializable {
                 tempSeleniumManager.setTestSuiteConfigs(options);
                 SeleniumSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
                 tempClasses.add(new XmlClass("com.arrival.selenium.SeleniumSingleton"));
-            } else if (options.getPlatform().contains("IOS") || options.getPlatform().contains("Android")) {
+            } else if (options.getPlatform().contains("Mobile")) {
                 tempAppiumManager.setTestSuiteConfigs(options);
                 AppiumSingleton.getInstance().setAppiumManager(tempAppiumManager);
                 tempClasses.add(new XmlClass("com.arrival.appium.AppiumSingleton"));

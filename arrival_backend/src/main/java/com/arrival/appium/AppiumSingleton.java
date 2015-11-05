@@ -61,7 +61,6 @@ public class AppiumSingleton {
     @BeforeSuite
     public void setUpAppiumConfig() {
         setFramework(AppiumSingleton.ARRIVAL);
-        appiumManager.ini();
         appiumManager.startServer();
     }
 

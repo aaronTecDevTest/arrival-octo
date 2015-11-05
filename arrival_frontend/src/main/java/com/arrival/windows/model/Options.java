@@ -16,7 +16,6 @@ public class Options implements IFConfig {
     private Integer parallelTestingCount = 0;
     private String saveResultPath = null;
 
-
     private String browserName = null;
     private String serverName = null;
 
@@ -27,15 +26,25 @@ public class Options implements IFConfig {
     private String appFilePath = null;
     private String packageBundleID = null;
 
-
     private Boolean jsonConfigInUse = false;
     private String jsonConfigPath = null;
 
-
     @Override
     public String toString() {
-        return platform + "->" + parallelTesting.toString() + "->" + parallelTestingCount + "->" + browserName + "->" + serverName
-                       + "->" + mobileTestingArt + "->" + jsonConfigInUse.toString() + "->" + jsonConfigPath + "->" + saveResultPath;
+        return           platform
+                + "->" + parallelTesting.toString()
+                + "->" + parallelTestingCount
+                + "->" + browserName
+                + "->" + serverName
+                + "->" + mobilePlatform
+                + "->" + mobileTestingArt
+                + "->" + hubServer
+                + "->" + hubPort
+                + "->" + appFilePath
+                + "->" + packageBundleID
+                + "->" + jsonConfigInUse.toString()
+                + "->" + jsonConfigPath
+                + "->" + saveResultPath;
     }
 
     public String getPlatform() {
