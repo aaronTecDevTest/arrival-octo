@@ -26,7 +26,7 @@ public class Hub {
     /**
      * @param osName: Operation-System Name like "Mac OS", "Windows xxx" or "Linux xx"
      */
-    private java.lang.String osName;
+    private String osName;
     /**
      * @param gridHubConfig: @see GridHubConfiguration
      */
@@ -50,7 +50,6 @@ public class Hub {
      * osName.
      */
     public Hub() {
-        log.info("Creating SeleniumHb");
         gridHubConfig = new GridHubConfiguration();
         hubHost = HUBHOST;
         hubPort = HUBPORT;

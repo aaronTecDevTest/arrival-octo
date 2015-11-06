@@ -23,6 +23,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 
 public class MobilDriverManager {
@@ -66,6 +67,7 @@ public class MobilDriverManager {
 
     private AndroidDriver setUpAndroid( ) {
         Capabilities tempCap = nodeConfig.getSingelCapability();
+        AndroidDriver androidDriver = null;
 
         try {
             //File classpathRoot = new File(System.getProperty("user.dir"));
@@ -91,16 +93,19 @@ public class MobilDriverManager {
                 capabilities.setCapability("appPackage", appiumConfig.getPackageBundleID());
                 //capabilities.setCapability("appActivity", ".ContactManage");
             }
-            return new AndroidDriver(url, capabilities);
+            androidDriver =  new AndroidDriver(url, capabilities);
+            androidDriver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+            return androidDriver;
         } catch (MalformedURLException e) {
             log.error(e.toString());
         }
-        return null;
+        return androidDriver;
     }
 
 
     private IOSDriver setUpIOS( ) {
         Capabilities tempCap = nodeConfig.getSingelCapability();
+        IOSDriver iosDriver = null;
 
         try {
             //File classpathRoot = new File(System.getProperty("user.dir"));
@@ -126,11 +131,13 @@ public class MobilDriverManager {
                 capabilities.setCapability("bundleId", appiumConfig.getPackageBundleID());
                 //capabilities.setCapability("appActivity", ".ContactManage");
             }
-            return new IOSDriver(url, capabilities);
+            iosDriver = new IOSDriver(url, capabilities);
+            iosDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+            return  iosDriver;
         } catch (MalformedURLException e) {
             log.error(e.toString());
         }
-        return null;
+        return iosDriver;
     }
 
 

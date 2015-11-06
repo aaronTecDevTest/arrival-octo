@@ -30,11 +30,12 @@ import java.util.ArrayList;
 
 public class AppiumManager {
     private static final Logger log = LogManager.getLogger(AppiumManager.class);
-    private static ArrayList<IFAppiumServer> appiumDefaultServersList = new ArrayList<>();
+
     private IFConfig testSuiteConfigs = null;
     private JSONConfigReader configReader;
     private ArrayList<Path> pathList = null;
     private ArrayList<IFAppiumServer> appiumServersList = new ArrayList<>();
+    private ArrayList<IFAppiumServer> appiumDefaultServersList = new ArrayList<>();
     private ArrayList<NodeConfig> nodeConfigList = new ArrayList<>();
     private Hub hub;
 
@@ -121,28 +122,28 @@ public class AppiumManager {
         }
     }
 
-    public static void startDefaultANDSever() {
+    public  void startDefaultANDSever() {
         AppiumAndroidDefault defaultAND = new AppiumAndroidDefault();
         appiumDefaultServersList.add(defaultAND);
         defaultAND.startServer();
         log.info(("Start a new Android default sever: " + defaultAND.toString()));
     }
 
-    public static void stopDefaultANDServer() {
+    public  void stopDefaultANDServer() {
         for (IFAppiumServer tempServer : appiumDefaultServersList) {
             tempServer.stopServer();
             log.info("Stop a Android default sever: " + tempServer.toString());
         }
     }
 
-    public static void startDefauotIOSServer() {
+    public  void startDefauotIOSServer() {
         AppiumIOSDefault defaultIOS = new AppiumIOSDefault();
         appiumDefaultServersList.add(defaultIOS);
         defaultIOS.startServer();
         log.info(("Start a new IOS default sever: " + defaultIOS.toString()));
     }
 
-    public static void stopDefaultIOSServer() {
+    public  void stopDefaultIOSServer() {
         for (IFAppiumServer tempServer : appiumDefaultServersList) {
             tempServer.stopServer();
             log.info("Stop a IOS default sever: " + tempServer.toString());

@@ -36,8 +36,5 @@ public class SimpleTestWeb3 extends ArrivalWeb {
         wb.click();
 
         pauseTest(5000);
-
-        click();
     }
-
 }

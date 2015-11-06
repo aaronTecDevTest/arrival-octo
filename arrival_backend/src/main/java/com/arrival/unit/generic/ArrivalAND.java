@@ -161,7 +161,8 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
 
     @AfterClass
     public void setDownAppiumServerList() {
-        if (AppiumSingleton.getFramework().equals(AppiumSingleton.TESTNG)) {
+        if (AppiumSingleton.getFramework().equals(AppiumSingleton.ARRIVAL)) {
+
         }
     }
 

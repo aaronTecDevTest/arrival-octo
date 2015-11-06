@@ -30,7 +30,7 @@ public class SimpleTestWeb2 extends ArrivalWeb {
         System.out.println("Fast test 222 " + driver + " " + id);
         setWebDriver(driver);
         driver.get("http://www.apple.com/");
-        pauseTest(3000);
+        pauseTest(6000);
         click();
     }
 

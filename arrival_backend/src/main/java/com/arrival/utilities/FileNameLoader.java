@@ -35,7 +35,8 @@ public class FileNameLoader {
     }
 
     /**
-     * @param filePath DirectoryPath where the Files are.
+     * @param filePath DirectoryPath where the files are.
+     * @param fileExtension Extension of the file.
      */
     public FileNameLoader(String filePath, String fileExtension) {
         this.fileExtension = fileExtension;
@@ -129,7 +130,6 @@ public class FileNameLoader {
     }
 
     public String getFileDirectory() {
-
         return fileDirectory;
     }
 

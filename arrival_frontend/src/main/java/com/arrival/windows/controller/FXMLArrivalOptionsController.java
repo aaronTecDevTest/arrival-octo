@@ -41,8 +41,8 @@ public class FXMLArrivalOptionsController implements Initializable {
     ObservableList<String> webServer;
 
 
-    @FXML
-    private Tab tabGeneral;
+//    @FXML
+ //   private Tab tabGeneral;
     @FXML
     private Tab tabWebConfig;
     @FXML
@@ -227,11 +227,11 @@ public class FXMLArrivalOptionsController implements Initializable {
         if (actionEvent.getSource() == togOnOffParallel) {
             log.info(actionEvent.getSource());
             if (togOnOffParallel.isSelected()) {
-                cmbMaxParallel.setDisable(false);
+                //cmbMaxParallel.setDisable(false);
                 togOnOffParallel.setSelected(true);
                 togOnOffParallel.setText("On");
             } else {
-                cmbMaxParallel.setDisable(true);
+                //cmbMaxParallel.setDisable(true);
                 togOnOffParallel.setSelected(false);
                 togOnOffParallel.setText("Off");
             }
@@ -343,7 +343,6 @@ public class FXMLArrivalOptionsController implements Initializable {
         options.setPackageBundleID(txtPackageBundleID.getText());
         options.setSaveResultPath(txtSaveResultPath.getText());
 
-
         if (! tabWebConfig.isDisable()) {
             options.setJsonConfigInUse(togJsonWeb.isSelected());
             options.setJsonConfigPath(txtJsonConfigWeb.getText());
@@ -357,7 +356,7 @@ public class FXMLArrivalOptionsController implements Initializable {
 
     public void updateOptionsView() {
         cmbPlatform.getSelectionModel().select(options.getPlatform());
-        cmbMobilePlatform.getSelectionModel().select(options.getMobileTestingArt());
+        cmbMobilePlatform.getSelectionModel().select(options.getMobilePlatform());
         cmbMobileTestingArt.getSelectionModel().select(options.getMobileTestingArt());
         cmbMaxParallel.getSelectionModel().select(Integer.toString(options.getParallelTestingCount()));
         cmbWebServer.getSelectionModel().select(options.getServerName());
@@ -378,16 +377,25 @@ public class FXMLArrivalOptionsController implements Initializable {
             togJsonWeb.setSelected(options.getJsonConfigInUse());
             txtJsonConfigWeb.setText(options.getJsonConfigPath());
             tabWebConfig.setDisable(false);
-            if (options.getJsonConfigInUse())
+            if (options.getJsonConfigInUse()){
                 txtJsonConfigWeb.setDisable(false);
+                togJsonWeb.setText("On");
+            }
         }
         if (options.getPlatform().contains("Mobile")) {
             togJsonMobile.setSelected(options.getJsonConfigInUse());
             txtJsonConfigMobile.setText(options.getJsonConfigPath());
             tabMobileConfig.setDisable(false);
-            if (options.getJsonConfigInUse())
+            if (options.getJsonConfigInUse()){
                 txtJsonConfigMobile.setDisable(false);
+                togJsonMobile.setText("On");
+            }
         }
+
+        if(options.getParallelTesting()) {
+            togOnOffParallel.setText("On");
+        }
+
     }
 
     public void setDefaultConfig() {

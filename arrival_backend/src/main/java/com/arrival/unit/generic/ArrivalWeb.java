@@ -3,6 +3,8 @@ package com.arrival.unit.generic;
 import com.arrival.selenium.SeleniumManager;
 import com.arrival.selenium.SeleniumSingleton;
 import com.arrival.selenium.WebDriverManager;
+import com.arrival.selenium.config.SeleniumConfig;
+import com.arrival.utilities.SystemPreferences;
 import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -15,6 +17,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 /**
  * @author: Aaron Kutekidila
@@ -107,28 +110,37 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     @BeforeClass
     public void setUpSeleniumServerList() {
         WebDriverManager webDriverManager = new WebDriverManager();
-        IFConfig testSuiteConfigs = seleniumManager.getTestSuiteConfigs();
+        IFConfig seleniumConfig =  seleniumManager.getTestSuiteConfigs();
         WebDriver webDriver;
 
+        //If Arrival GUI is running
         if (SeleniumSingleton.getFramework().equals(SeleniumSingleton.ARRIVAL)) {
             //If Test should be start parallel
-            if (testSuiteConfigs.getParallelTesting()) {
-                for (int i = 0; i < testSuiteConfigs.getParallelTestingCount(); i++) {
+            if (seleniumConfig.getParallelTesting()) {
+                /*for (int i = 0; i < testSuiteConfigs.getParallelTestingCount(); i++) {
                     webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
+                    seleniumServerList.add(webDriver);
+                }*/
+                ResourceBundle bundle =  SystemPreferences.getResourceBundle("arrivalOptions_de");
+                String[] optionWebBrowser =  (bundle.getString("tab.web.browser").split(","));
+
+                for (int i = 0; i<3; i++){
+                    seleniumConfig.setBrowserName(optionWebBrowser[i]);
+                    webDriver = webDriverManager.setUpDriver(seleniumConfig);
                     seleniumServerList.add(webDriver);
                 }
 
-                if (! testSuiteConfigs.getServerName().contains("Non")) {
+                if (!seleniumConfig.getServerName().contains("Non")) {
                     for (Object tempWebDriver : seleniumServerList) {
-                        ((WebDriver) tempWebDriver).get(testSuiteConfigs.getServerName());
+                        ((WebDriver) tempWebDriver).get(seleniumConfig.getServerName());
                     }
                 }
             } else {
-                webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
+                webDriver = webDriverManager.setUpDriver(seleniumConfig);
                 seleniumServerList.add(webDriver);
             }
         } else {
-            webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
+            webDriver = webDriverManager.setUpDriver(seleniumConfig);
             seleniumServerList.add(webDriver);
         }
     }
