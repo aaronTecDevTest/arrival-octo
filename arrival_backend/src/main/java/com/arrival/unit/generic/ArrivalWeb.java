@@ -90,22 +90,6 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         }
         return server;
     }
-/*
-    @BeforeClass
-    public void setUpTestClass() {
-        System.out.println("hallo asdfasdfasdfas");
-        seleniumManager.setUpSeleniumServerList();
-        seleniumServerList = seleniumManager.getAppiumServerList();
-    }
-
-    @AfterClass
-    public void closeBrowser() {
-        seleniumManager.setDownSeleniumServerList();
-       /*for (Object temp : seleniumServerList){
-           ((WebDriver) temp).close();
-           ((WebDriver) temp).quit();
-        }
-    }*/
 
     @BeforeClass
     public void setUpSeleniumServerList() {
@@ -117,13 +101,10 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         if (SeleniumSingleton.getFramework().equals(SeleniumSingleton.ARRIVAL)) {
             //If Test should be start parallel
             if (seleniumConfig.getParallelTesting()) {
-                /*for (int i = 0; i < testSuiteConfigs.getParallelTestingCount(); i++) {
-                    webDriver = webDriverManager.setUpDriver(testSuiteConfigs);
-                    seleniumServerList.add(webDriver);
-                }*/
-                ResourceBundle bundle =  SystemPreferences.getResourceBundle("arrivalOptions_de");
+                ResourceBundle bundle =  SystemPreferences.getResourceBundle("arrivalOptions");
                 String[] optionWebBrowser =  (bundle.getString("tab.web.browser").split(","));
 
+                //Setup the first three driver from arrivalOptions (Properties)
                 for (int i = 0; i<3; i++){
                     seleniumConfig.setBrowserName(optionWebBrowser[i]);
                     webDriver = webDriverManager.setUpDriver(seleniumConfig);

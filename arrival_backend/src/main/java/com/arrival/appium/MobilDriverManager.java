@@ -9,9 +9,9 @@ package com.arrival.appium;
  * Package: com.arrival.appium
  */
 
-import com.arrival.appium.config.AppiumConfig;
 import com.arrival.appium.model.Capabilities;
 import com.arrival.appium.model.NodeConfig;
+import com.arrival.utilities.interfaces.IFConfig;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 public class MobilDriverManager {
     private static final Logger log = LogManager.getLogger(MobilDriverManager.class);
 
-    AppiumConfig appiumConfig;
+    IFConfig appiumConfig;
     NodeConfig nodeConfig ;
 
     public MobilDriverManager() {
@@ -37,7 +37,7 @@ public class MobilDriverManager {
         nodeConfig = null;
     }
 
-    public AppiumDriver setUpDriver(AppiumConfig runningConfiguration, NodeConfig nodeConfig) {
+    public AppiumDriver setUpDriver(IFConfig runningConfiguration, NodeConfig nodeConfig) {
         log.debug("Setting up AppiumDriver");
 
         AppiumDriver driver = null;

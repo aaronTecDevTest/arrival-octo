@@ -11,7 +11,9 @@ package com.arrival.unit.generic;
 import com.arrival.appium.AppiumManager;
 import com.arrival.appium.AppiumSingleton;
 import com.arrival.appium.MobilDriverManager;
+import com.arrival.appium.model.NodeConfig;
 import com.arrival.appium.server.AppiumAndroidDefault;
+import com.arrival.utilities.SystemPreferences;
 import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
 import io.appium.java_client.AppiumDriver;
@@ -20,17 +22,20 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     private static final Logger log = LogManager.getLogger(ArrivalAND.class);
 
     public AppiumSingleton appiumConfigSingleton = AppiumSingleton.getInstance();
     public AppiumManager appiumManager = appiumConfigSingleton.getAppiumManager();
+    public ArrayList<NodeConfig> nodeConfigsList = appiumManager.getNodeConfigList();
     public ArrayList<Object> appiumServerList = new ArrayList<>();
     public AndroidDriver androidDriver;
 
@@ -86,83 +91,57 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
                 }
             }
         }
-
-        /*
-        AndroidDriver tempWD1 = null;
-        AndroidDriver tempWD2 = null;
-        AndroidDriver tempWD3 = null;
-
-        try {
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability(CapabilityType.PLATFORM, Platform.ANDROID);
-            capabilities.setCapability(CapabilityType.VERSION, "4.4.2");
-            capabilities.setCapability(CapabilityType.BROWSER_NAME,"chrome");
-            capabilities.setCapability("udid", "20715382");
-            capabilities.setCapability("deviceName", "Note3");
-            tempWD1 = new AndroidDriver(new URL("http://127.0.0.1:4444/wd/hub"), capabilities);
-            tempWD1.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability(CapabilityType.PLATFORM, Platform.ANDROID);
-            capabilities.setCapability(CapabilityType.VERSION, "4.4.2");
-            capabilities.setCapability(CapabilityType.BROWSER_NAME,"chrome");
-            capabilities.setCapability("udid", "06510ebe170ef362");
-            capabilities.setCapability("deviceName", "G Flex");
-            tempWD2 = new AndroidDriver(new URL("http://127.0.0.1:4444/wd/hub"), capabilities);
-            tempWD2.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability(CapabilityType.PLATFORM, Platform.ANDROID);
-            capabilities.setCapability(CapabilityType.VERSION, "4.4.2");
-            capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
-            capabilities.setCapability("udid", "018f5cf89c8c39ca");
-            capabilities.setCapability("deviceName", "G2");
-            tempWD3 = new AndroidDriver(new URL("http://127.0.0.1:4444/wd/hub"), capabilities);
-            tempWD3.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-
-        Object[][] tempDriver = new Object[][]{
-                                                       {"20715382", tempWD1}
-                                                      ,{"06510ebe170ef362", tempWD2}
-                                                      ,{"018f5cf89c8c39ca", tempWD3}
-        };
-        }*/
         return server;
     }
 
     @BeforeClass
     public void setUpAppiumServerList() {
         MobilDriverManager mobilDriverManager = new MobilDriverManager();
-        IFConfig testSuiteConfigs = appiumManager.getTestSuiteConfigs();
+        IFConfig appiumConfig = appiumManager.getTestSuiteConfigs();
         AppiumDriver androidDriver;
 
         if (AppiumSingleton.getFramework().equals(AppiumSingleton.ARRIVAL)) {
-            if (testSuiteConfigs.getParallelTesting()) {
-                for (int i = 0; i < testSuiteConfigs.getParallelTestingCount(); i++) {
-                    // androidDriver = mobilDriverManager.setUpDriver(testSuiteConfigs);
-                    //  appiumServerList.add(androidDriver);
+            //If Test should be start parallel
+            if (appiumConfig.getParallelTesting()) {
+                //If Json is in use
+                if( appiumConfig.getJsonConfigInUse()) {
+                    for (NodeConfig tempNodeConfig : nodeConfigsList){
+                        androidDriver = mobilDriverManager.setUpDriver(appiumConfig, tempNodeConfig);
+                        appiumServerList.add(androidDriver);
+                    }
+                }else {
+                    //Todo:
+                    //androidDriver = mobilDriverManager.setUpDriver(appiumConfig, nodeConfigsList.get(0));
+                    //appiumServerList.add(androidDriver);
                 }
             } else {
-                AppiumAndroidDefault newDefaultServer = new AppiumAndroidDefault();
-                newDefaultServer.startServer();
+                //Todo: Find out how to shoot down the @DataProvider (parallel = false)
+
+                //If Json is in use
+                if(appiumConfig.getJsonConfigInUse()) {
+                    for (NodeConfig tempNodeConfig : nodeConfigsList){
+                        androidDriver = mobilDriverManager.setUpDriver(appiumConfig, tempNodeConfig);
+                        appiumServerList.add(androidDriver);
+                    }
+                }else {
+                    //Todo:
+                    //androidDriver = mobilDriverManager.setUpDriver(appiumConfig, nodeConfigsList.get(0));
+                    //appiumServerList.add(androidDriver);
+                }
             }
+        }else{
+            androidDriver = mobilDriverManager.setUpDriver(appiumConfig, nodeConfigsList.get(0));
+            appiumServerList.add(androidDriver);
         }
-    }
+}
 
     @AfterClass
     public void setDownAppiumServerList() {
         if (AppiumSingleton.getFramework().equals(AppiumSingleton.ARRIVAL)) {
-
+            for (Object temp : appiumServerList) {
+                ((AppiumDriver) temp).close();
+                ((AppiumDriver) temp).quit();
+            }
         }
     }
 

@@ -35,6 +35,6 @@ public class SimpleTestWeb3 extends ArrivalWeb {
         WebElement wb = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/ul/li[2]/a"));
         wb.click();
 
-        pauseTest(5000);
+        pauseTest(3000);
     }
 }

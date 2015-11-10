@@ -30,7 +30,7 @@ public class SimpleTestWeb1 extends ArrivalWeb {
         System.out.println("Fast test 111 " + driver + " " + id);
         setWebDriver(driver);
         driver.get("http://www.google.com");
-        pauseTest(6000);
+        pauseTest(3000);
         click();
     }
 
