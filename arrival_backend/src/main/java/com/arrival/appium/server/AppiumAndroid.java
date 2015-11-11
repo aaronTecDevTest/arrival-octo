@@ -116,18 +116,18 @@ public class AppiumAndroid implements IFAppiumServer {
     private void setUpSerer() {
         if (SystemPreferences.getInstance().isMacOS()) {
             service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
-                                                                    .usingDriverExecutable(new File(NODE_PATH_MAC))
-                                                                    .withAppiumJS(new File(APPIUM_PATH_MAC))
-                                                                    .withLogFile(new File(LOG_FILE))
-                                                                    .withArgument(GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
+                    .usingDriverExecutable(new File(NODE_PATH_MAC))
+                    .withAppiumJS(new File(APPIUM_PATH_MAC))
+                    .withLogFile(new File(LOG_FILE))
+                    .withArgument(GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
         }
 
         if (SystemPreferences.getInstance().isWindows()) {
             service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
-                                                                    .usingDriverExecutable(new File(NODE_PATH_WIN))
-                                                                    .withAppiumJS(new File(APPIUM_PATH_WIN))
-                                                                    .withLogFile(new File(LOG_FILE))
-                                                                    .withArgument(GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
+                    .usingDriverExecutable(new File(NODE_PATH_WIN))
+                    .withAppiumJS(new File(APPIUM_PATH_WIN))
+                    .withLogFile(new File(LOG_FILE))
+                    .withArgument(GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
         }
     }
 }

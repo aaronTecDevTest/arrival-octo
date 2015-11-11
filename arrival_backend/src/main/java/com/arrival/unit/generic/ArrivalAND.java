@@ -12,8 +12,6 @@ import com.arrival.appium.AppiumManager;
 import com.arrival.appium.AppiumSingleton;
 import com.arrival.appium.MobilDriverManager;
 import com.arrival.appium.model.NodeConfig;
-import com.arrival.appium.server.AppiumAndroidDefault;
-import com.arrival.utilities.SystemPreferences;
 import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
 import io.appium.java_client.AppiumDriver;
@@ -22,22 +20,20 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 
 public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     private static final Logger log = LogManager.getLogger(ArrivalAND.class);
 
-    public AppiumSingleton appiumConfigSingleton = AppiumSingleton.getInstance();
-    public AppiumManager appiumManager = appiumConfigSingleton.getAppiumManager();
-    public ArrayList<NodeConfig> nodeConfigsList = appiumManager.getNodeConfigList();
-    public ArrayList<Object> appiumServerList = new ArrayList<>();
-    public AndroidDriver androidDriver;
+    private AppiumSingleton appiumConfigSingleton = AppiumSingleton.getInstance();
+    private AppiumManager appiumManager = appiumConfigSingleton.getAppiumManager();
+    private ArrayList<NodeConfig> nodeConfigsList = appiumManager.getNodeConfigList();
+    private ArrayList<Object> appiumDriverList = new ArrayList<>();
+    protected AndroidDriver androidDriver;
 
     /**
      * Testcase properties Android
@@ -76,7 +72,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     public Object[][] createServer() {
 
         Object[][] server;
-        int y = appiumServerList.size();
+        int y = appiumDriverList.size();
         int x = 2;
 
         server = new Object[y][x];
@@ -84,7 +80,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
         for (int i = 0; i < y; i++) {
             for (int j = 0; j < x; j++) {
                 if (j == 0) {
-                    server[i][j] = appiumServerList.get(i);
+                    server[i][j] = appiumDriverList.get(i);
                 }
                 if (j == 1) {
                     server[i][j] = i;
@@ -107,12 +103,12 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
                 if( appiumConfig.getJsonConfigInUse()) {
                     for (NodeConfig tempNodeConfig : nodeConfigsList){
                         androidDriver = mobilDriverManager.setUpDriver(appiumConfig, tempNodeConfig);
-                        appiumServerList.add(androidDriver);
+                        appiumDriverList.add(androidDriver);
                     }
                 }else {
                     //Todo:
                     //androidDriver = mobilDriverManager.setUpDriver(appiumConfig, nodeConfigsList.get(0));
-                    //appiumServerList.add(androidDriver);
+                    //appiumDriverList.add(androidDriver);
                 }
             } else {
                 //Todo: Find out how to shoot down the @DataProvider (parallel = false)
@@ -121,27 +117,35 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
                 if(appiumConfig.getJsonConfigInUse()) {
                     for (NodeConfig tempNodeConfig : nodeConfigsList){
                         androidDriver = mobilDriverManager.setUpDriver(appiumConfig, tempNodeConfig);
-                        appiumServerList.add(androidDriver);
+                        appiumDriverList.add(androidDriver);
                     }
                 }else {
                     //Todo:
                     //androidDriver = mobilDriverManager.setUpDriver(appiumConfig, nodeConfigsList.get(0));
-                    //appiumServerList.add(androidDriver);
+                    //appiumDriverList.add(androidDriver);
                 }
             }
         }else{
-            androidDriver = mobilDriverManager.setUpDriver(appiumConfig, nodeConfigsList.get(0));
-            appiumServerList.add(androidDriver);
+            //Start DefaultServer
+            appiumManager = new AppiumManager();
+            appiumManager.startDefaultANDSever();
+
+            //Get ServerDriver
+            androidDriver = MobilDriverManager.setAndroidDefault();
+            appiumDriverList.add(androidDriver);
         }
 }
 
     @AfterClass
     public void setDownAppiumServerList() {
-        if (AppiumSingleton.getFramework().equals(AppiumSingleton.ARRIVAL)) {
-            for (Object temp : appiumServerList) {
-                ((AppiumDriver) temp).close();
-                ((AppiumDriver) temp).quit();
-            }
+        for (Object temp : appiumDriverList) {
+            ((AppiumDriver) temp).close();
+            ((AppiumDriver) temp).quit();
+        }
+
+        //Stop DefaultServer
+        if (!AppiumSingleton.getFramework().equals(AppiumSingleton.ARRIVAL)) {
+            appiumManager.stopDefaultANDServer();
         }
     }
 

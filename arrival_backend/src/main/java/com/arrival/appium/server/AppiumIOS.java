@@ -120,8 +120,6 @@ public class AppiumIOS implements IFAppiumServer {
     }
 
     private void setUpSerer() {
-
-
         if (SystemPreferences.getInstance().isMacOS()) {
             service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
                                                                     .usingDriverExecutable(new File(NODE_PATH_MAC))

@@ -141,12 +141,12 @@ public class MobilDriverManager {
     }
 
 
-    private AndroidDriver setAndroidDefault(){
+    public static AndroidDriver setAndroidDefault(){
         return null;
     }
 
 
-    private IOSDriver setIOSDefault(){
+    public static IOSDriver setIOSDefault(){
         return null;
     }
 }

@@ -55,6 +55,7 @@ public class AppiumSingleton {
         AppiumSingleton.appiumManager = appiumManager;
     }
 
+
     /**
      * Function will be run only if the ArrivalTestSuite was instanced
      */

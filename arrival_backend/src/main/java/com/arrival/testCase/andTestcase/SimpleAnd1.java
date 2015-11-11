@@ -8,7 +8,6 @@ package com.arrival.testCase.andTestcase;
  * Package: com.arrival
  */
 
-
 import com.arrival.unit.generic.ArrivalAND;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
@@ -23,7 +22,7 @@ public class SimpleAnd1 extends ArrivalAND {
         setTcName("SimpleAnd1");
         setTcDescription("Test1");
         setTcDuration("2");
-        setTcLink("wwww.wetter.info.demkkmkmk");
+        setTcLink("wwww.wetter.info.");
         setTcLastRun("10");
         setTcResult("Link1");
     }

@@ -30,11 +30,10 @@ import java.util.ResourceBundle;
 public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     protected static final Logger log = LogManager.getLogger(ArrivalWeb.class);
 
-    public SeleniumSingleton seleniumConfigSingleton = SeleniumSingleton.getInstance();
-    public SeleniumManager seleniumManager = seleniumConfigSingleton.getSeleniumManager();
-    //public String server = seleniumManager.getTestSuiteConfigs().getServerName();
-    public ArrayList<Object> seleniumServerList = new ArrayList<>();
-    public WebDriver browser;
+    private SeleniumSingleton seleniumConfigSingleton = SeleniumSingleton.getInstance();
+    private SeleniumManager seleniumManager = seleniumConfigSingleton.getSeleniumManager();
+    private ArrayList<Object> seleniumServerList = new ArrayList<>();
+    protected WebDriver browser;
 
     /**
      * Testcase properties WebView

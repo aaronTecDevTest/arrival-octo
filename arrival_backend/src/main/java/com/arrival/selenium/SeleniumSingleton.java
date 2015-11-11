@@ -46,7 +46,6 @@ public class SeleniumSingleton {
 
     public void setSeleniumManager(SeleniumManager seleniumManager) {
         SeleniumSingleton.seleniumManager = seleniumManager;
-
     }
 
     /**

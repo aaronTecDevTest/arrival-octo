@@ -109,9 +109,4 @@ public class AppiumIOSDefault implements IFAppiumServer {
     public AppiumDriverLocalService getSeverInstance() {
         return null;
     }
-
-    /**
-     * Getter and Setter functions for appiumPath, nodePath and nodeConfig
-     */
-
 }

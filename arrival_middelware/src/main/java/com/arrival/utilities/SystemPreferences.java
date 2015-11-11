@@ -92,15 +92,16 @@ public class SystemPreferences {
             bundleGlobal = loadBundle("bundles/arrivalGlobal_de.properties");
         } catch (Exception e) {
             log.error(e.getStackTrace());
+            e.printStackTrace();
         }
     }
 
     private static ResourceBundle loadBundle(String url) throws Exception {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        classLoader.getResource(url);
         InputStream inputStream = classLoader.getResource(url).openStream();
         ResourceBundle tempBundle = new PropertyResourceBundle(inputStream);
         return tempBundle;
-        //return ResourceBundle.getBundle(url);
     }
 
     public static ResourceBundle getResourceBundle(String bundleName) {
@@ -116,6 +117,8 @@ public class SystemPreferences {
                 return bundleOptions;
             case "arrivalDialogs":
                 return bundleDialogs;
+            case "arrivalGlobal":
+                return bundleGlobal;
             default:
                 return null;
         }
