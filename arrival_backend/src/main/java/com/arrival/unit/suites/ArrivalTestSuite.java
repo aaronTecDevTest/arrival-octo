@@ -40,6 +40,7 @@ public class ArrivalTestSuite {
      * Firefox, Chrome and IE driver.
      */
     private Object seleniumManger;
+
     /**
      * TestNG properties
      */
@@ -53,7 +54,6 @@ public class ArrivalTestSuite {
     private String path;
 
     public ArrivalTestSuite() {
-
         eml = new EmailListener();
         pcl = new PreConfigListener();
 
@@ -64,14 +64,10 @@ public class ArrivalTestSuite {
         tng.addListener(pcl);
 
         xmlTest.setName("RegressionsTest - " + suiteID);
-        suite.setName("RegressonsTest - " + suiteID);
+        suite.setName("RegressionsTest - " + suiteID);
+        suite.setParallel("true");
         suites.add(suite);
     }
-/*
-    public static void main(String[] args) {
-        ArrivalTestSuite runTest = new ArrivalTestSuite();
-        runTest.runVirtualSuit();
-    }*/
 
     public void runVirtualSuit() {
         createVirtualSuite();
@@ -95,7 +91,7 @@ public class ArrivalTestSuite {
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmss");
         Calendar cal = Calendar.getInstance();
 
-        //ToDo: Mit Path class implement
+        //ToDo: Mit Path class implement (auch für Appium den Standard path ändern)
         String tempPath = "../arrival-Octo/arrival_backend/src/main/resources/report/testng/selenium/";
        /*
        String userSavePath = SeleniumSingleton.getSeverInstance().getSeleniumManager().getTestSuiteConfigs().getSaveResultPath();
@@ -122,9 +118,7 @@ public class ArrivalTestSuite {
     }
 
     public void setClasses(List<XmlClass> classes) {
-
         xmlTest.setXmlClasses(classes);
-
         this.classes = classes;
     }
 
@@ -138,6 +132,10 @@ public class ArrivalTestSuite {
 
     public void setTngName(String name) {
         tng.setDefaultSuiteName(name);
+    }
+
+    public void setParallelTesting(boolean parallelTesting){
+        suite.setParallel(String.valueOf(parallelTesting));
     }
 
     public String getPath() {

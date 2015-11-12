@@ -24,10 +24,10 @@ import java.util.ArrayList;
 public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     private static final Logger log = LogManager.getLogger(ArrivalIOS.class);
 
-    public AppiumSingleton appiumConfigSingleton = AppiumSingleton.getInstance();
-    public AppiumManager appiumManager = appiumConfigSingleton.getAppiumManager();
-    public ArrayList<Object> appiumServerList = new ArrayList<>();
-    public IOSDriver iosDriver;
+    private AppiumSingleton appiumConfigSingleton = AppiumSingleton.getInstance();
+    private AppiumManager appiumManager = appiumConfigSingleton.getAppiumManager();
+    private ArrayList<Object> appiumServerList = new ArrayList<>();
+    protected IOSDriver iosDriver;
 
     /**
      * Testcase properties IOS

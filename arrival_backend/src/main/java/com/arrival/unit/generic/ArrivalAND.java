@@ -29,8 +29,7 @@ import java.util.ArrayList;
 public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     private static final Logger log = LogManager.getLogger(ArrivalAND.class);
 
-    private AppiumSingleton appiumConfigSingleton = AppiumSingleton.getInstance();
-    private AppiumManager appiumManager = appiumConfigSingleton.getAppiumManager();
+    private AppiumManager appiumManager =  AppiumSingleton.getInstance().getAppiumManager();
     private ArrayList<NodeConfig> nodeConfigsList = appiumManager.getNodeConfigList();
     private ArrayList<Object> appiumDriverList = new ArrayList<>();
     protected AndroidDriver androidDriver;
@@ -127,7 +126,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
             }
         }else{
             //Start DefaultServer
-            appiumManager = new AppiumManager();
+           // appiumManager = new AppiumManager();
             appiumManager.startDefaultANDSever();
 
             //Get ServerDriver

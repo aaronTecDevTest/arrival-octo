@@ -5,7 +5,7 @@ package com.arrival.appium;
  * @version: 1.0
  * Created: 09.05.2015
  * @since: 1.0
- * Package: com.arrival.unit.generic
+ * Package: com.arrival.appium
  */
 
 import org.apache.logging.log4j.LogManager;
@@ -16,18 +16,19 @@ import org.testng.annotations.BeforeSuite;
 public class AppiumSingleton {
     public static final String TESTNG = "TESTNG";
     public static final String ARRIVAL = "ARRIVAL";
-    private static final Logger log = LogManager.getLogger(AppiumSingleton.class);
     public static String framework;
+
+    private static final Logger log = LogManager.getLogger(AppiumSingleton.class);
     private static AppiumSingleton ourInstance = new AppiumSingleton();
     private static AppiumManager appiumManager;
 
     private AppiumSingleton() {
         framework = TESTNG;
         appiumManager = new AppiumManager();
+        log.info(AppiumSingleton.class + " set up!!");
     }
 
     public static AppiumSingleton getInstance() {
-        log.info(AppiumSingleton.class + "set up!!");
         return ourInstance;
     }
 

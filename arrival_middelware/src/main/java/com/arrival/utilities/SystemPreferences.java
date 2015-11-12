@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.InputStream;
+import java.net.URL;
 import java.util.Locale;
 import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
@@ -77,12 +78,12 @@ public class SystemPreferences {
         return osLanguage;
     }
 
-    public static void setOsLanguage(String osLanguage) {
+    public  void setOsLanguage(String osLanguage) {
         SystemPreferences.osLanguage = osLanguage;
         setUpResourceBundle();
     }
 
-    private static void setUpResourceBundle() {
+    private void setUpResourceBundle() {
         try {
             bundleHelp = loadBundle("bundles/arrivalHelp_de.properties");
             bundleLogIn = loadBundle("bundles/arrivalLogIn_de.properties");
@@ -97,15 +98,17 @@ public class SystemPreferences {
     }
 
     private static ResourceBundle loadBundle(String url) throws Exception {
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        classLoader.getResource(url);
-        InputStream inputStream = classLoader.getResource(url).openStream();
+       // ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        ClassLoader classLoader = SystemPreferences.class.getClassLoader();
+
+        URL urlResource = classLoader.getResource(url);
+        InputStream inputStream = urlResource.openStream();
+
         ResourceBundle tempBundle = new PropertyResourceBundle(inputStream);
         return tempBundle;
     }
 
     public static ResourceBundle getResourceBundle(String bundleName) {
-
         switch (bundleName) {
             case "arrivalHelp":
                 return bundleHelp;
@@ -143,5 +146,10 @@ public class SystemPreferences {
     @Override
     public String toString() {
         return osName + " " + osCountry + " " + osLanguage;
+    }
+
+    public static void main(String[] args) {
+        SystemPreferences.getInstance();
+
     }
 }

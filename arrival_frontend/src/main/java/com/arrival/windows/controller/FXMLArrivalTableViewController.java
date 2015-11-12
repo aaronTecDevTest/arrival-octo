@@ -105,6 +105,9 @@ public class FXMLArrivalTableViewController implements Initializable {
     public void runTestSuite() {
         try {
             log.info(options.toString());
+            SeleniumSingleton.getInstance();
+            AppiumSingleton.getInstance();
+
             tempSeleniumManager = new SeleniumManager();
             tempAppiumManager = new AppiumManager();
 

@@ -31,7 +31,6 @@ public class SimpleAnd1 extends ArrivalAND {
     public void getGoogle(AndroidDriver driver, Integer id) {
         setWebDriver(driver);
 
-
         // And now use this to visit Google
         androidDriver.get("http://www.google.com");
         // Alternatively the same thing can be done like this

@@ -100,7 +100,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         if (SeleniumSingleton.getFramework().equals(SeleniumSingleton.ARRIVAL)) {
             //If Test should be start parallel
             if (seleniumConfig.getParallelTesting()) {
-                ResourceBundle bundle =  SystemPreferences.getResourceBundle("arrivalOptions");
+                ResourceBundle bundle = SystemPreferences.getResourceBundle("arrivalOptions");
                 String[] optionWebBrowser =  (bundle.getString("tab.web.browser").split(","));
 
                 //Setup the first three driver from arrivalOptions (Properties)

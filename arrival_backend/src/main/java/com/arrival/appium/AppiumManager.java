@@ -31,9 +31,9 @@ import java.util.ArrayList;
 public class AppiumManager {
     private static final Logger log = LogManager.getLogger(AppiumManager.class);
 
-    private IFConfig testSuiteConfigs = null;
+    private IFConfig testSuiteConfigs;
     private JSONConfigReader configReader;
-    private ArrayList<Path> pathList = null;
+    private ArrayList<Path> pathList;
     private ArrayList<IFAppiumServer> appiumServersList = new ArrayList<>();
     private ArrayList<IFAppiumServer> appiumDefaultServersList = new ArrayList<>();
     private ArrayList<NodeConfig> nodeConfigList = new ArrayList<>();
@@ -41,6 +41,7 @@ public class AppiumManager {
 
 
     public AppiumManager() {
+
     }
 
 
