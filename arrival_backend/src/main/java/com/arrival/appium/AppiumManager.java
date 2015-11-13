@@ -60,10 +60,10 @@ public class AppiumManager {
     }
 
     private void iniPathList() {
-        AppiumConfig appiumConfig = (AppiumConfig) testSuiteConfigs;
+      //  AppiumConfig appiumConfig = (AppiumConfig) testSuiteConfigs;
 
-        if (appiumConfig.getJsonConfigInUse()) {
-            configReader = new JSONConfigReader(appiumConfig.getJsonConfigPath());
+        if (testSuiteConfigs.getJsonConfigInUse()) {
+            configReader = new JSONConfigReader(testSuiteConfigs.getJsonConfigPath());
         } else {
             configReader = new JSONConfigReader();
         }

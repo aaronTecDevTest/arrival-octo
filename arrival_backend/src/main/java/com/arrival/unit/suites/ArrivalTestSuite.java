@@ -65,7 +65,13 @@ public class ArrivalTestSuite {
 
         xmlTest.setName("RegressionsTest - " + suiteID);
         suite.setName("RegressionsTest - " + suiteID);
+
+        //Todo: Suite option should be show up in OptionView
+        /*
         suite.setParallel("true");
+        suite.setDataProviderThreadCount(2);
+        suite.setThreadCount(2);
+        */
         suites.add(suite);
     }
 

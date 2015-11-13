@@ -1,5 +1,6 @@
 package com.arrival.unit.generic;
 
+import com.arrival.appium.AppiumSingleton;
 import com.arrival.selenium.SeleniumManager;
 import com.arrival.selenium.SeleniumSingleton;
 import com.arrival.selenium.WebDriverManager;
@@ -12,9 +13,7 @@ import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.*;
 
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -131,6 +130,26 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
             ((WebDriver) temp).close();
             ((WebDriver) temp).quit();
         }
+    }
+
+    /**
+     * Code will be run only if the SeleniumTestSuite was instanced
+     */
+    @BeforeSuite
+    public void setUpSeleniumConfig() {
+       if(seleniumConfigSingleton.isArrival()){
+        //seleniumManager.setUpSeleniumServerList();
+       }
+    }
+
+    /**
+     * Code will be run only if the SeleniumTestSuite was instanced
+     */
+    @AfterSuite
+    public void cleanSeleniumConfig() {
+       if(seleniumConfigSingleton.isArrival()) {
+           //seleniumManager.setDownSeleniumServerList();
+       }
     }
 
     /**

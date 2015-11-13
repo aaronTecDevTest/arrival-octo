@@ -12,6 +12,7 @@ import com.arrival.appium.AppiumManager;
 import com.arrival.appium.AppiumSingleton;
 import com.arrival.appium.MobilDriverManager;
 import com.arrival.appium.model.NodeConfig;
+import com.arrival.selenium.SeleniumSingleton;
 import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
 import io.appium.java_client.AppiumDriver;
@@ -20,16 +21,15 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.*;
 
 import java.util.ArrayList;
 
 public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     private static final Logger log = LogManager.getLogger(ArrivalAND.class);
 
-    private AppiumManager appiumManager =  AppiumSingleton.getInstance().getAppiumManager();
+    private AppiumSingleton appiumSingleton = AppiumSingleton.getInstance();
+    private AppiumManager appiumManager =  appiumSingleton.getAppiumManager();
     private ArrayList<NodeConfig> nodeConfigsList = appiumManager.getNodeConfigList();
     private ArrayList<Object> appiumDriverList = new ArrayList<>();
     protected AndroidDriver androidDriver;
@@ -148,11 +148,31 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
         }
     }
 
+
+    /**
+     * Function will be run only if the ArrivalTestSuite was instanced
+     */
+     @BeforeSuite
+     public void setUpAppiumConfig() {
+         if(appiumSingleton.isArrival()){
+             appiumManager.startServer();
+         }
+     }
+
+     /**
+      * Function will be run only if the ArrivalTestSuite was instanced
+     */
+     @AfterSuite
+     public void cleanUpAppiumConfig() {
+         if(appiumSingleton.isArrival()){
+             appiumManager.stopServer();
+         }
+     }
+
     /*
     *Other method
     */
     public void pauseTest(long milSec) {
-
     }
 
     /*

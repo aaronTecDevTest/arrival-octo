@@ -10,8 +10,6 @@ package com.arrival.appium;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 
 public class AppiumSingleton {
     public static final String TESTNG = "TESTNG";
@@ -32,14 +30,6 @@ public class AppiumSingleton {
         return ourInstance;
     }
 
-    public static String getTesting() {
-        return TESTNG;
-    }
-
-    public static String getArrival() {
-        return ARRIVAL;
-    }
-
     public static String getFramework() {
         return framework;
     }
@@ -57,20 +47,24 @@ public class AppiumSingleton {
     }
 
 
-    /**
-     * Function will be run only if the ArrivalTestSuite was instanced
-     */
-    @BeforeSuite
-    public void setUpAppiumConfig() {
-        setFramework(AppiumSingleton.ARRIVAL);
-        appiumManager.startServer();
+    public boolean isArrival(){
+        return    framework.contains(ARRIVAL);
     }
 
     /**
      * Function will be run only if the ArrivalTestSuite was instanced
-     */
+     *
+    @BeforeSuite
+    public void setUpAppiumConfig() {
+        setFramework(AppiumSingleton.ARRIVAL);
+        //appiumManager.startServer();
+    }
+
+    /**
+     * Function will be run only if the ArrivalTestSuite was instanced
+     *
     @AfterSuite
     public void cleanUpAppiumConfig() {
-        appiumManager.stopServer();
-    }
+        //appiumManager.stopServer();
+    }*/
 }

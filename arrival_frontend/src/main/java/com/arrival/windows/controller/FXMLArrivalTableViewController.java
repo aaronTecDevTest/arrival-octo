@@ -105,8 +105,6 @@ public class FXMLArrivalTableViewController implements Initializable {
     public void runTestSuite() {
         try {
             log.info(options.toString());
-            SeleniumSingleton.getInstance();
-            AppiumSingleton.getInstance();
 
             tempSeleniumManager = new SeleniumManager();
             tempAppiumManager = new AppiumManager();
@@ -115,11 +113,15 @@ public class FXMLArrivalTableViewController implements Initializable {
             if (options.getPlatform().contains("Web")) {
                 tempSeleniumManager.setTestSuiteConfigs(options);
                 SeleniumSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
-                tempClasses.add(new XmlClass("com.arrival.selenium.SeleniumSingleton"));
+                SeleniumSingleton.setFramework(SeleniumSingleton.ARRIVAL);
+
+                //tempClasses.add(new XmlClass("com.arrival.selenium.SeleniumSingleton"));
             } else if (options.getPlatform().contains("Mobile")) {
                 tempAppiumManager.setTestSuiteConfigs(options);
                 AppiumSingleton.getInstance().setAppiumManager(tempAppiumManager);
-                tempClasses.add(new XmlClass("com.arrival.appium.AppiumSingleton"));
+                AppiumSingleton.setFramework(AppiumSingleton.ARRIVAL);
+
+                //tempClasses.add(new XmlClass("com.arrival.appium.AppiumSingleton"));
             } else {
                 log.warn("No Platform is set up!");
                 WindowsDialogs.noTestConfigSet();

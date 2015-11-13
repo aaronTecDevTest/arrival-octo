@@ -10,8 +10,6 @@ package com.arrival.selenium;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 
 public class SeleniumSingleton {
     public static final String TESTNG = "TESTNG";
@@ -49,9 +47,13 @@ public class SeleniumSingleton {
         SeleniumSingleton.seleniumManager = seleniumManager;
     }
 
+    public boolean isArrival(){
+        return    framework.contains(ARRIVAL);
+    }
+
     /**
      * Code will be run only if the SeleniumTestSuite was instanced
-     */
+     *
     @BeforeSuite
     public void setUpSeleniumConfig() {
         setFramework(SeleniumSingleton.ARRIVAL);
@@ -60,10 +62,10 @@ public class SeleniumSingleton {
 
     /**
      * Code will be run only if the SeleniumTestSuite was instanced
-     */
+     *
     @AfterSuite
     public void cleanSeleniumConfig() {
         //setFramework(SeleniumSingleton.TESTNG);
         //seleniumManager.setDownSeleniumServerList();
-    }
+    }*/
 }
