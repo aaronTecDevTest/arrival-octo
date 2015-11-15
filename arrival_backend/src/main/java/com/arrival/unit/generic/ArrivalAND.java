@@ -126,7 +126,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
             }
         }else{
             //Start DefaultServer
-           // appiumManager = new AppiumManager();
+            appiumManager = new AppiumManager();
             appiumManager.startDefaultANDSever();
 
             //Get ServerDriver

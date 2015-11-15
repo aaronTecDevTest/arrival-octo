@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 
 public class AppiumAndroid implements IFAppiumServer {
     private static final Logger log = LogManager.getLogger(AppiumAndroid.class);
-    private ResourceBundle bundle = SystemPreferences.getResourceBundle("bundleGlobal");
+    private ResourceBundle bundle = SystemPreferences.getResourceBundle("arrivalGlobal");
 
     private String APPIUM_PATH_MAC = bundle.getString("APPIUM_PATH_MAC");
     private String NODE_PATH_MAC = bundle.getString("NODE_PATH_MAC");
