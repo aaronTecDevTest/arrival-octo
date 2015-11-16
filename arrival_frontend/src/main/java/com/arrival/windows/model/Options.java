@@ -13,7 +13,7 @@ import com.arrival.utilities.interfaces.IFConfig;
 public class Options implements IFConfig {
     private String platform = null;
     private Boolean parallelTesting = false;
-    private Integer parallelTestingCount = 0;
+    private Integer parallelThreadCounter = 0;
     private String saveResultPath = null;
 
     private String browserName = null;
@@ -33,7 +33,7 @@ public class Options implements IFConfig {
     public String toString() {
         return           platform
                 + "->" + parallelTesting.toString()
-                + "->" + parallelTestingCount
+                + "->" + parallelThreadCounter
                 + "->" + browserName
                 + "->" + serverName
                 + "->" + mobilePlatform
@@ -95,12 +95,12 @@ public class Options implements IFConfig {
         this.parallelTesting = parallelTesting;
     }
 
-    public Integer getParallelTestingCount() {
-        return parallelTestingCount;
+    public Integer getParallelThreadCounter() {
+        return parallelThreadCounter;
     }
 
-    public void setParallelTestingCount(Integer parallelTestingCount) {
-        this.parallelTestingCount = parallelTestingCount;
+    public void setParallelThreadCounter(Integer parallelThreadCounter) {
+        this.parallelThreadCounter = parallelThreadCounter;
     }
 
     public Boolean getJsonConfigInUse() {

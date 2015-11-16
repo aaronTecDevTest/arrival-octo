@@ -95,11 +95,11 @@ public class SeleniumConfig implements IFConfig {
         this.parallelTesting = parallelTesting;
     }
 
-    public Integer getParallelTestingCount() {
+    public Integer getParallelThreadCounter() {
         return parallelTestingCount;
     }
 
-    public void setParallelTestingCount(Integer parallelTestingCount) {
+    public void setParallelThreadCounter(Integer parallelTestingCount) {
         this.parallelTestingCount = parallelTestingCount;
     }
 

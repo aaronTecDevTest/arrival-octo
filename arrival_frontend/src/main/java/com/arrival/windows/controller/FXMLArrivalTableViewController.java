@@ -131,9 +131,15 @@ public class FXMLArrivalTableViewController implements Initializable {
             for (int i = 0; i < dateTestsuite.size(); i++) {
                 tempClasses.add(new XmlClass(((TestCase) dateTestSuite.get(i)).getTcClassPackage()));
             }
+            if(options.getParallelTesting()){
+                runableTestSuite.getSuite().setParallel(options.getParallelTesting().toString());
+                //runableTestSuite.getSuite().setThreadCount(options.getParallelThreadCounter());
+                runableTestSuite.getSuite().setDataProviderThreadCount(options.getParallelThreadCounter());
+            }
 
             runableTestSuite.setClasses(tempClasses);
             runableTestSuite.runVirtualSuit();
+
         } catch (Exception e) {
             log.warn("Options object is null" + e.getStackTrace());
             WindowsDialogs.optionsIsNull();

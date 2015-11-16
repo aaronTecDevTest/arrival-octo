@@ -66,7 +66,7 @@ public class ArrivalTestSuite {
         xmlTest.setName("RegressionsTest - " + suiteID);
         suite.setName("RegressionsTest - " + suiteID);
 
-        //Todo: Suite option should be show up in OptionView
+        //Todo: Suite option should be show up in OptionView (Parallel Testing)
         /*
         suite.setParallel("true");
         suite.setDataProviderThreadCount(2);
@@ -130,6 +130,11 @@ public class ArrivalTestSuite {
 
     public void setSuiteName(String name) {
         suite.setName(name);
+    }
+
+
+    public XmlSuite getSuite() {
+        return suite;
     }
 
     public void setXmlTest(String name) {

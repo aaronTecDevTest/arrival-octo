@@ -33,9 +33,9 @@ public interface IFConfig {
 
     void setParallelTesting(Boolean parallelTesting);
 
-    Integer getParallelTestingCount();
+    Integer getParallelThreadCounter();
 
-    void setParallelTestingCount(Integer parallelTestingCount);
+    void setParallelThreadCounter(Integer parallelTestingCount);
 
     Boolean getJsonConfigInUse();
 

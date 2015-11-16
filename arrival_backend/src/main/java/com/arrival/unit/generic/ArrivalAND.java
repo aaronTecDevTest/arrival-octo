@@ -67,7 +67,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     /*
      *Test NG method
      */
-    @DataProvider(name = "driver", parallel = true)
+    @DataProvider(name = "driver")//, parallel = true)
     public Object[][] createServer() {
 
         Object[][] server;

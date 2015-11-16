@@ -41,8 +41,8 @@ public class FXMLArrivalOptionsController implements Initializable {
     ObservableList<String> webServer;
 
 
-//    @FXML
- //   private Tab tabGeneral;
+//  @FXML
+ // private Tab tabGeneral;
     @FXML
     private Tab tabWebConfig;
     @FXML
@@ -81,7 +81,7 @@ public class FXMLArrivalOptionsController implements Initializable {
     @FXML
     private ToggleButton togOnOffParallel;
     @FXML
-    private ComboBox<String> cmbMaxParallel;
+    private ComboBox<String> cmbParallelThread;
     @FXML
     private ComboBox<String> cmbWebBrowser;
     @FXML
@@ -124,14 +124,15 @@ public class FXMLArrivalOptionsController implements Initializable {
         mobilePlatform = FXCollections.observableArrayList(resources.getString("tab.mobile.platform").split(","));
         mobileTestingArt = FXCollections.observableArrayList(resources.getString("tab.mobile.testingArt").split(","));
 
-        maxParallel = FXCollections.observableArrayList(resources.getString("tab.general.maxParallel").split(","));
+        maxParallel = FXCollections.observableArrayList(resources.getString("tab.general.parallelThread").split(","));
         webBrowser = FXCollections.observableArrayList(resources.getString("tab.web.browser").split(","));
         webServer = FXCollections.observableArrayList(resources.getString("tab.web.server").split(","));
+
 
         cmbPlatform.getItems().addAll(platform);
         cmbMobilePlatform.getItems().addAll(mobilePlatform);
         cmbMobileTestingArt.getItems().addAll(mobileTestingArt);
-        cmbMaxParallel.getItems().addAll(maxParallel);
+        cmbParallelThread.getItems().addAll(maxParallel);
         cmbWebServer.getItems().addAll(webServer);
         cmbWebBrowser.getItems().addAll(webBrowser);
 
@@ -227,11 +228,11 @@ public class FXMLArrivalOptionsController implements Initializable {
         if (actionEvent.getSource() == togOnOffParallel) {
             log.info(actionEvent.getSource());
             if (togOnOffParallel.isSelected()) {
-                //cmbMaxParallel.setDisable(false);
+                cmbParallelThread.setDisable(false);
                 togOnOffParallel.setSelected(true);
                 togOnOffParallel.setText("On");
             } else {
-                //cmbMaxParallel.setDisable(true);
+                cmbParallelThread.setDisable(true);
                 togOnOffParallel.setSelected(false);
                 togOnOffParallel.setText("Off");
             }
@@ -333,7 +334,7 @@ public class FXMLArrivalOptionsController implements Initializable {
         options.setPlatform(cmbPlatform.getSelectionModel().getSelectedItem());
         options.setMobilePlatform(cmbMobilePlatform.getSelectionModel().getSelectedItem());
         options.setMobileTestingArt(cmbMobileTestingArt.getSelectionModel().getSelectedItem());
-        options.setParallelTestingCount(Integer.valueOf(cmbMaxParallel.getSelectionModel().getSelectedItem()));
+        options.setParallelThreadCounter(Integer.valueOf(cmbParallelThread.getSelectionModel().getSelectedItem()));
         options.setBrowserName(cmbWebBrowser.getSelectionModel().getSelectedItem());
         options.setServerName(cmbWebServer.getSelectionModel().getSelectedItem());
         options.setParallelTesting(togOnOffParallel.isSelected());
@@ -358,7 +359,7 @@ public class FXMLArrivalOptionsController implements Initializable {
         cmbPlatform.getSelectionModel().select(options.getPlatform());
         cmbMobilePlatform.getSelectionModel().select(options.getMobilePlatform());
         cmbMobileTestingArt.getSelectionModel().select(options.getMobileTestingArt());
-        cmbMaxParallel.getSelectionModel().select(Integer.toString(options.getParallelTestingCount()));
+        cmbParallelThread.getSelectionModel().select(Integer.toString(options.getParallelThreadCounter()));
         cmbWebServer.getSelectionModel().select(options.getServerName());
         cmbWebBrowser.getSelectionModel().select(options.getBrowserName());
 
@@ -369,7 +370,7 @@ public class FXMLArrivalOptionsController implements Initializable {
         txtSaveResultPath.setText(options.getSaveResultPath());
 
         if (options.getParallelTesting())
-            cmbMaxParallel.setDisable(false);
+            cmbParallelThread.setDisable(false);
 
         togOnOffParallel.setSelected(options.getParallelTesting());
 
@@ -402,7 +403,7 @@ public class FXMLArrivalOptionsController implements Initializable {
         //cmbPlatform.getSelectionModel().select("Non");
         cmbMobilePlatform.getSelectionModel().select("Android");
         cmbMobileTestingArt.getSelectionModel().select("Mobile Web");
-        cmbMaxParallel.getSelectionModel().select("2");
+        cmbParallelThread.getSelectionModel().select("2");
         cmbWebServer.getSelectionModel().select("Non");
         cmbWebBrowser.getSelectionModel().select("FF - FireFox");
         txtJsonConfigWeb.setText("");
@@ -422,7 +423,7 @@ public class FXMLArrivalOptionsController implements Initializable {
 
         cmbWebBrowser.setDisable(false);
         cmbWebServer.setDisable(false);
-        cmbMaxParallel.setDisable(true);
+        cmbParallelThread.setDisable(true);
         txtJsonConfigWeb.setDisable(true);
         txtJsonConfigMobile.setDisable(true);
         txtAppPath.setDisable(true);
