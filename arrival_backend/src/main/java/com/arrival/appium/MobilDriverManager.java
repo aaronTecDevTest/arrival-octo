@@ -44,7 +44,7 @@ public class MobilDriverManager {
         this.appiumConfig = runningConfiguration;
         this.nodeConfig = nodeConfig;
 
-        String platform = appiumConfig.getPlatform();
+        String platform = appiumConfig.getMobilePlatform();
 
         switch (platform) {
             case "IOS":
@@ -86,10 +86,10 @@ public class MobilDriverManager {
             capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());
             capabilities.setCapability("udid", tempCap.getUdid());
             capabilities.setCapability("deviceName", tempCap.getDeviceName());
-            capabilities.setCapability("app", app.getAbsolutePath());
             if(appiumConfig.getMobileTestingArt().contains("Mobile Web")){
                 capabilities.setCapability("autoWebview", true);
             } else{
+                capabilities.setCapability("app", app.getAbsolutePath());
                 capabilities.setCapability("appPackage", appiumConfig.getPackageBundleID());
                 //capabilities.setCapability("appActivity", ".ContactManage");
             }

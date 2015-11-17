@@ -1,10 +1,58 @@
-2015-10-13 14:25:47:682 - info: Welcome to Appium v1.4.13 (REV c75d8adcb66a75818a542fe1891a34260c21f76a)
-2015-10-13 14:25:47:685 - info: Appium REST http interface listener started on 0.0.0.0:4723
-2015-10-13 14:25:47:687 - info: [debug] Non-default server args: {"log":"C:\\Users\\a.kutekidila\\Dev\\GitHub\\arrival-octo\\arrival_backend\\src\\main\\resources\\report\\log\\appiumLogs.txt","nodeconfig":"C:\\Users\\a.kutekidila\\Dev\\GitHub\\arrival-octo\\arrival_backend\\src\\main\\resources\\appiumNodeConfig\\AppiumNodeGFlex.json"}
-2015-10-13 14:25:47:688 - info: Console LogLevel: debug
-2015-10-13 14:25:47:688 - info: File LogLevel: debug
-2015-10-13 14:25:47:692 - info: [debug] starting auto register thread for grid. Will try to register every 5000 ms.
-2015-10-13 14:25:47:967 - info: --> GET /wd/hub/status {}
-2015-10-13 14:25:47:969 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.13","revision":"c75d8adcb66a75818a542fe1891a34260c21f76a"}}}
-2015-10-13 14:25:47:974 - info: <-- GET /wd/hub/status 200 6.386 ms - 105 {"status":0,"value":{"build":{"version":"1.4.13","revision":"c75d8adcb66a75818a542fe1891a34260c21f76a"}}}
-2015-10-13 14:25:52:706 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444
+2015-11-17 14:56:36:067 - warn: Appium support for versions of node < 0.12 has been deprecated and will be removed in a future version. Please upgrade!
+2015-11-17 14:56:36:118 - info: Welcome to Appium v1.4.13 (REV c75d8adcb66a75818a542fe1891a34260c21f76a)
+2015-11-17 14:56:36:118 - info: Appium REST http interface listener started on 0.0.0.0:4723
+2015-11-17 14:56:36:120 - info: [debug] Non-default server args: {"log":"C:\\Users\\a.kutekidila\\Dev\\GitHub\\arrival-octo\\arrival_backend\\src\\main\\resources\\report\\log\\appiumLogs.txt","nodeconfig":"C:\\Users\\a.kutekidila\\Dev\\GitHub\\arrival-octo\\arrival_backend\\src\\main\\resources\\appiumNodeConfig\\AppiumNodeNote3.json"}
+2015-11-17 14:56:36:120 - info: Console LogLevel: debug
+2015-11-17 14:56:36:120 - info: File LogLevel: debug
+2015-11-17 14:56:36:122 - info: [debug] starting auto register thread for grid. Will try to register every 5000 ms.
+2015-11-17 14:56:36:231 - info: --> GET /wd/hub/status {}
+2015-11-17 14:56:36:233 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.13","revision":"c75d8adcb66a75818a542fe1891a34260c21f76a"}}}
+2015-11-17 14:56:36:239 - info: <-- GET /wd/hub/status 200 8.104 ms - 105 {"status":0,"value":{"build":{"version":"1.4.13","revision":"c75d8adcb66a75818a542fe1891a34260c21f76a"}}}
+2015-11-17 14:56:56:150 - info: [debug] hub down or not responding.
+2015-11-17 14:57:01:159 - info: [debug] hub down or not responding.
+2015-11-17 14:57:06:153 - info: [debug] hub down or not responding.
+2015-11-17 14:57:09:126 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444
+2015-11-17 14:57:09:134 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444
+2015-11-17 14:57:09:134 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444
+2015-11-17 14:57:41:211 - info: [debug] hub down or not responding.
+2015-11-17 14:57:46:229 - info: [debug] hub down or not responding.
+2015-11-17 14:57:51:240 - info: [debug] hub down or not responding.
+2015-11-17 14:57:56:233 - info: [debug] hub down or not responding.
+2015-11-17 14:58:01:253 - info: [debug] hub down or not responding.
+2015-11-17 14:58:06:262 - info: [debug] hub down or not responding.
+2015-11-17 14:58:11:253 - info: [debug] hub down or not responding.
+2015-11-17 14:58:16:276 - info: [debug] hub down or not responding.
+2015-11-17 14:58:21:283 - info: [debug] hub down or not responding.
+2015-11-17 14:58:26:291 - info: [debug] hub down or not responding.
+2015-11-17 14:58:31:298 - info: [debug] hub down or not responding.
+2015-11-17 14:58:36:308 - info: [debug] hub down or not responding.
+2015-11-17 14:58:41:300 - info: [debug] hub down or not responding.
+2015-11-17 14:58:46:323 - info: [debug] hub down or not responding.
+2015-11-17 14:58:51:330 - info: [debug] hub down or not responding.
+2015-11-17 14:58:56:338 - info: [debug] hub down or not responding.
+2015-11-17 14:59:01:346 - info: [debug] hub down or not responding.
+2015-11-17 14:59:06:340 - info: [debug] hub down or not responding.
+2015-11-17 14:59:11:347 - info: [debug] hub down or not responding.
+2015-11-17 14:59:16:365 - info: [debug] hub down or not responding.
+2015-11-17 14:59:21:363 - info: [debug] hub down or not responding.
+2015-11-17 14:59:26:370 - info: [debug] hub down or not responding.
+2015-11-17 14:59:31:392 - info: [debug] hub down or not responding.
+2015-11-17 14:59:36:403 - info: [debug] hub down or not responding.
+2015-11-17 14:59:41:394 - info: [debug] hub down or not responding.
+2015-11-17 14:59:46:418 - info: [debug] hub down or not responding.
+2015-11-17 14:59:51:411 - info: [debug] hub down or not responding.
+2015-11-17 14:59:56:433 - info: [debug] hub down or not responding.
+2015-11-17 15:00:01:440 - info: [debug] hub down or not responding.
+2015-11-17 15:00:06:448 - info: [debug] hub down or not responding.
+2015-11-17 15:00:11:455 - info: [debug] hub down or not responding.
+2015-11-17 15:00:16:464 - info: [debug] hub down or not responding.
+2015-11-17 15:00:21:458 - info: [debug] hub down or not responding.
+2015-11-17 15:00:26:466 - info: [debug] hub down or not responding.
+2015-11-17 15:00:31:486 - info: [debug] hub down or not responding.
+2015-11-17 15:00:36:498 - info: [debug] hub down or not responding.
+2015-11-17 15:00:41:489 - info: [debug] hub down or not responding.
+2015-11-17 15:00:46:512 - info: [debug] hub down or not responding.
+2015-11-17 15:00:51:523 - info: [debug] hub down or not responding.
+2015-11-17 15:00:56:515 - info: [debug] hub down or not responding.
+2015-11-17 15:01:01:525 - info: [debug] hub down or not responding.
+2015-11-17 15:01:06:558 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444

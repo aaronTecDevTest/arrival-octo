@@ -99,13 +99,13 @@ public class Hub {
      */
     public void startHub() {
         try {
-            if (hub != null) {
-                this.stopHub();
+        /*  if (hub != null) {
+                hub.stop();
             }
-
+*/
             setUpHub();
             hub.start();
-            log.info("Start the hub on: " + hubHost + " on port: " + hubPort + "successful");
+            log.info("Start the hub on: " + hubHost + " on port: " + hubPort + " successful!");
         } catch (Exception e) {
             log.error("Fail to start the hub on: " + hubHost + " on port: " + hubPort);
             //log.warn("Host: " + hubHost + " on port: " + hubPort + " all ready in use!");
@@ -119,7 +119,7 @@ public class Hub {
     public void stopHub() {
         try {
             hub.stop();
-            log.info("Stop the hub on: " + hubHost + " on port: " + hubPort);
+            log.info("Stop the hub on: " + hubHost + " on port: " + hubPort + " successful!");
         } catch (Exception e) {
             log.error("Fail to stop the hub on: " + hubHost + " on port: " + hubPort);
             //e.printStackTrace();

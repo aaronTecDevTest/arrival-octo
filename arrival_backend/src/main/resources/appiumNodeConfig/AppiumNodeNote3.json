@@ -2,7 +2,7 @@
   "capabilities": [
     {
       "browserName": "chrome",
-      "version": "4.4.2",
+      "version": "5.0",
       "maxInstances": 1,
       "platform": "ANDROID",
       "deviceName": "Note3",

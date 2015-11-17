@@ -132,9 +132,9 @@ public class FXMLArrivalTableViewController implements Initializable {
                 tempClasses.add(new XmlClass(((TestCase) dateTestSuite.get(i)).getTcClassPackage()));
             }
             if(options.getParallelTesting()){
-                runableTestSuite.getSuite().setParallel(options.getParallelTesting().toString());
+                //runableTestSuite.getSuite().setParallel(options.getParallelTesting().toString());
                 //runableTestSuite.getSuite().setThreadCount(options.getParallelThreadCounter());
-                runableTestSuite.getSuite().setDataProviderThreadCount(options.getParallelThreadCounter());
+                //runableTestSuite.getSuite().setDataProviderThreadCount(options.getParallelThreadCounter());
             }
 
             runableTestSuite.setClasses(tempClasses);

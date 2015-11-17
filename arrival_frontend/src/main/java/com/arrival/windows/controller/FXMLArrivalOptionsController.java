@@ -128,7 +128,6 @@ public class FXMLArrivalOptionsController implements Initializable {
         webBrowser = FXCollections.observableArrayList(resources.getString("tab.web.browser").split(","));
         webServer = FXCollections.observableArrayList(resources.getString("tab.web.server").split(","));
 
-
         cmbPlatform.getItems().addAll(platform);
         cmbMobilePlatform.getItems().addAll(mobilePlatform);
         cmbMobileTestingArt.getItems().addAll(mobileTestingArt);
@@ -407,7 +406,7 @@ public class FXMLArrivalOptionsController implements Initializable {
         cmbWebServer.getSelectionModel().select("Non");
         cmbWebBrowser.getSelectionModel().select("FF - FireFox");
         txtJsonConfigWeb.setText("");
-        txtJsonConfigMobile.setText("");
+        txtJsonConfigMobile.setText("C:\\Users\\a.kutekidila\\Dev\\GitHub\\arrival-octo\\arrival_backend\\src\\main\\resources\\appiumNodeConfig");
         txtSaveResultPath.setText("");
         txtAppPath.setText("");
         txtPackageBundleID.setText("");

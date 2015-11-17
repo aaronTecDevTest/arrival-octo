@@ -67,7 +67,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     /*
      *Test NG method
      */
-    @DataProvider(name = "driver")//, parallel = true)
+    @DataProvider(name = "driver", parallel = true)
     public Object[][] createServer() {
 
         Object[][] server;
@@ -111,7 +111,6 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
                 }
             } else {
                 //Todo: Find out how to shoot down the @DataProvider (parallel = false)
-
                 //If Json is in use
                 if(appiumConfig.getJsonConfigInUse()) {
                     for (NodeConfig tempNodeConfig : nodeConfigsList){
@@ -156,6 +155,11 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
      public void setUpAppiumConfig() {
          if(appiumSingleton.isArrival()){
              appiumManager.startServer();
+         }
+         try {
+             Thread.sleep(20000);
+         } catch (InterruptedException e) {
+             e.printStackTrace();
          }
      }
 
