@@ -42,7 +42,7 @@ public class Hub {
     /**
      * @param hubHost: Port where to run the SeleniumHub
      */
-    private Integer hubPort;
+    private int hubPort;
 
 
     /**
@@ -68,18 +68,18 @@ public class Hub {
         gridHubConfig = new GridHubConfiguration();
         hubHost = host;
         hubPort = Integer.valueOf(port);
-        osName = SystemPreferences.getOsName();
+     //   osName = SystemPreferences.getOsName();
         setUpHub();
         log.info("SeleniumHub created");
     }
 
-  /*  public static void main(String[] args) {
-        Hub hubNode = new Hub("127.0.0.1","4723");
+   public static void main(String[] args) {
+        Hub hubNode = new Hub("127.0.0.1","4444");
 
         hubNode.startHub();
         // hubNode.shutDownNodeAndHub();
         //hubNode.stopHub();
-    }*/
+    }
 
     /**
      * Setup the Hub with GridHubConfig
@@ -88,8 +88,9 @@ public class Hub {
         try {
             gridHubConfig.setHost(java.lang.String.valueOf(hubHost));
             gridHubConfig.setPort(hubPort);
-
+            gridHubConfig.setTimeout(600000);
             hub = new org.openqa.grid.web.Hub(gridHubConfig);
+
         } catch (Exception e) {
             log.error(e.getStackTrace());
         }
@@ -100,7 +101,7 @@ public class Hub {
      */
     public void startHub() {
         try {
-        /*  if (hub != null) {
+         /* if (hub != null) {
                 hub.stop();
             }
 */
@@ -108,7 +109,7 @@ public class Hub {
             hub.start();
             log.info("Start the hub on: " + hubHost + " on port: " + hubPort + " successful!");
         } catch (Exception e) {
-            log.error("Fail to start the hub on: " + hubHost + " on port: " + hubPort);
+            log.error("Fail to start the hub on: " + hubHost + " on port: " + hubPort + e.getMessage());
             //log.warn("Host: " + hubHost + " on port: " + hubPort + " all ready in use!");
         }
     }

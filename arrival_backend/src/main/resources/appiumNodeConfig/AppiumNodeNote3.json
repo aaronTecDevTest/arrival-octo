@@ -15,7 +15,7 @@
     "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
     "url": "http://127.0.0.1:6666/wd/hub",
     "host": "127.0.0.1",
-    "port": 6666,
+    "port": 5555,
     "maxSession": 20,
     "register": true,
     "registerCycle": 5000,

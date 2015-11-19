@@ -42,7 +42,6 @@ public class AppiumAndroidDefault implements IFAppiumServer {
      * Standard Constructor
      */
     public AppiumAndroidDefault() {
-
         setUpServer();
     }
 

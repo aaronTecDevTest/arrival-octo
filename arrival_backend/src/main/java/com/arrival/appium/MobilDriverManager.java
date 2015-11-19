@@ -82,13 +82,17 @@ public class MobilDriverManager {
             );
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability(CapabilityType.PLATFORM, tempCap.getPlatform());
-            capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());
-            capabilities.setCapability(CapabilityType.BROWSER_NAME, tempCap.getBrowserName());
-            //capabilities.setCapability("udid", tempCap.getUdid());
-            //capabilities.setCapability("deviceName", tempCap.getDeviceName());
+          capabilities.setBrowserName(tempCap.getBrowserName());
+            capabilities.setVersion(tempCap.getVersion());
+            capabilities.setPlatform(Platform.ANDROID);
+
+           // capabilities.setCapability(CapabilityType.PLATFORM, tempCap.getPlatform());
+           // capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());
+           // capabilities.setCapability(CapabilityType.BROWSER_NAME, tempCap.getBrowserName());
+            capabilities.setCapability("udid", tempCap.getUdid());
+            capabilities.setCapability("deviceName", tempCap.getDeviceName());
             if(appiumConfig.getMobileTestingArt().contains("Mobile Web")){
-               // capabilities.setCapability("autoWebview", true);
+                capabilities.setCapability("autoWebview", true);
             } else{
                 capabilities.setCapability("app", app.getAbsolutePath());
                 capabilities.setCapability("appPackage", appiumConfig.getPackageBundleID());
@@ -96,20 +100,6 @@ public class MobilDriverManager {
             }
             androidDriver =  new AndroidDriver(url, capabilities);
             androidDriver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
-
-/*
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability(CapabilityType.PLATFORM, Platform.ANDROID );
-            capabilities.setCapability(CapabilityType.VERSION,"5.0.0");
-            //capabilities.setCapability("platformName","android");
-            capabilities.setCapability(CapabilityType.BROWSER_NAME,"android" );
-            capabilities.setCapability("udid","20715382" );
-            capabilities.setCapability("deviceName", "Note3");
-            //androidDriver =  new AndroidDriver(new URL("http://127.0.0.1:4444/wd/hub"), DesiredCapabilities.android());
-            androidDriver =  new AndroidDriver(new URL("http://127.0.0.1:4444/wd/hub"), capabilities);
-            //androidDriver =  new AndroidDriver(new URL("http://127.0.0.1:5555/wd/hub"), DesiredCapabilities.android());
-            androidDriver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);*/
-
 
             return androidDriver;
         } catch (MalformedURLException e) {

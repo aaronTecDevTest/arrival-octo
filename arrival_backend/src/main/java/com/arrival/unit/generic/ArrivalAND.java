@@ -12,7 +12,6 @@ import com.arrival.appium.AppiumManager;
 import com.arrival.appium.AppiumSingleton;
 import com.arrival.appium.MobilDriverManager;
 import com.arrival.appium.model.NodeConfig;
-import com.arrival.selenium.SeleniumSingleton;
 import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
 import io.appium.java_client.AppiumDriver;
@@ -177,7 +176,6 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     /*
      *Mobile general method
      */
-
     @Override
     public void click() {
 

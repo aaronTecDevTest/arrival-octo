@@ -118,7 +118,7 @@ public class AppiumAndroid implements IFAppiumServer {
             service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
                     .usingDriverExecutable(new File(NODE_PATH_MAC))
                     .withAppiumJS(new File(APPIUM_PATH_MAC))
-                    .withLogFile(new File(LOG_FILE))
+                    //.withLogFile(new File(LOG_FILE))
                     .withArgument(GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
         }
 
@@ -126,7 +126,7 @@ public class AppiumAndroid implements IFAppiumServer {
             service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
                     .usingDriverExecutable(new File(NODE_PATH_WIN))
                     .withAppiumJS(new File(APPIUM_PATH_WIN))
-                    .withLogFile(new File(LOG_FILE))
+                    //.withLogFile(new File(LOG_FILE))
                     .withArgument(GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
         }
     }
