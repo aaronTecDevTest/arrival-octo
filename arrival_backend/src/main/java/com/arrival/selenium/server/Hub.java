@@ -73,12 +73,12 @@ public class Hub {
         log.info("SeleniumHub created");
     }
 
-   /* public static void main(String[] args) {
-        Hub hubNode = new Hub();
+  /*  public static void main(String[] args) {
+        Hub hubNode = new Hub("127.0.0.1","4723");
 
         hubNode.startHub();
         // hubNode.shutDownNodeAndHub();
-        hubNode.stopHub();
+        //hubNode.stopHub();
     }*/
 
     /**
@@ -88,6 +88,7 @@ public class Hub {
         try {
             gridHubConfig.setHost(java.lang.String.valueOf(hubHost));
             gridHubConfig.setPort(hubPort);
+
             hub = new org.openqa.grid.web.Hub(gridHubConfig);
         } catch (Exception e) {
             log.error(e.getStackTrace());
@@ -109,7 +110,6 @@ public class Hub {
         } catch (Exception e) {
             log.error("Fail to start the hub on: " + hubHost + " on port: " + hubPort);
             //log.warn("Host: " + hubHost + " on port: " + hubPort + " all ready in use!");
-            //e.printStackTrace();
         }
     }
 
@@ -136,7 +136,6 @@ public class Hub {
             log.info("Restart the hub on: " + hubHost + " on port: " + hubPort);
         } catch (Exception e) {
             log.error("Fail to restart the hub on: " + hubHost + " on port: " + hubPort);
-            //e.printStackTrace();
         }
     }
 

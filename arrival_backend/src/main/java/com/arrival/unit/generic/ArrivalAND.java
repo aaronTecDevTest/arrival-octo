@@ -156,11 +156,6 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
          if(appiumSingleton.isArrival()){
              appiumManager.startServer();
          }
-         try {
-             Thread.sleep(20000);
-         } catch (InterruptedException e) {
-             e.printStackTrace();
-         }
      }
 
      /**

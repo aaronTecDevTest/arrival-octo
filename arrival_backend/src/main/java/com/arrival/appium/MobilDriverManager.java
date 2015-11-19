@@ -17,6 +17,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -73,7 +74,7 @@ public class MobilDriverManager {
             //File classpathRoot = new File(System.getProperty("user.dir"));
             //File appDir = new File(classpathRoot, "/ContactManager");
             //File app = new File(appDir, ".apk");
-            File app = new File(appiumConfig.getAppFilePath());
+             File app = new File(appiumConfig.getAppFilePath());
 
             URL url = new URL("http://"
                                       + nodeConfig.getConfiguration().getHubHost() + ":"
@@ -81,13 +82,13 @@ public class MobilDriverManager {
             );
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability(CapabilityType.BROWSER_NAME, tempCap.getBrowserName());
             capabilities.setCapability(CapabilityType.PLATFORM, tempCap.getPlatform());
             capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());
-            capabilities.setCapability("udid", tempCap.getUdid());
-            capabilities.setCapability("deviceName", tempCap.getDeviceName());
+            capabilities.setCapability(CapabilityType.BROWSER_NAME, tempCap.getBrowserName());
+            //capabilities.setCapability("udid", tempCap.getUdid());
+            //capabilities.setCapability("deviceName", tempCap.getDeviceName());
             if(appiumConfig.getMobileTestingArt().contains("Mobile Web")){
-                capabilities.setCapability("autoWebview", true);
+               // capabilities.setCapability("autoWebview", true);
             } else{
                 capabilities.setCapability("app", app.getAbsolutePath());
                 capabilities.setCapability("appPackage", appiumConfig.getPackageBundleID());
@@ -95,9 +96,27 @@ public class MobilDriverManager {
             }
             androidDriver =  new AndroidDriver(url, capabilities);
             androidDriver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+
+/*
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability(CapabilityType.PLATFORM, Platform.ANDROID );
+            capabilities.setCapability(CapabilityType.VERSION,"5.0.0");
+            //capabilities.setCapability("platformName","android");
+            capabilities.setCapability(CapabilityType.BROWSER_NAME,"android" );
+            capabilities.setCapability("udid","20715382" );
+            capabilities.setCapability("deviceName", "Note3");
+            //androidDriver =  new AndroidDriver(new URL("http://127.0.0.1:4444/wd/hub"), DesiredCapabilities.android());
+            androidDriver =  new AndroidDriver(new URL("http://127.0.0.1:4444/wd/hub"), capabilities);
+            //androidDriver =  new AndroidDriver(new URL("http://127.0.0.1:5555/wd/hub"), DesiredCapabilities.android());
+            androidDriver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);*/
+
+
             return androidDriver;
         } catch (MalformedURLException e) {
-            log.error(e.toString());
+            log.error(e.getStackTrace());
+        }catch (Exception ei){
+            log.error(ei.getMessage());
+            ei.printStackTrace();
         }
         return androidDriver;
     }
