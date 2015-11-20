@@ -51,13 +51,11 @@ public class ArrivalTestSuite {
     private XmlTest xmlTest = new XmlTest(suite);
     private EmailListener eml;
     private PreConfigListener pcl;
-    private String path;
+    private String saveResultDir;
 
     public ArrivalTestSuite() {
         eml = new EmailListener();
         pcl = new PreConfigListener();
-
-        tng.setOutputDirectory(getNewPathDirectory());
         suiteID++;
         tng.setDefaultSuiteName("RegressionsTest - " + suiteID);
         tng.addListener(eml);
@@ -65,13 +63,6 @@ public class ArrivalTestSuite {
 
         xmlTest.setName("RegressionsTest - " + suiteID);
         suite.setName("RegressionsTest - " + suiteID);
-
-        //Todo: Suite option should be show up in OptionView (Parallel Testing)
-        /*
-        suite.setParallel("true");
-        suite.setDataProviderThreadCount(2);
-        suite.setThreadCount(2);
-        */
         suites.add(suite);
     }
 
@@ -93,20 +84,31 @@ public class ArrivalTestSuite {
     /**
      * @return Path as a String to save Result from TestNG
      */
-    private String getNewPathDirectory() {
+    public String getNewPathDirectory() {
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmss");
         Calendar cal = Calendar.getInstance();
+        saveResultDir = "../arrival-Octo/arrival_backend/src/main/resources/report/testng/";
+        saveResultDir = saveResultDir + dateFormat.format(cal.getTime());
+        createNewDirectory(saveResultDir);
+        return saveResultDir;
+    }
 
-        //ToDo: Mit Path class implement (auch für Appium den Standard path ändern)
-        String tempPath = "../arrival-Octo/arrival_backend/src/main/resources/report/testng/selenium/";
-       /*
-       String userSavePath = SeleniumSingleton.getSeverInstance().getSeleniumManager().getTestSuiteConfigs().getSaveResultPath();
-        if(!userSavePath.isEmpty())
-            tempPath = userSavePath;*/
-        String outPutDirectory = tempPath + dateFormat.format(cal.getTime());
 
-        createNewDirectory(outPutDirectory);
-        return outPutDirectory;
+    public List<XmlClass> getClasses() {
+        return classes;
+    }
+
+    public XmlSuite getSuite() {
+        return suite;
+    }
+
+    public TestNG getTng(){return tng;}
+
+    public String getPath() {
+        String path;
+        path = this.getClass().getPackage().getName();
+        System.out.println(path);
+        return path;
     }
 
     private void createNewDirectory(String directoryPath) {
@@ -119,10 +121,6 @@ public class ArrivalTestSuite {
             log.info("Directory creation success");
     }
 
-    public List<XmlClass> getClasses() {
-        return classes;
-    }
-
     public void setClasses(List<XmlClass> classes) {
         xmlTest.setXmlClasses(classes);
         this.classes = classes;
@@ -130,11 +128,6 @@ public class ArrivalTestSuite {
 
     public void setSuiteName(String name) {
         suite.setName(name);
-    }
-
-
-    public XmlSuite getSuite() {
-        return suite;
     }
 
     public void setXmlTest(String name) {
@@ -149,14 +142,7 @@ public class ArrivalTestSuite {
         suite.setParallel(String.valueOf(parallelTesting));
     }
 
-    public String getPath() {
-        String path;
-        path = this.getClass().getPackage().getName();
-        System.out.println(path);
-        return path;
-    }
-
     public void setPath(String path) {
-        this.path = path;
+        this.saveResultDir = path;
     }
 }

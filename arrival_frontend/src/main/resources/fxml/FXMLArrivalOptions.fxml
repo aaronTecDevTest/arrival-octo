@@ -42,7 +42,7 @@
                                         </ToggleButton>
                                         <Button fx:id="btnRestConfig" layoutX="240.0" layoutY="250.0" mnemonicParsing="false" onAction="#resetConfig" prefHeight="25.0" prefWidth="204.0" text="Reset all  Configurations" />
                                         <Button fx:id="btnSaveResultPath" layoutX="420.0" layoutY="210.0" mnemonicParsing="false" onAction="#openDirectoryChooser" prefHeight="25.0" prefWidth="24.0" text="Button" />
-                                        <TextField fx:id="txtSaveResultPath" editable="false" layoutX="240.0" layoutY="210.0" prefHeight="25.0" prefWidth="180.0" promptText="Path" />
+                                        <TextField fx:id="txtSaveResultPath" layoutX="240.0" layoutY="210.0" prefHeight="25.0" prefWidth="180.0" promptText="Path" />
                               <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="25.0" layoutY="90.0" prefHeight="18.0" prefWidth="200.0" text="Parallel-Thread:" textAlignment="LEFT" visible="false" />
                                     </children>
                                 </Pane>

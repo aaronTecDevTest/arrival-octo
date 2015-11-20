@@ -82,13 +82,13 @@ public class MobilDriverManager {
             );
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
-          capabilities.setBrowserName(tempCap.getBrowserName());
+            /*capabilities.setBrowserName(tempCap.getBrowserName());
             capabilities.setVersion(tempCap.getVersion());
             capabilities.setPlatform(Platform.ANDROID);
-
-           // capabilities.setCapability(CapabilityType.PLATFORM, tempCap.getPlatform());
-           // capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());
-           // capabilities.setCapability(CapabilityType.BROWSER_NAME, tempCap.getBrowserName());
+*/
+            capabilities.setCapability(CapabilityType.PLATFORM, tempCap.getPlatform());
+            capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());
+            capabilities.setCapability(CapabilityType.BROWSER_NAME, tempCap.getBrowserName());
             capabilities.setCapability("udid", tempCap.getUdid());
             capabilities.setCapability("deviceName", tempCap.getDeviceName());
             if(appiumConfig.getMobileTestingArt().contains("Mobile Web")){

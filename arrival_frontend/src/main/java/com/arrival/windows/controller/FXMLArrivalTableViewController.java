@@ -97,7 +97,6 @@ public class FXMLArrivalTableViewController implements Initializable {
         setUpTestsuite();
         tbvTestsuite.setItems(dateTestsuite);
 
-        //ToDo ini bei runtestcase
         runableTestSuite = new ArrivalTestSuite();
         platform = "platform";
     }
@@ -135,6 +134,12 @@ public class FXMLArrivalTableViewController implements Initializable {
                 //runableTestSuite.getSuite().setParallel(options.getParallelTesting().toString());
                 //runableTestSuite.getSuite().setThreadCount(options.getParallelThreadCounter());
                 //runableTestSuite.getSuite().setDataProviderThreadCount(options.getParallelThreadCounter());
+            }
+
+            if(!options.getSaveResultPath().isEmpty()){
+                runableTestSuite.getTng().setOutputDirectory(options.getSaveResultPath().replaceAll("/","\\"));
+            }else {
+                runableTestSuite.getTng().setOutputDirectory(runableTestSuite.getNewPathDirectory());
             }
 
             runableTestSuite.setClasses(tempClasses);
