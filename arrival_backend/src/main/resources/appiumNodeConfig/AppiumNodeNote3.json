@@ -1,12 +1,11 @@
 {
   "capabilities": [
     {
-      "browserName": "chrome",
-      "version": "5.0",
+      "browserName": "android",
+      "version": "",
       "maxInstances": 1,
       "platform": "ANDROID",
-      "deviceName": "Note3",
-      "udid": "20715382"
+      "platformName": "Android"
     }
   ],
   "configuration": {

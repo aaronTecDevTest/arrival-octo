@@ -49,3 +49,5 @@ Server  argument
                  [--intent-flags INTENTFLAGS]
                  [--intent-args OPTIONALINTENTARGUMENTS]
                  [--stop-app-on-reset STOPAPPONRESET] [--debug-log-spacing]
+
+  "udid": "20715382"

@@ -81,11 +81,9 @@ public class MobilDriverManager {
                                       + nodeConfig.getConfiguration().getHubPort() + "/wd/hub"
             );
 
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            /*capabilities.setBrowserName(tempCap.getBrowserName());
-            capabilities.setVersion(tempCap.getVersion());
-            capabilities.setPlatform(Platform.ANDROID);
-*/
+          //  DesiredCapabilities capabilities = new DesiredCapabilities();
+            DesiredCapabilities capabilities =  DesiredCapabilities.android();
+/*
             capabilities.setCapability(CapabilityType.PLATFORM, tempCap.getPlatform());
             capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());
             capabilities.setCapability(CapabilityType.BROWSER_NAME, tempCap.getBrowserName());
@@ -97,7 +95,7 @@ public class MobilDriverManager {
                 capabilities.setCapability("app", app.getAbsolutePath());
                 capabilities.setCapability("appPackage", appiumConfig.getPackageBundleID());
                 //capabilities.setCapability("appActivity", ".ContactManage");
-            }
+            }*/
             androidDriver =  new AndroidDriver(url, capabilities);
             androidDriver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 

@@ -9,6 +9,7 @@ package com.arrival.appium.model;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.util.StringBuilders;
 
 public class Capabilities {
     private static final Logger log = LogManager.getLogger(Capabilities.class);
@@ -18,6 +19,7 @@ public class Capabilities {
     private String platform;
     private String deviceName;
     private String udid;
+    private String platformName;
 
     public String getBrowserName() {
         return browserName;
@@ -65,6 +67,14 @@ public class Capabilities {
 
     public void setUdid(String udid) {
         this.udid = udid;
+    }
+
+    public String getPlatformName() {
+        return platformName;
+    }
+
+    public void setPlatformName(String platformName) {
+        this.platformName = platformName;
     }
 
     @Override
