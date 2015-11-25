@@ -1,10 +1,9 @@
 package com.arrival.unit.generic;
 
-import com.arrival.appium.AppiumSingleton;
 import com.arrival.selenium.SeleniumManager;
 import com.arrival.selenium.SeleniumSingleton;
 import com.arrival.selenium.WebDriverManager;
-import com.arrival.selenium.config.SeleniumConfig;
+import com.arrival.utilities.ArrivalResult;
 import com.arrival.utilities.SystemPreferences;
 import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
@@ -109,7 +108,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
                     seleniumServerList.add(webDriver);
                 }
 
-                if (!seleniumConfig.getServerName().contains("Non")) {
+                if (!seleniumConfig.getServerName().equals("Non")) {
                     for (Object tempWebDriver : seleniumServerList) {
                         ((WebDriver) tempWebDriver).get(seleniumConfig.getServerName());
                     }
@@ -266,8 +265,8 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         return tcResult.get();
     }
 
-    public void setTcResult(String tcResult) {
-        this.tcResult.set(tcResult);
+    public void setTcResult(ArrivalResult tcResult) {
+        this.tcResult.set(tcResult.toString());
     }
 
     public SimpleStringProperty tcResultProperty() {

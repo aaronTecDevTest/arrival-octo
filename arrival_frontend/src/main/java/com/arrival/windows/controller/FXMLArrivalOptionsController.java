@@ -373,7 +373,7 @@ public class FXMLArrivalOptionsController implements Initializable {
 
         togOnOffParallel.setSelected(options.getParallelTesting());
 
-        if (options.getPlatform().contains("Web")) {
+        if (options.getPlatform().equals("Web")) {
             togJsonWeb.setSelected(options.getJsonConfigInUse());
             txtJsonConfigWeb.setText(options.getJsonConfigPath());
             tabWebConfig.setDisable(false);
@@ -383,7 +383,7 @@ public class FXMLArrivalOptionsController implements Initializable {
             }
         }
 
-        if (options.getPlatform().contains("Mobile")) {
+        if (options.getPlatform().equals("Mobile")) {
             togJsonMobile.setSelected(options.getJsonConfigInUse());
             txtJsonConfigMobile.setText(options.getJsonConfigPath());
             tabMobileConfig.setDisable(false);

@@ -80,7 +80,7 @@ public class JSONConfigReader {
         ArrayList<Path> temp = new ArrayList<>();
 
         for (Path path : allPath) {
-            boolean isJson = path.getFileName().toString().contains("json");
+            boolean isJson = path.getFileName().toString().equals("json");
             if (isJson) {
                 temp.add(path);
             }
@@ -92,7 +92,7 @@ public class JSONConfigReader {
         ArrayList<Path> temp = new ArrayList<>();
 
         for (Path path : allPath) {
-            boolean isJson = path.getFileName().toString().contains("json");
+            boolean isJson = path.getFileName().toString().equals("json");
             if (isJson) {
                 temp.add(path);
             }

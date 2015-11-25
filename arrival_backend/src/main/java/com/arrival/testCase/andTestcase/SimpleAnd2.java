@@ -9,6 +9,7 @@ package com.arrival.testCase.andTestcase;
 
 
 import com.arrival.unit.generic.ArrivalAND;
+import com.arrival.utilities.ArrivalResult;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,7 +25,7 @@ public class SimpleAnd2 extends ArrivalAND {
         setTcDuration("2");
         setTcLink("wwww.wetter.info.de");
         setTcLastRun("10");
-        setTcResult("Link1");
+        setTcResult(ArrivalResult.PASSED);
     }
 
     @Test(dataProvider = "driver", groups = {"fast"})
@@ -52,7 +53,7 @@ public class SimpleAnd2 extends ArrivalAND {
         // Wait for the page to load, timeout after 10 seconds
         /*(new WebDriverWait(androidDriver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
-                return d.getTitle().toLowerCase().contains("cheese!");
+                return d.getTitle().toLowerCase().equals()("cheese!");
             }
         });*/
 
@@ -82,7 +83,7 @@ public class SimpleAnd2 extends ArrivalAND {
         // Wait for the page to load, timeout after 10 seconds
         /*(new WebDriverWait(androidDriver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
-                return d.getTitle().toLowerCase().contains("video");
+                return d.getTitle().toLowerCase().equals()("video");
             }
         });*/
         pauseTest(2000);

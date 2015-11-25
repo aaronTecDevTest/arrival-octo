@@ -9,6 +9,7 @@ package com.arrival.testCase.webTestcase;
  */
 
 import com.arrival.unit.generic.ArrivalWeb;
+import com.arrival.utilities.ArrivalResult;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -22,7 +23,7 @@ public class SimpleTestWeb2 extends ArrivalWeb {
         setTcDuration("20");
         setTcLink("wwww.wetter.info");
         setTcLastRun("100");
-        setTcResult("Link2");
+        setTcResult(ArrivalResult.PASSED);
     }
 
     @Test(dataProvider = "driver", groups = {"fast"})

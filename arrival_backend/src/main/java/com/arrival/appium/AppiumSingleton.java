@@ -48,7 +48,7 @@ public class AppiumSingleton {
 
 
     public boolean isArrival(){
-        return    framework.contains(ARRIVAL);
+        return    framework.equals(ARRIVAL);
     }
 
     /**

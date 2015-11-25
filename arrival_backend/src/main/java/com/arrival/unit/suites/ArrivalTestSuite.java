@@ -82,7 +82,7 @@ public class ArrivalTestSuite {
     }
 
     /**
-     * @return Path as a String to save Result from TestNG
+     * @return Path as a String to save ArrivalResult from TestNG
      */
     public String getNewPathDirectory() {
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmss");

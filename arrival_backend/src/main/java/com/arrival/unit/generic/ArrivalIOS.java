@@ -10,6 +10,7 @@ package com.arrival.unit.generic;
 
 import com.arrival.appium.AppiumManager;
 import com.arrival.appium.AppiumSingleton;
+import com.arrival.utilities.ArrivalResult;
 import com.arrival.utilities.interfaces.IFTestCase;
 import io.appium.java_client.ios.IOSDriver;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -210,8 +211,8 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
         return tcResult.get();
     }
 
-    public void setTcResult(String tcResult) {
-        this.tcResult.set(tcResult);
+    public void setTcResult(ArrivalResult tcResult) {
+        this.tcResult.set(tcResult.toString());
     }
 
     public SimpleStringProperty tcResultProperty() {

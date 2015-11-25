@@ -8,6 +8,7 @@ package com.arrival.utilities.interfaces;
  * Package: com.utilities.interfaces
  */
 
+import com.arrival.utilities.ArrivalResult;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
@@ -35,7 +36,7 @@ public interface IFTestCase {
 
     String getTcResult();
 
-    void setTcResult(String tcResult);
+    void setTcResult(ArrivalResult tcResult);
 
     SimpleStringProperty tcResultProperty();
 

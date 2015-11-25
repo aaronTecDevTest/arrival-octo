@@ -8,9 +8,12 @@ package com.arrival.windows.model;
  * Package: com.arrival.windows.model
  */
 
+import com.arrival.utilities.ArrivalResult;
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class TestCase implements IFTestCase {
 
@@ -20,15 +23,16 @@ public class TestCase implements IFTestCase {
     private SimpleStringProperty tcDuration;
     private SimpleStringProperty tcLastRun;
     private SimpleStringProperty tcLink;
-    private SimpleStringProperty tcResult;
     private SimpleStringProperty tcClassPackage;
+    private SimpleStringProperty tcResult;
+    private ImageView tcResultIcons;
 
 
     public TestCase() {
-        this(0, "", "", "", "", "", "", "");
+        this(0, "", "", "", "", "", "", "", null);
     }
 
-    public TestCase(Integer id, String tcName, String tcDescription, String tcResult, String tcDuration, String tcLastRun, String tcLink, String tcClassPackage) {
+    public TestCase(Integer id, String tcName, String tcDescription, String tcResult, String tcDuration, String tcLastRun, String tcLink, String tcClassPackage, ImageView tcResultIcons) {
         this.tcID = new SimpleIntegerProperty(id);
         this.tcName = new SimpleStringProperty(tcName);
         this.tcDescription = new SimpleStringProperty(tcDescription);
@@ -37,9 +41,10 @@ public class TestCase implements IFTestCase {
         this.tcLink = new SimpleStringProperty(tcLink);
         this.tcResult = new SimpleStringProperty(tcResult);
         this.tcClassPackage = new SimpleStringProperty(tcClassPackage);
+        this.tcResultIcons =  tcResultIcons;
     }
 
-    public TestCase(String tcName, String tcDescription, String tcResult, String tcDuration, String tcLastRun, String tcLink, String tcClassPackage) {
+    public TestCase(String tcName, String tcDescription, String tcResult, String tcDuration, String tcLastRun, String tcLink, String tcClassPackage, ImageView tcResultIcons) {
         this.tcName = new SimpleStringProperty(tcName);
         this.tcDescription = new SimpleStringProperty(tcDescription);
         this.tcDuration = new SimpleStringProperty(tcDuration);
@@ -47,7 +52,9 @@ public class TestCase implements IFTestCase {
         this.tcLink = new SimpleStringProperty(tcLink);
         this.tcResult = new SimpleStringProperty(tcResult);
         this.tcClassPackage = new SimpleStringProperty(tcClassPackage);
+        this.tcResultIcons =  tcResultIcons;
     }
+
 
     @Override
     public String getTcName() {
@@ -124,8 +131,8 @@ public class TestCase implements IFTestCase {
         return tcResult.get();
     }
 
-    public void setTcResult(String tcResult) {
-        this.tcResult.set(tcResult);
+    public void setTcResult(ArrivalResult tcResult) {
+        this.tcResult.set(tcResult.toString());
     }
 
     @Override
@@ -157,6 +164,14 @@ public class TestCase implements IFTestCase {
 
     public SimpleStringProperty tcClassPackageProperty() {
         return tcClassPackage;
+    }
+
+    public ImageView getTcResultIcons() {
+        return tcResultIcons;
+    }
+
+    public void setTcResultIcons(ImageView tcResultIcons) {
+        this.tcResultIcons = tcResultIcons;
     }
 }
 

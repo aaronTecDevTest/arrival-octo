@@ -10,6 +10,7 @@ package com.arrival.testCase.iosTestcase;
 
 
 import com.arrival.unit.generic.ArrivalIOS;
+import com.arrival.utilities.ArrivalResult;
 import org.testng.annotations.Test;
 
 public class SimpleTestIOS2 extends ArrivalIOS {
@@ -22,7 +23,7 @@ public class SimpleTestIOS2 extends ArrivalIOS {
         setTcDuration("2");
         setTcLink("wwww.wetter.info");
         setTcLastRun("10");
-        setTcResult("Link1");
+        setTcResult(ArrivalResult.PASSED);
     }
 
     @Test(dataProvider = "driver", groups = {"fast"})

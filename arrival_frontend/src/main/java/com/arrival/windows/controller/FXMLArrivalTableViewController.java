@@ -21,9 +21,13 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.SelectionMode;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.util.Callback;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.xml.XmlClass;
@@ -61,14 +65,15 @@ public class FXMLArrivalTableViewController implements Initializable {
     @FXML
     private TableColumn<TestCase, String> tbcLink;
     @FXML
-    private TableColumn<TestCase, String> tbcResult;
+    //private TableColumn<TestCase, String> tbcResult;
+    private TableColumn<TestCase, ImageView> tbcResult;
 
     private ArrivalTestSuite runableTestSuite;
     private ObservableList dateTestSuite;
     private SeleniumManager tempSeleniumManager;
     private AppiumManager tempAppiumManager;
     private Options options;
-    private String platform;
+    private java.lang.String platform;
 
     /**
      * Called to initialize a controller after its root element has been
@@ -88,7 +93,16 @@ public class FXMLArrivalTableViewController implements Initializable {
         tbcDuration.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDuration"));
         tbcLastRun.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcLastRun"));
         tbcLink.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcLink"));
-        tbcResult.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcResult"));
+        //tbcResult.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcResult"));
+        tbcResult.setCellValueFactory(new PropertyValueFactory<TestCase, ImageView>("tcResultIcons"));
+        /*tbcResult.setCellFactory(new Callback<TableColumn<TestCase, ImageView>, TableCell<TestCase, ImageView>>() {
+            @Override
+            public TableCell<TestCase, ImageView> call(TableColumn<TestCase, ImageView> param) {
+                TableCell cell = new TableCell<TestCase, ImageView>();
+                cell.setStyle("-fx-alignment: CENTER-LEFT;");
+                return cell;
+            }
+        });*/
 
         //tbvTestsuite.getSelectionModel().setCellSelectionEnabled(true);
         tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -109,13 +123,13 @@ public class FXMLArrivalTableViewController implements Initializable {
             tempAppiumManager = new AppiumManager();
 
             List<XmlClass> tempClasses = new ArrayList<>();
-            if (options.getPlatform().contains("Web")) {
+            if (options.getPlatform().equals("Web")) {
                 tempSeleniumManager.setTestSuiteConfigs(options);
                 SeleniumSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
                 SeleniumSingleton.setFramework(SeleniumSingleton.ARRIVAL);
 
                 //tempClasses.add(new XmlClass("com.arrival.selenium.SeleniumSingleton"));
-            } else if (options.getPlatform().contains("Mobile")) {
+            } else if (options.getPlatform().equals("Mobile")) {
                 tempAppiumManager.setTestSuiteConfigs(options);
                 AppiumSingleton.getInstance().setAppiumManager(tempAppiumManager);
                 AppiumSingleton.setFramework(AppiumSingleton.ARRIVAL);
@@ -193,14 +207,14 @@ public class FXMLArrivalTableViewController implements Initializable {
     }
 
     public boolean isWebPlatform() {
-        return platform.contains("Web");
+        return platform.equals("Web");
     }
 
     public boolean isIOSPlatform() {
-        return platform.contains("IOS");
+        return platform.equals("IOS");
     }
 
     public boolean isANDPlatform() {
-        return platform.contains("Android");
+        return platform.equals("Android");
     }
 }

@@ -128,19 +128,19 @@ public class SystemPreferences {
     }
 
     public boolean isMacOS() {
-        return osName.contains("Mac OS X");
+        return osName.equals("Mac OS X");
     }
 
     public boolean isWindows() {
-        return osName.contains("Windows");
+        return osName.equals("Windows");
     }
 
     public boolean isLinux() {
-        return osName.contains("Linux");
+        return osName.equals("Linux");
     }
 
     public boolean isUnix() {
-        return osName.contains("Unix");
+        return osName.equals("Unix");
     }
 
     @Override

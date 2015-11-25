@@ -28,6 +28,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
@@ -475,13 +476,14 @@ public class FXMLArrivalMainController implements Initializable {
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
                 IFTestCase tempTestCaseIF = (IFTestCase) tempTestCaseObject;
                 tempList.add(new TestCase(
-                                                 tempTestCaseIF.getTcName(),
-                                                 tempTestCaseIF.getTcDescription(),
-                                                 tempTestCaseIF.getTcResult(),
-                                                 tempTestCaseIF.getTcDuration(),
-                                                 tempTestCaseIF.getTcLastRun(),
-                                                 tempTestCaseIF.getTcLink(),
-                                                 classPackage.get(i)));
+                        tempTestCaseIF.getTcName(),
+                        tempTestCaseIF.getTcDescription(),
+                        tempTestCaseIF.getTcResult(),
+                        tempTestCaseIF.getTcDuration(),
+                        tempTestCaseIF.getTcLastRun(),
+                        tempTestCaseIF.getTcLink(),
+                        classPackage.get(i),
+                        getResultImageViewer(tempTestCaseIF.getTcResult())));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -510,13 +512,14 @@ public class FXMLArrivalMainController implements Initializable {
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
                 IFTestCase tempTestCaseIF = (IFTestCase) tempTestCaseObject;
                 tempList.add(new TestCase(
-                                                 tempTestCaseIF.getTcName(),
-                                                 tempTestCaseIF.getTcDescription(),
-                                                 tempTestCaseIF.getTcResult(),
-                                                 tempTestCaseIF.getTcDuration(),
-                                                 tempTestCaseIF.getTcLastRun(),
-                                                 tempTestCaseIF.getTcLink(),
-                                                 classPackage.get(i)));
+                        tempTestCaseIF.getTcName(),
+                        tempTestCaseIF.getTcDescription(),
+                        tempTestCaseIF.getTcResult(),
+                        tempTestCaseIF.getTcDuration(),
+                        tempTestCaseIF.getTcLastRun(),
+                        tempTestCaseIF.getTcLink(),
+                        classPackage.get(i),
+                        getResultImageViewer(tempTestCaseIF.getTcResult())));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -546,13 +549,14 @@ public class FXMLArrivalMainController implements Initializable {
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
                 IFTestCase tempTestCaseIF = (IFTestCase) tempTestCaseObject;
                 tempList.add(new TestCase(
-                                                 tempTestCaseIF.getTcName(),
-                                                 tempTestCaseIF.getTcDescription(),
-                                                 tempTestCaseIF.getTcResult(),
-                                                 tempTestCaseIF.getTcDuration(),
-                                                 tempTestCaseIF.getTcLastRun(),
-                                                 tempTestCaseIF.getTcLink(),
-                                                 classPackage.get(i)));
+                        tempTestCaseIF.getTcName(),
+                        tempTestCaseIF.getTcDescription(),
+                        tempTestCaseIF.getTcResult(),
+                        tempTestCaseIF.getTcDuration(),
+                        tempTestCaseIF.getTcLastRun(),
+                        tempTestCaseIF.getTcLink(),
+                        classPackage.get(i),
+                        getResultImageViewer(tempTestCaseIF.getTcResult())));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -620,5 +624,24 @@ public class FXMLArrivalMainController implements Initializable {
             log.error(e.getStackTrace());
             return null;
         }
+    }
+
+    private ImageView getResultImageViewer(String tcResult){
+        ImageView im = new ImageView();
+
+            switch (tcResult){
+                case "PASSED":
+                    im.setImage(new Image(getClass().getResource("/icons/passed.png").toString()));
+                    return  im;
+                case "FAILED":
+                    im.setImage(new Image(getClass().getResource("/icons/failed.png").toString()));
+                    return  im;
+                case "SKIPPED":
+                    im.setImage(new Image(getClass().getResource("/icons/skipped.png").toString()));
+                    return  im;
+                default:
+                    im.setImage( new Image(getClass().getResource("/icons/skipped.png").toString()));
+                    return  im;
+            }
     }
 }

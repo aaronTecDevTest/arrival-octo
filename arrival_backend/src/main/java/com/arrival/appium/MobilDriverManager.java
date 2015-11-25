@@ -89,7 +89,7 @@ public class MobilDriverManager {
             capabilities.setCapability(CapabilityType.BROWSER_NAME, tempCap.getBrowserName());
             capabilities.setCapability("udid", tempCap.getUdid());
             capabilities.setCapability("deviceName", tempCap.getDeviceName());
-            if(appiumConfig.getMobileTestingArt().contains("Mobile Web")){
+            if(appiumConfig.getMobileTestingArt().equals()("Mobile Web")){
                 capabilities.setCapability("autoWebview", true);
             } else{
                 capabilities.setCapability("app", app.getAbsolutePath());
@@ -132,7 +132,7 @@ public class MobilDriverManager {
             capabilities.setCapability("udid", tempCap.getUdid());
             capabilities.setCapability("deviceName", tempCap.getDeviceName());
             capabilities.setCapability("app", app.getAbsolutePath());
-            if(appiumConfig.getMobileTestingArt().contains("Mobile Web")){
+            if(appiumConfig.getMobileTestingArt().equals("Mobile Web")){
                 capabilities.setCapability("autoWebview", true);
             } else{
                 capabilities.setCapability("bundleId", appiumConfig.getPackageBundleID());
