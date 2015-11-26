@@ -95,14 +95,7 @@ public class FXMLArrivalTableViewController implements Initializable {
         tbcLink.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcLink"));
         //tbcResult.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcResult"));
         tbcResult.setCellValueFactory(new PropertyValueFactory<TestCase, ImageView>("tcResultIcons"));
-        /*tbcResult.setCellFactory(new Callback<TableColumn<TestCase, ImageView>, TableCell<TestCase, ImageView>>() {
-            @Override
-            public TableCell<TestCase, ImageView> call(TableColumn<TestCase, ImageView> param) {
-                TableCell cell = new TableCell<TestCase, ImageView>();
-                cell.setStyle("-fx-alignment: CENTER-LEFT;");
-                return cell;
-            }
-        });*/
+        tbcResult.getStyleClass().add("tbcResults");
 
         //tbvTestsuite.getSelectionModel().setCellSelectionEnabled(true);
         tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);

@@ -204,12 +204,15 @@ public class FXMLArrivalMainController implements Initializable {
 
         //tbvIOS.getSelectionModel().setCellSelectionEnabled(true);
         tbvIOS.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        tbvIOS.getStyleClass().add("table-right");
 
         //tbvAND.getSelectionModel().setCellSelectionEnabled(true);
         tbvAND.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        tbvAND.getStyleClass().add("table-right");
 
         //tbvWebPortal.getSelectionModel().setCellSelectionEnabled(true);
         tbvWebPortal.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        tbvWebPortal.getStyleClass().add("table-right");
 
         //SetUp Testcase to Table
         setUpIOSTestcase();
@@ -228,6 +231,7 @@ public class FXMLArrivalMainController implements Initializable {
         setUpFirstTableView();
         addTableViewListener();
 
+        //currentTableView.getStyleClass().add("/css/arrivalMain.css");
     }
 
     @FXML
@@ -306,13 +310,17 @@ public class FXMLArrivalMainController implements Initializable {
 
                 if (tbvTestsuiteController.isIOSPlatform()) {
                     dateTestsuite = currentTableView.getItems();
-                    dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
+                    if (!(dateTestsuite.containsAll(tbvIOS.getSelectionModel().getSelectedItems()))) {
+                        dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
+                    } else {
+                        log.warn("Testcase all ready added!");
+                        WindowsDialogs.testCaseInTestsuite();
+                    }
                 } else {
                     log.warn("Is not a IOS Testcase");
                     WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
             }
-
 
             if (accTestCase.getExpandedPane().getText().equals("Android - Testcase")) {
                 log.info(actionEvent.getSource() + "AND");
@@ -322,27 +330,37 @@ public class FXMLArrivalMainController implements Initializable {
 
                 if (tbvTestsuiteController.isANDPlatform()) {
                     dateTestsuite = currentTableView.getItems();
-                    dateTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
+                    if (!(dateTestsuite.containsAll(tbvAND.getSelectionModel().getSelectedItems()))) {
+                        dateTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
+                    } else {
+                        log.warn("Testcase all ready added!");
+                        WindowsDialogs.testCaseInTestsuite();
+                    }
                 } else {
                     log.warn("Is not a Android Testcase");
                     WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
             }
 
-
             if (accTestCase.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
                 log.info(actionEvent.getSource() + "Web");
                 if (/*dateTestsuite.isEmpty() && */tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("Web");
                 }
+
                 if (tbvTestsuiteController.isWebPlatform()) {
                     dateTestsuite = currentTableView.getItems();
-                    dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
+                    if (!(dateTestsuite.containsAll(tbvWebPortal.getSelectionModel().getSelectedItems()))) {
+                        dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
+                    } else {
+                        log.warn("Testcase all ready added!");
+                        WindowsDialogs.testCaseInTestsuite();
+                    }
                 } else {
                     log.warn("Is not a Web Testcase");
                     WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
-            }
+        }
         } catch (Exception e) {
             log.error(e.getStackTrace());
         }

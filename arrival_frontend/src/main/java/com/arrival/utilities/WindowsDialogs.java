@@ -61,7 +61,14 @@ public class WindowsDialogs {
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
         alert.setContentText("Testcase is not a " + ios + " Platform. " + "Wrong Platform!");
+        alert.showAndWait();
+    }
 
+    public static void testCaseInTestsuite(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("Testcase is not all ready in Testsuite!");
         alert.showAndWait();
     }
 }

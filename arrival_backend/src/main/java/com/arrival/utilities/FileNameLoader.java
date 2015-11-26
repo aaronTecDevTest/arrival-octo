@@ -54,7 +54,7 @@ public class FileNameLoader {
         size = className.size();
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         FileNameLoader fileNameLoader = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
         System.out.println("Url:" + fileNameLoader.getUrl());
         System.out.println("Dir:" + fileNameLoader.getFileDirectory());
@@ -62,7 +62,7 @@ public class FileNameLoader {
         System.out.println("ClassName:" + fileNameLoader.getClassName());
         System.out.println("Extension:" + fileNameLoader.getFileNameWithExtension());
         System.out.println("ClassPackage:" + fileNameLoader.getClassPackage());
-    }
+    }*/
 
     private void setUpFilePathList() {
 
