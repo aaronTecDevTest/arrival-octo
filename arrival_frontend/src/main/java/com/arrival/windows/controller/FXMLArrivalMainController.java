@@ -386,22 +386,25 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void runTestsuite(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
-        tbvTestsuiteController.runTestSuite();
+        tbvTestsuiteController.run();
     }
 
     @FXML
     public void skipTestcase(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
+        tbvTestsuiteController.skipped();
     }
 
     @FXML
     public void pauseTestcase(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
+        tbvTestsuiteController.paused();
     }
 
     @FXML
     public void stopTestsuite(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
+        tbvTestsuiteController.stopped();
     }
 
     @FXML

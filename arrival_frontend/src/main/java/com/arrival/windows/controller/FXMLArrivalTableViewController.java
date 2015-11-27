@@ -21,13 +21,10 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.util.Callback;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.xml.XmlClass;
@@ -41,7 +38,7 @@ import java.util.ResourceBundle;
  * Controller Class for ViewMainApp. This Class have linked with ViewMainApp.fxml and
  * can evoke function from ViewMainApp.fxml file.
  */
-public class FXMLArrivalTableViewController implements Initializable {
+public class FXMLArrivalTableViewController /*extends Thread*/ implements Initializable  {
 
     /**
      * Logger
@@ -65,15 +62,14 @@ public class FXMLArrivalTableViewController implements Initializable {
     @FXML
     private TableColumn<TestCase, String> tbcLink;
     @FXML
-    //private TableColumn<TestCase, String> tbcResult;
     private TableColumn<TestCase, ImageView> tbcResult;
 
-    private ArrivalTestSuite runableTestSuite;
+    private ArrivalTestSuite runTestSuite;
     private ObservableList dateTestSuite;
     private SeleniumManager tempSeleniumManager;
     private AppiumManager tempAppiumManager;
     private Options options;
-    private java.lang.String platform;
+    private String platform;
 
     /**
      * Called to initialize a controller after its root element has been
@@ -104,12 +100,13 @@ public class FXMLArrivalTableViewController implements Initializable {
         setUpTestsuite();
         tbvTestsuite.setItems(dateTestsuite);
 
-        runableTestSuite = new ArrivalTestSuite();
+        runTestSuite = new ArrivalTestSuite();
         platform = "platform";
     }
 
-    public void runTestSuite() {
+    public void run() {
         try {
+
             log.info(options.toString());
 
             tempSeleniumManager = new SeleniumManager();
@@ -138,24 +135,40 @@ public class FXMLArrivalTableViewController implements Initializable {
                 tempClasses.add(new XmlClass(((TestCase) dateTestSuite.get(i)).getTcClassPackage()));
             }
             if(options.getParallelTesting()){
-                //runableTestSuite.getSuite().setParallel(options.getParallelTesting().toString());
-                //runableTestSuite.getSuite().setThreadCount(options.getParallelThreadCounter());
-                //runableTestSuite.getSuite().setDataProviderThreadCount(options.getParallelThreadCounter());
+                //runTestSuite.getSuite().setParallel(options.getParallelTesting().toString());
+                //runTestSuite.getSuite().setThreadCount(options.getParallelThreadCounter());
+                //runTestSuite.getSuite().setDataProviderThreadCount(options.getParallelThreadCounter());
             }
 
             if(!options.getSaveResultPath().isEmpty()){
-                runableTestSuite.getTng().setOutputDirectory(options.getSaveResultPath().replaceAll("/","\\"));
+                runTestSuite.getTng().setOutputDirectory(options.getSaveResultPath().replaceAll("/","\\"));
             }else {
-                runableTestSuite.getTng().setOutputDirectory(runableTestSuite.getNewPathDirectory());
+                runTestSuite.getTng().setOutputDirectory(runTestSuite.getNewPathDirectory());
             }
 
-            runableTestSuite.setClasses(tempClasses);
-            runableTestSuite.runVirtualSuit();
+            runTestSuite.setClasses(tempClasses);
+            runTestSuite.run();
 
         } catch (Exception e) {
             log.warn("Options object is null" + e.getStackTrace());
             WindowsDialogs.optionsIsNull();
         }
+    }
+
+    public void stopped() {
+        runTestSuite.stopThread();
+    }
+
+    public void paused(){
+        runTestSuite.pauseThread();
+    }
+
+    public void resumed() {
+      runTestSuite.resumeThread();
+    }
+
+    public void skipped() {
+        runTestSuite.skippTestCase();
     }
 
     private void iniBundleResources() {

@@ -10,6 +10,9 @@ package com.arrival.unit.suites;
 
 import com.arrival.unit.listener.EmailListener;
 import com.arrival.unit.listener.PreConfigListener;
+import com.arrival.unit.listener.TestListener;
+import javafx.beans.property.ReadOnlyDoubleProperty;
+import javafx.beans.property.ReadOnlyStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.TestNG;
@@ -24,7 +27,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class ArrivalTestSuite {
+import javafx.concurrent.Worker;
+
+public class ArrivalTestSuite /*implements Worker{*/ extends Thread{
     private static final Logger log = LogManager.getLogger(ArrivalTestSuite.class);
     /**
      * @param suiteID:  Counter to create different TestNG-Suite-Name
@@ -45,33 +50,64 @@ public class ArrivalTestSuite {
      * TestNG properties
      */
     private TestNG tng = new TestNG();
+
     private List<XmlClass> classes = new ArrayList<>();
     private XmlSuite suite = new XmlSuite();
     private List<XmlSuite> suites = new ArrayList<>();
     private XmlTest xmlTest = new XmlTest(suite);
     private EmailListener eml;
     private PreConfigListener pcl;
+    private TestListener tla;
     private String saveResultDir;
 
     public ArrivalTestSuite() {
         eml = new EmailListener();
         pcl = new PreConfigListener();
+        tla = new TestListener();
+
         suiteID++;
         tng.setDefaultSuiteName("RegressionsTest - " + suiteID);
-        tng.addListener(eml);
-        tng.addListener(pcl);
+        //tng.addListener(eml);
+        //tng.addListener(pcl);
+        //tng.addListener(tla);
 
         xmlTest.setName("RegressionsTest - " + suiteID);
         suite.setName("RegressionsTest - " + suiteID);
         suites.add(suite);
     }
 
-    public void runVirtualSuit() {
+ //   @Override
+    public void run() {
         createVirtualSuite();
         //suites.add(suite);
         tng.setXmlSuites(suites);
         tng.run();
     }
+
+    public void stopThread(){
+       // this.interrupt();
+    }
+
+    public void pauseThread(){
+        synchronized(tng) {
+            try {
+                tng.wait();
+            } catch (InterruptedException e) {
+                log.error(e.getMessage());
+            }
+        }
+    }
+
+    public void resumeThread() {
+        synchronized(tng) {
+            tng.notify();
+        }
+    }
+
+    public void skippTestCase() {
+        tng.getTestListeners().iterator().next();
+    }
+
 
     private void createVirtualSuite() {
         //suite.setName("TmpSuite");
