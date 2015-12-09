@@ -41,7 +41,6 @@ public class AppiumManager {
 
 
     public AppiumManager() {
-
     }
 
 

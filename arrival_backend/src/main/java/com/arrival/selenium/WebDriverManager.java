@@ -48,8 +48,8 @@ public class WebDriverManager {
                     log.error("Error while initializing IEDriver");
                 }
                 System.setProperty("webdriver.ie.driver", "arrival_backend" + File.separator + "src"
-                        + File.separator + "main" + File.separator + File.separator
-                        + "resources" + File.separator + "webdriver" + File.separator + "IEDriverServer.exe");
+                                                                            + File.separator + "main" + File.separator + File.separator
+                                                                            + "resources" + File.separator + "webdriver" + File.separator + "IEDriverServer.exe");
                 driver = new InternetExplorerDriver(this.setUpIEDriver());
                 break;
 

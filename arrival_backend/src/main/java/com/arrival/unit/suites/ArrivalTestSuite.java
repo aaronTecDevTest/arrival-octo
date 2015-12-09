@@ -152,9 +152,9 @@ public class ArrivalTestSuite /*implements Worker{*/ extends Thread{
         boolean success = dir.mkdir();
 
         if (! success)
-            log.info("Directory creation failed1");
+            log.info("Directory creation failed!");
         else
-            log.info("Directory creation success");
+            log.info("Directory creation success!");
     }
 
     public void setClasses(List<XmlClass> classes) {

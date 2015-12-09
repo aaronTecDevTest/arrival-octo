@@ -111,19 +111,17 @@ public class FXMLArrivalTableViewController /*extends Thread*/ implements Initia
 
             tempSeleniumManager = new SeleniumManager();
             tempAppiumManager = new AppiumManager();
-
             List<XmlClass> tempClasses = new ArrayList<>();
+
             if (options.getPlatform().equals("Web")) {
                 tempSeleniumManager.setTestSuiteConfigs(options);
                 SeleniumSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
                 SeleniumSingleton.setFramework(SeleniumSingleton.ARRIVAL);
-
                 //tempClasses.add(new XmlClass("com.arrival.selenium.SeleniumSingleton"));
             } else if (options.getPlatform().equals("Mobile")) {
                 tempAppiumManager.setTestSuiteConfigs(options);
                 AppiumSingleton.getInstance().setAppiumManager(tempAppiumManager);
                 AppiumSingleton.setFramework(AppiumSingleton.ARRIVAL);
-
                 //tempClasses.add(new XmlClass("com.arrival.appium.AppiumSingleton"));
             } else {
                 log.warn("No Platform is set up!");

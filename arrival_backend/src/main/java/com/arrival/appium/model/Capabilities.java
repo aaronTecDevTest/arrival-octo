@@ -9,7 +9,6 @@ package com.arrival.appium.model;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.util.StringBuilders;
 
 public class Capabilities {
     private static final Logger log = LogManager.getLogger(Capabilities.class);

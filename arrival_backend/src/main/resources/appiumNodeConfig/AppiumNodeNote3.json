@@ -1,18 +1,19 @@
 {
   "capabilities": [
     {
-      "browserName": "android",
-      "version": "",
+      "browserName": "chrome",
+      "version": "5.0",
       "maxInstances": 1,
       "platform": "ANDROID",
-      "platformName": "Android"
+      "deviceName": "Note3",
+      "udid":20715382
     }
   ],
   "configuration": {
     "cleanUpCycle": 2000,
     "timeout": 30000,
     "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
-    "url": "http://127.0.0.1:6666/wd/hub",
+    "url": "http://127.0.0.1:5555/wd/hub",
     "host": "127.0.0.1",
     "port": 5555,
     "maxSession": 20,

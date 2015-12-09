@@ -9,15 +9,15 @@ package com.arrival.appium;
  * Package: com.arrival.appium
  */
 
-import com.arrival.appium.model.Capabilities;
 import com.arrival.appium.model.NodeConfig;
+import com.arrival.appium.model.Capabilities;
 import com.arrival.utilities.interfaces.IFConfig;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.Platform;
+
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -67,6 +67,13 @@ public class MobilDriverManager {
 
 
     private AndroidDriver setUpAndroid( ) {
+
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         Capabilities tempCap = nodeConfig.getSingelCapability();
         AndroidDriver androidDriver = null;
 
@@ -81,21 +88,22 @@ public class MobilDriverManager {
                                       + nodeConfig.getConfiguration().getHubPort() + "/wd/hub"
             );
 
-          //  DesiredCapabilities capabilities = new DesiredCapabilities();
-            DesiredCapabilities capabilities =  DesiredCapabilities.android();
-/*
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            //DesiredCapabilities capabilities =  DesiredCapabilities.android();
+
             capabilities.setCapability(CapabilityType.PLATFORM, tempCap.getPlatform());
             capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());
             capabilities.setCapability(CapabilityType.BROWSER_NAME, tempCap.getBrowserName());
             capabilities.setCapability("udid", tempCap.getUdid());
             capabilities.setCapability("deviceName", tempCap.getDeviceName());
-            if(appiumConfig.getMobileTestingArt().equals()("Mobile Web")){
+            if(appiumConfig.getMobileTestingArt().equals("Mobile Web")){
                 capabilities.setCapability("autoWebview", true);
             } else{
                 capabilities.setCapability("app", app.getAbsolutePath());
                 capabilities.setCapability("appPackage", appiumConfig.getPackageBundleID());
                 //capabilities.setCapability("appActivity", ".ContactManage");
-            }*/
+            }
+
             androidDriver =  new AndroidDriver(url, capabilities);
             androidDriver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 

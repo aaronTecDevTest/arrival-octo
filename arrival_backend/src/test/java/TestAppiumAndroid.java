@@ -12,7 +12,7 @@ import com.arrival.appium.model.NodeConfig;
 public class TestAppiumAndroid {
 
     private NodeConfig nodeConfig = new NodeConfig();
-    private Capabilities [] capabilities;
+    private Capabilities[] capabilities;
     private Configuration configuration = new Configuration();
 
     public TestAppiumAndroid(){

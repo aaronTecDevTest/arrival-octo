@@ -425,7 +425,6 @@ public class FXMLArrivalMainController implements Initializable {
         optionsViewStage.hide();
         optionsViewStage.initOwner(((Node) actionEvent.getSource()).getScene().getWindow());
         optionsViewStage.show();
-
     }
 
     @FXML
@@ -487,7 +486,7 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpIOSTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderIOS = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
-        //  ArrayList<String> fileNames = fileNameLoaderIOS.getClassName();
+        //ArrayList<String> fileNames = fileNameLoaderIOS.getClassName();
         ArrayList<String> classPackage = fileNameLoaderIOS.getClassPackage();
         try {
             for (int i = 0; i < fileNameLoaderIOS.getSize(); i++) {
@@ -523,7 +522,7 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpANDTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderAND = new FileNameLoader("/com/arrival/testCase/andTestcase", ".class");
-        //    ArrayList<String> fileNames = fileNameLoaderAND.getClassName();
+        //ArrayList<String> fileNames = fileNameLoaderAND.getClassName();
         ArrayList<String> classPackage = fileNameLoaderAND.getClassPackage();
         try {
             for (int i = 0; i < fileNameLoaderAND.getSize(); i++) {
