@@ -20,7 +20,7 @@
         <version.sikuli>1.1.0</version.sikuli>
         <version.junit>4.11</version.junit>
         <version.testng>6.8.21</version.testng>
-        <version.io.appium>3.2.0</version.io.appium>
+        <version.io.appium>3.3.0</version.io.appium>
         <veriosn.commons.validator>1.4.1</veriosn.commons.validator>
         <version.jemeter.plugin>1.10.1</version.jemeter.plugin>
         <version.jenkins.client>0.3.0</version.jenkins.client>

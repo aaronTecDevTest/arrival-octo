@@ -119,7 +119,10 @@ public class AppiumAndroid implements IFAppiumServer {
                     .usingDriverExecutable(new File(NODE_PATH_MAC))
                     .withAppiumJS(new File(APPIUM_PATH_MAC))
                     //.withLogFile(new File(LOG_FILE))
-                    .withArgument(GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
+                    .withArgument(GeneralServerFlag.UIID, nodeConfig.getSingelCapability().getUdid())
+                    .withArgument(GeneralServerFlag.AUTOMATION_NAME,"Appium")
+
+                    .withArgument( GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
         }
 
         if (SystemPreferences.getInstance().isWindows()) {
@@ -127,6 +130,8 @@ public class AppiumAndroid implements IFAppiumServer {
                     .usingDriverExecutable(new File(NODE_PATH_WIN))
                     .withAppiumJS(new File(APPIUM_PATH_WIN))
                     //.withLogFile(new File(LOG_FILE))
+                    .withArgument(GeneralServerFlag.UIID, nodeConfig.getSingelCapability().getUdid())
+                    .withArgument(GeneralServerFlag.AUTOMATION_NAME,"Appium")
                     .withArgument(GeneralServerFlag.CONFIGURATION_FILE, nodeConfig.getConfigPath().toString()));
         }
     }

@@ -97,7 +97,7 @@ public class MobilDriverManager {
             capabilities.setCapability("udid", tempCap.getUdid());
             capabilities.setCapability("deviceName", tempCap.getDeviceName());
             if(appiumConfig.getMobileTestingArt().equals("Mobile Web")){
-                capabilities.setCapability("autoWebview", true);
+               // capabilities.setCapability("autoWebview", true);
             } else{
                 capabilities.setCapability("app", app.getAbsolutePath());
                 capabilities.setCapability("appPackage", appiumConfig.getPackageBundleID());
