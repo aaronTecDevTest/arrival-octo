@@ -11,6 +11,8 @@ package com.arrival.appium;
 
 import com.arrival.appium.model.NodeConfig;
 import com.arrival.appium.model.Capabilities;
+import com.arrival.appium.server.AppiumAndroid;
+import com.arrival.utilities.interfaces.IFAppiumServer;
 import com.arrival.utilities.interfaces.IFConfig;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -32,18 +34,20 @@ public class MobilDriverManager {
 
     IFConfig appiumConfig;
     NodeConfig nodeConfig ;
+    IFAppiumServer appiumServer;
 
     public MobilDriverManager() {
         appiumConfig = null;
         nodeConfig = null;
     }
 
-    public AppiumDriver setUpDriver(IFConfig runningConfiguration, NodeConfig nodeConfig) {
+    public AppiumDriver setUpDriver(IFAppiumServer appiumServer, IFConfig runningConfiguration) {
         log.debug("Setting up AppiumDriver");
 
         AppiumDriver driver = null;
         this.appiumConfig = runningConfiguration;
-        this.nodeConfig = nodeConfig;
+        this.appiumServer = appiumServer;
+        this.nodeConfig = ((AppiumAndroid) appiumServer).getNodeConfig();
 
         String platform = appiumConfig.getMobilePlatform();
 
@@ -81,15 +85,14 @@ public class MobilDriverManager {
             //File classpathRoot = new File(System.getProperty("user.dir"));
             //File appDir = new File(classpathRoot, "/ContactManager");
             //File app = new File(appDir, ".apk");
-             File app = new File(appiumConfig.getAppFilePath());
+            File app = new File(appiumConfig.getAppFilePath());
 
             URL url = new URL("http://"
                                       + nodeConfig.getConfiguration().getHubHost() + ":"
                                       + nodeConfig.getConfiguration().getHubPort() + "/wd/hub"
             );
 
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            //DesiredCapabilities capabilities =  DesiredCapabilities.android();
+            DesiredCapabilities capabilities =  DesiredCapabilities.android();
 
             capabilities.setCapability(CapabilityType.PLATFORM, tempCap.getPlatform());
             capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());
@@ -97,14 +100,14 @@ public class MobilDriverManager {
             capabilities.setCapability("udid", tempCap.getUdid());
             capabilities.setCapability("deviceName", tempCap.getDeviceName());
             if(appiumConfig.getMobileTestingArt().equals("Mobile Web")){
-               // capabilities.setCapability("autoWebview", true);
+                capabilities.setCapability("autoWebview", true);
             } else{
                 capabilities.setCapability("app", app.getAbsolutePath());
                 capabilities.setCapability("appPackage", appiumConfig.getPackageBundleID());
                 //capabilities.setCapability("appActivity", ".ContactManage");
             }
 
-            androidDriver =  new AndroidDriver(url, capabilities);
+            androidDriver =  new AndroidDriver(appiumServer.getSeverInstance(), capabilities);
             androidDriver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 
             return androidDriver;
@@ -134,6 +137,7 @@ public class MobilDriverManager {
             );
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
+
             capabilities.setCapability(CapabilityType.BROWSER_NAME, tempCap.getBrowserName());
             capabilities.setCapability(CapabilityType.PLATFORM, tempCap.getPlatform());
             capabilities.setCapability(CapabilityType.VERSION, tempCap.getVersion());

@@ -13,6 +13,7 @@ import com.arrival.appium.AppiumSingleton;
 import com.arrival.appium.MobilDriverManager;
 import com.arrival.appium.model.NodeConfig;
 import com.arrival.utilities.ArrivalResult;
+import com.arrival.utilities.interfaces.IFAppiumServer;
 import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
 import io.appium.java_client.AppiumDriver;
@@ -93,6 +94,8 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     public void setUpAppiumServerList() {
         MobilDriverManager mobilDriverManager = new MobilDriverManager();
         IFConfig appiumConfig = appiumManager.getTestSuiteConfigs();
+        ArrayList<IFAppiumServer> appiumServersList = appiumManager.getAppiumServersList();
+
         AppiumDriver androidDriver;
 
         if (AppiumSingleton.getFramework().equals(AppiumSingleton.ARRIVAL)) {
@@ -100,8 +103,15 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
             if (appiumConfig.getParallelTesting()) {
                 //If Json is in use
                 if( appiumConfig.getJsonConfigInUse()) {
-                    for (NodeConfig tempNodeConfig : nodeConfigsList){
+
+
+                      /* for (NodeConfig tempNodeConfig : nodeConfigsList){
                         androidDriver = mobilDriverManager.setUpDriver(appiumConfig, tempNodeConfig);
+                        appiumDriverList.add(androidDriver);
+                    }*/
+
+                    for (IFAppiumServer tempServer : appiumServersList){
+                        androidDriver = mobilDriverManager.setUpDriver(tempServer, appiumConfig);
                         appiumDriverList.add(androidDriver);
                     }
                 }else {
@@ -113,8 +123,13 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
                 //Todo: Find out how to shoot down the @DataProvider (parallel = false)
                 //If Json is in use
                 if(appiumConfig.getJsonConfigInUse()) {
-                    for (NodeConfig tempNodeConfig : nodeConfigsList){
-                        androidDriver = mobilDriverManager.setUpDriver(appiumConfig, tempNodeConfig);
+                    /*for (NodeConfig tempNodeConfig : nodeConfigsList){
+                        androidDriver = mobilDriverManager.setUpDriver(appiumManager,appiumConfig, tempNodeConfig);
+                        appiumDriverList.add(androidDriver);
+                    }*/
+
+                    for (IFAppiumServer tempServer : appiumServersList){
+                        androidDriver = mobilDriverManager.setUpDriver(tempServer, appiumConfig);
                         appiumDriverList.add(androidDriver);
                     }
                 }else {
@@ -146,7 +161,6 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
             appiumManager.stopDefaultANDServer();
         }
     }
-
 
     /**
      * Function will be run only if the ArrivalTestSuite was instanced

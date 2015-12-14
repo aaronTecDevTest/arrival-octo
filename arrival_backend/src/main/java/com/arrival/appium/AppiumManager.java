@@ -238,9 +238,6 @@ public class AppiumManager {
      * ***************************************************************************
      * ***************************************************************************
      * ***************************************************************************
-     * ***************************************************************************
-     * ***************************************************************************
-     * ***************************************************************************
      *****************************************************************************
      */
     public void startServer() {
@@ -314,5 +311,21 @@ public class AppiumManager {
                 log.error("Instance of port: " + serverPort + " not found.");
             }
         }
+    }
+
+    public ArrayList<IFAppiumServer> getAppiumServersList() {
+        return appiumServersList;
+    }
+
+    public void setAppiumServersList(ArrayList<IFAppiumServer> appiumServersList) {
+        this.appiumServersList = appiumServersList;
+    }
+
+    public ArrayList<IFAppiumServer> getAppiumDefaultServersList() {
+        return appiumDefaultServersList;
+    }
+
+    public void setAppiumDefaultServersList(ArrayList<IFAppiumServer> appiumDefaultServersList) {
+        this.appiumDefaultServersList = appiumDefaultServersList;
     }
 }
