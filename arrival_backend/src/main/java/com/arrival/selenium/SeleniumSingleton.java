@@ -18,17 +18,24 @@ public class SeleniumSingleton {
 
     private static final Logger log = LogManager.getLogger(SeleniumSingleton.class);
     private static SeleniumSingleton ourInstance = new SeleniumSingleton();
-    private static SeleniumManager seleniumManager;
+    private static SeleniumManager seleniumManager = new SeleniumManager();
 
     private SeleniumSingleton() {
         framework = TESTNG;
-        seleniumManager = new SeleniumManager();
         log.info(SeleniumSingleton.class + " set up!!");
     }
 
     public static SeleniumSingleton getInstance() {
 
         return ourInstance;
+    }
+
+    public static SeleniumManager getSeleniumManager() {
+        return seleniumManager;
+    }
+
+    public static void setSeleniumManager(SeleniumManager seleniumManager) {
+        SeleniumSingleton.seleniumManager = seleniumManager;
     }
 
     public static String getFramework() {
@@ -39,33 +46,7 @@ public class SeleniumSingleton {
         SeleniumSingleton.framework = framework;
     }
 
-    public SeleniumManager getSeleniumManager() {
-        return seleniumManager;
-    }
-
-    public void setSeleniumManager(SeleniumManager seleniumManager) {
-        SeleniumSingleton.seleniumManager = seleniumManager;
-    }
-
     public boolean isArrival(){
         return    framework.equals(ARRIVAL);
     }
-
-    /**
-     * Code will be run only if the SeleniumTestSuite was instanced
-     *
-    @BeforeSuite
-    public void setUpSeleniumConfig() {
-        setFramework(SeleniumSingleton.ARRIVAL);
-         //seleniumManager.setUpSeleniumServerList();
-    }
-
-    /**
-     * Code will be run only if the SeleniumTestSuite was instanced
-     *
-    @AfterSuite
-    public void cleanSeleniumConfig() {
-        //setFramework(SeleniumSingleton.TESTNG);
-        //seleniumManager.setDownSeleniumServerList();
-    }*/
 }

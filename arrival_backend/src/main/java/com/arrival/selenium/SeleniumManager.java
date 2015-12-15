@@ -45,4 +45,10 @@ public class SeleniumManager {
     public void setTestSuiteConfigs(IFConfig testSuiteConfigs) {
         this.testSuiteConfigs = testSuiteConfigs;
     }
+
+    public void setUpSeleniumServerList() {
+    }
+
+    public void setDownSeleniumServerList() {
+    }
 }

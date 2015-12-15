@@ -12,6 +12,8 @@ import com.arrival.appium.AppiumManager;
 import com.arrival.appium.AppiumSingleton;
 import com.arrival.selenium.SeleniumManager;
 import com.arrival.selenium.SeleniumSingleton;
+import com.arrival.unit.listener.PreConfigListenerAppium;
+import com.arrival.unit.listener.PreConfigListenerSelenium;
 import com.arrival.unit.suites.ArrivalTestSuite;
 import com.arrival.utilities.WindowsDialogs;
 import com.arrival.windows.model.Options;
@@ -66,8 +68,6 @@ public class FXMLArrivalTableViewController /*extends Thread*/ implements Initia
 
     private ArrivalTestSuite runTestSuite;
     private ObservableList dateTestSuite;
-    private SeleniumManager tempSeleniumManager;
-    private AppiumManager tempAppiumManager;
     private Options options;
     private String platform;
 
@@ -106,23 +106,33 @@ public class FXMLArrivalTableViewController /*extends Thread*/ implements Initia
 
     public void run() {
         try {
-
             log.info(options.toString());
 
-            tempSeleniumManager = new SeleniumManager();
-            tempAppiumManager = new AppiumManager();
+            SeleniumManager tempSeleniumManager = new SeleniumManager();
+            AppiumManager tempAppiumManager = new AppiumManager();
+
+            PreConfigListenerSelenium preConfigListenerSelenium = new PreConfigListenerSelenium();
+            PreConfigListenerAppium preConfigListenerAppium = new PreConfigListenerAppium();
+
+
+
             List<XmlClass> tempClasses = new ArrayList<>();
 
             if (options.getPlatform().equals("Web")) {
                 tempSeleniumManager.setTestSuiteConfigs(options);
-                SeleniumSingleton.getInstance().setSeleniumManager(tempSeleniumManager);
                 SeleniumSingleton.setFramework(SeleniumSingleton.ARRIVAL);
-                //tempClasses.add(new XmlClass("com.arrival.selenium.SeleniumSingleton"));
+                SeleniumSingleton.setSeleniumManager(tempSeleniumManager);
+                preConfigListenerSelenium.setSeleniumManager(tempSeleniumManager);
+                runTestSuite.getTng().addListener(preConfigListenerSelenium);
+                tempClasses.add(new XmlClass("com.arrival.selenium.SeleniumSingleton"));
+
             } else if (options.getPlatform().equals("Mobile")) {
                 tempAppiumManager.setTestSuiteConfigs(options);
-                AppiumSingleton.getInstance().setAppiumManager(tempAppiumManager);
                 AppiumSingleton.setFramework(AppiumSingleton.ARRIVAL);
-                //tempClasses.add(new XmlClass("com.arrival.appium.AppiumSingleton"));
+                AppiumSingleton.setAppiumManager(tempAppiumManager);
+                preConfigListenerAppium.setAppiumManager(tempAppiumManager);
+                runTestSuite.getTng().addListener(preConfigListenerAppium);
+                tempClasses.add(new XmlClass("com.arrival.appium.AppiumSingleton"));
             } else {
                 log.warn("No Platform is set up!");
                 WindowsDialogs.noTestConfigSet();

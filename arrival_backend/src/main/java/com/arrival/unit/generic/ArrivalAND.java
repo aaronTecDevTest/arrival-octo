@@ -30,7 +30,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     private static final Logger log = LogManager.getLogger(ArrivalAND.class);
 
     private AppiumSingleton appiumSingleton = AppiumSingleton.getInstance();
-    private AppiumManager appiumManager =  appiumSingleton.getAppiumManager();
+    private AppiumManager appiumManager =  AppiumSingleton.getAppiumManager();
     private ArrayList<NodeConfig> nodeConfigsList = appiumManager.getNodeConfigList();
     private ArrayList<Object> appiumDriverList = new ArrayList<>();
     protected AndroidDriver androidDriver;
@@ -153,7 +153,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     public void setDownAppiumServerList() {
         for (Object temp : appiumDriverList) {
             ((AppiumDriver) temp).close();
-            ((AppiumDriver) temp).quit();
+           // ((AppiumDriver) temp).quit();
         }
 
         //Stop DefaultServer
@@ -162,9 +162,10 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
         }
     }
 
+/*
     /**
      * Function will be run only if the ArrivalTestSuite was instanced
-     */
+     *
      @BeforeSuite
      public void setUpAppiumConfig() {
          if(appiumSingleton.isArrival()){
@@ -174,13 +175,14 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
 
      /**
       * Function will be run only if the ArrivalTestSuite was instanced
-     */
+     *
      @AfterSuite
      public void cleanUpAppiumConfig() {
          if(appiumSingleton.isArrival()){
              appiumManager.stopServer();
          }
      }
+*/
 
     /*
     *Other method

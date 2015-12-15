@@ -18,12 +18,19 @@ public class AppiumSingleton {
 
     private static final Logger log = LogManager.getLogger(AppiumSingleton.class);
     private static AppiumSingleton ourInstance = new AppiumSingleton();
-    private static AppiumManager appiumManager;
+    private static AppiumManager appiumManager = new AppiumManager();
 
     private AppiumSingleton() {
         framework = TESTNG;
-        appiumManager = new AppiumManager();
         log.info(AppiumSingleton.class + " set up!!");
+    }
+
+    public static AppiumManager getAppiumManager() {
+        return appiumManager;
+    }
+
+    public static void setAppiumManager(AppiumManager appiumManager) {
+        AppiumSingleton.appiumManager = appiumManager;
     }
 
     public static AppiumSingleton getInstance() {
@@ -38,33 +45,7 @@ public class AppiumSingleton {
         AppiumSingleton.framework = framework;
     }
 
-    public AppiumManager getAppiumManager() {
-        return appiumManager;
-    }
-
-    public void setAppiumManager(AppiumManager appiumManager) {
-        AppiumSingleton.appiumManager = appiumManager;
-    }
-
-
     public boolean isArrival(){
         return    framework.equals(ARRIVAL);
     }
-
-    /**
-     * Function will be run only if the ArrivalTestSuite was instanced
-     *
-    @BeforeSuite
-    public void setUpAppiumConfig() {
-        setFramework(AppiumSingleton.ARRIVAL);
-        //appiumManager.startServer();
-    }
-
-    /**
-     * Function will be run only if the ArrivalTestSuite was instanced
-     *
-    @AfterSuite
-    public void cleanUpAppiumConfig() {
-        //appiumManager.stopServer();
-    }*/
 }

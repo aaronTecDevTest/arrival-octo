@@ -9,10 +9,9 @@ package com.arrival.unit.suites;
  */
 
 import com.arrival.unit.listener.EmailListener;
-import com.arrival.unit.listener.PreConfigListener;
+import com.arrival.unit.listener.PreConfigListenerAppium;
 import com.arrival.unit.listener.TestListener;
-import javafx.beans.property.ReadOnlyDoubleProperty;
-import javafx.beans.property.ReadOnlyStringProperty;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.TestNG;
@@ -27,7 +26,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import javafx.concurrent.Worker;
 
 public class ArrivalTestSuite /*implements Worker{*/ extends Thread{
     private static final Logger log = LogManager.getLogger(ArrivalTestSuite.class);
@@ -55,15 +53,15 @@ public class ArrivalTestSuite /*implements Worker{*/ extends Thread{
     private XmlSuite suite = new XmlSuite();
     private List<XmlSuite> suites = new ArrayList<>();
     private XmlTest xmlTest = new XmlTest(suite);
-    private EmailListener eml;
-    private PreConfigListener pcl;
-    private TestListener tla;
+    //private EmailListener eml;
+    //private PreConfigListenerAppium pcl;
+    //private TestListener tla;
     private String saveResultDir;
 
     public ArrivalTestSuite() {
-        eml = new EmailListener();
-        pcl = new PreConfigListener();
-        tla = new TestListener();
+        //eml = new EmailListener();
+        // pcl = new PreConfigListenerAppium();
+        //tla = new TestListener();
 
         suiteID++;
         tng.setDefaultSuiteName("RegressionsTest - " + suiteID);
