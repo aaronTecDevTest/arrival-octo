@@ -406,8 +406,8 @@ public class FXMLArrivalOptionsController implements Initializable {
         cmbWebServer.getSelectionModel().select("Non");
         cmbWebBrowser.getSelectionModel().select("FF - FireFox");
         txtJsonConfigWeb.setText("");
-        txtJsonConfigMobile.setText("C:\\Users\\a.kutekidila\\Dev\\GitHub\\arrival-octo\\arrival_backend\\src\\main\\resources\\appiumNodeConfig\\AppiumNodeNote3.json");
-        //txtJsonConfigMobile.setText("D:\\Dev\\project\\arrival-octo\\arrival_backend\\src\\main\\resources\\appiumNodeConfig\\AppiumNodeNote3.json");
+        //txtJsonConfigMobile.setText("C:\\Users\\a" +.kutekidila\\Dev\\GitHub\\arrival-octo\\arrival_backend\\src\\main\\resources\\appiumNodeConfig\\AppiumNodeNote3.json");
+        txtJsonConfigMobile.setText("D:\\Dev\\project\\arrival-octo\\arrival_backend\\src\\main\\resources\\appiumNodeConfig\\AppiumNodeNote3.json");
         txtSaveResultPath.setText("");
         txtAppPath.setText("");
         txtPackageBundleID.setText("");

@@ -78,7 +78,7 @@ public class SimpleAnd1 extends ArrivalAND {
         // Check the title of the page
         System.out.println("Page title is: " + androidDriver.getTitle());
 
-        WebElement element = androidDriver.findElement(By.xpath(".//*[@id=\"T-74389010\"]/div/L/a"));
+        WebElement element = androidDriver.findElement(By.id("Tsearch"));
         element.click();
         // Google's search is rendered dynamically with JavaScript.
         // Wait for the page to load, timeout after 10 seconds

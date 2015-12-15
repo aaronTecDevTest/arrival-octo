@@ -186,6 +186,11 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     *Other method
     */
     public void pauseTest(long milSec) {
+        try {
+            Thread.sleep(milSec);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     /*
