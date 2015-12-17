@@ -8,10 +8,8 @@ package com.arrival.unit.suites;
  * Package: com.arrival.unit.suites
  */
 
-import com.arrival.unit.listener.EmailListener;
-import com.arrival.unit.listener.PreConfigListenerAppium;
-import com.arrival.unit.listener.TestListener;
 
+import javafx.application.Platform;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.TestNG;
@@ -25,9 +23,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 
 
-public class ArrivalTestSuite /*implements Worker{*/ extends Thread{
+public class ArrivalTestSuite extends Thread{
     private static final Logger log = LogManager.getLogger(ArrivalTestSuite.class);
     /**
      * @param suiteID:  Counter to create different TestNG-Suite-Name
@@ -74,12 +74,29 @@ public class ArrivalTestSuite /*implements Worker{*/ extends Thread{
         suites.add(suite);
     }
 
- //   @Override
+    @Override
     public void run() {
-        createVirtualSuite();
-        //suites.add(suite);
-        tng.setXmlSuites(suites);
-        tng.run();
+
+        while (!this.isInterrupted()) {
+            // UI updaten
+            Platform.runLater( new Runnable() {
+                @Override
+                public void run() {
+                    createVirtualSuite();
+                    //suites.add(suite);
+                    tng.setXmlSuites(suites);
+                    tng.run();
+                }
+            });
+
+            // Thread sleep for 3 sec
+            try {
+
+                sleep(TimeUnit.SECONDS.toMillis(3));
+            } catch (InterruptedException ex) {
+                log.error(ex);
+            }
+        }
     }
 
     public void stopThread(){

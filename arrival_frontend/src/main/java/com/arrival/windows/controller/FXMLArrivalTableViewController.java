@@ -18,6 +18,7 @@ import com.arrival.unit.suites.ArrivalTestSuite;
 import com.arrival.utilities.WindowsDialogs;
 import com.arrival.windows.model.Options;
 import com.arrival.windows.model.TestCase;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -40,7 +41,7 @@ import java.util.ResourceBundle;
  * Controller Class for ViewMainApp. This Class have linked with ViewMainApp.fxml and
  * can evoke function from ViewMainApp.fxml file.
  */
-public class FXMLArrivalTableViewController /*extends Thread*/ implements Initializable  {
+public class FXMLArrivalTableViewController  implements Initializable,Runnable {
 
     /**
      * Logger
@@ -70,6 +71,8 @@ public class FXMLArrivalTableViewController /*extends Thread*/ implements Initia
     private ObservableList dateTestSuite;
     private Options options;
     private String platform;
+
+    private Thread t;
 
     /**
      * Called to initialize a controller after its root element has been
@@ -104,6 +107,7 @@ public class FXMLArrivalTableViewController /*extends Thread*/ implements Initia
         platform = "platform";
     }
 
+
     public void run() {
         try {
             log.info(options.toString());
@@ -113,8 +117,6 @@ public class FXMLArrivalTableViewController /*extends Thread*/ implements Initia
 
             PreConfigListenerSelenium preConfigListenerSelenium = new PreConfigListenerSelenium();
             PreConfigListenerAppium preConfigListenerAppium = new PreConfigListenerAppium();
-
-
 
             List<XmlClass> tempClasses = new ArrayList<>();
 

@@ -152,8 +152,8 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     @AfterClass
     public void setDownAppiumServerList() {
         for (Object temp : appiumDriverList) {
-            ((AppiumDriver) temp).close();
-           // ((AppiumDriver) temp).quit();
+            //((AppiumDriver) temp).close();
+            ((AppiumDriver) temp).quit();
         }
 
         //Stop DefaultServer
