@@ -26,19 +26,19 @@ public class SimpleTestWeb1 extends ArrivalWeb {
         setTcResult(ArrivalResult.PASSED);
     }
 
-    @Test(dataProvider = "driver", groups = {"fast"})
+    @Test(dataProvider = "driver",priority = 2, groups = {"fast"})
     public void aFastTest(WebDriver driver, Integer id) {
         System.out.println("Fast test 111 " + driver + " " + id);
-        setWebDriver(driver);
+       // setWebDriver(driver);
         driver.get("http://www.google.com");
         pauseTest(3000);
         click();
     }
 
-    @Test(dataProvider = "driver", groups = {"slow"})
+    @Test(dataProvider = "driver", priority = 2,groups = {"slow"})
     public void aSlowTest(WebDriver driver, Integer id) {
         System.out.println("Slow test 303 " + driver + " " + id);
-        setWebDriver(driver);
+       // setWebDriver(driver);
         driver.get("http://www.t-online.de");
         pauseTest(1000);
         click();
