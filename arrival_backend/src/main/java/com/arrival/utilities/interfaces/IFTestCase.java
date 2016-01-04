@@ -9,10 +9,8 @@ package com.arrival.utilities.interfaces;
  */
 
 import com.arrival.utilities.ArrivalResult;
-import io.appium.java_client.android.AndroidDriver;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
-import org.testng.annotations.Test;
 
 /**
  * Interface for TestCases
