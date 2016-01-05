@@ -1,0 +1,17 @@
+2015-11-19 15:25:24:340 - warn: Appium support for versions of node < 0.12 has been deprecated and will be removed in a future version. Please upgrade!
+2015-11-19 15:25:24:395 - info: Welcome to Appium v1.4.13 (REV c75d8adcb66a75818a542fe1891a34260c21f76a)
+2015-11-19 15:25:24:395 - info: Appium REST http interface listener started on 0.0.0.0:4723
+2015-11-19 15:25:24:397 - info: [debug] Non-default server args: {"log":"C:\\Users\\a.kutekidila\\Dev\\GitHub\\arrival-octo\\arrival_backend\\src\\main\\resources\\report\\log\\appiumLogs.txt","nodeconfig":"C:\\Users\\a.kutekidila\\Dev\\GitHub\\arrival-octo\\arrival_backend\\src\\main\\resources\\appiumNodeConfig\\AppiumNodeNote3.json"}
+2015-11-19 15:25:24:397 - info: Console LogLevel: debug
+2015-11-19 15:25:24:397 - info: File LogLevel: debug
+2015-11-19 15:25:24:400 - info: [debug] starting auto register thread for grid. Will try to register every 5000 ms.
+2015-11-19 15:25:25:168 - info: --> GET /wd/hub/status {}
+2015-11-19 15:25:25:170 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.13","revision":"c75d8adcb66a75818a542fe1891a34260c21f76a"}}}
+2015-11-19 15:25:25:176 - info: <-- GET /wd/hub/status 200 8.207 ms - 105 {"status":0,"value":{"build":{"version":"1.4.13","revision":"c75d8adcb66a75818a542fe1891a34260c21f76a"}}}
+2015-11-19 15:25:29:437 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444
+2015-11-19 15:26:44:523 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444
+2015-11-19 15:27:59:634 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444
+2015-11-19 15:29:14:740 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444
+2015-11-19 15:30:29:852 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444
+2015-11-19 15:31:44:960 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444
+2015-11-19 15:33:00:074 - info: [debug] Appium successfully registered with the grid on 127.0.0.1:4444

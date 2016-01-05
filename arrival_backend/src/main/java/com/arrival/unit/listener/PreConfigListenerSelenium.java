@@ -35,6 +35,9 @@ public class PreConfigListenerSelenium implements IExecutionListener {
         PreConfigListenerSelenium.seleniumManager = seleniumManager;
     }
 
+    /**
+     * Function will be run only if the ArrivalTestSuite was instanced
+     **/
     @Override
     public void onExecutionStart() {
         startTime = System.currentTimeMillis();
@@ -42,6 +45,9 @@ public class PreConfigListenerSelenium implements IExecutionListener {
         seleniumManager.setUpSeleniumServerList();
     }
 
+    /**
+     * Function will be run only if the ArrivalTestSuite was instanced
+     **/
     @Override
     public void onExecutionFinish() {
         seleniumManager.setDownSeleniumServerList();

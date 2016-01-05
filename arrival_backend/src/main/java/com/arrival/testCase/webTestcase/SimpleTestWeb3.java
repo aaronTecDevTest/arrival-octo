@@ -31,7 +31,7 @@ public class SimpleTestWeb3 extends ArrivalWeb {
     @Test(dataProvider = "driver", groups = {"fast"})
     public void aFastTest(WebDriver driver, Integer id) {
         System.out.println("Fast test 222 " + driver + " " + id);
-        setWebDriver(driver);
+        //setWebDriver(driver);
         driver.get("http://www.chakib.de/");
         WebElement wb = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/ul/li[2]/a"));
         wb.click();

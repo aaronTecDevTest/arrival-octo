@@ -1,0 +1,25 @@
+{
+  "capabilities":
+      [
+        {
+          "browserName": "<e.g._iPhone5_or_iPad4>",
+          "version":"<version_of_iOS_e.g._7.1>",
+          "maxInstances": 1,
+          "platform":"<platform_e.g._MAC_or_ANDROID>"
+        }
+      ],
+  "configuration":
+  {
+    "cleanUpCycle":2000,
+    "timeout":30000,
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "url":"http://<host_name_appium_server_or_ip-address_appium_server>:<appium_port>/wd/hub",
+    "host": <host_name_appium_server_or_ip-address_appium_server>,
+    "port": <appium_port>,
+    "maxSession": 1,
+    "register": true,
+    "registerCycle": 5000,
+    "hubPort": <grid_port>,
+    "hubHost": "<Grid_host_name_or_grid_ip-address>"
+  }
+}

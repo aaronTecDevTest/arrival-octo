@@ -28,9 +28,9 @@ public class SimpleAnd3 extends ArrivalAND {
         setTcResult(ArrivalResult.PASSED);
     }
 
-    @Test(dataProvider = "driver", groups = {"fast"})
-    public void getGoogle(AndroidDriver driver, Integer id) {
-        setWebDriver(driver);
+    @Test(dataProvider = "driver", priority = 2,groups = {"fast"})
+    public void getGoogleThree(AndroidDriver driver, Integer id) {
+     //   setWebDriver(driver);
 
         // And now use this to visit Google
         androidDriver.get("http://www.google.com");
@@ -61,9 +61,9 @@ public class SimpleAnd3 extends ArrivalAND {
         System.out.println("Page title is: " + androidDriver.getTitle());
     }
 
-    @Test(dataProvider = "driver", groups = {"fast"})
-    public void getTOnlineTv(AndroidDriver driver, Integer id) {
-        setWebDriver(driver);
+    @Test(dataProvider = "driver", priority = 2,groups = {"slow"})
+    public void getTOnlineTvThree(AndroidDriver driver, Integer id) {
+       // setWebDriver(driver);
 
         // And now use this to visit Google
         androidDriver.get("http://www.t-online.de/tv");

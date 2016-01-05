@@ -29,7 +29,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     protected static final Logger log = LogManager.getLogger(ArrivalWeb.class);
 
     private SeleniumSingleton seleniumConfigSingleton = SeleniumSingleton.getInstance();
-    private SeleniumManager seleniumManager = seleniumConfigSingleton.getSeleniumManager();
+    private SeleniumManager seleniumManager = SeleniumSingleton.getSeleniumManager();
     private ArrayList<Object> seleniumServerList = new ArrayList<>();
     protected WebDriver browser;
 
@@ -59,9 +59,18 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         tcClassPackage = new SimpleStringProperty();
     }
 
-    public void setWebDriver(WebDriver driver) {
+    /**
+     *
+     * @param driver auto run from TestNG, fist Test and ini the browser for future Tests
+     **/
+    @Test(dataProvider = "driver", groups = {"fast"}, priority = 1)
+    public void setUpDriver(WebDriver driver, Integer id){
         browser = driver;
     }
+    /*
+    public void setWebDriver(WebDriver driver) {
+        browser = driver;
+    }*/
 
     /**
      * Test NG method
@@ -166,7 +175,6 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     /**
      * Web general method (Selenium)
      */
-
     @Override
     public void click() {
         System.out.println("clicked");

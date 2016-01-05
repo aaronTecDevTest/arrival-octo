@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="RegressionsTest - 1" duration-ms="10577" started-at="2015-12-22T10:28:38Z" finished-at="2015-12-22T10:28:48Z">
+    <groups>
+      <group name="fast">
+        <method signature="SimpleAnd1.getGoogle(io.appium.java_client.android.AndroidDriver, java.lang.Integer)[pri:0, instance:com.arrival.testCase.andTestcase.SimpleAnd1@3a652d3c]" name="getGoogle" class="com.arrival.testCase.andTestcase.SimpleAnd1"/>
+        <method signature="SimpleAnd2.getGoogleTwo(io.appium.java_client.android.AndroidDriver, java.lang.Integer)[pri:0, instance:com.arrival.testCase.andTestcase.SimpleAnd2@4619a0f1]" name="getGoogleTwo" class="com.arrival.testCase.andTestcase.SimpleAnd2"/>
+        <method signature="SimpleAnd3.getGoogleThree(io.appium.java_client.android.AndroidDriver, java.lang.Integer)[pri:0, instance:com.arrival.testCase.andTestcase.SimpleAnd3@7096565]" name="getGoogleThree" class="com.arrival.testCase.andTestcase.SimpleAnd3"/>
+      </group> <!-- fast -->
+      <group name="slow">
+        <method signature="SimpleAnd1.getTOnlineTv(io.appium.java_client.android.AndroidDriver, java.lang.Integer)[pri:0, instance:com.arrival.testCase.andTestcase.SimpleAnd1@3a652d3c]" name="getTOnlineTv" class="com.arrival.testCase.andTestcase.SimpleAnd1"/>
+        <method signature="SimpleAnd2.getTOnlineTvTwo(io.appium.java_client.android.AndroidDriver, java.lang.Integer)[pri:0, instance:com.arrival.testCase.andTestcase.SimpleAnd2@4619a0f1]" name="getTOnlineTvTwo" class="com.arrival.testCase.andTestcase.SimpleAnd2"/>
+        <method signature="SimpleAnd3.getTOnlineTvThree(io.appium.java_client.android.AndroidDriver, java.lang.Integer)[pri:0, instance:com.arrival.testCase.andTestcase.SimpleAnd3@7096565]" name="getTOnlineTvThree" class="com.arrival.testCase.andTestcase.SimpleAnd3"/>
+      </group> <!-- slow -->
+    </groups>
+    <test name="TmpTest" duration-ms="10577" started-at="2015-12-22T10:28:38Z" finished-at="2015-12-22T10:28:48Z">
+      <class name="com.arrival.testCase.andTestcase.SimpleAnd2">
+        <test-method status="PASS" signature="setUpAppiumServerList()[pri:0, instance:com.arrival.testCase.andTestcase.SimpleAnd2@4619a0f1]" name="setUpAppiumServerList" is-config="true" duration-ms="24238" started-at="2015-12-22T11:28:13Z" finished-at="2015-12-22T11:28:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpAppiumServerList -->
+        <test-method status="PASS" signature="setUpDriver(io.appium.java_client.android.AndroidDriver, java.lang.Integer)[pri:0, instance:com.arrival.testCase.andTestcase.SimpleAnd2@4619a0f1]" name="setUpDriver" duration-ms="1" started-at="2015-12-22T11:28:38Z" data-provider="driver" finished-at="2015-12-22T11:28:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AndroidDriver: chrome on ANDROID (null)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method status="PASS" signature="getGoogleTwo(io.appium.java_client.android.AndroidDriver, java.lang.Integer)[pri:0, instance:com.arrival.testCase.andTestcase.SimpleAnd2@4619a0f1]" name="getGoogleTwo" duration-ms="4630" started-at="2015-12-22T11:28:38Z" data-provider="driver" finished-at="2015-12-22T11:28:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AndroidDriver: chrome on ANDROID (null)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getGoogleTwo -->
+        <test-method status="PASS" signature="getTOnlineTvTwo(io.appium.java_client.android.AndroidDriver, java.lang.Integer)[pri:0, instance:com.arrival.testCase.andTestcase.SimpleAnd2@4619a0f1]" name="getTOnlineTvTwo" duration-ms="5915" started-at="2015-12-22T11:28:42Z" data-provider="driver" finished-at="2015-12-22T11:28:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AndroidDriver: chrome on ANDROID (null)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTOnlineTvTwo -->
+        <test-method status="PASS" signature="setDownAppiumServerList()[pri:0, instance:com.arrival.testCase.andTestcase.SimpleAnd2@4619a0f1]" name="setDownAppiumServerList" is-config="true" duration-ms="1939" started-at="2015-12-22T11:28:48Z" finished-at="2015-12-22T11:28:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDownAppiumServerList -->
+      </class> <!-- com.arrival.testCase.andTestcase.SimpleAnd2 -->
+    </test> <!-- TmpTest -->
+  </suite> <!-- RegressionsTest - 1 -->
+</testng-results>

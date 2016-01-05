@@ -61,11 +61,21 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
         tcClassPackage = new SimpleStringProperty();
     }
 
-    public void setWebDriver(AndroidDriver driver) {
+
+    /**
+     *
+     * @param driver auto run from TestNG, fist Test and ini the androidDriver for future Tests
+     **/
+    @Test(dataProvider = "driver", priority = 1)
+    public void setUpDriver(AndroidDriver driver, Integer id){
         androidDriver = driver;
     }
-
     /*
+    public void setWebDriver(AndroidDriver driver) {
+       androidDriver = driver;
+    }*/
+
+    /**
      *Test NG method
      */
     @DataProvider(name = "driver", parallel = true)
@@ -90,7 +100,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
         return server;
     }
 
-    @BeforeClass
+    @BeforeSuite
     public void setUpAppiumServerList() {
         MobilDriverManager mobilDriverManager = new MobilDriverManager();
         IFConfig appiumConfig = appiumManager.getTestSuiteConfigs();
@@ -147,12 +157,12 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
             androidDriver = MobilDriverManager.setAndroidDefault();
             appiumDriverList.add(androidDriver);
         }
-}
+    }
 
-    @AfterClass
+    @AfterSuite
     public void setDownAppiumServerList() {
         for (Object temp : appiumDriverList) {
-            //((AppiumDriver) temp).close();
+            ((AppiumDriver) temp).close();
             ((AppiumDriver) temp).quit();
         }
 
@@ -162,28 +172,6 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
         }
     }
 
-/*
-    /**
-     * Function will be run only if the ArrivalTestSuite was instanced
-     *
-     @BeforeSuite
-     public void setUpAppiumConfig() {
-         if(appiumSingleton.isArrival()){
-             appiumManager.startServer();
-         }
-     }
-
-     /**
-      * Function will be run only if the ArrivalTestSuite was instanced
-     *
-     @AfterSuite
-     public void cleanUpAppiumConfig() {
-         if(appiumSingleton.isArrival()){
-             appiumManager.stopServer();
-         }
-     }
-*/
-
     /*
     *Other method
     */
@@ -191,7 +179,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
         try {
             Thread.sleep(milSec);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 

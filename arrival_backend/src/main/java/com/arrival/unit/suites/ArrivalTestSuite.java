@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 
-public class ArrivalTestSuite extends Thread{
+public class ArrivalTestSuite /*extends Thread*/{
     private static final Logger log = LogManager.getLogger(ArrivalTestSuite.class);
     /**
      * @param suiteID:  Counter to create different TestNG-Suite-Name
@@ -74,10 +74,10 @@ public class ArrivalTestSuite extends Thread{
         suites.add(suite);
     }
 
-    @Override
+    //@Override
     public void run() {
 
-        while (!this.isInterrupted()) {
+       /* while (!this.isInterrupted()) {
             // UI updaten
             Platform.runLater( new Runnable() {
                 @Override
@@ -91,12 +91,16 @@ public class ArrivalTestSuite extends Thread{
 
             // Thread sleep for 3 sec
             try {
-
                 sleep(TimeUnit.SECONDS.toMillis(3));
             } catch (InterruptedException ex) {
                 log.error(ex);
             }
-        }
+        }*/
+
+        createVirtualSuite();
+        //suites.add(suite);
+        tng.setXmlSuites(suites);
+        tng.run();
     }
 
     public void stopThread(){

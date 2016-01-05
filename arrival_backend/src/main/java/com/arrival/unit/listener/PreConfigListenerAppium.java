@@ -27,7 +27,6 @@ public class PreConfigListenerAppium implements IExecutionListener {
         this.startTime = startTime;
     }
 
-
     public AppiumManager getAppiumManager() {
         return appiumManager;
     }
