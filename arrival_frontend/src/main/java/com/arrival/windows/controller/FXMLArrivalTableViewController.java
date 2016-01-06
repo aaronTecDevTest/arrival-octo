@@ -18,7 +18,6 @@ import com.arrival.unit.suites.ArrivalTestSuite;
 import com.arrival.utilities.WindowsDialogs;
 import com.arrival.windows.model.Options;
 import com.arrival.windows.model.TestCase;
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -157,7 +156,8 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
             }
 
             runTestSuite.setClasses(tempClasses);
-            runTestSuite.run();
+            //runTestSuite.run();
+            runTestSuite.start();
 
         } catch (Exception e) {
             log.warn("Options object is null" + e.getStackTrace());
@@ -166,15 +166,15 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
     }
 
     public void stopped() {
-        runTestSuite.stopThread();
+        runTestSuite.stopTestsuite();
     }
 
     public void paused(){
-        runTestSuite.pauseThread();
+        runTestSuite.pauseTestsuite();
     }
 
     public void resumed() {
-      runTestSuite.resumeThread();
+      runTestSuite.resumeTestsuite();
     }
 
     public void skipped() {
