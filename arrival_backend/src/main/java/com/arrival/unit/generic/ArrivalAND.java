@@ -115,7 +115,6 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
                 //If Json is in use
                 if( appiumConfig.getJsonConfigInUse()) {
 
-
                       /* for (NodeConfig tempNodeConfig : nodeConfigsList){
                         androidDriver = mobilDriverManager.setUpDriver(appiumConfig, tempNodeConfig);
                         appiumDriverList.add(androidDriver);

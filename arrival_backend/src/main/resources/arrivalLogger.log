@@ -163,3 +163,9 @@ Driver info: io.appium.java_client.android.AndroidDriver
 2016-01-06 13:02:52,162 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:285) - Stop a Server: com.arrival.appium.server.AppiumAndroid@69d6af31
 2016-01-06 13:03:02,166 INFO  [JavaFX Application Thread] server.Hub (Hub.java:120) - Stop the hub on: 127.0.0.1 on port: 4444 successful!
 2016-01-06 13:03:02,167 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:54) - TestNG has finished, took around 107668ms
+2016-01-06 14:44:32,323 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-06 14:44:32,329 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-06 14:44:32,738 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-06 14:44:32,749 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-06 14:44:32,755 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - javafx.event.Event$$Lambda$67/493940918@476169c2
+2016-01-06 14:44:33,410 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
