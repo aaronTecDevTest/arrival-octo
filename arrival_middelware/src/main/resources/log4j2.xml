@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Configuration>
     <Properties>
-        <Property name='projectPrefix'>ArrivalLogger</Property>
+        <Property name='projectPrefix'>arrivalLogger</Property>
         <Property name='rawPattern'>%d %-5p [%t] %C{2} (%F:%L) - %m%n</Property>
 
         <Property name='coloredFullPattern'>%d %highlight{%-5p}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=cyan,
@@ -16,8 +16,8 @@
             DEBUG=green, TRACE=bright blue} %style{[%t] -}{bright,blue} %m%n
         </Property>
 
-        <Property name='fileName'>Log/${projectPrefix}.log</Property>
-        <Property name='filePattern'>Log/${projectPrefix}-%i.log</Property>
+        <Property name='fileName'>arrival_backend/src/main/resources/${projectPrefix}.log</Property>
+        <Property name='filePattern'>arrival_backend/src/main/resources/${projectPrefix}-%i.log</Property>
     </Properties>
     <Appenders>
         <Console name='Stdout' target='SYSTEM_OUT'>

@@ -1,0 +1,165 @@
+2016-01-06 11:02:30,320 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-06 11:02:30,324 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-06 11:02:30,759 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-06 11:02:30,770 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-06 11:02:30,776 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - javafx.event.Event$$Lambda$67/1808345644@7c9d837
+2016-01-06 11:02:31,524 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-06 11:03:49,894 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:326) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'AND
+2016-01-06 11:03:51,093 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:326) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'AND
+2016-01-06 11:03:54,069 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-06 11:03:56,886 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-06 11:04:02,205 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:269) - ToggleButton[id=togJsonMobile, styleClass=toggle-button]'Off'
+2016-01-06 11:04:03,180 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:144) - Button[id=btnJsonConfigMobile, styleClass=button]'Button'
+2016-01-06 11:04:09,406 WARN  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:156) - Count open or load directory!
+2016-01-06 11:04:11,892 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-06 11:04:11,894 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Mobile->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->true->C:\Users\a.kutekidila\Dev\GitHub\arrival-octo\arrival_backend\src\main\resources\appiumNodeConfig\AppiumNodeNote3.json->
+2016-01-06 11:04:32,867 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-06 11:04:32,867 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Mobile->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->true->C:\Users\a.kutekidila\Dev\GitHub\arrival-octo\arrival_backend\src\main\resources\appiumNodeConfig\AppiumNodeNote3.json->
+2016-01-06 11:04:32,881 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-06 11:04:32,899 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:44) - TestNG is going to start the Pre-Config for Appium
+2016-01-06 11:04:33,500 INFO  [JavaFX Application Thread] server.Hub (Hub.java:58) - SeleniumHub created
+2016-01-06 11:04:33,947 ERROR [JavaFX Application Thread] server.Hub (Hub.java:110) - Fail to start the hub on: 127.0.0.1 on port: 4444. Address already in use: bind
+2016-01-06 11:05:55,046 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:251) - Start a new Server: com.arrival.appium.server.AppiumAndroid@42c219cc
+2016-01-06 11:05:55,287 DEBUG [JavaFX Application Thread] appium.MobilDriverManager (MobilDriverManager.java:45) - Setting up AppiumDriver
+2016-01-06 11:06:33,512 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:285) - Stop a Server: com.arrival.appium.server.AppiumAndroid@42c219cc
+2016-01-06 11:06:43,520 INFO  [JavaFX Application Thread] server.Hub (Hub.java:120) - Stop the hub on: 127.0.0.1 on port: 4444 successful!
+2016-01-06 11:06:43,521 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:54) - TestNG has finished, took around 130622ms
+2016-01-06 11:11:38,815 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-06 11:11:38,819 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-06 11:11:39,242 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-06 11:11:39,252 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-06 11:11:39,259 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - javafx.event.Event$$Lambda$67/1156141119@34e783f1
+2016-01-06 11:11:39,938 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-06 11:11:43,511 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:326) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'AND
+2016-01-06 11:11:44,711 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:326) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'AND
+2016-01-06 11:11:46,263 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-06 11:11:50,808 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-06 11:11:52,255 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-06 11:11:54,806 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:269) - ToggleButton[id=togJsonMobile, styleClass=toggle-button]'Off'
+2016-01-06 11:11:55,414 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-06 11:11:55,423 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Mobile->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->true->C:\Users\a.kutekidila\Dev\GitHub\arrival-octo\arrival_backend\src\main\resources\appiumNodeConfig\AppiumNodeNote3.json->
+2016-01-06 11:13:18,033 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-06 11:13:18,034 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Mobile->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->true->C:\Users\a.kutekidila\Dev\GitHub\arrival-octo\arrival_backend\src\main\resources\appiumNodeConfig\AppiumNodeNote3.json->
+2016-01-06 11:13:18,048 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-06 11:13:18,072 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:44) - TestNG is going to start the Pre-Config for Appium
+2016-01-06 11:13:18,671 INFO  [JavaFX Application Thread] server.Hub (Hub.java:58) - SeleniumHub created
+2016-01-06 11:13:19,074 INFO  [JavaFX Application Thread] server.Hub (Hub.java:108) - Start the hub on: 127.0.0.1 on port: 4444 successful!
+2016-01-06 11:13:34,146 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:251) - Start a new Server: com.arrival.appium.server.AppiumAndroid@f3640bb
+2016-01-06 11:13:34,251 DEBUG [JavaFX Application Thread] appium.MobilDriverManager (MobilDriverManager.java:45) - Setting up AppiumDriver
+2016-01-06 11:14:05,809 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:285) - Stop a Server: com.arrival.appium.server.AppiumAndroid@f3640bb
+2016-01-06 11:14:15,835 INFO  [JavaFX Application Thread] server.Hub (Hub.java:120) - Stop the hub on: 127.0.0.1 on port: 4444 successful!
+2016-01-06 11:14:15,836 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:54) - TestNG has finished, took around 57764ms
+2016-01-06 11:24:50,160 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-06 11:25:00,369 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-06 11:25:03,432 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-06 11:25:04,849 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-06 11:25:08,441 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-06 11:25:08,445 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-06 11:25:09,921 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-06 11:25:09,921 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-06 11:25:09,922 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-06 11:25:09,923 INFO  [JavaFX Application Thread] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-06 11:25:09,958 DEBUG [JavaFX Application Thread] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-06 11:25:09,961 DEBUG [JavaFX Application Thread] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-06 11:25:09,970 DEBUG [JavaFX Application Thread] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-06 11:25:15,325 DEBUG [JavaFX Application Thread] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-06 11:25:24,766 INFO  [JavaFX Application Thread] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 14843ms
+2016-01-06 11:27:38,178 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-06 11:27:38,193 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-06 11:27:38,611 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-06 11:27:38,622 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-06 11:27:38,629 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - javafx.event.Event$$Lambda$67/341923488@628d13c3
+2016-01-06 11:27:39,346 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-06 11:27:47,887 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-06 11:27:54,423 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-06 11:27:55,943 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-06 11:27:59,695 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-06 11:27:59,704 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-06 11:28:01,095 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-06 11:28:01,098 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-06 11:28:01,111 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-06 11:28:01,138 INFO  [JavaFX Application Thread] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-06 11:28:01,237 DEBUG [JavaFX Application Thread] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-06 11:28:01,255 DEBUG [JavaFX Application Thread] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-06 11:28:01,314 DEBUG [JavaFX Application Thread] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-06 11:28:06,874 DEBUG [JavaFX Application Thread] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-06 11:28:14,466 DEBUG [JavaFX Application Thread] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-06 11:28:14,466 DEBUG [JavaFX Application Thread] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-06 11:28:14,471 DEBUG [JavaFX Application Thread] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-06 11:28:21,330 DEBUG [JavaFX Application Thread] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-06 11:28:27,351 INFO  [JavaFX Application Thread] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 26213ms
+2016-01-06 11:55:18,378 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:371) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-01-06 11:55:19,706 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:371) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-01-06 11:55:23,034 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:326) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'AND
+2016-01-06 11:55:24,481 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:326) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'AND
+2016-01-06 11:55:45,514 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-06 11:55:48,116 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-06 11:55:49,683 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:269) - ToggleButton[id=togJsonMobile, styleClass=toggle-button]'Off'
+2016-01-06 11:55:50,163 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-06 11:55:50,166 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Mobile->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->true->C:\Users\a.kutekidila\Dev\GitHub\arrival-octo\arrival_backend\src\main\resources\appiumNodeConfig\AppiumNodeNote3.json->
+2016-01-06 11:55:51,947 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-06 11:55:51,947 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Mobile->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->true->C:\Users\a.kutekidila\Dev\GitHub\arrival-octo\arrival_backend\src\main\resources\appiumNodeConfig\AppiumNodeNote3.json->
+2016-01-06 11:55:51,949 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-06 11:55:51,950 INFO  [JavaFX Application Thread] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-06 11:55:51,951 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:44) - TestNG is going to start the Pre-Config for Appium
+2016-01-06 11:55:52,348 INFO  [JavaFX Application Thread] server.Hub (Hub.java:58) - SeleniumHub created
+2016-01-06 11:55:52,694 INFO  [JavaFX Application Thread] server.Hub (Hub.java:108) - Start the hub on: 127.0.0.1 on port: 4444 successful!
+2016-01-06 11:56:06,734 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:251) - Start a new Server: com.arrival.appium.server.AppiumAndroid@30a6f10
+2016-01-06 11:56:06,758 DEBUG [JavaFX Application Thread] appium.MobilDriverManager (MobilDriverManager.java:45) - Setting up AppiumDriver
+2016-01-06 11:56:39,195 INFO  [JavaFX Application Thread] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 47245ms
+2016-01-06 11:56:39,296 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:285) - Stop a Server: com.arrival.appium.server.AppiumAndroid@30a6f10
+2016-01-06 11:56:49,304 INFO  [JavaFX Application Thread] server.Hub (Hub.java:120) - Stop the hub on: 127.0.0.1 on port: 4444 successful!
+2016-01-06 11:56:49,305 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:54) - TestNG has finished, took around 57354ms
+2016-01-06 12:05:16,975 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-06 12:05:16,976 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Mobile->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->true->C:\Users\a.kutekidila\Dev\GitHub\arrival-octo\arrival_backend\src\main\resources\appiumNodeConfig\AppiumNodeNote3.json->
+2016-01-06 12:05:16,978 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-06 12:05:16,980 INFO  [JavaFX Application Thread] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-06 12:05:16,981 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:44) - TestNG is going to start the Pre-Config for Appium
+2016-01-06 12:05:17,256 INFO  [JavaFX Application Thread] server.Hub (Hub.java:58) - SeleniumHub created
+2016-01-06 12:05:17,538 INFO  [JavaFX Application Thread] server.Hub (Hub.java:108) - Start the hub on: 127.0.0.1 on port: 4444 successful!
+2016-01-06 12:05:32,572 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:251) - Start a new Server: com.arrival.appium.server.AppiumAndroid@4222d906
+2016-01-06 12:05:32,573 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:44) - TestNG is going to start the Pre-Config for Appium
+2016-01-06 12:05:32,840 INFO  [JavaFX Application Thread] server.Hub (Hub.java:58) - SeleniumHub created
+2016-01-06 12:05:33,116 ERROR [JavaFX Application Thread] server.Hub (Hub.java:110) - Fail to start the hub on: 127.0.0.1 on port: 4444. Address already in use: bind
+2016-01-06 12:05:43,128 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:251) - Start a new Server: com.arrival.appium.server.AppiumAndroid@24d8cb51
+2016-01-06 12:05:43,135 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:251) - Start a new Server: com.arrival.appium.server.AppiumAndroid@e23aa1f
+2016-01-06 12:05:43,148 DEBUG [JavaFX Application Thread] appium.MobilDriverManager (MobilDriverManager.java:45) - Setting up AppiumDriver
+2016-01-06 12:06:01,089 DEBUG [JavaFX Application Thread] appium.MobilDriverManager (MobilDriverManager.java:45) - Setting up AppiumDriver
+2016-01-06 12:06:11,344 ERROR [JavaFX Application Thread] appium.MobilDriverManager (MobilDriverManager.java:117) - A new session could not be created. (Original error: Requested a new session but one was in progress) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 22 milliseconds
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'WEP03460', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: io.appium.java_client.android.AndroidDriver
+2016-01-06 12:06:29,037 INFO  [JavaFX Application Thread] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 72057ms
+2016-01-06 12:06:29,138 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:285) - Stop a Server: com.arrival.appium.server.AppiumAndroid@24d8cb51
+2016-01-06 12:06:29,239 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:285) - Stop a Server: com.arrival.appium.server.AppiumAndroid@e23aa1f
+2016-01-06 12:06:39,241 INFO  [JavaFX Application Thread] server.Hub (Hub.java:120) - Stop the hub on: 127.0.0.1 on port: 4444 successful!
+2016-01-06 12:06:39,242 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:54) - TestNG has finished, took around 82261ms
+2016-01-06 12:06:39,393 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:285) - Stop a Server: com.arrival.appium.server.AppiumAndroid@24d8cb51
+2016-01-06 12:06:39,494 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:285) - Stop a Server: com.arrival.appium.server.AppiumAndroid@e23aa1f
+2016-01-06 12:06:49,495 INFO  [JavaFX Application Thread] server.Hub (Hub.java:120) - Stop the hub on: 127.0.0.1 on port: 4444 successful!
+2016-01-06 12:06:49,495 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:54) - TestNG has finished, took around 76922ms
+2016-01-06 13:00:45,966 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-06 13:00:45,970 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-06 13:00:46,394 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-06 13:00:46,405 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-06 13:00:46,412 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - javafx.event.Event$$Lambda$67/341923488@628d13c3
+2016-01-06 13:00:47,142 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-06 13:01:05,343 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:326) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'AND
+2016-01-06 13:01:08,671 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-06 13:01:10,384 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-06 13:01:12,087 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:269) - ToggleButton[id=togJsonMobile, styleClass=toggle-button]'Off'
+2016-01-06 13:01:12,567 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-06 13:01:12,572 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Mobile->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->true->C:\Users\a.kutekidila\Dev\GitHub\arrival-octo\arrival_backend\src\main\resources\appiumNodeConfig\AppiumNodeNote3.json->
+2016-01-06 13:01:14,447 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-06 13:01:14,447 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Mobile->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->true->C:\Users\a.kutekidila\Dev\GitHub\arrival-octo\arrival_backend\src\main\resources\appiumNodeConfig\AppiumNodeNote3.json->
+2016-01-06 13:01:14,463 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-06 13:01:14,499 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:44) - TestNG is going to start the Pre-Config for Appium
+2016-01-06 13:01:15,099 INFO  [JavaFX Application Thread] server.Hub (Hub.java:58) - SeleniumHub created
+2016-01-06 13:01:15,489 INFO  [JavaFX Application Thread] server.Hub (Hub.java:108) - Start the hub on: 127.0.0.1 on port: 4444 successful!
+2016-01-06 13:01:29,578 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:251) - Start a new Server: com.arrival.appium.server.AppiumAndroid@69d6af31
+2016-01-06 13:01:29,812 DEBUG [JavaFX Application Thread] appium.MobilDriverManager (MobilDriverManager.java:45) - Setting up AppiumDriver
+2016-01-06 13:02:10,324 DEBUG [JavaFX Application Thread] appium.MobilDriverManager (MobilDriverManager.java:45) - Setting up AppiumDriver
+2016-01-06 13:02:52,162 INFO  [JavaFX Application Thread] appium.AppiumManager (AppiumManager.java:285) - Stop a Server: com.arrival.appium.server.AppiumAndroid@69d6af31
+2016-01-06 13:03:02,166 INFO  [JavaFX Application Thread] server.Hub (Hub.java:120) - Stop the hub on: 127.0.0.1 on port: 4444 successful!
+2016-01-06 13:03:02,167 INFO  [JavaFX Application Thread] listener.PreConfigListenerAppium (PreConfigListenerAppium.java:54) - TestNG has finished, took around 107668ms

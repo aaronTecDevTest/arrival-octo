@@ -67,6 +67,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     public void setUpDriver(WebDriver driver, Integer id){
         browser = driver;
     }
+
     /*
     public void setWebDriver(WebDriver driver) {
         browser = driver;

@@ -70,6 +70,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     public void setUpDriver(AndroidDriver driver, Integer id){
         androidDriver = driver;
     }
+
     /*
     public void setWebDriver(AndroidDriver driver) {
        androidDriver = driver;
@@ -100,7 +101,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
         return server;
     }
 
-    @BeforeSuite
+    @BeforeClass
     public void setUpAppiumServerList() {
         MobilDriverManager mobilDriverManager = new MobilDriverManager();
         IFConfig appiumConfig = appiumManager.getTestSuiteConfigs();
@@ -159,7 +160,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
         }
     }
 
-    @AfterSuite
+    @AfterClass
     public void setDownAppiumServerList() {
         for (Object temp : appiumDriverList) {
             ((AppiumDriver) temp).close();
