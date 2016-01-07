@@ -40,7 +40,7 @@ import java.util.ResourceBundle;
  * Controller Class for ViewMainApp. This Class have linked with ViewMainApp.fxml and
  * can evoke function from ViewMainApp.fxml file.
  */
-public class FXMLArrivalTableViewController  implements Initializable,Runnable {
+public class FXMLArrivalTableViewController  implements Initializable {
 
     /**
      * Logger
@@ -66,7 +66,7 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
     @FXML
     private TableColumn<TestCase, ImageView> tbcResult;
 
-    private ArrivalTestSuite runTestSuite;
+    private static ArrivalTestSuite runTestSuite;
     private ObservableList dateTestSuite;
     private Options options;
     private String platform;
@@ -85,7 +85,7 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
         bundle = resources;
         iniBundleResources();
 
-        //Setup Tablecolmn Propertys
+        /**Setup Tablecolmn Properties **/
         tbcName.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcDescription.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDescription"));
         tbcDuration.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDuration"));
@@ -101,8 +101,7 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
         //SetUp Testcase to Table
         setUpTestsuite();
         tbvTestsuite.setItems(dateTestsuite);
-
-        runTestSuite = new ArrivalTestSuite();
+        //runTestSuite = new ArrivalTestSuite();
         platform = "platform";
     }
 
@@ -110,7 +109,7 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
     public void run() {
         try {
             log.info(options.toString());
-
+            runTestSuite = new ArrivalTestSuite();
             SeleniumManager tempSeleniumManager = new SeleniumManager();
             AppiumManager tempAppiumManager = new AppiumManager();
 
@@ -143,6 +142,7 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
             for (int i = 0; i < dateTestsuite.size(); i++) {
                 tempClasses.add(new XmlClass(((TestCase) dateTestSuite.get(i)).getTcClassPackage()));
             }
+
             if(options.getParallelTesting()){
                 //runTestSuite.getSuite().setParallel(options.getParallelTesting().toString());
                 //runTestSuite.getSuite().setThreadCount(options.getParallelThreadCounter());

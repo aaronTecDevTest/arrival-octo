@@ -13,6 +13,7 @@ import com.arrival.utilities.SystemPreferences;
 import com.arrival.utilities.WindowsDialogs;
 import com.arrival.utilities.interfaces.IFTestCase;
 import com.arrival.windows.model.TestCase;
+
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -29,10 +30,12 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -55,13 +58,13 @@ public class FXMLArrivalMainController implements Initializable {
     public ObservableList dateIOSTestcase;
     public ObservableList dateANDTestcase;
     public ObservableList dateWebPortalTestcase;
+    public ObservableList dateSearch;
     public ObservableList dateTestsuite;
 
     /**
      * For Internationalization
      */
     private ResourceBundle bundle;
-
 
     @FXML
     private Menu mnuFile;
@@ -155,6 +158,8 @@ public class FXMLArrivalMainController implements Initializable {
     private TableView<TestCase> tbvAND;
     @FXML
     private TableView<TestCase> tbvWebPortal;
+    @FXML
+    private TableView<TestCase> tbvSearch;
 
 
     @FXML
@@ -163,6 +168,11 @@ public class FXMLArrivalMainController implements Initializable {
     private TableColumn<TestCase, String> tbcAndroid;
     @FXML
     private TableColumn<TestCase, String> tbcWebPortal;
+    @FXML
+    private TableColumn<TestCase, String> tbcSearch;
+
+    @FXML
+    private TextField txtSearchfield;
 
     private FXMLArrivalTableViewController tbvTestsuiteController;
 
@@ -195,12 +205,14 @@ public class FXMLArrivalMainController implements Initializable {
         dateTestsuite = FXCollections.observableArrayList();
         dateANDTestcase = FXCollections.observableArrayList();
         dateIOSTestcase = FXCollections.observableArrayList();
+        dateSearch = FXCollections.observableArrayList();
         dateWebPortalTestcase = FXCollections.observableArrayList();
 
-        //Setup Table-Colmn Properties
+        //Setup Table-Column Properties
         tbcIOS.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcAndroid.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcWebPortal.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
+        tbcSearch.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
 
         //tbvIOS.getSelectionModel().setCellSelectionEnabled(true);
         tbvIOS.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -214,14 +226,20 @@ public class FXMLArrivalMainController implements Initializable {
         tbvWebPortal.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         tbvWebPortal.getStyleClass().add("table-right");
 
+        //tbvSearch.getSelectionModel().setCellSelectionEnabled(true);
+        tbvSearch.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        tbvSearch.getStyleClass().add("table-right");
+
         //SetUp Testcase to Table
         setUpIOSTestcase();
         setUpANDTestcase();
         setUpWebPortalTestcase();
+        setUpSearchTestcase();
 
         tbvIOS.setItems(dateIOSTestcase);
         tbvAND.setItems(dateANDTestcase);
         tbvWebPortal.setItems(dateWebPortalTestcase);
+        tbvSearch.setItems(dateSearch);
 
         //Set first TitlePane open
         TitledPane ios = accTestCase.getPanes().get(0);
@@ -230,6 +248,7 @@ public class FXMLArrivalMainController implements Initializable {
         //SetUp Testsuite
         setUpFirstTableView();
         addTableViewListener();
+     //   addSearchFieldListener();
 
         //currentTableView.getStyleClass().add("/css/arrivalMain.css");
     }
@@ -360,7 +379,18 @@ public class FXMLArrivalMainController implements Initializable {
                     log.warn("Is not a Web Testcase");
                     WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
-        }
+            }
+
+            if (accTestCase.getExpandedPane().getText().equals("Search - Testcase")) {
+                log.info(actionEvent.getSource() + "Search");
+                dateTestsuite = currentTableView.getItems();
+                if (!(dateTestsuite.containsAll(tbvSearch.getSelectionModel().getSelectedItems()))) {
+                    dateTestsuite.addAll(tbvSearch.getSelectionModel().getSelectedItems());
+                } else {
+                    log.warn("Testcase all ready added!");
+                    WindowsDialogs.testCaseInTestsuite();
+                }
+            }
         } catch (Exception e) {
             log.error(e.getStackTrace());
         }
@@ -432,6 +462,10 @@ public class FXMLArrivalMainController implements Initializable {
         log.info(actionEvent.getSource());
     }
 
+    @FXML
+    public void searchTestcase(ActionEvent actionEvent) {
+        log.info(actionEvent.getSource());
+    }
 
     /**
      * Bundle Resources ini
@@ -588,8 +622,22 @@ public class FXMLArrivalMainController implements Initializable {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
         }
-
         dateWebPortalTestcase = FXCollections.observableArrayList(tempList);
+    }
+
+    private void setUpSearchTestcase(){
+        dateSearch.addAll(dateANDTestcase);
+        dateSearch.addAll(dateIOSTestcase);
+        dateSearch.addAll(dateWebPortalTestcase);
+    }
+
+    private void addSearchFieldListener(){
+        txtSearchfield.setOnInputMethodTextChanged(new EventHandler<InputMethodEvent>() {
+            @Override
+            public void handle(InputMethodEvent event) {
+              log.info("Test Test");
+            }
+        });
     }
 
     private void addTableViewListener() {
@@ -638,7 +686,6 @@ public class FXMLArrivalMainController implements Initializable {
             optionsStage.initModality(Modality.APPLICATION_MODAL);
             optionsController = loader.getController();
             optionsScene.setUserData(tbvTestsuiteController);
-            //log.warn(optionsStage);
             return optionsStage;
         } catch (IOException e) {
             log.error(e.getStackTrace());

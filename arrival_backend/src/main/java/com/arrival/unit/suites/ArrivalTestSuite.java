@@ -43,9 +43,8 @@ public class ArrivalTestSuite extends Thread{
      * Firefox, Chrome and IE driver.
      */
     private Object seleniumManger;
-
     /**
-     * TestNG properties
+     * @param tng: TestNG properties
      */
     private TestNG tng = new TestNG();
 
@@ -105,6 +104,7 @@ public class ArrivalTestSuite extends Thread{
 
     public void stopTestsuite(){
         this.interrupt();
+
     }
 
     public void pauseTestsuite(){

@@ -279,3 +279,423 @@ Driver info: io.appium.java_client.android.AndroidDriver
 2016-01-06 16:38:56,378 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
 2016-01-06 16:38:56,380 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
 2016-01-06 16:38:56,381 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:163) - Options object is null[Ljava.lang.StackTraceElement;@3e44b9e7
+2016-01-07 09:45:33,570 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 09:45:33,571 WARN  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:356) - Testcase all ready added!
+2016-01-07 09:45:43,826 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 09:45:46,026 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:45:46,027 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:45:46,028 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 09:45:46,029 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:163) - Options object is null[Ljava.lang.StackTraceElement;@404a49ff
+2016-01-07 09:46:36,258 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 09:46:36,408 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 09:46:40,623 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 09:46:42,322 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 09:46:42,997 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - javafx.event.Event$$Lambda$67/1672379018@5d333d2d
+2016-01-07 09:46:45,697 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 09:46:56,485 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 09:46:58,252 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 09:46:59,428 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 09:47:00,982 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-07 09:47:02,909 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-07 09:47:02,915 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:47:04,173 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:47:04,174 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:47:04,299 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 09:47:04,379 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-07 09:47:04,609 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 09:47:04,625 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 09:47:04,672 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 09:47:14,436 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 09:47:53,772 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 09:47:53,773 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 09:47:53,777 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 09:47:59,755 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 09:48:05,766 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 61387ms
+2016-01-07 09:48:21,103 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:48:21,104 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:48:21,105 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 09:48:21,106 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:163) - Options object is null[Ljava.lang.StackTraceElement;@17a5685e
+2016-01-07 09:48:48,368 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 09:48:53,737 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-07 09:48:53,741 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:48:55,065 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:48:55,066 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:48:55,067 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 09:48:55,068 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:163) - Options object is null[Ljava.lang.StackTraceElement;@a4eeb23
+2016-01-07 09:49:19,498 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 09:49:19,504 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 09:49:19,939 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 09:49:19,950 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 09:49:19,956 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - javafx.event.Event$$Lambda$67/951756904@4238f382
+2016-01-07 09:49:20,671 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 09:49:29,634 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 09:49:30,714 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 09:49:32,291 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-07 09:49:35,242 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-07 09:49:35,249 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:49:39,562 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:49:39,563 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:49:39,571 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 09:49:39,586 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-07 09:49:39,687 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 09:49:39,708 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 09:49:39,765 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 09:49:45,743 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 09:49:53,547 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 09:49:53,548 WARN  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:356) - Testcase all ready added!
+2016-01-07 09:50:07,691 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-07 09:50:33,780 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:406) - Button[id=btnStop, styleClass=button]'Stop'
+2016-01-07 09:50:38,124 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:406) - Button[id=btnStop, styleClass=button]'Stop'
+2016-01-07 09:50:38,548 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:406) - Button[id=btnStop, styleClass=button]'Stop'
+2016-01-07 09:50:40,692 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:406) - Button[id=btnStop, styleClass=button]'Stop'
+2016-01-07 09:50:41,036 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:406) - Button[id=btnStop, styleClass=button]'Stop'
+2016-01-07 09:50:41,580 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:406) - Button[id=btnStop, styleClass=button]'Stop'
+2016-01-07 09:50:41,812 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:406) - Button[id=btnStop, styleClass=button]'Stop'
+2016-01-07 09:50:42,028 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:406) - Button[id=btnStop, styleClass=button]'Stop'
+2016-01-07 09:50:42,725 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:406) - Button[id=btnStop, styleClass=button]'Stop'
+2016-01-07 09:51:08,309 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:51:08,310 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:51:08,311 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 09:51:08,311 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:163) - Options object is null[Ljava.lang.StackTraceElement;@4406f00f
+2016-01-07 09:51:21,445 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:51:21,446 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:51:21,448 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 09:51:21,448 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:163) - Options object is null[Ljava.lang.StackTraceElement;@61b70c8c
+2016-01-07 09:51:52,503 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 09:51:53,190 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 133604ms
+2016-01-07 09:51:53,190 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 1452156713190ms
+2016-01-07 09:51:53,190 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 1452156713190ms
+2016-01-07 09:52:02,480 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-07 09:52:02,484 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:52:03,448 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:52:03,448 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:52:03,450 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 09:52:03,451 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:163) - Options object is null[Ljava.lang.StackTraceElement;@344410dd
+2016-01-07 09:54:47,366 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 09:54:47,372 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 09:54:47,808 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 09:54:47,819 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 09:54:47,826 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - javafx.event.Event$$Lambda$67/951756904@4238f382
+2016-01-07 09:54:48,491 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 09:55:05,278 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 09:55:06,802 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-07 09:55:09,118 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-07 09:55:09,123 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:55:12,951 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 09:55:17,390 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:55:17,391 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:55:17,405 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 09:55:17,426 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-07 09:55:17,537 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 09:55:17,563 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 09:55:17,623 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 09:55:23,650 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 09:55:32,146 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 09:55:32,146 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 09:55:32,150 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 09:55:37,604 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 09:55:41,127 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-07 09:55:43,749 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 26324ms
+2016-01-07 09:56:13,161 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:56:13,162 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:56:13,163 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 09:56:13,164 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:163) - Options object is null[Ljava.lang.StackTraceElement;@276e468c
+2016-01-07 09:56:30,961 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 09:56:31,792 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 09:56:33,474 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-07 09:56:37,449 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-07 09:56:37,453 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:56:38,705 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:56:38,706 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:56:38,707 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 09:56:38,709 INFO  [Thread-13] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-07 09:56:38,740 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 09:56:38,741 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-01-07 09:56:38,747 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-01-07 09:56:38,749 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-01-07 09:56:42,781 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 09:56:48,066 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 09:56:53,331 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 09:56:53,332 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-01-07 09:56:53,332 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-01-07 09:56:53,332 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-01-07 09:56:55,256 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 09:57:06,804 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 09:57:06,804 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-01-07 09:57:06,805 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-01-07 09:57:06,805 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-01-07 09:57:08,726 DEBUG [Thread-13] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 09:57:16,603 INFO  [Thread-13] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 37894ms
+2016-01-07 09:57:31,507 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:57:31,507 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 09:57:31,509 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 09:57:31,510 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:163) - Options object is null[Ljava.lang.StackTraceElement;@fc3a311
+2016-01-07 09:58:21,532 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 09:58:54,929 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:00:02,069 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 10:07:13,229 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:164) - Options object is null[Ljava.lang.StackTraceElement;@5ee21c1e
+2016-01-07 10:07:29,976 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:07:32,450 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:08:14,890 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 10:08:14,891 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:164) - Options object is null[Ljava.lang.StackTraceElement;@7a978dab
+2016-01-07 10:08:17,898 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-07 10:08:30,594 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 10:08:32,611 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 10:08:37,059 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:08:49,064 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:164) - Options object is null[Ljava.lang.StackTraceElement;@4b0a19f3
+2016-01-07 10:09:01,163 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:09:04,008 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:164) - Options object is null[Ljava.lang.StackTraceElement;@197b2e6d
+2016-01-07 10:09:13,109 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 10:09:14,717 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-07 10:09:15,908 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-07 10:09:15,912 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:09:17,452 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:09:21,310 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:10:13,467 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 10:10:20,103 INFO  [Thread-27] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-07 10:10:23,608 DEBUG [Thread-27] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:10:23,608 DEBUG [Thread-27] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:10:23,614 DEBUG [Thread-27] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:10:28,850 DEBUG [Thread-27] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:10:32,611 INFO  [Thread-27] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 12512ms
+2016-01-07 10:10:54,496 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:10:57,066 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:20:06,029 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 10:20:06,031 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:164) - Options object is null[Ljava.lang.StackTraceElement;@3e1bb31d
+2016-01-07 10:20:23,112 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 10:20:23,117 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 10:20:23,537 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 10:20:23,547 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 10:20:23,554 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - javafx.event.Event$$Lambda$67/459354719@278395cd
+2016-01-07 10:20:24,271 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 10:20:28,605 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 10:20:30,196 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 10:20:31,582 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-07 10:20:32,388 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-07 10:20:32,393 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:20:34,285 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:20:41,734 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:20:48,569 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:175) - Directory creation success!
+2016-01-07 10:20:54,360 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-07 10:20:54,477 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:20:54,496 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:20:54,553 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:21:00,267 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:22:27,964 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:22:27,964 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:22:27,968 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:22:33,411 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:22:39,488 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 105128ms
+2016-01-07 10:23:10,922 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:23:16,724 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:28:04,180 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:175) - Directory creation success!
+2016-01-07 10:28:04,182 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:164) - Options object is null[Ljava.lang.StackTraceElement;@f50db6a
+2016-01-07 10:28:46,062 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-07 10:28:52,759 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 10:28:53,543 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 10:28:54,919 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-07 10:28:55,759 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-07 10:28:55,762 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:28:58,254 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:29:20,025 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:31:59,542 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:175) - Directory creation success!
+2016-01-07 10:31:59,545 INFO  [Thread-16] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-07 10:31:59,563 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:31:59,564 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:31:59,572 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:32:04,849 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:32:23,625 INFO  [Thread-16] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 24080ms
+2016-01-07 10:32:42,671 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:32:52,536 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:34:41,736 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:175) - Directory creation success!
+2016-01-07 10:34:41,737 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:164) - Options object is null[Ljava.lang.StackTraceElement;@25ef3512
+2016-01-07 10:34:50,443 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:34:56,421 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:35:13,411 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:175) - Directory creation success!
+2016-01-07 10:35:44,977 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 10:35:44,983 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 10:35:45,380 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 10:35:45,390 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 10:35:45,396 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - javafx.event.Event$$Lambda$67/953949699@78a7b220
+2016-01-07 10:35:45,907 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 10:36:13,368 INFO  [Thread-21] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-07 10:36:13,389 DEBUG [Thread-21] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:36:13,389 DEBUG [Thread-21] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:36:13,395 DEBUG [Thread-21] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:36:18,732 DEBUG [Thread-21] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:37:16,944 INFO  [Thread-21] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 63576ms
+2016-01-07 10:38:43,508 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 10:38:45,604 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 10:38:48,467 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:39:05,158 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:39:05,160 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:175) - Directory creation success!
+2016-01-07 10:39:05,163 INFO  [Thread-26] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-07 10:39:05,186 DEBUG [Thread-26] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:39:05,187 DEBUG [Thread-26] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:39:05,196 DEBUG [Thread-26] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:39:10,361 DEBUG [Thread-26] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:39:18,608 DEBUG [Thread-26] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:39:18,608 DEBUG [Thread-26] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:39:18,612 DEBUG [Thread-26] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:39:23,815 DEBUG [Thread-26] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:39:28,573 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:406) - Button[id=btnStop, styleClass=button]'Stop'
+2016-01-07 10:39:28,934 DEBUG [Thread-26] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:39:28,934 DEBUG [Thread-26] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:39:28,939 DEBUG [Thread-26] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:39:34,397 DEBUG [Thread-26] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:39:35,669 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:406) - Button[id=btnStop, styleClass=button]'Stop'
+2016-01-07 10:39:35,992 INFO  [Thread-26] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 30829ms
+2016-01-07 10:40:13,783 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:394) - Button[id=btnSkip, styleClass=button]'Skip'
+2016-01-07 10:40:34,656 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:40:40,657 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:113) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:40:40,659 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:175) - Directory creation success!
+2016-01-07 10:40:40,663 INFO  [Thread-38] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-07 10:40:40,685 DEBUG [Thread-38] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:40:40,686 DEBUG [Thread-38] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:40:40,693 DEBUG [Thread-38] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:40:46,032 DEBUG [Thread-38] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:40:48,360 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:400) - Button[id=btnPause, styleClass=button]'Pause'
+2016-01-07 10:41:22,068 DEBUG [Thread-38] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:41:22,069 DEBUG [Thread-38] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:41:22,073 DEBUG [Thread-38] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:41:27,860 DEBUG [Thread-38] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:41:33,806 DEBUG [Thread-38] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:41:33,806 DEBUG [Thread-38] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:41:33,810 DEBUG [Thread-38] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:41:38,918 DEBUG [Thread-38] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:41:42,810 INFO  [Thread-38] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 62147ms
+2016-01-07 10:44:04,162 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 10:44:04,166 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 10:44:04,583 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 10:44:04,593 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 10:44:04,599 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - javafx.event.Event$$Lambda$67/493940918@476169c2
+2016-01-07 10:44:05,123 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 10:44:30,312 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 10:44:32,728 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 10:44:34,434 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-07 10:44:35,312 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-07 10:44:35,318 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:44:36,400 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:249) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-07 10:44:41,256 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:346) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-01-07 10:44:44,545 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:417) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-07 10:44:48,001 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-01-07 10:44:52,480 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-01-07 10:44:52,484 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:46:07,667 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:46:07,668 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:46:07,799 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 10:46:07,812 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-07 10:46:07,906 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:46:07,925 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:46:07,970 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:46:13,856 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:46:14,012 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:388) - Button[id=btnRun, styleClass=button]'Run'
+2016-01-07 10:46:14,013 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:112) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
+2016-01-07 10:46:14,014 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-01-07 10:46:14,057 INFO  [Thread-9] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-01-07 10:46:14,075 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:46:14,077 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-01-07 10:46:14,081 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-01-07 10:46:14,082 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-01-07 10:46:16,096 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:46:27,208 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:46:27,209 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-01-07 10:46:27,209 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-01-07 10:46:27,209 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-01-07 10:46:29,270 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:46:36,155 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:46:36,155 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:46:36,159 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:46:43,786 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:46:46,228 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:46:46,229 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-01-07 10:46:46,229 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-01-07 10:46:46,229 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-01-07 10:46:48,156 DEBUG [Thread-9] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:46:51,371 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-01-07 10:46:51,372 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-01-07 10:46:51,382 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-01-07 10:46:56,888 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-01-07 10:46:57,204 INFO  [Thread-9] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 43147ms
+2016-01-07 10:47:00,946 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 53134ms
+2016-01-07 11:41:27,358 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 11:41:27,362 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 11:41:27,809 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 11:41:27,820 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 11:41:27,826 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:262) - javafx.event.Event$$Lambda$67/1672379018@5d333d2d
+2016-01-07 11:41:28,394 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 13:36:52,769 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 13:36:52,774 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 13:36:53,213 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 13:36:53,225 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 13:36:53,231 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:262) - javafx.event.Event$$Lambda$67/1156141119@34e783f1
+2016-01-07 13:36:53,816 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 13:37:53,363 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 13:37:53,368 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 13:37:53,808 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 13:37:53,819 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 13:38:40,690 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 13:38:40,694 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 13:38:41,111 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 13:38:41,122 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 13:38:41,128 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:263) - javafx.event.Event$$Lambda$67/951756904@4238f382
+2016-01-07 13:38:41,716 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 13:39:27,433 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 13:39:27,438 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 13:39:27,853 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 13:39:27,863 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 13:39:27,869 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:263) - javafx.event.Event$$Lambda$67/1156141119@34e783f1
+2016-01-07 13:39:28,463 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 13:43:29,695 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 13:43:29,700 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 13:43:30,128 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 13:43:30,138 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 13:43:30,145 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:264) - javafx.event.Event$$Lambda$67/341923488@628d13c3
+2016-01-07 13:43:30,727 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 13:45:08,607 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 13:45:08,612 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 13:45:09,013 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 13:45:09,023 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 13:45:09,030 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:264) - javafx.event.Event$$Lambda$67/341923488@628d13c3
+2016-01-07 13:45:09,619 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 13:58:27,850 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:381) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-01-07 13:58:30,530 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:381) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-01-07 13:58:34,953 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:381) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-01-07 13:58:39,841 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:397) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-01-07 13:58:41,049 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:397) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-01-07 13:58:43,265 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:381) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-01-07 13:58:44,881 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:381) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-01-07 13:58:48,640 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:264) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-07 13:58:53,544 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:381) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-01-07 13:58:54,848 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:381) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-01-07 14:13:09,870 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 14:13:09,874 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 14:13:10,305 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 14:13:10,315 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 14:13:10,322 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:268) - javafx.event.Event$$Lambda$67/951756904@4238f382
+2016-01-07 14:13:10,848 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 14:24:21,165 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 14:24:21,169 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 14:24:21,608 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 14:24:21,618 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 14:24:21,625 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:268) - javafx.event.Event$$Lambda$67/1808345644@1902e870
+2016-01-07 14:24:22,186 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 14:26:53,298 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 14:26:53,302 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 14:26:53,735 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 14:26:53,746 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 14:26:53,752 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:268) - javafx.event.Event$$Lambda$67/868891968@3782d673
+2016-01-07 14:26:54,335 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 14:27:43,587 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-07 14:27:43,592 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-07 14:27:44,076 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-07 14:27:44,088 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-07 14:27:44,094 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:268) - javafx.event.Event$$Lambda$67/1156141119@89b75aa
+2016-01-07 14:27:44,694 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-07 15:11:14,002 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:385) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-01-07 15:11:15,305 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:385) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-01-07 15:11:16,689 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:385) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-01-07 15:11:22,865 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:401) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-01-07 15:11:35,696 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:385) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-01-07 15:11:35,697 WARN  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:390) - Testcase all ready added!
+2016-01-07 15:12:01,286 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:385) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
