@@ -699,3 +699,988 @@ Driver info: io.appium.java_client.android.AndroidDriver
 2016-01-07 15:11:35,696 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:385) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
 2016-01-07 15:11:35,697 WARN  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:390) - Testcase all ready added!
 2016-01-07 15:12:01,286 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:385) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-01-08 09:59:13,168 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 09:59:13,171 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 10:02:13,950 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 10:02:13,954 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 10:02:14,440 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 10:02:14,630 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 10:02:14,705 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:268) - javafx.event.Event$$Lambda$67/868891968@1ff8f362
+2016-01-08 10:02:15,433 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 10:03:10,073 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 10:03:10,077 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 10:03:10,514 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 10:03:10,524 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 10:03:10,531 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:268) - javafx.event.Event$$Lambda$67/1156141119@89b75aa
+2016-01-08 10:03:11,124 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 10:28:21,696 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 10:28:21,700 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 10:28:22,125 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 10:28:22,136 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 10:28:22,143 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:268) - javafx.event.Event$$Lambda$67/341923488@759c2f36
+2016-01-08 10:28:22,708 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 10:29:53,365 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:442) - Button[id=btnResult, styleClass=button]'Result'
+2016-01-08 11:07:57,509 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 11:07:57,513 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 11:07:57,968 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 11:07:57,979 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 11:07:57,985 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:268) - javafx.event.Event$$Lambda$67/1808345644@7c9d837
+2016-01-08 11:07:58,545 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 11:08:05,938 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: f)
+
+2016-01-08 11:08:07,992 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: fd)
+
+2016-01-08 11:08:09,456 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: fds)
+
+2016-01-08 11:08:09,952 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: fdsf)
+
+2016-01-08 11:08:10,319 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: fdsfs)
+
+2016-01-08 11:08:11,960 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: fdsfsv)
+
+2016-01-08 11:08:12,480 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: fdsfsva)
+
+2016-01-08 11:08:12,952 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: fdsfsvad)
+
+2016-01-08 11:15:17,460 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: )
+
+2016-01-08 11:22:21,033 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: l)
+
+2016-01-08 11:22:21,034 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: l.)
+
+2016-01-08 11:22:21,209 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: l.l)
+
+2016-01-08 11:22:21,211 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: l.l.)
+
+2016-01-08 11:22:23,185 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: l.l)
+
+2016-01-08 11:22:23,360 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: l.)
+
+2016-01-08 11:22:23,512 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: l)
+
+2016-01-08 11:22:23,664 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:639) - TextField Text Changed (newValue: )
+
+2016-01-08 11:27:47,319 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 11:27:47,322 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 11:27:47,750 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 11:27:47,761 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 11:27:47,767 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:267) - javafx.event.Event$$Lambda$67/951756904@4238f382
+2016-01-08 11:27:48,348 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 11:28:43,348 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:638) - TextField Text Changed (newValue: k)
+2016-01-08 11:28:45,688 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:638) - TextField Text Changed (newValue: kl)
+2016-01-08 11:28:46,512 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:638) - TextField Text Changed (newValue: klk)
+2016-01-08 11:28:47,024 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:638) - TextField Text Changed (newValue: klkl)
+2016-01-08 11:28:56,608 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:638) - TextField Text Changed (newValue: )
+2016-01-08 11:56:16,006 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:638) - TextField Text Changed (newValue: f)
+2016-01-08 11:56:16,142 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:638) - TextField Text Changed (newValue: ff)
+2016-01-08 11:56:24,294 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:638) - TextField Text Changed (newValue: fff)
+2016-01-08 11:56:24,494 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:638) - TextField Text Changed (newValue: ffff)
+2016-01-08 11:56:24,677 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:638) - TextField Text Changed (newValue: fffff)
+2016-01-08 11:56:26,910 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:638) - TextField Text Changed (newValue: ffffff)
+2016-01-08 11:56:27,101 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:638) - TextField Text Changed (newValue: fffffff)
+2016-01-08 12:16:42,689 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 12:16:42,693 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 12:16:43,125 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 12:16:43,136 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 12:16:43,143 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:267) - javafx.event.Event$$Lambda$67/498731690@9c93e8b
+2016-01-08 12:16:43,732 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 12:22:08,812 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 12:22:08,816 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 12:22:09,252 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 12:22:09,262 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 12:22:09,269 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:277) - javafx.event.Event$$Lambda$67/341923488@755dc3e3
+2016-01-08 12:22:09,877 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 12:22:14,093 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: ,)
+2016-01-08 12:22:15,946 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: ,,)
+2016-01-08 12:22:16,338 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: ,,,)
+2016-01-08 12:22:16,666 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: ,,,,)
+2016-01-08 12:22:18,522 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: ,,,)
+2016-01-08 12:22:18,681 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: ,,)
+2016-01-08 12:22:18,825 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: ,)
+2016-01-08 12:22:19,001 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: )
+2016-01-08 12:22:23,154 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: d)
+2016-01-08 12:27:42,998 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 12:27:43,001 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 12:27:43,455 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 12:27:43,466 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 12:27:43,472 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:277) - javafx.event.Event$$Lambda$67/2030988846@1cb11e0b
+2016-01-08 12:27:44,038 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 12:28:11,894 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: d)
+2016-01-08 12:28:14,299 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: df)
+2016-01-08 12:28:14,819 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: dfa)
+2016-01-08 12:28:15,171 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: dfad)
+2016-01-08 12:28:17,658 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: dfa)
+2016-01-08 12:28:17,850 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: df)
+2016-01-08 12:28:18,018 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: d)
+2016-01-08 12:28:18,162 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: )
+2016-01-08 12:28:45,994 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: f)
+2016-01-08 12:28:46,713 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: ff)
+2016-01-08 12:28:47,632 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: f)
+2016-01-08 12:28:47,784 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: )
+2016-01-08 12:28:48,936 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: d)
+2016-01-08 12:28:49,104 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: dd)
+2016-01-08 12:28:49,816 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: d)
+2016-01-08 12:28:49,960 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: )
+2016-01-08 12:31:25,353 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: f)
+2016-01-08 12:31:25,487 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: ff)
+2016-01-08 12:31:26,342 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: f)
+2016-01-08 12:31:26,558 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: )
+2016-01-08 12:31:27,495 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: f)
+2016-01-08 12:31:28,863 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: fa)
+2016-01-08 12:31:29,318 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: fas)
+2016-01-08 12:31:29,582 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: fa)
+2016-01-08 12:31:29,758 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: f)
+2016-01-08 12:31:29,894 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: )
+2016-01-08 12:32:05,508 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: f)
+2016-01-08 12:32:05,700 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: ff)
+2016-01-08 12:32:07,452 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: f)
+2016-01-08 12:32:07,611 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:648) - TextField Text Changed (newValue: )
+2016-01-08 13:28:44,153 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:28:44,157 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:28:44,597 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:28:44,608 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:28:44,615 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:278) - javafx.event.Event$$Lambda$67/341923488@628d13c3
+2016-01-08 13:29:28,342 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:29:28,345 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:29:28,760 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:29:28,771 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:29:28,777 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:278) - javafx.event.Event$$Lambda$67/1156141119@34e783f1
+2016-01-08 13:29:29,346 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:30:15,603 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:30:15,607 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:30:16,043 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:30:16,053 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:30:16,060 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:278) - javafx.event.Event$$Lambda$67/1156141119@38d4337b
+2016-01-08 13:30:16,652 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:30:33,382 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: k)
+2016-01-08 13:30:43,146 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: kd)
+2016-01-08 13:30:43,354 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: kdf)
+2016-01-08 13:30:44,642 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: kd)
+2016-01-08 13:30:44,850 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: k)
+2016-01-08 13:30:45,017 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: )
+2016-01-08 13:30:51,186 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: f)
+2016-01-08 13:30:51,190 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: fg)
+2016-01-08 13:30:53,897 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: f)
+2016-01-08 13:30:54,537 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: )
+2016-01-08 13:30:55,881 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: f)
+2016-01-08 13:31:50,307 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:31:50,311 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:31:50,743 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:31:50,753 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:31:50,759 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:278) - javafx.event.Event$$Lambda$67/1808345644@2ddbb33f
+2016-01-08 13:31:51,329 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:31:57,888 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: f)
+2016-01-08 13:31:58,063 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: ff)
+2016-01-08 13:32:01,861 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: fff)
+2016-01-08 13:32:01,885 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: fffa)
+2016-01-08 13:32:01,997 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: fffas)
+2016-01-08 13:32:02,085 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: fffasd)
+2016-01-08 13:32:04,261 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: fffas)
+2016-01-08 13:32:04,760 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: fffa)
+2016-01-08 13:32:04,793 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: fff)
+2016-01-08 13:32:04,826 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: ff)
+2016-01-08 13:32:04,859 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: f)
+2016-01-08 13:32:04,892 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: )
+2016-01-08 13:32:42,217 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:32:42,222 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:32:42,644 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:32:42,654 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:32:42,660 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:278) - javafx.event.Event$$Lambda$67/1156141119@38d4337b
+2016-01-08 13:32:43,251 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:32:46,645 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: d)
+2016-01-08 13:32:47,466 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: ds)
+2016-01-08 13:32:48,586 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: dsa)
+2016-01-08 13:32:49,106 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:649) - TextField Text Changed (newValue: dsaf)
+2016-01-08 13:38:35,192 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:38:35,196 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:38:35,624 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:38:35,634 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:38:35,640 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/1156141119@38d4337b
+2016-01-08 13:38:36,206 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:38:38,647 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: 4)
+2016-01-08 13:38:47,683 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: )
+2016-01-08 13:39:09,745 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:39:09,749 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:39:10,206 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:39:10,216 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:39:10,222 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/1143380568@13b51eab
+2016-01-08 13:39:10,843 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:39:13,404 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: f)
+2016-01-08 13:39:13,605 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: ff)
+2016-01-08 13:39:13,772 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: fff)
+2016-01-08 13:39:15,817 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: ff)
+2016-01-08 13:39:15,953 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: f)
+2016-01-08 13:39:16,081 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: )
+2016-01-08 13:39:32,600 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: d)
+2016-01-08 13:39:32,770 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: dd)
+2016-01-08 13:39:32,937 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: ddd)
+2016-01-08 13:39:40,479 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: dd)
+2016-01-08 13:39:40,759 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: d)
+2016-01-08 13:39:41,031 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: )
+2016-01-08 13:39:54,296 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:39:54,301 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:39:54,758 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:39:54,768 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:39:54,774 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/951756904@5f7c9aa3
+2016-01-08 13:39:55,359 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:39:57,241 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: f)
+2016-01-08 13:40:16,878 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:40:16,883 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:40:17,331 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:40:17,344 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:40:17,350 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/341923488@755dc3e3
+2016-01-08 13:40:17,950 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:40:19,408 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: f)
+2016-01-08 13:40:28,444 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: )
+2016-01-08 13:40:31,620 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: d)
+2016-01-08 13:40:53,915 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: )
+2016-01-08 13:40:55,851 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: d)
+2016-01-08 13:40:57,298 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: )
+2016-01-08 13:40:58,211 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: d)
+2016-01-08 13:40:59,178 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: )
+2016-01-08 13:40:59,922 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: d)
+2016-01-08 13:41:06,018 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: )
+2016-01-08 13:41:19,463 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:41:19,468 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:41:19,888 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:41:19,898 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:41:19,905 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/1399186285@20fe157c
+2016-01-08 13:41:20,480 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:41:21,524 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: f)
+2016-01-08 13:41:37,439 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:41:37,445 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:41:37,858 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:41:37,868 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:41:37,874 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/251153012@38330ed9
+2016-01-08 13:41:38,429 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:41:39,307 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: d)
+2016-01-08 13:41:45,935 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: )
+2016-01-08 13:41:47,303 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: d)
+2016-01-08 13:41:48,799 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: )
+2016-01-08 13:41:49,895 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: f)
+2016-01-08 13:41:50,607 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: )
+2016-01-08 13:41:51,343 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: f)
+2016-01-08 13:41:52,095 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: )
+2016-01-08 13:43:35,514 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:43:35,518 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:43:35,964 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:43:35,975 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:43:35,982 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/1808345644@2ddbb33f
+2016-01-08 13:43:36,536 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:43:38,107 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:650) - TextField Text Changed (newValue: d)
+2016-01-08 13:45:24,972 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:45:24,976 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:45:25,406 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:45:25,416 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:45:25,423 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/1631654333@38a0d51c
+2016-01-08 13:45:26,007 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:45:28,347 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: m)
+2016-01-08 13:45:28,358 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: m,)
+2016-01-08 13:45:28,523 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: m,m)
+2016-01-08 13:45:52,600 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: )
+2016-01-08 13:46:57,692 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:46:57,696 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:46:58,119 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:46:58,130 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:46:58,136 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/341923488@755dc3e3
+2016-01-08 13:46:58,739 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:47:00,405 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: c)
+2016-01-08 13:47:44,297 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:47:44,301 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:47:44,769 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:47:44,780 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:47:44,786 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/498731690@9c93e8b
+2016-01-08 13:47:45,332 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:47:47,162 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: f)
+2016-01-08 13:49:56,380 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:49:56,385 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:49:56,804 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:49:56,814 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:49:56,821 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/951756904@5f7c9aa3
+2016-01-08 13:49:57,383 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:49:58,379 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: f)
+2016-01-08 13:50:02,152 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: ff)
+2016-01-08 13:50:02,416 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: fff)
+2016-01-08 13:50:26,638 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:50:26,642 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:50:27,089 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:50:27,099 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:50:27,105 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/868891968@1ab85ad9
+2016-01-08 13:50:27,667 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:50:28,889 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: f)
+2016-01-08 13:54:03,850 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:54:03,854 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:54:04,313 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:54:04,323 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:54:04,329 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/951756904@5f7c9aa3
+2016-01-08 13:54:04,944 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:54:24,810 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: r)
+2016-01-08 13:54:33,006 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: ra)
+2016-01-08 13:54:33,342 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: rad)
+2016-01-08 13:54:33,614 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: radf)
+2016-01-08 13:54:34,758 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: radfa)
+2016-01-08 13:54:35,014 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: radfad)
+2016-01-08 13:55:01,451 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-08 13:55:01,454 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-08 13:55:01,871 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-08 13:55:01,881 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-08 13:55:01,888 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:279) - javafx.event.Event$$Lambda$67/1808345644@2ddbb33f
+2016-01-08 13:55:02,455 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-08 13:55:03,327 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: f)
+2016-01-11 10:35:55,408 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: )
+2016-01-11 10:36:03,433 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: d)
+2016-01-11 10:36:04,984 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: )
+2016-01-11 10:36:12,913 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: s)
+2016-01-11 10:36:13,033 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: sf)
+2016-01-11 10:36:13,174 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: sfa)
+2016-01-11 10:36:13,193 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: sfas)
+2016-01-11 10:36:14,633 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: sfass)
+2016-01-11 10:36:14,849 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: sfassd)
+2016-01-11 10:36:15,049 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: sfassdd)
+2016-01-11 10:36:15,897 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: sfassd)
+2016-01-11 10:36:16,396 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: sfass)
+2016-01-11 10:36:16,429 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: sfas)
+2016-01-11 10:36:16,462 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: sfa)
+2016-01-11 10:36:16,495 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: sf)
+2016-01-11 10:36:16,528 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: s)
+2016-01-11 10:36:16,561 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: )
+2016-01-11 10:36:27,202 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: g)
+2016-01-11 10:36:29,970 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:654) - TextField Text Changed (newValue: )
+2016-01-11 17:10:33,665 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-11 17:10:33,669 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-11 17:10:34,252 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-11 17:10:34,615 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-11 17:10:34,766 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:282) - javafx.event.Event$$Lambda$67/302802568@5fabaef8
+2016-01-11 17:10:35,726 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-11 17:10:39,047 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:681) - TextField Text Changed (newValue: v)
+2016-01-11 17:10:42,924 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:681) - TextField Text Changed (newValue: vc)
+2016-01-11 17:10:43,228 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:681) - TextField Text Changed (newValue: vcy)
+2016-01-11 17:10:43,532 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:681) - TextField Text Changed (newValue: vcyx)
+2016-01-11 17:10:43,780 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:681) - TextField Text Changed (newValue: vcyxc)
+2016-01-11 17:10:44,012 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:681) - TextField Text Changed (newValue: vcyxcv)
+2016-01-13 16:18:06,402 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-13 16:18:06,406 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-13 16:18:08,798 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-13 16:18:09,868 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-13 16:18:10,526 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:283) - javafx.event.Event$$Lambda$67/1143380568@13b51eab
+2016-01-13 16:18:12,779 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-13 16:18:14,769 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: f)
+2016-01-13 16:18:14,935 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: ff)
+2016-01-13 16:18:16,751 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: f)
+2016-01-13 16:18:17,376 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: )
+2016-01-13 16:18:20,424 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: s)
+2016-01-13 16:18:21,440 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: si)
+2016-01-13 16:18:21,696 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: sim)
+2016-01-13 16:18:24,191 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: si)
+2016-01-13 16:18:24,671 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: s)
+2016-01-13 16:18:25,231 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: )
+2016-01-13 16:19:23,675 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: d)
+2016-01-13 16:19:24,394 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: ds)
+2016-01-13 16:19:24,706 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dss)
+2016-01-13 16:19:25,106 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dssf)
+2016-01-13 16:19:25,890 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dssfa)
+2016-01-13 16:19:26,836 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dssfad)
+2016-01-13 16:20:58,502 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dssfadd)
+2016-01-13 16:20:59,909 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dssfad)
+2016-01-13 16:21:00,409 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dssfa)
+2016-01-13 16:21:00,442 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dssf)
+2016-01-13 16:21:00,475 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dss)
+2016-01-13 16:21:00,508 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: ds)
+2016-01-13 16:21:00,541 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: d)
+2016-01-13 16:21:00,574 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: )
+2016-01-13 16:21:01,270 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue:  )
+2016-01-13 16:21:03,253 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: )
+2016-01-13 16:21:29,378 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-13 16:21:29,381 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-13 16:21:29,804 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-13 16:21:29,814 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-13 16:21:29,821 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:283) - javafx.event.Event$$Lambda$67/251153012@38330ed9
+2016-01-13 16:21:30,375 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-13 16:21:32,321 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: f)
+2016-01-13 16:22:01,096 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: fd)
+2016-01-13 16:22:01,312 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: fdd)
+2016-01-13 16:22:01,504 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: fddd)
+2016-01-13 16:23:14,162 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: fdd)
+2016-01-13 16:23:14,163 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fdd
+2016-01-13 16:23:14,586 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: fd)
+2016-01-13 16:23:14,586 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fd
+2016-01-13 16:23:14,769 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: f)
+2016-01-13 16:23:14,770 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:f
+2016-01-13 16:23:14,929 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: )
+2016-01-13 16:23:14,931 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:23:15,746 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: d)
+2016-01-13 16:23:15,747 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:d
+2016-01-13 16:23:17,043 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: df)
+2016-01-13 16:23:17,044 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:df
+2016-01-13 16:23:17,411 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dfa)
+2016-01-13 16:23:17,412 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:dfa
+2016-01-13 16:23:17,818 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dfas)
+2016-01-13 16:23:17,819 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:dfas
+2016-01-13 16:23:26,907 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-13 16:23:26,912 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-13 16:23:27,339 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-13 16:23:27,349 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-13 16:23:27,355 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:283) - javafx.event.Event$$Lambda$67/341923488@755dc3e3
+2016-01-13 16:23:27,928 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-13 16:23:30,694 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: d)
+2016-01-13 16:23:30,696 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:d
+2016-01-13 16:23:33,075 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: df)
+2016-01-13 16:23:33,076 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:df
+2016-01-13 16:23:34,811 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dfs)
+2016-01-13 16:23:34,812 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:dfs
+2016-01-13 16:23:35,419 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dfsf)
+2016-01-13 16:23:35,419 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:dfsf
+2016-01-13 16:23:35,827 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dfsfs)
+2016-01-13 16:23:35,827 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:dfsfs
+2016-01-13 16:23:45,187 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dfsf)
+2016-01-13 16:23:45,187 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:dfsf
+2016-01-13 16:23:45,795 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: dfs)
+2016-01-13 16:23:45,795 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:dfs
+2016-01-13 16:23:46,083 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: df)
+2016-01-13 16:23:46,083 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:df
+2016-01-13 16:23:46,250 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: d)
+2016-01-13 16:23:46,251 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:d
+2016-01-13 16:23:46,404 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: )
+2016-01-13 16:23:46,406 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:23:55,227 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: d)
+2016-01-13 16:23:55,229 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:d
+2016-01-13 16:23:57,924 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: )
+2016-01-13 16:23:57,924 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:23:59,716 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: f)
+2016-01-13 16:23:59,717 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:f
+2016-01-13 16:24:00,932 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: )
+2016-01-13 16:24:00,933 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:25:59,994 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: f)
+2016-01-13 16:25:59,996 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:f
+2016-01-13 16:26:00,880 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: ff)
+2016-01-13 16:26:00,881 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:ff
+2016-01-13 16:26:01,240 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: fff)
+2016-01-13 16:26:01,241 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fff
+2016-01-13 16:26:04,488 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: ff)
+2016-01-13 16:26:04,488 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:ff
+2016-01-13 16:26:04,672 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: f)
+2016-01-13 16:26:04,672 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:f
+2016-01-13 16:26:04,839 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: )
+2016-01-13 16:26:04,841 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:26:05,560 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: a)
+2016-01-13 16:26:05,561 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:a
+2016-01-13 16:26:05,704 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: an)
+2016-01-13 16:26:05,705 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:an
+2016-01-13 16:26:05,821 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: and)
+2016-01-13 16:26:05,822 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:and
+2016-01-13 16:26:07,840 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: an)
+2016-01-13 16:26:07,841 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:an
+2016-01-13 16:26:07,968 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: a)
+2016-01-13 16:26:07,969 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:a
+2016-01-13 16:26:08,176 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: )
+2016-01-13 16:26:08,177 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:26:08,473 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: A)
+2016-01-13 16:26:08,474 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:A
+2016-01-13 16:26:09,025 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: An)
+2016-01-13 16:26:09,025 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:An
+2016-01-13 16:26:09,177 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: And)
+2016-01-13 16:26:09,177 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:And
+2016-01-13 16:26:11,072 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: An)
+2016-01-13 16:26:11,073 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:An
+2016-01-13 16:26:11,256 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: A)
+2016-01-13 16:26:11,257 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:A
+2016-01-13 16:26:11,416 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$5 (FXMLArrivalMainController.java:685) - TextField Text Changed (newValue: )
+2016-01-13 16:26:11,417 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:31:07,494 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-13 16:31:07,497 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-13 16:31:07,920 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-13 16:31:07,930 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-13 16:31:07,936 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:283) - javafx.event.Event$$Lambda$67/1156141119@38d4337b
+2016-01-13 16:31:08,488 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-13 16:31:10,238 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: f)
+2016-01-13 16:31:10,243 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:f
+2016-01-13 16:31:11,307 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: fs)
+2016-01-13 16:31:11,308 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fs
+2016-01-13 16:31:12,300 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: fsa)
+2016-01-13 16:31:12,300 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fsa
+2016-01-13 16:31:13,003 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: fsaf)
+2016-01-13 16:31:13,004 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fsaf
+2016-01-13 16:31:16,259 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: fsa)
+2016-01-13 16:31:16,260 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fsa
+2016-01-13 16:31:16,419 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: fs)
+2016-01-13 16:31:16,419 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fs
+2016-01-13 16:31:16,562 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: f)
+2016-01-13 16:31:16,563 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:f
+2016-01-13 16:31:16,723 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: )
+2016-01-13 16:31:16,724 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:31:17,812 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: a)
+2016-01-13 16:31:17,815 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:a
+2016-01-13 16:31:17,908 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: an)
+2016-01-13 16:31:17,909 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:an
+2016-01-13 16:31:18,148 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: and)
+2016-01-13 16:31:18,149 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:and
+2016-01-13 16:31:20,164 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: and1)
+2016-01-13 16:31:20,164 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:and1
+2016-01-13 16:31:24,491 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: and)
+2016-01-13 16:31:24,492 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:and
+2016-01-13 16:31:24,643 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: an)
+2016-01-13 16:31:24,644 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:an
+2016-01-13 16:31:24,779 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: a)
+2016-01-13 16:31:24,780 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:a
+2016-01-13 16:31:24,923 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: )
+2016-01-13 16:31:24,924 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:31:25,699 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: A)
+2016-01-13 16:31:25,701 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:A
+2016-01-13 16:31:26,484 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: An)
+2016-01-13 16:31:26,484 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:An
+2016-01-13 16:31:26,595 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: And)
+2016-01-13 16:31:26,596 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:And
+2016-01-13 16:32:18,811 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-13 16:32:18,815 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-13 16:32:19,238 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-13 16:32:19,248 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-13 16:32:19,254 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:283) - javafx.event.Event$$Lambda$67/341923488@755dc3e3
+2016-01-13 16:32:19,810 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-13 16:32:21,161 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: f)
+2016-01-13 16:32:21,163 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:f
+2016-01-13 16:32:21,166 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:21,167 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:21,168 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:21,168 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:21,169 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:21,169 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:21,170 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:21,170 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:22,014 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fd)
+2016-01-13 16:32:22,015 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fd
+2016-01-13 16:32:22,446 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fda)
+2016-01-13 16:32:22,447 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fda
+2016-01-13 16:32:22,806 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fdas)
+2016-01-13 16:32:22,807 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fdas
+2016-01-13 16:32:24,221 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fda)
+2016-01-13 16:32:24,222 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fda
+2016-01-13 16:32:24,373 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fd)
+2016-01-13 16:32:24,375 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fd
+2016-01-13 16:32:24,525 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: f)
+2016-01-13 16:32:24,526 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:f
+2016-01-13 16:32:24,669 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: )
+2016-01-13 16:32:24,671 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:32:24,671 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:24,672 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:24,672 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:24,673 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:24,673 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:24,674 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:24,674 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:24,675 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:25,214 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: a)
+2016-01-13 16:32:25,215 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:a
+2016-01-13 16:32:25,378 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: an)
+2016-01-13 16:32:25,379 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:an
+2016-01-13 16:32:25,486 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: and)
+2016-01-13 16:32:25,486 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:and
+2016-01-13 16:32:27,222 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: and1)
+2016-01-13 16:32:27,223 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:and1
+2016-01-13 16:32:30,678 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: and)
+2016-01-13 16:32:30,679 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:and
+2016-01-13 16:32:31,177 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: an)
+2016-01-13 16:32:31,178 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:an
+2016-01-13 16:32:31,210 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: a)
+2016-01-13 16:32:31,211 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:a
+2016-01-13 16:32:31,243 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: )
+2016-01-13 16:32:31,244 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:32:31,245 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:31,245 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:31,245 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:31,246 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:31,246 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:31,247 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:31,247 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:31,248 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:31,702 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: a)
+2016-01-13 16:32:31,704 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:a
+2016-01-13 16:32:32,462 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: )
+2016-01-13 16:32:32,463 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:32:32,463 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:32,464 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:32,464 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:32,465 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:32,465 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:32,466 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:32,466 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:32,467 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:32:33,046 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: A)
+2016-01-13 16:32:33,047 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:A
+2016-01-13 16:32:33,574 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: An)
+2016-01-13 16:32:33,575 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:An
+2016-01-13 16:32:33,718 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: And)
+2016-01-13 16:32:33,719 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:And
+2016-01-13 16:32:34,878 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: And1)
+2016-01-13 16:32:34,879 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:And1
+2016-01-13 16:34:27,103 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-13 16:34:27,108 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-13 16:34:27,523 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-13 16:34:27,534 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-13 16:34:27,540 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:283) - javafx.event.Event$$Lambda$67/1156141119@38d4337b
+2016-01-13 16:34:28,118 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-13 16:34:29,310 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: f)
+2016-01-13 16:34:29,312 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:f
+2016-01-13 16:34:29,316 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:29,317 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:29,317 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:29,318 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:29,318 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:29,319 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:29,319 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:29,319 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:29,979 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fd)
+2016-01-13 16:34:29,979 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fd
+2016-01-13 16:34:30,243 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fda)
+2016-01-13 16:34:30,243 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fda
+2016-01-13 16:34:30,531 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fdas)
+2016-01-13 16:34:30,531 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fdas
+2016-01-13 16:34:30,659 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fdasd)
+2016-01-13 16:34:30,660 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fdasd
+2016-01-13 16:34:31,147 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fdasdf)
+2016-01-13 16:34:31,149 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fdasdf
+2016-01-13 16:34:49,073 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-13 16:34:49,077 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-13 16:34:49,488 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-13 16:34:49,498 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-13 16:34:49,504 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:283) - javafx.event.Event$$Lambda$67/951756904@5f7c9aa3
+2016-01-13 16:34:50,069 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-13 16:34:51,246 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: f)
+2016-01-13 16:34:51,248 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:f
+2016-01-13 16:34:51,252 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:51,253 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:51,254 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:51,254 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:51,255 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:51,255 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:51,256 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:51,256 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:34:51,859 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fd)
+2016-01-13 16:34:51,860 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fd
+2016-01-13 16:34:52,155 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fds)
+2016-01-13 16:34:52,156 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fds
+2016-01-13 16:34:52,347 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fdsa)
+2016-01-13 16:34:52,348 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fdsa
+2016-01-13 16:34:52,555 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fdsad)
+2016-01-13 16:34:52,555 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fdsad
+2016-01-13 16:34:52,685 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:691) - TextField Text Changed (newValue: fdsadf)
+2016-01-13 16:34:52,686 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fdsadf
+2016-01-13 16:36:39,578 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-13 16:36:39,583 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-13 16:36:40,017 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-13 16:36:40,027 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-13 16:36:40,033 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:283) - javafx.event.Event$$Lambda$67/1156141119@38d4337b
+2016-01-13 16:36:40,604 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-13 16:36:42,018 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: f)
+2016-01-13 16:36:42,021 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:f
+2016-01-13 16:36:42,024 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,025 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,026 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,026 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,027 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,027 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,028 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,028 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,767 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: ff)
+2016-01-13 16:36:42,768 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:ff
+2016-01-13 16:36:42,768 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,768 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,769 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,769 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,769 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,769 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,770 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:42,771 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:43,159 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: ffd)
+2016-01-13 16:36:43,159 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:ffd
+2016-01-13 16:36:43,160 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:43,160 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:43,160 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:43,160 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:43,161 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:43,161 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:43,161 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:43,161 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,207 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: ffdd)
+2016-01-13 16:36:45,208 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:ffdd
+2016-01-13 16:36:45,208 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,209 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,209 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,210 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,210 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,211 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,211 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,212 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,863 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: ffdda)
+2016-01-13 16:36:45,864 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:ffdda
+2016-01-13 16:36:45,864 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,865 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,865 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,866 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,866 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,866 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,867 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:45,867 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:50,336 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: ffddad)
+2016-01-13 16:36:50,336 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:ffddad
+2016-01-13 16:36:50,337 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:50,337 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:50,338 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:50,338 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:50,339 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:50,339 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:50,340 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:50,340 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:55,887 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: ffddadf)
+2016-01-13 16:36:55,888 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:ffddadf
+2016-01-13 16:36:55,888 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:55,889 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:55,889 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:55,890 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:55,890 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:55,891 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:55,891 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:55,892 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,896 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: )
+2016-01-13 16:36:58,898 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,898 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,899 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,899 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,900 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,900 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,901 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,901 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,902 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,902 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,903 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,903 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,904 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,904 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,904 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,905 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,905 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,906 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,906 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,907 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,907 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,908 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,908 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,908 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,909 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,909 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,910 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,910 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,911 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,911 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,911 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,912 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,912 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,913 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,913 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,914 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,914 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,915 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,915 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,915 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,916 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,916 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,917 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,917 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,918 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,918 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,919 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,919 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,919 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,920 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,920 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,921 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,921 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,922 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,922 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,922 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,923 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:36:58,923 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,924 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,924 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,924 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,925 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,925 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,925 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:58,926 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:59,170 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: A)
+2016-01-13 16:36:59,171 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:A
+2016-01-13 16:36:59,171 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:59,171 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:59,171 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:59,171 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:59,171 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:59,172 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:59,172 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:36:59,172 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:00,928 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: An)
+2016-01-13 16:37:00,929 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:An
+2016-01-13 16:37:00,929 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:00,929 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:00,930 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:00,930 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:00,930 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:00,931 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:00,931 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:00,932 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,024 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: And)
+2016-01-13 16:37:01,024 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:And
+2016-01-13 16:37:01,025 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,025 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,025 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,026 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,026 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,026 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,027 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,027 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,911 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: An)
+2016-01-13 16:37:01,912 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:An
+2016-01-13 16:37:01,913 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,913 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,913 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,914 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,914 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,914 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,915 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:01,915 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,079 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: A)
+2016-01-13 16:37:02,080 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:A
+2016-01-13 16:37:02,080 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,081 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,081 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,082 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,082 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,082 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,083 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,083 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,223 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:690) - TextField Text Changed (newValue: )
+2016-01-13 16:37:02,225 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,226 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,226 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,226 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,227 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,227 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,227 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,228 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,228 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,229 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,229 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,229 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,230 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,230 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,230 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,231 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,231 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,232 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,232 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,232 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,233 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,233 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,234 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,234 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,234 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,235 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,235 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,236 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,236 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,236 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,237 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,237 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,237 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,238 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,238 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,239 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,239 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,239 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,240 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,240 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,240 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,241 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,241 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,242 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,242 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,243 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,243 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,243 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,244 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,244 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,245 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,245 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,245 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,246 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,246 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,246 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,247 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,247 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,248 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,248 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,248 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,249 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,249 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,250 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,250 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,251 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,251 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,252 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,252 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,252 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,253 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,253 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,253 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,254 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,254 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,255 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,255 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,255 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,256 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,256 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,257 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,257 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,257 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,258 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,258 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,258 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,259 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,259 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,260 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,260 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,260 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,261 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,261 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,261 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,262 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,262 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,262 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,263 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,263 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,264 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,264 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,264 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,265 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,265 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,265 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:
+2016-01-13 16:37:02,266 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,266 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,267 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,267 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,267 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,268 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,268 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:02,268 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$2 (FXMLArrivalMainController.java:657) - bin da!!!
+2016-01-13 16:37:35,364 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-13 16:37:35,368 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-13 16:37:35,770 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-13 16:37:35,780 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-13 16:37:35,787 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:283) - javafx.event.Event$$Lambda$67/341923488@755dc3e3
+2016-01-13 16:37:36,344 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-13 16:37:37,285 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:689) - TextField Text Changed (newValue: f)
+2016-01-13 16:37:37,289 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:f
+2016-01-13 16:37:37,946 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:689) - TextField Text Changed (newValue: fa)
+2016-01-13 16:37:37,947 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fa
+2016-01-13 16:37:38,226 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:689) - TextField Text Changed (newValue: fas)
+2016-01-13 16:37:38,226 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fas
+2016-01-13 16:37:38,578 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:689) - TextField Text Changed (newValue: fasf)
+2016-01-13 16:37:38,578 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:652) - Test:fasf

@@ -61,7 +61,7 @@
                                                 <Insets left="5.0" />
                                             </padding>
                                         </Label>
-                                        <TextField fx:id="txtSearchfield" onKeyPressed="#searchTestcase" prefWidth="230.0" promptText="Testcasename" />
+                                        <TextField fx:id="txtSearchField" prefWidth="230.0" promptText="Testcasename" />
                                     </children>
                                     <padding>
                                         <Insets bottom="2.0" top="2.0" />
@@ -69,9 +69,9 @@
                                 </HBox>
                                 <Accordion fx:id="accTestCase" VBox.vgrow="ALWAYS">
                                     <panes>
-                                        <TitledPane text="iOS - Testcase">
+                                        <TitledPane fx:id="tpnIOS" text="iOS - Testcase">
                                             <content>
-                                                <TableView fx:id="tbvIOS" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-backgrounds">
+                                                <TableView fx:id="tbvIOS" styleClass="column-header-backgrounds">
                                                     <columns>
                                                         <TableColumn fx:id="tbcIOS" prefWidth="94.0" />
                                                     </columns>
@@ -81,9 +81,9 @@
                                                 </TableView>
                                             </content>
                                         </TitledPane>
-                                        <TitledPane styleClass="testCase.tableView" text="Android - Testcase">
+                                        <TitledPane fx:id="tpnAND" styleClass="testCase.tableView" text="Android - Testcase">
                                             <content>
-                                                <TableView fx:id="tbvAND" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-backgrounds">
+                                                <TableView fx:id="tbvAND" styleClass="column-header-backgrounds">
                                                     <columns>
                                                         <TableColumn fx:id="tbcAndroid" prefWidth="75.0" />
                                                     </columns>
@@ -93,9 +93,9 @@
                                                 </TableView>
                                             </content>
                                         </TitledPane>
-                                        <TitledPane styleClass="testCase.tableView" text="Web-Portal - Testcase">
+                                        <TitledPane fx:id="tpnWEB" styleClass="testCase.tableView" text="Web-Portal - Testcase">
                                             <content>
-                                                <TableView fx:id="tbvWebPortal" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-backgrounds">
+                                                <TableView fx:id="tbvWEB" styleClass="column-header-backgrounds">
                                                     <columns>
                                                         <TableColumn fx:id="tbcWebPortal" prefWidth="75.0" />
                                                     </columns>
@@ -105,9 +105,9 @@
                                                 </TableView>
                                             </content>
                                         </TitledPane>
-                              <TitledPane styleClass="testCase.tableView" text="Search - Testcase">
+                              <TitledPane fx:id="tpnSearch" styleClass="testCase.tableView" text="Search - Testcase" visible="false">
                                  <content>
-                                    <TableView fx:id="tbvSearch" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-backgrounds">
+                                    <TableView fx:id="tbvSearch" styleClass="column-header-backgrounds">
                                        <columnResizePolicy>
                                           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                        </columnResizePolicy>
