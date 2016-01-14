@@ -19,7 +19,6 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -58,11 +57,11 @@ public class FXMLArrivalMainController implements Initializable {
      */
     private static final Logger log = LogManager.getLogger(FXMLArrivalMainController.class);
 
-    public ObservableList dataIOSTestcase;
-    public ObservableList dataANDTestcase;
-    public ObservableList dataWebPortalTestcase;
-    public ObservableList dataFilterAndSearch;
-    public ObservableList dataTestsuite;
+    public ObservableList <TestCase> dataIOSTestcase;
+    public ObservableList <TestCase> dataANDTestcase;
+    public ObservableList <TestCase> dataWebPortalTestcase;
+    public ObservableList <TestCase> dataFilterAndSearch;
+    public ObservableList <TestCase> dataTestsuite;
 
     /**
      * For Internationalization
@@ -148,6 +147,18 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private Button btnStop;
 
+    @FXML
+    private Button btnUp;
+    @FXML
+    private Button btnDown;
+    @FXML
+    private Button btnStepUp;
+    @FXML
+    private Button btnStepDown;
+
+
+
+
 
     @FXML
     private TabPane tabMainTabPane;
@@ -194,8 +205,6 @@ public class FXMLArrivalMainController implements Initializable {
     private FXMLArrivalOptionsController optionsController;
     private Stage optionsViewStage;
 
-
-    //  private HashMap<String, TableView> testSuitesTab;
     private FileNameLoader fileNameLoaderIOS;
     private FileNameLoader fileNameLoaderAND;
     private FileNameLoader fileNameLoaderWeb;
@@ -481,6 +490,31 @@ public class FXMLArrivalMainController implements Initializable {
     public void searchTestcase(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
     }
+
+    @FXML
+    public void up(ActionEvent actionEvent) {
+        log.info(actionEvent.getSource());
+        tbvTestsuiteController.up();
+    }
+
+    @FXML
+    public void down(ActionEvent actionEvent) {
+        log.info(actionEvent.getSource());
+        tbvTestsuiteController.down();
+    }
+
+    @FXML
+    public void stepUp(ActionEvent actionEvent) {
+        log.info(actionEvent.getSource());
+        tbvTestsuiteController.stepUp();
+    }
+
+    @FXML
+    public void stepDown(ActionEvent actionEvent) {
+        log.info(actionEvent.getSource());
+        tbvTestsuiteController.stepDown();
+    }
+
 
     /**
      * Bundle Resources ini
