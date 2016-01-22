@@ -323,21 +323,6 @@
                         <Tooltip text="\%toolbar.up" />
                      </tooltip>
                   </Button>
-                  <Button fx:id="btnStepDown" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="20.0" mnemonicParsing="false" onAction="#stepDown" prefHeight="34.0" prefWidth="20.0" text="StepDown">
-                     <graphic>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../icons/testcaseStepDown.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                     <tooltip>
-                        <Tooltip text="\%toolbar.step.down" />
-                     </tooltip>
-                  </Button>
                   <Button fx:id="btnStepUp" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="20.0" mnemonicParsing="false" onAction="#stepUp" prefHeight="34.0" prefWidth="20.0" text="StepUp">
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
@@ -351,6 +336,21 @@
                      </padding>
                      <tooltip>
                         <Tooltip text="\%toolbar.step.up" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnStepDown" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="20.0" mnemonicParsing="false" onAction="#stepDown" prefHeight="34.0" prefWidth="20.0" text="StepDown">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/testcaseStepDown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\%toolbar.step.down" />
                      </tooltip>
                   </Button>
                   <Button fx:id="btnDown" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="20.0" mnemonicParsing="false" onAction="#down" prefHeight="34.0" prefWidth="20.0" text="Down">

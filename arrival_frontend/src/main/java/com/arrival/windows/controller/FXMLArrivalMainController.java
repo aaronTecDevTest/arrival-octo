@@ -39,6 +39,7 @@ import javafx.stage.Stage;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.net.server.ObjectInputStreamLogEventBridge;
 
 import java.io.IOException;
 import java.net.URL;
@@ -339,6 +340,10 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void deletedTestsuite(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
+        if(tabMainTabPane.getTabs().size() > 1){
+        //Tab selecetedTab = tabMainTabPane.getSelectionModel().getSelectedItem();
+        tabMainTabPane.getTabs().remove(tabMainTabPane.getSelectionModel().getSelectedItem());
+        }
     }
 
     @FXML
@@ -634,7 +639,6 @@ public class FXMLArrivalMainController implements Initializable {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
         }
-
         dataANDTestcase = FXCollections.observableArrayList(tempList);
     }
 
@@ -679,7 +683,6 @@ public class FXMLArrivalMainController implements Initializable {
         dataFilterAndSearch.addAll(dataANDTestcase);
         dataFilterAndSearch.addAll(dataIOSTestcase);
         dataFilterAndSearch.addAll(dataWebPortalTestcase);
-
     }
 
     private void updateSearchTestcase(String valueToFilter){

@@ -1837,3 +1837,54 @@ Driver info: io.appium.java_client.android.AndroidDriver
 2016-01-14 13:25:20,488 WARN  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:383) - Is not a Android Testcase
 2016-01-14 13:25:32,944 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:508) - Button[id=btnStepUp, styleClass=button]'StepUp'
 2016-01-14 13:25:39,560 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:508) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-01-22 11:02:13,235 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-22 11:02:13,276 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-22 11:02:14,633 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-22 11:02:15,254 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-22 11:02:15,382 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:292) - javafx.event.Event$$Lambda$67/1774851957@261a85d1
+2016-01-22 11:02:16,621 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-22 11:02:21,761 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:723) - TextField Text Changed (newValue: c)
+2016-01-22 11:02:21,761 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:686) - Test:c
+2016-01-22 11:02:22,934 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:723) - TextField Text Changed (newValue: cd)
+2016-01-22 11:02:22,935 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:686) - Test:cd
+2016-01-22 11:02:22,936 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:723) - TextField Text Changed (newValue: cdf)
+2016-01-22 11:02:22,936 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:686) - Test:cdf
+2016-01-22 11:02:23,198 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:723) - TextField Text Changed (newValue: cdfa)
+2016-01-22 11:02:23,199 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:686) - Test:cdfa
+2016-01-22 11:02:24,495 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:723) - TextField Text Changed (newValue: cdfaf)
+2016-01-22 11:02:24,496 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:686) - Test:cdfaf
+2016-01-22 11:15:13,684 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:292) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-22 11:15:21,516 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:341) - Button[id=btnDeletedTestsuite, styleClass=button]'Deleted Testsuite'
+2016-01-22 11:25:04,741 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-22 11:25:04,745 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-22 11:25:05,222 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-22 11:25:05,234 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-22 11:25:05,241 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:293) - javafx.event.Event$$Lambda$67/868891968@38f14d82
+2016-01-22 11:25:05,916 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-01-22 11:25:46,195 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: d)
+2016-01-22 11:25:46,196 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:d
+2016-01-22 11:25:47,681 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: )
+2016-01-22 11:25:47,682 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:
+2016-01-22 11:25:51,009 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: k)
+2016-01-22 11:25:51,010 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:k
+2016-01-22 11:25:52,920 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: )
+2016-01-22 11:25:52,921 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:
+2016-01-22 11:26:04,980 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-01-22 11:26:05,372 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-01-22 11:26:30,484 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:342) - Button[id=btnDeletedTestsuite, styleClass=button]'Deleted Testsuite'
+2016-01-22 11:26:42,364 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:293) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-22 11:26:46,125 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:293) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-22 11:26:50,485 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:293) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-22 11:27:01,709 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:342) - Button[id=btnDeletedTestsuite, styleClass=button]'Deleted Testsuite'
+2016-01-22 11:27:04,438 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:293) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-22 11:27:09,821 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:293) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-01-22 11:43:59,626 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:474) - Button[id=btnOptions, styleClass=button]'Options'
+2016-01-22 11:44:01,169 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:190) - Button[id=btnCancel, styleClass=button]'Cancel'
+2016-01-22 12:02:09,735 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: k)
+2016-01-22 12:02:09,736 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:k
+2016-01-22 12:02:09,951 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: kj)
+2016-01-22 12:02:09,951 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:kj
+2016-01-22 12:02:09,952 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: kjk)
+2016-01-22 12:02:09,952 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:kjk
+2016-01-22 12:02:10,151 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: kjkk)
+2016-01-22 12:02:10,151 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:kjkk
