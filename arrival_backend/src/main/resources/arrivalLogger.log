@@ -1888,3 +1888,449 @@ Driver info: io.appium.java_client.android.AndroidDriver
 2016-01-22 12:02:09,952 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:kjk
 2016-01-22 12:02:10,151 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: kjkk)
 2016-01-22 12:02:10,151 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:kjkk
+2016-01-22 15:25:44,357 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:342) - Button[id=btnDeletedTestsuite, styleClass=button]'Deleted Testsuite'
+2016-01-22 15:25:45,005 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:342) - Button[id=btnDeletedTestsuite, styleClass=button]'Deleted Testsuite'
+2016-01-22 15:25:45,694 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:342) - Button[id=btnDeletedTestsuite, styleClass=button]'Deleted Testsuite'
+2016-01-22 15:25:46,670 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:342) - Button[id=btnDeletedTestsuite, styleClass=button]'Deleted Testsuite'
+2016-01-22 15:26:05,924 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-01-22 15:26:05,929 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-01-22 15:26:06,411 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-01-22 15:26:06,421 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-01-22 15:26:06,427 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:293) - javafx.event.Event$$Lambda$67/1156141119@1536aa46
+2016-01-22 15:26:07,078 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-02-04 11:56:54,173 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-02-04 11:56:54,252 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-04 11:56:55,284 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-02-04 11:56:55,823 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-04 11:56:56,023 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:293) - javafx.event.Event$$Lambda$67/912439784@338f9680
+2016-02-04 11:56:57,335 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-02-04 11:56:59,535 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: c)
+2016-02-04 11:56:59,538 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:c
+2016-02-04 11:57:00,222 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: cc)
+2016-02-04 11:57:00,223 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:cc
+2016-02-04 11:57:00,278 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: ccx)
+2016-02-04 11:57:00,279 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:ccx
+2016-02-04 11:57:00,414 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: ccxv)
+2016-02-04 11:57:00,415 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:ccxv
+2016-02-04 11:57:00,638 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: ccxvx)
+2016-02-04 11:57:00,639 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:ccxvx
+2016-02-04 11:57:05,294 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: ccxv)
+2016-02-04 11:57:05,295 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:ccxv
+2016-02-04 11:57:05,878 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: ccx)
+2016-02-04 11:57:05,879 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:ccx
+2016-02-04 11:57:06,230 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: cc)
+2016-02-04 11:57:06,231 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:cc
+2016-02-04 11:57:06,486 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: c)
+2016-02-04 11:57:06,486 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:c
+2016-02-04 11:57:06,702 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: )
+2016-02-04 11:57:06,706 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:
+2016-02-04 11:57:18,975 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: ö)
+2016-02-04 11:57:18,976 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:ö
+2016-02-04 11:57:20,774 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: )
+2016-02-04 11:57:20,776 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:
+2016-02-04 11:57:21,527 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: p)
+2016-02-04 11:57:21,529 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:p
+2016-02-04 11:57:23,063 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: )
+2016-02-04 11:57:23,065 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:
+2016-02-04 11:57:23,887 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: o)
+2016-02-04 11:57:23,888 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:o
+2016-02-04 11:57:27,967 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: )
+2016-02-04 11:57:27,968 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:
+2016-02-04 11:57:28,871 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: p)
+2016-02-04 11:57:28,872 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:p
+2016-02-04 11:57:29,999 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:726) - TextField Text Changed (newValue: )
+2016-02-04 11:57:30,000 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:689) - Test:
+2016-02-04 11:57:53,139 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:354) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-02-04 11:58:06,554 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:447) - Button[id=btnRun, styleClass=button]'Run'
+2016-02-04 11:58:06,555 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:163) - Options object is null[Ljava.lang.StackTraceElement;@1209a6b
+2016-02-04 11:58:08,242 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:471) - Button[id=btnResult, styleClass=button]'Result'
+2016-02-04 11:58:13,347 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:476) - Button[id=btnOptions, styleClass=button]'Options'
+2016-02-04 11:58:20,908 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-02-04 11:58:21,979 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:228) - ToggleButton[id=togOnOffParallel, styleClass=toggle-button]'Off'
+2016-02-04 11:58:23,259 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:228) - ToggleButton[id=togOnOffParallel, styleClass=toggle-button]'On'
+2016-02-04 11:58:28,507 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-02-04 11:58:28,513 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-02-04 11:58:30,058 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:447) - Button[id=btnRun, styleClass=button]'Run'
+2016-02-04 11:58:30,059 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:111) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-02-04 11:58:30,782 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-02-04 11:58:30,840 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-02-04 11:58:31,270 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 430ms
+2016-02-04 11:59:01,388 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:430) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-02-04 11:59:01,876 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:430) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-02-04 11:59:05,860 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:394) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-02-04 11:59:07,468 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:476) - Button[id=btnOptions, styleClass=button]'Options'
+2016-02-04 11:59:21,981 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-02-04 11:59:21,985 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-02-04 11:59:23,093 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:447) - Button[id=btnRun, styleClass=button]'Run'
+2016-02-04 11:59:23,093 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:111) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-02-04 11:59:23,094 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-02-04 11:59:23,096 INFO  [Thread-6] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-02-04 11:59:23,154 DEBUG [Thread-6] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-04 11:59:23,165 DEBUG [Thread-6] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-02-04 11:59:23,224 DEBUG [Thread-6] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-02-04 11:59:33,048 DEBUG [Thread-6] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-04 11:59:41,800 DEBUG [Thread-6] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-04 11:59:41,801 DEBUG [Thread-6] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-02-04 11:59:41,804 DEBUG [Thread-6] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-02-04 11:59:46,257 DEBUG [Thread-6] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-04 11:59:52,746 INFO  [Thread-6] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 29650ms
+2016-02-04 12:00:07,542 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:394) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-02-04 12:00:23,743 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:513) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 12:00:27,079 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:519) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 12:00:28,167 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:519) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 12:00:29,775 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:519) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 12:00:30,967 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:513) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 12:00:31,208 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:513) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 12:00:32,104 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:507) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 12:00:34,944 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:519) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 12:00:36,567 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:501) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 12:00:37,159 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:513) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 12:00:37,503 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:519) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 12:00:39,207 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:447) - Button[id=btnRun, styleClass=button]'Run'
+2016-02-04 12:00:39,208 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:111) - Web->false->2->FF - FireFox->Non->Android->Mobile Web->->->->->false->->
+2016-02-04 12:00:39,209 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-02-04 12:00:39,211 INFO  [Thread-16] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:44) - TestNG is going to start the Pre-Config for Selenium
+2016-02-04 12:00:39,233 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-04 12:00:39,233 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-02-04 12:00:39,240 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-02-04 12:00:44,570 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-04 12:00:54,543 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-04 12:00:54,544 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-02-04 12:00:54,546 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-02-04 12:00:59,830 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-04 12:01:04,132 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-04 12:01:04,132 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:114) - Configuring FirefoxDriver
+2016-02-04 12:01:04,135 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:155) - FirefoxDriver configured successfully
+2016-02-04 12:01:09,417 DEBUG [Thread-16] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-04 12:01:15,599 INFO  [Thread-16] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:54) - TestNG has finished, took around 36388ms
+2016-02-04 12:19:33,214 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-02-04 12:19:33,218 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-04 12:20:48,102 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-02-04 12:20:48,106 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-04 12:21:08,968 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-02-04 12:21:08,973 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-04 12:21:09,449 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-02-04 12:21:09,460 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-04 12:21:09,467 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:291) - javafx.event.Event$$Lambda$67/341923488@622cfadc
+2016-02-04 12:21:10,030 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-02-04 12:21:22,445 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:352) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-02-04 12:21:23,636 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:352) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-02-04 12:21:24,868 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:352) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-02-04 12:21:24,869 WARN  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:362) - Testcase all ready added!
+2016-02-04 12:21:29,964 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 12:22:22,863 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 12:23:24,537 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 12:23:30,872 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:428) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-02-04 12:23:36,953 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:352) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-02-04 12:23:39,185 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:352) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-02-04 12:24:24,163 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 12:24:48,555 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:428) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-02-04 12:24:51,324 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:352) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-02-04 12:25:28,341 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 13:17:37,109 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:428) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-02-04 13:17:39,828 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:352) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-02-04 13:17:42,701 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 13:18:45,487 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:428) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-02-04 13:18:47,511 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:352) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-02-04 13:18:50,079 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 13:19:01,343 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:291) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-02-04 13:19:12,000 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:392) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-02-04 13:19:16,928 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 13:23:25,705 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 13:23:50,433 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 13:23:57,082 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 13:23:59,466 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 13:25:11,229 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 13:25:44,494 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 13:25:48,726 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:46:43,892 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:428) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-02-04 14:46:52,860 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:392) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-02-04 14:46:56,572 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:47:32,590 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:428) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-02-04 14:47:35,821 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:392) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-02-04 14:47:38,557 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:47:48,292 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:48:23,184 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:291) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-02-04 14:48:26,134 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:728) - TextField Text Changed (newValue: c)
+2016-02-04 14:48:26,136 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:691) - Test:c
+2016-02-04 14:48:44,984 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:412) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-02-04 14:48:50,648 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:48:57,464 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:49:28,849 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:49:43,258 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 14:49:47,162 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 14:49:58,826 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:50:05,763 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 14:52:51,128 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:52:53,105 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:52:54,673 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:52:55,313 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:52:55,761 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:52:56,209 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:52:56,905 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:53:02,625 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:55:07,542 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:55:08,925 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:55:12,814 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:55:13,582 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:55:14,302 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:57:21,326 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-02-04 14:57:21,334 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-04 14:57:22,825 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-02-04 14:57:22,885 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-04 14:57:22,907 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:291) - javafx.event.Event$$Lambda$67/1335606992@2b026ef0
+2016-02-04 14:57:24,101 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - MainApp show up!!
+2016-02-04 14:57:36,195 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:728) - TextField Text Changed (newValue: f)
+2016-02-04 14:57:36,196 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:691) - Test:f
+2016-02-04 14:57:36,358 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:728) - TextField Text Changed (newValue: fd)
+2016-02-04 14:57:36,358 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:691) - Test:fd
+2016-02-04 14:57:57,308 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:412) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-02-04 14:58:04,060 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:58:16,854 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:58:18,916 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:58:20,060 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:58:21,132 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:58:23,477 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:58:52,318 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:59:02,222 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 14:59:47,744 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 14:59:54,320 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:00:34,258 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:00:39,121 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:02:07,701 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:02:09,436 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:02:10,564 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:02:11,740 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:02:12,937 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:02:13,989 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:02:15,045 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:02:20,709 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:21,445 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:21,957 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:22,701 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:23,925 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:25,237 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:29,773 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:02:32,670 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:34,294 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:45,478 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:46,174 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:46,958 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:47,702 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:51,782 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:52,343 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:52,895 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:02:53,359 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:03:00,238 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:03:01,166 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:03:02,127 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:03:02,935 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:03:03,407 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:03:03,751 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:03:59,416 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:04:00,680 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:04:01,840 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:06:31,358 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:32,598 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:33,326 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:34,014 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:34,550 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:35,022 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:42,135 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:43,399 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:44,303 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:53,551 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:55,039 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:55,855 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:56,343 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:06:57,423 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:22,408 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:23,720 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:24,184 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:24,480 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:30,400 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:32,481 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:33,089 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:33,536 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:33,800 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:33,985 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:34,304 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:34,496 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:34,672 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:53,209 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:412) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-02-04 15:07:57,345 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:58,297 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:58,681 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:58,945 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:59,433 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:59,657 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:07:59,873 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:08:15,714 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:08:20,034 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:08:22,930 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:08:23,754 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:08:24,658 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:08:25,746 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:16:25,476 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:16:32,812 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:16:36,644 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:16:39,299 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:16:43,180 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:16:48,004 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:16:49,972 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:17:00,348 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:17:08,141 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:18:52,769 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:18:57,513 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:18:59,728 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:19:01,608 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:19:05,641 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:19:28,470 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:19:46,858 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:21:32,174 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:21:34,247 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:21:35,406 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:21:36,254 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:21:36,958 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:21:37,726 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:21:38,446 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:21:39,470 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:21:41,086 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:21:52,935 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:21:53,815 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:21:54,407 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:21:54,615 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:21:54,767 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:21:56,415 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:21:58,023 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:21:59,263 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:22:01,471 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:22:02,800 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:22:04,432 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:22:06,463 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:22:08,703 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:22:10,655 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:22:12,472 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:22:14,008 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:22:19,784 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:22:20,647 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:22:21,735 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:22:22,167 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:22:22,744 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:22:23,288 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:22:23,904 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:45,494 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:46,230 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:47,958 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:48,334 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:48,486 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:48,638 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:48,806 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:50,430 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:43:50,990 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:43:51,406 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:43:51,774 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:43:52,205 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:43:52,494 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:43:52,678 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:43:52,846 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:43:52,990 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:43:53,134 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:43:53,894 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:54,262 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:54,502 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:54,694 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:54,878 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:55,078 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:55,254 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:55,414 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:43:55,534 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:02,983 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:412) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-02-04 15:44:07,215 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:428) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-02-04 15:44:08,342 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:412) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Search
+2016-02-04 15:44:14,023 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:44:15,503 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:44:19,079 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:20,231 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:20,695 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:21,031 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:21,231 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:21,943 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:22,343 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:22,544 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:22,752 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:22,951 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:23,335 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:23,568 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:23,743 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:23,943 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:24,119 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:24,303 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:24,479 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:44:25,103 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:25,279 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:25,463 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:25,655 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:25,855 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:26,015 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:26,191 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:26,351 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:26,535 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:26,719 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:44:26,855 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:10,623 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:728) - TextField Text Changed (newValue: f)
+2016-02-04 15:45:10,624 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:691) - Test:f
+2016-02-04 15:45:10,775 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:728) - TextField Text Changed (newValue: )
+2016-02-04 15:45:10,776 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:691) - Test:
+2016-02-04 15:45:13,353 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:291) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-02-04 15:45:19,889 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:352) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-02-04 15:45:22,458 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:45:23,226 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:45:23,410 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:45:24,442 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:45:25,226 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:505) - Button[id=btnDown, styleClass=button]'Down'
+2016-02-04 15:45:26,082 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:499) - Button[id=btnUp, styleClass=button]'Up'
+2016-02-04 15:45:27,385 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:28,049 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:28,361 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:28,537 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:29,537 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:29,745 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:29,921 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:30,281 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:30,745 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:30,921 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:31,497 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:31,649 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:44,570 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:44,898 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:45,130 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:45,370 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:46,442 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:46,690 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:46,906 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:47,122 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:47,330 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:47,514 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:47,690 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:47,906 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:51,282 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:51,442 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:51,610 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:51,770 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:51,946 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:52,090 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:52,250 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:511) - Button[id=btnStepUp, styleClass=button]'StepUp'
+2016-02-04 15:45:53,251 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:53,427 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:53,595 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:53,747 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:53,907 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:54,075 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:45:54,235 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:517) - Button[id=btnStepDown, styleClass=button]'StepDown'
+2016-02-04 15:46:08,617 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:728) - TextField Text Changed (newValue: f)
+2016-02-04 15:46:08,618 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:691) - Test:f
+2016-02-04 15:46:10,609 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:728) - TextField Text Changed (newValue: ff)
+2016-02-04 15:46:10,610 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:691) - Test:ff
+2016-02-04 15:46:10,977 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:728) - TextField Text Changed (newValue: ffa)
+2016-02-04 15:46:10,978 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:691) - Test:ffa

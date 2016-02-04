@@ -182,21 +182,51 @@ public class FXMLArrivalTableViewController  implements Initializable {
     }
 
     public void up(){
+        tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        int oldSelectedIndex = tbvTestsuite.getSelectionModel().getFocusedIndex();
+        int newSelectedIndex = 0;
+        final TestCase tempItem = dateTestSuite.remove(oldSelectedIndex);
 
+        dateTestSuite.add(newSelectedIndex,tempItem);
+        tbvTestsuite.getSelectionModel().select(tempItem);
+        tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
 
     public void down(){
+        tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        int oldSelectedIndex = tbvTestsuite.getSelectionModel().getFocusedIndex();
+        int newSelectedIndex = tbvTestsuite.getItems().size()-1;
+        final TestCase tempItem = dateTestSuite.remove(oldSelectedIndex);
 
+        dateTestSuite.add(newSelectedIndex,tempItem);
+        tbvTestsuite.getSelectionModel().select(tempItem);
+        tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
 
     public void stepUp(){
-        int newSelectedIndex = tbvTestsuite.getSelectionModel().getFocusedIndex()-1;
-        this.dateTestSuite.add(newSelectedIndex,tbvTestsuite.getSelectionModel().getSelectedItem());
+        if( 0 < tbvTestsuite.getSelectionModel().getSelectedIndex()) {
+            tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+            int oldSelectedIndex = tbvTestsuite.getSelectionModel().getFocusedIndex();
+            int newSelectedIndex = oldSelectedIndex - 1;
+            final TestCase tempItem = dateTestSuite.remove(oldSelectedIndex);
+
+            dateTestSuite.add(newSelectedIndex, tempItem);
+            tbvTestsuite.getSelectionModel().select(tempItem);
+            tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        }
     }
 
     public void stepDown(){
-        int newSelectedIndex = tbvTestsuite.getSelectionModel().getFocusedIndex()+1;
-        this.dateTestSuite.add(newSelectedIndex,tbvTestsuite.getSelectionModel().getSelectedItem());
+        if((tbvTestsuite.getItems().size() - 1) > tbvTestsuite.getSelectionModel().getSelectedIndex()) {
+            tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+            int oldSelectedIndex = tbvTestsuite.getSelectionModel().getFocusedIndex();
+            int newSelectedIndex = oldSelectedIndex + 1;
+            final TestCase tempItem = dateTestSuite.remove(oldSelectedIndex);
+
+            dateTestSuite.add(newSelectedIndex, tempItem);
+            tbvTestsuite.getSelectionModel().select(tempItem);
+            tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        }
     }
 
     private void iniBundleResources() {

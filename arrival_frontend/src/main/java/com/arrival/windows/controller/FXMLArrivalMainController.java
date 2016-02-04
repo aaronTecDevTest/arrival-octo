@@ -148,6 +148,7 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private Button btnStop;
 
+
     @FXML
     private Button btnUp;
     @FXML
@@ -156,9 +157,6 @@ public class FXMLArrivalMainController implements Initializable {
     private Button btnStepUp;
     @FXML
     private Button btnStepDown;
-
-
-
 
 
     @FXML
@@ -544,6 +542,10 @@ public class FXMLArrivalMainController implements Initializable {
         btnSkip.getTooltip().setText(bundle.getString("tooltip.skip"));
         btnStop.getTooltip().setText(bundle.getString("tooltip.stop"));
         btnRun.getTooltip().setText(bundle.getString("tooltip.run"));
+        btnUp.getTooltip().setText(bundle.getString("tooltip.up"));
+        btnDown.getTooltip().setText(bundle.getString("tooltip.down"));
+        btnStepUp.getTooltip().setText(bundle.getString("tooltip.stepUp"));
+        btnStepDown.getTooltip().setText(bundle.getString("tooltip.stepDown"));
 
         mnuFile.setText(bundle.getString("menu.title.file"));
         mnuEdit.setText(bundle.getString("menu.title.edit"));
@@ -740,7 +742,6 @@ public class FXMLArrivalMainController implements Initializable {
                     accTestCase.setExpandedPane(tpnSearch);
                     tpnSearch.setPadding(new Insets(-74,0,0,0));
                 }
-
                 updateSearchTestcase(newValue);
             }
         });
