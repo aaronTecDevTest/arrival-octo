@@ -19,6 +19,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -39,7 +40,6 @@ import javafx.stage.Stage;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.net.server.ObjectInputStreamLogEventBridge;
 
 import java.io.IOException;
 import java.net.URL;
@@ -208,6 +208,8 @@ public class FXMLArrivalMainController implements Initializable {
     private FileNameLoader fileNameLoaderAND;
     private FileNameLoader fileNameLoaderWeb;
 
+    private FilteredList<TestCase> filterredDate;
+
 
     /**
      * Called to initialize a controller after its root element has been
@@ -266,9 +268,10 @@ public class FXMLArrivalMainController implements Initializable {
         //TitledPane ios = accTestCase.getPanes().get(0);
         accTestCase.setExpandedPane(tpnIOS);
 
-
         //SetUp Testsuite
         setUpFirstTableView();
+
+        //Listener
         addDataListener();
         addTableViewListener();
         addSearchFieldListener();
@@ -685,20 +688,30 @@ public class FXMLArrivalMainController implements Initializable {
         dataFilterAndSearch.addAll(dataANDTestcase);
         dataFilterAndSearch.addAll(dataIOSTestcase);
         dataFilterAndSearch.addAll(dataWebPortalTestcase);
+        filterredDate = new FilteredList<TestCase>(dataFilterAndSearch);
     }
 
     private void updateSearchTestcase(String valueToFilter){
-        log.info("Test:"+valueToFilter);
+        log.info("Test: " + valueToFilter);
          Predicate<TestCase> test = new Predicate<TestCase>() {
              @Override
              public boolean test(TestCase testCase) {
-               // testCase.getTcName().contains(valueToFilter);
-                 return  testCase.getTcName().contains(valueToFilter);
+                 if (valueToFilter == null || valueToFilter.isEmpty()) {
+                     return true;
+                 }
+                 // Compare first name and last name of every person with filter text
+                 String lowerCaseFilter = valueToFilter.toLowerCase();
+
+                 return testCase.getTcName().toLowerCase().indexOf(lowerCaseFilter) != -1;
              }
          };
-        dataFilterAndSearch.filtered(test);
+        filterredDate.setPredicate(test);
+        tbvSearch.setItems(filterredDate);
     }
 
+    /**
+     * Update teh dataFilterAndSearch.
+     */
     private void addDataListener(){
         dataANDTestcase.addListener(new ListChangeListener() {
             @Override
@@ -814,7 +827,7 @@ public class FXMLArrivalMainController implements Initializable {
                     imageView.setImage(new Image(getClass().getResource("/icons/skipped.png").toString()));
                     return  imageView;
                 default:
-                    imageView.setImage( new Image(getClass().getResource("/icons/skipped.png").toString()));
+                    imageView.setImage(new Image(getClass().getResource("/icons/skipped.png").toString()));
                     return  imageView;
             }
     }
