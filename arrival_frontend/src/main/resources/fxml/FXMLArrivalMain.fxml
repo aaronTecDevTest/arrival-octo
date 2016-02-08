@@ -38,7 +38,7 @@
                         <MenuItem fx:id="mnuDelete" mnemonicParsing="false" text="\%menu.title.delete" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem fx:id="mnuSelectAll" mnemonicParsing="false" text="\%menu.title.select.all" />
-                        <MenuItem fx:id="mnuUnselectAll" mnemonicParsing="false" text="\%menu.title.unselect.all" />
+                        <MenuItem fx:id="mnuUnSelectAll" mnemonicParsing="false" text="\\%menu.title.unselect.all" />
                     </items>
                 </Menu>
                 <Menu fx:id="mnuHelp" mnemonicParsing="false" text="\%menu.title.help">
@@ -52,7 +52,7 @@
             <center>
                 <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
                     <items>
-                        <VBox maxWidth="300.0">
+                        <VBox fx:id="vBoxTestcase" maxWidth="300.0">
                             <children>
                                 <HBox>
                                     <children>
@@ -67,7 +67,7 @@
                                         <Insets bottom="2.0" top="2.0" />
                                     </padding>
                                 </HBox>
-                                <Accordion fx:id="accTestCase" VBox.vgrow="ALWAYS">
+                                <Accordion fx:id="accTestCaseMain" VBox.vgrow="ALWAYS">
                                     <panes>
                                         <TitledPane fx:id="tpnIOS" text="iOS - Testcase">
                                             <content>

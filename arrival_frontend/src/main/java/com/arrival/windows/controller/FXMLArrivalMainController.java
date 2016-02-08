@@ -35,6 +35,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -110,7 +111,7 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private MenuItem mnuUndo;
     @FXML
-    private MenuItem mnuUnselectAll;
+    private MenuItem mnuUnSelectAll;
 
 
     @FXML
@@ -160,9 +161,13 @@ public class FXMLArrivalMainController implements Initializable {
 
 
     @FXML
+    private VBox vBoxTestcase;
+    @FXML
     private TabPane tabMainTabPane;
     @FXML
-    private Accordion accTestCase;
+    private Accordion accTestCaseMain;
+    @FXML
+    private Accordion accTestCaseSearch;
 
 
     @FXML
@@ -197,6 +202,8 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private TextField txtSearchField;
 
+
+
     private FXMLArrivalTableViewController tbvTestsuiteController;
 
     private TableView<TestCase> currentTableView;
@@ -208,7 +215,7 @@ public class FXMLArrivalMainController implements Initializable {
     private FileNameLoader fileNameLoaderAND;
     private FileNameLoader fileNameLoaderWeb;
 
-    private FilteredList<TestCase> filterredDate;
+    private FilteredList<TestCase> filteredDate;
 
 
     /**
@@ -265,8 +272,8 @@ public class FXMLArrivalMainController implements Initializable {
         tbvSearch.setItems(dataFilterAndSearch);
 
         //Set first TitlePane open
-        //TitledPane ios = accTestCase.getPanes().get(0);
-        accTestCase.setExpandedPane(tpnIOS);
+        //TitledPane ios = accTestCaseMain.getPanes().get(0);
+        accTestCaseMain.setExpandedPane(tpnIOS);
 
         //SetUp Testsuite
         setUpFirstTableView();
@@ -351,7 +358,7 @@ public class FXMLArrivalMainController implements Initializable {
     public void addTestcaseInTestsuite(ActionEvent actionEvent) {
         try {
 
-            if (accTestCase.getExpandedPane().getText().equals("iOS - Testcase")) {
+            if (accTestCaseMain.getExpandedPane().getText().equals("iOS - Testcase")) {
                 log.info(actionEvent.getSource() + "IOS");
                 if (/*dataTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("IOS");
@@ -371,7 +378,7 @@ public class FXMLArrivalMainController implements Initializable {
                 }
             }
 
-            if (accTestCase.getExpandedPane().getText().equals("Android - Testcase")) {
+            if (accTestCaseMain.getExpandedPane().getText().equals("Android - Testcase")) {
                 log.info(actionEvent.getSource() + "AND");
                 if (/*dataTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("Android");
@@ -391,7 +398,7 @@ public class FXMLArrivalMainController implements Initializable {
                 }
             }
 
-            if (accTestCase.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
+            if (accTestCaseMain.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
                 log.info(actionEvent.getSource() + "Web");
                 if (/*dataTestsuite.isEmpty() && */tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("Web");
@@ -411,7 +418,7 @@ public class FXMLArrivalMainController implements Initializable {
                 }
             }
 
-            if (accTestCase.getExpandedPane().getText().equals("Search - Testcase")) {
+            if (accTestCaseMain.getExpandedPane().getText().equals("Search - Testcase")) {
                 log.info(actionEvent.getSource() + "Search");
                 dataTestsuite = currentTableView.getItems();
                 if (!(dataTestsuite.containsAll(tbvSearch.getSelectionModel().getSelectedItems()))) {
@@ -569,7 +576,7 @@ public class FXMLArrivalMainController implements Initializable {
         mnuSaveAs.setText(bundle.getString("menu.title.save.as"));
         mnuSelectAll.setText(bundle.getString("menu.title.select.all"));
         mnuUndo.setText(bundle.getString("menu.title.undo"));
-        mnuUnselectAll.setText(bundle.getString("menu.title.unselect.all"));
+        mnuUnSelectAll.setText(bundle.getString("menu.title.unselect.all"));
         mnuRevert.setText(bundle.getString("menu.title.revert"));
     }
 
@@ -688,7 +695,7 @@ public class FXMLArrivalMainController implements Initializable {
         dataFilterAndSearch.addAll(dataANDTestcase);
         dataFilterAndSearch.addAll(dataIOSTestcase);
         dataFilterAndSearch.addAll(dataWebPortalTestcase);
-        filterredDate = new FilteredList<TestCase>(dataFilterAndSearch);
+        filteredDate = new FilteredList<TestCase>(dataFilterAndSearch);
     }
 
     private void updateSearchTestcase(String valueToFilter){
@@ -705,8 +712,8 @@ public class FXMLArrivalMainController implements Initializable {
                  return testCase.getTcName().toLowerCase().indexOf(lowerCaseFilter) != -1;
              }
          };
-        filterredDate.setPredicate(test);
-        tbvSearch.setItems(filterredDate);
+        filteredDate.setPredicate(test);
+        tbvSearch.setItems(filteredDate);
     }
 
     /**
@@ -736,24 +743,31 @@ public class FXMLArrivalMainController implements Initializable {
     private void addSearchFieldListener(){
         // Listen for TextField text changes
         txtSearchField.textProperty().addListener(new ChangeListener<String>() {
+            URL url = getClass().getResource("/fxml/FXMLArrivalSearch.fxml");
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 log.info("TextField Text Changed (newValue: " + newValue + ")");
                 if(newValue.equals("") && newValue.length()<=1) {
-                    tpnIOS.setVisible(true);
-                    tpnAND.setVisible(true);
-                    tpnWEB.setVisible(true);
-                    tpnSearch.setVisible(false);
-                    accTestCase.setExpandedPane(tpnIOS);
-                    tpnSearch.setPadding(new Insets(0,0,0,0));
+                    //tpnIOS.setVisible(true);
+                    //tpnAND.setVisible(true);
+                    //tpnWEB.setVisible(true);
+                    //tpnSearch.setVisible(false);
+                    vBoxTestcase.getChildren().remove(1);
+                    vBoxTestcase.getChildren().addAll( accTestCaseMain);
+
+                    //accTestCaseMain.setExpandedPane(tpnIOS);
+                    //tpnSearch.setPadding(new Insets(0,0,0,0));
                     setUpSearchTestcase();
                 }else {
-                    tpnIOS.setVisible(false);
-                    tpnAND.setVisible(false);
-                    tpnWEB.setVisible(false);
-                    tpnSearch.setVisible(true);
-                    accTestCase.setExpandedPane(tpnSearch);
-                    tpnSearch.setPadding(new Insets(-74,0,0,0));
+                    //tpnIOS.setVisible(false);
+                    //tpnAND.setVisible(false);
+                    //tpnWEB.setVisible(false);
+                    //tpnSearch.setVisible(true);
+                    //accTestCaseMain.setExpandedPane(tpnSearch);
+                    vBoxTestcase.getChildren().remove(1);
+                    vBoxTestcase.getChildren().addAll(accTestCaseMain);
+                  //  vBoxTestcase.getChildren().add(1,(Node) accTestCaseSearch);
+                    //tpnSearch.setPadding(new Insets(-74,0,0,0));
                 }
                 updateSearchTestcase(newValue);
             }
@@ -789,7 +803,6 @@ public class FXMLArrivalMainController implements Initializable {
             log.error(e.getStackTrace());
         }
     }
-
     private Stage setUpOptionsView() {
         try {
             URL url = getClass().getResource("/fxml/FXMLArrivalOptions.fxml");
