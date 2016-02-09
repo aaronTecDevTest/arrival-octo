@@ -71,8 +71,6 @@ public class FXMLArrivalTableViewController  implements Initializable {
     private Options options;
     private String platform;
 
-    private Thread t;
-
     /**
      * Called to initialize a controller after its root element has been
      * completely processed.

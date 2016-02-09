@@ -33,9 +33,9 @@ public class ViewArrivalMainApp extends Application {
         log.info("Start MainApp!!");
         SystemPreferences.getInstance();
 
-        URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
+        URL urlMain = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
         URL applicationIcon = getClass().getResource("/icons/appIcons.png");
-        Parent root = FXMLLoader.load(url, SystemPreferences.getResourceBundle("arrivalMain"));
+        Parent root = FXMLLoader.load(urlMain, SystemPreferences.getResourceBundle("arrivalMain"));
 
         Scene scene = new Scene(root, 1300, 530);
         scene.getStylesheets().add("/css/arrivalMain.css");
@@ -43,6 +43,7 @@ public class ViewArrivalMainApp extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("Main - ArrivalOcto");
         primaryStage.getIcons().add(new Image(applicationIcon.toString()));
+
         primaryStage.show();
         log.info("MainApp show up!!");
     }

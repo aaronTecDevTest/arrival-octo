@@ -25,7 +25,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -166,8 +165,6 @@ public class FXMLArrivalMainController implements Initializable {
     private TabPane tabMainTabPane;
     @FXML
     private Accordion accTestCaseMain;
-    @FXML
-    private Accordion accTestCaseSearch;
 
 
     @FXML
@@ -176,18 +173,14 @@ public class FXMLArrivalMainController implements Initializable {
     private TableView<TestCase> tbvAND;
     @FXML
     private TableView<TestCase> tbvWEB;
-    @FXML
-    private TableView<TestCase> tbvSearch;
 
 
     @FXML
     private TitledPane tpnIOS;
-     @FXML
+    @FXML
     private TitledPane tpnAND;
-     @FXML
+    @FXML
     private TitledPane tpnWEB;
-     @FXML
-    private TitledPane tpnSearch;
 
 
     @FXML
@@ -203,9 +196,14 @@ public class FXMLArrivalMainController implements Initializable {
     private TextField txtSearchField;
 
 
+    private FXMLArrivalSearchController searchController;
+    private Stage searchViewStage;
+    private Accordion accTestCaseSearch;
+    private TableView<TestCase> tbvSearch;
+    private TitledPane tpnSearch;
+
 
     private FXMLArrivalTableViewController tbvTestsuiteController;
-
     private TableView<TestCase> currentTableView;
 
     private FXMLArrivalOptionsController optionsController;
@@ -231,6 +229,9 @@ public class FXMLArrivalMainController implements Initializable {
         bundle = resources;
         iniBundleResources();
 
+        //Setup SearchController/SearchView
+        searchViewStage = setUpSearchView();
+
         //Setup Table-Data Objects
         dataTestsuite = FXCollections.observableArrayList();
         dataANDTestcase = FXCollections.observableArrayList();
@@ -242,7 +243,7 @@ public class FXMLArrivalMainController implements Initializable {
         tbcIOS.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcAndroid.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcWebPortal.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-        tbcSearch.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
+    //    tbcSearch.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
 
         //tbvIOS.getSelectionModel().setCellSelectionEnabled(true);
         tbvIOS.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -257,8 +258,8 @@ public class FXMLArrivalMainController implements Initializable {
         tbvWEB.getStyleClass().add("table-right");
 
         //tbvSearch.getSelectionModel().setCellSelectionEnabled(true);
-        tbvSearch.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        tbvSearch.getStyleClass().add("table-right");
+//        tbvSearch.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+//        tbvSearch.getStyleClass().add("table-right");
 
         //SetUp Testcase to Table
         setUpIOSTestcase();
@@ -269,10 +270,9 @@ public class FXMLArrivalMainController implements Initializable {
         tbvIOS.setItems(dataIOSTestcase);
         tbvAND.setItems(dataANDTestcase);
         tbvWEB.setItems(dataWebPortalTestcase);
-        tbvSearch.setItems(dataFilterAndSearch);
+//        tbvSearch.setItems(dataFilterAndSearch);
 
         //Set first TitlePane open
-        //TitledPane ios = accTestCaseMain.getPanes().get(0);
         accTestCaseMain.setExpandedPane(tpnIOS);
 
         //SetUp Testsuite
@@ -765,6 +765,7 @@ public class FXMLArrivalMainController implements Initializable {
                     //tpnSearch.setVisible(true);
                     //accTestCaseMain.setExpandedPane(tpnSearch);
                     vBoxTestcase.getChildren().remove(1);
+                    searchViewStage.show();
                     vBoxTestcase.getChildren().addAll(accTestCaseMain);
                   //  vBoxTestcase.getChildren().add(1,(Node) accTestCaseSearch);
                     //tpnSearch.setPadding(new Insets(-74,0,0,0));
@@ -803,6 +804,22 @@ public class FXMLArrivalMainController implements Initializable {
             log.error(e.getStackTrace());
         }
     }
+    private Stage setUpSearchView() {
+        try {
+            URL url = getClass().getResource("/fxml/FXMLArrivalSearch.fxml");
+            FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalMain"));
+            Stage stage = new Stage();
+            Parent root = loader.load();
+            Scene searchScene = new Scene(root);
+            stage.setScene(searchScene);
+            return stage;
+
+        } catch (IOException e) {
+            log.error(e.getStackTrace());
+            return null;
+        }
+    }
+
     private Stage setUpOptionsView() {
         try {
             URL url = getClass().getResource("/fxml/FXMLArrivalOptions.fxml");
