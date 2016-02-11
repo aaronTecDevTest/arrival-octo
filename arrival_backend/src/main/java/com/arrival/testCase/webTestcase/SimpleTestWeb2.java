@@ -10,7 +10,9 @@ package com.arrival.testCase.webTestcase;
 
 import com.arrival.unit.generic.ArrivalWeb;
 import com.arrival.utilities.ArrivalResult;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class SimpleTestWeb2 extends ArrivalWeb {
@@ -31,7 +33,9 @@ public class SimpleTestWeb2 extends ArrivalWeb {
         System.out.println("Fast test 222 " + driver + " " + id);
         //setWebDriver(driver);
         driver.get("http://www.apple.com/");
-        pauseTest(3000);
+        WebElement ele = driver.findElement(By.xpath("//*[@id=\"hero-gallery-item-hero-iphone-6s-change\"]/div/a"));
+        ele.click();
+        pauseTest(6000);
         click();
     }
 

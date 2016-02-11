@@ -3050,3 +3050,69 @@ Driver info: io.appium.java_client.android.AndroidDriver
 2016-02-09 16:00:49,660 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
 2016-02-09 16:00:50,751 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController$6 (FXMLArrivalMainController.java:749) - TextField Text Changed (newValue: d)
 2016-02-09 16:00:50,800 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:702) - Test: d
+2016-02-10 14:07:21,462 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-10 14:07:21,625 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-10 14:07:21,625 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-10 14:07:21,736 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-10 14:07:21,738 ERROR [main] utilities.SystemPreferences (SystemPreferences.java:95) - [Ljava.lang.StackTraceElement;@229f66ed
+2016-02-10 14:07:21,752 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-10 14:07:21,765 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-10 14:07:39,697 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-10 14:18:34,718 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-10 14:18:34,790 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-10 14:18:34,791 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-10 14:18:34,794 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-10 14:18:34,796 ERROR [main] utilities.SystemPreferences (SystemPreferences.java:95) - [Ljava.lang.StackTraceElement;@7dcf94f8
+2016-02-10 14:18:34,810 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-10 14:18:34,823 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-10 14:18:37,304 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-10 14:28:51,928 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-10 14:28:51,934 ERROR [main] utilities.SystemPreferences (SystemPreferences.java:95) - [Ljava.lang.StackTraceElement;@4fb0f2b9
+2016-02-10 14:42:18,657 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-10 14:42:41,769 ERROR [main] utilities.SystemPreferences (SystemPreferences.java:95) - [Ljava.lang.StackTraceElement;@4fb0f2b9
+2016-02-10 14:43:38,940 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-10 14:52:21,466 ERROR [main] utilities.SystemPreferences (SystemPreferences.java:95) - [Ljava.lang.StackTraceElement;@4fb0f2b9
+2016-02-10 14:52:26,684 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 12:16:32,300 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:36) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 12:16:32,302 ERROR [main] utilities.SystemPreferences (SystemPreferences.java:95) - [Ljava.lang.StackTraceElement;@4c70fda8
+2016-02-11 12:19:23,612 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 12:19:31,808 ERROR [main] utilities.SystemPreferences (SystemPreferences.java:96) - [Ljava.lang.StackTraceElement;@4fb0f2b9
+2016-02-11 12:25:57,260 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 12:29:18,743 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 12:29:19,076 INFO  [JavaFX Application Thread] view.ViewArrivalLogIn (ViewArrivalLogIn.java:39) - Start App with LogIn
+2016-02-11 12:29:20,552 INFO  [JavaFX Application Thread] view.ViewArrivalLogIn (ViewArrivalLogIn.java:55) - LogIn show up
+2016-02-11 12:29:23,036 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-02-11 12:29:23,225 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 12:29:23,367 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:301) - javafx.event.Event$$Lambda$66/961024196@303f671f
+2016-02-11 12:30:41,096 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-02-11 12:30:41,102 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 12:30:41,558 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-02-11 12:30:41,568 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 12:30:41,576 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:301) - javafx.event.Event$$Lambda$67/951756904@3ec0f785
+2016-02-11 12:30:42,178 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-02-11 12:31:27,563 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 12:31:27,629 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 12:31:27,631 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 12:31:27,633 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 12:31:27,649 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 12:31:27,659 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 12:31:33,191 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 12:32:42,379 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 12:32:42,441 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 12:32:42,442 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 12:32:42,445 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 12:32:42,463 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 12:32:42,476 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 12:32:44,837 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 12:32:54,522 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 12:32:54,523 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 12:32:54,523 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 12:32:54,524 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 12:32:56,463 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 12:33:13,208 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 12:33:13,209 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 12:33:13,209 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 12:33:13,209 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 12:33:15,110 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 12:33:20,374 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@5bf480ac
+2016-02-11 12:33:20,375 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!

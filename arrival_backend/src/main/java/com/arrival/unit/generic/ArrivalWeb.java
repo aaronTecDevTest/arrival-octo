@@ -16,6 +16,7 @@ import org.testng.annotations.*;
 
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author: Aaron Kutekidila
@@ -167,6 +168,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     public void pauseTest(long milSeconds) {
         try {
             Thread.sleep(milSeconds);
+            browser.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         } catch (Exception e) {
             log.error(e.getStackTrace());
             log.error("Test was not paused!!");

@@ -1,5 +1,6 @@
 package com.arrival.utilities;
 
+import com.arrival.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -147,9 +148,9 @@ public class SystemPreferences {
     public String toString() {
         return osName + " " + osCountry + " " + osLanguage;
     }
-
+/*
     public static void main(String[] args) {
         SystemPreferences.getInstance();
 
-    }
+    }*/
 }

@@ -25,6 +25,7 @@ import org.apache.logging.log4j.Logger;
 import org.testng.annotations.*;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     private static final Logger log = LogManager.getLogger(ArrivalAND.class);
@@ -178,6 +179,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     public void pauseTest(long milSec) {
         try {
             Thread.sleep(milSec);
+            androidDriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             log.error(e);
         }

@@ -754,7 +754,6 @@ public class FXMLArrivalMainController implements Initializable {
                     //tpnSearch.setVisible(false);
                     vBoxTestcase.getChildren().remove(1);
                     vBoxTestcase.getChildren().addAll( accTestCaseMain);
-
                     //accTestCaseMain.setExpandedPane(tpnIOS);
                     //tpnSearch.setPadding(new Insets(0,0,0,0));
                     setUpSearchTestcase();

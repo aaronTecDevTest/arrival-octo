@@ -28,6 +28,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     private static final Logger log = LogManager.getLogger(ArrivalIOS.class);
@@ -182,6 +183,7 @@ public abstract class ArrivalIOS implements IFTestCase, IFGenericMobil {
     public void pauseTest(long milSec) {
         try {
             Thread.sleep(milSec);
+            iosDriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             log.error(e);
         }
