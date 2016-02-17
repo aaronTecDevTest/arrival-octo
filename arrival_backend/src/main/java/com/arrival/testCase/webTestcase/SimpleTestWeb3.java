@@ -15,6 +15,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SimpleTestWeb3 extends ArrivalWeb {
 
     public SimpleTestWeb3() {
@@ -37,5 +40,11 @@ public class SimpleTestWeb3 extends ArrivalWeb {
         wb.click();
 
         pauseTest(3000);
+    }
+
+    @Test(dataProvider = "driver", groups = {"fast"})
+    public void mischMisch(WebDriver driver, Integer id) {
+        System.out.println("Fast test 222 " + driver + " " + id);
+        driver.get("http://www.t-online.de");
     }
 }

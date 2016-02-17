@@ -246,6 +246,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     /*
    *Testcase Properties
    */
+
     public int getTcID() {
         return tcID.get();
     }

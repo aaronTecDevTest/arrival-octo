@@ -3116,3 +3116,108 @@ Driver info: io.appium.java_client.android.AndroidDriver
 2016-02-11 12:33:15,110 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
 2016-02-11 12:33:20,374 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@5bf480ac
 2016-02-11 12:33:20,375 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!
+2016-02-11 14:14:53,076 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 14:14:53,138 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 14:14:53,139 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 14:14:53,141 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 14:14:53,159 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 14:14:53,171 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 14:14:55,622 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 14:15:13,664 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@76808d17
+2016-02-11 14:15:13,665 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!
+2016-02-11 14:24:39,432 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 14:24:39,486 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 14:24:39,488 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 14:24:39,490 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 14:24:39,510 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 14:24:39,524 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 14:24:46,854 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 14:24:52,762 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@d16b795
+2016-02-11 14:24:52,763 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!
+2016-02-11 14:25:43,710 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 14:25:43,768 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 14:25:43,769 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 14:25:43,771 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 14:25:43,793 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 14:25:43,805 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 14:25:46,273 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 14:25:52,959 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@2b465019
+2016-02-11 14:25:52,960 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!
+2016-02-11 14:27:21,842 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 14:27:21,908 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 14:27:21,910 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 14:27:21,913 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 14:27:21,934 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 14:27:21,951 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 14:27:24,416 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 14:27:28,593 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@5f6686f7
+2016-02-11 14:27:28,593 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!
+2016-02-11 15:00:01,801 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 15:00:01,877 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 15:00:01,878 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 15:00:01,880 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 15:00:01,899 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 15:00:01,912 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 15:00:04,447 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 15:00:16,706 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@76808d17
+2016-02-11 15:00:16,706 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!
+2016-02-11 15:02:17,090 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 15:02:17,168 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 15:02:17,169 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 15:02:17,172 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 15:02:17,194 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 15:02:17,209 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 15:04:32,431 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 15:04:32,501 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 15:04:32,502 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 15:04:32,505 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 15:04:32,523 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 15:04:32,537 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 15:04:35,111 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 15:04:41,753 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@66ef11e8
+2016-02-11 15:04:41,753 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!
+2016-02-11 15:05:46,060 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 15:05:46,125 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 15:05:46,125 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 15:05:46,139 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 15:05:46,175 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 15:05:46,195 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 15:05:52,006 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 15:05:56,797 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@6943dd54
+2016-02-11 15:05:56,797 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!
+2016-02-11 15:06:34,620 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 15:06:34,684 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 15:06:34,685 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 15:06:34,687 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 15:06:34,708 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 15:06:34,722 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 15:06:37,224 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 15:06:42,337 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@157bc693
+2016-02-11 15:06:42,337 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!
+2016-02-11 15:08:46,753 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 15:08:46,833 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 15:08:46,834 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 15:08:46,837 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 15:08:46,862 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 15:08:46,878 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 15:08:50,700 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 15:08:56,578 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@3c681c0c
+2016-02-11 15:08:56,579 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!
+2016-02-11 15:10:30,645 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 15:10:30,735 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 15:10:30,736 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 15:10:30,739 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 15:10:30,767 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 15:10:30,788 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 15:10:33,358 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 15:10:38,630 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@2a82486a
+2016-02-11 15:10:38,631 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!
+2016-02-11 15:11:25,697 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-02-11 15:11:25,780 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-02-11 15:11:25,781 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-02-11 15:11:25,783 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-02-11 15:11:25,805 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:192) - Configuring ChromeDriver
+2016-02-11 15:11:25,818 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:201) - ChromeDriver configured successfully
+2016-02-11 15:11:28,600 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:102) - WebDriver initialized
+2016-02-11 15:11:33,923 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:173) - [Ljava.lang.StackTraceElement;@65d94ea0
+2016-02-11 15:11:33,923 ERROR [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:174) - Test was not paused!!

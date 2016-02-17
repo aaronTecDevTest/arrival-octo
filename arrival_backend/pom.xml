@@ -25,6 +25,7 @@
         <version.jemeter.plugin>1.10.1</version.jemeter.plugin>
         <version.jenkins.client>0.3.0</version.jenkins.client>
         <version.gson>2.4</version.gson>
+        <version.python>2.7.1b3</version.python>
     </properties>
 
     <!--dependencyManagement-->
@@ -77,11 +78,19 @@
             <artifactId>commons-validator</artifactId>
             <version>${veriosn.commons.validator}</version>
         </dependency>
+
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${version.gson}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.python</groupId>
+            <artifactId>jython-standalone</artifactId>
+            <version>${version.python}</version>
+        </dependency>
+
         <!--
                 <dependency>
                     <groupId>com.offbytwo.jenkins</groupId>
