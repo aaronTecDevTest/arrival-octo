@@ -168,10 +168,18 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     public void pauseTest(long milSeconds) {
         try {
             Thread.sleep(milSeconds);
-            browser.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         } catch (Exception e) {
             log.error(e.getStackTrace());
             log.error("Test was not paused!!");
+        }
+    }
+
+    public void waitPageLoading(long seconds){
+        try {
+            browser.manage().timeouts().pageLoadTimeout(seconds, TimeUnit.SECONDS);
+        } catch (Exception e) {
+            log.error(e.getStackTrace());
+            log.error("Test was not waiting!!");
         }
     }
 

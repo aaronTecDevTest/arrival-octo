@@ -173,19 +173,28 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
         }
     }
 
-    /*
+    /**
     *Other method
     */
-    public void pauseTest(long milSec) {
+    public void pauseTest(long milSeconds) {
         try {
-            Thread.sleep(milSec);
-            androidDriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        } catch (InterruptedException e) {
-            log.error(e);
+            Thread.sleep(milSeconds);
+        } catch (Exception e) {
+            log.error(e.getStackTrace());
+            log.error("Test was not paused!!");
         }
     }
 
-    /*
+    public void waitPageLoading(long seconds){
+        try {
+            androidDriver.manage().timeouts().pageLoadTimeout(seconds, TimeUnit.SECONDS);
+        } catch (Exception e) {
+            log.error(e.getStackTrace());
+            log.error("Test was not waiting!!");
+        }
+    }
+
+    /**
      *Mobile general method
      */
     @Override
@@ -243,9 +252,9 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
 
     }
 
-    /*
-   *Testcase Properties
-   */
+    /**
+     *Testcase Properties
+     */
 
     public int getTcID() {
         return tcID.get();

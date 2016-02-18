@@ -21,6 +21,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 
+/**
+ * Example Page : https://www.w3.org/2010/05/video/mediaevents.html
+ */
+
 public class SimpleTestWeb4 extends ArrivalWeb {
 
     public SimpleTestWeb4() {
@@ -41,10 +45,10 @@ public class SimpleTestWeb4 extends ArrivalWeb {
         driver.get("http://www.w3.org/2010/05/video/mediaevents.html");
 
         JavascriptExecutor exe = (JavascriptExecutor) driver;
-        exe.executeScript("document.getElementByID(\"video\").play()");
+        exe.executeScript("document.getElementById(\"video\").play()");
         pauseTest(10000);
-        exe.executeScript("document.getElementByID(\"video\").pause()");
+        exe.executeScript("document.getElementById(\"video\").pause()");
         pauseTest(10000);
-        exe.executeScript("document.getElementByID(\"video\").load()");
+        exe.executeScript("document.getElementById(\"video\").load()");
     }
 }
