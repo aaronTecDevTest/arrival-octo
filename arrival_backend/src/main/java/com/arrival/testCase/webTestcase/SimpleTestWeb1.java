@@ -43,6 +43,4 @@ public class SimpleTestWeb1 extends ArrivalWeb {
         pauseTest(1000);
         click();
     }
-
-
 }

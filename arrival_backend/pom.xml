@@ -16,16 +16,12 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <version.selenium>2.48.2</version.selenium>
-        <version.sikuli>1.1.0</version.sikuli>
-        <version.junit>4.11</version.junit>
-        <version.testng>6.8.21</version.testng>
+        <version.selenium>2.52.0</version.selenium>
+        <version.sikuli>1.2.0</version.sikuli>
+        <version.testng>6.9.10</version.testng>
         <version.io.appium>3.3.0</version.io.appium>
-        <veriosn.commons.validator>1.4.1</veriosn.commons.validator>
-        <version.jemeter.plugin>1.10.1</version.jemeter.plugin>
-        <version.jenkins.client>0.3.0</version.jenkins.client>
-        <version.gson>2.4</version.gson>
-        <version.python>2.7.1b3</version.python>
+        <veriosn.commons.validator>1.5.0</veriosn.commons.validator>
+        <version.gson>2.6.1</version.gson>
     </properties>
 
     <!--dependencyManagement-->
@@ -55,13 +51,6 @@
         </dependency>
 
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${version.junit}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${version.testng}</version>
@@ -84,26 +73,6 @@
             <artifactId>gson</artifactId>
             <version>${version.gson}</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.python</groupId>
-            <artifactId>jython-standalone</artifactId>
-            <version>${version.python}</version>
-        </dependency>
-
-        <!--
-                <dependency>
-                    <groupId>com.offbytwo.jenkins</groupId>
-                    <artifactId>jenkins-client</artifactId>
-                    <version>${version.jenkins.client}</version>
-                </dependency>
--->
-        <dependency>
-            <groupId>com.lazerycode.jmeter</groupId>
-            <artifactId>jmeter-maven-plugin</artifactId>
-            <version>${version.jemeter.plugin}</version>
-        </dependency>
-
     </dependencies>
     <!--/dependencyManagement-->
 </project>
