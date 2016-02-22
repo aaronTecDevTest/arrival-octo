@@ -99,6 +99,4 @@ public class FXMLArrivalSearchController implements Initializable{
      */
     private void iniBundleResources() {
     }
-
-
 }

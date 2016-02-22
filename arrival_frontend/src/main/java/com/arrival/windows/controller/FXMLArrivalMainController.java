@@ -44,6 +44,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
 
@@ -194,7 +195,6 @@ public class FXMLArrivalMainController implements Initializable {
 
     @FXML
     private TextField txtSearchField;
-
 
     private FXMLArrivalSearchController searchController;
     private Stage searchViewStage;
@@ -713,7 +713,7 @@ public class FXMLArrivalMainController implements Initializable {
              }
          };
         filteredDate.setPredicate(test);
-        tbvSearch.setItems(filteredDate);
+      //  tbvSearch.setItems(filteredDate);
     }
 
     /**
@@ -753,7 +753,8 @@ public class FXMLArrivalMainController implements Initializable {
                     //tpnWEB.setVisible(true);
                     //tpnSearch.setVisible(false);
                     vBoxTestcase.getChildren().remove(1);
-                    vBoxTestcase.getChildren().addAll( accTestCaseMain);
+                    vBoxTestcase.getChildren().addAll(searchViewStage.getScene().getFocusOwner());
+                    searchViewStage.hide();
                     //accTestCaseMain.setExpandedPane(tpnIOS);
                     //tpnSearch.setPadding(new Insets(0,0,0,0));
                     setUpSearchTestcase();
@@ -765,7 +766,7 @@ public class FXMLArrivalMainController implements Initializable {
                     //accTestCaseMain.setExpandedPane(tpnSearch);
                     vBoxTestcase.getChildren().remove(1);
                     searchViewStage.show();
-                    vBoxTestcase.getChildren().addAll(accTestCaseMain);
+                    vBoxTestcase.getChildren().add(null);
                   //  vBoxTestcase.getChildren().add(1,(Node) accTestCaseSearch);
                     //tpnSearch.setPadding(new Insets(-74,0,0,0));
                 }
@@ -803,6 +804,7 @@ public class FXMLArrivalMainController implements Initializable {
             log.error(e.getStackTrace());
         }
     }
+
     private Stage setUpSearchView() {
         try {
             URL url = getClass().getResource("/fxml/FXMLArrivalSearch.fxml");
@@ -856,7 +858,7 @@ public class FXMLArrivalMainController implements Initializable {
                     imageView.setImage(new Image(getClass().getResource("/icons/skipped.png").toString()));
                     return  imageView;
                 default:
-                    imageView.setImage(new Image(getClass().getResource("/icons/skipped.png").toString()));
+                    imageView.setImage(new Image(getClass().getResource("/icons/default.png").toString()));
                     return  imageView;
             }
     }
