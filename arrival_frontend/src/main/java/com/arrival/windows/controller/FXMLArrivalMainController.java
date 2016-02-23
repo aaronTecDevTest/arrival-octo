@@ -25,6 +25,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -44,7 +45,6 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
 
@@ -166,6 +166,7 @@ public class FXMLArrivalMainController implements Initializable {
     private TabPane tabMainTabPane;
     @FXML
     private Accordion accTestCaseMain;
+    private Accordion  accTestCaseMainSearch;
 
 
     @FXML
@@ -174,7 +175,8 @@ public class FXMLArrivalMainController implements Initializable {
     private TableView<TestCase> tbvAND;
     @FXML
     private TableView<TestCase> tbvWEB;
-
+    @FXML
+    private TableView<TestCase> tbvSearch;
 
     @FXML
     private TitledPane tpnIOS;
@@ -182,6 +184,8 @@ public class FXMLArrivalMainController implements Initializable {
     private TitledPane tpnAND;
     @FXML
     private TitledPane tpnWEB;
+    @FXML
+    private TitledPane tpnSearch;
 
 
     @FXML
@@ -196,11 +200,8 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private TextField txtSearchField;
 
-    private FXMLArrivalSearchController searchController;
-    private Stage searchViewStage;
-    private Accordion accTestCaseSearch;
-    private TableView<TestCase> tbvSearch;
-    private TitledPane tpnSearch;
+
+
 
 
     private FXMLArrivalTableViewController tbvTestsuiteController;
@@ -228,9 +229,7 @@ public class FXMLArrivalMainController implements Initializable {
         //Ini BundleResources
         bundle = resources;
         iniBundleResources();
-
-        //Setup SearchController/SearchView
-        searchViewStage = setUpSearchView();
+        iniAccTestCaseMain();
 
         //Setup Table-Data Objects
         dataTestsuite = FXCollections.observableArrayList();
@@ -243,7 +242,7 @@ public class FXMLArrivalMainController implements Initializable {
         tbcIOS.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcAndroid.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcWebPortal.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-    //    tbcSearch.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
+        tbcSearch.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
 
         //tbvIOS.getSelectionModel().setCellSelectionEnabled(true);
         tbvIOS.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -258,8 +257,8 @@ public class FXMLArrivalMainController implements Initializable {
         tbvWEB.getStyleClass().add("table-right");
 
         //tbvSearch.getSelectionModel().setCellSelectionEnabled(true);
-//        tbvSearch.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-//        tbvSearch.getStyleClass().add("table-right");
+        //tbvSearch.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        //tbvSearch.getStyleClass().add("table-right");
 
         //SetUp Testcase to Table
         setUpIOSTestcase();
@@ -270,7 +269,7 @@ public class FXMLArrivalMainController implements Initializable {
         tbvIOS.setItems(dataIOSTestcase);
         tbvAND.setItems(dataANDTestcase);
         tbvWEB.setItems(dataWebPortalTestcase);
-//        tbvSearch.setItems(dataFilterAndSearch);
+//      tbvSearch.setItems(dataFilterAndSearch);
 
         //Set first TitlePane open
         accTestCaseMain.setExpandedPane(tpnIOS);
@@ -580,6 +579,12 @@ public class FXMLArrivalMainController implements Initializable {
         mnuRevert.setText(bundle.getString("menu.title.revert"));
     }
 
+    private void iniAccTestCaseMain(){
+        accTestCaseMainSearch = new Accordion();
+
+        accTestCaseMainSearch.getPanes().add(accTestCaseMain.getPanes().remove(3));
+    }
+
     /**
      * No FML Functions
      */
@@ -713,7 +718,7 @@ public class FXMLArrivalMainController implements Initializable {
              }
          };
         filteredDate.setPredicate(test);
-      //  tbvSearch.setItems(filteredDate);
+        tbvSearch.setItems(filteredDate);
     }
 
     /**
@@ -748,27 +753,21 @@ public class FXMLArrivalMainController implements Initializable {
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 log.info("TextField Text Changed (newValue: " + newValue + ")");
                 if(newValue.equals("") && newValue.length()<=1) {
-                    //tpnIOS.setVisible(true);
-                    //tpnAND.setVisible(true);
-                    //tpnWEB.setVisible(true);
-                    //tpnSearch.setVisible(false);
-                    vBoxTestcase.getChildren().remove(1);
-                    vBoxTestcase.getChildren().addAll(searchViewStage.getScene().getFocusOwner());
-                    searchViewStage.hide();
-                    //accTestCaseMain.setExpandedPane(tpnIOS);
-                    //tpnSearch.setPadding(new Insets(0,0,0,0));
+                    tpnIOS.setVisible(true);
+                    tpnAND.setVisible(true);
+                    tpnWEB.setVisible(true);
+                    tpnSearch.setVisible(false);
+                    accTestCaseMain = (Accordion) vBoxTestcase.getChildren().remove(1);
+                    vBoxTestcase.getChildren().addAll(accTestCaseMainSearch);
                     setUpSearchTestcase();
                 }else {
-                    //tpnIOS.setVisible(false);
-                    //tpnAND.setVisible(false);
-                    //tpnWEB.setVisible(false);
-                    //tpnSearch.setVisible(true);
-                    //accTestCaseMain.setExpandedPane(tpnSearch);
-                    vBoxTestcase.getChildren().remove(1);
-                    searchViewStage.show();
-                    vBoxTestcase.getChildren().add(null);
-                  //  vBoxTestcase.getChildren().add(1,(Node) accTestCaseSearch);
-                    //tpnSearch.setPadding(new Insets(-74,0,0,0));
+                    tpnIOS.setVisible(false);
+                    tpnAND.setVisible(false);
+                    tpnWEB.setVisible(false);
+                    tpnSearch.setVisible(true);
+                    accTestCaseMainSearch = (Accordion) vBoxTestcase.getChildren().remove(1);
+                    vBoxTestcase.getChildren().addAll(accTestCaseMain);
+                    setUpSearchTestcase();
                 }
                 updateSearchTestcase(newValue);
             }
@@ -802,22 +801,6 @@ public class FXMLArrivalMainController implements Initializable {
             tbvTestsuiteController = (FXMLArrivalTableViewController) tempTableView.getUserData();
         } catch (IOException e) {
             log.error(e.getStackTrace());
-        }
-    }
-
-    private Stage setUpSearchView() {
-        try {
-            URL url = getClass().getResource("/fxml/FXMLArrivalSearch.fxml");
-            FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalMain"));
-            Stage stage = new Stage();
-            Parent root = loader.load();
-            Scene searchScene = new Scene(root);
-            stage.setScene(searchScene);
-            return stage;
-
-        } catch (IOException e) {
-            log.error(e.getStackTrace());
-            return null;
         }
     }
 
