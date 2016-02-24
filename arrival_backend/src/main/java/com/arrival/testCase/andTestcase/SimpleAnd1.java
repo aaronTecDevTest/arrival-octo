@@ -25,7 +25,7 @@ public class SimpleAnd1 extends ArrivalAND {
         setTcDuration("2");
         setTcLink("wwww.wetter.info.");
         setTcLastRun("10");
-        setTcResult(ArrivalResult.PASSED);
+        setTcResult(ArrivalResult.DEFAULT);
     }
 
     @Test(dataProvider = "driver", priority = 2,groups = {"fast"})

@@ -28,7 +28,7 @@ public class SimpleTestWeb3 extends ArrivalWeb {
         setTcDuration("20");
         setTcLink("wwww.wetter.info");
         setTcLastRun("100");
-        setTcResult(ArrivalResult.PASSED);
+        setTcResult(ArrivalResult.DEFAULT);
     }
 
     @Test(dataProvider = "driver", groups = {"fast"})

@@ -166,7 +166,9 @@ public class FXMLArrivalMainController implements Initializable {
     private TabPane tabMainTabPane;
     @FXML
     private Accordion accTestCaseMain;
-    private Accordion  accTestCaseMainSearch;
+    //private Accordion accTestCaseMainSearch;
+    private ObservableList<TitledPane> mainTitlePane;
+    private ObservableList<TitledPane> searchTitlePane;
 
 
     @FXML
@@ -257,8 +259,8 @@ public class FXMLArrivalMainController implements Initializable {
         tbvWEB.getStyleClass().add("table-right");
 
         //tbvSearch.getSelectionModel().setCellSelectionEnabled(true);
-        //tbvSearch.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        //tbvSearch.getStyleClass().add("table-right");
+        tbvSearch.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        tbvSearch.getStyleClass().add("table-right");
 
         //SetUp Testcase to Table
         setUpIOSTestcase();
@@ -270,9 +272,6 @@ public class FXMLArrivalMainController implements Initializable {
         tbvAND.setItems(dataANDTestcase);
         tbvWEB.setItems(dataWebPortalTestcase);
 //      tbvSearch.setItems(dataFilterAndSearch);
-
-        //Set first TitlePane open
-        accTestCaseMain.setExpandedPane(tpnIOS);
 
         //SetUp Testsuite
         setUpFirstTableView();
@@ -580,9 +579,19 @@ public class FXMLArrivalMainController implements Initializable {
     }
 
     private void iniAccTestCaseMain(){
-        accTestCaseMainSearch = new Accordion();
+        searchTitlePane = FXCollections.observableArrayList();
+        mainTitlePane = FXCollections.observableArrayList();
 
-        accTestCaseMainSearch.getPanes().add(accTestCaseMain.getPanes().remove(3));
+        mainTitlePane.addAll(accTestCaseMain.getPanes().get(0));
+        mainTitlePane.addAll(accTestCaseMain.getPanes().get(1));
+        mainTitlePane.addAll(accTestCaseMain.getPanes().get(2));
+        searchTitlePane.addAll(accTestCaseMain.getPanes().get(3));
+
+        accTestCaseMain.getPanes().clear();
+        accTestCaseMain.getPanes().addAll(mainTitlePane);
+
+        //Set first TitlePane open
+        accTestCaseMain.setExpandedPane(tpnIOS);
     }
 
     /**
@@ -704,7 +713,7 @@ public class FXMLArrivalMainController implements Initializable {
     }
 
     private void updateSearchTestcase(String valueToFilter){
-        log.info("Test: " + valueToFilter);
+        //log.info("Test: " + valueToFilter);
          Predicate<TestCase> test = new Predicate<TestCase>() {
              @Override
              public boolean test(TestCase testCase) {
@@ -748,26 +757,22 @@ public class FXMLArrivalMainController implements Initializable {
     private void addSearchFieldListener(){
         // Listen for TextField text changes
         txtSearchField.textProperty().addListener(new ChangeListener<String>() {
-            URL url = getClass().getResource("/fxml/FXMLArrivalSearch.fxml");
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                log.info("TextField Text Changed (newValue: " + newValue + ")");
+                setUpSearchTestcase();
+
                 if(newValue.equals("") && newValue.length()<=1) {
-                    tpnIOS.setVisible(true);
-                    tpnAND.setVisible(true);
-                    tpnWEB.setVisible(true);
-                    tpnSearch.setVisible(false);
-                    accTestCaseMain = (Accordion) vBoxTestcase.getChildren().remove(1);
-                    vBoxTestcase.getChildren().addAll(accTestCaseMainSearch);
-                    setUpSearchTestcase();
+                    if (newValue.length()==0) {
+                        accTestCaseMain.getPanes().clear();
+                        accTestCaseMain.getPanes().addAll(mainTitlePane);
+                        accTestCaseMain.setExpandedPane(tpnIOS);
+                    }
                 }else {
-                    tpnIOS.setVisible(false);
-                    tpnAND.setVisible(false);
-                    tpnWEB.setVisible(false);
-                    tpnSearch.setVisible(true);
-                    accTestCaseMainSearch = (Accordion) vBoxTestcase.getChildren().remove(1);
-                    vBoxTestcase.getChildren().addAll(accTestCaseMain);
-                    setUpSearchTestcase();
+                    if (newValue.length()==1) {
+                        accTestCaseMain.getPanes().clear();
+                        accTestCaseMain.getPanes().addAll(searchTitlePane);
+                        accTestCaseMain.setExpandedPane(tpnSearch);
+                    }
                 }
                 updateSearchTestcase(newValue);
             }
