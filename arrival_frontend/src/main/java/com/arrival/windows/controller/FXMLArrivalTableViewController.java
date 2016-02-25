@@ -152,7 +152,6 @@ public class FXMLArrivalTableViewController  implements Initializable {
             }
 
             runTestSuite.setClasses(tempClasses);
-            //runTestSuite.run();
             runTestSuite.start();
 
         } catch (Exception e) {

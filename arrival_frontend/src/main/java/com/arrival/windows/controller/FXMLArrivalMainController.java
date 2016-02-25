@@ -355,7 +355,6 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void addTestcaseInTestsuite(ActionEvent actionEvent) {
         try {
-
             if (accTestCaseMain.getExpandedPane().getText().equals("iOS - Testcase")) {
                 log.info(actionEvent.getSource() + "IOS");
                 if (/*dataTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")) {

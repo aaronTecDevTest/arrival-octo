@@ -12,6 +12,7 @@ import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.util.ArrayList;
@@ -160,6 +161,30 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
        if(seleniumConfigSingleton.isArrival()) {
            //seleniumManager.setDownSeleniumServerList();
        }
+    }
+
+    /**
+     *
+     */
+    @AfterMethod
+    public void tearDown(ITestResult result) {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            log.info("Test: FAILURE");
+            this.setTcResult(ArrivalResult.FAILED);
+
+        }
+
+        if (result.getStatus() == ITestResult.SUCCESS) {
+            log.info("Test: SUCCESS");
+            this.setTcResult(ArrivalResult.PASSED);
+
+        }
+
+        if (result.getStatus() == ITestResult.SKIP) {
+            log.info("Test: SKIP");
+            this.setTcResult(ArrivalResult.SKIPPED);
+
+        }
     }
 
     /**

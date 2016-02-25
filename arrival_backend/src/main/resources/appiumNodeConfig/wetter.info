@@ -1,0 +1,7771 @@
+{
+  weatherResponse: {
+    attr: {
+      version: "1.0",
+      dateGenerated: "2016-02-25T12:57:00+00:00"
+    },
+    location: {
+      geoInfo: {
+        weatherStation: {
+          attr: {
+            id: "297",
+            code: "096430",
+            lat: "49.8906",
+            lon: "8.6278",
+            alt: "120",
+            sunrise: "06:20",
+            sunset: "16:56",
+            moon: "5",
+            timezone: "Europe/Berlin"
+          },
+          name: {
+            value: "Darmstadt"
+          },
+          distanceToPlace: {
+            value: "2.7",
+            attr: {
+              unit: "km"
+            }
+          },
+          usesReference: {
+            value: "0"
+          }
+        },
+        place: {
+          attr: {
+            country_ISO: "DE",
+            country: "Deutschland",
+            zip: "64283",
+            code: "K06411000",
+            lat: "49.87558",
+            lon: "8.65772",
+            country_long: "Deutschland",
+            bundesland_name: "Hessen",
+            bundesland_typ: "Bundesland",
+            landkreis_name: "Darmstadt",
+            landkreis_namenszusatz: "Kreisfreie Stadt",
+            landkreis_bezeichnung: "",
+            wohnort_namenszusatz: "",
+            wohnort_stadtteil_name: "",
+            wohnort_zentrum: "1",
+            top_wohnort: "",
+            population_neu: "15553",
+            r_country: "deutschland",
+            r_bundesland_name: "hessen",
+            r_wohnort_name: "darmstadt",
+            kontinent: "Europa",
+            canonical_pfad: "/deutschland-wetter/hessen/kreisfreie-stadt-darmstadt/wetter-darmstadt/K06411000"
+          },
+          name: {
+            value: "Darmstadt"
+          },
+          nameRoman: {
+            value: "darmstadt"
+          },
+          has15DayTrend: {
+            value: "true"
+          },
+          url: {
+            value: "http://www.wetter.info/deutschland-wetter/hessen/kreisfreie-stadt-darmstadt/wetter-darmstadt/K06411000"
+          }
+        }
+      },
+      trendInfo: {
+        trendReference: {
+          value: "Frankfurt (Main)"
+        },
+        distanceToPlace: {
+          value: "17.9",
+          attr: {
+            unit: "km"
+          }
+        },
+        temperatureGraphicUrl: {
+          value: "http://data.wetter.info/data/trends/tmp2m_FRANKFURT_v3.png"
+        },
+        precipitationGraphicUrl: {
+          value: "http://data.wetter.info/data/trends/nnn6h_FRANKFURT_v3.png"
+        },
+        windGraphicUrl: {
+          value: "http://data.wetter.info/data/trends/ff10m_FRANKFURT_v3.png"
+        }
+      },
+      weatherInfo: [
+        {
+          attr: {
+            type: "forecastDay",
+            valid: "2016-02-24T23:00:00+00:00P1D",
+            sunrise: "06:20",
+            sunset: "16:56",
+            moon: "4"
+          },
+          conditions: {
+            value: "02"
+          },
+          temperatureMax: {
+            value: "6.1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          temperatureMin: {
+            value: "0.4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          windSpeedMax: {
+            value: "25.4",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "29.8",
+            attr: {
+              unit: "%"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecastDay",
+            valid: "2016-02-25T23:00:00+00:00P1D",
+            sunrise: "06:18",
+            sunset: "16:58",
+            moon: "5"
+          },
+          conditions: {
+            value: "03"
+          },
+          temperatureMax: {
+            value: "5.7",
+            attr: {
+              unit: "°C"
+            }
+          },
+          temperatureMin: {
+            value: "1.1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          windSpeedMax: {
+            value: "19.7",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "13.7",
+            attr: {
+              unit: "%"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecastDay",
+            valid: "2016-02-26T23:00:00+00:00P1D",
+            sunrise: "06:16",
+            sunset: "17:00",
+            moon: "5"
+          },
+          conditions: {
+            value: "02"
+          },
+          temperatureMax: {
+            value: "8.3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          temperatureMin: {
+            value: "0.3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          windSpeedMax: {
+            value: "31.8",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "20.2",
+            attr: {
+              unit: "%"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecastDay",
+            valid: "2016-02-27T23:00:00+00:00P1D",
+            sunrise: "06:14",
+            sunset: "17:01",
+            moon: "5"
+          },
+          conditions: {
+            value: "03"
+          },
+          temperatureMax: {
+            value: "7.9",
+            attr: {
+              unit: "°C"
+            }
+          },
+          temperatureMin: {
+            value: "1.9",
+            attr: {
+              unit: "°C"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          windSpeedMax: {
+            value: "34.9",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "33.2",
+            attr: {
+              unit: "%"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecastDay",
+            valid: "2016-02-28T23:00:00+00:00P1D",
+            sunrise: "06:12",
+            sunset: "17:03",
+            moon: "6"
+          },
+          conditions: {
+            value: "04"
+          },
+          temperatureMax: {
+            value: "7.1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          temperatureMin: {
+            value: "1.4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          windSpeedMax: {
+            value: "31.6",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "62.9",
+            attr: {
+              unit: "%"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecastDay",
+            valid: "2016-02-29T23:00:00+00:00P1D",
+            sunrise: "06:10",
+            sunset: "17:05",
+            moon: "6"
+          },
+          conditions: {
+            value: "04"
+          },
+          temperatureMax: {
+            value: "7.7",
+            attr: {
+              unit: "°C"
+            }
+          },
+          temperatureMin: {
+            value: "3.7",
+            attr: {
+              unit: "°C"
+            }
+          },
+          precipitation: {
+            value: "1",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          windSpeedMax: {
+            value: "33.6",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "72.4",
+            attr: {
+              unit: "%"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecastDay",
+            valid: "2016-03-01T23:00:00+00:00P1D",
+            sunrise: "06:08",
+            sunset: "17:06",
+            moon: "6"
+          },
+          conditions: {
+            value: "09"
+          },
+          temperatureMax: {
+            value: "8.9",
+            attr: {
+              unit: "°C"
+            }
+          },
+          temperatureMin: {
+            value: "3.5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          precipitation: {
+            value: "3.5",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          windSpeedMax: {
+            value: "41.4",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "90.9",
+            attr: {
+              unit: "%"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecastDay",
+            valid: "2016-03-02T23:00:00+00:00P1D",
+            sunrise: "06:06",
+            sunset: "17:08",
+            moon: "6"
+          },
+          conditions: {
+            value: "09"
+          },
+          temperatureMax: {
+            value: "8.6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          temperatureMin: {
+            value: "2.9",
+            attr: {
+              unit: "°C"
+            }
+          },
+          precipitation: {
+            value: "2.8",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          windSpeedMax: {
+            value: "38.9",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "88.9",
+            attr: {
+              unit: "%"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecastDay",
+            valid: "2016-03-03T23:00:00+00:00P1D",
+            sunrise: "06:03",
+            sunset: "17:10",
+            moon: "7"
+          },
+          conditions: {
+            value: "03"
+          },
+          temperatureMax: {
+            value: "9.7",
+            attr: {
+              unit: "°C"
+            }
+          },
+          temperatureMin: {
+            value: "4.9",
+            attr: {
+              unit: "°C"
+            }
+          },
+          precipitation: {
+            value: "0.3",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          windSpeedMax: {
+            value: "34.3",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "78",
+            attr: {
+              unit: "%"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecastDay",
+            valid: "2016-03-04T23:00:00+00:00P1D",
+            sunrise: "06:01",
+            sunset: "17:11",
+            moon: "7"
+          },
+          conditions: {
+            value: "03"
+          },
+          temperatureMax: {
+            value: "10.8",
+            attr: {
+              unit: "°C"
+            }
+          },
+          temperatureMin: {
+            value: "5.4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          precipitation: {
+            value: "0.1",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          windSpeedMax: {
+            value: "35.4",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "71.5",
+            attr: {
+              unit: "%"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "measurement",
+            valid: "2016-02-25T12:00:00+00:00",
+            validLocal: "2016-02-25T13:00:00+01:00"
+          },
+          temperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "9",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NW"
+          },
+          conditions: {
+            value: "01",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "67",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "16",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-25T00:00:00+00:00",
+            validLocal: "2016-02-25T01:00:00+01:00"
+          },
+          temperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "7",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "90",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "11",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "8",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1013",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "16",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-25T03:00:00+00:00",
+            validLocal: "2016-02-25T04:00:00+01:00"
+          },
+          temperature: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "7",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "01",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "92",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "15",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "6",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1012",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "16",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-25T06:00:00+00:00",
+            validLocal: "2016-02-25T07:00:00+01:00"
+          },
+          temperature: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "6",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "01",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "95",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "7",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "4",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1013",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "16",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-25T09:00:00+00:00",
+            validLocal: "2016-02-25T10:00:00+01:00"
+          },
+          temperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "4",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "1",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "02",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "79",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "8",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "2",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "60",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1013",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "16",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-25T12:00:00+00:00",
+            validLocal: "2016-02-25T13:00:00+01:00"
+          },
+          temperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "8",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NW"
+          },
+          conditions: {
+            value: "02",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "60",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "22",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "4",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "52",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "16",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-25T15:00:00+00:00",
+            validLocal: "2016-02-25T16:00:00+01:00"
+          },
+          temperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "10",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NW"
+          },
+          conditions: {
+            value: "02",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "55",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "25",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "9",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "44",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "17",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-25T18:00:00+00:00",
+            validLocal: "2016-02-25T19:00:00+01:00"
+          },
+          temperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "8",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "W"
+          },
+          conditions: {
+            value: "02",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "63",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "18",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "6",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "17",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-25T21:00:00+00:00",
+            validLocal: "2016-02-25T22:00:00+01:00"
+          },
+          temperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "7",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "02",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "74",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "11",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "8",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1016",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "17",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-26T00:00:00+00:00",
+            validLocal: "2016-02-26T01:00:00+01:00"
+          },
+          temperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "7",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "02",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "80",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "12",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "10",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1016",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-26T03:00:00+00:00",
+            validLocal: "2016-02-26T04:00:00+01:00"
+          },
+          temperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "6",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "S"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "85",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "10",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "5",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1016",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "13",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-26T06:00:00+00:00",
+            validLocal: "2016-02-26T07:00:00+01:00"
+          },
+          temperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "5",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "1",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "S"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "83",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "11",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "5",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "13",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-26T09:00:00+00:00",
+            validLocal: "2016-02-26T10:00:00+01:00"
+          },
+          temperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "6",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SE"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "70",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "12",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "4",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "38",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "16",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-26T12:00:00+00:00",
+            validLocal: "2016-02-26T13:00:00+01:00"
+          },
+          temperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "7",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "57",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "16",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "8",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "26",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "17",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-26T15:00:00+00:00",
+            validLocal: "2016-02-26T16:00:00+01:00"
+          },
+          temperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "8",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "53",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "20",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "3",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "30",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1011",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "17",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-26T18:00:00+00:00",
+            validLocal: "2016-02-26T19:00:00+01:00"
+          },
+          temperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "7",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "02",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "57",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "19",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "3",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1011",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "16",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-26T21:00:00+00:00",
+            validLocal: "2016-02-26T22:00:00+01:00"
+          },
+          temperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "9",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "02",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "68",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "18",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "6",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1010",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "16",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-27T00:00:00+00:00",
+            validLocal: "2016-02-27T01:00:00+01:00"
+          },
+          temperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "9",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "02",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "70",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "18",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "4",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1010",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-27T03:00:00+00:00",
+            validLocal: "2016-02-27T04:00:00+01:00"
+          },
+          temperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "11",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "02",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "73",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "21",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "4",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1008",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "16",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-27T06:00:00+00:00",
+            validLocal: "2016-02-27T07:00:00+01:00"
+          },
+          temperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "12",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "71",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "21",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "10",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1008",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-27T09:00:00+00:00",
+            validLocal: "2016-02-27T10:00:00+01:00"
+          },
+          temperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "13",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "64",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "25",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "6",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "35",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1008",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "12",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-27T12:00:00+00:00",
+            validLocal: "2016-02-27T13:00:00+01:00"
+          },
+          temperature: {
+            value: "7",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "01",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "55",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "29",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "9",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "27",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1007",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "16",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-27T15:00:00+00:00",
+            validLocal: "2016-02-27T16:00:00+01:00"
+          },
+          temperature: {
+            value: "8",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "01",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "50",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "29",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "9",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "60",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1006",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-27T18:00:00+00:00",
+            validLocal: "2016-02-27T19:00:00+01:00"
+          },
+          temperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "11",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "01",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "58",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "26",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "10",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1007",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-27T21:00:00+00:00",
+            validLocal: "2016-02-27T22:00:00+01:00"
+          },
+          temperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "E"
+          },
+          conditions: {
+            value: "01",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "70",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "28",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "8",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1008",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "12",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-28T00:00:00+00:00",
+            validLocal: "2016-02-28T01:00:00+01:00"
+          },
+          temperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "01",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "80",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "23",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "4",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1009",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "11",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-28T03:00:00+00:00",
+            validLocal: "2016-02-28T04:00:00+01:00"
+          },
+          temperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "01",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "84",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "26",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "8",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1009",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-28T06:00:00+00:00",
+            validLocal: "2016-02-28T07:00:00+01:00"
+          },
+          temperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "83",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "29",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "10",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1009",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "13",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-28T09:00:00+00:00",
+            validLocal: "2016-02-28T10:00:00+01:00"
+          },
+          temperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "16",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "76",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "29",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "7",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "31",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1011",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-28T12:00:00+00:00",
+            validLocal: "2016-02-28T13:00:00+01:00"
+          },
+          temperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "15",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "61",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "34",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "10",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "20",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1011",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "17",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-28T15:00:00+00:00",
+            validLocal: "2016-02-28T16:00:00+01:00"
+          },
+          temperature: {
+            value: "8",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "16",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "58",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "35",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "14",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "26",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1012",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "16",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-28T18:00:00+00:00",
+            validLocal: "2016-02-28T19:00:00+01:00"
+          },
+          temperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "16",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "65",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "35",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "12",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-28T21:00:00+00:00",
+            validLocal: "2016-02-28T22:00:00+01:00"
+          },
+          temperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "76",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "31",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "12",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "12",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-29T00:00:00+00:00",
+            validLocal: "2016-02-29T01:00:00+01:00"
+          },
+          temperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "12",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "87",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "25",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "12",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "10",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-29T03:00:00+00:00",
+            validLocal: "2016-02-29T04:00:00+01:00"
+          },
+          temperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "88",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "27",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "15",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "13",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-29T06:00:00+00:00",
+            validLocal: "2016-02-29T07:00:00+01:00"
+          },
+          temperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "15",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "85",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "30",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "17",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-29T09:00:00+00:00",
+            validLocal: "2016-02-29T10:00:00+01:00"
+          },
+          temperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "15",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "77",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "30",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "15",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "12",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "12",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-29T12:00:00+00:00",
+            validLocal: "2016-02-29T13:00:00+01:00"
+          },
+          temperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "13",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "71",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "31",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "19",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "12",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-29T15:00:00+00:00",
+            validLocal: "2016-02-29T16:00:00+01:00"
+          },
+          temperature: {
+            value: "7",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "13",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "NE"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "68",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "28",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "25",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "10",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "12",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-29T18:00:00+00:00",
+            validLocal: "2016-02-29T19:00:00+01:00"
+          },
+          temperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "11",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "N"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "78",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "21",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "29",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1017",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "11",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-02-29T21:00:00+00:00",
+            validLocal: "2016-02-29T22:00:00+01:00"
+          },
+          temperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "9",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "N"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "84",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "19",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "23",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1020",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "10",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-01T00:00:00+00:00",
+            validLocal: "2016-03-01T01:00:00+01:00"
+          },
+          temperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "8",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "N"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "91",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "17",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "20",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1021",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "11",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-01T03:00:00+00:00",
+            validLocal: "2016-03-01T04:00:00+01:00"
+          },
+          temperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "8",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "89",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "17",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "22",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1021",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "10",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-01T06:00:00+00:00",
+            validLocal: "2016-03-01T07:00:00+01:00"
+          },
+          temperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "9",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "93",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "17",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "16",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1022",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "10",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-01T09:00:00+00:00",
+            validLocal: "2016-03-01T10:00:00+01:00"
+          },
+          temperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "12",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "83",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "25",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "13",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "9",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1023",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "12",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-01T12:00:00+00:00",
+            validLocal: "2016-03-01T13:00:00+01:00"
+          },
+          temperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "15",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "74",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "33",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "19",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "14",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1022",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-01T15:00:00+00:00",
+            validLocal: "2016-03-01T16:00:00+01:00"
+          },
+          temperature: {
+            value: "7",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "16",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "70",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "33",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "21",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "16",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1020",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-01T18:00:00+00:00",
+            validLocal: "2016-03-01T19:00:00+01:00"
+          },
+          temperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "13",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "05",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "81",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "30",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "24",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "1",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1019",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "12",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-01T21:00:00+00:00",
+            validLocal: "2016-03-01T22:00:00+01:00"
+          },
+          temperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "15",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "05",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "88",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "32",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "37",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1017",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "11",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-02T00:00:00+00:00",
+            validLocal: "2016-03-02T01:00:00+01:00"
+          },
+          temperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "05",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "91",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "30",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "43",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "1",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1016",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "11",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-02T03:00:00+00:00",
+            validLocal: "2016-03-02T04:00:00+01:00"
+          },
+          temperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "15",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "05",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "90",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "32",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "42",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "11",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-02T06:00:00+00:00",
+            validLocal: "2016-03-02T07:00:00+01:00"
+          },
+          temperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "16",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "95",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "34",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "34",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0.8",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1012",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "12",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-02T09:00:00+00:00",
+            validLocal: "2016-03-02T10:00:00+01:00"
+          },
+          temperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "18",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "05",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "87",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "38",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "26",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "8",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1010",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "13",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-02T12:00:00+00:00",
+            validLocal: "2016-03-02T13:00:00+01:00"
+          },
+          temperature: {
+            value: "8",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "21",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "4",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "05",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "78",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "41",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "43",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "1",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1008",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-02T15:00:00+00:00",
+            validLocal: "2016-03-02T16:00:00+01:00"
+          },
+          temperature: {
+            value: "7",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "18",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "05",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "77",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "41",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "47",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1008",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-02T18:00:00+00:00",
+            validLocal: "2016-03-02T19:00:00+01:00"
+          },
+          temperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "15",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "09",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "75",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "32",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "38",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0.5",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1011",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-02T21:00:00+00:00",
+            validLocal: "2016-03-02T22:00:00+01:00"
+          },
+          temperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "01",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "79",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "31",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "42",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1012",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-03T00:00:00+00:00",
+            validLocal: "2016-03-03T01:00:00+01:00"
+          },
+          temperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "02",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "81",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "29",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "29",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0.7",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1013",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-03T03:00:00+00:00",
+            validLocal: "2016-03-03T04:00:00+01:00"
+          },
+          temperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "09",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "83",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "29",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "29",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1013",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-03T06:00:00+00:00",
+            validLocal: "2016-03-03T07:00:00+01:00"
+          },
+          temperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "15",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "09",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "92",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "31",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "33",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0.9",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1013",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "13",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-03T09:00:00+00:00",
+            validLocal: "2016-03-03T10:00:00+01:00"
+          },
+          temperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "15",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "05",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "79",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "35",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "35",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1012",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-03T12:00:00+00:00",
+            validLocal: "2016-03-03T13:00:00+01:00"
+          },
+          temperature: {
+            value: "8",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "18",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "05",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "69",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "37",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "43",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "1",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1012",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-03T15:00:00+00:00",
+            validLocal: "2016-03-03T16:00:00+01:00"
+          },
+          temperature: {
+            value: "8",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "16",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "05",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "67",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "38",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "41",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1013",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-03T18:00:00+00:00",
+            validLocal: "2016-03-03T19:00:00+01:00"
+          },
+          temperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "12",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "09",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "72",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "29",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "33",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0.3",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1013",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-03T21:00:00+00:00",
+            validLocal: "2016-03-03T22:00:00+01:00"
+          },
+          temperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "12",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "01",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "77",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "27",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "31",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-04T00:00:00+00:00",
+            validLocal: "2016-03-04T01:00:00+01:00"
+          },
+          temperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "11",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "80",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "24",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "23",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0.1",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1016",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "13",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-04T03:00:00+00:00",
+            validLocal: "2016-03-04T04:00:00+01:00"
+          },
+          temperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "11",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "85",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "25",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "23",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1016",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "13",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-04T06:00:00+00:00",
+            validLocal: "2016-03-04T07:00:00+01:00"
+          },
+          temperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "-1",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "12",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "87",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "27",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "27",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0.1",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1016",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "12",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-04T09:00:00+00:00",
+            validLocal: "2016-03-04T10:00:00+01:00"
+          },
+          temperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "15",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "81",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "32",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "23",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "21",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1016",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "13",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-04T12:00:00+00:00",
+            validLocal: "2016-03-04T13:00:00+01:00"
+          },
+          temperature: {
+            value: "8",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "16",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "W"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "72",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "32",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "28",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0.1",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "20",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-04T15:00:00+00:00",
+            validLocal: "2016-03-04T16:00:00+01:00"
+          },
+          temperature: {
+            value: "9",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "7",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "15",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "60",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "33",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "30",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "22",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-04T18:00:00+00:00",
+            validLocal: "2016-03-04T19:00:00+01:00"
+          },
+          temperature: {
+            value: "8",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "12",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "64",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "26",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "24",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-04T21:00:00+00:00",
+            validLocal: "2016-03-04T22:00:00+01:00"
+          },
+          temperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "12",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "76",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "25",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "25",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-05T00:00:00+00:00",
+            validLocal: "2016-03-05T01:00:00+01:00"
+          },
+          temperature: {
+            value: "5",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "12",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "81",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "26",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "23",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0.1",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "13",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-05T03:00:00+00:00",
+            validLocal: "2016-03-05T04:00:00+01:00"
+          },
+          temperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "11",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "04",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "85",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "25",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "23",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "13",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-05T06:00:00+00:00",
+            validLocal: "2016-03-05T07:00:00+01:00"
+          },
+          temperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "0",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "12",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "89",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "25",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "29",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "11",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-05T09:00:00+00:00",
+            validLocal: "2016-03-05T10:00:00+01:00"
+          },
+          temperature: {
+            value: "7",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "78",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "31",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "24",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "19",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1016",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-05T12:00:00+00:00",
+            validLocal: "2016-03-05T13:00:00+01:00"
+          },
+          temperature: {
+            value: "9",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "6",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "16",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "67",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "35",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "22",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "20",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1015",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-05T15:00:00+00:00",
+            validLocal: "2016-03-05T16:00:00+01:00"
+          },
+          temperature: {
+            value: "10",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "10",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "14",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "1"
+            }
+          },
+          humidity: {
+            value: "61",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "33",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "27",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "25",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-05T18:00:00+00:00",
+            validLocal: "2016-03-05T19:00:00+01:00"
+          },
+          temperature: {
+            value: "9",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "7",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "11",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "2",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "03",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "63",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "24",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "28",
+            attr: {
+              unit: "%"
+            }
+          },
+          precipitation: {
+            value: "0",
+            attr: {
+              unit: "l/m²"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "2",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "15",
+            attr: {
+              unit: "km"
+            }
+          },
+          freshSnow: {
+            value: "0",
+            attr: {
+              unit: "cm"
+            }
+          }
+        },
+        {
+          attr: {
+            type: "forecast",
+            valid: "2016-03-05T21:00:00+00:00",
+            validLocal: "2016-03-05T22:00:00+01:00"
+          },
+          temperature: {
+            value: "7",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windchillTemperature: {
+            value: "4",
+            attr: {
+              unit: "°C"
+            }
+          },
+          windSpeed: [
+            {
+              value: "12",
+              attr: {
+                unit: "km/h"
+              }
+            },
+            {
+              value: "3",
+              attr: {
+                unit: "beaufort"
+              }
+            }
+          ],
+          windDir: {
+            value: "SW"
+          },
+          conditions: {
+            value: "02",
+            attr: {
+              isDay: "0"
+            }
+          },
+          humidity: {
+            value: "74",
+            attr: {
+              unit: "%"
+            }
+          },
+          windGusts: {
+            value: "25",
+            attr: {
+              unit: "km/h"
+            }
+          },
+          rainProbability: {
+            value: "22",
+            attr: {
+              unit: "%"
+            }
+          },
+          sunshineDuration: {
+            value: "0",
+            attr: {
+              unit: "min"
+            }
+          },
+          dewpoint: {
+            value: "3",
+            attr: {
+              unit: "°C"
+            }
+          },
+          barometricPressure: {
+            value: "1014",
+            attr: {
+              unit: "hPa"
+            }
+          },
+          visibilityRange: {
+            value: "14",
+            attr: {
+              unit: "km"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

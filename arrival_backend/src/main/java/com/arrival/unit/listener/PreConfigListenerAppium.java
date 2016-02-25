@@ -9,7 +9,6 @@ package com.arrival.unit.listener;
  */
 
 import com.arrival.appium.AppiumManager;
-import com.arrival.appium.AppiumSingleton;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.IExecutionListener;

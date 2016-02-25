@@ -12,6 +12,7 @@ package com.arrival.selenium;
 
 import com.arrival.selenium.config.SeleniumConfig;
 import com.arrival.utilities.interfaces.IFConfig;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -20,9 +21,11 @@ import java.util.ArrayList;
 
 public class SeleniumManager {
     private static final Logger log = LogManager.getLogger(SeleniumManager.class);
-    WebDriver webDriver;
     private IFConfig testSuiteConfigs;
     private ArrayList<Object> seleniumServerList;
+
+    protected WebDriver webDriver;
+
 
     public SeleniumManager() {
         webDriver = null;
