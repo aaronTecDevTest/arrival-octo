@@ -32,6 +32,12 @@ public class TestSuite implements IFTestSuite {
         this.tsResult = new SimpleStringProperty(tsResult);
     }
 
+    public TestSuite(TestSuite testSuite){
+        this.tsId = new SimpleIntegerProperty(testSuite.getTsId());
+        this.tsName = new SimpleStringProperty(testSuite.getTsName());
+        this.tsResult = new SimpleStringProperty(testSuite.getTsResult());
+    }
+
     @Override
     public int getTsId() {
         return tsId.get();

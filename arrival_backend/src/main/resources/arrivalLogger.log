@@ -1691,3 +1691,141 @@
 2016-02-25 11:55:33,740 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:400) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
 2016-02-25 11:55:33,741 WARN  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:410) - Testcase all ready added!
 2016-02-25 12:01:12,007 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:400) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-03-02 11:54:41,211 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 11:54:41,215 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 11:54:42,583 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 11:54:42,868 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-02 11:54:43,040 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/1321481141@2a7afeaf
+2016-03-02 11:54:44,236 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-02 11:55:01,564 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:379) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'AND
+2016-03-02 11:55:01,565 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:429) - [Ljava.lang.StackTraceElement;@fa59391
+2016-03-02 12:04:02,151 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:379) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'AND
+2016-03-02 12:04:28,846 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:429) - [Ljava.lang.StackTraceElement;@4d5c96e3
+2016-03-02 12:04:38,575 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:379) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'AND
+2016-03-02 12:05:15,249 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:429) - [Ljava.lang.StackTraceElement;@2fc8d0e5
+2016-03-02 12:05:24,433 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:379) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'AND
+2016-03-02 12:11:28,775 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:429) - [Ljava.lang.StackTraceElement;@44788ff8
+2016-03-02 12:29:09,449 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 12:29:09,454 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 12:29:10,097 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 12:29:10,114 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-02 12:29:10,123 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/2086723122@22af395
+2016-03-02 12:29:10,798 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-02 12:29:15,903 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 13:51:34,675 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 13:51:34,681 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 13:51:35,326 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 13:51:35,341 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-02 13:51:35,351 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/2086723122@22af395
+2016-03-02 13:51:36,000 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-02 13:51:47,206 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 13:55:31,167 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 13:57:13,185 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 13:57:49,659 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 13:57:49,663 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 13:57:50,297 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 13:57:50,312 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-02 13:57:50,322 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/1463475149@4fa0926
+2016-03-02 13:57:51,028 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-02 13:57:55,717 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 13:58:42,013 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 13:58:44,069 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 13:58:54,093 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-03-02 13:59:03,334 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 13:59:06,358 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 14:00:26,384 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-03-02 14:00:32,209 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 14:37:52,954 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 14:37:52,958 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 14:37:53,925 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 14:37:53,936 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-02 14:37:53,945 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/861939893@5c349c3a
+2016-03-02 14:37:54,790 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-02 14:37:57,657 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 14:38:09,769 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-03-02 14:38:17,282 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 14:50:28,778 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 14:50:28,782 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 14:50:29,370 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 14:53:01,072 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 14:53:01,077 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 14:53:01,683 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 14:53:01,692 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-02 14:53:01,700 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/2086143956@6b76c360
+2016-03-02 14:53:02,336 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-02 14:53:08,346 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 15:54:18,701 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 15:54:18,708 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 15:54:19,298 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 15:54:19,311 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-02 15:54:19,320 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/2086143956@5f72d533
+2016-03-02 15:54:19,967 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-02 15:54:24,030 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 15:55:27,111 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 15:55:27,125 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 15:55:27,684 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 15:57:10,305 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 15:57:10,310 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 15:57:10,888 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 16:14:32,964 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 16:14:32,968 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 16:14:33,570 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 16:15:37,596 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 16:15:37,599 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 16:15:38,177 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 16:15:43,423 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-02 16:15:43,434 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/2086723122@22af395
+2016-03-02 16:15:44,100 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-02 16:15:46,931 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 16:15:50,555 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 16:15:53,771 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-03-02 16:15:59,739 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-03-02 16:16:04,020 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 16:16:56,005 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 16:19:32,739 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 16:27:55,753 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-02 16:27:55,758 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-02 16:27:56,347 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-02 16:27:56,362 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-02 16:27:56,370 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/1091534071@417dcdaf
+2016-03-02 16:27:57,027 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-02 16:27:59,389 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 16:28:02,110 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-03-02 16:28:06,837 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 16:28:59,399 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 16:29:05,687 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:359) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'IOS
+2016-03-02 16:36:16,519 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:436) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-03-02 16:36:20,431 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:400) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-03-02 16:36:25,183 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:482) - Button[id=btnOptions, styleClass=button]'Options'
+2016-03-02 16:36:29,008 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-03-02 16:36:35,919 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:176) - Button[id=btnOK, styleClass=button]'OK'
+2016-03-02 16:36:35,923 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:184) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
+2016-03-02 16:36:51,353 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:453) - Button[id=btnRun, styleClass=button]'Run'
+2016-03-02 16:36:51,353 INFO  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:107) - Web->false->2->CH - Chrome->Non->Android->Mobile Web->->->->->false->->
+2016-03-02 16:37:05,257 INFO  [JavaFX Application Thread] suites.ArrivalTestSuite (ArrivalTestSuite.java:176) - Directory creation success!
+2016-03-02 16:37:05,910 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:43) - TestNG is going to start the Pre-Config for Selenium
+2016-03-02 16:37:06,697 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-03-02 16:37:06,698 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-03-02 16:37:07,093 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:189) - Configuring ChromeDriver
+2016-03-02 16:37:07,183 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:198) - ChromeDriver configured successfully
+2016-03-02 16:38:06,353 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:99) - WebDriver initialized
+2016-03-02 16:38:06,592 INFO  [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:183) - Test: SUCCESS
+2016-03-02 16:38:32,971 INFO  [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:183) - Test: SUCCESS
+2016-03-02 16:38:45,698 INFO  [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:183) - Test: SUCCESS
+2016-03-02 16:38:58,822 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-03-02 16:38:58,823 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:58) - C:\Users\a.kutekidila\Dev\GitHub\arrival-octo
+2016-03-02 16:38:58,823 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:189) - Configuring ChromeDriver
+2016-03-02 16:38:58,823 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:198) - ChromeDriver configured successfully
+2016-03-02 16:39:00,944 DEBUG [Thread-5] selenium.WebDriverManager (WebDriverManager.java:99) - WebDriver initialized
+2016-03-02 16:39:35,944 INFO  [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:183) - Test: SUCCESS
+2016-03-02 16:39:35,948 INFO  [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:183) - Test: SUCCESS
+2016-03-02 16:39:40,181 INFO  [Thread-5] listener.PreConfigListenerSelenium (PreConfigListenerSelenium.java:53) - TestNG has finished, took around 154271ms
+2016-03-02 16:43:24,094 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:497) - Button[id=btnHelp, styleClass=button]'Help'
+2016-03-02 16:43:26,350 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:482) - Button[id=btnOptions, styleClass=button]'Options'
+2016-03-02 16:44:28,640 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:477) - Button[id=btnResult, styleClass=button]'Result'
+2016-03-02 16:44:28,840 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:477) - Button[id=btnResult, styleClass=button]'Result'
+2016-03-02 16:44:29,024 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:477) - Button[id=btnResult, styleClass=button]'Result'
+2016-03-02 16:44:29,232 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:477) - Button[id=btnResult, styleClass=button]'Result'
+2016-03-02 16:44:29,408 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:477) - Button[id=btnResult, styleClass=button]'Result'
+2016-03-02 16:44:29,560 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:477) - Button[id=btnResult, styleClass=button]'Result'
+2016-03-02 16:44:29,728 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:477) - Button[id=btnResult, styleClass=button]'Result'

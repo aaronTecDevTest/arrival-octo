@@ -364,7 +364,7 @@ public class FXMLArrivalMainController implements Initializable {
                 if (tbvTestsuiteController.isIOSPlatform()) {
                     dataTestsuite = currentTableView.getItems();
                     if (!(dataTestsuite.containsAll(tbvIOS.getSelectionModel().getSelectedItems()))) {
-                        dataTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
+                        dataTestsuite.addAll(TestCase.copyTestCases(tbvIOS.getSelectionModel().getSelectedItems()));
                     } else {
                         log.warn("Testcase all ready added!");
                         WindowsDialogs.testCaseInTestsuite();
@@ -384,7 +384,8 @@ public class FXMLArrivalMainController implements Initializable {
                 if (tbvTestsuiteController.isANDPlatform()) {
                     dataTestsuite = currentTableView.getItems();
                     if (!(dataTestsuite.containsAll(tbvAND.getSelectionModel().getSelectedItems()))) {
-                        dataTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
+                        dataTestsuite.addAll(TestCase.copyTestCases(tbvAND.getSelectionModel().getSelectedItems()));
+
                     } else {
                         log.warn("Testcase all ready added!");
                         WindowsDialogs.testCaseInTestsuite();
@@ -404,7 +405,7 @@ public class FXMLArrivalMainController implements Initializable {
                 if (tbvTestsuiteController.isWebPlatform()) {
                     dataTestsuite = currentTableView.getItems();
                     if (!(dataTestsuite.containsAll(tbvWEB.getSelectionModel().getSelectedItems()))) {
-                        dataTestsuite.addAll(tbvWEB.getSelectionModel().getSelectedItems());
+                        dataTestsuite.addAll(TestCase.copyTestCases(tbvWEB.getSelectionModel().getSelectedItems()));
                     } else {
                         log.warn("Testcase all ready added!");
                         WindowsDialogs.testCaseInTestsuite();
@@ -419,7 +420,7 @@ public class FXMLArrivalMainController implements Initializable {
                 log.info(actionEvent.getSource() + "Search");
                 dataTestsuite = currentTableView.getItems();
                 if (!(dataTestsuite.containsAll(tbvSearch.getSelectionModel().getSelectedItems()))) {
-                    dataTestsuite.addAll(tbvSearch.getSelectionModel().getSelectedItems());
+                    dataTestsuite.addAll(TestCase.copyTestCases(tbvSearch.getSelectionModel().getSelectedItems()));
                 } else {
                     log.warn("Testcase all ready added!");
                     WindowsDialogs.testCaseInTestsuite();
@@ -616,7 +617,7 @@ public class FXMLArrivalMainController implements Initializable {
                         tempTestCaseIF.getTcLastRun(),
                         tempTestCaseIF.getTcLink(),
                         classPackage.get(i),
-                        getResultImageViewer(tempTestCaseIF.getTcResult())));
+                        tempTestCaseIF.getTcResultIcons()));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -652,7 +653,7 @@ public class FXMLArrivalMainController implements Initializable {
                         tempTestCaseIF.getTcLastRun(),
                         tempTestCaseIF.getTcLink(),
                         classPackage.get(i),
-                        getResultImageViewer(tempTestCaseIF.getTcResult())));
+                        tempTestCaseIF.getTcResultIcons()));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -688,7 +689,7 @@ public class FXMLArrivalMainController implements Initializable {
                         tempTestCaseIF.getTcLastRun(),
                         tempTestCaseIF.getTcLink(),
                         classPackage.get(i),
-                        getResultImageViewer(tempTestCaseIF.getTcResult())));
+                        tempTestCaseIF.getTcResultIcons()));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -829,24 +830,5 @@ public class FXMLArrivalMainController implements Initializable {
             log.error(e.getStackTrace());
             return null;
         }
-    }
-
-    private ImageView getResultImageViewer(String tcResult){
-        ImageView imageView = new ImageView();
-
-            switch (tcResult){
-                case "PASSED":
-                    imageView.setImage(new Image(getClass().getResource("/icons/passed.png").toString()));
-                    return  imageView;
-                case "FAILED":
-                    imageView.setImage(new Image(getClass().getResource("/icons/failed.png").toString()));
-                    return  imageView;
-                case "SKIPPED":
-                    imageView.setImage(new Image(getClass().getResource("/icons/skipped.png").toString()));
-                    return  imageView;
-                default:
-                    imageView.setImage(new Image(getClass().getResource("/icons/default.png").toString()));
-                    return  imageView;
-            }
     }
 }
