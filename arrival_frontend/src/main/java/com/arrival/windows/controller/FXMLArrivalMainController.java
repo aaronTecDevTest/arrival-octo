@@ -169,14 +169,14 @@ public class FXMLArrivalMainController implements Initializable {
     private ObservableList<TitledPane> searchTitlePane;
 
 
-    @FXML
+/*    @FXML
     private TableView<TestCase> tbvIOS;
     @FXML
     private TableView<TestCase> tbvAND;
     @FXML
     private TableView<TestCase> tbvWEB;
     @FXML
-    private TableView<TestCase> tbvSearch;
+    private TableView<TestCase> tbvSearch;*/
 
 
     @FXML
@@ -250,12 +250,12 @@ public class FXMLArrivalMainController implements Initializable {
         dataWebPortalTestcase = FXCollections.observableArrayList();
 
         //Setup Table-Column Properties
-        tbcIOS.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-        tbcAndroid.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-        tbcWebPortal.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-        tbcSearch.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
+       // tbcIOS.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
+       // tbcAndroid.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
+       // tbcWebPortal.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
+       // tbcSearch.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
 
-        //tbvIOS.getSelectionModel().setCellSelectionEnabled(true);
+        /*tbvIOS.getSelectionModel().setCellSelectionEnabled(true);
         tbvIOS.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         tbvIOS.getStyleClass().add("table-right");
 
@@ -269,7 +269,7 @@ public class FXMLArrivalMainController implements Initializable {
 
         //tbvSearch.getSelectionModel().setCellSelectionEnabled(true);
         tbvSearch.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        tbvSearch.getStyleClass().add("table-right");
+        tbvSearch.getStyleClass().add("table-right");*/
 
         //SetUp Testcase to Table
         setUpIOSTestcase();
@@ -277,9 +277,10 @@ public class FXMLArrivalMainController implements Initializable {
         setUpWebPortalTestcase();
         setUpSearchTestcase();
 
+        /*
         tbvIOS.setItems(dataIOSTestcase);
         tbvAND.setItems(dataANDTestcase);
-        tbvWEB.setItems(dataWebPortalTestcase);
+        tbvWEB.setItems(dataWebPortalTestcase);*/
 //      tbvSearch.setItems(dataFilterAndSearch);
 
         //SetUp Testsuite
@@ -360,13 +361,13 @@ public class FXMLArrivalMainController implements Initializable {
         tabMainTabPane.getTabs().remove(tabMainTabPane.getSelectionModel().getSelectedItem());
         }
     }
-
+   /*
     @FXML
-    public void addTestcaseInTestsuite(ActionEvent actionEvent) {
+ public void addTestcaseInTestsuite(ActionEvent actionEvent) {
         try {
             if (accTestCaseMain.getExpandedPane().getText().equals("iOS - Testcase")) {
                 log.info(actionEvent.getSource() + "IOS");
-                if (/*dataTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")) {
+                if (/*dataTestsuite.isEmpty() &&* tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("IOS");
                 }
 
@@ -386,7 +387,7 @@ public class FXMLArrivalMainController implements Initializable {
 
             if (accTestCaseMain.getExpandedPane().getText().equals("Android - Testcase")) {
                 log.info(actionEvent.getSource() + "AND");
-                if (/*dataTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")) {
+                if (/*dataTestsuite.isEmpty() &&* tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("Android");
                 }
 
@@ -407,7 +408,7 @@ public class FXMLArrivalMainController implements Initializable {
 
             if (accTestCaseMain.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
                 log.info(actionEvent.getSource() + "Web");
-                if (/*dataTestsuite.isEmpty() && */tbvTestsuiteController.getPlatform().equals("platform")) {
+                if (/*dataTestsuite.isEmpty() &&  tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("Web");
                 }
 
@@ -438,7 +439,7 @@ public class FXMLArrivalMainController implements Initializable {
         } catch (Exception e) {
             log.error(e.getStackTrace());
         }
-    }
+    }*/
 
     @FXML
     public void deleteTestcaseFromTestsuite(ActionEvent actionEvent) {
@@ -736,7 +737,7 @@ public class FXMLArrivalMainController implements Initializable {
              }
          };
         filteredDate.setPredicate(test);
-        tbvSearch.setItems(filteredDate);
+      //  tbvSearch.setItems(filteredDate);
     }
 
     /**

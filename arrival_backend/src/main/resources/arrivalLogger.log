@@ -1866,3 +1866,15 @@
 2016-03-03 16:29:20,006 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
 2016-03-03 16:51:19,269 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
 2016-03-03 16:51:19,273 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-03 17:06:54,277 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-03 17:06:54,282 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-03 17:07:51,267 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-03 17:07:51,271 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-03 17:07:51,866 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-03 17:07:51,878 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainControllerOld (FXMLArrivalMainControllerOld.java:692) - [Ljava.lang.StackTraceElement;@42103173:  java.lang.ClassNotFoundException: com.arrival.testCase.webTestcase.SimpleTestWeb1
+2016-03-03 17:07:51,880 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainControllerOld (FXMLArrivalMainControllerOld.java:295) - javafx.event.Event$$Lambda$67/2086143956@598bc15a
+2016-03-03 17:07:52,511 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-03 17:08:50,733 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-03 17:08:50,739 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-03 17:12:03,311 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-03 17:12:03,316 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
