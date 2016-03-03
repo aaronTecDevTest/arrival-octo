@@ -25,14 +25,12 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
@@ -166,7 +164,7 @@ public class FXMLArrivalMainController implements Initializable {
     private TabPane tabMainTabPane;
     @FXML
     private Accordion accTestCaseMain;
-    //private Accordion accTestCaseMainSearch;
+
     private ObservableList<TitledPane> mainTitlePane;
     private ObservableList<TitledPane> searchTitlePane;
 
@@ -179,6 +177,17 @@ public class FXMLArrivalMainController implements Initializable {
     private TableView<TestCase> tbvWEB;
     @FXML
     private TableView<TestCase> tbvSearch;
+
+
+    @FXML
+    private TreeTableView<TestCase> ttvIOS;
+    @FXML
+    private TreeTableView<TestCase> ttvAND;
+    @FXML
+    private TreeTableView<TestCase> ttvWEB;
+    @FXML
+    private TreeTableView<TestCase> ttvSearch;
+
 
     @FXML
     private TitledPane tpnIOS;

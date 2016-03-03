@@ -1829,3 +1829,40 @@
 2016-03-02 16:44:29,408 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:477) - Button[id=btnResult, styleClass=button]'Result'
 2016-03-02 16:44:29,560 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:477) - Button[id=btnResult, styleClass=button]'Result'
 2016-03-02 16:44:29,728 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:477) - Button[id=btnResult, styleClass=button]'Result'
+2016-03-03 09:30:07,201 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-03 09:30:07,223 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-03 09:30:08,505 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-03 09:30:08,879 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-03 09:30:09,090 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/2086723122@22af395
+2016-03-03 09:30:10,353 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-03 09:30:17,165 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:400) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-03-03 09:30:18,853 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:400) - Button[id=btnAddTestcase, styleClass=button]'Add Testcase'Web
+2016-03-03 10:55:58,759 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-03 10:55:58,763 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-03 10:55:59,319 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-03 10:55:59,330 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:696) - [Ljava.lang.StackTraceElement;@79d2b747:  java.lang.ClassNotFoundException: com.arrival.testCase.webTestcase.SimpleTestWeb1
+2016-03-03 10:55:59,333 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/2086143956@51bf27e6
+2016-03-03 10:55:59,993 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-03 11:38:35,476 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-03 11:38:35,482 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-03 11:38:36,100 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-03 11:38:36,111 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:696) - [Ljava.lang.StackTraceElement;@5c170f3:  java.lang.ClassNotFoundException: com.arrival.testCase.webTestcase.SimpleTestWeb1
+2016-03-03 11:38:36,113 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/1091534071@670807c6
+2016-03-03 11:38:36,770 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-03 11:38:42,736 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:453) - Button[id=btnRun, styleClass=button]'Run'
+2016-03-03 11:38:42,736 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:158) - Options object is null[Ljava.lang.StackTraceElement;@40046224
+2016-03-03 11:38:49,848 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:465) - Button[id=btnPause, styleClass=button]'Pause'
+2016-03-03 16:12:16,605 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-03 16:12:16,609 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-03 16:12:17,251 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-03 16:12:17,263 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:696) - [Ljava.lang.StackTraceElement;@42103173:  java.lang.ClassNotFoundException: com.arrival.testCase.webTestcase.SimpleTestWeb1
+2016-03-03 16:12:17,265 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/2086143956@598bc15a
+2016-03-03 16:12:17,919 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-03 16:29:18,731 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-03 16:29:18,736 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-03 16:29:19,335 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-03 16:29:19,347 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:696) - [Ljava.lang.StackTraceElement;@5f0cb094:  java.lang.ClassNotFoundException: com.arrival.testCase.webTestcase.SimpleTestWeb1
+2016-03-03 16:29:19,349 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:299) - javafx.event.Event$$Lambda$67/1091534071@183abda7
+2016-03-03 16:29:20,006 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-03 16:51:19,269 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-03 16:51:19,273 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!

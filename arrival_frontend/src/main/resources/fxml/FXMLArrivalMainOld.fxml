@@ -71,39 +71,51 @@
                                 <Accordion fx:id="accTestCaseMain" VBox.vgrow="ALWAYS">
                                     <panes>
                                         <TitledPane fx:id="tpnIOS" text="iOS - Testcase">
-                                 <content>
-                                    <TreeTableView fx:id="ttvIO" prefHeight="200.0" prefWidth="200.0">
-                                      <columns>
-                                        <TreeTableColumn prefWidth="298.0" />
-                                      </columns>
-                                    </TreeTableView>
-                                 </content>
+                                            <content>
+                                                <TableView fx:id="tbvIOS" styleClass="column-header-backgrounds">
+                                                    <columns>
+                                                        <TableColumn fx:id="tbcIOS" prefWidth="94.0" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </content>
                                         </TitledPane>
                                         <TitledPane fx:id="tpnAND" styleClass="testCase.tableView" text="Android - Testcase">
-                                 <content>
-                                    <TreeTableView prefHeight="200.0" prefWidth="200.0">
-                                      <columns>
-                                        <TreeTableColumn prefWidth="298.0" />
-                                      </columns>
-                                    </TreeTableView>
-                                 </content>
+                                            <content>
+                                                <TableView fx:id="tbvAND" styleClass="column-header-backgrounds">
+                                                    <columns>
+                                                        <TableColumn fx:id="tbcAndroid" prefWidth="75.0" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </content>
                                         </TitledPane>
                                         <TitledPane fx:id="tpnWEB" styleClass="testCase.tableView" text="Web-Portal - Testcase">
-                                 <content>
-                                    <TreeTableView prefHeight="200.0" prefWidth="200.0">
-                                      <columns>
-                                        <TreeTableColumn prefWidth="298.0" />
-                                      </columns>
-                                    </TreeTableView>
-                                 </content>
+                                            <content>
+                                                <TableView fx:id="tbvWEB" styleClass="column-header-backgrounds">
+                                                    <columns>
+                                                        <TableColumn fx:id="tbcWebPortal" prefWidth="75.0" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </content>
                                         </TitledPane>
                               <TitledPane fx:id="tpnSearch" styleClass="testCase.tableView" text="Search - Testcase">
                                  <content>
-                                    <TreeTableView prefHeight="200.0" prefWidth="200.0">
-                                      <columns>
-                                        <TreeTableColumn prefWidth="298.0" />
-                                      </columns>
-                                    </TreeTableView>
+                                    <TableView fx:id="tbvSearch" styleClass="column-header-backgrounds">
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                       <columns>
+                                          <TableColumn fx:id="tbcSearch" prefWidth="75.0" />
+                                       </columns>
+                                    </TableView>
                                  </content>
                               </TitledPane>
                                     </panes>

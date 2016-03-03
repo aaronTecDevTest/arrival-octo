@@ -1,4 +1,4 @@
-package com.arrival.testCase.webTestcase;
+package com.arrival.testCase.webTestcase.Projekt2;
 
 /**
  * @author: Aaron Kutekidila
