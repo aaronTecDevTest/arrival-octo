@@ -31,6 +31,21 @@ public class TestCase implements IFTestCase {
     private SimpleObjectProperty<ImageView> tcResultIcons;
 
 
+    public SimpleIntegerProperty nameProperty() {
+        if (tcID == null) {
+            tcID = new SimpleIntegerProperty(this, "id");
+        }
+        return tcID;
+    }
+    public SimpleStringProperty emailProperty() {
+        if (tcName == null) {
+            tcName = new SimpleStringProperty(this, "name");
+        }
+        return tcName;
+    }
+
+
+
     public TestCase() {
         this(0, "", "", "", "", "", "", "", null);
     }

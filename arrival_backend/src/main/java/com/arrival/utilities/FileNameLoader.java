@@ -40,18 +40,18 @@ public class FileNameLoader {
      */
     public FileNameLoader(String filePath, String fileExtension) {
         this.fileExtension = fileExtension;
-        fileNameWithExtension = new ArrayList<>();
-        filePathList = new ArrayList<>();
-        className = new ArrayList<>();
-        url = getClass().getResource(filePath);
-        fileDirectory = url.getPath().split(":")[1];
+        this.fileNameWithExtension = new ArrayList<>();
+        this.filePathList = new ArrayList<>();
+        this.className = new ArrayList<>();
+        this.url = getClass().getResource(filePath);
+        this.fileDirectory = url.getPath().split(":")[1];
 
         setUpFilePathList();
         setUpFileName();
         setUpFileNameWithExtension();
         setUpClassPackage();
 
-        size = className.size();
+        this.size = className.size();
     }
 
    /* public static void main(String[] args) {

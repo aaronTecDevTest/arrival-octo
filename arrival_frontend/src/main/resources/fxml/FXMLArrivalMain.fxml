@@ -72,36 +72,36 @@
                                     <panes>
                                         <TitledPane fx:id="tpnIOS" text="iOS - Testcase">
                                  <content>
-                                    <TreeTableView fx:id="ttvIO" prefHeight="200.0" prefWidth="200.0">
+                                    <TreeTableView fx:id="ttvIOS" prefHeight="200.0" prefWidth="200.0">
                                       <columns>
-                                        <TreeTableColumn prefWidth="298.0" />
+                                        <TreeTableColumn fx:id="ttcIOS" prefWidth="298.0" />
                                       </columns>
                                     </TreeTableView>
                                  </content>
                                         </TitledPane>
                                         <TitledPane fx:id="tpnAND" styleClass="testCase.tableView" text="Android - Testcase">
                                  <content>
-                                    <TreeTableView prefHeight="200.0" prefWidth="200.0">
+                                    <TreeTableView fx:id="ttvAND" prefHeight="200.0" prefWidth="200.0">
                                       <columns>
-                                        <TreeTableColumn prefWidth="298.0" />
+                                        <TreeTableColumn fx:id="ttcAND" prefWidth="298.0" />
                                       </columns>
                                     </TreeTableView>
                                  </content>
                                         </TitledPane>
                                         <TitledPane fx:id="tpnWEB" styleClass="testCase.tableView" text="Web-Portal - Testcase">
                                  <content>
-                                    <TreeTableView prefHeight="200.0" prefWidth="200.0">
+                                    <TreeTableView fx:id="ttvWEB" prefHeight="200.0" prefWidth="200.0">
                                       <columns>
-                                        <TreeTableColumn prefWidth="298.0" />
+                                        <TreeTableColumn fx:id="ttcWEB" prefWidth="298.0" />
                                       </columns>
                                     </TreeTableView>
                                  </content>
                                         </TitledPane>
                               <TitledPane fx:id="tpnSearch" styleClass="testCase.tableView" text="Search - Testcase">
                                  <content>
-                                    <TreeTableView prefHeight="200.0" prefWidth="200.0">
+                                    <TreeTableView fx:id="ttvSearch" prefHeight="200.0" prefWidth="200.0">
                                       <columns>
-                                        <TreeTableColumn prefWidth="298.0" />
+                                        <TreeTableColumn fx:id="ttcSearch" prefWidth="298.0" />
                                       </columns>
                                     </TreeTableView>
                                  </content>

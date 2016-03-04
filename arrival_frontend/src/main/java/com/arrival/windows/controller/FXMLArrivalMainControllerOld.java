@@ -55,12 +55,6 @@ public class FXMLArrivalMainControllerOld implements Initializable {
      */
     private static final Logger log = LogManager.getLogger(FXMLArrivalMainControllerOld.class);
 
-    public ObservableList <TestCase> dataIOSTestcase;
-    public ObservableList <TestCase> dataANDTestcase;
-    public ObservableList <TestCase> dataWebPortalTestcase;
-    public ObservableList <TestCase> dataFilterAndSearch;
-    public ObservableList <TestCase> dataTestsuite;
-
     /**
      * For Internationalization
      */
@@ -199,7 +193,11 @@ public class FXMLArrivalMainControllerOld implements Initializable {
     private TextField txtSearchField;
 
 
-
+    public ObservableList <TestCase> dataIOSTestcase;
+    public ObservableList <TestCase> dataANDTestcase;
+    public ObservableList <TestCase> dataWebPortalTestcase;
+    public ObservableList <TestCase> dataFilterAndSearch;
+    public ObservableList <TestCase> dataTestsuite;
 
 
     private FXMLArrivalTableViewController tbvTestsuiteController;

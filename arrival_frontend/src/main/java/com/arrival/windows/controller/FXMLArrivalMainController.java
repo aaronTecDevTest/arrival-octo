@@ -14,6 +14,7 @@ import com.arrival.utilities.WindowsDialogs;
 import com.arrival.utilities.interfaces.IFTestCase;
 import com.arrival.windows.model.TestCase;
 
+import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -29,8 +30,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
@@ -56,12 +57,6 @@ public class FXMLArrivalMainController implements Initializable {
      * Logger
      */
     private static final Logger log = LogManager.getLogger(FXMLArrivalMainController.class);
-
-    public ObservableList <TestCase> dataIOSTestcase;
-    public ObservableList <TestCase> dataANDTestcase;
-    public ObservableList <TestCase> dataWebPortalTestcase;
-    public ObservableList <TestCase> dataFilterAndSearch;
-    public ObservableList <TestCase> dataTestsuite;
 
     /**
      * For Internationalization
@@ -200,19 +195,22 @@ public class FXMLArrivalMainController implements Initializable {
 
 
     @FXML
-    private TableColumn<TestCase, String> tbcIOS;
+    private TreeTableColumn<TestCase, String> ttcIOS;
     @FXML
-    private TableColumn<TestCase, String> tbcAndroid;
+    private TreeTableColumn<TestCase, String> ttcAND;
     @FXML
-    private TableColumn<TestCase, String> tbcWebPortal;
+    private TreeTableColumn<TestCase, String> ttcWEB;
     @FXML
-    private TableColumn<TestCase, String> tbcSearch;
+    private TreeTableColumn<TestCase, String> ttcSearch;
 
     @FXML
     private TextField txtSearchField;
 
-
-
+    public ObservableList <TestCase> dataIOSTestcase;
+    public ObservableList <TestCase> dataANDTestcase;
+    public ObservableList <TestCase> dataWEBTestcase;
+    public ObservableList <TestCase> dataFilterAndSearch;
+    public ObservableList <TestCase> dataTestsuite;
 
 
     private FXMLArrivalTableViewController tbvTestsuiteController;
@@ -227,6 +225,8 @@ public class FXMLArrivalMainController implements Initializable {
 
     private FilteredList<TestCase> filteredDate;
 
+    private final ImageView projectIcon = new ImageView(new Image(getClass().getResourceAsStream("/icons/blackwhite/project.png")));
+    private final TreeItem<TestCase> projectName = new TreeItem<>(new TestCase(), projectIcon);
 
     /**
      * Called to initialize a controller after its root element has been
@@ -247,41 +247,41 @@ public class FXMLArrivalMainController implements Initializable {
         dataANDTestcase = FXCollections.observableArrayList();
         dataIOSTestcase = FXCollections.observableArrayList();
         dataFilterAndSearch = FXCollections.observableArrayList();
-        dataWebPortalTestcase = FXCollections.observableArrayList();
+        dataWEBTestcase = FXCollections.observableArrayList();
 
-        //Setup Table-Column Properties
-       // tbcIOS.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-       // tbcAndroid.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-       // tbcWebPortal.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-       // tbcSearch.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
+        //Setup Tree-Table-Column Properties
+        ttcIOS.setCellValueFactory((TreeTableColumn.CellDataFeatures<TestCase, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().getTcName()));
+        ttcAND.setCellValueFactory((TreeTableColumn.CellDataFeatures<TestCase, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().getTcName()));
+        ttcWEB.setCellValueFactory((TreeTableColumn.CellDataFeatures<TestCase, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().getTcName()));
+        ttcSearch.setCellValueFactory((TreeTableColumn.CellDataFeatures<TestCase, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().getTcName()));
 
-        /*tbvIOS.getSelectionModel().setCellSelectionEnabled(true);
-        tbvIOS.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        tbvIOS.getStyleClass().add("table-right");
+        ttvIOS.getSelectionModel().setCellSelectionEnabled(true);
+        ttvIOS.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        ttvIOS.getStyleClass().add("table-right");
 
-        //tbvAND.getSelectionModel().setCellSelectionEnabled(true);
-        tbvAND.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        tbvAND.getStyleClass().add("table-right");
+        ttvAND.getSelectionModel().setCellSelectionEnabled(true);
+        ttvAND.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        ttvAND.getStyleClass().add("table-right");
 
-        //tbvWEB.getSelectionModel().setCellSelectionEnabled(true);
-        tbvWEB.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        tbvWEB.getStyleClass().add("table-right");
+        ttvWEB.getSelectionModel().setCellSelectionEnabled(true);
+        ttvWEB.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        ttvWEB.getStyleClass().add("table-right");
 
-        //tbvSearch.getSelectionModel().setCellSelectionEnabled(true);
-        tbvSearch.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        tbvSearch.getStyleClass().add("table-right");*/
+        ttvSearch.getSelectionModel().setCellSelectionEnabled(true);
+        ttvSearch.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        ttvSearch.getStyleClass().add("table-right");
 
-        //SetUp Testcase to Table
+        //Ini Testcase Observerlist
         setUpIOSTestcase();
         setUpANDTestcase();
-        setUpWebPortalTestcase();
+        setUpWEBTestcase();
         setUpSearchTestcase();
 
-        /*
-        tbvIOS.setItems(dataIOSTestcase);
-        tbvAND.setItems(dataANDTestcase);
-        tbvWEB.setItems(dataWebPortalTestcase);*/
-//      tbvSearch.setItems(dataFilterAndSearch);
+        //SetUp Testcase to Table
+        dataIOSTestcase.stream().forEach((ios)-> projectName.getChildren().add(new TreeItem<>(ios)));
+        dataANDTestcase.stream().forEach((and)-> projectName.getChildren().add(new TreeItem<>(and)));
+        dataWEBTestcase.stream().forEach((web)-> projectName.getChildren().add(new TreeItem<>(web)));
+        dataFilterAndSearch.stream().forEach((search)-> projectName.getChildren().add(new TreeItem<>(search)));
 
         //SetUp Testsuite
         setUpFirstTableView();
@@ -361,10 +361,10 @@ public class FXMLArrivalMainController implements Initializable {
         tabMainTabPane.getTabs().remove(tabMainTabPane.getSelectionModel().getSelectedItem());
         }
     }
-   /*
+
     @FXML
- public void addTestcaseInTestsuite(ActionEvent actionEvent) {
-        try {
+    public void addTestcaseInTestsuite(ActionEvent actionEvent) {
+    }/* try {
             if (accTestCaseMain.getExpandedPane().getText().equals("iOS - Testcase")) {
                 log.info(actionEvent.getSource() + "IOS");
                 if (/*dataTestsuite.isEmpty() &&* tbvTestsuiteController.getPlatform().equals("platform")) {
@@ -678,7 +678,7 @@ public class FXMLArrivalMainController implements Initializable {
         dataANDTestcase = FXCollections.observableArrayList(tempList);
     }
 
-    private void setUpWebPortalTestcase() {
+    private void setUpWEBTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderWeb = new FileNameLoader("/com/arrival/testCase/webTestcase", ".class");
         //  ArrayList<String> fileNames = fileNameLoaderWeb.getClassName();
@@ -711,14 +711,14 @@ public class FXMLArrivalMainController implements Initializable {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
         }
-        dataWebPortalTestcase = FXCollections.observableArrayList(tempList);
+        dataWEBTestcase = FXCollections.observableArrayList(tempList);
     }
 
     private void setUpSearchTestcase(){
         dataFilterAndSearch.clear();
         dataFilterAndSearch.addAll(dataANDTestcase);
         dataFilterAndSearch.addAll(dataIOSTestcase);
-        dataFilterAndSearch.addAll(dataWebPortalTestcase);
+        dataFilterAndSearch.addAll(dataWEBTestcase);
         filteredDate = new FilteredList<TestCase>(dataFilterAndSearch);
     }
 
@@ -756,7 +756,7 @@ public class FXMLArrivalMainController implements Initializable {
                 setUpSearchTestcase();
             }
         });
-        dataWebPortalTestcase.addListener(new ListChangeListener() {
+        dataWEBTestcase.addListener(new ListChangeListener() {
             @Override
             public void onChanged(Change c) {
                 setUpSearchTestcase();
