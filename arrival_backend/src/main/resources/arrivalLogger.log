@@ -1931,3 +1931,4 @@
 2016-03-04 14:34:56,723 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
 2016-03-04 14:34:56,727 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
 2016-03-04 14:38:35,086 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-04 14:58:40,402 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:706) - [Ljava.lang.StackTraceElement;@3e0e39ec:  java.lang.ClassNotFoundException: com.arrival.testCase.webTestcase.SimpleTestWeb1
