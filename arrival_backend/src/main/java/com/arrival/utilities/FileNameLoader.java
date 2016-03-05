@@ -104,19 +104,9 @@ public class FileNameLoader {
 
     private void setUpClassPackage() {
         ArrayList<String> temp = new ArrayList<>();
-       /* String dir = fileDirectory.split("/classes/")[1].replace("/", ".");
-
-        for (String tempClassName : className) {
-            try {
-                temp.add(dir + "." + tempClassName);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        classPackage = temp;*/
-
+        String temFilePath = filePath.toString().replace("/","\\\\");
         for(Path path : filePathList){
-            String dir = path.toString().split(filePath)[1].replace("/", ".");
+            String dir = path.toString().split(temFilePath)[1].replace("/", ".");
             temp.add(dir);
         }
         classPackage = temp;
