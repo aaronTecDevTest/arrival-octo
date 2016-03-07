@@ -1943,3 +1943,45 @@
 2016-03-05 21:13:03,560 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
 2016-03-05 21:21:45,875 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
 2016-03-05 21:21:45,881 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-07 11:08:50,387 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-07 11:08:50,391 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-07 11:08:51,104 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:634) - [Ljava.lang.StackTraceElement;@703d47e1:  java.lang.ClassNotFoundException: \SimpleTestIOS1.class
+2016-03-07 11:08:51,106 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:670) - [Ljava.lang.StackTraceElement;@503f78ad:  java.lang.ClassNotFoundException: \SimpleAnd1.class
+2016-03-07 11:08:51,108 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:706) - [Ljava.lang.StackTraceElement;@7fe6f3f5:  java.lang.ClassNotFoundException: \Projekt1\SimpleTestWeb1.class
+2016-03-07 11:08:51,110 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:309) - javafx.event.Event$$Lambda$57/57770107@f7ba59
+2016-03-07 11:08:51,915 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-07 11:09:19,828 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-07 11:09:19,832 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-07 11:09:20,405 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:634) - [Ljava.lang.StackTraceElement;@1e6827f:  java.lang.ClassNotFoundException: \SimpleTestIOS1.class
+2016-03-07 11:09:20,408 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:670) - [Ljava.lang.StackTraceElement;@7865b224:  java.lang.ClassNotFoundException: \SimpleAnd1.class
+2016-03-07 11:09:20,412 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:706) - [Ljava.lang.StackTraceElement;@443d69ca:  java.lang.ClassNotFoundException: \Projekt1\SimpleTestWeb1.class
+2016-03-07 11:09:20,415 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:309) - javafx.event.Event$$Lambda$57/607217742@1dd6000b
+2016-03-07 11:09:21,068 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-07 16:34:02,130 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-07 16:34:02,145 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-07 16:49:34,971 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:634) - [Ljava.lang.StackTraceElement;@7667fbbf:  java.lang.ClassNotFoundException: \SimpleTestIOS1.class
+2016-03-07 16:49:40,545 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-07 16:49:40,550 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-07 16:52:59,209 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-07 16:52:59,213 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-07 16:55:35,538 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-07 16:55:35,542 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-07 16:55:36,108 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:635) - [Ljava.lang.StackTraceElement;@44d6a6a0:  java.lang.ClassNotFoundException: SimpleTestIOS1.class
+2016-03-07 16:55:36,119 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:671) - [Ljava.lang.StackTraceElement;@2d4600aa:  java.lang.ClassNotFoundException: \SimpleAnd1.class
+2016-03-07 16:55:48,251 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:707) - [Ljava.lang.StackTraceElement;@1ceda2bb:  java.lang.ClassNotFoundException: \Projekt1\SimpleTestWeb1.class
+2016-03-07 16:55:48,255 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:309) - javafx.event.Event$$Lambda$57/816072705@844375b
+2016-03-07 16:55:49,327 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-07 16:56:32,098 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-07 16:56:32,101 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-07 16:56:43,241 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:635) - [Ljava.lang.StackTraceElement;@162501fb:  java.lang.ClassNotFoundException: SimpleTestIOS1.class
+2016-03-07 16:56:43,244 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:671) - [Ljava.lang.StackTraceElement;@483aa32b:  java.lang.ClassNotFoundException: \SimpleAnd1.class
+2016-03-07 16:57:02,330 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:707) - [Ljava.lang.StackTraceElement;@656cc5b6:  java.lang.ClassNotFoundException: \Projekt1\SimpleTestWeb1.class
+2016-03-07 16:57:02,333 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:309) - javafx.event.Event$$Lambda$57/10787908@20ce1c4d
+2016-03-07 16:57:02,996 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-07 16:58:05,210 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-07 16:58:05,215 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-07 16:58:07,810 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:635) - [Ljava.lang.StackTraceElement;@3a78349d:  java.lang.ClassNotFoundException: SimpleTestIOS1.class
+2016-03-07 16:58:09,771 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:672) - [Ljava.lang.StackTraceElement;@2085d39b:  java.lang.ClassNotFoundException: SimpleAnd1.class
+2016-03-07 16:58:12,784 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:709) - [Ljava.lang.StackTraceElement;@54cc93eb:  java.lang.ClassNotFoundException: Projekt1
+2016-03-07 16:58:12,788 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:309) - javafx.event.Event$$Lambda$57/392022565@182eeadb
+2016-03-07 16:58:13,423 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!

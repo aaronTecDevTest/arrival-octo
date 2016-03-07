@@ -615,6 +615,7 @@ public class FXMLArrivalMainController implements Initializable {
         try {
             for (int i = 0; i < fileNameLoaderIOS.getSize(); i++) {
                 String fullName = classPackage.get(i);
+                fullName = setTabItem(fullName);
 
                 Class tempTestCaseClass = Class.forName(fullName);
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
@@ -651,6 +652,7 @@ public class FXMLArrivalMainController implements Initializable {
         try {
             for (int i = 0; i < fileNameLoaderAND.getSize(); i++) {
                 String fullName = classPackage.get(i);
+                fullName = setTabItem(fullName);
 
                 Class tempTestCaseClass = Class.forName(fullName);
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
@@ -687,6 +689,7 @@ public class FXMLArrivalMainController implements Initializable {
         try {
             for (int i = 0; i < fileNameLoaderWeb.getSize(); i++) {
                 String fullName = classPackage.get(i);
+                fullName = setTabItem(fullName);
 
                 Class tempTestCaseClass = Class.forName(fullName);
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
@@ -712,6 +715,12 @@ public class FXMLArrivalMainController implements Initializable {
             log.error(e.getStackTrace() + ":  " + e.toString());
         }
         dataWEBTestcase = FXCollections.observableArrayList(tempList);
+    }
+
+    private String setTabItem(String testCaseClass){
+        String tempClass = testCaseClass.split("\\\\")[1];
+        //ArrayList<String> tempClassPhat  = new ArrayList<String>(testCaseClassPhat.split("\\"));
+        return tempClass;
     }
 
     private void setUpSearchTestcase(){
