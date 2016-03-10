@@ -43,6 +43,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
@@ -610,12 +611,11 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpIOSTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderIOS = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
-        //ArrayList<String> fileNames = fileNameLoaderIOS.getClassName();
         ArrayList<String> classPackage = fileNameLoaderIOS.getClassPackage();
         try {
             for (int i = 0; i < fileNameLoaderIOS.getSize(); i++) {
                 String fullName = classPackage.get(i);
-                fullName = setTabItem(fullName);
+                setTabItem(fullName);
 
                 Class tempTestCaseClass = Class.forName(fullName);
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
@@ -647,12 +647,11 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpANDTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderAND = new FileNameLoader("/com/arrival/testCase/andTestcase", ".class");
-        //ArrayList<String> fileNames = fileNameLoaderAND.getClassName();
         ArrayList<String> classPackage = fileNameLoaderAND.getClassPackage();
         try {
             for (int i = 0; i < fileNameLoaderAND.getSize(); i++) {
                 String fullName = classPackage.get(i);
-                fullName = setTabItem(fullName);
+                setTabItem(fullName);
 
                 Class tempTestCaseClass = Class.forName(fullName);
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
@@ -683,13 +682,12 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpWEBTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderWeb = new FileNameLoader("/com/arrival/testCase/webTestcase", ".class");
-        //  ArrayList<String> fileNames = fileNameLoaderWeb.getClassName();
         ArrayList<String> classPackage = fileNameLoaderWeb.getClassPackage();
 
         try {
             for (int i = 0; i < fileNameLoaderWeb.getSize(); i++) {
                 String fullName = classPackage.get(i);
-                fullName = setTabItem(fullName);
+                setTabItem(fullName);
 
                 Class tempTestCaseClass = Class.forName(fullName);
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
@@ -717,10 +715,10 @@ public class FXMLArrivalMainController implements Initializable {
         dataWEBTestcase = FXCollections.observableArrayList(tempList);
     }
 
-    private String setTabItem(String testCaseClass){
-        String tempClass = testCaseClass.split("\\\\")[1];
-        //ArrayList<String> tempClassPhat  = new ArrayList<String>(testCaseClassPhat.split("\\"));
-        return tempClass;
+    private boolean setTabItem(String testCaseClass){
+       // ArrayList<String> tempTestCalss = testCaseClass.split(".");
+
+        return true;
     }
 
     private void setUpSearchTestcase(){
