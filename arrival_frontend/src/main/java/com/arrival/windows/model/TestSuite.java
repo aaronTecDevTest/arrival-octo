@@ -25,7 +25,6 @@ public class TestSuite implements IFTestSuite {
     private ArrayList<ArrivalTestSuite> testCases;
     private SimpleStringProperty suiteIdentifyIdentify;
 
-
     public TestSuite(Integer id, String tsName, String tsResult) {
         this.tsId = new SimpleIntegerProperty(id);
         this.tsName = new SimpleStringProperty(tsName);
