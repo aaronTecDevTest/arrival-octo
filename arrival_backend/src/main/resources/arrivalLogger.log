@@ -2185,3 +2185,20 @@
 2016-03-10 15:00:09,280 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
 2016-03-10 15:36:12,412 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:305) - Button[id=btnSaveTestsuite, styleClass=button]'Save Testsuite'
 2016-03-10 15:36:12,916 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:310) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-03-16 09:42:58,875 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-16 09:42:58,878 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-16 09:43:00,727 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-16 09:43:01,328 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-16 09:43:01,673 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:310) - javafx.event.Event$$Lambda$59/157045857@38391bf1
+2016-03-16 09:43:04,161 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-16 09:43:19,344 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:493) - Button[id=btnOptions, styleClass=button]'Options'
+2016-03-16 09:43:36,336 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:508) - Button[id=btnHelp, styleClass=button]'Help'
+2016-03-16 10:10:13,560 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-16 10:10:13,564 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-16 10:10:14,092 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-16 10:10:14,106 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-16 10:10:14,118 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:310) - javafx.event.Event$$Lambda$59/951837017@1132c626
+2016-03-16 10:10:14,714 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-16 10:10:54,763 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:493) - Button[id=btnOptions, styleClass=button]'Options'
+2016-03-16 10:12:23,525 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:508) - Button[id=btnHelp, styleClass=button]'Help'
+2016-03-16 10:12:24,158 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:493) - Button[id=btnOptions, styleClass=button]'Options'

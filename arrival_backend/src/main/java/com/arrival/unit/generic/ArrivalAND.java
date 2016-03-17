@@ -84,7 +84,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     }*/
 
     /**
-     *Test NG method
+     * Test NG method
      */
     @DataProvider(name = "driver", parallel = true)
     public Object[][] createServer() {
@@ -203,7 +203,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     }
 
     /**
-    *Other method
+    * Other method
     */
     public void pauseTest(long milSeconds) {
         try {
@@ -224,7 +224,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     }
 
     /**
-     *Mobile general method
+     * Mobile general method
      */
     @Override
     public void click() {
@@ -282,7 +282,7 @@ public abstract class ArrivalAND implements IFTestCase, IFGenericMobil {
     }
 
     /**
-     *Testcase Properties
+     * Testcase Properties
      */
 
     public int getTcID() {
