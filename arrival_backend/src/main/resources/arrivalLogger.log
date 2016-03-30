@@ -2202,3 +2202,18 @@
 2016-03-16 10:10:54,763 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:493) - Button[id=btnOptions, styleClass=button]'Options'
 2016-03-16 10:12:23,525 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:508) - Button[id=btnHelp, styleClass=button]'Help'
 2016-03-16 10:12:24,158 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:493) - Button[id=btnOptions, styleClass=button]'Options'
+2016-03-17 14:00:18,957 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-17 14:00:19,106 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-17 14:00:22,083 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-17 14:00:22,464 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-17 14:00:23,259 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:310) - javafx.event.Event$$Lambda$59/1336553987@71edd402
+2016-03-17 14:00:26,160 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-17 14:00:28,234 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:493) - Button[id=btnOptions, styleClass=button]'Options'
+2016-03-17 14:00:34,123 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-03-17 14:00:42,065 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:190) - Button[id=btnCancel, styleClass=button]'Cancel'
+2016-03-17 14:00:53,704 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:310) - Button[id=btnNewTestsuite, styleClass=button]'New Testsuite'
+2016-03-17 14:01:17,431 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:493) - Button[id=btnOptions, styleClass=button]'Options'
+2016-03-17 14:01:20,311 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:206) - ComboBox[id=cmbPlatform, styleClass=combo-box-base combo-box]
+2016-03-17 14:01:23,310 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:190) - Button[id=btnCancel, styleClass=button]'Cancel'
+2016-03-17 14:01:54,436 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:488) - Button[id=btnResult, styleClass=button]'Result'
+2016-03-29 15:44:51,873 INFO  [main] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
