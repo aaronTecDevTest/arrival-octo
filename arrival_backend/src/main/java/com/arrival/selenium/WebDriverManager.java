@@ -60,10 +60,10 @@ public class WebDriverManager {
                     log.error("Error while initializing ChromeDriver");
                 }
                 if (SystemPreferences.getInstance().isWindows())
-                    System.setProperty("webdriver.chrome.driver", "arrival_backend/src/main/resources/webdriver/chromedriver.exe");
+                    System.setProperty("webdriver.chrome.driver", "src/main/resources/webdriver/chromedriver.exe");
 
                 if (SystemPreferences.getInstance().isMacOS())
-                    System.setProperty("webdriver.chrome.driver", "arrival_backend/src/main/resources/webdriver/chromedriver");
+                    System.setProperty("webdriver.chrome.driver", "src/main/resources/webdriver/chromedriver");
                 driver = new ChromeDriver(this.setUpChromeDriver());
                 System.out.println(driver.getTitle());
                 break;

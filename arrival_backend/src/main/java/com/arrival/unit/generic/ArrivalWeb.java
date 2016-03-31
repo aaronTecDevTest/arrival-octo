@@ -316,7 +316,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
 
     public void setTcResult(ArrivalResult tcResult) {
         this.tcResult.set(tcResult.toString());
-        this.setTcResultIcons(getResultImageViewer(tcResult.toString()));
+     //   this.setTcResultIcons(getResultImageViewer(tcResult.toString()));
     }
 
     public SimpleStringProperty tcResultProperty() {

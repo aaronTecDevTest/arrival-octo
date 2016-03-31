@@ -2217,3 +2217,29 @@
 2016-03-17 14:01:23,310 INFO  [JavaFX Application Thread] controller.FXMLArrivalOptionsController (FXMLArrivalOptionsController.java:190) - Button[id=btnCancel, styleClass=button]'Cancel'
 2016-03-17 14:01:54,436 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:488) - Button[id=btnResult, styleClass=button]'Result'
 2016-03-29 15:44:51,873 INFO  [main] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-30 12:03:18,349 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-03-30 12:03:18,357 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-30 12:03:18,869 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-30 12:03:18,894 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-30 12:03:18,913 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:310) - javafx.event.Event$$Lambda$59/783992422@4c7fa024
+2016-03-30 12:03:19,856 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:48) - MainApp show up!!
+2016-03-30 12:23:53,524 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-30 12:23:53,686 INFO  [JavaFX Application Thread] view.ViewArrivalLogIn (ViewArrivalLogIn.java:39) - Start App with LogIn
+2016-03-30 12:23:54,461 INFO  [JavaFX Application Thread] view.ViewArrivalLogIn (ViewArrivalLogIn.java:55) - LogIn show up
+2016-03-30 12:23:56,039 INFO  [JavaFX Application Thread] appium.AppiumSingleton (AppiumSingleton.java:25) - class com.arrival.appium.AppiumSingleton set up!!
+2016-03-30 12:23:56,073 INFO  [JavaFX Application Thread] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-30 12:23:56,091 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:310) - javafx.event.Event$$Lambda$68/1587636767@1a977be4
+2016-03-30 12:24:02,316 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:447) - Button[id=btnRemoveTestcase, styleClass=button]'Remove Testcase'
+2016-03-30 12:24:02,780 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:464) - Button[id=btnRun, styleClass=button]'Run'
+2016-03-30 12:24:02,782 WARN  [JavaFX Application Thread] controller.FXMLArrivalTableViewController (FXMLArrivalTableViewController.java:158) - Options object is null[Ljava.lang.StackTraceElement;@6c153935
+2016-03-30 12:24:04,372 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:493) - Button[id=btnOptions, styleClass=button]'Options'
+2016-03-30 12:31:07,402 INFO  [main] selenium.SeleniumSingleton (SeleniumSingleton.java:25) - class com.arrival.selenium.SeleniumSingleton set up!!
+2016-03-30 12:31:07,505 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:40) - Setting up Webdriver
+2016-03-30 12:31:07,506 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:58) - Q:\01_Dev\GitHub\arrival-octo\arrival_backend
+2016-03-30 12:31:07,511 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.arrival.utilities.SystemPreferences is loaded!!
+2016-03-30 12:31:07,558 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:189) - Configuring ChromeDriver
+2016-03-30 12:31:07,591 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:198) - ChromeDriver configured successfully
+2016-03-30 12:31:10,312 DEBUG [main] selenium.WebDriverManager (WebDriverManager.java:99) - WebDriver initialized
+2016-03-30 12:31:14,886 INFO  [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:183) - Test: SUCCESS
+2016-03-30 12:31:16,429 INFO  [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:183) - Test: SUCCESS
+2016-03-30 12:31:16,432 INFO  [PoolService-0] generic.ArrivalWeb (ArrivalWeb.java:183) - Test: SUCCESS
