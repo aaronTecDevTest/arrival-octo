@@ -29,6 +29,45 @@ public class Options implements IFConfig {
     private Boolean jsonConfigInUse = false;
     private String jsonConfigPath = null;
 
+    public Options(){
+
+    }
+
+    public Options(String platform, Boolean parallelTesting, Integer parallelThreadCounter, String saveResultPath, String browserName, String serverName, String mobilePlatform, String mobileTestingArt, String hubServer, String hubPort, String appFilePath, String packageBundleID, Boolean jsonConfigInUse, String jsonConfigPath) {
+        this.platform = platform;
+        this.parallelTesting = parallelTesting;
+        this.parallelThreadCounter = parallelThreadCounter;
+        this.saveResultPath = saveResultPath;
+        this.browserName = browserName;
+        this.serverName = serverName;
+        this.mobilePlatform = mobilePlatform;
+        this.mobileTestingArt = mobileTestingArt;
+        this.hubServer = hubServer;
+        this.hubPort = hubPort;
+        this.appFilePath = appFilePath;
+        this.packageBundleID = packageBundleID;
+        this.jsonConfigInUse = jsonConfigInUse;
+        this.jsonConfigPath = jsonConfigPath;
+    }
+
+    public Options(Options options) {
+        this.platform = options.getPlatform();
+        this.parallelTesting = options.getParallelTesting();
+        this.parallelThreadCounter = options.getParallelThreadCounter();
+        this.saveResultPath = options.getSaveResultPath();
+        this.browserName = options.getBrowserName();
+        this.serverName = options.getServerName();
+        this.mobilePlatform = options.getMobilePlatform();
+        this.mobileTestingArt = options.getMobileTestingArt();
+        this.hubServer = options.getHubServer();
+        this.hubPort = options.getHubPort();
+        this.appFilePath = options.getAppFilePath();
+        this.packageBundleID = options.getPackageBundleID();
+        this.jsonConfigInUse = options.getJsonConfigInUse();
+        this.jsonConfigPath = options.getJsonConfigPath();
+    }
+
+
     @Override
     public String toString() {
         return           platform

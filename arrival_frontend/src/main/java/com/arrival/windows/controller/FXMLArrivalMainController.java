@@ -13,10 +13,14 @@ import com.arrival.utilities.SystemPreferences;
 import com.arrival.utilities.WindowsDialogs;
 import com.arrival.utilities.interfaces.IFTestCase;
 import com.arrival.windows.model.TestCase;
+
+import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -26,20 +30,23 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 /**
  * Controller Class for ViewMainApp. This Class have linked with ViewMainApp.fxml and
@@ -52,16 +59,10 @@ public class FXMLArrivalMainController implements Initializable {
      */
     private static final Logger log = LogManager.getLogger(FXMLArrivalMainController.class);
 
-    public ObservableList dateIOSTestcase;
-    public ObservableList dateANDTestcase;
-    public ObservableList dateWebPortalTestcase;
-    public ObservableList dateTestsuite;
-
     /**
      * For Internationalization
      */
     private ResourceBundle bundle;
-
 
     @FXML
     private Menu mnuFile;
@@ -104,7 +105,7 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private MenuItem mnuUndo;
     @FXML
-    private MenuItem mnuUnselectAll;
+    private MenuItem mnuUnSelectAll;
 
 
     @FXML
@@ -144,39 +145,89 @@ public class FXMLArrivalMainController implements Initializable {
 
 
     @FXML
+    private Button btnUp;
+    @FXML
+    private Button btnDown;
+    @FXML
+    private Button btnStepUp;
+    @FXML
+    private Button btnStepDown;
+
+
+    @FXML
+    private VBox vBoxTestcase;
+    @FXML
     private TabPane tabMainTabPane;
     @FXML
-    private Accordion accTestCase;
+    private Accordion accTestCaseMain;
+
+    private ObservableList<TitledPane> mainTitlePane;
+    private ObservableList<TitledPane> searchTitlePane;
 
 
-    @FXML
+/*    @FXML
     private TableView<TestCase> tbvIOS;
     @FXML
     private TableView<TestCase> tbvAND;
     @FXML
-    private TableView<TestCase> tbvWebPortal;
+    private TableView<TestCase> tbvWEB;
+    @FXML
+    private TableView<TestCase> tbvSearch;*/
 
 
     @FXML
-    private TableColumn<TestCase, String> tbcIOS;
+    private TreeTableView<TestCase> ttvIOS;
     @FXML
-    private TableColumn<TestCase, String> tbcAndroid;
+    private TreeTableView<TestCase> ttvAND;
     @FXML
-    private TableColumn<TestCase, String> tbcWebPortal;
+    private TreeTableView<TestCase> ttvWEB;
+    @FXML
+    private TreeTableView<TestCase> ttvSearch;
+
+
+    @FXML
+    private TitledPane tpnIOS;
+    @FXML
+    private TitledPane tpnAND;
+    @FXML
+    private TitledPane tpnWEB;
+    @FXML
+    private TitledPane tpnSearch;
+
+
+    @FXML
+    private TreeTableColumn<TestCase, String> ttcIOS;
+    @FXML
+    private TreeTableColumn<TestCase, String> ttcAND;
+    @FXML
+    private TreeTableColumn<TestCase, String> ttcWEB;
+    @FXML
+    private TreeTableColumn<TestCase, String> ttcSearch;
+
+    @FXML
+    private TextField txtSearchField;
+
+    public ObservableList <TestCase> dataIOSTestcase;
+    public ObservableList <TestCase> dataANDTestcase;
+    public ObservableList <TestCase> dataWEBTestcase;
+    public ObservableList <TestCase> dataFilterAndSearch;
+    public ObservableList <TestCase> dataTestsuite;
+
 
     private FXMLArrivalTableViewController tbvTestsuiteController;
-
     private TableView<TestCase> currentTableView;
 
     private FXMLArrivalOptionsController optionsController;
     private Stage optionsViewStage;
 
-
-    //  private HashMap<String, TableView> testSuitesTab;
     private FileNameLoader fileNameLoaderIOS;
     private FileNameLoader fileNameLoaderAND;
     private FileNameLoader fileNameLoaderWeb;
 
+    private FilteredList<TestCase> filteredDate;
+
+    private final ImageView projectIcon = new ImageView(new Image(getClass().getResourceAsStream("/icons/blackwhite/project.png")));
+    private final TreeItem<TestCase> projectName = new TreeItem<>(new TestCase(), projectIcon);
 
     /**
      * Called to initialize a controller after its root element has been
@@ -190,46 +241,56 @@ public class FXMLArrivalMainController implements Initializable {
         //Ini BundleResources
         bundle = resources;
         iniBundleResources();
+        iniAccTestCaseMain();
 
         //Setup Table-Data Objects
-        dateTestsuite = FXCollections.observableArrayList();
-        dateANDTestcase = FXCollections.observableArrayList();
-        dateIOSTestcase = FXCollections.observableArrayList();
-        dateWebPortalTestcase = FXCollections.observableArrayList();
+        dataTestsuite = FXCollections.observableArrayList();
+        dataANDTestcase = FXCollections.observableArrayList();
+        dataIOSTestcase = FXCollections.observableArrayList();
+        dataFilterAndSearch = FXCollections.observableArrayList();
+        dataWEBTestcase = FXCollections.observableArrayList();
 
-        //Setup Table-Colmn Properties
-        tbcIOS.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-        tbcAndroid.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
-        tbcWebPortal.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
+        //Setup Tree-Table-Column Properties
+        ttcIOS.setCellValueFactory((TreeTableColumn.CellDataFeatures<TestCase, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().getTcName()));
+        ttcAND.setCellValueFactory((TreeTableColumn.CellDataFeatures<TestCase, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().getTcName()));
+        ttcWEB.setCellValueFactory((TreeTableColumn.CellDataFeatures<TestCase, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().getTcName()));
+        ttcSearch.setCellValueFactory((TreeTableColumn.CellDataFeatures<TestCase, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().getTcName()));
 
-        //tbvIOS.getSelectionModel().setCellSelectionEnabled(true);
-        tbvIOS.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        tbvIOS.getStyleClass().add("table-right");
+        ttvIOS.getSelectionModel().setCellSelectionEnabled(true);
+        ttvIOS.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        ttvIOS.getStyleClass().add("table-right");
 
-        //tbvAND.getSelectionModel().setCellSelectionEnabled(true);
-        tbvAND.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        tbvAND.getStyleClass().add("table-right");
+        ttvAND.getSelectionModel().setCellSelectionEnabled(true);
+        ttvAND.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        ttvAND.getStyleClass().add("table-right");
 
-        //tbvWebPortal.getSelectionModel().setCellSelectionEnabled(true);
-        tbvWebPortal.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        tbvWebPortal.getStyleClass().add("table-right");
+        ttvWEB.getSelectionModel().setCellSelectionEnabled(true);
+        ttvWEB.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        ttvWEB.getStyleClass().add("table-right");
 
-        //SetUp Testcase to Table
+        ttvSearch.getSelectionModel().setCellSelectionEnabled(true);
+        ttvSearch.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        ttvSearch.getStyleClass().add("table-right");
+
+        //Ini Testcase Observerlist
         setUpIOSTestcase();
         setUpANDTestcase();
-        setUpWebPortalTestcase();
+        setUpWEBTestcase();
+        setUpSearchTestcase();
 
-        tbvIOS.setItems(dateIOSTestcase);
-        tbvAND.setItems(dateANDTestcase);
-        tbvWebPortal.setItems(dateWebPortalTestcase);
-
-        //Set first TitlePane open
-        TitledPane ios = accTestCase.getPanes().get(0);
-        accTestCase.setExpandedPane(ios);
+        //SetUp Testcase to Table
+        dataIOSTestcase.stream().forEach((ios)-> projectName.getChildren().add(new TreeItem<>(ios)));
+        dataANDTestcase.stream().forEach((and)-> projectName.getChildren().add(new TreeItem<>(and)));
+        dataWEBTestcase.stream().forEach((web)-> projectName.getChildren().add(new TreeItem<>(web)));
+        dataFilterAndSearch.stream().forEach((search)-> projectName.getChildren().add(new TreeItem<>(search)));
 
         //SetUp Testsuite
         setUpFirstTableView();
+
+        //Listener
+        addDataListener();
         addTableViewListener();
+        addSearchFieldListener();
 
         //currentTableView.getStyleClass().add("/css/arrivalMain.css");
     }
@@ -296,22 +357,25 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void deletedTestsuite(ActionEvent actionEvent) {
         log.info(actionEvent.getSource());
+        if(tabMainTabPane.getTabs().size() > 1){
+        //Tab selecetedTab = tabMainTabPane.getSelectionModel().getSelectedItem();
+        tabMainTabPane.getTabs().remove(tabMainTabPane.getSelectionModel().getSelectedItem());
+        }
     }
 
     @FXML
     public void addTestcaseInTestsuite(ActionEvent actionEvent) {
-        try {
-
-            if (accTestCase.getExpandedPane().getText().equals("iOS - Testcase")) {
+    }/* try {
+            if (accTestCaseMain.getExpandedPane().getText().equals("iOS - Testcase")) {
                 log.info(actionEvent.getSource() + "IOS");
-                if (/*dateTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")) {
+                if (/*dataTestsuite.isEmpty() &&* tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("IOS");
                 }
 
                 if (tbvTestsuiteController.isIOSPlatform()) {
-                    dateTestsuite = currentTableView.getItems();
-                    if (!(dateTestsuite.containsAll(tbvIOS.getSelectionModel().getSelectedItems()))) {
-                        dateTestsuite.addAll(tbvIOS.getSelectionModel().getSelectedItems());
+                    dataTestsuite = currentTableView.getItems();
+                    if (!(dataTestsuite.containsAll(tbvIOS.getSelectionModel().getSelectedItems()))) {
+                        dataTestsuite.addAll(TestCase.copyTestCases(tbvIOS.getSelectionModel().getSelectedItems()));
                     } else {
                         log.warn("Testcase all ready added!");
                         WindowsDialogs.testCaseInTestsuite();
@@ -322,16 +386,17 @@ public class FXMLArrivalMainController implements Initializable {
                 }
             }
 
-            if (accTestCase.getExpandedPane().getText().equals("Android - Testcase")) {
+            if (accTestCaseMain.getExpandedPane().getText().equals("Android - Testcase")) {
                 log.info(actionEvent.getSource() + "AND");
-                if (/*dateTestsuite.isEmpty() &&*/ tbvTestsuiteController.getPlatform().equals("platform")) {
+                if (/*dataTestsuite.isEmpty() &&* tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("Android");
                 }
 
                 if (tbvTestsuiteController.isANDPlatform()) {
-                    dateTestsuite = currentTableView.getItems();
-                    if (!(dateTestsuite.containsAll(tbvAND.getSelectionModel().getSelectedItems()))) {
-                        dateTestsuite.addAll(tbvAND.getSelectionModel().getSelectedItems());
+                    dataTestsuite = currentTableView.getItems();
+                    if (!(dataTestsuite.containsAll(tbvAND.getSelectionModel().getSelectedItems()))) {
+                        dataTestsuite.addAll(TestCase.copyTestCases(tbvAND.getSelectionModel().getSelectedItems()));
+
                     } else {
                         log.warn("Testcase all ready added!");
                         WindowsDialogs.testCaseInTestsuite();
@@ -342,16 +407,16 @@ public class FXMLArrivalMainController implements Initializable {
                 }
             }
 
-            if (accTestCase.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
+            if (accTestCaseMain.getExpandedPane().getText().equals("Web-Portal - Testcase")) {
                 log.info(actionEvent.getSource() + "Web");
-                if (/*dateTestsuite.isEmpty() && */tbvTestsuiteController.getPlatform().equals("platform")) {
+                if (/*dataTestsuite.isEmpty() &&  tbvTestsuiteController.getPlatform().equals("platform")) {
                     tbvTestsuiteController.setPlatform("Web");
                 }
 
                 if (tbvTestsuiteController.isWebPlatform()) {
-                    dateTestsuite = currentTableView.getItems();
-                    if (!(dateTestsuite.containsAll(tbvWebPortal.getSelectionModel().getSelectedItems()))) {
-                        dateTestsuite.addAll(tbvWebPortal.getSelectionModel().getSelectedItems());
+                    dataTestsuite = currentTableView.getItems();
+                    if (!(dataTestsuite.containsAll(tbvWEB.getSelectionModel().getSelectedItems()))) {
+                        dataTestsuite.addAll(TestCase.copyTestCases(tbvWEB.getSelectionModel().getSelectedItems()));
                     } else {
                         log.warn("Testcase all ready added!");
                         WindowsDialogs.testCaseInTestsuite();
@@ -360,11 +425,22 @@ public class FXMLArrivalMainController implements Initializable {
                     log.warn("Is not a Web Testcase");
                     WindowsDialogs.wrongPlatform(tbvTestsuiteController.getPlatform());
                 }
-        }
+            }
+
+            if (accTestCaseMain.getExpandedPane().getText().equals("Search - Testcase")) {
+                log.info(actionEvent.getSource() + "Search");
+                dataTestsuite = currentTableView.getItems();
+                if (!(dataTestsuite.containsAll(tbvSearch.getSelectionModel().getSelectedItems()))) {
+                    dataTestsuite.addAll(TestCase.copyTestCases(tbvSearch.getSelectionModel().getSelectedItems()));
+                } else {
+                    log.warn("Testcase all ready added!");
+                    WindowsDialogs.testCaseInTestsuite();
+                }
+            }
         } catch (Exception e) {
             log.error(e.getStackTrace());
         }
-    }
+    }*/
 
     @FXML
     public void deleteTestcaseFromTestsuite(ActionEvent actionEvent) {
@@ -372,11 +448,11 @@ public class FXMLArrivalMainController implements Initializable {
         try {
             ObservableList<TestCase> testCases = currentTableView.getSelectionModel().getSelectedItems();
             System.out.println(currentTableView.toString());
-            dateTestsuite.removeAll(testCases);
+            dataTestsuite.removeAll(testCases);
 
             if (currentTableView.getItems().isEmpty()) {
                 tbvTestsuiteController.setPlatform("platform");
-                dateTestsuite = FXCollections.emptyObservableList();
+                dataTestsuite = FXCollections.emptyObservableList();
             }
         } catch (Exception e) {
             log.error(e.getStackTrace());
@@ -432,6 +508,35 @@ public class FXMLArrivalMainController implements Initializable {
         log.info(actionEvent.getSource());
     }
 
+    @FXML
+    public void searchTestcase(ActionEvent actionEvent) {
+        log.info(actionEvent.getSource());
+    }
+
+    @FXML
+    public void up(ActionEvent actionEvent) {
+        log.info(actionEvent.getSource());
+        tbvTestsuiteController.up();
+    }
+
+    @FXML
+    public void down(ActionEvent actionEvent) {
+        log.info(actionEvent.getSource());
+        tbvTestsuiteController.down();
+    }
+
+    @FXML
+    public void stepUp(ActionEvent actionEvent) {
+        log.info(actionEvent.getSource());
+        tbvTestsuiteController.stepUp();
+    }
+
+    @FXML
+    public void stepDown(ActionEvent actionEvent) {
+        log.info(actionEvent.getSource());
+        tbvTestsuiteController.stepDown();
+    }
+
 
     /**
      * Bundle Resources ini
@@ -456,6 +561,10 @@ public class FXMLArrivalMainController implements Initializable {
         btnSkip.getTooltip().setText(bundle.getString("tooltip.skip"));
         btnStop.getTooltip().setText(bundle.getString("tooltip.stop"));
         btnRun.getTooltip().setText(bundle.getString("tooltip.run"));
+        btnUp.getTooltip().setText(bundle.getString("tooltip.up"));
+        btnDown.getTooltip().setText(bundle.getString("tooltip.down"));
+        btnStepUp.getTooltip().setText(bundle.getString("tooltip.stepUp"));
+        btnStepDown.getTooltip().setText(bundle.getString("tooltip.stepDown"));
 
         mnuFile.setText(bundle.getString("menu.title.file"));
         mnuEdit.setText(bundle.getString("menu.title.edit"));
@@ -476,8 +585,24 @@ public class FXMLArrivalMainController implements Initializable {
         mnuSaveAs.setText(bundle.getString("menu.title.save.as"));
         mnuSelectAll.setText(bundle.getString("menu.title.select.all"));
         mnuUndo.setText(bundle.getString("menu.title.undo"));
-        mnuUnselectAll.setText(bundle.getString("menu.title.unselect.all"));
+        mnuUnSelectAll.setText(bundle.getString("menu.title.unselect.all"));
         mnuRevert.setText(bundle.getString("menu.title.revert"));
+    }
+
+    private void iniAccTestCaseMain(){
+        searchTitlePane = FXCollections.observableArrayList();
+        mainTitlePane = FXCollections.observableArrayList();
+
+        mainTitlePane.addAll(accTestCaseMain.getPanes().get(0));
+        mainTitlePane.addAll(accTestCaseMain.getPanes().get(1));
+        mainTitlePane.addAll(accTestCaseMain.getPanes().get(2));
+        searchTitlePane.addAll(accTestCaseMain.getPanes().get(3));
+
+        accTestCaseMain.getPanes().clear();
+        accTestCaseMain.getPanes().addAll(mainTitlePane);
+
+        //Set first TitlePane open
+        accTestCaseMain.setExpandedPane(tpnIOS);
     }
 
     /**
@@ -486,11 +611,11 @@ public class FXMLArrivalMainController implements Initializable {
     private void setUpIOSTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderIOS = new FileNameLoader("/com/arrival/testCase/iosTestcase", ".class");
-        //ArrayList<String> fileNames = fileNameLoaderIOS.getClassName();
         ArrayList<String> classPackage = fileNameLoaderIOS.getClassPackage();
         try {
             for (int i = 0; i < fileNameLoaderIOS.getSize(); i++) {
                 String fullName = classPackage.get(i);
+                setTabItem(fullName);
 
                 Class tempTestCaseClass = Class.forName(fullName);
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
@@ -503,7 +628,7 @@ public class FXMLArrivalMainController implements Initializable {
                         tempTestCaseIF.getTcLastRun(),
                         tempTestCaseIF.getTcLink(),
                         classPackage.get(i),
-                        getResultImageViewer(tempTestCaseIF.getTcResult())));
+                        tempTestCaseIF.getTcResultIcons()));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -516,17 +641,17 @@ public class FXMLArrivalMainController implements Initializable {
             log.error(e.getStackTrace() + ":  " + e.toString());
         }
 
-        dateIOSTestcase = FXCollections.observableArrayList(tempList);
+        dataIOSTestcase = FXCollections.observableArrayList(tempList);
     }
 
     private void setUpANDTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderAND = new FileNameLoader("/com/arrival/testCase/andTestcase", ".class");
-        //ArrayList<String> fileNames = fileNameLoaderAND.getClassName();
         ArrayList<String> classPackage = fileNameLoaderAND.getClassPackage();
         try {
             for (int i = 0; i < fileNameLoaderAND.getSize(); i++) {
                 String fullName = classPackage.get(i);
+                setTabItem(fullName);
 
                 Class tempTestCaseClass = Class.forName(fullName);
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
@@ -539,7 +664,7 @@ public class FXMLArrivalMainController implements Initializable {
                         tempTestCaseIF.getTcLastRun(),
                         tempTestCaseIF.getTcLink(),
                         classPackage.get(i),
-                        getResultImageViewer(tempTestCaseIF.getTcResult())));
+                        tempTestCaseIF.getTcResultIcons()));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -551,19 +676,18 @@ public class FXMLArrivalMainController implements Initializable {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
         }
-
-        dateANDTestcase = FXCollections.observableArrayList(tempList);
+        dataANDTestcase = FXCollections.observableArrayList(tempList);
     }
 
-    private void setUpWebPortalTestcase() {
+    private void setUpWEBTestcase() {
         ArrayList<TestCase> tempList = new ArrayList<>();
         fileNameLoaderWeb = new FileNameLoader("/com/arrival/testCase/webTestcase", ".class");
-        //  ArrayList<String> fileNames = fileNameLoaderWeb.getClassName();
         ArrayList<String> classPackage = fileNameLoaderWeb.getClassPackage();
 
         try {
             for (int i = 0; i < fileNameLoaderWeb.getSize(); i++) {
                 String fullName = classPackage.get(i);
+                setTabItem(fullName);
 
                 Class tempTestCaseClass = Class.forName(fullName);
                 Object tempTestCaseObject = tempTestCaseClass.newInstance();
@@ -576,7 +700,7 @@ public class FXMLArrivalMainController implements Initializable {
                         tempTestCaseIF.getTcLastRun(),
                         tempTestCaseIF.getTcLink(),
                         classPackage.get(i),
-                        getResultImageViewer(tempTestCaseIF.getTcResult())));
+                        tempTestCaseIF.getTcResultIcons()));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -588,8 +712,88 @@ public class FXMLArrivalMainController implements Initializable {
             e.printStackTrace();
             log.error(e.getStackTrace() + ":  " + e.toString());
         }
+        dataWEBTestcase = FXCollections.observableArrayList(tempList);
+    }
 
-        dateWebPortalTestcase = FXCollections.observableArrayList(tempList);
+    private boolean setTabItem(String testCaseClass){
+       // ArrayList<String> tempTestCalss = testCaseClass.split(".");
+
+        return true;
+    }
+
+    private void setUpSearchTestcase(){
+        dataFilterAndSearch.clear();
+        dataFilterAndSearch.addAll(dataANDTestcase);
+        dataFilterAndSearch.addAll(dataIOSTestcase);
+        dataFilterAndSearch.addAll(dataWEBTestcase);
+        filteredDate = new FilteredList<TestCase>(dataFilterAndSearch);
+    }
+
+    private void updateSearchTestcase(String valueToFilter){
+        //log.info("Test: " + valueToFilter);
+         Predicate<TestCase> test = new Predicate<TestCase>() {
+             @Override
+             public boolean test(TestCase testCase) {
+                 if (valueToFilter == null || valueToFilter.isEmpty()) {
+                     return true;
+                 }
+                 // Compare first name and last name of every person with filter text
+                 String lowerCaseFilter = valueToFilter.toLowerCase();
+
+                 return testCase.getTcName().toLowerCase().indexOf(lowerCaseFilter) != -1;
+             }
+         };
+        filteredDate.setPredicate(test);
+      //  tbvSearch.setItems(filteredDate);
+    }
+
+    /**
+     * Update teh dataFilterAndSearch.
+     */
+    private void addDataListener(){
+        dataANDTestcase.addListener(new ListChangeListener() {
+            @Override
+            public void onChanged(Change c) {
+                setUpSearchTestcase();
+            }
+        });
+        dataIOSTestcase.addListener(new ListChangeListener() {
+            @Override
+            public void onChanged(Change c) {
+                setUpSearchTestcase();
+            }
+        });
+        dataWEBTestcase.addListener(new ListChangeListener() {
+            @Override
+            public void onChanged(Change c) {
+                setUpSearchTestcase();
+            }
+        });
+    }
+
+    private void addSearchFieldListener(){
+        // Listen for TextField text changes
+        txtSearchField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                setUpSearchTestcase();
+
+                if(newValue.equals("") && newValue.length()<=1) {
+                    if (newValue.length()==0) {
+                        accTestCaseMain.getPanes().clear();
+                        accTestCaseMain.getPanes().addAll(mainTitlePane);
+                        accTestCaseMain.setExpandedPane(tpnIOS);
+                    }
+                }else {
+                    if (newValue.length()==1) {
+                        accTestCaseMain.getPanes().clear();
+                        accTestCaseMain.getPanes().addAll(searchTitlePane);
+                        accTestCaseMain.setExpandedPane(tpnSearch);
+                    }
+                }
+                updateSearchTestcase(newValue);
+            }
+        });
     }
 
     private void addTableViewListener() {
@@ -601,7 +805,7 @@ public class FXMLArrivalMainController implements Initializable {
                                                               .getSelectedItem()
                                                               .getContent();
                 currentTableView = tempTableView;
-                dateTestsuite = currentTableView.getItems();
+                dataTestsuite = currentTableView.getItems();
                 tbvTestsuiteController = (FXMLArrivalTableViewController) tempTableView.getUserData();
             }
         });
@@ -615,7 +819,7 @@ public class FXMLArrivalMainController implements Initializable {
                                                           .getSelectedItem()
                                                           .getContent();
             currentTableView = tempTableView;
-            dateTestsuite = currentTableView.getItems();
+            dataTestsuite = currentTableView.getItems();
             tbvTestsuiteController = (FXMLArrivalTableViewController) tempTableView.getUserData();
         } catch (IOException e) {
             log.error(e.getStackTrace());
@@ -638,30 +842,10 @@ public class FXMLArrivalMainController implements Initializable {
             optionsStage.initModality(Modality.APPLICATION_MODAL);
             optionsController = loader.getController();
             optionsScene.setUserData(tbvTestsuiteController);
-            //log.warn(optionsStage);
             return optionsStage;
         } catch (IOException e) {
             log.error(e.getStackTrace());
             return null;
         }
-    }
-
-    private ImageView getResultImageViewer(String tcResult){
-        ImageView im = new ImageView();
-
-            switch (tcResult){
-                case "PASSED":
-                    im.setImage(new Image(getClass().getResource("/icons/passed.png").toString()));
-                    return  im;
-                case "FAILED":
-                    im.setImage(new Image(getClass().getResource("/icons/failed.png").toString()));
-                    return  im;
-                case "SKIPPED":
-                    im.setImage(new Image(getClass().getResource("/icons/skipped.png").toString()));
-                    return  im;
-                default:
-                    im.setImage( new Image(getClass().getResource("/icons/skipped.png").toString()));
-                    return  im;
-            }
     }
 }

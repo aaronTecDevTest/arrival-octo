@@ -11,7 +11,10 @@ package com.arrival.windows.model;
 import com.arrival.utilities.ArrivalResult;
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -25,7 +28,22 @@ public class TestCase implements IFTestCase {
     private SimpleStringProperty tcLink;
     private SimpleStringProperty tcClassPackage;
     private SimpleStringProperty tcResult;
-    private ImageView tcResultIcons;
+    private SimpleObjectProperty<ImageView> tcResultIcons;
+
+
+    public SimpleIntegerProperty nameProperty() {
+        if (tcID == null) {
+            tcID = new SimpleIntegerProperty(this, "id");
+        }
+        return tcID;
+    }
+    public SimpleStringProperty emailProperty() {
+        if (tcName == null) {
+            tcName = new SimpleStringProperty(this, "name");
+        }
+        return tcName;
+    }
+
 
 
     public TestCase() {
@@ -41,7 +59,7 @@ public class TestCase implements IFTestCase {
         this.tcLink = new SimpleStringProperty(tcLink);
         this.tcResult = new SimpleStringProperty(tcResult);
         this.tcClassPackage = new SimpleStringProperty(tcClassPackage);
-        this.tcResultIcons =  tcResultIcons;
+        this.tcResultIcons =  new SimpleObjectProperty<ImageView>(tcResultIcons) ;
     }
 
     public TestCase(String tcName, String tcDescription, String tcResult, String tcDuration, String tcLastRun, String tcLink, String tcClassPackage, ImageView tcResultIcons) {
@@ -52,15 +70,40 @@ public class TestCase implements IFTestCase {
         this.tcLink = new SimpleStringProperty(tcLink);
         this.tcResult = new SimpleStringProperty(tcResult);
         this.tcClassPackage = new SimpleStringProperty(tcClassPackage);
-        this.tcResultIcons =  tcResultIcons;
+        this.tcResultIcons =  new SimpleObjectProperty<ImageView>(tcResultIcons) ;
     }
 
+    public TestCase(TestCase testCase) {
+        this.tcName = new SimpleStringProperty(testCase.getTcName());
+        this.tcDescription = new SimpleStringProperty(testCase.getTcDescription());
+        this.tcDuration = new SimpleStringProperty(testCase.getTcDuration());
+        this.tcLastRun = new SimpleStringProperty(testCase.getTcLastRun());
+        this.tcLink = new SimpleStringProperty(testCase.getTcLink());
+        this.tcResult = new SimpleStringProperty(testCase.getTcResult());
+        this.tcClassPackage = new SimpleStringProperty(testCase.getTcClassPackage());
+        this.setTcResultIcons(getResultImageViewer(getTcResult()));
+       // this.tcResultIcons =  new SimpleObjectProperty<ImageView>(testCase.getTcResultIcons()) ;
+    }
+
+    public static ObservableList<TestCase> copyTestCases(ObservableList<TestCase> testCasesList){
+        ObservableList<TestCase> tempTestCases = FXCollections.observableArrayList();
+
+       for (TestCase testCase: testCasesList){
+           tempTestCases.add(new TestCase(testCase));
+       }
+        return tempTestCases;
+    }
+
+    public static TestCase copyTestCase(TestCase testCase){
+        return new TestCase(testCase);
+    }
 
     @Override
     public String getTcName() {
         return tcName.get();
     }
 
+    @Override
     public void setTcName(String tcName) {
         this.tcName.set(tcName);
     }
@@ -75,6 +118,7 @@ public class TestCase implements IFTestCase {
         return tcID.get();
     }
 
+    @Override
     public void setTcID(int tcID) {
         this.tcID.set(tcID);
     }
@@ -89,6 +133,7 @@ public class TestCase implements IFTestCase {
         return tcDescription.get();
     }
 
+    @Override
     public void setTcDescription(String tcDescription) {
         this.tcDescription.set(tcDescription);
     }
@@ -117,6 +162,7 @@ public class TestCase implements IFTestCase {
         return tcLastRun.get();
     }
 
+    @Override
     public void setTcLastRun(String tcLastRun) {
         this.tcLastRun.set(tcLastRun);
     }
@@ -131,8 +177,11 @@ public class TestCase implements IFTestCase {
         return tcResult.get();
     }
 
+    @Override
     public void setTcResult(ArrivalResult tcResult) {
+
         this.tcResult.set(tcResult.toString());
+        this.setTcResultIcons(getResultImageViewer(tcResult.toString()));
     }
 
     @Override
@@ -145,6 +194,7 @@ public class TestCase implements IFTestCase {
         return tcLink.get();
     }
 
+    @Override
     public void setTcLink(String tcLink) {
         this.tcLink.set(tcLink);
     }
@@ -158,6 +208,7 @@ public class TestCase implements IFTestCase {
         return tcClassPackage.get();
     }
 
+    @Override
     public void setTcClassPackage(String tcClassPackage) {
         this.tcClassPackage.set(tcClassPackage);
     }
@@ -166,12 +217,33 @@ public class TestCase implements IFTestCase {
         return tcClassPackage;
     }
 
+    @Override
     public ImageView getTcResultIcons() {
-        return tcResultIcons;
+        return tcResultIcons.get();
     }
 
+    @Override
     public void setTcResultIcons(ImageView tcResultIcons) {
-        this.tcResultIcons = tcResultIcons;
+        this.tcResultIcons = new SimpleObjectProperty<ImageView>(tcResultIcons);
+    }
+
+
+    private  ImageView getResultImageViewer(String tcResult){
+        ImageView imageView = new ImageView();
+
+        switch (tcResult){
+            case "PASSED":
+                imageView.setImage(new Image(getClass().getResource("/icons/passed.png").toString()));
+                return  imageView;
+            case "FAILED":
+                imageView.setImage(new Image(getClass().getResource("/icons/failed.png").toString()));
+                return  imageView;
+            case "SKIPPED":
+                imageView.setImage(new Image(getClass().getResource("/icons/skipped.png").toString()));
+                return  imageView;
+            default:
+                imageView.setImage(new Image(getClass().getResource("/icons/default.png").toString()));
+                return  imageView;
+        }
     }
 }
-

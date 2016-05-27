@@ -22,7 +22,7 @@ public class SimpleTestIOS1 extends ArrivalIOS {
         setTcDuration("2");
         setTcLink("wwww.wetter.info");
         setTcLastRun("10");
-        setTcResult(ArrivalResult.PASSED);
+        setTcResult(ArrivalResult.DEFAULT);
     }
 
     @Test(dataProvider = "driver", groups = {"fast"})

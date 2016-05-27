@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -38,7 +39,7 @@
                         <MenuItem fx:id="mnuDelete" mnemonicParsing="false" text="\%menu.title.delete" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem fx:id="mnuSelectAll" mnemonicParsing="false" text="\%menu.title.select.all" />
-                        <MenuItem fx:id="mnuUnselectAll" mnemonicParsing="false" text="\%menu.title.unselect.all" />
+                        <MenuItem fx:id="mnuUnSelectAll" mnemonicParsing="false" text="\\%menu.title.unselect.all" />
                     </items>
                 </Menu>
                 <Menu fx:id="mnuHelp" mnemonicParsing="false" text="\%menu.title.help">
@@ -52,7 +53,7 @@
             <center>
                 <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
                     <items>
-                        <VBox maxWidth="300.0">
+                        <VBox fx:id="vBoxTestcase" maxWidth="300.0">
                             <children>
                                 <HBox>
                                     <children>
@@ -61,60 +62,48 @@
                                                 <Insets left="5.0" />
                                             </padding>
                                         </Label>
-                                        <TextField fx:id="txtSearchfield" prefWidth="230.0" promptText="Testcasename" />
+                                        <TextField fx:id="txtSearchField" prefWidth="230.0" promptText="Testcasename" />
                                     </children>
                                     <padding>
                                         <Insets bottom="2.0" top="2.0" />
                                     </padding>
                                 </HBox>
-                                <Accordion fx:id="accTestCase" VBox.vgrow="ALWAYS">
+                                <Accordion fx:id="accTestCaseMain" VBox.vgrow="ALWAYS">
                                     <panes>
-                                        <TitledPane text="iOS - Testcase">
-                                            <content>
-                                                <TableView fx:id="tbvIOS" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-backgrounds">
-                                                    <columns>
-                                                        <TableColumn fx:id="tbcIOS" prefWidth="94.0" />
-                                                    </columns>
-                                                    <columnResizePolicy>
-                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                                    </columnResizePolicy>
-                                                </TableView>
-                                            </content>
-                                        </TitledPane>
-                                        <TitledPane styleClass="testCase.tableView" text="Android - Testcase">
-                                            <content>
-                                                <TableView fx:id="tbvAND" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-backgrounds">
-                                                    <columns>
-                                                        <TableColumn fx:id="tbcAndroid" prefWidth="75.0" />
-                                                    </columns>
-                                                    <columnResizePolicy>
-                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                                    </columnResizePolicy>
-                                                </TableView>
-                                            </content>
-                                        </TitledPane>
-                                        <TitledPane styleClass="testCase.tableView" text="Web-Portal - Testcase">
-                                            <content>
-                                                <TableView fx:id="tbvWebPortal" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-backgrounds">
-                                                    <columns>
-                                                        <TableColumn fx:id="tbcWebPortal" prefWidth="75.0" />
-                                                    </columns>
-                                                    <columnResizePolicy>
-                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                                    </columnResizePolicy>
-                                                </TableView>
-                                            </content>
-                                        </TitledPane>
-                              <TitledPane styleClass="testCase.tableView" text="Search - Testcase">
+                                        <TitledPane fx:id="tpnIOS" text="iOS - Testcase">
                                  <content>
-                                    <TableView fx:id="tbvSearch" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-backgrounds">
-                                       <columnResizePolicy>
-                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                       </columnResizePolicy>
-                                       <columns>
-                                          <TableColumn fx:id="tbcWebPortal1" prefWidth="75.0" />
-                                       </columns>
-                                    </TableView>
+                                    <TreeTableView fx:id="ttvIOS" prefHeight="200.0" prefWidth="200.0">
+                                      <columns>
+                                        <TreeTableColumn fx:id="ttcIOS" prefWidth="298.0" />
+                                      </columns>
+                                    </TreeTableView>
+                                 </content>
+                                        </TitledPane>
+                                        <TitledPane fx:id="tpnAND" styleClass="testCase.tableView" text="Android - Testcase">
+                                 <content>
+                                    <TreeTableView fx:id="ttvAND" prefHeight="200.0" prefWidth="200.0">
+                                      <columns>
+                                        <TreeTableColumn fx:id="ttcAND" prefWidth="298.0" />
+                                      </columns>
+                                    </TreeTableView>
+                                 </content>
+                                        </TitledPane>
+                                        <TitledPane fx:id="tpnWEB" styleClass="testCase.tableView" text="Web-Portal - Testcase">
+                                 <content>
+                                    <TreeTableView fx:id="ttvWEB" prefHeight="200.0" prefWidth="200.0">
+                                      <columns>
+                                        <TreeTableColumn fx:id="ttcWEB" prefWidth="298.0" />
+                                      </columns>
+                                    </TreeTableView>
+                                 </content>
+                                        </TitledPane>
+                              <TitledPane fx:id="tpnSearch" styleClass="testCase.tableView" text="Search - Testcase">
+                                 <content>
+                                    <TreeTableView fx:id="ttvSearch" prefHeight="200.0" prefWidth="200.0">
+                                      <columns>
+                                        <TreeTableColumn fx:id="ttcSearch" prefWidth="298.0" />
+                                      </columns>
+                                    </TreeTableView>
                                  </content>
                               </TitledPane>
                                     </panes>
@@ -152,7 +141,7 @@
                             <graphic>
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../icons/openFile.png" />
+                                        <Image url="@../icons/blackwhite/openFile.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -168,7 +157,7 @@
                             <graphic>
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../icons/save.png" />
+                                        <Image url="@../icons/blackwhite/save.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -183,7 +172,7 @@
                             <graphic>
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../icons/newFile.png" />
+                                        <Image url="@../icons/blackwhite/newFile.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -195,7 +184,7 @@
                             <graphic>
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../icons/deleteFile.png" />
+                                        <Image url="@../icons/blackwhite/deleteFile.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -218,7 +207,7 @@
                             <graphic>
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../icons/add.png" />
+                                        <Image url="@../icons/blackwhite/add.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -233,7 +222,7 @@
                             <graphic>
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../icons/delete.png" />
+                                        <Image url="@../icons/blackwhite/delete.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -253,7 +242,22 @@
                             <graphic>
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../icons/play.png" />
+                                        <Image url="@../icons/blackwhite/play.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="btnPause" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#pauseTestcase" prefHeight="34.0" prefWidth="34.0" text="Pause">
+                            <padding>
+                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                            </padding>
+                            <tooltip>
+                                <Tooltip text="\%toolbar.pause" />
+                            </tooltip>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" styleClass="record-sales">
+                                    <image>
+                                        <Image url="@../icons/blackwhite/pause.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -268,22 +272,7 @@
                             <graphic>
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../icons/stepForward.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Button fx:id="btnPause" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#pauseTestcase" prefHeight="34.0" prefWidth="34.0" text="Pause">
-                            <padding>
-                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                            </padding>
-                            <tooltip>
-                                <Tooltip text="\%toolbar.pause" />
-                            </tooltip>
-                            <graphic>
-                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../icons/pauseNormal.png" />
+                                        <Image url="@../icons/blackwhite/stepForward.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -295,7 +284,7 @@
                             <graphic>
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../icons/stop.png" />
+                                        <Image url="@../icons/blackwhite/stop.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -308,6 +297,71 @@
                                 <Insets left="5.0" right="5.0" />
                             </padding>
                         </Separator>
+                  <Button fx:id="btnUp" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="20.0" mnemonicParsing="false" onAction="#up" prefHeight="34.0" prefWidth="20.0" text="Up">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/blackwhite/testcaseUp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\%toolbar.up" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnStepUp" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="20.0" mnemonicParsing="false" onAction="#stepUp" prefHeight="34.0" prefWidth="20.0" text="StepUp">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/blackwhite/testcaseStepUp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\%toolbar.step.up" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnStepDown" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="20.0" mnemonicParsing="false" onAction="#stepDown" prefHeight="34.0" prefWidth="20.0" text="StepDown">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/blackwhite/testcaseStepDown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\%toolbar.step.down" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnDown" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="20.0" mnemonicParsing="false" onAction="#down" prefHeight="34.0" prefWidth="20.0" text="Down">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/blackwhite/testcaseDown.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\%toolbar.down" />
+                     </tooltip>
+                  </Button>
+                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Separator>
                         <Button fx:id="btnResult" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showTestsuiteResult" prefHeight="34.0" prefWidth="34.0" text="Result">
                             <tooltip>
                                 <Tooltip text="\%toolbar.viewResult" />
@@ -315,7 +369,7 @@
                             <graphic>
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../icons/appResults.png" />
+                                        <Image url="@../icons/blackwhite/appResults.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -328,7 +382,7 @@
                                 <Insets left="5.0" right="5.0" />
                             </padding>
                         </Separator>
-                        <Button fx:id="btnOptions" defaultButton="true" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showOptions" prefHeight="34.0" prefWidth="34.0" text="Options">
+                        <Button fx:id="btnOptions" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showOptions" prefHeight="34.0" prefWidth="34.0" text="Options">
                             <padding>
                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                             </padding>
@@ -338,7 +392,7 @@
                             <graphic>
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../icons/options.png" />
+                                        <Image url="@../icons/blackwhite/options.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -359,7 +413,7 @@
                             <graphic>
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../icons/help.png" />
+                                        <Image url="@../icons/blackwhite/help.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -376,13 +430,16 @@
                     </padding>
                 </Label>
                 <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                <ProgressBar disable="true" prefHeight="30.0" prefWidth="300.0" progress="0.0">
+                <ProgressBar disable="true" prefHeight="20.0" prefWidth="300.0" progress="0.0">
                     <padding>
                         <Insets left="5.0" right="5.0" />
                     </padding>
                     <tooltip>
                         <Tooltip text="\%statusbar.progressbar" />
                     </tooltip>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
                 </ProgressBar>
                 <Label fx:id="lblStatusRight" prefHeight="30.0" text="\%label.statusbar.right" HBox.hgrow="ALWAYS">
                     <padding>

@@ -157,4 +157,3 @@ public class AppiumConfig implements IFConfig {
         this.hubPort = hubPort;
     }
 }
-

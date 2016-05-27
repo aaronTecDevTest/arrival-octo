@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 
-public class ArrivalTestSuite /*extends Thread*/{
+public class ArrivalTestSuite extends Thread{
     private static final Logger log = LogManager.getLogger(ArrivalTestSuite.class);
     /**
      * @param suiteID:  Counter to create different TestNG-Suite-Name
@@ -43,9 +43,8 @@ public class ArrivalTestSuite /*extends Thread*/{
      * Firefox, Chrome and IE driver.
      */
     private Object seleniumManger;
-
     /**
-     * TestNG properties
+     * @param tng: TestNG properties
      */
     private TestNG tng = new TestNG();
 
@@ -74,7 +73,7 @@ public class ArrivalTestSuite /*extends Thread*/{
         suites.add(suite);
     }
 
-    //@Override
+    @Override
     public void run() {
 
        /* while (!this.isInterrupted()) {
@@ -103,11 +102,12 @@ public class ArrivalTestSuite /*extends Thread*/{
         tng.run();
     }
 
-    public void stopThread(){
-       // this.interrupt();
+    public void stopTestsuite(){
+        this.interrupt();
+
     }
 
-    public void pauseThread(){
+    public void pauseTestsuite(){
         synchronized(tng) {
             try {
                 tng.wait();
@@ -117,7 +117,7 @@ public class ArrivalTestSuite /*extends Thread*/{
         }
     }
 
-    public void resumeThread() {
+    public void resumeTestsuite() {
         synchronized(tng) {
             tng.notify();
         }

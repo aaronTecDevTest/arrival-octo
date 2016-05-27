@@ -8,14 +8,19 @@ import com.arrival.utilities.SystemPreferences;
 import com.arrival.utilities.interfaces.IFConfig;
 import com.arrival.utilities.interfaces.IFTestCase;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author: Aaron Kutekidila
@@ -44,6 +49,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     private SimpleStringProperty tcLink = null;
     private SimpleStringProperty tcResult = null;
     private SimpleStringProperty tcClassPackage = null;
+    private SimpleObjectProperty<ImageView> tcResultIcons = null;
 
     /**
      * Default Constructor
@@ -57,6 +63,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         tcLink = new SimpleStringProperty();
         tcResult = new SimpleStringProperty();
         tcClassPackage = new SimpleStringProperty();
+        tcResultIcons = new SimpleObjectProperty<ImageView>();
     }
 
     /**
@@ -162,6 +169,30 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
     }
 
     /**
+     *
+     */
+    @AfterMethod
+    public void tearDown(ITestResult result) {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            log.info("Test: FAILURE");
+            this.setTcResult(ArrivalResult.FAILED);
+
+        }
+
+        if (result.getStatus() == ITestResult.SUCCESS) {
+            log.info("Test: SUCCESS");
+            this.setTcResult(ArrivalResult.PASSED);
+
+        }
+
+        if (result.getStatus() == ITestResult.SKIP) {
+            log.info("Test: SKIP");
+            this.setTcResult(ArrivalResult.SKIPPED);
+
+        }
+    }
+
+    /**
      * Other method
      */
     public void pauseTest(long milSeconds) {
@@ -170,6 +201,15 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
         } catch (Exception e) {
             log.error(e.getStackTrace());
             log.error("Test was not paused!!");
+        }
+    }
+
+    public void waitPageLoading(long seconds){
+        try {
+            browser.manage().timeouts().pageLoadTimeout(seconds, TimeUnit.SECONDS);
+        } catch (Exception e) {
+            log.error(e.getStackTrace());
+            log.error("Test was not waiting!!");
         }
     }
 
@@ -276,6 +316,7 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
 
     public void setTcResult(ArrivalResult tcResult) {
         this.tcResult.set(tcResult.toString());
+     //   this.setTcResultIcons(getResultImageViewer(tcResult.toString()));
     }
 
     public SimpleStringProperty tcResultProperty() {
@@ -324,5 +365,32 @@ public abstract class ArrivalWeb implements IFTestCase, IFGenericWeb {
 
     public void setTcClassPackage(String tcClassPackage) {
         this.tcClassPackage.set(tcClassPackage);
+    }
+
+    public ImageView getTcResultIcons() {
+        return tcResultIcons.get();
+    }
+
+    public void setTcResultIcons(ImageView tcResultIcons) {
+        this.tcResultIcons = new SimpleObjectProperty<ImageView>(tcResultIcons);
+    }
+
+    public ImageView getResultImageViewer(String tcResult){
+        ImageView imageView = new ImageView();
+
+        switch (tcResult){
+            case "PASSED":
+                imageView.setImage(new Image(getClass().getResource("/icons/passed.png").toString()));
+                return  imageView;
+            case "FAILED":
+                imageView.setImage(new Image(getClass().getResource("/icons/failed.png").toString()));
+                return  imageView;
+            case "SKIPPED":
+                imageView.setImage(new Image(getClass().getResource("/icons/skipped.png").toString()));
+                return  imageView;
+            default:
+                imageView.setImage(new Image(getClass().getResource("/icons/default.png").toString()));
+                return  imageView;
+        }
     }
 }

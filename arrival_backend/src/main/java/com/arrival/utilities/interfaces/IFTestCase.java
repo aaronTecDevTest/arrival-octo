@@ -11,7 +11,9 @@ package com.arrival.utilities.interfaces;
 import com.arrival.utilities.ArrivalResult;
 import io.appium.java_client.android.AndroidDriver;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.image.ImageView;
 import org.testng.annotations.Test;
 
 /**
@@ -60,7 +62,10 @@ public interface IFTestCase {
 
     SimpleStringProperty tcDurationProperty();
 
-    SimpleStringProperty tcClassPackageProperty();
-
     void setTcClassPackage(String tcClassPackage);
+
+    ImageView getTcResultIcons();
+
+    void setTcResultIcons(ImageView tcResultIcons);
+
 }

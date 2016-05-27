@@ -41,8 +41,8 @@ public class FXMLArrivalOptionsController implements Initializable {
     ObservableList<String> webServer;
 
 
-//  @FXML
- // private Tab tabGeneral;
+    //@FXML
+    //private Tab tabGeneral;
     @FXML
     private Tab tabWebConfig;
     @FXML

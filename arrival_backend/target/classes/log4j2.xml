@@ -16,8 +16,8 @@
             DEBUG=green, TRACE=bright blue} %style{[%t] -}{bright,blue} %m%n
         </Property>
 
-        <Property name='fileName'>arrival_backend/src/main/resources/${projectPrefix}.log</Property>
-        <Property name='filePattern'>arrival_backend/src/main/resources//${projectPrefix}-%i.log</Property>
+        <Property name='fileName'>src/main/resources/${projectPrefix}.log</Property>
+        <Property name='filePattern'>src/main/resources//${projectPrefix}-%i.log</Property>
     </Properties>
     <Appenders>
         <Console name='Stdout' target='SYSTEM_OUT'>

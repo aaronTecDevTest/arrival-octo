@@ -18,14 +18,11 @@ import com.arrival.unit.suites.ArrivalTestSuite;
 import com.arrival.utilities.WindowsDialogs;
 import com.arrival.windows.model.Options;
 import com.arrival.windows.model.TestCase;
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import org.apache.logging.log4j.LogManager;
@@ -41,13 +38,13 @@ import java.util.ResourceBundle;
  * Controller Class for ViewMainApp. This Class have linked with ViewMainApp.fxml and
  * can evoke function from ViewMainApp.fxml file.
  */
-public class FXMLArrivalTableViewController  implements Initializable,Runnable {
+public class FXMLArrivalTableViewController  implements Initializable {
 
     /**
      * Logger
      */
     private static final Logger log = LogManager.getLogger(FXMLArrivalTableViewController.class);
-    public ObservableList dateTestsuite;
+    public ObservableList <TestCase> dateTestSuite;
     /**
      * For Internationalization
      */
@@ -67,12 +64,10 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
     @FXML
     private TableColumn<TestCase, ImageView> tbcResult;
 
-    private ArrivalTestSuite runTestSuite;
-    private ObservableList dateTestSuite;
+    private static ArrivalTestSuite runTestSuite;
+    //private ObservableList <TestCase> dateTestSuite;
     private Options options;
     private String platform;
-
-    private Thread t;
 
     /**
      * Called to initialize a controller after its root element has been
@@ -86,7 +81,7 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
         bundle = resources;
         iniBundleResources();
 
-        //Setup Tablecolmn Propertys
+        /**Setup Tablecolmn Properties **/
         tbcName.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcName"));
         tbcDescription.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDescription"));
         tbcDuration.setCellValueFactory(new PropertyValueFactory<TestCase, String>("tcDuration"));
@@ -101,9 +96,8 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
 
         //SetUp Testcase to Table
         setUpTestsuite();
-        tbvTestsuite.setItems(dateTestsuite);
-
-        runTestSuite = new ArrivalTestSuite();
+        tbvTestsuite.setItems(dateTestSuite);
+        //runTestSuite = new ArrivalTestSuite();
         platform = "platform";
     }
 
@@ -111,7 +105,7 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
     public void run() {
         try {
             log.info(options.toString());
-
+            runTestSuite = new ArrivalTestSuite();
             SeleniumManager tempSeleniumManager = new SeleniumManager();
             AppiumManager tempAppiumManager = new AppiumManager();
 
@@ -141,9 +135,10 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
             }
 
             dateTestSuite = tbvTestsuite.getItems();
-            for (int i = 0; i < dateTestsuite.size(); i++) {
-                tempClasses.add(new XmlClass(((TestCase) dateTestSuite.get(i)).getTcClassPackage()));
+            for (int i = 0; i < dateTestSuite.size(); i++) {
+                tempClasses.add(new XmlClass(dateTestSuite.get(i).getTcClassPackage()));
             }
+
             if(options.getParallelTesting()){
                 //runTestSuite.getSuite().setParallel(options.getParallelTesting().toString());
                 //runTestSuite.getSuite().setThreadCount(options.getParallelThreadCounter());
@@ -157,7 +152,7 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
             }
 
             runTestSuite.setClasses(tempClasses);
-            runTestSuite.run();
+            runTestSuite.start();
 
         } catch (Exception e) {
             log.warn("Options object is null" + e.getStackTrace());
@@ -166,19 +161,67 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
     }
 
     public void stopped() {
-        runTestSuite.stopThread();
+        runTestSuite.stopTestsuite();
     }
 
     public void paused(){
-        runTestSuite.pauseThread();
+        runTestSuite.pauseTestsuite();
     }
 
     public void resumed() {
-      runTestSuite.resumeThread();
+      runTestSuite.resumeTestsuite();
     }
 
     public void skipped() {
         runTestSuite.skippTestCase();
+    }
+
+    public void up(){
+        tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        int oldSelectedIndex = tbvTestsuite.getSelectionModel().getFocusedIndex();
+        int newSelectedIndex = 0;
+        final TestCase tempItem = dateTestSuite.remove(oldSelectedIndex);
+
+        dateTestSuite.add(newSelectedIndex,tempItem);
+        tbvTestsuite.getSelectionModel().select(tempItem);
+        tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+    }
+
+    public void down(){
+        tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        int oldSelectedIndex = tbvTestsuite.getSelectionModel().getFocusedIndex();
+        int newSelectedIndex = tbvTestsuite.getItems().size()-1;
+        final TestCase tempItem = dateTestSuite.remove(oldSelectedIndex);
+
+        dateTestSuite.add(newSelectedIndex,tempItem);
+        tbvTestsuite.getSelectionModel().select(tempItem);
+        tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+    }
+
+    public void stepUp(){
+        if( 0 < tbvTestsuite.getSelectionModel().getSelectedIndex()) {
+            tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+            int oldSelectedIndex = tbvTestsuite.getSelectionModel().getFocusedIndex();
+            int newSelectedIndex = oldSelectedIndex - 1;
+            final TestCase tempItem = dateTestSuite.remove(oldSelectedIndex);
+
+            dateTestSuite.add(newSelectedIndex, tempItem);
+            tbvTestsuite.getSelectionModel().select(tempItem);
+            tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        }
+    }
+
+    public void stepDown(){
+        if((tbvTestsuite.getItems().size() - 1) > tbvTestsuite.getSelectionModel().getSelectedIndex()) {
+            tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+            int oldSelectedIndex = tbvTestsuite.getSelectionModel().getFocusedIndex();
+            int newSelectedIndex = oldSelectedIndex + 1;
+            final TestCase tempItem = dateTestSuite.remove(oldSelectedIndex);
+
+            dateTestSuite.add(newSelectedIndex, tempItem);
+            tbvTestsuite.getSelectionModel().select(tempItem);
+            tbvTestsuite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        }
     }
 
     private void iniBundleResources() {
@@ -195,7 +238,7 @@ public class FXMLArrivalTableViewController  implements Initializable,Runnable {
      */
     private void setUpTestsuite() {
         ArrayList<TestCase> tempList = new ArrayList<>();
-        dateTestsuite = FXCollections.observableArrayList(tempList);
+        dateTestSuite = FXCollections.observableArrayList(tempList);
     }
 
     public TableView<TestCase> getTbvTestsuite() {

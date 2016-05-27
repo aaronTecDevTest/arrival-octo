@@ -1,5 +1,6 @@
 package com.arrival.utilities;
 
+import com.arrival.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,7 +24,7 @@ public class SystemPreferences {
     private static String osName;
     private static String osCountry;
     private static String osLanguage;
-
+    private static String osData;
 
     private static ResourceBundle bundleHelp;
     private static ResourceBundle bundleLogIn;
@@ -50,6 +51,7 @@ public class SystemPreferences {
         return log;
     }
 
+
     public static SystemPreferences getOurInstance() {
         return ourInstance;
     }
@@ -57,6 +59,7 @@ public class SystemPreferences {
     public static void setOurInstance(SystemPreferences ourInstance) {
         SystemPreferences.ourInstance = ourInstance;
     }
+
 
     public static String getOsName() {
         return osName;
@@ -66,6 +69,7 @@ public class SystemPreferences {
         SystemPreferences.osName = osName;
     }
 
+
     public static String getOsCountry() {
         return osCountry;
     }
@@ -73,6 +77,7 @@ public class SystemPreferences {
     public static void setOsCountry(String osCountry) {
         SystemPreferences.osCountry = osCountry;
     }
+
 
     public static String getOsLanguage() {
         return osLanguage;
@@ -82,6 +87,16 @@ public class SystemPreferences {
         SystemPreferences.osLanguage = osLanguage;
         setUpResourceBundle();
     }
+
+
+    public static String getOsData() {
+        return osData;
+    }
+
+    public static void setOsData(String osData) {
+        SystemPreferences.osData = osData;
+    }
+
 
     private void setUpResourceBundle() {
         try {
@@ -147,9 +162,9 @@ public class SystemPreferences {
     public String toString() {
         return osName + " " + osCountry + " " + osLanguage;
     }
-
+/*
     public static void main(String[] args) {
         SystemPreferences.getInstance();
 
-    }
+    }*/
 }
